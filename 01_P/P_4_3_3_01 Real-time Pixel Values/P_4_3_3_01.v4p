@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\simulations\P\P_4_3_3_01 Realtime Pixelvalues\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
-   <BOUNDS height="13785" left="1200" top="1830" type="Window" width="19080">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
+   <BOUNDS height="13785" left="1980" top="3450" type="Window" width="19080">
    </BOUNDS>
    <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="210" top="930" type="Node" width="840">
@@ -247,9 +247,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InAWindow" id="262" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="270" left="255" top="21825" type="Node" width="3285">
+   <BOUNDS height="270" left="255" top="22995" type="Node" width="3285">
    </BOUNDS>
-   <BOUNDS height="5715" left="255" top="21825" type="Box" width="8085">
+   <BOUNDS height="5715" left="255" top="22995" type="Box" width="8085">
    </BOUNDS>
    <BOUNDS height="9630" left="15600" top="7245" type="Window" width="10755">
    </BOUNDS>
@@ -670,7 +670,7 @@
    </LINK>
    <LINK dstnodeid="377" dstpinname="Input 1" srcnodeid="366" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InAWindow" filename="AgentLine.v4p" id="382" nodename="AgentLine.v4p" systemname="AgentLine" path="C:\Documents and Settings\Roman\Desktop\simulations\P\P_4_3_3_01 Realtime Pixelvalues\">
+   <NODE componentmode="Hidden" filename="AgentLine.v4p" id="382" nodename="AgentLine.v4p" systemname="AgentLine" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\">
    <BOUNDS height="270" left="7740" top="9735" type="Node" width="1050">
    </BOUNDS>
    <PIN pinname="MouseY" visible="1">
@@ -985,8 +985,6 @@
    <LINK dstnodeid="429" dstpinname="Input 2" srcnodeid="430" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="181" dstpinname="Width" srcnodeid="429" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="262" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="101" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="435" managers="" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <PIN pinname="Y" pintype="Input" visible="1">
@@ -1393,5 +1391,21 @@
    <LINK dstnodeid="470" dstpinname="Input 1" srcnodeid="418" srcpinname="Value Output">
    </LINK>
    <LINK dstnodeid="382" dstpinname="Stop" srcnodeid="470" srcpinname="Output">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="471">
+   <BOUNDS type="Node" left="615" top="21915" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="470" srcpinname="Output" dstnodeid="471" dstpinname="Input 2" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="471" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="471" srcpinname="Output" dstnodeid="262" dstpinname="Clear">
    </LINK>
    </PATCH>
