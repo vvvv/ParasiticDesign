@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\simulations\M\M.1.1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.1_01.v4p" systemname="M.1.1_01">
-   <BOUNDS height="15015" left="4860" top="2055" type="Window" width="15840">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_1_01 Coincidence and Exit Criteria\M.1.1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.1_01.v4p" systemname="M.1.1_01">
+   <BOUNDS height="15015" left="4530" top="2985" type="Window" width="15840">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="4" nodename="Line (EX9)" systemname="Line (EX9)">
    <PIN pinname="Layer" visible="1">
@@ -159,7 +159,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="5730" top="3240" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" visible="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -339,9 +339,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="31" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;p: &tab;&tab;&tab;save pdf&cr;&lf;ctrl+2:&tab; &tab;&tab;save png|">
+   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;ctrl+2:&tab; &tab;&tab;save png|">
    </PIN>
-   <BOUNDS height="795" left="5175" top="885" type="Box" width="4050">
+   <BOUNDS height="600" left="5175" top="885" type="Box" width="4050">
    </BOUNDS>
    <BOUNDS height="270" left="5175" top="885" type="Node" width="840">
    </BOUNDS>
@@ -430,4 +430,42 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <NODE systemname="Mouse (System Window)" nodename="Mouse (System Window)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="11415" top="1305" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Right Button" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="11940" top="2160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="Is Integer" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="37">
+   <BOUNDS type="Node" left="11205" top="2625" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11205" top="2625" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Output" dstnodeid="37" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Left Button" dstnodeid="36" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
