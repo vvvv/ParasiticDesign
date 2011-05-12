@@ -1,0 +1,97 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.1.dtd" >
+   <PATCH nodename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\TextureSwitcher1.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\TextureSwitcher1.v4p" systemname="TextureSwitcher1">
+   <BOUNDS height="6000" left="11460" top="9825" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="0" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
+   <BOUNDS height="100" left="3225" top="3360" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="3225" top="4455" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3225" top="4455" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input Node" srcnodeid="0" srcpinname="Texture Out">
+   </LINK>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="5880" top="4455" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="300" left="5880" top="4455" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="| Color|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="4" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
+   <BOUNDS height="100" left="6180" top="3360" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Value">
+   </PIN>
+   <PIN pinname="Red" slicecount="1" values="0.7098">
+   </PIN>
+   <PIN pinname="Green" slicecount="1" values="0.6157">
+   </PIN>
+   <PIN pinname="Blue" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="2" dstpinname="Color Input">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="5">
+   <BOUNDS type="Node" left="1440" top="465" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1440" top="465" width="1860" height="1320">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="4" values="data\A_01.png,data\B_01.png,data\C_01.png,data\D_01.png">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="3210" top="2685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="0" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="4740" top="375" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4740" top="375" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Index">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Index">
+   </LINK>
+   </PATCH>

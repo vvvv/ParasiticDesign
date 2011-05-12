@@ -1,0 +1,67 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.1.dtd" >
+   <PATCH nodename="V:\Generativvvve Gestaltung\P_2_3_1_02 Drawing with animated Brush_TABLET\TextureSwitcher.v4p" systemname="TextureSwitcher" filename="V:\Generativvvve Gestaltung\P_2_3_1_02 Drawing with animated Brush_TABLET\TextureSwitcher.v4p">
+   <BOUNDS type="Window" left="12225" top="8175" width="4860" height="6000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
+   <BOUNDS height="100" left="2055" top="3630" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="GetSlice (String)" systemname="GetSlice (String)">
+   <BOUNDS height="100" left="2040" top="3240" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="1005" top="1215" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1485" left="1005" top="1215" type="Box" width="1035">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="5" values="data\01.png,data\02.png,data\03.png,data\04.png,data\05.png">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="0" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Filename" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
+   <BOUNDS type="Node" left="1995" top="390" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1995" top="390" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="KeyEvent">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Index">
+   </LINK>
+   <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="4">
+   <BOUNDS type="Node" left="2070" top="4425" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2070" top="4425" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Texture Out" dstnodeid="4" dstpinname="Input Node">
+   </LINK>
+   </PATCH>

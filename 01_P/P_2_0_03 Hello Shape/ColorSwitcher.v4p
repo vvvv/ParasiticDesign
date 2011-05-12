@@ -1,0 +1,293 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.1.dtd" >
+   <PATCH nodename="V:\Generativvvve Gestaltung\P_2_0_03 Hello Shape\ColorSwitcher.v4p">
+   <BOUNDS height="11325" left="5940" top="4800" type="Window" width="11175">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="14" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)">
+   <BOUNDS height="100" left="6825" top="1155" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="6825" top="1155" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="15135" top="10140" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Key Match" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="7980" top="510" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="7980" top="510" type="Box" width="555">
+   </BOUNDS>
+   <BOUNDS height="160" left="15630" top="9060" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|1 2 3|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Key Match" srcnodeid="13" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="5865" top="1575" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="5865" top="1575" type="Box" width="795">
+   </BOUNDS>
+   <BOUNDS height="160" left="14490" top="10485" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
+   <BOUNDS height="100" left="6810" top="270" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="6810" top="270" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input" srcnodeid="3" srcpinname="Keyboard Output">
+   </LINK>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8685" top="480" type="Node" width="3885">
+   </BOUNDS>
+   <BOUNDS height="510" left="8685" top="480" type="Box" width="2235">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt;Defining the keys we want to use for this example.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4920" top="255" type="Node" width="3885">
+   </BOUNDS>
+   <BOUNDS height="330" left="4920" top="255" type="Box" width="1860">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Activate the keyboard.&gt;&gt;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="42" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
+   <BOUNDS height="270" left="1050" top="6735" type="Node" width="4335">
+   </BOUNDS>
+   <BOUNDS height="0" left="1050" top="6735" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="15075" top="7755" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Hue" visible="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Saturation" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="41" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="360" top="7170" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="555" left="360" top="7170" type="Box" width="540">
+   </BOUNDS>
+   <BOUNDS height="160" left="4050" top="10575" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="41" dstpinname="Color Input" srcnodeid="42" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="43" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="315" top="5295" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="900" left="315" top="5295" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0.5333,0.1444">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Hue" srcnodeid="43" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="44" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1740" top="5295" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="900" left="1740" top="5295" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,1,1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Saturation" srcnodeid="44" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3180" top="5295" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="900" left="3180" top="5295" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0.64,0.71">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Value" srcnodeid="45" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="46" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4590" top="5295" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="270" left="4590" top="5295" type="Box" width="780">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="42" dstpinname="Alpha" srcnodeid="46" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="47" nodename="GetSlice (Color)" systemname="GetSlice (Color)">
+   <BOUNDS height="270" left="1035" top="8325" type="Node" width="5850">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="47" dstpinname="Input" srcnodeid="42" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="48" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="450" top="9135" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="630" left="450" top="9135" type="Box" width="660">
+   </BOUNDS>
+   <BOUNDS height="160" left="12525" top="11055" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Out">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="48" dstpinname="Color Input" srcnodeid="47" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="47" dstpinname="Index" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="50" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="900" top="4980" width="735" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="900" top="4980" width="345" height="255">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="H">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="51" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="2385" top="4980" type="Node" width="735">
+   </BOUNDS>
+   <BOUNDS height="255" left="2385" top="4980" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="S">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="52" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3810" top="4980" type="Node" width="735">
+   </BOUNDS>
+   <BOUNDS height="255" left="3810" top="4980" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="V">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="53" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4905" top="4980" type="Node" width="735">
+   </BOUNDS>
+   <BOUNDS height="240" left="4905" top="4980" type="Box" width="540">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="ALPHA">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="55" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="5490" top="6720" type="Node" width="3885">
+   </BOUNDS>
+   <BOUNDS height="525" left="5490" top="6720" type="Box" width="3570">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; The HSV node has a spread of 3 slices on every input node. So you get 3 output colors.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="56" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6945" top="8310" type="Node" width="3885">
+   </BOUNDS>
+   <BOUNDS height="495" left="6945" top="8310" type="Box" width="2340">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Get the specific color depending on the key event.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   </PATCH>

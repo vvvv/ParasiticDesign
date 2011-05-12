@@ -1,0 +1,211 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.1.dtd" >
+   <PATCH nodename="V:\Generativvvve Gestaltung\P_2_2_3_02  Shapes of Agents_TABLET\WriteRendererTexture.v4p" systemname="WriteRendererTexture" filename="V:\Generativvvve Gestaltung\P_2_2_3_02  Shapes of Agents_TABLET\WriteRendererTexture.v4p">
+   <BOUNDS type="Window" left="10680" top="11865" width="9000" height="6000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="14" nodename="Writer (EX9.Texture)" systemname="Writer (EX9.Texture)">
+   <BOUNDS height="270" left="375" top="4560" type="Node" width="5880">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="FileName" visible="1">
+   </PIN>
+   <PIN pinname="Save" visible="1">
+   </PIN>
+   <PIN pinname="Only Render On Save" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="File Format" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="13" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="100" left="6195" top="3570" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6195" top="3570" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="PNG">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="File Format" srcnodeid="13" srcpinname="Output Enum">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="1830" top="405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="270" left="1830" top="405" type="Box" width="1110">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="P_2_2_3_01_">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Name">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="11" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="2415" top="2475" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="10" nodename="Add (String)" systemname="Add (String)">
+   <BOUNDS height="270" left="1830" top="3405" type="Node" width="1785">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="12" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" id="9" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="2415" top="2055" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Up" srcnodeid="9" srcpinname="Up Edge">
+   </LINK>
+   <NODE componentmode="Hidden" id="8" nodename="AsString (Value)" systemname="AsString (Value)">
+   <BOUNDS height="100" left="2400" top="2910" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="8" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="FileName" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="375" top="405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="375" top="405" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Texture" srcnodeid="7" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="5235" top="405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="480" left="5235" top="405" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Slider" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="KeyEvent">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Input" linkstyle="VHV" srcnodeid="6" srcpinname="Y Output Value">
+   <LINKPOINT x="5655" y="1455">
+   </LINKPOINT>
+   <LINKPOINT x="2475" y="1455">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Save" linkstyle="VHV" srcnodeid="6" srcpinname="Y Output Value">
+   <LINKPOINT x="5685" y="4245">
+   </LINKPOINT>
+   <LINKPOINT x="3315" y="4245">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6330" top="4545" type="Node" width="2025">
+   </BOUNDS>
+   <BOUNDS height="1095" left="6330" top="4545" type="Box" width="1935">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; The Writer node writes The texture as picture in a specific folder. &cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="7035" top="3540" type="Node" width="2685">
+   </BOUNDS>
+   <BOUNDS height="675" left="7035" top="3540" type="Box" width="1350">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt;Select the format for the picture.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6000" top="360" type="Node" width="2685">
+   </BOUNDS>
+   <BOUNDS height="570" left="6000" top="360" type="Box" width="2370">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt;Event for writing the texture and inserting another filename.&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3705" top="2445" type="Node" width="2685">
+   </BOUNDS>
+   <BOUNDS height="1095" left="3705" top="2445" type="Box" width="2355">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt;Add another number to the file name, so everytime a new picture is saved. Without this counter the picture will always be written over the last one.&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1230" top="2685" type="Node" width="2070">
+   </BOUNDS>
+   <BOUNDS height="555" left="1230" top="2685" type="Box" width="1110">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|convert value to string. &gt;&gt;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1920" top="3720" type="Node" width="2070">
+   </BOUNDS>
+   <BOUNDS height="480" left="1920" top="3720" type="Box" width="1995">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Add Filename and the counter string.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   </PATCH>
