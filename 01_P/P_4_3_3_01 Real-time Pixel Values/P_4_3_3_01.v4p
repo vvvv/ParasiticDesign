@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
-   <BOUNDS height="13785" left="6525" top="1725" type="Window" width="18525">
+   <BOUNDS height="13785" left="1125" top="510" type="Window" width="18525">
    </BOUNDS>
    <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="210" top="930" type="Node" width="840">
@@ -143,7 +143,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="131" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="270" left="3480" top="3570" type="Node" width="3030">
+   <BOUNDS height="270" left="3480" top="3570" type="Node" width="960">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
@@ -213,11 +213,11 @@
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="From" visible="1" slicecount="3" values="0.4,0.316,0">
+   <PIN pinname="From" slicecount="3" visible="1" values="0.4,0.316,0">
    </PIN>
-   <PIN pinname="To" visible="1" slicecount="3" values="0.298,0.415,0">
+   <PIN pinname="To" slicecount="3" visible="1" values="0.298,0.415,0">
    </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Width" visible="1">
    </PIN>
@@ -491,7 +491,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="10455" top="18825" type="Box" width="2190">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="0.4,0.316,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.4,0.316,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -503,7 +503,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9540" top="19800" type="Box" width="2190">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="0.298,0.415,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.298,0.415,0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -663,7 +663,7 @@
    <NODE componentmode="Hidden" id="384" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
    <BOUNDS height="270" left="5970" top="12255" type="Node" width="930">
    </BOUNDS>
-   <PIN pinname="XYZ" visible="1" slicecount="3" values="0.4,0.316,0">
+   <PIN pinname="XYZ" slicecount="3" visible="1" values="0.4,0.316,0">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -1086,14 +1086,14 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="382" componentmode="Hidden" filename="AgentLine.v4p" nodename="AgentLine.v4p" systemname="AgentLine">
+   <NODE componentmode="Hidden" filename="AgentLine.v4p" id="382" nodename="AgentLine.v4p" systemname="AgentLine" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\">
    <PIN pinname="Diffusion" visible="1">
    </PIN>
    <PIN pinname="Stop" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="5325" top="1830" width="15840" height="17550">
+   <BOUNDS height="17550" left="5325" top="1830" type="Window" width="15840">
    </BOUNDS>
-   <BOUNDS type="Node" height="270" left="6555" top="9300" width="1050">
+   <BOUNDS height="270" left="6555" top="9300" type="Node" width="1050">
    </BOUNDS>
    <PIN pinname="MouseY" visible="1">
    </PIN>
@@ -1104,18 +1104,18 @@
    <PIN pinname="Period for the Random Seed" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="472" srcpinname="Value Output" dstnodeid="382" dstpinname="Stop">
+   <LINK dstnodeid="382" dstpinname="Stop" srcnodeid="472" srcpinname="Value Output">
    </LINK>
-   <LINK srcnodeid="402" srcpinname="Output" dstnodeid="382" dstpinname="Diffusion">
+   <LINK dstnodeid="382" dstpinname="Diffusion" srcnodeid="402" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="382" srcpinname="FromXYZ" dstnodeid="384" dstpinname="XYZ">
+   <LINK dstnodeid="384" dstpinname="XYZ" srcnodeid="382" srcpinname="FromXYZ">
    </LINK>
-   <LINK srcnodeid="382" srcpinname="ToXYZ" dstnodeid="359" dstpinname="Y Input Value">
+   <LINK dstnodeid="359" dstpinname="Y Input Value" srcnodeid="382" srcpinname="ToXYZ">
    </LINK>
-   <LINK srcnodeid="382" srcpinname="FromXYZ" dstnodeid="356" dstpinname="Y Input Value">
+   <LINK dstnodeid="356" dstpinname="Y Input Value" srcnodeid="382" srcpinname="FromXYZ">
    </LINK>
-   <LINK srcnodeid="382" srcpinname="ToXYZ" dstnodeid="181" dstpinname="To" hiddenwhenlocked="1">
+   <LINK dstnodeid="181" dstpinname="To" hiddenwhenlocked="1" srcnodeid="382" srcpinname="ToXYZ">
    </LINK>
-   <LINK srcnodeid="382" srcpinname="FromXYZ" dstnodeid="181" dstpinname="From" hiddenwhenlocked="1">
+   <LINK dstnodeid="181" dstpinname="From" hiddenwhenlocked="1" srcnodeid="382" srcpinname="FromXYZ">
    </LINK>
    </PATCH>
