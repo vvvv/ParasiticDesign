@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_1_01 Graphic out of pixel values\P_4_3_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_01_2.v4p" systemname="P.4.3.1_01_2">
-   <BOUNDS height="16575" left="4245" top="1605" type="Window" width="19590">
+   <BOUNDS height="16575" left="4695" top="1590" type="Window" width="19590">
    </BOUNDS>
    <NODE componentmode="InABox" id="53" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="585" top="9180" type="Node" width="100">
@@ -201,7 +201,7 @@
    </BOUNDS>
    <BOUNDS height="8070" left="225" top="15870" type="Box" width="6180">
    </BOUNDS>
-   <BOUNDS height="13755" left="19335" top="1215" type="Window" width="9255">
+   <BOUNDS height="13755" left="16245" top="750" type="Window" width="9255">
    </BOUNDS>
    <PIN pinname="Layers" slicecount="1" visible="1" values="||">
    </PIN>
@@ -679,6 +679,8 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="ColorFromPipet" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="323" dstpinname="Input 7" srcnodeid="397" srcpinname="Layer">
    </LINK>
@@ -875,7 +877,7 @@
    </BOUNDS>
    <BOUNDS height="750" left="12510" top="7875" type="Box" width="2130">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Pipet outputs the color value of the texture in specified spots|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Pipet outputs the color value of the texture in specified spots.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -883,11 +885,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="425" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5595" top="7665" type="Node" width="8145">
+   <BOUNDS height="270" left="5850" top="7605" type="Node" width="8145">
    </BOUNDS>
-   <BOUNDS height="810" left="5595" top="7665" type="Box" width="3105">
+   <BOUNDS height="810" left="5850" top="7605" type="Box" width="3105">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; since the texture and window coordinate systems are different, it´s necessary to translate the quads to (2,-2)|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Since the texture and window coordinate systems are different, it´s necessary to translate the quads to (2,-2).|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -911,7 +913,7 @@
    </BOUNDS>
    <BOUNDS height="1320" left="14610" top="4155" type="Box" width="1365">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; the mouse position x and y values are converted to values between 0,05 and 1|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; The mouse position x and y values are converted to values between 0,05 and 1.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -919,9 +921,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="429" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="15975" top="13215" type="Node" width="5760">
+   <BOUNDS height="270" left="16050" top="13200" type="Node" width="5760">
    </BOUNDS>
-   <BOUNDS height="2010" left="15975" top="13215" type="Box" width="2340">
+   <BOUNDS height="2010" left="16050" top="13200" type="Box" width="2340">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|PROBLEM 1: 2 different spreads (one for &quot;ellipse&quot; another for &quot;rect&quot;), instead of one!|">
    </PIN>
@@ -953,9 +955,9 @@
    <LINK dstnodeid="198" dstpinname="Input 2" srcnodeid="151" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="433" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="13560" top="14685" type="Node" width="5760">
+   <BOUNDS height="270" left="13305" top="14685" type="Node" width="5760">
    </BOUNDS>
-   <BOUNDS height="2640" left="13560" top="14685" type="Box" width="2820">
+   <BOUNDS height="2640" left="13305" top="14685" type="Box" width="2820">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|PROBLEM 2: the strokeweight of ellipse in processing visually changes the radius. that does not happen with segment and the inner radius of it&cr;&lf;|">
    </PIN>
@@ -966,6 +968,8 @@
    <PIN pinname="Size" slicecount="1" values="13">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Color" dstnodeid="422" dstpinname="ColorFromPipet">
+   <LINK dstnodeid="422" dstpinname="ColorFromPipet" srcnodeid="48" srcpinname="Color">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Color" dstnodeid="397" dstpinname="ColorFromPipet">
    </LINK>
    </PATCH>
