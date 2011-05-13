@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\Layer3.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\Layer3.v4p" systemname="Layer3">
-   <BOUNDS height="16185" left="8475" top="180" type="Window" width="13440">
+   <BOUNDS height="16185" left="8475" top="180" type="Window" width="13455">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="52" managers="" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <PIN pinname="Transform" pintype="Input" visible="1">
@@ -63,9 +63,9 @@
    </PIN>
    <PIN pinname="Depth" pintype="Input" slicecount="1" visible="-1" values="0">
    </PIN>
-   <PIN pinname="Original Width" pintype="Output" visible="0">
+   <PIN pinname="Original Width" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Original Height" pintype="Output" visible="0">
+   <PIN pinname="Original Height" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="Original Depth" pintype="Output" visible="0">
    </PIN>
@@ -435,8 +435,6 @@
    <LINK dstnodeid="28" dstpinname="Y" srcnodeid="25" srcpinname="Z">
    </LINK>
    <LINK dstnodeid="52" dstpinname="Texture" srcnodeid="51" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="52" dstpinname="Transform" srcnodeid="26" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="23" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="4605" top="8940" type="Node" width="100">
@@ -1064,10 +1062,36 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="77" dstpinname="Input 3">
+   <LINK dstnodeid="77" dstpinname="Input 3" srcnodeid="86" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="74" dstpinname="Enabled" hiddenwhenlocked="1">
+   <LINK dstnodeid="74" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="1" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Enabled">
+   <LINK dstnodeid="6" dstpinname="Enabled" srcnodeid="1" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="93">
+   <BOUNDS type="Node" left="2625" top="26160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Original Width" dstnodeid="93" dstpinname="Aspect Width" hiddenwhenlocked="1">
+   <LINKPOINT x="12150" y="14430">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Original Height" dstnodeid="93" dstpinname="Aspect Height" hiddenwhenlocked="1">
+   <LINKPOINT x="12420" y="14415">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="93" srcpinname="Transform Out" dstnodeid="52" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Transform Out" dstnodeid="93" dstpinname="Transform In">
    </LINK>
    </PATCH>

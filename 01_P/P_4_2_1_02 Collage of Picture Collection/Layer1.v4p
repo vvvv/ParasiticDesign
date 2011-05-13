@@ -63,9 +63,9 @@
    </PIN>
    <PIN pinname="Depth" pintype="Input" slicecount="1" visible="-1" values="0">
    </PIN>
-   <PIN pinname="Original Width" pintype="Output" visible="0">
+   <PIN pinname="Original Width" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Original Height" pintype="Output" visible="0">
+   <PIN pinname="Original Height" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="Original Depth" pintype="Output" visible="0">
    </PIN>
@@ -426,8 +426,6 @@
    </LINK>
    <LINK dstnodeid="45" dstpinname="Texture" srcnodeid="44" srcpinname="Texture Out">
    </LINK>
-   <LINK dstnodeid="45" dstpinname="Transform" srcnodeid="14" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="9" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5595" top="11295" type="Node" width="1005">
    </BOUNDS>
@@ -776,8 +774,34 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="14" dstpinname="X">
+   <LINK dstnodeid="14" dstpinname="X" srcnodeid="32" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="14" dstpinname="Y">
+   <LINK dstnodeid="14" dstpinname="Y" srcnodeid="32" srcpinname="Output">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="1695" top="19710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Original Width" dstnodeid="72" dstpinname="Aspect Width" hiddenwhenlocked="1">
+   <LINKPOINT x="11145" y="10725">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Original Height" dstnodeid="72" dstpinname="Aspect Height" hiddenwhenlocked="1">
+   <LINKPOINT x="11505" y="10665">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Transform Out" dstnodeid="45" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="72" dstpinname="Transform In">
    </LINK>
    </PATCH>

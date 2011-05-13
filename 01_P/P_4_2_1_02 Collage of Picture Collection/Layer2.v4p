@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\Layer2.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\layer2.v4p" systemname="layer2">
-   <BOUNDS height="17655" left="9780" top="2145" type="Window" width="14235">
+   <BOUNDS height="17655" left="6390" top="990" type="Window" width="14235">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="38" managers="" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <PIN pinname="Transform" pintype="Input" visible="1">
    </PIN>
    <PIN pinname="Texture" pintype="Input" visible="1">
    </PIN>
-   <BOUNDS height="100" left="1635" top="24930" type="Node" width="100">
+   <BOUNDS height="100" left="1650" top="25620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" pintype="Output" visible="1">
    </PIN>
@@ -63,9 +63,9 @@
    </PIN>
    <PIN pinname="Depth" pintype="Input" slicecount="1" visible="-1" values="0">
    </PIN>
-   <PIN pinname="Original Width" pintype="Output" visible="0">
+   <PIN pinname="Original Width" pintype="Output" visible="1">
    </PIN>
-   <PIN pinname="Original Height" pintype="Output" visible="0">
+   <PIN pinname="Original Height" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="Original Depth" pintype="Output" visible="0">
    </PIN>
@@ -255,7 +255,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="25" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="3120" top="23685" type="Node" width="100">
+   <BOUNDS height="100" left="3105" top="23505" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -340,30 +340,6 @@
    </NODE>
    <LINK dstnodeid="25" dstpinname="Destination Minimum" srcnodeid="16" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="14" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="3765" top="22890" type="Node" width="1140">
-   </BOUNDS>
-   <BOUNDS height="270" left="3765" top="22890" type="Box" width="1140">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; scale start|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="13" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="4065" top="23310" type="Node" width="1140">
-   </BOUNDS>
-   <BOUNDS height="270" left="4065" top="23310" type="Box" width="1140">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; scale end|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="12" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <BOUNDS height="100" left="1830" top="17160" type="Node" width="100">
    </BOUNDS>
@@ -423,8 +399,6 @@
    <LINK dstnodeid="12" dstpinname="Y" srcnodeid="8" srcpinname="Z">
    </LINK>
    <LINK dstnodeid="38" dstpinname="Texture" srcnodeid="37" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="38" dstpinname="Transform" srcnodeid="10" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="4425" top="10215" type="Node" width="100">
@@ -1247,5 +1221,31 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="66" dstpinname="Enabled" srcnodeid="83" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="1815" top="25140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Original Width" dstnodeid="91" dstpinname="Aspect Width">
+   <LINKPOINT x="12870" y="13950">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Original Height" dstnodeid="91" dstpinname="Aspect Height">
+   <LINKPOINT x="13380" y="13980">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Transform Out" dstnodeid="38" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="91" dstpinname="Transform In">
    </LINK>
    </PATCH>
