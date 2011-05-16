@@ -1,13 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\P_4_2_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.2.1\P.4.4.1.v4p" systemname="P.4.4.1">
-   <BOUNDS height="16140" left="3630" top="1245" type="Window" width="17505">
+   <BOUNDS height="16140" left="2160" top="420" type="Window" width="16515">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="1080" top="12450" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="1080" top="12450" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="12465" left="12075" top="4020" type="Window" width="16980">
+   <BOUNDS height="11070" left="11580" top="330" type="Window" width="13935">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -21,9 +21,9 @@
    <NODE componentmode="InABox" id="15" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="1080" top="2790" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1080" top="2790" type="Box" width="615">
+   <BOUNDS height="525" left="1080" top="2790" type="Box" width="1770">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|C:\Documents and Settings\Roman\Desktop\P.4.2.1\P_4_2_1_footage\|">
+   <PIN pinname="Input String" slicecount="1" values="P_4_2_1_footage\">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -85,7 +85,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="57" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="1065" top="11370" type="Node" width="13980">
+   <BOUNDS height="270" left="1065" top="11370" type="Node" width="12840">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -123,7 +123,7 @@
    <LINK dstnodeid="152" dstpinname="Input" srcnodeid="153" srcpinname="Keyboard Output">
    </LINK>
    <NODE componentmode="Hidden" id="151" nodename="Random (Value)" systemname="Random (Value)">
-   <BOUNDS height="100" left="4380" top="5475" type="Node" width="100">
+   <BOUNDS height="100" left="4335" top="6585" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -194,8 +194,8 @@
    </LINK>
    <LINK dstnodeid="150" dstpinname="Reset" hiddenwhenlocked="1" srcnodeid="145" srcpinname="Bang">
    </LINK>
-   <NODE systemname="layer1" filename="layer1.v4p" nodename="layer1.v4p" componentmode="Hidden" id="154">
-   <BOUNDS type="Node" left="1065" top="10020" width="3330" height="270">
+   <NODE componentmode="Hidden" filename="layer1.v4p" id="154" nodename="layer1.v4p" systemname="layer1" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\">
+   <BOUNDS height="270" left="1065" top="10020" type="Node" width="3330">
    </BOUNDS>
    <PIN pinname="Directory" visible="1">
    </PIN>
@@ -207,23 +207,21 @@
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="11565" top="1635" width="12540" height="16905">
+   <BOUNDS height="16905" left="10905" top="1740" type="Window" width="11625">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Output String" dstnodeid="154" dstpinname="Directory">
+   <LINK dstnodeid="154" dstpinname="Directory" hiddenwhenlocked="1" srcnodeid="15" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="154" srcpinname="Layer" dstnodeid="57" dstpinname="Layer 1">
+   <LINK dstnodeid="154" dstpinname="Random Seed" srcnodeid="151" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="151" srcpinname="Output" dstnodeid="154" dstpinname="Random Seed">
+   <LINK dstnodeid="154" dstpinname="Enabled" srcnodeid="148" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="148" srcpinname="Up Edge" dstnodeid="154" dstpinname="Enabled">
+   <LINK dstnodeid="154" dstpinname="Switch" srcnodeid="150" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="150" srcpinname="Output" dstnodeid="154" dstpinname="Switch">
-   </LINK>
-   <NODE systemname="Layer2" filename="Layer2.v4p" nodename="Layer2.v4p" componentmode="InAWindow" id="155">
-   <BOUNDS type="Node" left="5715" top="10125" width="3525" height="270">
+   <NODE componentmode="Hidden" filename="Layer2.v4p" id="155" nodename="Layer2.v4p" systemname="Layer2" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\">
+   <BOUNDS height="270" left="5325" top="10140" type="Node" width="3525">
    </BOUNDS>
-   <BOUNDS type="Window" left="7245" top="3345" width="21555" height="16050">
+   <BOUNDS height="16050" left="13335" top="0" type="Window" width="14385">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -233,9 +231,11 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Directory" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="160" nodename="Random (Value)" systemname="Random (Value)">
-   <BOUNDS height="100" left="9165" top="5490" type="Node" width="100">
+   <BOUNDS height="100" left="8775" top="7230" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -247,7 +247,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="159" nodename="Counter (Animation)" systemname="Counter (Animation)">
-   <BOUNDS height="100" left="6900" top="5745" type="Node" width="100">
+   <BOUNDS height="100" left="6480" top="5745" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
    </PIN>
@@ -261,9 +261,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="158" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="6135" top="6300" type="Node" width="100">
+   <BOUNDS height="100" left="5730" top="6300" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6135" top="6300" type="Box" width="795">
+   <BOUNDS height="240" left="5730" top="6300" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -273,7 +273,7 @@
    <LINK dstnodeid="158" dstpinname="Y Input Value" srcnodeid="159" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="157" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="8010" top="4395" type="Node" width="100">
+   <BOUNDS height="100" left="7620" top="4395" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -283,9 +283,9 @@
    <LINK dstnodeid="159" dstpinname="Up" srcnodeid="157" srcpinname="Up Edge">
    </LINK>
    <NODE componentmode="InABox" id="156" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="6675" top="5040" type="Node" width="100">
+   <BOUNDS height="100" left="6255" top="5040" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6675" top="5040" type="Box" width="795">
+   <BOUNDS height="240" left="6255" top="5040" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -296,20 +296,18 @@
    </LINK>
    <LINK dstnodeid="160" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="157" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="152" srcpinname="2 Output" dstnodeid="157" dstpinname="Input">
+   <LINK dstnodeid="157" dstpinname="Input" srcnodeid="152" srcpinname="2 Output">
    </LINK>
-   <LINK srcnodeid="145" srcpinname="Bang" dstnodeid="159" dstpinname="Reset" hiddenwhenlocked="1">
+   <LINK dstnodeid="159" dstpinname="Reset" hiddenwhenlocked="1" srcnodeid="145" srcpinname="Bang">
    </LINK>
-   <LINK srcnodeid="159" srcpinname="Output" dstnodeid="155" dstpinname="Switch">
+   <LINK dstnodeid="155" dstpinname="Switch" srcnodeid="159" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="157" srcpinname="Up Edge" dstnodeid="155" dstpinname="Enabled">
+   <LINK dstnodeid="155" dstpinname="Enabled" srcnodeid="157" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="160" srcpinname="Output" dstnodeid="155" dstpinname="Random Seed">
+   <LINK dstnodeid="155" dstpinname="Random Seed" srcnodeid="160" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="155" srcpinname="Layer" dstnodeid="57" dstpinname="Layer 2">
-   </LINK>
-   <NODE systemname="Layer3" filename="Layer3.v4p" nodename="Layer3.v4p" componentmode="InAWindow" id="161">
-   <BOUNDS type="Node" left="10350" top="10080" width="3495" height="270">
+   <NODE componentmode="Hidden" filename="Layer3.v4p" id="161" nodename="Layer3.v4p" systemname="Layer3" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\">
+   <BOUNDS height="270" left="9600" top="10080" type="Node" width="3495">
    </BOUNDS>
    <PIN pinname="Random Seed" visible="1">
    </PIN>
@@ -319,9 +317,13 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <BOUNDS height="17805" left="5865" top="-165" type="Window" width="11865">
+   </BOUNDS>
+   <PIN pinname="Directory" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="166" nodename="Random (Value)" systemname="Random (Value)">
-   <BOUNDS height="100" left="13770" top="4935" type="Node" width="100">
+   <BOUNDS height="100" left="13050" top="7095" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -333,7 +335,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
-   <BOUNDS height="100" left="11505" top="5190" type="Node" width="100">
+   <BOUNDS height="100" left="10755" top="5190" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
    </PIN>
@@ -347,9 +349,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="164" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="10770" top="5820" type="Node" width="100">
+   <BOUNDS height="100" left="9750" top="5820" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="10770" top="5820" type="Box" width="795">
+   <BOUNDS height="240" left="9750" top="5820" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -359,7 +361,7 @@
    <LINK dstnodeid="164" dstpinname="Y Input Value" srcnodeid="165" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="163" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="12615" top="4200" type="Node" width="100">
+   <BOUNDS height="100" left="11865" top="4200" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -369,9 +371,9 @@
    <LINK dstnodeid="165" dstpinname="Up" srcnodeid="163" srcpinname="Up Edge">
    </LINK>
    <NODE componentmode="InABox" id="162" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="11280" top="4485" type="Node" width="100">
+   <BOUNDS height="100" left="10530" top="4485" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="11280" top="4485" type="Box" width="795">
+   <BOUNDS height="240" left="10530" top="4485" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -382,16 +384,48 @@
    </LINK>
    <LINK dstnodeid="166" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="163" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="145" srcpinname="Bang" dstnodeid="165" dstpinname="Reset">
+   <LINK dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1" srcnodeid="145" srcpinname="Bang">
    </LINK>
-   <LINK srcnodeid="152" srcpinname="3 Output" dstnodeid="163" dstpinname="Input">
+   <LINK dstnodeid="163" dstpinname="Input" srcnodeid="152" srcpinname="3 Output">
    </LINK>
-   <LINK srcnodeid="166" srcpinname="Output" dstnodeid="161" dstpinname="Random Seed">
+   <LINK dstnodeid="161" dstpinname="Random Seed" srcnodeid="166" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="165" srcpinname="Output" dstnodeid="161" dstpinname="Switch">
+   <LINK dstnodeid="161" dstpinname="Switch" srcnodeid="165" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="163" srcpinname="Up Edge" dstnodeid="161" dstpinname="Enabled">
+   <LINK dstnodeid="161" dstpinname="Enabled" srcnodeid="163" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="161" srcpinname="Layer" dstnodeid="57" dstpinname="Layer 3">
+   <LINK dstnodeid="57" dstpinname="Layer 1" srcnodeid="154" srcpinname="Layer">
    </LINK>
+   <LINK dstnodeid="57" dstpinname="Layer 2" srcnodeid="155" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="155" dstpinname="Directory" hiddenwhenlocked="1" srcnodeid="15" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="161" dstpinname="Directory" hiddenwhenlocked="1" srcnodeid="15" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="57" dstpinname="Layer 3" srcnodeid="161" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="168" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="11985" top="5190" type="Node" width="5160">
+   </BOUNDS>
+   <BOUNDS height="810" left="11985" top="5190" type="Box" width="3840">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; In order not to get back to the initial value after the first time the keys 1, 2 or 3 are pressed, counter is started. The maximum value is one.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="167" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="9615" top="7170" type="Node" width="7095">
+   </BOUNDS>
+   <BOUNDS height="1020" left="9615" top="7170" type="Box" width="2610">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Every time one of the keys 1, 2 or 3 is pressed, new random values for each level are generated|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
    </PATCH>
