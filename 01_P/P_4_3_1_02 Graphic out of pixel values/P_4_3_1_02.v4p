@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\P_4_3_1_02.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02.v4p" systemname="P.4.3.1_02">
-   <BOUNDS height="17565" left="6570" top="1515" type="Window" width="13875">
+   <BOUNDS height="14700" left="4680" top="1665" type="Window" width="13875">
    </BOUNDS>
    <NODE componentmode="InABox" id="53" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="10890" top="4245" type="Node" width="100">
@@ -109,11 +109,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InAWindow" id="57" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="100" left="3060" top="12000" type="Node" width="100">
+   <BOUNDS height="100" left="3060" top="12450" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="9855" left="3060" top="12000" type="Box" width="8430">
+   <BOUNDS height="9855" left="3060" top="12450" type="Box" width="8430">
    </BOUNDS>
-   <BOUNDS height="12045" left="16200" top="0" type="Window" width="8640">
+   <BOUNDS height="13875" left="18540" top="1680" type="Window" width="9585">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -189,7 +189,7 @@
    </PIN>
    <PIN pinname="Source Minimum" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Source Maximum" slicecount="1" visible="1" values="1">
+   <PIN pinname="Source Maximum" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="88" dstpinname="Index" srcnodeid="89" srcpinname="Output">
@@ -209,9 +209,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="99" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="6165" top="7350" type="Node" width="100">
+   <BOUNDS height="100" left="6165" top="7170" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6165" top="7350" type="Box" width="795">
+   <BOUNDS height="240" left="6165" top="7170" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="12">
    </PIN>
@@ -506,46 +506,30 @@
    <PIN pinname="ListOfFiles" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="82" srcpinname="Output String" dstnodeid="120" dstpinname="Directory">
+   <LINK dstnodeid="120" dstpinname="Directory" srcnodeid="82" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Output String" dstnodeid="83" dstpinname="Directory">
+   <LINK dstnodeid="83" dstpinname="Directory" srcnodeid="82" srcpinname="Output String">
    </LINK>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="122">
-   <BOUNDS type="Node" left="11595" top="11790" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="11595" top="11790" width="990" height="3600">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="14">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="83" srcpinname="Short Filenames" dstnodeid="122" dstpinname="Input String">
+   <LINK dstnodeid="84" dstpinname="Filename" srcnodeid="83" srcpinname="Filenames">
    </LINK>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="123">
-   <BOUNDS type="Node" left="1710" top="12420" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1710" top="12420" width="8715" height="4110">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="14">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="120" srcpinname="ListOfFiles" dstnodeid="123" dstpinname="Input String">
+   <LINK dstnodeid="51" dstpinname="Filename" srcnodeid="100" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="83" srcpinname="Filenames" dstnodeid="84" dstpinname="Filename">
-   </LINK>
-   <NODE systemname="Subtract (Spreads Sets)" nodename="Subtract (Spreads Sets)" componentmode="Hidden" id="124">
-   <BOUNDS type="Node" left="5970" top="11160" width="100" height="100">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="100" srcpinname="Output String" dstnodeid="51" dstpinname="Filename">
-   </LINK>
-   <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="52" dstpinname="Texture" linkstyle="VHV">
+   <LINK dstnodeid="52" dstpinname="Texture" linkstyle="VHV" srcnodeid="51" srcpinname="Texture Out">
    <LINKPOINT x="8655" y="2445">
    </LINKPOINT>
    <LINKPOINT x="11250" y="2445">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="125">
+   <BOUNDS type="Node" left="5790" top="7545" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5790" top="7545" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Source Maximum">
    </LINK>
    </PATCH>
