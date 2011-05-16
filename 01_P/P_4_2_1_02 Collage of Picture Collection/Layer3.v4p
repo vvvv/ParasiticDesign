@@ -398,24 +398,6 @@
    </NODE>
    <LINK dstnodeid="27" dstpinname="Transform In" srcnodeid="28" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="26" nodename="Scale (Transform)" systemname="Scale (Transform)">
-   <BOUNDS height="100" left="2625" top="25380" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="26" dstpinname="Transform In" srcnodeid="27" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="26" dstpinname="X" srcnodeid="40" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="26" dstpinname="Y" srcnodeid="40" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="25" nodename="Cartesian (3d)" systemname="Cartesian (3d)">
    <BOUNDS height="100" left="2835" top="15825" type="Node" width="100">
    </BOUNDS>
@@ -1092,18 +1074,18 @@
    </LINK>
    <LINK dstnodeid="52" dstpinname="Transform" srcnodeid="93" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="93" dstpinname="Transform In" srcnodeid="26" srcpinname="Transform Out">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="94">
-   <BOUNDS type="Node" left="3255" top="25170" width="100" height="100">
+   <NODE componentmode="InABox" id="94" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3255" top="25170" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3255" top="25170" width="795" height="240">
+   <BOUNDS height="240" left="3255" top="25170" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Uniform Scale">
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="93" dstpinname="Uniform Scale">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Transform Out" dstnodeid="93" dstpinname="Transform In">
    </LINK>
    </PATCH>

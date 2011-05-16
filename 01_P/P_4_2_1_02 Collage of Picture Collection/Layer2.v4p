@@ -243,7 +243,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="26" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
-   <BOUNDS height="100" left="3120" top="25095" type="Node" width="100">
+   <BOUNDS height="100" left="2535" top="25050" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
@@ -255,7 +255,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="25" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="3090" top="26145" type="Node" width="100">
+   <BOUNDS height="100" left="2505" top="26100" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -329,9 +329,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2895" top="25575" type="Node" width="100">
+   <BOUNDS height="100" left="2310" top="25530" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="2895" top="25575" type="Box" width="795">
+   <BOUNDS height="240" left="2310" top="25530" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.1">
    </PIN>
@@ -361,24 +361,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="11" dstpinname="Transform In" srcnodeid="12" srcpinname="Transform Out">
-   </LINK>
-   <NODE componentmode="Hidden" id="10" nodename="Scale (Transform)" systemname="Scale (Transform)">
-   <BOUNDS height="100" left="1785" top="26940" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="10" dstpinname="Transform In" srcnodeid="11" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="10" dstpinname="X" srcnodeid="25" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="10" dstpinname="Y" srcnodeid="25" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="8" nodename="Cartesian (3d)" systemname="Cartesian (3d)">
    <BOUNDS height="100" left="2070" top="18585" type="Node" width="100">
@@ -1225,7 +1207,7 @@
    <NODE componentmode="Hidden" id="91" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
    <BOUNDS height="100" left="1800" top="27780" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   <PIN pinname="Uniform Scale" visible="1">
    </PIN>
    <PIN pinname="Aspect Width" visible="1">
    </PIN>
@@ -1246,6 +1228,8 @@
    </LINK>
    <LINK dstnodeid="38" dstpinname="Transform" srcnodeid="91" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="91" dstpinname="Transform In" srcnodeid="10" srcpinname="Transform Out">
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="91" dstpinname="Uniform Scale">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Transform Out" dstnodeid="91" dstpinname="Transform In">
    </LINK>
    </PATCH>

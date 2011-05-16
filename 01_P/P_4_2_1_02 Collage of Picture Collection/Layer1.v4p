@@ -255,7 +255,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="32" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
-   <BOUNDS height="100" left="2025" top="17880" type="Node" width="100">
+   <BOUNDS height="100" left="2385" top="17895" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
@@ -389,20 +389,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="15" dstpinname="Transform In" srcnodeid="16" srcpinname="Transform Out">
-   </LINK>
-   <NODE componentmode="Hidden" id="14" nodename="Scale (Transform)" systemname="Scale (Transform)">
-   <BOUNDS height="100" left="1680" top="19215" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="14" dstpinname="Transform In" srcnodeid="15" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="12" nodename="Cartesian (3d)" systemname="Cartesian (3d)">
    <BOUNDS height="270" left="1980" top="13530" type="Node" width="2430">
@@ -774,10 +760,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="14" dstpinname="X" srcnodeid="32" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="14" dstpinname="Y" srcnodeid="32" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="72" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
    <BOUNDS height="100" left="1695" top="19710" type="Node" width="100">
    </BOUNDS>
@@ -802,18 +784,8 @@
    </LINK>
    <LINK dstnodeid="45" dstpinname="Transform" srcnodeid="72" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="72" dstpinname="Transform In" srcnodeid="14" srcpinname="Transform Out">
+   <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="72" dstpinname="Transform In">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="73">
-   <BOUNDS type="Node" left="3405" top="18660" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3405" top="18660" width="795" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="72" dstpinname="Uniform Scale">
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="72" dstpinname="Uniform Scale">
    </LINK>
    </PATCH>
