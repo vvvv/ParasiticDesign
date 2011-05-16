@@ -1068,30 +1068,42 @@
    </LINK>
    <LINK dstnodeid="6" dstpinname="Enabled" srcnodeid="1" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="93">
-   <BOUNDS type="Node" left="2625" top="26160" width="100" height="100">
+   <NODE componentmode="Hidden" id="93" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <BOUNDS height="100" left="2625" top="26160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Aspect Width" visible="1">
    </PIN>
    <PIN pinname="Aspect Height" visible="1">
    </PIN>
-   <PIN pinname="Uniform Scale" slicecount="1" values="1">
+   <PIN pinname="Uniform Scale" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="51" srcpinname="Original Width" dstnodeid="93" dstpinname="Aspect Width" hiddenwhenlocked="1">
+   <LINK dstnodeid="93" dstpinname="Aspect Width" hiddenwhenlocked="1" srcnodeid="51" srcpinname="Original Width">
    <LINKPOINT x="12150" y="14430">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="51" srcpinname="Original Height" dstnodeid="93" dstpinname="Aspect Height" hiddenwhenlocked="1">
+   <LINK dstnodeid="93" dstpinname="Aspect Height" hiddenwhenlocked="1" srcnodeid="51" srcpinname="Original Height">
    <LINKPOINT x="12420" y="14415">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="93" srcpinname="Transform Out" dstnodeid="52" dstpinname="Transform">
+   <LINK dstnodeid="52" dstpinname="Transform" srcnodeid="93" srcpinname="Transform Out">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Transform Out" dstnodeid="93" dstpinname="Transform In">
+   <LINK dstnodeid="93" dstpinname="Transform In" srcnodeid="26" srcpinname="Transform Out">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="94">
+   <BOUNDS type="Node" left="3255" top="25170" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3255" top="25170" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="94" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Uniform Scale">
    </LINK>
    </PATCH>
