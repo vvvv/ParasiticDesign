@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\layer1.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\layer1.v4p" systemname="layer1">
-   <BOUNDS height="16905" left="11055" top="-225" type="Window" width="11625">
+   <BOUNDS height="16905" left="10905" top="1740" type="Window" width="11625">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="45" managers="" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <PIN pinname="Transform" pintype="Input" visible="1">
@@ -183,7 +183,7 @@
    <LINK dstnodeid="44" dstpinname="Filename" srcnodeid="42" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="32" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
-   <BOUNDS height="100" left="2055" top="15810" type="Node" width="100">
+   <BOUNDS height="100" left="2445" top="15810" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
@@ -211,18 +211,6 @@
    <NODE componentmode="Hidden" id="16" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <BOUNDS height="100" left="1725" top="14595" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="14" nodename="Scale (Transform)" systemname="Scale (Transform)">
-   <BOUNDS height="100" left="1710" top="17145" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
@@ -398,10 +386,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="14" dstpinname="X" srcnodeid="32" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="14" dstpinname="Y" srcnodeid="32" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="72" nodename="Add (Value)" systemname="Add (Value)">
    <BOUNDS height="100" left="1095" top="11655" type="Node" width="100">
    </BOUNDS>
@@ -484,8 +468,6 @@
    </LINK>
    <LINK dstnodeid="16" dstpinname="Y" srcnodeid="73" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="14" dstpinname="Transform In" srcnodeid="16" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="79" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="330" top="10770" type="Node" width="100">
    </BOUNDS>
@@ -539,6 +521,8 @@
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
+   <PIN pinname="Uniform Scale" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="83" dstpinname="Aspect Width" hiddenwhenlocked="1" srcnodeid="44" srcpinname="Original Width">
    <LINKPOINT x="10470" y="10350">
@@ -550,6 +534,8 @@
    </LINK>
    <LINK dstnodeid="45" dstpinname="Transform" srcnodeid="83" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="83" dstpinname="Transform In" srcnodeid="14" srcpinname="Transform Out">
+   <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="83" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="83" dstpinname="Uniform Scale">
    </LINK>
    </PATCH>
