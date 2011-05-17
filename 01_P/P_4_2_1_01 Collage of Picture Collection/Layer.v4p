@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\Layer.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\Layer.v4p" systemname="Layer">
-   <BOUNDS height="17175" left="2865" top="825" type="Window" width="17430">
+   <BOUNDS height="17175" left="1470" top="0" type="Window" width="17430">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="54" managers="" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <PIN pinname="Transform" pintype="Input" visible="1">
@@ -303,7 +303,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="26" nodename="Add (Value)" systemname="Add (Value)">
-   <BOUNDS height="100" left="3375" top="7575" type="Node" width="100">
+   <BOUNDS height="100" left="3375" top="8250" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
@@ -362,8 +362,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="13" dstpinname="Random Seed" hiddenwhenlocked="1" srcnodeid="26" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="12" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="13725" top="14655" type="Node" width="3510">
    </BOUNDS>
@@ -526,10 +524,6 @@
    </NODE>
    <LINK dstnodeid="59" dstpinname="Value Input" srcnodeid="55" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="32" dstpinname="Random Seed" hiddenwhenlocked="1" srcnodeid="59" srcpinname="Value Output">
-   </LINK>
-   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="59" srcpinname="Value Output">
-   </LINK>
    <NODE componentmode="Hidden" id="60" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
    <BOUNDS height="100" left="2625" top="15840" type="Node" width="100">
    </BOUNDS>
@@ -665,7 +659,7 @@
    </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" id="73" nodename="Add (Value)" systemname="Add (Value)">
-   <BOUNDS height="100" left="3375" top="8265" type="Node" width="100">
+   <BOUNDS height="100" left="3375" top="8805" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
@@ -675,7 +669,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="74" nodename="Add (Value)" systemname="Add (Value)">
-   <BOUNDS height="100" left="3375" top="8985" type="Node" width="100">
+   <BOUNDS height="100" left="3375" top="9525" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
@@ -692,6 +686,24 @@
    </LINK>
    <LINK dstnodeid="60" dstpinname="Random Seed" hiddenwhenlocked="1" srcnodeid="74" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="64" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input 1">
+   <LINK dstnodeid="33" dstpinname="Input 1" srcnodeid="64" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="78" nodename="Add (Value)" systemname="Add (Value)">
+   <BOUNDS height="100" left="3375" top="7620" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="59" srcpinname="Value Output" dstnodeid="78" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="32" dstpinname="Random Seed" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="13" dstpinname="Random Seed" hiddenwhenlocked="1">
    </LINK>
    </PATCH>
