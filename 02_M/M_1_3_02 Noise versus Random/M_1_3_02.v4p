@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_3_02 Noise versus Coincidence\M_1_3_02.v4p" bgcolor="15724527" filename="C:\Documents and Settings\Roman\Desktop\M.1.3_02.v4p" systemname="M.1.3_02">
-   <BOUNDS height="10275" left="4575" top="2910" type="Window" width="8640">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_1_3_02 Noise versus Random\M_1_3_02.v4p" bgcolor="15724527" filename="C:\Documents and Settings\Roman\Desktop\M.1.3_02.v4p" systemname="M.1.3_02">
+   <BOUNDS height="10890" left="0" top="0" type="Window" width="8640">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="675" top="8850" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="5565" left="675" top="8850" type="Box" width="5085">
    </BOUNDS>
-   <BOUNDS height="8040" left="13200" top="2910" type="Window" width="7800">
+   <BOUNDS height="8190" left="8640" top="0" type="Window" width="7920">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -193,7 +193,7 @@
    </BOUNDS>
    <BOUNDS height="540" left="255" top="915" type="Box" width="4785">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;click: &tab;&tab;&tab;&tab;&tab;new noise line|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;click: &tab;&tab;&tab;&tab;&tab;new noise line|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -203,7 +203,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="26" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;ctrl+2:&tab; &tab;&tab;save png|">
+   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;ctrl+2:&tab; &tab;&tab;save png|" encoded="0">
    </PIN>
    <BOUNDS height="510" left="5130" top="915" type="Box" width="2940">
    </BOUNDS>
@@ -217,7 +217,7 @@
    </PIN>
    <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||" encoded="0">
    </PIN>
    <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
    </PIN>
@@ -245,7 +245,7 @@
    </BOUNDS>
    <BOUNDS height="435" left="225" top="180" type="Box" width="7215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Noise versus Coincidence|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Noise versus Random|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -259,7 +259,7 @@
    </BOUNDS>
    <BOUNDS height="315" left="240" top="540" type="Box" width="5415">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|draws a random chart and shows how to use randomSeed|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|draws a random chart and shows how to use randomSeed|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -268,40 +268,38 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Up Edge" dstnodeid="22" dstpinname="Enabled">
-   </LINK>
-   <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="28">
-   <BOUNDS type="Node" left="4170" top="6705" width="100" height="100">
+   <NODE componentmode="Hidden" id="28" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="100" left="4170" top="6705" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="X Out" dstnodeid="28" dstpinname="Input">
+   <LINK dstnodeid="28" dstpinname="Input" srcnodeid="8" srcpinname="X Out">
    </LINK>
-   <LINK srcnodeid="28" srcpinname="Count" dstnodeid="15" dstpinname="Spread Count">
+   <LINK dstnodeid="15" dstpinname="Spread Count" srcnodeid="28" srcpinname="Count">
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Output" dstnodeid="15" dstpinname="Random Seed">
+   <LINK dstnodeid="15" dstpinname="Random Seed" srcnodeid="22" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="14" dstpinname="Lightness">
+   <LINK dstnodeid="14" dstpinname="Lightness" srcnodeid="15" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="30" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="4740" top="2520" width="3195" height="270">
+   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="1755" top="9225" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4740" top="2520" width="3195" height="270">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; New value for RandomSeed is generated.|">
+   <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
+   <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="7" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="6630" y="9450">
+   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output 1" dstnodeid="7" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="7395" y="11520">
    </LINKPOINT>
-   <LINKPOINT x="6825" y="3060">
+   <LINKPOINT x="8070" y="1545">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Down Edge" dstnodeid="22" dstpinname="Enabled">
    </LINK>
    </PATCH>
