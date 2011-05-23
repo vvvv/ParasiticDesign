@@ -90,48 +90,7 @@ technique TPhongDirectional
     pass P0
     {
         //Wrap0 = U;  // useful when mesh is round like a sphere
-        VertexShader = compile vs_1_1 VS();
+        VertexShader = compile vs_2_0 VS();
         PixelShader = compile ps_2_0 PS();
-    }
-}
-
-technique TFallbackGouraudDirectionalFF
-{
-    pass P0
-    {
-        //transformations
-        NormalizeNormals = true;
-        WorldTransform[0]   = (tW);
-        ViewTransform       = (tV);
-        ProjectionTransform = (tP);
-
-        //material
-        MaterialAmbient  = {1, 1, 1, 1};
-        MaterialDiffuse  = {1, 1, 1, 1};
-        MaterialSpecular = {1, 1, 1, 1};
-        MaterialPower    = (lPower);
-
-        //texturing
-        Sampler[0] = (Samp);
-        TextureTransform[0] = (tTex);
-        TexCoordIndex[0] = 0;
-        TextureTransformFlags[0] = COUNT2;
-        //Wrap0 = U;  // useful when mesh is round like a sphere
-
-        //lighting
-        LightEnable[0] = TRUE;
-        Lighting       = TRUE;
-        SpecularEnable = TRUE;
-
-        LightType[0]     = DIRECTIONAL;
-        LightAmbient[0]  = (lAmb);
-        LightDiffuse[0]  = (lDiff);
-        LightSpecular[0] = (lSpec);
-        LightDirection[0] = (lDir);
-
-        //shading
-        ShadeMode = GOURAUD;
-        VertexShader = NULL;
-        PixelShader  = NULL;
     }
 }
