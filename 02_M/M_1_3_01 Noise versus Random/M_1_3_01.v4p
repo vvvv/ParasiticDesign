@@ -199,29 +199,17 @@
    </PIN>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Destination Minimum" visible="1">
+   <PIN pinname="Destination Minimum" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Destination Maximum" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="155" dstpinname="Input" srcnodeid="145" srcpinname="X">
    </LINK>
-   <NODE componentmode="InABox" id="156" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="3195" top="3795" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="3195" top="3795" type="Box" width="660">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="155" dstpinname="Destination Minimum" srcnodeid="156" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="157" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="3375" top="3510" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="3375" top="3510" type="Box" width="660">
+   <BOUNDS height="240" left="3375" top="3510" type="Box" width="765">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="20">
    </PIN>
@@ -569,9 +557,9 @@
    <LINK dstnodeid="149" dstpinname="Source Minimum" srcnodeid="237" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="238" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="4605" top="4290" type="Node" width="6540">
+   <BOUNDS height="270" left="4425" top="4215" type="Node" width="6540">
    </BOUNDS>
-   <BOUNDS height="690" left="4605" top="4290" type="Box" width="2775">
+   <BOUNDS height="690" left="4425" top="4215" type="Box" width="2775">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Maps the mouse X position to the desired range over which to sample the perlin noise.|">
    </PIN>
@@ -580,40 +568,50 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="239">
-   <BOUNDS type="Node" left="4560" top="5670" width="100" height="100">
+   <NODE componentmode="InABox" id="239" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4560" top="5670" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4560" top="5670" width="450" height="240">
+   <BOUNDS height="240" left="4560" top="5670" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="239" srcpinname="Y Output Value" dstnodeid="138" dstpinname="Octaves">
+   <LINK dstnodeid="138" dstpinname="Octaves" srcnodeid="239" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="241">
-   <BOUNDS type="Node" left="6105" top="5670" width="100" height="100">
+   <NODE componentmode="InABox" id="241" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6105" top="5670" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6105" top="5670" width="600" height="240">
+   <BOUNDS height="240" left="6105" top="5670" type="Box" width="600">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="241" srcpinname="Y Output Value" dstnodeid="138" dstpinname="Persistence">
+   <LINK dstnodeid="138" dstpinname="Persistence" srcnodeid="241" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="242" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="7065" top="5565" width="34305" height="270">
+   <NODE componentmode="InABox" id="242" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="7065" top="5565" type="Node" width="34305">
    </BOUNDS>
-   <BOUNDS type="Box" left="7065" top="5565" width="2700" height="1770">
+   <BOUNDS height="1770" left="7065" top="5565" type="Box" width="2700">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; According to Processings documentation those are the default values for the noise() function:&cr;&lf;&cr;&lf;By default, noise is computed over 4 octaves with each octave contributing exactly half than its predecessor, starting at 50% strength for the 1st octave. |" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; According to Processings documentation those are the default values for the noise() function:&cr;&lf;&quot;By default, noise is computed over 4 octaves with each octave contributing exactly half than its predecessor, starting at 50% strength for the 1st octave.&quot;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="246">
+   <BOUNDS type="Node" left="3225" top="4890" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3225" top="4890" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Output" dstnodeid="246" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
