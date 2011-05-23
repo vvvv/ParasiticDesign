@@ -47,7 +47,7 @@ vs2ps VS(
     float4 PosO: POSITION,
     float3 NormO: NORMAL,
     float4 TexCd : TEXCOORD0,
-	float4 lDiff : DIFFUSE)
+	float4 cDiff : DIFFUSE)
 {
     //inititalize all fields of output struct with 0
     vs2ps Out = (vs2ps)0;
@@ -57,7 +57,7 @@ vs2ps VS(
     
     //normal in view space
     Out.NormV = normalize(mul(NormO, tWV));
-	Out.Diffuse = lDiff;
+	Out.Diffuse = cDiff;
     //position (projected)
     Out.PosWVP  = mul(PosO, tWVP);
     Out.TexCd = mul(TexCd, tTex);
