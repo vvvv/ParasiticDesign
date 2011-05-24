@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_03 Noisy Movements\M_1_5_03_TOOL.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_02_TOOL.v4p" systemname="M.1.5_02_TOOL">
-   <BOUNDS height="16500" left="3945" top="0" type="Window" width="10560">
+   <BOUNDS height="13575" left="5475" top="0" type="Window" width="9060">
    </BOUNDS>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="242" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;1-2: &tab;&tab;&tab;switch noise mode&cr;&lf;space: &tab;&tab;&tab;new noise seed&cr;&lf;backspace: &tab;&tab;clear screen&cr;&lf;ctrl+2:&tab; &tab;&tab;save png|">
@@ -40,12 +40,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="233" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="270" left="7320" top="2190" type="Node" width="2115">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="218" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="60" top="15" type="Node" width="945">
    </BOUNDS>
@@ -74,106 +68,8 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\CaseValue.dll" id="287" nodename="Case (Value)" systemname="Case (Value)">
-   <BOUNDS height="100" left="7875" top="3315" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Cases" slicecount="1" values="|1, 2|">
-   </PIN>
-   <PIN pinname="Switch" visible="1">
-   </PIN>
-   <PIN pinname="Q">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="2" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="211" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="5790" top="3270" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="300" left="5790" top="3270" type="Box" width="1095">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="211" dstpinname="Input String" srcnodeid="233" srcpinname="Keyboard Output">
-   </LINK>
-   <LINK dstnodeid="287" dstpinname="Switch" srcnodeid="233" srcpinname="Keyboard Output">
-   </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="400" nodename="Line (EX9)" systemname="Line (EX9)">
-   <BOUNDS height="270" left="2865" top="11790" type="Node" width="4290">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="From" visible="1">
-   </PIN>
-   <PIN pinname="To" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Width" visible="1">
-   </PIN>
-   <PIN pinname="Transform Each Bin" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="395" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="3030" top="10455" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="393" nodename="HSL (Color Join)" systemname="HSL (Color Join)">
-   <BOUNDS height="100" left="5475" top="10440" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Alpha" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Hue" slicecount="1" values="0.3333">
-   </PIN>
-   <PIN pinname="Lightness" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="391" nodename="Multiply (Value)" systemname="Multiply (Value)">
-   <BOUNDS height="100" left="5805" top="9570" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="390" nodename="Random (Value)" systemname="Random (Value)">
-   <BOUNDS height="100" left="8085" top="5730" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Is Integer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Scale" slicecount="1" values="100000">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="389" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="8085" top="5205" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="387" managers="" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="660" top="11820" type="Node" width="100">
+   <BOUNDS height="270" left="645" top="9780" type="Node" width="1665">
    </BOUNDS>
    <PIN pinname="Color" pintype="Input" visible="1">
    </PIN>
@@ -203,7 +99,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="386" managers="" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="645" top="12330" type="Node" width="4515">
+   <BOUNDS height="270" left="630" top="10290" type="Node" width="4515">
    </BOUNDS>
    <PIN pinname="Layer 2" pintype="Input" visible="1">
    </PIN>
@@ -230,46 +126,10 @@
    <PIN pinname="Layer 6" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="385" managers="" nodename="HSL (Color Join)" systemname="HSL (Color Join)">
-   <BOUNDS height="100" left="1620" top="10815" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Output" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Hue" pintype="Input" slicecount="1" visible="1" values="0.333333333333333">
-   </PIN>
-   <PIN pinname="Saturation" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Lightness" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="384" managers="" nodename="Scale (Transform)" systemname="Scale (Transform)">
-   <BOUNDS height="100" left="810" top="10965" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="X" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Y" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform In" pintype="Input" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Z" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="383" managers="" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="555" top="10125" type="Node" width="100">
+   <BOUNDS height="100" left="1110" top="8970" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="555" top="10125" type="Box" width="795">
+   <BOUNDS height="240" left="1110" top="8970" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="2">
    </PIN>
@@ -328,37 +188,7 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="400" dstpinname="Color" srcnodeid="393" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="390" dstpinname="Enabled" srcnodeid="389" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="386" dstpinname="Layer 2" srcnodeid="400" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="387" dstpinname="Color" srcnodeid="385" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="386" dstpinname="Layer 1" srcnodeid="387" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="387" dstpinname="Transform" srcnodeid="384" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="384" dstpinname="X" srcnodeid="383" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="384" dstpinname="Y" srcnodeid="383" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="400" dstpinname="Width" srcnodeid="391" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="366" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
-   <BOUNDS height="100" left="7305" top="4410" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="&lt;BACK&gt;&lt;SPACE&gt;">
-   </PIN>
-   <PIN pinname="&lt;BACK&gt; Output" visible="1">
-   </PIN>
-   <PIN pinname="&lt;SPACE&gt; Output" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="389" dstpinname="Input" srcnodeid="366" srcpinname="&lt;SPACE&gt; Output">
    </LINK>
    <NODE componentmode="InABox" id="424" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="3285" top="3840" type="Node" width="1290">
@@ -796,88 +626,14 @@
    </LINK>
    <LINK dstnodeid="420" dstpinname="Input 1" srcnodeid="408" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="AgentLine.v4p" id="185" nodename="AgentLine.v4p" systemname="AgentLine" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_03 Noisy Movements\">
-   <PIN pinname="RandomSeed" visible="1">
-   </PIN>
-   <PIN pinname="FromXYZ" visible="1">
-   </PIN>
-   <PIN pinname="ToXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="NoiseScale" visible="1">
-   </PIN>
-   <PIN pinname="NoiseStrength" visible="1">
-   </PIN>
-   <PIN pinname="Spread Count - Spread Count" visible="1">
-   </PIN>
-   <PIN pinname="Switch - Switch" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   <BOUNDS height="17205" left="1755" top="0" type="Window" width="12795">
-   </BOUNDS>
-   <BOUNDS height="270" left="4140" top="8970" type="Node" width="1965">
-   </BOUNDS>
-   <PIN pinname="MouseY" visible="1">
-   </PIN>
-   <PIN pinname="Period for the Random Seed" visible="1">
-   </PIN>
-   <PIN pinname="Diffusion" visible="1">
-   </PIN>
-   <PIN pinname="Stop" visible="1">
-   </PIN>
-   <PIN pinname="Period" visible="1">
-   </PIN>
-   <PIN pinname="Switch" visible="1">
-   </PIN>
-   <PIN pinname="Step Size" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Agent Count" visible="1">
-   </PIN>
-   <PIN pinname="Noise Scale" visible="1">
-   </PIN>
-   <PIN pinname="Noise Strength" visible="1">
-   </PIN>
-   <PIN pinname="Random Seed" visible="1">
-   </PIN>
-   <PIN pinname="2 Modus On" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="400" dstpinname="From" srcnodeid="185" srcpinname="FromXYZ">
-   </LINK>
-   <LINK dstnodeid="400" dstpinname="To" srcnodeid="185" srcpinname="ToXYZ">
-   </LINK>
-   <LINK dstnodeid="391" dstpinname="Input 2" srcnodeid="185" srcpinname="Step Size">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Clear" srcnodeid="420" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Agent Count" srcnodeid="419" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Noise Scale" srcnodeid="415" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Noise Strength" srcnodeid="414" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="366" dstpinname="Input" srcnodeid="233" srcpinname="Keyboard Output">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Random Seed" srcnodeid="390" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="391" dstpinname="Input 1" srcnodeid="413" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="393" dstpinname="Alpha" srcnodeid="412" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="385" dstpinname="Alpha" srcnodeid="411" srcpinname="X Output Value">
-   </LINK>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="398" managers="" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <PIN pinname="Layers" pintype="Input" visible="1">
    </PIN>
    <PIN pinname="Clear" pintype="Input" visible="1">
    </PIN>
-   <BOUNDS height="270" left="645" top="12900" type="Node" width="4575">
+   <BOUNDS height="270" left="630" top="12090" type="Node" width="4575">
    </BOUNDS>
-   <BOUNDS height="5715" left="645" top="12900" type="Box" width="8085">
+   <BOUNDS height="5715" left="630" top="12090" type="Box" width="8085">
    </BOUNDS>
    <BOUNDS height="11310" left="14505" top="0" type="Window" width="13020">
    </BOUNDS>
@@ -958,24 +714,106 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="398" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="366" srcpinname="&lt;BACK&gt; Output">
-   </LINK>
    <LINK dstnodeid="398" dstpinname="Layers" srcnodeid="386" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="185" dstpinname="2 Modus On" srcnodeid="287" srcpinname="Value Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="425" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="3060" top="10980" type="Node" width="100">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="426" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_03 Noisy Movements\">
+   <BOUNDS height="100" left="7065" top="2070" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="XYZ" slicecount="1" values="0.5">
+   <PIN pinname="Random Seed" visible="1">
    </PIN>
-   <PIN pinname="Transform In" visible="1">
+   <PIN pinname="Clear Screen" visible="1">
+   </PIN>
+   <PIN pinname="2 Modus On" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="428" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="100" left="1125" top="11520" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="427" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
+   <BOUNDS height="100" left="1140" top="11010" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="428" dstpinname="Input 1" srcnodeid="427" srcpinname="Bang">
+   </LINK>
+   <LINK dstnodeid="398" dstpinname="Clear" srcnodeid="428" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="428" dstpinname="Input 2" srcnodeid="426" srcpinname="Clear Screen">
+   </LINK>
+   <NODE componentmode="Hidden" id="430" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
+   <BOUNDS height="100" left="2025" top="9135" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,0.03922|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="387" dstpinname="Color" srcnodeid="430" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="430" dstpinname="Alpha" srcnodeid="411" srcpinname="X Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="431" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
+   <BOUNDS height="100" left="870" top="9345" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="425" dstpinname="Transform In" srcnodeid="395" srcpinname="Transform Out">
+   <LINK dstnodeid="431" dstpinname="XYZ" srcnodeid="383" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="400" dstpinname="Transform" srcnodeid="425" srcpinname="Transform Out">
+   <LINK dstnodeid="387" dstpinname="Transform" srcnodeid="431" srcpinname="Transform Out">
+   </LINK>
+   <NODE systemname="Agent" filename="Agent.v4p" nodename="Agent.v4p" componentmode="Hidden" id="432">
+   <BOUNDS type="Node" left="2880" top="9525" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7830" top="0" width="11295" height="17205">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Agent Count" visible="1">
+   </PIN>
+   <PIN pinname="2 Modus On" visible="1">
+   </PIN>
+   <PIN pinname="Noise Scale" visible="1">
+   </PIN>
+   <PIN pinname="Random Seed" visible="1">
+   </PIN>
+   <PIN pinname="Noise Strength" visible="1">
+   </PIN>
+   <PIN pinname="Stroke Width" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="432" srcpinname="Layer" dstnodeid="386" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="420" srcpinname="Output" dstnodeid="432" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="419" srcpinname="X Output Value" dstnodeid="432" dstpinname="Agent Count">
+   </LINK>
+   <LINK srcnodeid="426" srcpinname="2 Modus On" dstnodeid="432" dstpinname="2 Modus On">
+   </LINK>
+   <LINK srcnodeid="415" srcpinname="X Output Value" dstnodeid="432" dstpinname="Noise Scale">
+   </LINK>
+   <LINK srcnodeid="426" srcpinname="Random Seed" dstnodeid="432" dstpinname="Random Seed">
+   </LINK>
+   <LINK srcnodeid="414" srcpinname="X Output Value" dstnodeid="432" dstpinname="Noise Strength">
+   </LINK>
+   <LINK srcnodeid="413" srcpinname="X Output Value" dstnodeid="432" dstpinname="Stroke Width">
+   </LINK>
+   <LINK srcnodeid="412" srcpinname="X Output Value" dstnodeid="432" dstpinname="Alpha">
    </LINK>
    </PATCH>
