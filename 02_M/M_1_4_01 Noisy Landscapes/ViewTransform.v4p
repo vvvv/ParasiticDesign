@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\GridTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\CameraRotation.v4p" systemname="CameraRotation">
-   <BOUNDS height="10020" left="17280" top="2865" type="Window" width="7440">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\CameraRotation.v4p" systemname="CameraRotation">
+   <BOUNDS height="10935" left="6225" top="2520" type="Window" width="7440">
    </BOUNDS>
    <NODE componentmode="Hidden" id="18" nodename="S+H (Animation)" systemname="S+H (Animation)">
    <BOUNDS height="100" left="1350" top="4320" type="Node" width="100">
@@ -179,7 +179,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="27" nodename="Rotate (Transform)" systemname="Rotate (Transform)">
-   <BOUNDS height="100" left="780" top="8070" type="Node" width="100">
+   <BOUNDS height="100" left="780" top="9420" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -205,9 +205,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="28" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="100" left="780" top="8505" type="Node" width="100">
+   <BOUNDS height="100" left="780" top="9855" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="780" top="8505" type="Box" width="795">
+   <BOUNDS height="240" left="780" top="9855" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -258,8 +258,6 @@
    </NODE>
    <LINK dstnodeid="32" dstpinname="Input 1" srcnodeid="31" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="27" dstpinname="X" srcnodeid="32" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="33" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2160" top="7170" type="Node" width="100">
    </BOUNDS>
@@ -298,16 +296,66 @@
    </LINK>
    <LINK dstnodeid="31" dstpinname="XYZ" srcnodeid="35" srcpinname="Position Out">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="36" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="2250" top="6240" width="4545" height="270">
+   <NODE componentmode="InABox" id="36" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="2250" top="6240" type="Node" width="4545">
    </BOUNDS>
-   <BOUNDS type="Box" left="2250" top="6240" width="4485" height="750">
+   <BOUNDS height="750" left="2250" top="6240" type="Box" width="4485">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; Where in Processing slight damping is realized in this line:&cr;&lf;  rotationX += (targetRotationX-rotationX)*0.25; &cr;&lf;vvvv uses a Damper node.|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Where in Processing slight damping is realized in this line:&cr;&lf;  rotationX += (targetRotationX-rotationX)*0.25; &cr;&lf;vvvv uses a Damper node.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="38" nodename="Max (Value)" systemname="Max (Value)">
+   <BOUNDS height="100" left="1620" top="8940" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="39">
+   <BOUNDS type="Node" left="1530" top="7905" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1530" top="7905" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0.3333">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="40" nodename="Min (Value)" systemname="Min (Value)">
+   <BOUNDS height="100" left="1620" top="8340" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="40" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="38" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="43">
+   <BOUNDS type="Node" left="2370" top="8535" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2370" top="8535" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.3333">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="27" dstpinname="X">
+   </LINK>
    </PATCH>
