@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\NoisedGrid.v4p" filename="C:\Documents and Settings\Roman\Desktop\vvvv_45beta25.1\NoisedGrid.v4p" systemname="NoisedGrid">
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\NoisedGrid.v4p" filename="C:\Documents and Settings\Roman\Desktop\vvvv_45beta25.1\NoisedGrid.v4p" systemname="NoisedGrid">
    <BOUNDS height="14295" left="1350" top="1695" type="Window" width="12465">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="12" managers="" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
@@ -899,29 +899,11 @@
    </BOUNDS>
    <BOUNDS height="240" left="4485" top="15" type="Box" width="645">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="MouseXYZ">
+   <PIN pinname="Descriptive Name" slicecount="1" values="MouseXY">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="94" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
-   <BOUNDS height="100" left="5040" top="795" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="94" dstpinname="XYZ" srcnodeid="95" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="83" dstpinname="Input 1" srcnodeid="94" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="84" dstpinname="Input 1" srcnodeid="94" srcpinname="Y">
-   </LINK>
    <NODE componentmode="InABox" id="96" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7530" top="3150" type="Node" width="3960">
    </BOUNDS>
@@ -1105,13 +1087,15 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Source Minimum" slicecount="1" values="-1">
+   <PIN pinname="Source Minimum" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Destination Minimum" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Destination Maximum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Source Maximum" slicecount="1" values="-0.5">
    </PIN>
    </NODE>
    <LINK dstnodeid="112" dstpinname="Input" srcnodeid="13" srcpinname="X">
@@ -1123,11 +1107,11 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Source Minimum" slicecount="1" values="1">
+   <PIN pinname="Source Minimum" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Source Maximum" slicecount="1" values="-1">
+   <PIN pinname="Source Maximum" slicecount="1" values="-0.5">
    </PIN>
    <PIN pinname="Destination Minimum" slicecount="1" values="1">
    </PIN>
@@ -1137,5 +1121,23 @@
    <LINK dstnodeid="113" dstpinname="Input" srcnodeid="13" srcpinname="Y">
    </LINK>
    <LINK dstnodeid="25" dstpinname="Input 1" srcnodeid="113" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="94" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="5040" top="795" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="83" dstpinname="Input 1" srcnodeid="94" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="84" dstpinname="Input 1" srcnodeid="94" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="94" dstpinname="XY" srcnodeid="95" srcpinname="Y Output Value">
    </LINK>
    </PATCH>
