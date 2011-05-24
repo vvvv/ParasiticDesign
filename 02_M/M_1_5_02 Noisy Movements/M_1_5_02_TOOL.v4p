@@ -554,52 +554,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="AgentLine.v4p" id="378" nodename="AgentLine.v4p" systemname="AgentLine" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_02 Noisy Movements\">
-   <PIN pinname="Switch - Switch" visible="1">
-   </PIN>
-   <PIN pinname="NoiseScale" visible="1">
-   </PIN>
-   <PIN pinname="NoiseStrength" visible="1">
-   </PIN>
-   <PIN pinname="RandomSeed" visible="1">
-   </PIN>
-   <PIN pinname="Agent Count" visible="1">
-   </PIN>
-   <BOUNDS height="18045" left="13515" top="-45" type="Window" width="11610">
-   </BOUNDS>
-   <BOUNDS height="270" left="2550" top="10575" type="Node" width="2895">
-   </BOUNDS>
-   <PIN pinname="Spread Count - Spread Count" visible="1">
-   </PIN>
-   <PIN pinname="ToXYZ" visible="1">
-   </PIN>
-   <PIN pinname="FromXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="2 Modus On" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Noise Scale" visible="1">
-   </PIN>
-   <PIN pinname="Noise Strength" visible="1">
-   </PIN>
-   <PIN pinname="Step Size" visible="1">
-   </PIN>
-   <PIN pinname="Random Seed" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Strike Width" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" visible="1">
-   </PIN>
-   <PIN pinname="Stroke Width" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="378" dstpinname="Clear" srcnodeid="289" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="382" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6420" top="3405" type="Node" width="4860">
    </BOUNDS>
@@ -612,12 +566,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="378" dstpinname="Agent Count" hiddenwhenlocked="0" srcnodeid="338" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="378" dstpinname="Noise Scale" hiddenwhenlocked="0" srcnodeid="368" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="378" dstpinname="Noise Strength" hiddenwhenlocked="0" srcnodeid="369" srcpinname="X Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="409" nodename="Change (Animation)" systemname="Change (Animation)">
    <BOUNDS height="100" left="405" top="4995" type="Node" width="100">
    </BOUNDS>
@@ -738,14 +686,6 @@
    <PIN pinname="Random Seed" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="378" dstpinname="2 Modus On" srcnodeid="418" srcpinname="2 Modus On">
-   </LINK>
-   <LINK dstnodeid="378" dstpinname="Random Seed" srcnodeid="418" srcpinname="Random Seed">
-   </LINK>
-   <LINK dstnodeid="261" dstpinname="Layer 2" srcnodeid="378" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="378" dstpinname="Alpha" srcnodeid="371" srcpinname="X Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="419" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
    <BOUNDS height="100" left="585" top="10140" type="Node" width="100">
    </BOUNDS>
@@ -780,6 +720,44 @@
    </LINK>
    <LINK dstnodeid="219" dstpinname="Clear" srcnodeid="420" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="378" dstpinname="Stroke Width" srcnodeid="370" srcpinname="X Output Value">
+   <NODE systemname="Agent" filename="Agent.v4p" nodename="Agent.v4p" componentmode="InAWindow" id="422">
+   <BOUNDS type="Node" left="2550" top="10380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Agent Count" visible="1">
+   </PIN>
+   <PIN pinname="Noise Scale" visible="1">
+   </PIN>
+   <PIN pinname="Noise Strength" visible="1">
+   </PIN>
+   <PIN pinname="Stroke Width" visible="1">
+   </PIN>
+   <PIN pinname="2 Modus On" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
+   </PIN>
+   <PIN pinname="Random Seed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="422" srcpinname="Layer" dstnodeid="261" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="289" srcpinname="Output" dstnodeid="422" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="X Output Value" dstnodeid="422" dstpinname="Agent Count">
+   </LINK>
+   <LINK srcnodeid="368" srcpinname="X Output Value" dstnodeid="422" dstpinname="Noise Scale">
+   </LINK>
+   <LINK srcnodeid="369" srcpinname="X Output Value" dstnodeid="422" dstpinname="Noise Strength">
+   </LINK>
+   <LINK srcnodeid="370" srcpinname="X Output Value" dstnodeid="422" dstpinname="Stroke Width">
+   </LINK>
+   <LINK srcnodeid="418" srcpinname="2 Modus On" dstnodeid="422" dstpinname="2 Modus On">
+   </LINK>
+   <LINK srcnodeid="371" srcpinname="X Output Value" dstnodeid="422" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="418" srcpinname="Random Seed" dstnodeid="422" dstpinname="Random Seed">
    </LINK>
    </PATCH>
