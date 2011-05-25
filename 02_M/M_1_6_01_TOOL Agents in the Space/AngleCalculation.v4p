@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_6_01_TOOL Agents in the Space\AngleCalculation.v4p" filename="C:\Documents and Settings\Roman\Desktop\M.1.6_01_TOOL\AngleCalculation.v4p" systemname="AngleCalculation">
-   <BOUNDS height="8415" left="10170" top="5520" type="Window" width="11475">
+   <BOUNDS height="8415" left="9285" top="2955" type="Window" width="11475">
    </BOUNDS>
    <NODE componentmode="Hidden" id="62" nodename="Divide (Value)" systemname="Divide (Value)">
    <BOUNDS height="100" left="2025" top="3705" type="Node" width="100">
@@ -243,9 +243,9 @@
    <LINK dstnodeid="44" dstpinname="Random Seed" srcnodeid="67" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="68" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1260" top="6780" type="Node" width="100">
+   <BOUNDS height="100" left="1260" top="7155" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1260" top="6780" type="Box" width="795">
+   <BOUNDS height="240" left="1260" top="7155" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -253,9 +253,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="69" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="5010" top="6720" type="Node" width="100">
+   <BOUNDS height="100" left="5010" top="7095" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="5010" top="6720" type="Box" width="795">
+   <BOUNDS height="240" left="5010" top="7095" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -263,9 +263,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="70" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="8745" top="6870" type="Node" width="100">
+   <BOUNDS height="100" left="8745" top="7245" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="8745" top="6870" type="Box" width="795">
+   <BOUNDS height="240" left="8745" top="7245" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -297,7 +297,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="73" nodename="Cartesian (3d)" systemname="Cartesian (3d)">
-   <BOUNDS height="270" left="2010" top="5685" type="Node" width="7530">
+   <BOUNDS height="270" left="2010" top="6060" type="Node" width="7530">
    </BOUNDS>
    <PIN pinname="Pitch" visible="1">
    </PIN>
@@ -348,8 +348,32 @@
    </LINK>
    <LINK dstnodeid="75" dstpinname="Input 1" srcnodeid="44" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="73" dstpinname="Yaw">
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="2040" top="5280" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="6.28318530717959">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="5715" top="5220" width="315" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="6.28318530717959">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="77" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Pitch">
+   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="73" dstpinname="Pitch">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="76" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="73" dstpinname="Yaw">
    </LINK>
    </PATCH>
