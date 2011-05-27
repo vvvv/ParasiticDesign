@@ -1,9 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="\\PRAXIS-SERVER\vvvv\Generativvvve Gestaltung\P_2_1_1_04 Arrangement in the Grid\TextureSwitcher.v4p" systemname="TextureSwitcher">
-   <BOUNDS height="8625" left="12690" top="4215" type="Window" width="5970">
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\TextureSwitcher.v4p" systemname="TextureSwitcher">
+   <BOUNDS height="7860" left="12690" top="4215" type="Window" width="4875">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
-   <BOUNDS height="100" left="2475" top="6075" type="Node" width="100">
+   <BOUNDS height="100" left="1320" top="5340" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1">
    </PIN>
@@ -17,17 +17,17 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <BOUNDS height="100" left="2490" top="4260" type="Node" width="100">
+   <BOUNDS height="100" left="1335" top="3975" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="270" top="1920" type="Node" width="100">
+   <BOUNDS height="100" left="2310" top="2205" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="1335" left="270" top="1920" type="Box" width="2520">
+   <BOUNDS height="1440" left="2310" top="2205" type="Box" width="1425">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="7" values="data\module_1.png,data\module_2.png,data\module_3.png,data\module_4.png,data\module_5.png,data\module_6.png,data\module_7.png">
+   <PIN pinname="Input String" visible="1">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -41,9 +41,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="100" left="2475" top="7230" type="Node" width="100">
+   <BOUNDS height="100" left="1320" top="6495" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="2475" top="7230" type="Box" width="795">
+   <BOUNDS height="240" left="1320" top="6495" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
@@ -51,9 +51,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="4" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2445" top="165" type="Node" width="100">
+   <BOUNDS height="100" left="1290" top="330" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="2445" top="165" type="Box" width="795">
+   <BOUNDS height="240" left="1290" top="330" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -66,18 +66,12 @@
    </LINK>
    <LINK dstnodeid="2" dstpinname="Filename" srcnodeid="1" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="1" dstpinname="Input" linkstyle="Bezier" srcnodeid="0" srcpinname="Output String">
-   <LINKPOINT x="330" y="3743">
-   </LINKPOINT>
-   <LINKPOINT x="2490" y="3743">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="1" dstpinname="Index" srcnodeid="4" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="3315" top="4260" type="Node" width="7365">
+   <BOUNDS height="270" left="2160" top="3975" type="Node" width="7365">
    </BOUNDS>
-   <BOUNDS height="1185" left="3315" top="4260" type="Box" width="1815">
+   <BOUNDS height="1185" left="2160" top="3975" type="Box" width="1815">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Out of the spread of given filenames this returns the filename corresponding to the given index.|">
    </PIN>
@@ -86,4 +80,32 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="645" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mask" slicecount="1" values="*.png">
+   </PIN>
+   <PIN pinname="Short Filenames" visible="1">
+   </PIN>
+   <PIN pinname="Directory" visible="1">
+   </PIN>
+   <PIN pinname="Filenames" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Short Filenames" dstnodeid="0" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="7">
+   <BOUNDS type="Node" left="810" top="1005" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="810" top="1005" width="765" height="255">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="\data">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="6" dstpinname="Directory">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Filenames" dstnodeid="1" dstpinname="Input">
+   </LINK>
    </PATCH>

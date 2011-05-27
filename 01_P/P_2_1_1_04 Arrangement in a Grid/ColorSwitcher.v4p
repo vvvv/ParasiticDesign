@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="\\PRAXIS-SERVER\vvvv\Generativvvve Gestaltung\P_2_1_1_04 Arrangement in the Grid\ColorSwitcher.v4p" systemname="ColorSwitcher">
-   <BOUNDS height="7470" left="17295" top="6495" type="Window" width="10170">
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\ColorSwitcher.v4p" systemname="ColorSwitcher">
+   <BOUNDS height="7470" left="15465" top="5460" type="Window" width="10170">
    </BOUNDS>
    <NODE componentmode="Hidden" id="13" nodename="Map (Value)" systemname="Map (Value)">
    <BOUNDS height="270" left="5940" top="3345" type="Node" width="1785">
@@ -19,7 +19,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="11" nodename="Bounds (Spectral)" systemname="Bounds (Spectral)">
-   <BOUNDS height="100" left="6450" top="2730" type="Node" width="100">
+   <BOUNDS height="100" left="6225" top="2730" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -140,11 +140,7 @@
    </LINK>
    <LINK dstnodeid="10" dstpinname="Input 3" srcnodeid="4" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="4" dstpinname="Alpha" linkstyle="Bezier" srcnodeid="13" srcpinname="Output">
-   <LINKPOINT x="6000" y="3908">
-   </LINKPOINT>
-   <LINKPOINT x="6690" y="3908">
-   </LINKPOINT>
+   <LINK dstnodeid="4" dstpinname="Alpha" linkstyle="PolyLine" srcnodeid="13" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Color)" systemname="IOBox (Color)">
    <BOUNDS height="100" left="7155" top="4695" type="Node" width="100">
@@ -193,7 +189,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="0" nodename="Bounds (Spectral)" systemname="Bounds (Spectral)">
-   <BOUNDS height="100" left="8580" top="2730" type="Node" width="100">
+   <BOUNDS height="100" left="8160" top="2730" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -206,18 +202,14 @@
    </LINK>
    <LINK dstnodeid="1" dstpinname="Source Maximum" srcnodeid="0" srcpinname="Maximum">
    </LINK>
-   <LINK dstnodeid="2" dstpinname="Alpha" linkstyle="Bezier" srcnodeid="1" srcpinname="Output">
-   <LINKPOINT x="8070" y="3915">
-   </LINKPOINT>
-   <LINKPOINT x="8370" y="3915">
-   </LINKPOINT>
+   <LINK dstnodeid="2" dstpinname="Alpha" linkstyle="PolyLine" srcnodeid="1" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="17" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="480" top="495" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="480" top="495" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="CPressed">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Fill Mode|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -225,71 +217,39 @@
    <LINK dstnodeid="10" dstpinname="Switch" srcnodeid="17" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="21" nodename="IOBox (Value Advanced)" systemname="IOBox (Color)">
-   <BOUNDS height="100" left="705" top="6120" type="Node" width="100">
+   <BOUNDS height="100" left="1230" top="5790" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="285" left="705" top="6120" type="Box" width="2130">
+   <BOUNDS height="285" left="1230" top="5790" type="Box" width="2130">
    </BOUNDS>
    <PIN pinname="Color Input" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
    </NODE>
-   <LINK dstnodeid="21" dstpinname="Color Input" linkstyle="Bezier" srcnodeid="10" srcpinname="Output">
-   <LINKPOINT x="1290" y="5820">
-   </LINKPOINT>
-   <LINKPOINT x="2775" y="5820">
-   </LINKPOINT>
+   <LINK dstnodeid="21" dstpinname="Color Input" linkstyle="PolyLine" srcnodeid="10" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="5205" top="525" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="5205" top="525" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="VectorLength">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Distance to Mouse|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="11" dstpinname="Input" linkstyle="Bezier" srcnodeid="22" srcpinname="Y Output Value">
-   <LINKPOINT x="5970" y="1815">
-   </LINKPOINT>
-   <LINKPOINT x="6465" y="1650">
-   </LINKPOINT>
+   <LINK dstnodeid="11" dstpinname="Input" linkstyle="PolyLine" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="13" dstpinname="Input" linkstyle="Bezier" srcnodeid="22" srcpinname="Y Output Value">
-   <LINKPOINT x="5970" y="2138">
-   </LINKPOINT>
-   <LINKPOINT x="5970" y="1973">
-   </LINKPOINT>
+   <LINK dstnodeid="13" dstpinname="Input" linkstyle="PolyLine" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="1" dstpinname="Input" linkstyle="Bezier" srcnodeid="22" srcpinname="Y Output Value">
-   <LINKPOINT x="6000" y="2130">
-   </LINKPOINT>
-   <LINKPOINT x="8010" y="1965">
-   </LINKPOINT>
+   <LINK dstnodeid="1" dstpinname="Input" linkstyle="PolyLine" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="0" dstpinname="Input" linkstyle="Bezier" srcnodeid="22" srcpinname="Y Output Value">
-   <LINKPOINT x="6000" y="1815">
-   </LINKPOINT>
-   <LINKPOINT x="8565" y="1650">
-   </LINKPOINT>
+   <LINK dstnodeid="0" dstpinname="Input" linkstyle="PolyLine" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="23" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8505" top="4230" type="Node" width="1380">
-   </BOUNDS>
-   <BOUNDS height="495" left="8505" top="4230" type="Box" width="1065">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; insert the colors.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="24" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2925" top="2295" type="Node" width="1380">
+   <BOUNDS height="270" left="2265" top="2295" type="Node" width="1380">
    </BOUNDS>
-   <BOUNDS height="735" left="2925" top="2295" type="Box" width="3330">
+   <BOUNDS height="735" left="2265" top="2295" type="Box" width="3330">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="0" values="|Bounds gives you the maximum and minimum of a spread. So we can map the right range of the different vector length. &gt;&gt;|">
    </PIN>
