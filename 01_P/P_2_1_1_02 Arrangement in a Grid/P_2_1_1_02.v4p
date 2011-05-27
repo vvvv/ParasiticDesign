@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_1_02 Arrangement in a Grid\P_2_1_1_02.v4p" filename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_1_02 Arrangement in a Grid\P_2_1_1_02a.v4p" systemname="P_2_1_1_02a">
    <BOUNDS height="13605" left="0" top="0" type="Window" width="10410">
    </BOUNDS>
@@ -405,7 +405,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="120" top="510" type="Box" width="2835">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|changing strokeweight on diagonals in a grid with colors|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|changing strokeweight on diagonals in a grid with colors|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -419,7 +419,7 @@
    </BOUNDS>
    <BOUNDS height="465" left="120" top="120" type="Box" width="4110">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Arrangement in a Grid  2|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Arrangement in a Grid  2|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -433,7 +433,7 @@
    </BOUNDS>
    <BOUNDS height="1155" left="150" top="1020" type="Box" width="3855">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x          : left diagonal strokeweight&cr;&lf;position y          : right diagonal strokeweight&cr;&lf;left click          : new random layout|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x          : left diagonal strokeweight&cr;&lf;position y          : right diagonal strokeweight&cr;&lf;left click          : new random layout|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -447,7 +447,7 @@
    </BOUNDS>
    <BOUNDS height="1155" left="4095" top="1020" type="Box" width="2670">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;1                   : round strokecap&cr;&lf;2                   : square strokecap&cr;&lf;3                   : project strokecap&cr;&lf;4                   : color left diagonal|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;1                   : round strokecap&cr;&lf;2                   : square strokecap&cr;&lf;3                   : project strokecap&cr;&lf;4                   : color left diagonal|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -461,7 +461,7 @@
    </BOUNDS>
    <BOUNDS height="1155" left="6855" top="1020" type="Box" width="3165">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|5                   : color right diagonal&cr;&lf;6                   : transparency left diagonal&cr;&lf;7                   : transparency right diagonal&cr;&lf;0                   : default&cr;&lf;ctrl+s            : save png|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|5                   : color right diagonal&cr;&lf;6                   : transparency left diagonal&cr;&lf;7                   : transparency right diagonal&cr;&lf;0                   : default&cr;&lf;ctrl+s            : save png|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -477,8 +477,14 @@
    </PIN>
    <PIN pinname="TopRight" visible="1">
    </PIN>
-   <BOUNDS height="8025" left="8340" top="6945" type="Window" width="10545">
+   <BOUNDS height="8025" left="11355" top="9135" type="Window" width="10545">
    </BOUNDS>
+   <PIN pinname="Color Left" visible="1">
+   </PIN>
+   <PIN pinname="Color Right" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="211" nodename="GetSlice (Color)" systemname="GetSlice (Color)">
    <BOUNDS height="100" left="4410" top="10350" type="Node" width="100">
@@ -502,10 +508,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="213" dstpinname="Input 1" srcnodeid="210" srcpinname="TopLeft">
-   </LINK>
-   <LINK dstnodeid="213" dstpinname="Input 2" srcnodeid="210" srcpinname="TopRight">
-   </LINK>
    <LINK dstnodeid="211" dstpinname="Input" srcnodeid="213" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" filename="Stroke (EX9).v4p" id="188" nodename="Stroke (EX9)" systemname="Stroke (EX9)">
@@ -544,6 +546,36 @@
    </LINK>
    <LINK dstnodeid="188" dstpinname="Color" srcnodeid="211" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="183" srcpinname="Transform Out" dstnodeid="188" dstpinname="Transform In">
+   <LINK dstnodeid="188" dstpinname="Transform In" srcnodeid="183" srcpinname="Transform Out">
    </LINK>
+   <LINK dstnodeid="213" dstpinname="Input 1" srcnodeid="210" srcpinname="Color Left">
+   </LINK>
+   <LINK dstnodeid="213" dstpinname="Input 2" srcnodeid="210" srcpinname="Color Right">
+   </LINK>
+   <LINK dstnodeid="210" dstpinname="Input" srcnodeid="198" srcpinname="Keyboard Output">
+   </LINK>
+   <NODE componentmode="InABox" id="214" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="7425" top="8925" type="Node" width="4740">
+   </BOUNDS>
+   <BOUNDS height="735" left="7425" top="8925" type="Box" width="2100">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; RightClick to see how colors are set depending on key events.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="215" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="5205" top="10365" type="Node" width="7830">
+   </BOUNDS>
+   <BOUNDS height="900" left="5205" top="10365" type="Box" width="2715">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Gets the first of the two colors for all left facing strokes and the second color for all right facing strokes.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
    </PATCH>
