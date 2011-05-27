@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_6_02_TOOL_Agents in the Space\M_1_6_02_TOOL.v4p" filename="0.v4p ////" systemname="0.v4p ////">
-   <BOUNDS height="13380" left="2115" top="0" type="Window" width="11775">
+   <BOUNDS height="13380" left="2205" top="1680" type="Window" width="11775">
    </BOUNDS>
    <NODE componentmode="InABox" id="66" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="345" top="1005" type="Node" width="840">
@@ -59,7 +59,7 @@
    </BOUNDS>
    <BOUNDS height="5715" left="555" top="11565" type="Box" width="8085">
    </BOUNDS>
-   <BOUNDS height="10035" left="13860" top="0" type="Window" width="12825">
+   <BOUNDS height="10035" left="13920" top="1680" type="Window" width="12825">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -312,22 +312,6 @@
    </NODE>
    <LINK dstnodeid="13" dstpinname="Input" srcnodeid="12" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="10" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="100" left="1065" top="11055" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input 3" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="29" srcpinname="Bang">
-   </LINK>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2355" top="10470" type="Node" width="100">
    </BOUNDS>
@@ -350,8 +334,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="10" dstpinname="Input 3" srcnodeid="9" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="63" dstpinname="Layers" srcnodeid="55" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -395,7 +377,7 @@
    <NODE componentmode="Hidden" filename="AgentRibbon.v4p" id="30" nodename="AgentRibbon.v4p" systemname="AgentRibbon" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_6_02_TOOL_Agents in the Space\">
    <BOUNDS height="270" left="4335" top="9000" type="Node" width="1710">
    </BOUNDS>
-   <BOUNDS height="16500" left="2475" top="2475" type="Window" width="24330">
+   <BOUNDS height="16500" left="2700" top="0" type="Window" width="24330">
    </BOUNDS>
    <PIN pinname="Clear" slicecount="1" visible="1" values="0">
    </PIN>
@@ -417,7 +399,7 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
-   <PIN pinname="Alpha" visible="1" slicecount="1" values="0.3">
+   <PIN pinname="Alpha" slicecount="1" visible="1" values="0.3">
    </PIN>
    <PIN pinname="Draw" visible="1">
    </PIN>
@@ -493,8 +475,6 @@
    <LINK dstnodeid="30" dstpinname="Transform" srcnodeid="18" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="30" dstpinname="Draw" srcnodeid="71" srcpinname="Draw">
-   </LINK>
-   <LINK dstnodeid="63" dstpinname="Clear" srcnodeid="9" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1020" top="3630" type="Node" width="100">
@@ -680,8 +660,8 @@
    </LINK>
    <LINK dstnodeid="55" dstpinname="Layer 1" srcnodeid="86" srcpinname="Layer">
    </LINK>
-   <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="87">
-   <BOUNDS type="Node" left="4500" top="7410" width="100" height="100">
+   <NODE componentmode="Hidden" id="87" nodename="Expr (Value)" systemname="Expr (Value)">
+   <BOUNDS height="100" left="4500" top="7410" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Term" slicecount="1" values="round(a)">
    </PIN>
@@ -690,9 +670,9 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="X Output Value" dstnodeid="87" dstpinname="A">
+   <LINK dstnodeid="87" dstpinname="A" srcnodeid="80" srcpinname="X Output Value">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="30" dstpinname="Agent Count">
+   <LINK dstnodeid="30" dstpinname="Agent Count" srcnodeid="87" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="89" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="3750" top="5100" type="Node" width="1290">
@@ -732,8 +712,28 @@
    <PIN pinname="Maximum" slicecount="1" values="50">
    </PIN>
    </NODE>
-   <LINK srcnodeid="77" srcpinname="X Output Value" dstnodeid="30" dstpinname="Min Stroke">
+   <LINK dstnodeid="30" dstpinname="Min Stroke" srcnodeid="77" srcpinname="X Output Value">
    </LINK>
-   <LINK srcnodeid="90" srcpinname="X Output Value" dstnodeid="30" dstpinname="Max Stroke">
+   <LINK dstnodeid="30" dstpinname="Max Stroke" srcnodeid="90" srcpinname="X Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="10" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="100" left="1065" top="11055" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="29" srcpinname="Bang">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Input 3" srcnodeid="9" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="63" dstpinname="Clear">
    </LINK>
    </PATCH>
