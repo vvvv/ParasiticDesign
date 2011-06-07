@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01 Text Image\Color.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\Color.v4p" systemname="Color">
-   <BOUNDS height="11265" left="18810" top="1680" type="Window" width="9285">
+   <BOUNDS height="11265" left="8970" top="1305" type="Window" width="9285">
    </BOUNDS>
    <NODE componentmode="Hidden" id="4" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
    <BOUNDS height="100" left="450" top="1245" type="Node" width="100">
@@ -294,22 +294,8 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="52" nodename="SetSlice (Spreads)" systemname="SetSlice (Spreads)">
-   <BOUNDS height="100" left="3525" top="5055" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Spread" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="52" dstpinname="Spread" srcnodeid="11" srcpinname="Position">
-   </LINK>
    <NODE componentmode="Hidden" id="53" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
-   <BOUNDS height="100" left="4695" top="4110" type="Node" width="100">
+   <BOUNDS height="100" left="3525" top="4185" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -318,34 +304,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="53" dstpinname="Input" srcnodeid="11" srcpinname="Position">
-   </LINK>
-   <NODE componentmode="Hidden" id="54" nodename="I (Spreads)" systemname="I (Spreads)">
-   <BOUNDS height="100" left="5355" top="3645" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname=".. To [" slicecount="1" values="593">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="53" dstpinname="Index" srcnodeid="54" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="55" nodename="GetSlice (Spreads)" systemname="GetSlice (Spreads)">
-   <BOUNDS height="100" left="4020" top="4575" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="55" dstpinname="Input" srcnodeid="49" srcpinname="Count">
-   </LINK>
-   <LINK dstnodeid="55" dstpinname="Index" srcnodeid="53" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="52" dstpinname="Input" srcnodeid="55" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="56" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="5265" top="6105" type="Node" width="100">
    </BOUNDS>
@@ -356,10 +314,6 @@
    <PIN pinname="Rows" slicecount="1" values="12">
    </PIN>
    </NODE>
-   <LINK dstnodeid="56" dstpinname="Y Input Value" srcnodeid="52" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="52" dstpinname="Index" srcnodeid="54" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="57" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5610" top="4185" type="Node" width="14220">
    </BOUNDS>
@@ -372,8 +326,14 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="8" dstpinname="Input 1" srcnodeid="52" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="15" dstpinname="Switch" srcnodeid="0" srcpinname="Inverse Output">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Count" dstnodeid="53" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Position" dstnodeid="53" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="8" dstpinname="Input 1">
    </LINK>
    </PATCH>
