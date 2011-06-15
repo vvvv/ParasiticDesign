@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_03 Text Image\P_3_1_3_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\P_3_1_3_01.v4p" systemname="P_3_1_3_01">
-   <BOUNDS height="14610" left="0" top="-150" type="Window" width="11205">
+   <BOUNDS height="14580" left="0" top="0" type="Window" width="11205">
    </BOUNDS>
    <NODE componentmode="InABox" id="47" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="255" top="450" type="Node" width="840">
@@ -130,7 +130,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="130" dstpinname="Size" srcnodeid="106" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="130" dstpinname="Size" hiddenwhenlocked="1" srcnodeid="106" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="99" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="840" top="6300" type="Node" width="1440">
@@ -211,7 +211,7 @@
    <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="210" nodename="Line (EX9)" systemname="Line (EX9)">
    <BOUNDS height="100" left="3495" top="11910" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="From" visible="1" slicecount="3" values="0,0,0">
+   <PIN pinname="From" slicecount="3" visible="1" values="0,0,0">
    </PIN>
    <PIN pinname="To" visible="1">
    </PIN>
@@ -254,8 +254,6 @@
    <PIN pinname="Ellipses On" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="98" dstpinname="Integral" srcnodeid="184" srcpinname="Remainder">
-   </LINK>
    <LINK dstnodeid="210" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="256" srcpinname="Lines On">
    </LINK>
    <LINK dstnodeid="130" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="256" srcpinname="Text On">
@@ -393,12 +391,6 @@
    <LINK dstnodeid="328" dstpinname="Input 2" srcnodeid="329" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="210" dstpinname="To" srcnodeid="328" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="Text Width" srcnodeid="132" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="Height" hiddenwhenlocked="1" srcnodeid="118" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="Width" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="123" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="333" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2625" top="6300" type="Node" width="100">
@@ -592,80 +584,46 @@
    <PIN pinname="Bang" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="344" srcpinname="Content" dstnodeid="128" dstpinname="Input">
+   <LINK dstnodeid="128" dstpinname="Input" srcnodeid="344" srcpinname="Content">
    </LINK>
-   <NODE systemname="LetterPositions" filename="LetterPositions.v4p" nodename="LetterPositions.v4p" componentmode="Hidden" id="346">
-   <BOUNDS type="Node" left="750" top="9960" width="100" height="100">
+   <LINK dstnodeid="130" dstpinname="Transform" srcnodeid="326" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="InABox" id="349" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="4980" top="11520" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="8625" top="2460" width="12450" height="13200">
-   </BOUNDS>
-   <PIN pinname="Basic Font Size" visible="1">
-   </PIN>
-   <PIN pinname="Font" visible="1">
-   </PIN>
-   <PIN pinname="PosY" visible="1">
-   </PIN>
-   <PIN pinname="Text" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="106" srcpinname="Y Output Value" dstnodeid="346" dstpinname="Basic Font Size" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="159" srcpinname="Output Enum" dstnodeid="346" dstpinname="Font" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="344" srcpinname="Content" dstnodeid="346" dstpinname="Text" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="326" srcpinname="Transform Out" dstnodeid="130" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="346" srcpinname="XYZ" dstnodeid="107" dstpinname="XYZ">
-   </LINK>
-   <LINK srcnodeid="310" srcpinname="Value Output" dstnodeid="346" dstpinname="PosY">
-   </LINK>
-   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="349">
-   <BOUNDS type="Node" left="4980" top="11520" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4980" top="11520" width="345" height="240">
+   <BOUNDS height="240" left="4980" top="11520" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Color Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="208" srcpinname="Output" dstnodeid="349" dstpinname="Color Input">
+   <LINK dstnodeid="349" dstpinname="Color Input" srcnodeid="208" srcpinname="Output">
    </LINK>
-   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="350">
-   <BOUNDS type="Node" left="2190" top="11565" width="100" height="100">
+   <NODE componentmode="InABox" id="350" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="2190" top="11565" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2190" top="11565" width="345" height="240">
-   </BOUNDS>
-   <PIN pinname="Color Input" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="335" srcpinname="Output" dstnodeid="350" dstpinname="Color Input">
-   </LINK>
-   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="351">
-   <BOUNDS type="Node" left="7455" top="11640" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7455" top="11640" width="345" height="240">
+   <BOUNDS height="240" left="2190" top="11565" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Color Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="337" srcpinname="Output" dstnodeid="351" dstpinname="Color Input">
+   <LINK dstnodeid="350" dstpinname="Color Input" srcnodeid="335" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="328" srcpinname="Output" dstnodeid="326" dstpinname="XYZ">
+   <NODE componentmode="InABox" id="351" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="7455" top="11640" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="7455" top="11640" type="Box" width="345">
+   </BOUNDS>
+   <PIN pinname="Color Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="351" dstpinname="Color Input" srcnodeid="337" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="342" srcpinname="Bang" dstnodeid="344" dstpinname="Read">
+   <LINK dstnodeid="326" dstpinname="XYZ" srcnodeid="328" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="346" srcpinname="Transform" dstnodeid="338" dstpinname="Transform In">
+   <LINK dstnodeid="344" dstpinname="Read" srcnodeid="342" srcpinname="Bang">
    </LINK>
-   <LINK srcnodeid="346" srcpinname="Transform" dstnodeid="210" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="346" srcpinname="Transform" dstnodeid="326" dstpinname="Transform In">
-   </LINK>
-   <NODE componentmode="InAWindow" filename="CalculateParameters.v4p" id="314" nodename="CalculateParameters.v4p" systemname="CalculateParameters">
-   <BOUNDS height="100" left="5865" top="6405" type="Node" width="100">
+   <NODE componentmode="Hidden" filename="CalculateParameters.v4p" id="314" nodename="CalculateParameters.v4p" systemname="CalculateParameters" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_03 Text Image\">
+   <BOUNDS height="100" left="3765" top="7560" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="12465" left="17655" top="1815" type="Window" width="7995">
    </BOUNDS>
@@ -677,7 +635,7 @@
    </PIN>
    <PIN pinname="MouseY" visible="1">
    </PIN>
-   <PIN pinname="Counters" visible="1" slicecount="718" values="2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,13,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,4,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,13,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,3,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3">
+   <PIN pinname="Counters" slicecount="718" visible="1" values="2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,13,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,3,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,1,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,4,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,13,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,3,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,13,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3">
    </PIN>
    <PIN pinname="Height" visible="1">
    </PIN>
@@ -694,13 +652,21 @@
    <PIN pinname="CharSize" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="311" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="314" srcpinname="My">
+   <LINK dstnodeid="311" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="314" srcpinname="My">
+   <LINKPOINT x="3765" y="8033">
+   </LINKPOINT>
+   <LINKPOINT x="1950" y="8033">
+   </LINKPOINT>
    </LINK>
    <LINK dstnodeid="328" dstpinname="Input 1" srcnodeid="314" srcpinname="XYZ">
    </LINK>
-   <LINK dstnodeid="339" dstpinname="Input" srcnodeid="314" srcpinname="CharSize">
+   <LINK dstnodeid="339" dstpinname="Input" linkstyle="Bezier" srcnodeid="314" srcpinname="CharSize">
+   <LINKPOINT x="5505" y="9060">
+   </LINKPOINT>
+   <LINKPOINT x="7530" y="9060">
+   </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="CountCharacters.v4p" id="257" nodename="CountCharacters.v4p" systemname="CountCharacters">
+   <NODE componentmode="Hidden" filename="CountCharacters.v4p" id="257" nodename="CountCharacters.v4p" systemname="CountCharacters" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_03 Text Image\">
    <BOUNDS height="100" left="3270" top="5055" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Alphabet" visible="1">
@@ -720,8 +686,40 @@
    </LINK>
    <LINK dstnodeid="268" dstpinname="Input" srcnodeid="257" srcpinname="Counters">
    </LINK>
-   <LINK srcnodeid="344" srcpinname="Content" dstnodeid="257" dstpinname="Text">
+   <LINK dstnodeid="257" dstpinname="Text" srcnodeid="344" srcpinname="Content">
    </LINK>
    <LINK dstnodeid="314" dstpinname="Counters" srcnodeid="257" srcpinname="Counters">
+   </LINK>
+   <NODE componentmode="Hidden" filename="Positions.v4p" id="346" nodename="Positions.v4p" systemname="Positions" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_03 Text Image\">
+   <BOUNDS height="100" left="735" top="10290" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="13200" left="8625" top="2460" type="Window" width="12450">
+   </BOUNDS>
+   <PIN pinname="Basic Font Size" visible="1">
+   </PIN>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <PIN pinname="PosY" visible="1">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="346" dstpinname="Font" hiddenwhenlocked="1" srcnodeid="159" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="346" dstpinname="Text" hiddenwhenlocked="1" srcnodeid="344" srcpinname="Content">
+   </LINK>
+   <LINK dstnodeid="346" dstpinname="PosY" srcnodeid="310" srcpinname="Value Output">
+   </LINK>
+   <LINK dstnodeid="346" dstpinname="Basic Font Size" linkstyle="PolyLine" srcnodeid="106" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="326" dstpinname="Transform In" srcnodeid="346" srcpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="346" srcpinname="Transform" dstnodeid="338" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="346" srcpinname="Transform" dstnodeid="210" dstpinname="Transform">
    </LINK>
    </PATCH>
