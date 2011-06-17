@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="9660" left="6495" top="6450" type="Window" width="10755">
    </BOUNDS>
    <NODE componentmode="Hidden" id="14" nodename="Split (String)" systemname="Split (String)">
@@ -164,32 +164,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="TypeWriter.dll" hiddenwhenlocked="0" id="78" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
-   <BOUNDS height="100" left="2790" top="6255" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="1155" top="4530" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="5010" left="0" top="0" type="Window" width="6240">
-   </BOUNDS>
-   <PIN pinname="ViewOutput" visible="1">
-   </PIN>
-   <PIN pinname="String" visible="1">
-   </PIN>
-   <PIN pinname="Delete by" slicecount="1" values="All">
-   </PIN>
-   <PIN pinname="Delete" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="78" dstpinname="KeyCode" linkstyle="Bezier" srcnodeid="0" srcpinname="KeyCode">
-   <LINKPOINT x="6525" y="5648">
-   </LINKPOINT>
-   <LINKPOINT x="3015" y="5648">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="78" srcpinname="ViewOutput" dstnodeid="14" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Output String" dstnodeid="78" dstpinname="String">
-   </LINK>
    <NODE componentmode="InABox" id="81" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="6480" top="7200" type="Node" width="100">
    </BOUNDS>
@@ -212,8 +186,26 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Minimum">
+   <LINK dstnodeid="15" dstpinname="Minimum" srcnodeid="80" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="81" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Maximum">
+   <LINK dstnodeid="15" dstpinname="Maximum" srcnodeid="81" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="TypeWriter.dll" hiddenwhenlocked="0" id="85" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
+   <BOUNDS height="100" left="2790" top="6255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="1155" top="4530" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="5010" left="0" top="0" type="Window" width="6240">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="85" dstpinname="KeyCode" linkstyle="Bezier" srcnodeid="0" srcpinname="KeyCode">
+   <LINKPOINT x="6525" y="5648">
+   </LINKPOINT>
+   <LINKPOINT x="3015" y="5648">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Input" srcnodeid="85" srcpinname="ViewOutput">
+   </LINK>
+   <LINK dstnodeid="85" dstpinname="String" srcnodeid="76" srcpinname="Output String">
    </LINK>
    </PATCH>
