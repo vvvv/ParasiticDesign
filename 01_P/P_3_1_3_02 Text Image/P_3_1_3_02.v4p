@@ -312,10 +312,6 @@
    </NODE>
    <LINK dstnodeid="259" dstpinname="Read" srcnodeid="257" srcpinname="Bang">
    </LINK>
-   <LINK dstnodeid="128" dstpinname="Input" srcnodeid="259" srcpinname="Content">
-   </LINK>
-   <LINK dstnodeid="150" dstpinname="Input" srcnodeid="259" srcpinname="Content">
-   </LINK>
    <NODE componentmode="Hidden" filename="LetterPositions.v4p" hiddenwhenlocked="0" id="98" managers="" nodename="LetterPositions.v4p" systemname="LetterPositions" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_02 Text Image\">
    <PIN pinname="PosY" visible="1">
    </PIN>
@@ -329,7 +325,7 @@
    </PIN>
    <PIN pinname="Integral" visible="1">
    </PIN>
-   <BOUNDS height="14835" left="9975" top="735" type="Window" width="18315">
+   <BOUNDS height="14835" left="3330" top="2250" type="Window" width="18315">
    </BOUNDS>
    <BOUNDS height="270" left="1305" top="8865" type="Node" width="1680">
    </BOUNDS>
@@ -366,7 +362,7 @@
    <PIN pinname="Tranlsate Vector" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="98" dstpinname="Text" srcnodeid="150" srcpinname="Output" hiddenwhenlocked="1">
+   <LINK dstnodeid="98" dstpinname="Text" hiddenwhenlocked="1" srcnodeid="150" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="98" dstpinname="Alphabet" srcnodeid="144" srcpinname="Output String">
    </LINK>
@@ -490,8 +486,8 @@
    </NODE>
    <LINK dstnodeid="130" dstpinname="Normalize" srcnodeid="265" srcpinname="Output Enum">
    </LINK>
-   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="266">
-   <BOUNDS type="Node" left="1290" top="8325" width="100" height="100">
+   <NODE componentmode="Hidden" id="266" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
+   <BOUNDS height="100" left="1290" top="8325" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -524,23 +520,23 @@
    <PIN pinname="Digits" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="267" srcpinname="Y Output Value" dstnodeid="266" dstpinname="X">
+   <LINK dstnodeid="266" dstpinname="X" srcnodeid="267" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="268" srcpinname="Y Output Value" dstnodeid="266" dstpinname="Y">
+   <LINK dstnodeid="266" dstpinname="Y" srcnodeid="268" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="266" srcpinname="XYZ" dstnodeid="98" dstpinname="Tranlsate Vector">
+   <LINK dstnodeid="98" dstpinname="Tranlsate Vector" srcnodeid="266" srcpinname="XYZ">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="269">
-   <BOUNDS type="Node" left="2190" top="7575" width="100" height="100">
+   <NODE componentmode="InABox" id="269" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="2190" top="7575" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2190" top="7575" width="570" height="240">
+   <BOUNDS height="240" left="2190" top="7575" type="Box" width="570">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="980">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="269" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Width">
+   <LINK dstnodeid="98" dstpinname="Width" srcnodeid="269" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="270" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="2880" top="7560" type="Node" width="1545">
@@ -554,4 +550,8 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <LINK srcnodeid="259" srcpinname="Content" dstnodeid="150" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="259" srcpinname="Content" dstnodeid="128" dstpinname="Input">
+   </LINK>
    </PATCH>
