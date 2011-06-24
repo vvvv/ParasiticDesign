@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\P_3_1_2_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
-   <BOUNDS height="17145" left="3180" top="0" type="Window" width="11670">
+   <BOUNDS height="17145" left="2565" top="0" type="Window" width="11670">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="480" type="Node" width="840">
@@ -448,7 +448,7 @@
    </LINK>
    <LINK dstnodeid="628" dstpinname="Layer 1" srcnodeid="1172" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="InAWindow" filename="BlinkingCursor.v4p" id="1183" nodename="BlinkingCursor.v4p" systemname="BlinkingCursor" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="BlinkingCursor.v4p" id="1183" nodename="BlinkingCursor.v4p" systemname="BlinkingCursor" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
    <BOUNDS height="100" left="5010" top="14490" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -457,11 +457,11 @@
    </PIN>
    <PIN pinname="Total Rotation" visible="1">
    </PIN>
-   <PIN pinname="Total XYZ" visible="1" slicecount="3" values="4.7683711272839E-006,0,0.639999866485596">
+   <PIN pinname="Total XYZ" slicecount="3" visible="1" values="4.7683711272839E-006,0,0.639999866485596">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="13860" top="2970" width="9330" height="10890">
+   <BOUNDS height="10890" left="13860" top="2970" type="Window" width="9330">
    </BOUNDS>
    <PIN pinname="Rotate" visible="1">
    </PIN>
@@ -470,8 +470,8 @@
    <PIN pinname="Rotation Integral" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="LetterRuleTable" filename="LetterRuleTable.v4p" nodename="LetterRuleTable.v4p" componentmode="InAWindow" id="1185">
-   <BOUNDS type="Node" left="3165" top="4590" width="2460" height="270">
+   <NODE componentmode="Hidden" filename="LetterRuleTable.v4p" id="1185" nodename="LetterRuleTable.v4p" systemname="LetterRuleTable" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <BOUNDS height="270" left="3165" top="4590" type="Node" width="2460">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -486,23 +486,19 @@
    <PIN pinname="Dir" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1185" srcpinname="Rotation" dstnodeid="462" dstpinname="Input 2">
+   <LINK dstnodeid="462" dstpinname="Input 2" srcnodeid="1185" srcpinname="Rotation">
    </LINK>
-   <LINK srcnodeid="1185" srcpinname="Rotation" dstnodeid="1183" dstpinname="Last Letter Rotation">
+   <LINK dstnodeid="1172" dstpinname="Cases" hiddenwhenlocked="1" srcnodeid="1185" srcpinname="Case">
    </LINK>
-   <LINK srcnodeid="1185" srcpinname="Case" dstnodeid="1172" dstpinname="Cases" hiddenwhenlocked="1">
+   <LINK dstnodeid="519" dstpinname="XYZ" srcnodeid="1185" srcpinname="Translation">
    </LINK>
-   <LINK srcnodeid="1185" srcpinname="Translation" dstnodeid="519" dstpinname="XYZ">
+   <LINK dstnodeid="966" dstpinname="Letter Width" srcnodeid="1185" srcpinname="Letter Width">
    </LINK>
-   <LINK srcnodeid="1185" srcpinname="Letter Width" dstnodeid="966" dstpinname="Letter Width">
+   <LINK dstnodeid="966" dstpinname="Case" hiddenwhenlocked="1" srcnodeid="1185" srcpinname="Case">
    </LINK>
-   <LINK srcnodeid="1185" srcpinname="Case" dstnodeid="966" dstpinname="Case" hiddenwhenlocked="1">
+   <LINK dstnodeid="1172" dstpinname="Dir" srcnodeid="1185" srcpinname="Dir">
    </LINK>
-   <LINK srcnodeid="514" srcpinname="Output" dstnodeid="1183" dstpinname="Total Rotation">
-   </LINK>
-   <LINK srcnodeid="1185" srcpinname="Dir" dstnodeid="1172" dstpinname="Dir">
-   </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1188" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1188" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
    <BOUNDS height="270" left="435" top="3870" type="Node" width="5205">
    </BOUNDS>
    <BOUNDS height="10710" left="8265" top="795" type="Window" width="9570">
@@ -520,18 +516,16 @@
    </LINK>
    <LINK dstnodeid="524" dstpinname="Bin Size" srcnodeid="1188" srcpinname="Binsizes">
    </LINK>
-   <LINK srcnodeid="1188" srcpinname="Typed Characters" dstnodeid="1185" dstpinname="Input">
+   <LINK dstnodeid="1185" dstpinname="Input" srcnodeid="1188" srcpinname="Typed Characters">
    </LINK>
-   <LINK srcnodeid="1183" srcpinname="Layer" dstnodeid="628" dstpinname="Layer 3">
+   <LINK dstnodeid="628" dstpinname="Layer 3" srcnodeid="1183" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="1083" srcpinname="Remainder" dstnodeid="517" dstpinname="XYZ">
+   <LINK dstnodeid="517" dstpinname="XYZ" srcnodeid="1083" srcpinname="Remainder">
    </LINK>
-   <LINK srcnodeid="1111" srcpinname="Transform Out" dstnodeid="1183" dstpinname="Transform In">
+   <LINK dstnodeid="1183" dstpinname="Transform In" srcnodeid="1111" srcpinname="Transform Out">
    </LINK>
-   <LINK srcnodeid="514" srcpinname="Output" dstnodeid="1183" dstpinname="Rotate">
+   <LINK dstnodeid="1183" dstpinname="Last Letter Translation" srcnodeid="1083" srcpinname="Last Slice">
    </LINK>
-   <LINK srcnodeid="1083" srcpinname="Last Slice" dstnodeid="1183" dstpinname="Last Letter Translation">
-   </LINK>
-   <LINK srcnodeid="514" srcpinname="Output" dstnodeid="1183" dstpinname="Rotation Integral">
+   <LINK dstnodeid="1183" dstpinname="Rotation Integral" srcnodeid="514" srcpinname="Output">
    </LINK>
    </PATCH>
