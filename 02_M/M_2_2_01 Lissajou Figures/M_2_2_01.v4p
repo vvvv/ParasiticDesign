@@ -1,0 +1,379 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\M_2_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
+   <BOUNDS height="10575" left="9840" top="0" type="Window" width="7815">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="37" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="100" left="1275" top="9465" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="1275" top="9465" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="9300" left="17640" top="0" type="Window" width="9885">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio Transform" visible="1">
+   </PIN>
+   <PIN pinname="View Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="67" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <BOUNDS height="100" left="3240" top="9465" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" visible="1" values="FitWidth">
+   </PIN>
+   <PIN pinname="Uniform Scale" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="37" dstpinname="Aspect Ratio Transform" srcnodeid="67" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="67" dstpinname="Aspect Width" srcnodeid="37" srcpinname="Actual Backbuffer Width">
+   </LINK>
+   <LINK dstnodeid="67" dstpinname="Aspect Height" srcnodeid="37" srcpinname="Actual Backbuffer Height">
+   </LINK>
+   <NODE componentmode="InABox" id="262" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="705" top="3495" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="705" top="3495" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="263" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1635" top="3375" type="Node" width="630">
+   </BOUNDS>
+   <BOUNDS height="270" left="1635" top="3375" type="Box" width="630">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; phi|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="299" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="2790" top="3285" type="Node" width="1050">
+   </BOUNDS>
+   <BOUNDS height="270" left="2790" top="3285" type="Box" width="1050">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt;frequency X|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="330" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3210" top="9000" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3210" top="9000" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="67" dstpinname="Uniform Scale" srcnodeid="330" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="340" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
+   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;a: &tab;&tab;&tab;&tab;&tab;toggle oscillation animation&cr;&lf;1/2: &tab;&tab;&tab;&tab;&tab;frequency X -/+&cr;&lf;3/4: &tab;&tab;&tab;&tab;&tab;frequency Y-/+&cr;&lf;arrow left/right : &tab;&tab;&tab;&tab;phi -/+&cr;&lf;ctrl+2:&tab; &tab;&tab;&tab;&tab;save png|">
+   </PIN>
+   <BOUNDS height="1380" left="240" top="750" type="Box" width="5850">
+   </BOUNDS>
+   <BOUNDS height="270" left="240" top="750" type="Node" width="840">
+   </BOUNDS>
+   <PIN pinname="Output String" pintype="Output" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
+   </PIN>
+   <BOUNDS height="0" left="0" top="0" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Character Encoding" pintype="Configuration" slicecount="1" values="ANSI">
+   </PIN>
+   <PIN pinname="Show Characters [#0..#32,#127]" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="339" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="240" top="420" type="Node" width="840">
+   </BOUNDS>
+   <BOUNDS height="315" left="240" top="420" type="Box" width="5400">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|draws a lissajous curve|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="338" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="240" top="60" type="Node" width="945">
+   </BOUNDS>
+   <BOUNDS height="435" left="240" top="60" type="Box" width="7215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Lissajous Figures|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="15">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="321" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\">
+   <BOUNDS height="270" left="1125" top="3000" type="Node" width="1560">
+   </BOUNDS>
+   <BOUNDS height="5445" left="10110" top="2955" type="Window" width="9285">
+   </BOUNDS>
+   <PIN pinname="Phi" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Frequency" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Animation ON" pintype="Output" visible="1">
+   </PIN>
+   <BOUNDS height="3600" left="0" top="720" type="Box" width="4800">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Frequency Y" visible="1">
+   </PIN>
+   <PIN pinname="Frequency X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="262" dstpinname="Y Input Value" srcnodeid="321" srcpinname="Phi">
+   </LINK>
+   <NODE componentmode="InABox" id="370" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3480" top="3960" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3480" top="3960" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="600">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="369" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="1260" top="8040" type="Node" width="765">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="363" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
+   <BOUNDS height="100" left="1755" top="4860" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="363" dstpinname="Spread Count" srcnodeid="370" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="362" nodename="CircularSpread (Spreads)" systemname="CircularSpread (Spreads)">
+   <BOUNDS height="100" left="3150" top="4890" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Factor" visible="1">
+   </PIN>
+   <PIN pinname="Output Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="362" dstpinname="Spread Count" srcnodeid="370" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="361" nodename="CircularSpread (Spreads)" systemname="CircularSpread (Spreads)">
+   <BOUNDS height="100" left="435" top="4860" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Factor" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Phase" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="361" dstpinname="Spread Count" srcnodeid="370" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="360" nodename="LFO (Animation)" systemname="LFO (Animation)">
+   <BOUNDS height="100" left="6435" top="3495" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" visible="1">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="359" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="5685" top="2940" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="5685" top="2940" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="360" dstpinname="Period" srcnodeid="359" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="358" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4350" top="3975" type="Node" width="1200">
+   </BOUNDS>
+   <BOUNDS height="270" left="4350" top="3975" type="Box" width="1200">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; pointCount|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MainShape.v4p" id="357" nodename="MainShape.v4p" systemname="MainShape">
+   <BOUNDS height="100" left="420" top="6360" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="8025" left="13620" top="5910" type="Window" width="6030">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="357" dstpinname="X" srcnodeid="361" srcpinname="Output X">
+   </LINK>
+   <LINK dstnodeid="357" dstpinname="Y" srcnodeid="362" srcpinname="Output X">
+   </LINK>
+   <LINK dstnodeid="357" dstpinname="Cycles" srcnodeid="360" srcpinname="Cycles" hiddenwhenlocked="1">
+   </LINK>
+   <LINK dstnodeid="369" dstpinname="Layer 1" srcnodeid="357" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="YOscillator.xml" id="356" nodename="YOscillator.xml" systemname="YOscillator">
+   <BOUNDS height="100" left="1485" top="7125" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="8880" left="14235" top="4095" type="Window" width="9075">
+   </BOUNDS>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="356" dstpinname="X" srcnodeid="363" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="356" dstpinname="Y" srcnodeid="362" srcpinname="Output X">
+   </LINK>
+   <LINK dstnodeid="356" dstpinname="To" srcnodeid="357" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="356" dstpinname="Cycles" srcnodeid="360" srcpinname="Cycles" hiddenwhenlocked="1">
+   </LINK>
+   <LINK dstnodeid="369" dstpinname="Layer 2" srcnodeid="356" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="XOscillator.v4p" id="355" nodename="XOscillator.v4p" systemname="XOscillator">
+   <BOUNDS height="100" left="2685" top="7110" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="8880" left="5790" top="8565" type="Window" width="8100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="From" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="355" dstpinname="X" srcnodeid="361" srcpinname="Output X">
+   </LINK>
+   <LINK dstnodeid="355" dstpinname="Y" srcnodeid="363" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="355" dstpinname="From" srcnodeid="357" srcpinname="XYZ Transformed">
+   </LINK>
+   <LINK dstnodeid="355" dstpinname="Cycles" srcnodeid="360" srcpinname="Cycles" hiddenwhenlocked="1">
+   </LINK>
+   <LINK dstnodeid="369" dstpinname="Layer 3" srcnodeid="355" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="369" srcpinname="Layer" dstnodeid="37" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Phi" dstnodeid="361" dstpinname="Phase">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Frequency X" dstnodeid="361" dstpinname="Factor">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Frequency Y" dstnodeid="362" dstpinname="Factor">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Animation ON" dstnodeid="355" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="321" srcpinname="Animation ON" dstnodeid="356" dstpinname="Enabled">
+   </LINK>
+   </PATCH>

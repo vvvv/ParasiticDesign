@@ -1,0 +1,259 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\Oscillator.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\Oscillator.v4p" systemname="Oscillator">
+   <BOUNDS height="5580" left="5595" top="945" type="Window" width="8940">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="57" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4395" top="960" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4395" top="960" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="600">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="53" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="2505" top="4110" type="Node" width="765">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="47" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="120" top="255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="120" top="255" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Frequency X|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="46" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1050" top="255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1050" top="255" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Phi">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="44" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3945" top="255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3945" top="255" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Switch">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="43" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2505" top="4530" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2505" top="4530" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="43" dstpinname="Input Node" srcnodeid="53" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="26" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="2055" top="255" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2055" top="255" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Frequency Y|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
+   <BOUNDS height="100" left="2685" top="1860" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Spread Count" srcnodeid="57" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="CircularSpread (Spreads)" systemname="CircularSpread (Spreads)">
+   <BOUNDS height="100" left="4065" top="1890" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Factor" visible="1">
+   </PIN>
+   <PIN pinname="Output Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Spread Count" srcnodeid="57" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Factor" srcnodeid="26" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="61" nodename="CircularSpread (Spreads)" systemname="CircularSpread (Spreads)">
+   <BOUNDS height="100" left="1350" top="1860" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output X" visible="1">
+   </PIN>
+   <PIN pinname="Factor" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" visible="1">
+   </PIN>
+   <PIN pinname="Phase" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="61" dstpinname="Spread Count" srcnodeid="57" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="61" dstpinname="Phase" srcnodeid="46" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="67" nodename="LFO (Animation)" systemname="LFO (Animation)">
+   <BOUNDS height="100" left="7440" top="2250" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" visible="1">
+   </PIN>
+   <PIN pinname="Phase" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="65" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6690" top="1695" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="6690" top="1695" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="67" dstpinname="Period" srcnodeid="65" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="61" dstpinname="Factor" srcnodeid="47" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="93" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5265" top="975" width="1200" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5265" top="975" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; pointCount|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 4">
+   </LINK>
+   <NODE systemname="MainShape" filename="MainShape.v4p" nodename="MainShape.v4p" componentmode="Hidden" id="126">
+   <BOUNDS type="Node" left="1365" top="2460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13620" top="5910" width="6030" height="8025">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="XYZ Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output X" dstnodeid="126" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output X" dstnodeid="126" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Cycles" dstnodeid="126" dstpinname="Cycles">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="YOscillator" filename="YOscillator.xml" nodename="YOscillator.xml" componentmode="InAWindow" id="127">
+   <BOUNDS type="Node" left="2430" top="3225" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14235" top="4095" width="9075" height="8880">
+   </BOUNDS>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="127" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Output X" dstnodeid="127" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="XYZ Transformed" dstnodeid="127" dstpinname="To">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Cycles" dstnodeid="127" dstpinname="Cycles">
+   </LINK>
+   <LINK srcnodeid="127" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="127" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="XOscillator" filename="XOscillator.v4p" nodename="XOscillator.v4p" componentmode="InAWindow" id="128">
+   <BOUNDS type="Node" left="3630" top="3210" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5790" top="8565" width="8100" height="8880">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="From" visible="1">
+   </PIN>
+   <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output X" dstnodeid="128" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="128" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="126" srcpinname="XYZ Transformed" dstnodeid="128" dstpinname="From">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Cycles" dstnodeid="128" dstpinname="Cycles">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="128" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Layer" dstnodeid="53" dstpinname="Layer 3">
+   </LINK>
+   </PATCH>
