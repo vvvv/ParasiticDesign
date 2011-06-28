@@ -169,7 +169,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -188,10 +188,6 @@
    <PIN pinname="Draw Animation" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="320" dstpinname="Y Input Value" srcnodeid="321" srcpinname="Animation ON">
-   </LINK>
-   <LINK dstnodeid="278" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="321" srcpinname="Animation ON">
-   </LINK>
    <NODE componentmode="InABox" id="330" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2745" top="5355" type="Node" width="100">
    </BOUNDS>
@@ -209,7 +205,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Period" visible="1" slicecount="1" values="10">
+   <PIN pinname="Period" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0.71">
    </PIN>
@@ -218,9 +214,7 @@
    <PIN pinname="Cycles" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="343" srcpinname="Output" dstnodeid="278" dstpinname="Cycles">
-   </LINK>
-   <NODE componentmode="Hidden" filename="DrawAnimation.v4p" id="278" nodename="DrawAnimation.v4p" systemname="DrawAnimation">
+   <NODE componentmode="Hidden" filename="DrawAnimation.v4p" id="278" nodename="DrawAnimation.v4p" systemname="DrawAnimation" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\">
    <BOUNDS height="270" left="2400" top="4320" type="Node" width="1620">
    </BOUNDS>
    <BOUNDS height="8760" left="8820" top="4830" type="Window" width="16575">
@@ -231,7 +225,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
    <BOUNDS left="2400" top="4320" type="Box">
    </BOUNDS>
@@ -244,10 +238,10 @@
    <PIN pinname="Angle" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="321" srcpinname="Phi" dstnodeid="278" dstpinname="Phi">
+   <LINK dstnodeid="278" dstpinname="Phi" srcnodeid="321" srcpinname="Phi">
    </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="344">
-   <BOUNDS type="Node" left="3975" top="3750" width="100" height="100">
+   <NODE componentmode="Hidden" id="344" nodename="Multiply (Value)" systemname="Multiply (Value)">
+   <BOUNDS height="100" left="3975" top="3750" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -256,15 +250,15 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="343" srcpinname="Output" dstnodeid="344" dstpinname="Input 2">
+   <LINK dstnodeid="344" dstpinname="Input 2" srcnodeid="343" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="321" srcpinname="Frequency" dstnodeid="344" dstpinname="Input 1">
+   <LINK dstnodeid="344" dstpinname="Input 1" srcnodeid="321" srcpinname="Frequency">
    </LINK>
-   <LINK srcnodeid="344" srcpinname="Output" dstnodeid="278" dstpinname="Angle">
+   <LINK dstnodeid="278" dstpinname="Angle" srcnodeid="344" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="321" srcpinname="Draw Animation" dstnodeid="278" dstpinname="Enabled">
+   <LINK dstnodeid="278" dstpinname="Enabled" srcnodeid="321" srcpinname="Draw Animation">
    </LINK>
-   <NODE componentmode="Hidden" filename="OscillatorCurve.v4p" id="337" nodename="OscillatorCurve.v4p" systemname="OscillatorCurve">
+   <NODE componentmode="Hidden" filename="OscillatorCurve.v4p" id="337" nodename="OscillatorCurve.v4p" systemname="OscillatorCurve" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\">
    <BOUNDS height="100" left="840" top="4290" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="7410" left="10905" top="5775" type="Window" width="4995">
@@ -288,12 +282,12 @@
    </NODE>
    <LINK dstnodeid="337" dstpinname="Frequency" srcnodeid="321" srcpinname="Frequency">
    </LINK>
-   <LINK srcnodeid="321" srcpinname="Phi" dstnodeid="337" dstpinname="Phi">
+   <LINK dstnodeid="337" dstpinname="Phi" srcnodeid="321" srcpinname="Phi">
    </LINK>
-   <LINK srcnodeid="321" srcpinname="Draw Animation" dstnodeid="337" dstpinname="Switch">
+   <LINK dstnodeid="337" dstpinname="Switch" srcnodeid="321" srcpinname="Draw Animation">
    </LINK>
-   <LINK srcnodeid="337" srcpinname="Layer" dstnodeid="123" dstpinname="Layer 1">
+   <LINK dstnodeid="123" dstpinname="Layer 1" srcnodeid="337" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="278" srcpinname="Layer" dstnodeid="123" dstpinname="Layer 2">
+   <LINK dstnodeid="123" dstpinname="Layer 2" srcnodeid="278" srcpinname="Layer">
    </LINK>
    </PATCH>
