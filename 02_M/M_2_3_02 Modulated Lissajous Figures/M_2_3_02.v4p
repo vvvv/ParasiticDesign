@@ -162,32 +162,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="371" nodename="Divide (Value)" systemname="Divide (Value)">
-   <BOUNDS height="100" left="1875" top="4620" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="362" dstpinname="Phase" srcnodeid="371" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="InABox" id="382" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2220" top="4245" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2220" top="4245" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="100">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="371" dstpinname="Input 2" srcnodeid="382" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="385" nodename="CircularSpread (Spreads)" systemname="CircularSpread (Spreads)">
    <BOUNDS height="100" left="2235" top="5280" type="Node" width="100">
    </BOUNDS>
@@ -382,8 +356,6 @@
    <PIN pinname="2Draw Mode ON" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="371" dstpinname="Input" srcnodeid="321" srcpinname="Phi">
-   </LINK>
    <LINK dstnodeid="362" dstpinname="Factor" srcnodeid="321" srcpinname="Frequency X">
    </LINK>
    <NODE componentmode="Hidden" id="420" nodename="Multiply (Value)" systemname="Multiply (Value)">
@@ -976,18 +948,20 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="321" srcpinname="2Draw Mode ON" dstnodeid="452" dstpinname="Switch">
+   <LINK dstnodeid="452" dstpinname="Switch" srcnodeid="321" srcpinname="2Draw Mode ON">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="467" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="8445" top="9135" width="3555" height="270">
+   <NODE componentmode="InABox" id="467" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8445" top="9135" type="Node" width="3555">
    </BOUNDS>
-   <BOUNDS type="Box" left="8445" top="9135" width="2910" height="525">
+   <BOUNDS height="525" left="8445" top="9135" type="Box" width="2910">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|!?? ^^^ better to use bounds or do like in processing(width maxDist)?|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|!?? ^^^ better to use bounds or do like in processing(width maxDist)?|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <LINK srcnodeid="321" srcpinname="Phi" dstnodeid="362" dstpinname="Phase">
+   </LINK>
    </PATCH>
