@@ -127,7 +127,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="4110" top="3345" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="600">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="600">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -182,6 +182,8 @@
    <BOUNDS left="1365" top="7650" type="Box">
    </BOUNDS>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="406" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
@@ -328,22 +330,22 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="422" srcpinname="Output Y" dstnodeid="406" dstpinname="Y">
+   <LINK dstnodeid="406" dstpinname="Y" srcnodeid="422" srcpinname="Output Y">
    </LINK>
-   <LINK srcnodeid="421" srcpinname="Output Y" dstnodeid="406" dstpinname="Z">
+   <LINK dstnodeid="406" dstpinname="Z" srcnodeid="421" srcpinname="Output Y">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="469">
-   <BOUNDS type="Node" left="1305" top="3375" width="100" height="100">
+   <NODE componentmode="InABox" id="469" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1305" top="3375" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1305" top="3375" width="795" height="240">
+   <BOUNDS height="240" left="1305" top="3375" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Cons (Spreads)" filename="%VVVV%\plugins\SpreadOperations.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="470">
-   <BOUNDS type="Node" left="1560" top="3915" width="100" height="100">
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="470" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="1560" top="3915" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -352,24 +354,24 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="469" srcpinname="Y Output Value" dstnodeid="470" dstpinname="Input 2">
+   <LINK dstnodeid="470" dstpinname="Input 2" srcnodeid="469" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="470" srcpinname="Output" dstnodeid="362" dstpinname="Factor">
+   <LINK dstnodeid="362" dstpinname="Factor" srcnodeid="470" srcpinname="Output">
    </LINK>
-   <NODE systemname="Cons (Spreads)" filename="%VVVV%\plugins\SpreadOperations.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="471">
-   <BOUNDS type="Node" left="2220" top="3900" width="100" height="100">
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="471" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
+   <BOUNDS height="100" left="2220" top="3900" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="471" srcpinname="Output" dstnodeid="362" dstpinname="Phase">
+   <LINK dstnodeid="362" dstpinname="Phase" srcnodeid="471" srcpinname="Output">
    </LINK>
-   <NODE systemname="GetSpread (Spreads)" nodename="GetSpread (Spreads)" componentmode="Hidden" id="472">
-   <BOUNDS type="Node" left="1455" top="5250" width="100" height="100">
+   <NODE componentmode="Hidden" id="472" nodename="GetSpread (Spreads)" systemname="GetSpread (Spreads)">
+   <BOUNDS height="100" left="1455" top="5250" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Count" visible="1">
    </PIN>
@@ -378,14 +380,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="370" srcpinname="Y Output Value" dstnodeid="472" dstpinname="Count" hiddenwhenlocked="1">
+   <LINK dstnodeid="472" dstpinname="Count" hiddenwhenlocked="1" srcnodeid="370" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="362" srcpinname="Output Y" dstnodeid="472" dstpinname="Input">
+   <LINK dstnodeid="472" dstpinname="Input" srcnodeid="362" srcpinname="Output Y">
    </LINK>
-   <LINK srcnodeid="472" srcpinname="Output" dstnodeid="420" dstpinname="Input 1">
+   <LINK dstnodeid="420" dstpinname="Input 1" srcnodeid="472" srcpinname="Output">
    </LINK>
-   <NODE systemname="GetSpread (Spreads)" nodename="GetSpread (Spreads)" componentmode="Hidden" id="473">
-   <BOUNDS type="Node" left="2400" top="5250" width="100" height="100">
+   <NODE componentmode="Hidden" id="473" nodename="GetSpread (Spreads)" systemname="GetSpread (Spreads)">
+   <BOUNDS height="100" left="2400" top="5250" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Count" visible="1">
    </PIN>
@@ -396,18 +398,18 @@
    <PIN pinname="Offset" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="473" srcpinname="Output" dstnodeid="420" dstpinname="Input 2">
+   <LINK dstnodeid="420" dstpinname="Input 2" srcnodeid="473" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="370" srcpinname="Y Output Value" dstnodeid="473" dstpinname="Offset" hiddenwhenlocked="1">
+   <LINK dstnodeid="473" dstpinname="Offset" hiddenwhenlocked="1" srcnodeid="370" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="370" srcpinname="Y Output Value" dstnodeid="473" dstpinname="Count" hiddenwhenlocked="1">
+   <LINK dstnodeid="473" dstpinname="Count" hiddenwhenlocked="1" srcnodeid="370" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="362" srcpinname="Output Y" dstnodeid="473" dstpinname="Input">
+   <LINK dstnodeid="473" dstpinname="Input" srcnodeid="362" srcpinname="Output Y">
    </LINK>
-   <LINK srcnodeid="407" srcpinname="Layer" dstnodeid="37" dstpinname="Layers">
+   <LINK dstnodeid="37" dstpinname="Layers" srcnodeid="407" srcpinname="Layer">
    </LINK>
-   <NODE systemname="ViewTransform" filename="ViewTransform.v4p" nodename="ViewTransform.v4p" componentmode="Hidden" id="474">
-   <BOUNDS type="Node" left="5610" top="4170" width="1635" height="270">
+   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="474" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_4_01 Three-dimensional Lissajous Figures\">
+   <BOUNDS height="270" left="5610" top="4170" type="Node" width="1635">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -418,10 +420,10 @@
    <PIN pinname="Z Translate">
    </PIN>
    </NODE>
-   <LINK srcnodeid="474" srcpinname="Transform Out" dstnodeid="37" dstpinname="View Transform">
+   <LINK dstnodeid="37" dstpinname="View Transform" srcnodeid="474" srcpinname="Transform Out">
    </LINK>
-   <NODE systemname="Mouse (System Window)" nodename="Mouse (System Window)" componentmode="Hidden" id="475">
-   <BOUNDS type="Node" left="6345" top="2730" width="900" height="270">
+   <NODE componentmode="Hidden" id="475" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
+   <BOUNDS height="270" left="6345" top="2730" type="Node" width="900">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -430,8 +432,8 @@
    <PIN pinname="Right Button" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="476">
-   <BOUNDS type="Node" left="6255" top="3435" width="100" height="100">
+   <NODE componentmode="Hidden" id="476" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="6255" top="3435" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -440,15 +442,15 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="476" srcpinname="XY" dstnodeid="474" dstpinname="MouseXY">
+   <LINK dstnodeid="474" dstpinname="MouseXY" srcnodeid="476" srcpinname="XY">
    </LINK>
-   <LINK srcnodeid="475" srcpinname="X" dstnodeid="476" dstpinname="X">
+   <LINK dstnodeid="476" dstpinname="X" srcnodeid="475" srcpinname="X">
    </LINK>
-   <LINK srcnodeid="475" srcpinname="Y" dstnodeid="476" dstpinname="Y">
+   <LINK dstnodeid="476" dstpinname="Y" srcnodeid="475" srcpinname="Y">
    </LINK>
-   <LINK srcnodeid="475" srcpinname="Right Button" dstnodeid="474" dstpinname="Right Mouse Button">
+   <LINK dstnodeid="474" dstpinname="Right Mouse Button" srcnodeid="475" srcpinname="Right Button">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="477" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="477" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_4_01 Three-dimensional Lissajous Figures\">
    <BOUNDS height="270" left="1575" top="2325" type="Node" width="1920">
    </BOUNDS>
    <BOUNDS height="6105" left="6540" top="4110" type="Window" width="13695">
@@ -458,12 +460,12 @@
    </NODE>
    <LINK dstnodeid="422" dstpinname="Factor" srcnodeid="477" srcpinname="Frequency Y">
    </LINK>
-   <LINK srcnodeid="477" srcpinname="Phi Y" dstnodeid="422" dstpinname="Phase">
+   <LINK dstnodeid="422" dstpinname="Phase" srcnodeid="477" srcpinname="Phi Y">
    </LINK>
-   <LINK srcnodeid="477" srcpinname="Frequency Z" dstnodeid="421" dstpinname="Factor">
+   <LINK dstnodeid="421" dstpinname="Factor" srcnodeid="477" srcpinname="Frequency Z">
    </LINK>
-   <LINK srcnodeid="477" srcpinname="Frequency X" dstnodeid="470" dstpinname="Input 1">
+   <LINK dstnodeid="470" dstpinname="Input 1" srcnodeid="477" srcpinname="Frequency X">
    </LINK>
-   <LINK srcnodeid="477" srcpinname="Phi X" dstnodeid="471" dstpinname="Input 1">
+   <LINK dstnodeid="471" dstpinname="Input 1" srcnodeid="477" srcpinname="Phi X">
    </LINK>
    </PATCH>
