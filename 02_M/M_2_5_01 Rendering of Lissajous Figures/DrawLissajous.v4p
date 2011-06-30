@@ -30,16 +30,6 @@
    <PIN pinname="To" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="31" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="270" left="1755" top="3960" type="Node" width="630">
-   </BOUNDS>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="30" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="2220" top="10455" type="Node" width="100">
    </BOUNDS>
@@ -298,8 +288,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Input" srcnodeid="31" srcpinname="XYZ">
-   </LINK>
    <NODE componentmode="Hidden" id="6" nodename="CAR (Spreads)" systemname="CAR (Spreads)">
    <BOUNDS height="100" left="2250" top="3270" type="Node" width="100">
    </BOUNDS>
@@ -365,7 +353,7 @@
    <LINK dstnodeid="36" dstpinname="Input Node" srcnodeid="32" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="37" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
-   <BOUNDS height="100" left="1770" top="810" type="Node" width="100">
+   <BOUNDS height="100" left="1740" top="810" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -377,10 +365,6 @@
    <LINK dstnodeid="24" dstpinname="Input" srcnodeid="37" srcpinname="X">
    </LINK>
    <LINK dstnodeid="23" dstpinname="Input" srcnodeid="37" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="31" dstpinname="X" srcnodeid="37" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="31" dstpinname="Y" srcnodeid="37" srcpinname="Y">
    </LINK>
    <NODE componentmode="InABox" id="38" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1020" top="225" type="Node" width="100">
@@ -642,8 +626,10 @@
    </LINK>
    <LINK dstnodeid="20" dstpinname="Alpha" srcnodeid="55" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="58" dstpinname="Input 1">
+   <LINK dstnodeid="58" dstpinname="Input 1" srcnodeid="61" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="61" dstpinname="Input 2">
+   <LINK dstnodeid="61" dstpinname="Input 2" srcnodeid="62" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="X" dstnodeid="7" dstpinname="Input">
    </LINK>
    </PATCH>
