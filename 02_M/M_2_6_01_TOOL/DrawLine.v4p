@@ -1,19 +1,7 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_02_TOOL\DrawLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_02_TOOL\DrawLine.v4p" systemname="DrawLine">
-   <BOUNDS height="9285" left="6540" top="3000" type="Window" width="11655">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\DrawLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_02_TOOL\DrawLine.v4p" systemname="DrawLine">
+   <BOUNDS height="9195" left="6540" top="3000" type="Window" width="10500">
    </BOUNDS>
-   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="3630" left="7020" top="5910" type="Node" width="5190">
-   </BOUNDS>
-   <BOUNDS height="3630" left="7020" top="5910" type="Box" width="5190">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|void drawLine(PVector p1, PVector p2) {&cr;&lf;  float d, a, h;&cr;&lf;&cr;&lf;  d = PVector.dist(p1, p2);&cr;&lf;  a = pow(1/(d/connectionRadius+1), 6);&cr;&lf;&cr;&lf;  if (d &lt;= connectionRadius) {&cr;&lf;    if (!invertHue) {&cr;&lf;      h = map(a, 0, 1, minHueValue, maxHueValue) % 360;&cr;&lf;    } &cr;&lf;    else {&cr;&lf;      h = map(1-a, 0, 1, minHueValue, maxHueValue) % 360;&cr;&lf;    }&cr;&lf;    stroke(h, saturationValue, brightnessValue,  a*lineAlpha + (i1%2 * 2));&cr;&lf;    line(p1.x, p1.y, p2.x, p2.y);&cr;&lf;  }&cr;&lf;}|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="33" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="3030" top="15" type="Node" width="100">
    </BOUNDS>
@@ -144,8 +132,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="27" dstpinname="connectionRadius" srcnodeid="29" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="27" dstpinname="D" srcnodeid="31" srcpinname="Length">
    </LINK>
    <NODE componentmode="Hidden" id="18" nodename="Divide (Value)" systemname="Divide (Value)">
@@ -478,7 +464,7 @@
    </LINK>
    <LINK dstnodeid="34" dstpinname="From" srcnodeid="2" srcpinname="Y Output Value">
    </LINK>
-   <NODE id="19" componentmode="Hidden" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
+   <NODE componentmode="Hidden" id="19" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
    <PIN pinname="Lightness" visible="1">
    </PIN>
    <PIN pinname="Saturation" visible="1">
@@ -487,25 +473,25 @@
    </PIN>
    <PIN pinname="Alpha" visible="1">
    </PIN>
-   <BOUNDS type="Node" height="270" left="3315" top="6015" width="3390">
+   <BOUNDS height="270" left="3315" top="6015" type="Node" width="3390">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="19" dstpinname="Alpha">
+   <LINK dstnodeid="19" dstpinname="Alpha" srcnodeid="42" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Output" dstnodeid="19" dstpinname="Hue">
+   <LINK dstnodeid="19" dstpinname="Hue" srcnodeid="16" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Saturation">
+   <LINK dstnodeid="19" dstpinname="Saturation" srcnodeid="8" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="34" dstpinname="Color">
+   <LINK dstnodeid="34" dstpinname="Color" srcnodeid="19" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="19" dstpinname="Value">
+   <LINK dstnodeid="19" dstpinname="Value" srcnodeid="7" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="7335" top="4065" width="100" height="100">
+   <NODE componentmode="Hidden" id="43" nodename="Expr (Value)" systemname="Expr (Value)">
+   <BOUNDS height="100" left="7335" top="4065" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Term" visible="1">
    </PIN>
@@ -514,24 +500,24 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="44">
-   <BOUNDS type="Node" left="7755" top="3615" width="100" height="100">
+   <NODE componentmode="InABox" id="44" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="7755" top="3615" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7755" top="3615" width="1230" height="255">
+   <BOUNDS height="255" left="7755" top="3615" type="Box" width="1230">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="|mod(a, 2) *2|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="44" srcpinname="Output String" dstnodeid="43" dstpinname="Term">
+   <LINK dstnodeid="43" dstpinname="Term" srcnodeid="44" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="41" srcpinname="Former Slice" dstnodeid="43" dstpinname="A">
+   <LINK dstnodeid="43" dstpinname="A" srcnodeid="41" srcpinname="Former Slice">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="18" dstpinname="Input">
+   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="43" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="27" dstpinname="c">
+   <LINK dstnodeid="27" dstpinname="c" srcnodeid="29" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Input">
+   <LINK dstnodeid="41" dstpinname="Input" srcnodeid="3" srcpinname="Y Output Value">
    </LINK>
    </PATCH>
