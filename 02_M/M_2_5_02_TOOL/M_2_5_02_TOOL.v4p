@@ -59,7 +59,7 @@
    <NODE componentmode="Hidden" filename="DrawLissajous.v4p" id="548" nodename="DrawLissajous.v4p" systemname="DrawLissajous" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_02_TOOL\">
    <BOUNDS height="270" left="990" top="9285" type="Node" width="1635">
    </BOUNDS>
-   <BOUNDS height="5295" left="8415" top="0" type="Window" width="10830">
+   <BOUNDS height="8520" left="8415" top="0" type="Window" width="10830">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -475,7 +475,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="4305" top="4500" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -489,7 +489,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="589" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -1004,8 +1004,8 @@
    </LINK>
    <LINK dstnodeid="558" dstpinname="Mod Frequency2 Strength" srcnodeid="584" srcpinname="X Output Value">
    </LINK>
-   <NODE systemname="RGB (Color Join)" nodename="RGB (Color Join)" componentmode="Hidden" id="614">
-   <BOUNDS type="Node" left="1290" top="10650" width="100" height="100">
+   <NODE componentmode="Hidden" id="614" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
+   <BOUNDS height="100" left="1290" top="10650" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1016,22 +1016,22 @@
    <PIN pinname="Blue" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="615">
-   <BOUNDS type="Node" left="1455" top="10095" width="100" height="100">
+   <NODE componentmode="Hidden" id="615" nodename="NOT (Boolean)" systemname="NOT (Boolean)">
+   <BOUNDS height="100" left="1455" top="10095" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="615" srcpinname="Output" dstnodeid="614" dstpinname="Red">
+   <LINK dstnodeid="614" dstpinname="Red" srcnodeid="615" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="615" srcpinname="Output" dstnodeid="614" dstpinname="Green">
+   <LINK dstnodeid="614" dstpinname="Green" srcnodeid="615" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="615" srcpinname="Output" dstnodeid="614" dstpinname="Blue">
+   <LINK dstnodeid="614" dstpinname="Blue" srcnodeid="615" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="588" srcpinname="Y Output Value" dstnodeid="615" dstpinname="Input">
+   <LINK dstnodeid="615" dstpinname="Input" srcnodeid="588" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="614" srcpinname="Output" dstnodeid="37" dstpinname="Background Color">
+   <LINK dstnodeid="37" dstpinname="Background Color" srcnodeid="614" srcpinname="Output">
    </LINK>
    </PATCH>
