@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_02_TOOL\M_2_5_02_TOOL.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
-   <BOUNDS height="12765" left="6915" top="0" type="Window" width="10050">
+   <BOUNDS height="12765" left="5940" top="0" type="Window" width="10050">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="37" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="975" top="11025" type="Node" width="100">
@@ -656,18 +656,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="598" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="1425" top="5760" type="Node" width="2715">
-   </BOUNDS>
-   <BOUNDS height="270" left="1425" top="5760" type="Box" width="2715">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|! min should not be bigger as max!!!|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="599" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="4290" top="6420" type="Node" width="100">
    </BOUNDS>
@@ -852,10 +840,6 @@
    </NODE>
    <LINK dstnodeid="548" dstpinname="Connection Radius" srcnodeid="607" srcpinname="X Output Value">
    </LINK>
-   <LINK dstnodeid="548" dstpinname="Min Hue Value" srcnodeid="594" srcpinname="X Output Value">
-   </LINK>
-   <LINK dstnodeid="548" dstpinname="Max Hue Value" srcnodeid="595" srcpinname="X Output Value">
-   </LINK>
    <LINK dstnodeid="548" dstpinname="Saturation" srcnodeid="599" srcpinname="X Output Value">
    </LINK>
    <LINK dstnodeid="548" dstpinname="Lightness" srcnodeid="600" srcpinname="X Output Value">
@@ -866,18 +850,6 @@
    </LINK>
    <LINK dstnodeid="548" dstpinname="Line Weight" srcnodeid="590" srcpinname="X Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="609" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="75" top="1470" type="Node" width="885">
-   </BOUNDS>
-   <BOUNDS height="1065" left="75" top="1470" type="Box" width="3120">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|PROBLEMS:&cr;&lf;1. points drawn not all at once&cr;&lf;2. point count - high, everything slow&cr;&lf;3. ! min should not be bigger as max!!!&cr;&lf;4. color is different&cr;&lf;|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="612" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="105" top="495" type="Node" width="840">
    </BOUNDS>
@@ -1031,9 +1003,59 @@
    <LINK dstnodeid="614" dstpinname="Blue" srcnodeid="615" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="615" dstpinname="Input" srcnodeid="588" srcpinname="Y Output Value">
+   <LINKPOINT x="1485" y="8205">
+   </LINKPOINT>
    </LINK>
    <LINK dstnodeid="37" dstpinname="Background Color" srcnodeid="614" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="606" srcpinname="Y Output Value" dstnodeid="548" dstpinname="Connect All Points">
+   <LINK dstnodeid="548" dstpinname="Connect All Points" srcnodeid="606" srcpinname="Y Output Value">
    </LINK>
+   <NODE systemname="Clamp (Value)" filename="Clamp (Value).v4p" nodename="Clamp (Value)" componentmode="Hidden" id="616">
+   <BOUNDS type="Node" left="2310" top="8010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Min" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Max" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="594" srcpinname="X Output Value" dstnodeid="616" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="595" srcpinname="X Output Value" dstnodeid="616" dstpinname="Max">
+   </LINK>
+   <NODE systemname="Clamp (Value)" filename="Clamp (Value).v4p" nodename="Clamp (Value)" componentmode="Hidden" id="618">
+   <BOUNDS type="Node" left="2190" top="8385" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Min" visible="1">
+   </PIN>
+   <PIN pinname="Max" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="595" srcpinname="X Output Value" dstnodeid="618" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="594" srcpinname="X Output Value" dstnodeid="618" dstpinname="Min">
+   </LINK>
+   <LINK srcnodeid="616" srcpinname="Output" dstnodeid="548" dstpinname="Min Hue Value">
+   </LINK>
+   <LINK srcnodeid="618" srcpinname="Output" dstnodeid="548" dstpinname="Max Hue Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="619" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="150" top="1605" width="8265" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="150" top="1605" width="1800" height="1185">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|!! In this example, the lines are drawn all at once without the delay, that is implemented in the Processing example.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
    </PATCH>
