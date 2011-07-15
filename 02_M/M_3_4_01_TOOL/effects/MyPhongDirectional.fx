@@ -36,6 +36,7 @@ struct vs2ps
     float3 LightDirV: TEXCOORD1;
     float3 NormV: TEXCOORD2;
     float3 ViewDirV: TEXCOORD3;
+	float4 Color: COLOR0;
 };
 
 // -----------------------------------------------------------------------------
@@ -45,6 +46,7 @@ struct vs2ps
 vs2ps VS(
     float4 PosO: POSITION,
     float3 NormO: NORMAL,
+	float4 Color: COLOR0,
     float4 TexCd : TEXCOORD0)
 {
     //inititalize all fields of output struct with 0
@@ -60,6 +62,7 @@ vs2ps VS(
     Out.PosWVP  = mul(PosO, tWVP);
     Out.TexCd = mul(TexCd, tTex);
     Out.ViewDirV = -normalize(mul(PosO, tWV));
+	Out.Color = Color;
     return Out;
 }
 
@@ -75,7 +78,7 @@ float4 PS(vs2ps In): COLOR
 {
     //In.TexCd = In.TexCd / In.TexCd.w; // for perpective texture projections (e.g. shadow maps) ps_2_0
 
-    float4 col = tex2D(Samp, In.TexCd);
+    float4 col = In.Color;
 
     col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);
     col.a *= Alpha;
