@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajous Figures\XOscillator.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\XOscillator.v4p" systemname="XOscillator">
-   <BOUNDS height="8685" left="8775" top="4710" type="Window" width="6270">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_2_2_01 Lissajous Figures\XOscillator.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_2_01 Lissajou Figures\XOscillator.v4p" systemname="XOscillator">
+   <BOUNDS height="8685" left="11340" top="8865" type="Window" width="6270">
    </BOUNDS>
    <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Output Value" visible="1">
@@ -29,7 +29,7 @@
    </PIN>
    <PIN pinname="Single Input" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" visible="1" values="1">
+   <PIN pinname="Width" slicecount="1" visible="1" values="2">
    </PIN>
    <BOUNDS left="480" top="6000" type="Box">
    </BOUNDS>
@@ -139,9 +139,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="690" top="2550" type="Node" width="100">
+   <BOUNDS height="100" left="435" top="2400" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="690" top="2550" type="Box" width="450">
+   <BOUNDS height="240" left="435" top="2400" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
@@ -154,18 +154,6 @@
    </LINK>
    <LINK dstnodeid="15" dstpinname="Transform" srcnodeid="17" srcpinname="Output Node">
    </LINK>
-   <NODE componentmode="InABox" id="9" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="660" top="6330" type="Node" width="975">
-   </BOUNDS>
-   <BOUNDS height="270" left="660" top="6330" type="Box" width="1290">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|^ X Oscillator|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="8" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
    <BOUNDS height="100" left="630" top="3360" type="Node" width="100">
    </BOUNDS>
@@ -194,8 +182,6 @@
    </LINK>
    <LINK dstnodeid="7" dstpinname="X" srcnodeid="12" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="7" dstpinname="Y" srcnodeid="12" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1485" top="2895" type="Node" width="100">
    </BOUNDS>
@@ -223,9 +209,9 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="2" dstpinname="Layer 1" srcnodeid="21" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="2" dstpinname="Layer 2" srcnodeid="15" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="23" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -235,7 +221,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="23" dstpinname="Input Node" srcnodeid="2" srcpinname="Layer">
@@ -249,7 +235,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="X">
+   <PIN pinname="Descriptive Name" slicecount="1" values="X" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="26" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -261,7 +247,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Y">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Y" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="27" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -283,7 +269,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="15" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="27" srcpinname="Y Output Value">
@@ -299,7 +285,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="30" dstpinname="Input Node" srcnodeid="18" srcpinname="Transform Out">
@@ -314,22 +300,6 @@
    <PIN pinname="Last Slice" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="33" dstpinname="Input" srcnodeid="25" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="34" nodename="CDR (Spreads)" systemname="CDR (Spreads)">
-   <BOUNDS height="100" left="1770" top="1110" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Remainder" visible="1">
-   </PIN>
-   <PIN pinname="Last Slice" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="34" dstpinname="Input" srcnodeid="26" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="20" dstpinname="Y" srcnodeid="34" srcpinname="Remainder">
-   </LINK>
    <NODE componentmode="Hidden" id="35" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <BOUNDS height="100" left="1965" top="2070" type="Node" width="100">
    </BOUNDS>
@@ -340,12 +310,42 @@
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="35" dstpinname="Y" srcnodeid="34" srcpinname="Last Slice">
-   </LINK>
    <LINK dstnodeid="16" dstpinname="XYZ" srcnodeid="35" srcpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Remainder" dstnodeid="20" dstpinname="X">
    </LINK>
    <LINK srcnodeid="33" srcpinname="Last Slice" dstnodeid="35" dstpinname="X">
    </LINK>
-   <LINK srcnodeid="33" srcpinname="Remainder" dstnodeid="20" dstpinname="X">
+   <LINK srcnodeid="21" srcpinname="Layer" dstnodeid="2" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Y">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="39">
+   <BOUNDS type="Node" left="2550" top="75" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2550" top="75" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Y as Spread|" encoded="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Y">
+   </LINK>
+   <NODE componentmode="InABox" id="40" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1875" top="1185" type="Node" width="3465">
+   </BOUNDS>
+   <BOUNDS height="465" left="1875" top="1185" type="Box" width="2505">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Separates the last point from the 601 incoming points.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Y">
    </LINK>
    </PATCH>
