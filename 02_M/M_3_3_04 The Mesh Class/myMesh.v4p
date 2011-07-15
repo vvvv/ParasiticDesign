@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_04 The Mesh Class\myMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
-   <BOUNDS height="11970" left="3090" top="1950" type="Window" width="9990">
+   <BOUNDS height="11970" left="5175" top="2115" type="Window" width="7800">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="" id="73" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <BOUNDS height="270" left="1380" top="1770" type="Node" width="555">
@@ -161,6 +161,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Mapping" visible="1" slicecount="1" values="Float">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="59" nodename="Map (Value)" systemname="Map (Value)">
    <BOUNDS height="270" left="2760" top="4605" type="Node" width="1380">
@@ -174,6 +176,8 @@
    <PIN pinname="Destination Maximum" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" visible="1" slicecount="1" values="Float">
    </PIN>
    </NODE>
    <LINK dstnodeid="60" dstpinname="Input" srcnodeid="63" srcpinname="X Out">
@@ -472,48 +476,12 @@
    </NODE>
    <LINK dstnodeid="81" dstpinname="Input" srcnodeid="54" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="78" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|PVector Figure8Torus(float u, float v) {&cr;&lf;    float x = 1.5 * cos(u) * (1+ sin(v) * cos(u) - sin(2*v) * sin(u) / 2);&cr;&lf;    float y = 1.5 * sin(u) * (1+ sin(v) * cos(u) - sin(2*v) * sin(u) / 2) ;&cr;&lf;    float z = 1.5 * sin(u) * sin(v) + cos(u) * sin(2*v) / 2;|">
-   </PIN>
-   <BOUNDS height="900" left="4815" top="2625" type="Node" width="5385">
-   </BOUNDS>
-   <BOUNDS height="900" left="4815" top="2625" type="Box" width="5385">
-   </BOUNDS>
-   <PIN pinname="Output String" pintype="Output" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <BOUNDS height="0" left="0" top="0" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
-   </PIN>
-   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Character Encoding" pintype="Configuration" slicecount="1" values="ANSI">
-   </PIN>
-   <PIN pinname="Show Characters [#0..#32,#127]" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="82" nodename="Map (Value)" systemname="Map (Value)">
    <BOUNDS height="100" left="450" top="7635" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Destination Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Mapping" visible="1" slicecount="1" values="Float">
    </PIN>
    </NODE>
    <LINK dstnodeid="69" dstpinname="X" srcnodeid="82" srcpinname="Output">
@@ -529,6 +497,8 @@
    </BOUNDS>
    <PIN pinname="Destination Minimum" slicecount="1" values="-1">
    </PIN>
+   <PIN pinname="Mapping" slicecount="1" visible="1" values="Float">
+   </PIN>
    </NODE>
    <LINK dstnodeid="69" dstpinname="Y" srcnodeid="83" srcpinname="Output">
    </LINK>
@@ -542,6 +512,8 @@
    <BOUNDS height="100" left="2535" top="7620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Destination Minimum" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Mapping" slicecount="1" visible="1" values="Float">
    </PIN>
    </NODE>
    <LINK dstnodeid="69" dstpinname="Z" srcnodeid="84" srcpinname="Output">
