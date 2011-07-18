@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Net Cuttings\M_3_4_02.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Mesh Segments\M_3_4_02.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="9135" left="1995" top="0" type="Window" width="10980">
    </BOUNDS>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -19,9 +19,9 @@
    <NODE componentmode="InABox" id="254" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="120" top="45" type="Node" width="945">
    </BOUNDS>
-   <BOUNDS height="480" left="120" top="45" type="Box" width="2475">
+   <BOUNDS height="525" left="120" top="45" type="Box" width="3165">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|The Mesh Class|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|Many Mesh Segments|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -286,7 +286,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="myMesh.v4p" id="292" nodename="myMesh.v4p" systemname="myMesh" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Net Cuttings\">
+   <NODE componentmode="Hidden" filename="myMesh.v4p" id="292" nodename="myMesh.v4p" systemname="myMesh" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Mesh Segments\">
    <BOUNDS height="270" left="2430" top="4095" type="Node" width="4590">
    </BOUNDS>
    <BOUNDS height="11970" left="3465" top="945" type="Window" width="7155">
@@ -498,7 +498,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="308" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Net Cuttings\">
+   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="308" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Mesh Segments\">
    <BOUNDS height="100" left="3630" top="7140" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
@@ -508,28 +508,28 @@
    </NODE>
    <LINK dstnodeid="308" dstpinname="Z" srcnodeid="289" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="292" dstpinname="u Max">
+   <LINK dstnodeid="292" dstpinname="u Max" srcnodeid="302" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="293" srcpinname="Output" dstnodeid="292" dstpinname="u Min">
+   <LINK dstnodeid="292" dstpinname="u Min" srcnodeid="293" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="301" srcpinname="Output" dstnodeid="292" dstpinname="v Min">
+   <LINK dstnodeid="292" dstpinname="v Min" srcnodeid="301" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="303" srcpinname="Output" dstnodeid="292" dstpinname="v Max">
+   <LINK dstnodeid="292" dstpinname="v Max" srcnodeid="303" srcpinname="Output">
    </LINK>
-   <NODE systemname="Fill (EX9.RenderState)" nodename="Fill (EX9.RenderState)" componentmode="Hidden" id="333">
-   <BOUNDS type="Node" left="1275" top="5310" width="100" height="100">
+   <NODE componentmode="Hidden" id="333" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
+   <BOUNDS height="100" left="1275" top="5310" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
    <PIN pinname="Fill Mode" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="333" srcpinname="Render State Out" dstnodeid="241" dstpinname="Render State">
+   <LINK dstnodeid="241" dstpinname="Render State" srcnodeid="333" srcpinname="Render State Out">
    </LINK>
-   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="334">
-   <BOUNDS type="Node" left="2955" top="5475" width="100" height="100">
+   <NODE componentmode="InABox" id="334" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="100" left="2955" top="5475" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2955" top="5475" width="345" height="405">
+   <BOUNDS height="405" left="2955" top="5475" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="2" values="|0.00000,0.00000,0.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
@@ -540,12 +540,12 @@
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
-   <LINK srcnodeid="334" srcpinname="Color Output" dstnodeid="241" dstpinname="Ambient Color">
+   <LINK dstnodeid="241" dstpinname="Ambient Color" srcnodeid="334" srcpinname="Color Output">
    </LINK>
-   <NODE systemname="IOBox (Enumerations)" nodename="IOBox (Enumerations)" componentmode="InABox" id="335">
-   <BOUNDS type="Node" left="1605" top="4290" width="100" height="100">
+   <NODE componentmode="InABox" id="335" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="100" left="1605" top="4290" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1605" top="4290" width="675" height="435">
+   <BOUNDS height="435" left="1605" top="4290" type="Box" width="675">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="2" values="WireFrame,Solid">
    </PIN>
@@ -556,40 +556,40 @@
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
    </NODE>
-   <LINK srcnodeid="335" srcpinname="Output Enum" dstnodeid="333" dstpinname="Fill Mode">
+   <LINK dstnodeid="333" dstpinname="Fill Mode" srcnodeid="335" srcpinname="Output Enum">
    </LINK>
-   <LINK srcnodeid="241" srcpinname="Layer" dstnodeid="242" dstpinname="Layers">
+   <LINK dstnodeid="242" dstpinname="Layers" srcnodeid="241" srcpinname="Layer">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="336" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="9180" top="600" width="1230" height="270">
+   <NODE componentmode="InABox" id="336" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="9180" top="600" type="Node" width="1230">
    </BOUNDS>
-   <BOUNDS type="Box" left="9180" top="600" width="1230" height="270">
+   <BOUNDS height="270" left="9180" top="600" type="Box" width="1230">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; mesh count|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; mesh count|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="337" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="225" top="1800" width="5370" height="270">
+   <NODE componentmode="InABox" id="337" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="225" top="1800" type="Node" width="5370">
    </BOUNDS>
-   <BOUNDS type="Box" left="225" top="1800" width="1770" height="945">
+   <BOUNDS height="945" left="225" top="1800" type="Box" width="1770">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|XY resolution must be spreaded in order to have more meshes drawn. &gt;&gt;|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|XY resolution must be spreaded in order to have more meshes drawn. &gt;&gt;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="292" dstpinname="v Count">
+   <LINK dstnodeid="292" dstpinname="v Count" srcnodeid="247" srcpinname="Y Output Value">
    <LINKPOINT x="3015" y="3210">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="248" srcpinname="Y Output Value" dstnodeid="292" dstpinname="u Count">
+   <LINK dstnodeid="292" dstpinname="u Count" srcnodeid="248" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="308" srcpinname="Transform Out" dstnodeid="242" dstpinname="View Transform">
+   <LINK dstnodeid="242" dstpinname="View Transform" srcnodeid="308" srcpinname="Transform Out">
    </LINK>
    </PATCH>
