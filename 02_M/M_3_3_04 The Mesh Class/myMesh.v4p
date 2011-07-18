@@ -38,18 +38,6 @@
    <PIN pinname="Mesh" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="70" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
-   <BOUNDS height="270" left="1230" top="7695" type="Node" width="1455">
-   </BOUNDS>
-   <PIN pinname="Vertex Buffer" visible="1">
-   </PIN>
-   <PIN pinname="Position XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Normal XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="71" dstpinname="Vertex Buffer" srcnodeid="70" srcpinname="Vertex Buffer">
-   </LINK>
    <NODE componentmode="Hidden" id="69" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <BOUNDS height="100" left="1230" top="7050" type="Node" width="100">
    </BOUNDS>
@@ -62,8 +50,6 @@
    <PIN pinname="Z" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="70" dstpinname="Position XYZ" srcnodeid="69" srcpinname="XYZ">
-   </LINK>
    <NODE componentmode="InABox" id="68" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1005" top="180" type="Node" width="100">
    </BOUNDS>
@@ -270,8 +256,6 @@
    </NODE>
    <LINK dstnodeid="46" dstpinname="Vertex Buffer" srcnodeid="72" srcpinname="Vertex Buffer">
    </LINK>
-   <LINK dstnodeid="70" dstpinname="Normal XYZ" srcnodeid="46" srcpinname="Normal XYZ">
-   </LINK>
    <NODE componentmode="InABox" id="45" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="4305" top="4575" type="Node" width="975">
    </BOUNDS>
@@ -420,11 +404,11 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="46" srcpinname="Position XYZ" dstnodeid="85" dstpinname="XYZ">
+   <LINK dstnodeid="85" dstpinname="XYZ" srcnodeid="46" srcpinname="Position XYZ">
    </LINK>
-   <LINK srcnodeid="85" srcpinname="X" dstnodeid="60" dstpinname="Input">
+   <LINK dstnodeid="60" dstpinname="Input" srcnodeid="85" srcpinname="X">
    </LINK>
-   <LINK srcnodeid="85" srcpinname="Y" dstnodeid="59" dstpinname="Input">
+   <LINK dstnodeid="59" dstpinname="Input" srcnodeid="85" srcpinname="Y">
    </LINK>
    <NODE componentmode="InABox" id="89" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="540" top="4110" type="Node" width="100">
@@ -474,18 +458,26 @@
    <PIN pinname="Digits" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Source Minimum">
+   <LINK dstnodeid="60" dstpinname="Source Minimum" srcnodeid="89" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Source Maximum">
+   <LINK dstnodeid="60" dstpinname="Source Maximum" srcnodeid="88" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Source Minimum">
+   <LINK dstnodeid="59" dstpinname="Source Minimum" srcnodeid="87" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="86" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Source Maximum">
+   <LINK dstnodeid="59" dstpinname="Source Maximum" srcnodeid="86" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="69" dstpinname="X">
+   <LINK dstnodeid="69" dstpinname="X" srcnodeid="43" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="69" dstpinname="Y">
+   <LINK dstnodeid="69" dstpinname="Y" srcnodeid="54" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="69" dstpinname="Z">
+   <LINK dstnodeid="69" dstpinname="Z" srcnodeid="62" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="90" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
+   <BOUNDS height="270" left="1230" top="7695" type="Node" width="1455">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="71" dstpinname="Vertex Buffer" srcnodeid="90" srcpinname="Vertex Buffer">
+   </LINK>
+   <LINK dstnodeid="90" dstpinname="Position XYZ" srcnodeid="69" srcpinname="XYZ">
    </LINK>
    </PATCH>
