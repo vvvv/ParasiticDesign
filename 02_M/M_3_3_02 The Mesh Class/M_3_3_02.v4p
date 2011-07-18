@@ -316,38 +316,6 @@
    </NODE>
    <LINK dstnodeid="241" dstpinname="Ambient Color" srcnodeid="272" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Light (EX9 Direction).v4p" id="274" nodename="Light (EX9 Direction)" systemname="Light (EX9 Direction)">
-   <BOUNDS height="100" left="1605" top="5025" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Light Direction Out" visible="1">
-   </PIN>
-   <PIN pinname="Yaw" slicecount="1" values="-0.100000000000003">
-   </PIN>
-   <PIN pinname="Pitch" slicecount="1" values="-0.329999999999999">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Distance" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Scale" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="275" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="100" left="1305" top="5700" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="275" dstpinname="Layer 1" srcnodeid="241" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="275" dstpinname="Layer 2" srcnodeid="274" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="242" dstpinname="Layers" srcnodeid="275" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="InABox" id="276" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1020" top="3090" type="Node" width="100">
    </BOUNDS>
@@ -395,7 +363,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2625" top="5385" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -423,7 +391,7 @@
    <NODE componentmode="Hidden" filename="myMesh.v4p" id="292" nodename="myMesh.v4p" systemname="myMesh" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\">
    <BOUNDS height="270" left="1395" top="2325" type="Node" width="2940">
    </BOUNDS>
-   <BOUNDS height="11535" left="5805" top="180" type="Window" width="7665">
+   <BOUNDS height="10515" left="13590" top="690" type="Window" width="7365">
    </BOUNDS>
    <PIN pinname="u Count" slicecount="1" visible="1" values="100">
    </PIN>
@@ -455,5 +423,7 @@
    <LINK dstnodeid="241" dstpinname="Mesh" srcnodeid="292" srcpinname="Mesh">
    </LINK>
    <LINK dstnodeid="242" dstpinname="View Transform" srcnodeid="290" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="241" srcpinname="Layer" dstnodeid="242" dstpinname="Layers">
    </LINK>
    </PATCH>
