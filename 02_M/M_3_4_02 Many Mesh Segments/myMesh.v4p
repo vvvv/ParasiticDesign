@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Net Cuttings\myMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
-   <BOUNDS height="11640" left="10605" top="2640" type="Window" width="6795">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_02 Many Mesh Segments\myMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
+   <BOUNDS height="11640" left="17520" top="1755" type="Window" width="6795">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="" id="73" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <BOUNDS height="270" left="1380" top="1770" type="Node" width="555">
@@ -117,7 +117,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2220" top="195" type="Box" width="675">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -133,7 +133,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="4560" top="210" type="Box" width="750">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -167,7 +167,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2970" top="195" type="Box" width="675">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -183,7 +183,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="3720" top="195" type="Box" width="750">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -496,38 +496,10 @@
    </LINK>
    <LINK dstnodeid="100" dstpinname="Select" srcnodeid="101" srcpinname="Output">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="102">
-   <BOUNDS type="Node" left="240" top="4140" width="100" height="100">
+   <NODE componentmode="InABox" id="102" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="240" top="4140" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="240" top="4140" width="450" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Source Minimum">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="103">
-   <BOUNDS type="Node" left="735" top="4140" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="735" top="4140" width="450" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="103" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Source Maximum">
-   </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="105">
-   <BOUNDS type="Node" left="2520" top="4140" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2520" top="4140" width="450" height="240">
+   <BOUNDS height="240" left="240" top="4140" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
    </PIN>
@@ -536,10 +508,12 @@
    <PIN pinname="Digits" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="104">
-   <BOUNDS type="Node" left="3015" top="4140" width="100" height="100">
+   <LINK dstnodeid="91" dstpinname="Source Minimum" srcnodeid="102" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="103" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="735" top="4140" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3015" top="4140" width="450" height="240">
+   <BOUNDS height="240" left="735" top="4140" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
@@ -548,8 +522,34 @@
    <PIN pinname="Digits" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="105" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Source Minimum">
+   <LINK dstnodeid="91" dstpinname="Source Maximum" srcnodeid="103" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="104" srcpinname="Y Output Value" dstnodeid="93" dstpinname="Source Maximum">
+   <NODE componentmode="InABox" id="105" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="2520" top="4140" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2520" top="4140" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Digits" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="104" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3015" top="4140" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3015" top="4140" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Digits" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="93" dstpinname="Source Minimum" srcnodeid="105" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="93" dstpinname="Source Maximum" srcnodeid="104" srcpinname="Y Output Value">
    </LINK>
    </PATCH>
