@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_3_01 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_2_3_01 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="5085" left="9840" top="3525" type="Window" width="9015">
    </BOUNDS>
    <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
@@ -25,13 +25,15 @@
    </PIN>
    <PIN pinname="Maximum" visible="1">
    </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="13" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
    <BOUNDS height="270" left="1035" top="885" type="Node" width="6195">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="|I C 1 &lt;NUMPAD1&gt; 2&lt;NUMPAD2&gt;7&lt;NUMPAD7&gt;8&lt;NUMPAD8&gt;&lt;LEFT&gt;&lt;RIGHT&gt;|">
+   <PIN pinname="Key Match" slicecount="1" values="|I C 1 &lt;NUMPAD1&gt; 2&lt;NUMPAD2&gt;7&lt;NUMPAD7&gt;8&lt;NUMPAD8&gt;&lt;LEFT&gt;&lt;RIGHT&gt;|" encoded="0">
    </PIN>
    <PIN pinname="1 Output" visible="1">
    </PIN>
@@ -159,7 +161,7 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Info Signal ON|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Info Signal ON|" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -169,7 +171,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Frequency">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Frequency" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="16" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
@@ -181,7 +183,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Phi">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Phi" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="0" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Inverse Output">
@@ -301,7 +303,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="modFrequency">
+   <PIN pinname="Descriptive Name" slicecount="1" values="modFrequency" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="38" dstpinname="Y Input Value" srcnodeid="37" srcpinname="Output">
@@ -333,7 +335,7 @@
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Carrier Signal ON|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Carrier Signal ON|" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="41" dstpinname="Y Input Value" srcnodeid="39" srcpinname="Inverse Output">
@@ -374,28 +376,28 @@
    </LINK>
    <LINK dstnodeid="17" dstpinname="Y Input Value" srcnodeid="42" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="14" dstpinname="Down">
+   <LINK dstnodeid="14" dstpinname="Down" srcnodeid="12" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="14" dstpinname="Up">
+   <LINK dstnodeid="14" dstpinname="Up" srcnodeid="11" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="37" dstpinname="Down">
+   <LINK dstnodeid="37" dstpinname="Down" srcnodeid="32" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="37" dstpinname="Up">
+   <LINK dstnodeid="37" dstpinname="Up" srcnodeid="31" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="&lt;LEFT&gt; Output" dstnodeid="10" dstpinname="Down">
+   <LINK dstnodeid="10" dstpinname="Down" srcnodeid="13" srcpinname="&lt;LEFT&gt; Output">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="&lt;RIGHT&gt; Output" dstnodeid="10" dstpinname="Up">
+   <LINK dstnodeid="10" dstpinname="Up" srcnodeid="13" srcpinname="&lt;RIGHT&gt; Output">
    </LINK>
-   <NODE id="40" componentmode="Hidden" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <NODE componentmode="Hidden" id="40" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <PIN pinname="Input" visible="1">
    </PIN>
-   <BOUNDS type="Node" height="100" left="1065" top="1365" width="100">
+   <BOUNDS height="100" left="1065" top="1365" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="C Output" dstnodeid="40" dstpinname="Input">
+   <LINK dstnodeid="40" dstpinname="Input" srcnodeid="13" srcpinname="C Output">
    </LINK>
-   <LINK srcnodeid="40" srcpinname="Up Edge" dstnodeid="39" dstpinname="Input">
+   <LINK dstnodeid="39" dstpinname="Input" srcnodeid="40" srcpinname="Up Edge">
    </LINK>
    </PATCH>
