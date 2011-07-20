@@ -1,15 +1,15 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\M_2_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
-   <BOUNDS height="6975" left="3105" top="0" type="Window" width="5565">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\M_2_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
+   <BOUNDS height="6975" left="525" top="330" type="Window" width="5565">
    </BOUNDS>
+   <LINK dstnodeid="548" dstpinname="XYZ" srcnodeid="568" srcpinname="XYZ">
+   </LINK>
    <NODE componentmode="InAWindow" id="37" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="100" left="750" top="5835" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="750" top="5835" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="9480" left="8655" top="0" type="Window" width="11220">
-   </BOUNDS>
-   <PIN pinname="Layers" slicecount="1" visible="1" values="||">
+   <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
@@ -23,6 +23,8 @@
    </PIN>
    <PIN pinname="View Transform" slicecount="1" visible="1" values="||">
    </PIN>
+   <BOUNDS height="11010" left="6135" top="360" type="Window" width="10740">
+   </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="67" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
    <BOUNDS height="100" left="2715" top="5835" type="Node" width="100">
@@ -33,9 +35,9 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Alignment" slicecount="1" visible="1" values="FitWidth">
+   <PIN pinname="Alignment" slicecount="1" visible="1" values="FitIn">
    </PIN>
-   <PIN pinname="Uniform Scale" visible="1">
+   <PIN pinname="Uniform Scale" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="37" dstpinname="Aspect Ratio Transform" srcnodeid="67" srcpinname="Transform Out">
@@ -44,24 +46,12 @@
    </LINK>
    <LINK dstnodeid="67" dstpinname="Aspect Height" srcnodeid="37" srcpinname="Actual Backbuffer Height">
    </LINK>
-   <NODE componentmode="InABox" id="330" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2685" top="5370" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2685" top="5370" type="Box" width="795">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.6">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="67" dstpinname="Uniform Scale" srcnodeid="330" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="339" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="240" top="420" type="Node" width="840">
    </BOUNDS>
    <BOUNDS height="315" left="240" top="420" type="Box" width="5400">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|draw lissajous figures with all points connected|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|draw lissajous figures with all points connected|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -75,7 +65,7 @@
    </BOUNDS>
    <BOUNDS height="435" left="240" top="60" type="Box" width="7215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Rendering of Lissajous Figures|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Rendering of Lissajous Figures|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -89,9 +79,9 @@
    </BOUNDS>
    <BOUNDS height="240" left="2475" top="3810" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="150">
-   </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="300">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="358" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -99,7 +89,7 @@
    </BOUNDS>
    <BOUNDS height="285" left="2970" top="3810" type="Box" width="1305">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; pointCount|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; pointCount|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -107,7 +97,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="413" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;1/2: &tab;&tab;&tab;frequency x -/+&cr;&lf;3/4: &tab;&tab;&tab;frequency y -/+&cr;&lf;arrow left/right: &tab;&tab;phi x -/+&cr;&lf;7/8:&tab;&tab;&tab;modulation frequency x -/+&cr;&lf;9/0:&tab;&tab;&tab;modulation frequency y -/+&cr;&lf;ctrl+2:&tab; &tab;&tab;save png&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;1/2: &tab;&tab;&tab;frequency x -/+&cr;&lf;3/4: &tab;&tab;&tab;frequency y -/+&cr;&lf;arrow left/right: &tab;&tab;phi x -/+&cr;&lf;7/8:&tab;&tab;&tab;modulation frequency x -/+&cr;&lf;9/0:&tab;&tab;&tab;modulation frequency y -/+&cr;&lf;ctrl+2:&tab; &tab;&tab;save png&cr;&lf;|">
    </PIN>
    <BOUNDS height="1605" left="225" top="750" type="Box" width="4575">
    </BOUNDS>
@@ -121,7 +111,7 @@
    </PIN>
    <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
    <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
    </PIN>
@@ -144,10 +134,8 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="DrawLissajous.v4p" id="548" nodename="DrawLissajous.v4p" systemname="DrawLissajous" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\">
+   <NODE componentmode="Hidden" filename="DrawLissajous.v4p" id="548" nodename="DrawLissajous.v4p" systemname="DrawLissajous">
    <BOUNDS height="100" left="765" top="5385" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="8265" left="3885" top="840" type="Window" width="8370">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -161,10 +149,14 @@
    </PIN>
    <PIN pinname="Line Weight" visible="1">
    </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <BOUNDS height="8850" left="660" top="8430" type="Window" width="8370">
+   </BOUNDS>
    </NODE>
    <LINK dstnodeid="37" dstpinname="Layers" srcnodeid="548" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="553" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="553" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="780" top="2610" type="Node" width="1560">
    </BOUNDS>
    <BOUNDS height="5130" left="4215" top="6135" type="Window" width="12210">
@@ -222,10 +214,8 @@
    </NODE>
    <LINK dstnodeid="558" dstpinname="Y Input Value" srcnodeid="553" srcpinname="Frequency Y">
    </LINK>
-   <NODE componentmode="Hidden" filename="CalculateLissajous.v4p" id="568" nodename="CalculateLissajous.v4p" systemname="CalculateLissajous" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\">
+   <NODE componentmode="Hidden" filename="CalculateLissajous.v4p" id="568" nodename="CalculateLissajous.v4p" systemname="CalculateLissajous">
    <BOUNDS height="270" left="780" top="4515" type="Node" width="1935">
-   </BOUNDS>
-   <BOUNDS height="6870" left="14070" top="495" type="Window" width="13575">
    </BOUNDS>
    <PIN pinname="Frequency X" visible="1">
    </PIN>
@@ -241,6 +231,10 @@
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
+   <BOUNDS height="6945" left="11475" top="8400" type="Window" width="7860">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="568" dstpinname="Frequency X" srcnodeid="553" srcpinname="Frequency X">
    </LINK>
@@ -254,48 +248,54 @@
    </LINK>
    <LINK dstnodeid="568" dstpinname="Point Count" hiddenwhenlocked="1" srcnodeid="370" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="548" dstpinname="XYZ" srcnodeid="568" srcpinname="XYZ">
-   </LINK>
    <NODE componentmode="InABox" id="569" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    <BOUNDS height="100" left="1245" top="4920" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1245" top="4920" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   <PIN pinname="Digits" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.496078431372549">
    </PIN>
    </NODE>
    <LINK dstnodeid="548" dstpinname="Line Alpha" srcnodeid="569" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="570" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1725" top="4935" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="1725" top="4935" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1.01">
-   </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Digits" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS height="100" left="1725" top="4920" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1725" top="4920" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="Digits" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.25">
    </PIN>
    </NODE>
    <LINK dstnodeid="548" dstpinname="Connection Radius" srcnodeid="570" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="571" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="780" top="4905" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="780" top="4905" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Digits" slicecount="1" values="1">
+   <PIN pinname="Digits" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS height="100" left="780" top="4920" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="780" top="4920" type="Box" width="450">
+   </BOUNDS>
+   <PIN pinname="BaseSubType" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK dstnodeid="548" dstpinname="Line Weight" srcnodeid="571" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="548" dstpinname="XY" srcnodeid="568" srcpinname="XY">
    </LINK>
    </PATCH>
