@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_2_04 A Third Coordinate System\M_3_2_04.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_3_2_04 A Third Coordinate System\M_3_2_04.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="14325" left="1710" top="1170" type="Window" width="7710">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="285" left="60" top="510" type="Box" width="5955">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|draws a mesh using u-v-coordinates. change u and v ranges using different keys|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|draws a mesh using u-v-coordinates. change u and v ranges using different keys|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -21,7 +21,7 @@
    </BOUNDS>
    <BOUNDS height="495" left="60" top="150" type="Box" width="5865">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|A Third Coordinate System|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|A Third Coordinate System|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -31,7 +31,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="18" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|MOUSE&cr;&lf;click + drag:&tab;&tab;rotate&cr;&lf;|">
+   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|MOUSE&cr;&lf;click + drag:&tab;&tab;rotate&cr;&lf;|" encoded="0">
    </PIN>
    <BOUNDS height="540" left="120" top="765" type="Box" width="2715">
    </BOUNDS>
@@ -45,7 +45,7 @@
    </PIN>
    <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||" encoded="0">
    </PIN>
    <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
    </PIN>
@@ -111,7 +111,7 @@
    </PIN>
    <PIN pinname="Position XYZ" visible="1">
    </PIN>
-   <PIN pinname="Normal XYZ" visible="1" slicecount="2700" values="0,0,0">
+   <PIN pinname="Normal XYZ" slicecount="2700" visible="1" values="0,0,0">
    </PIN>
    </NODE>
    <LINK dstnodeid="38" dstpinname="Vertex Buffer" srcnodeid="39" srcpinname="Vertex Buffer">
@@ -179,10 +179,6 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="53" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
-   <BOUNDS height="100" left="765" top="10350" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="465" left="765" top="10350" type="Box" width="885">
-   </BOUNDS>
    <PIN pinname="Input Enum" slicecount="2" values="Solid,WireFrame">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
@@ -191,14 +187,18 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
+   <BOUNDS height="100" left="450" top="10350" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="450" left="450" top="10350" type="Box" width="1035">
+   </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="56" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
-   <BOUNDS height="100" left="435" top="10860" type="Node" width="100">
-   </BOUNDS>
    <PIN pinname="Fill Mode" visible="1">
    </PIN>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
+   <BOUNDS height="100" left="120" top="10860" type="Node" width="100">
+   </BOUNDS>
    </NODE>
    <LINK dstnodeid="56" dstpinname="Fill Mode" srcnodeid="53" srcpinname="Output Enum">
    </LINK>
@@ -244,7 +244,7 @@
    </LINK>
    <LINK dstnodeid="60" dstpinname="Render State" srcnodeid="56" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="InAWindow" filename="ViewTransform.v4p" id="110" nodename="ViewTransform.v4p" systemname="ViewTransform">
+   <NODE componentmode="InAWindow" filename="ViewTransform.v4p" id="110" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Users\joreg\work\ParasiticDesign\02_M\M_3_2_04 A Third Coordinate System\">
    <BOUNDS height="100" left="2670" top="12360" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="10065" left="1785" top="2400" type="Window" width="8025">
@@ -261,7 +261,7 @@
    </BOUNDS>
    <BOUNDS height="270" left="2055" top="2355" type="Box" width="930">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; v count|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; v count|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -273,7 +273,7 @@
    </BOUNDS>
    <BOUNDS height="270" left="90" top="2340" type="Box" width="945">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|u count &gt;&gt;|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|u count &gt;&gt;|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -305,7 +305,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Variable Names" slicecount="1" values="|U, V|">
+   <PIN pinname="Variable Names" slicecount="1" values="|U, V|" encoded="0">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -321,7 +321,7 @@
    </BOUNDS>
    <BOUNDS height="270" left="3255" top="8130" type="Box" width="1935">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="(-1)*cos(u)*cos(v)">
+   <PIN pinname="Input String" slicecount="1" values="(-1)*cos(u)*cos(v)" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -401,7 +401,7 @@
    </BOUNDS>
    <BOUNDS height="285" left="465" top="5700" type="Box" width="585">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|uMin ^|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|uMin ^|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <BOUNDS height="255" left="1110" top="5700" type="Box" width="630">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|uMax ^|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|uMax ^|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -421,7 +421,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="136" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS &cr;&lf;1/2:&tab;&tab;&tab;uMin -/+&cr;&lf;3/4:&tab;&tab;&tab;uMax -/+&cr;&lf;5/6:&tab;&tab;&tab;vMin -/+&cr;&lf;7/8:&tab;&tab;&tab;vMax -/+&cr;&lf;arrow left/right:&tab;&tab;uMin, uMax -/+ &cr;&lf;arrow down/up:&tab;&tab;vMin, vMax -/+ |">
+   <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS &cr;&lf;1/2:&tab;&tab;&tab;uMin -/+&cr;&lf;3/4:&tab;&tab;&tab;uMax -/+&cr;&lf;5/6:&tab;&tab;&tab;vMin -/+&cr;&lf;7/8:&tab;&tab;&tab;vMax -/+&cr;&lf;arrow left/right:&tab;&tab;uMin, uMax -/+ &cr;&lf;arrow down/up:&tab;&tab;vMin, vMax -/+ |" encoded="0">
    </PIN>
    <BOUNDS height="1560" left="2865" top="780" type="Box" width="3480">
    </BOUNDS>
@@ -435,7 +435,7 @@
    </PIN>
    <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||" encoded="0">
    </PIN>
    <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
    </PIN>
@@ -467,7 +467,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Variable Names" slicecount="1" values="|U, V|">
+   <PIN pinname="Variable Names" slicecount="1" values="|U, V|" encoded="0">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -487,7 +487,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="2025" top="7470" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="(-1)*sin(u)*v">
+   <PIN pinname="Input String" slicecount="1" values="(-1)*sin(u)*v" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -603,7 +603,7 @@
    </BOUNDS>
    <BOUNDS height="285" left="2850" top="5670" type="Box" width="585">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|vMin ^|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|vMin ^|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -615,7 +615,7 @@
    </BOUNDS>
    <BOUNDS height="255" left="3510" top="5670" type="Box" width="630">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|vMax ^|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|vMax ^|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -643,14 +643,14 @@
    </BOUNDS>
    <BOUNDS height="270" left="2790" top="11955" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; zoom|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; zoom|" encoded="0">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="199" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="199" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\joreg\work\ParasiticDesign\02_M\M_3_2_04 A Third Coordinate System\">
    <BOUNDS height="100" left="4755" top="2445" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="4995" left="10830" top="7890" type="Window" width="8580">
@@ -670,20 +670,20 @@
    </NODE>
    <LINK dstnodeid="17" dstpinname="Projection Transform" srcnodeid="205" srcpinname="Transform Out">
    </LINK>
-   <LINK srcnodeid="37" srcpinname="Indices" dstnodeid="38" dstpinname="Indices">
+   <LINK dstnodeid="38" dstpinname="Indices" srcnodeid="37" srcpinname="Indices">
    </LINK>
-   <NODE id="36" componentmode="Hidden" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
+   <NODE componentmode="Hidden" id="36" nodename="VertexBuffer (EX9.Geometry Split)" systemname="VertexBuffer (EX9.Geometry Split)">
    <PIN pinname="Vertex Buffer" visible="1">
    </PIN>
    <PIN pinname="Normal XYZ" visible="1">
    </PIN>
-   <BOUNDS type="Node" height="100" left="870" top="3705" width="100">
+   <BOUNDS height="100" left="870" top="3705" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Position XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="37" srcpinname="Vertex Buffer" dstnodeid="36" dstpinname="Vertex Buffer">
+   <LINK dstnodeid="36" dstpinname="Vertex Buffer" srcnodeid="37" srcpinname="Vertex Buffer">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Normal XYZ" dstnodeid="39" dstpinname="Normal XYZ">
+   <LINK dstnodeid="39" dstpinname="Normal XYZ" srcnodeid="36" srcpinname="Normal XYZ">
    </LINK>
    </PATCH>
