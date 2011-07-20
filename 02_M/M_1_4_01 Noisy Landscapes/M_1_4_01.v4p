@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\M_1_4_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.4.v4p" systemname="M.1.4">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\M_1_4_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.4.v4p" systemname="M.1.4">
    <BOUNDS height="12540" left="0" top="0" type="Window" width="15795">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="353" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
@@ -154,7 +154,7 @@
    </NODE>
    <LINK dstnodeid="451" dstpinname="Render State" srcnodeid="453" srcpinname="Render State Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="657" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="657" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\">
    <BOUNDS height="270" left="4845" top="3570" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="KeyboardInput" visible="1">
@@ -210,7 +210,7 @@
    <PIN pinname="Left Button" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\NoisedGrid.v4p" id="833" nodename="%VVVV%\NoisedGrid.v4p" systemname="NoisedGrid">
+   <NODE componentmode="Hidden" filename="%VVVV%\NoisedGrid.v4p" id="833" nodename="%VVVV%\NoisedGrid.v4p" systemname="NoisedGrid" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\">
    <PIN pinname="Persistence" visible="1">
    </PIN>
    <PIN pinname="Octaves" visible="1">
@@ -434,16 +434,18 @@
    </LINK>
    <LINK dstnodeid="353" dstpinname="Projection Transform" srcnodeid="958" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="974" nodename="ViewTransform.v4p" systemname="ViewTransform">
+   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="974" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\">
    <BOUNDS height="100" left="9720" top="5265" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="12840" left="7770" top="3120" type="Window" width="10350">
+   <BOUNDS height="12840" left="11730" top="6480" type="Window" width="10350">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="MouseXYZ">
    </PIN>
    <PIN pinname="MouseXY" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="974" dstpinname="Right Mouse Button" srcnodeid="463" srcpinname="Right Button">
@@ -475,5 +477,21 @@
    <LINK dstnodeid="833" dstpinname="MouseXY" srcnodeid="838" srcpinname="XY">
    </LINK>
    <LINK dstnodeid="974" dstpinname="MouseXY" srcnodeid="838" srcpinname="XY">
+   </LINK>
+   <NODE componentmode="Hidden" id="975" nodename="Translate (Transform)" systemname="Translate (Transform)">
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="9735" top="4635" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="975" srcpinname="Transform Out" dstnodeid="974" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="657" srcpinname="Z Translate" dstnodeid="975" dstpinname="Z">
    </LINK>
    </PATCH>
