@@ -571,14 +571,14 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
    <BOUNDS height="100" left="5910" top="7440" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="495" left="5910" top="7440" type="Box" width="450">
    </BOUNDS>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="622" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Digits" slicecount="1" values="2">
@@ -672,7 +672,7 @@
    <LINKPOINT x="855" y="4815">
    </LINKPOINT>
    </LINK>
-   <LINK dstnodeid="626" dstpinname="Y Input Value" srcnodeid="588" srcpinname="Y Output Value" hiddenwhenlocked="1">
+   <LINK dstnodeid="626" dstpinname="Y Input Value" hiddenwhenlocked="1" srcnodeid="588" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="624" dstpinname="Red" srcnodeid="626" srcpinname="Y Output Value">
    </LINK>
@@ -795,8 +795,6 @@
    <LINK dstnodeid="772" dstpinname="Input 2" srcnodeid="773" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="767" dstpinname="XYZ" srcnodeid="772" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="700" dstpinname="Layer 4" srcnodeid="765" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="884" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; eraser|">
@@ -1027,13 +1025,13 @@
    </PIN>
    <PIN pinname="Shift ON" visible="1">
    </PIN>
-   <BOUNDS height="12555" left="6840" top="3525" type="Window" width="14190">
-   </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    <BOUNDS height="270" left="2490" top="9615" type="Node" width="990">
+   </BOUNDS>
+   <BOUNDS height="15075" left="4425" top="1395" type="Window" width="14115">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="751" dstpinname="Eraser Radius" hiddenwhenlocked="1" srcnodeid="584" srcpinname="X Output Value">
@@ -1126,7 +1124,7 @@
    <BOUNDS height="100" left="300" top="13050" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="909" dstpinname="Mouse XYZ" srcnodeid="901" srcpinname="XYZ" hiddenwhenlocked="0">
+   <LINK dstnodeid="909" dstpinname="Mouse XYZ" hiddenwhenlocked="0" srcnodeid="901" srcpinname="XYZ">
    </LINK>
    <LINK dstnodeid="909" dstpinname="Color" hiddenwhenlocked="1" srcnodeid="624" srcpinname="Output">
    </LINK>
@@ -1188,9 +1186,9 @@
    </LINK>
    <LINK dstnodeid="913" dstpinname="Default Directory" srcnodeid="915" srcpinname="Output String">
    </LINK>
-   <LINK dstnodeid="914" dstpinname="Import" srcnodeid="901" srcpinname="I ON" hiddenwhenlocked="1">
+   <LINK dstnodeid="914" dstpinname="Import" hiddenwhenlocked="1" srcnodeid="901" srcpinname="I ON">
    </LINK>
-   <LINK dstnodeid="913" dstpinname="Export" srcnodeid="901" srcpinname="E On" hiddenwhenlocked="1">
+   <LINK dstnodeid="913" dstpinname="Export" hiddenwhenlocked="1" srcnodeid="901" srcpinname="E On">
    </LINK>
    <LINK dstnodeid="914" dstpinname="Read" srcnodeid="886" srcpinname="Y Output Value">
    </LINK>
@@ -1198,10 +1196,10 @@
    </LINK>
    <LINK dstnodeid="751" dstpinname="Input" srcnodeid="914" srcpinname="XYZ">
    </LINK>
-   <LINK srcnodeid="909" srcpinname="Layer" dstnodeid="700" dstpinname="Layer 1">
+   <LINK dstnodeid="700" dstpinname="Layer 1" srcnodeid="909" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="548" srcpinname="Layer" dstnodeid="700" dstpinname="Layer 2">
+   <LINK dstnodeid="700" dstpinname="Layer 2" srcnodeid="548" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="765" srcpinname="Layer" dstnodeid="700" dstpinname="Layer 3">
+   <LINK dstnodeid="700" dstpinname="Layer 3" srcnodeid="765" srcpinname="Layer">
    </LINK>
    </PATCH>
