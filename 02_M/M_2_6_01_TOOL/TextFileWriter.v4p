@@ -1,15 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\TextFileWriter.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\TextFileWriter.v4p" systemname="TextFileWriter">
-   <BOUNDS height="11895" left="1950" top="2580" type="Window" width="10230">
+   <BOUNDS height="10650" left="2010" top="3825" type="Window" width="10230">
    </BOUNDS>
    <NODE componentmode="Hidden" id="37" nodename="Writer (File)" systemname="Writer (File)">
    <BOUNDS height="270" left="1680" top="8910" type="Node" width="1020">
    </BOUNDS>
-   <PIN pinname="Filename" visible="1">
-   </PIN>
    <PIN pinname="Write" visible="1">
    </PIN>
    <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="36" nodename="Add (String Spectral)" systemname="Add (String Spectral)">
@@ -19,7 +19,7 @@
    </PIN>
    <PIN pinname="Intersperse" visible="1">
    </PIN>
-   <PIN pinname="Intersperse String" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Intersperse String" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -39,51 +39,49 @@
    <LINK dstnodeid="36" dstpinname="Intersperse" srcnodeid="34" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="33" nodename="Add (String)" systemname="Add (String)">
-   <BOUNDS height="100" left="2625" top="6975" type="Node" width="100">
-   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
+   <BOUNDS height="100" left="2895" top="6960" type="Node" width="100">
+   </BOUNDS>
    </NODE>
    <NODE componentmode="InABox" id="32" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="3450" top="6540" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="3450" top="6540" type="Box" width="345">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values=".txt" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values=".txt">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
+   <BOUNDS height="100" left="3720" top="6525" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3720" top="6525" type="Box" width="345">
+   </BOUNDS>
    </NODE>
-   <LINK dstnodeid="33" dstpinname="Input 2" srcnodeid="32" srcpinname="Output String">
-   </LINK>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="4725" top="765" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="495" left="4725" top="765" type="Box" width="5625">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|C:\Documents and Settings\Roman\Desktop\ParasiticDesign\|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="|C:\Documents and Settings\Roman\Desktop\ParasiticDesign\|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
+   <BOUNDS height="100" left="3315" top="750" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="420" left="3315" top="750" type="Box" width="900">
+   </BOUNDS>
    </NODE>
    <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="3465" top="6150" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="3465" top="6150" type="Box" width="345">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="1" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
+   <BOUNDS height="100" left="3735" top="6135" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="3735" top="6135" type="Box" width="345">
+   </BOUNDS>
    </NODE>
-   <LINK dstnodeid="33" dstpinname="Input 1" srcnodeid="30" srcpinname="Output String">
-   </LINK>
-   <LINK dstnodeid="37" dstpinname="Filename" srcnodeid="33" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="29" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
    <BOUNDS height="100" left="1680" top="4620" type="Node" width="100">
    </BOUNDS>
@@ -194,18 +192,6 @@
    </LINK>
    <LINK dstnodeid="23" dstpinname="Filename" srcnodeid="9" srcpinname="Path">
    </LINK>
-   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2025" top="8625" type="Node" width="2205">
-   </BOUNDS>
-   <BOUNDS height="270" left="2025" top="8625" type="Box" width="2205">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|does not spilt correctly!!! &gt;&gt;|" encoded="0">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="39" nodename="MapRange (Value)" systemname="MapRange (Value)">
    <BOUNDS height="100" left="5145" top="6510" type="Node" width="100">
    </BOUNDS>
@@ -283,7 +269,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="XYZ" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYZ">
    </PIN>
    </NODE>
    <LINK dstnodeid="44" dstpinname="Y Input Value" srcnodeid="43" srcpinname="XYZ">
@@ -297,7 +283,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Positions" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Positions">
    </PIN>
    </NODE>
    <LINK dstnodeid="26" dstpinname="Input" srcnodeid="45" srcpinname="Y Output Value">
@@ -319,7 +305,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Import" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Import">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -341,9 +327,9 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Bang">
    </PIN>
-   <PIN pinname="Y Output Value" visible="1">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Export">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Export" encoded="0">
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="37" dstpinname="Write" srcnodeid="47" srcpinname="Y Output Value">
@@ -395,7 +381,7 @@
    </PIN>
    <PIN pinname="Intersperse" visible="1">
    </PIN>
-   <PIN pinname="Intersperse String" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Intersperse String" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -454,47 +440,7 @@
    </LINK>
    <LINK dstnodeid="39" dstpinname="Input" srcnodeid="54" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="55" nodename="Change (String)" systemname="Change (String)">
-   <BOUNDS height="100" left="7020" top="2655" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="OnChange" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="55" dstpinname="Input" srcnodeid="9" srcpinname="Path">
-   </LINK>
-   <NODE componentmode="Hidden" id="59" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="7260" top="3030" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="59" dstpinname="Input" srcnodeid="55" srcpinname="OnChange">
-   </LINK>
-   <NODE componentmode="InABox" id="60" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="7455" top="4125" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="480" left="7455" top="4125" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Show Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Slider" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="60" dstpinname="Y Input Value" srcnodeid="59" srcpinname="Up Edge">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="62" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="62" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
@@ -509,15 +455,41 @@
    </PIN>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Node" left="8280" top="195" width="0" height="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Read">
+   </PIN>
+   <BOUNDS height="0" left="6780" top="60" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8280" top="195" width="480" height="480">
+   <BOUNDS height="480" left="6780" top="60" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Read" encoded="0">
+   </NODE>
+   <LINK dstnodeid="23" dstpinname="Read" srcnodeid="62" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Do Open" srcnodeid="46" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Dialogs.dll" id="63" nodename="OpenFileDialog (File)" systemname="OpenFileDialog (File)">
+   <PIN pinname="Do Open" visible="1">
+   </PIN>
+   <PIN pinname="Default Directory" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="2595" top="2250" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Path" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Read">
+   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Do Open">
    </LINK>
-   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="9" dstpinname="Do Open">
+   <LINK srcnodeid="31" srcpinname="Output String" dstnodeid="63" dstpinname="Default Directory">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="33" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output String" dstnodeid="33" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Path" dstnodeid="33" dstpinname="Input 1" linkstyle="VHV">
+   <LINKPOINT x="2700" y="4660">
+   </LINKPOINT>
+   <LINKPOINT x="2670" y="4655">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Path" dstnodeid="37" dstpinname="Filename">
    </LINK>
    </PATCH>
