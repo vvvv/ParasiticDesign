@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_2_03 A Second Coordinate System\M_3_2_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\02_M\M_3_2_03 A Second Coordinate System\M_3_2_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="12600" left="5895" top="360" type="Window" width="6900">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -239,13 +239,9 @@
    <NODE componentmode="InAWindow" id="17" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
    </PIN>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -257,47 +253,15 @@
    </BOUNDS>
    <PIN pinname="View Transform" visible="1">
    </PIN>
-   <BOUNDS height="9480" left="12765" top="375" type="Window" width="10860">
+   <BOUNDS height="9600" left="12765" top="375" type="Window" width="10860">
    </BOUNDS>
-   </NODE>
-   <NODE componentmode="Hidden" id="111" nodename="Translate (Transform)" systemname="Translate (Transform)">
-   <BOUNDS height="100" left="1860" top="8070" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="112" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1710" top="7305" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="1710" top="7305" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="111" dstpinname="X" srcnodeid="112" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="113" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1965" top="7665" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="1965" top="7665" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="111" dstpinname="Y" srcnodeid="113" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="119" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="2370" top="1680" type="Node" width="930">
    </BOUNDS>
@@ -511,20 +475,18 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
    <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="60" dstpinname="Mesh" srcnodeid="38" srcpinname="Mesh">
    </LINK>
    <LINK dstnodeid="60" dstpinname="Render State" srcnodeid="56" srcpinname="Render State Out">
    </LINK>
-   <LINK dstnodeid="60" dstpinname="Transform" srcnodeid="111" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="17" dstpinname="Layers" srcnodeid="60" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="52" srcpinname="Color Output" dstnodeid="60" dstpinname="Color">
+   <LINK dstnodeid="60" dstpinname="Color" srcnodeid="52" srcpinname="Color Output">
    </LINK>
    <NODE componentmode="Hidden" id="136" nodename="Perspective (Transform)" systemname="Perspective (Transform)">
    <PIN pinname="FOV">
@@ -534,55 +496,15 @@
    </NODE>
    <LINK dstnodeid="17" dstpinname="Projection Transform" srcnodeid="136" srcpinname="Transform Out">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="137" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="137" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="1" values="0.166666666666667">
    </PIN>
-   <BOUNDS type="Node" left="3810" top="10350" width="0" height="0">
+   <BOUNDS height="0" left="3810" top="10350" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3810" top="10350" width="795" height="240">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="137" srcpinname="Y Output Value" dstnodeid="136" dstpinname="FOV">
-   </LINK>
-   <NODE componentmode="Hidden" id="141" nodename="Translate (Transform)" systemname="Translate (Transform)">
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Z" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="2685" top="10185" type="Node" width="100">
+   <BOUNDS height="240" left="3810" top="10350" type="Box" width="795">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="InABox" id="140" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="2">
-   </PIN>
-   <BOUNDS height="100" left="2535" top="9705" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2535" top="9705" type="Box" width="450">
-   </BOUNDS>
-   </NODE>
-   <NODE componentmode="InABox" id="139" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="2">
-   </PIN>
-   <BOUNDS height="100" left="2775" top="9255" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2775" top="9255" type="Box" width="450">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="141" dstpinname="X" srcnodeid="140" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="141" dstpinname="Y" srcnodeid="139" srcpinname="Y Output Value">
+   <LINK dstnodeid="136" dstpinname="FOV" srcnodeid="137" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="138" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Output Value" visible="1">
@@ -596,16 +518,22 @@
    <PIN pinname="Y Input Value" slicecount="1" values="1.75">
    </PIN>
    </NODE>
-   <LINK dstnodeid="141" dstpinname="Z" srcnodeid="138" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="143" nodename="ViewTransform.v4p" systemname="ViewTransform">
+   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="143" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Users\joreg\work\ParasiticDesign\02_M\M_3_2_03 A Second Coordinate System\">
    <BOUNDS height="10065" left="4290" top="4185" type="Window" width="8025">
    </BOUNDS>
    <BOUNDS height="100" left="2670" top="10740" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="17" dstpinname="View Transform" srcnodeid="143" srcpinname="Transform Out">
    </LINK>
-   <LINK srcnodeid="141" srcpinname="Transform Out" dstnodeid="143" dstpinname="Transform In">
+   <NODE componentmode="Hidden" id="144" nodename="Translate (Transform)" systemname="Translate (Transform)">
+   <BOUNDS height="100" left="2685" top="10185" type="Node" width="100">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="144" dstpinname="Z" srcnodeid="138" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="143" dstpinname="Transform In" srcnodeid="144" srcpinname="Transform Out">
    </LINK>
    </PATCH>
