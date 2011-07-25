@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\multipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
-   <BOUNDS height="13170" left="13590" top="690" type="Window" width="11145">
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\multipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
+   <BOUNDS height="13575" left="675" top="0" type="Window" width="11460">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="" id="73" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <BOUNDS height="270" left="1920" top="1755" type="Node" width="555">
@@ -808,7 +808,7 @@
    </NODE>
    <LINK dstnodeid="279" dstpinname="Input 1" srcnodeid="280" srcpinname="Value Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="MeshDistortion.v4p" id="250" nodename="MeshDistortion.v4p" systemname="MeshDistortion" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\">
+   <NODE componentmode="Hidden" filename="MeshDistortion.v4p" id="250" nodename="MeshDistortion.v4p" systemname="MeshDistortion">
    <PIN pinname="Distorsion" visible="1">
    </PIN>
    <PIN pinname="XYZ" visible="1">
@@ -824,7 +824,7 @@
    </LINK>
    <LINK dstnodeid="226" dstpinname="Input 2" srcnodeid="250" srcpinname="XYZ">
    </LINK>
-   <NODE componentmode="Hidden" filename="Forms.v4p" id="128" nodename="Forms.v4p" systemname="Forms" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\">
+   <NODE componentmode="Hidden" filename="Forms.v4p" id="128" nodename="Forms.v4p" systemname="Forms">
    <BOUNDS height="100" left="3210" top="5550" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
@@ -846,39 +846,39 @@
    </LINK>
    <LINK dstnodeid="102" dstpinname="Term" srcnodeid="128" srcpinname="Z">
    </LINK>
-   <LINK dstnodeid="119" dstpinname="Input 1" srcnodeid="279" srcpinname="Output">
+   <LINK srcnodeid="279" srcpinname="Output" dstnodeid="119" dstpinname="Input 1">
    </LINK>
-   <NODE componentmode="InABox" id="281" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="281" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
-   <BOUNDS height="0" left="6510" top="1515" type="Node" width="0">
+   <BOUNDS type="Node" left="6510" top="1515" width="0" height="0">
    </BOUNDS>
-   <BOUNDS height="240" left="6510" top="1515" type="Box" width="450">
+   <BOUNDS type="Box" left="6510" top="1515" width="450" height="240">
    </BOUNDS>
    <PIN pinname="Digits" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="119" dstpinname="Input 2" srcnodeid="281" srcpinname="Y Output Value">
+   <LINK srcnodeid="281" srcpinname="Y Output Value" dstnodeid="119" dstpinname="Input 2">
    </LINK>
-   <NODE componentmode="Hidden" filename="CountOfFaces.v4p" id="282" nodename="CountOfFaces.v4p" systemname="CountOfFaces" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\">
+   <NODE systemname="CountOfFaces" filename="CountOfFaces.v4p" nodename="CountOfFaces.v4p" componentmode="Hidden" id="282">
    <PIN pinname="U Count" visible="1">
    </PIN>
    <PIN pinname="V Count" visible="1">
    </PIN>
    <PIN pinname="Count Of Faces" visible="1">
    </PIN>
-   <BOUNDS height="100" left="2715" top="8970" type="Node" width="100">
+   <BOUNDS type="Node" left="2715" top="8970" width="100" height="100">
    </BOUNDS>
-   <BOUNDS left="2715" top="8970" type="Box">
+   <BOUNDS type="Box" left="2715" top="8970">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="282" dstpinname="U Count" hiddenwhenlocked="1" srcnodeid="68" srcpinname="Y Output Value">
+   <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="282" dstpinname="U Count" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="282" dstpinname="V Count" hiddenwhenlocked="1" srcnodeid="67" srcpinname="Y Output Value">
+   <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="282" dstpinname="V Count" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="250" dstpinname="Count" srcnodeid="282" srcpinname="Count Of Faces">
+   <LINK srcnodeid="282" srcpinname="Count Of Faces" dstnodeid="250" dstpinname="Count">
    </LINK>
-   <LINK dstnodeid="70" dstpinname="Position XYZ" srcnodeid="226" srcpinname="Output">
+   <LINK srcnodeid="226" srcpinname="Output" dstnodeid="70" dstpinname="Position XYZ">
    </LINK>
    <NODE componentmode="InABox" id="290" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="1" values="0">
@@ -894,7 +894,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="280" dstpinname="Value Input" srcnodeid="290" srcpinname="Y Output Value">
+   <LINK srcnodeid="290" srcpinname="Y Output Value" dstnodeid="280" dstpinname="Value Input">
    </LINK>
    <LINK srcnodeid="279" srcpinname="Output" dstnodeid="128" dstpinname="Case">
    </LINK>
