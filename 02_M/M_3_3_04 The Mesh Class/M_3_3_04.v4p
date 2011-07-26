@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_04 The Mesh Class\M_3_3_04.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
-   <BOUNDS height="8820" left="3210" top="495" type="Window" width="9135">
+   <BOUNDS height="8820" left="3210" top="495" type="Window" width="8670">
    </BOUNDS>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="90" top="525" type="Node" width="840">
@@ -35,12 +35,12 @@
    </PIN>
    <PIN pinname="Digits" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
    <BOUNDS height="100" left="915" top="1125" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="915" top="1125" type="Box" width="450">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="247" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1575" top="1110" type="Node" width="100">
@@ -75,7 +75,7 @@
    </PIN>
    <PIN pinname="Projection Transform" visible="1">
    </PIN>
-   <BOUNDS height="10215" left="12330" top="510" type="Window" width="10830">
+   <BOUNDS height="10215" left="11865" top="480" type="Window" width="10830">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\effects\PhongDirectional.fx" id="241" nodename="PhongDirectional (EX9.Effect)" systemname="PhongDirectional (EX9.Effect)">
@@ -443,12 +443,12 @@
    </PIN>
    <PIN pinname="U Min" visible="1">
    </PIN>
+   <BOUNDS height="270" left="1395" top="2325" type="Node" width="6795">
+   </BOUNDS>
    <PIN pinname="U Count" visible="1">
    </PIN>
    <PIN pinname="V Count" visible="1">
    </PIN>
-   <BOUNDS height="270" left="1395" top="2325" type="Node" width="6795">
-   </BOUNDS>
    </NODE>
    <LINK dstnodeid="241" dstpinname="Mesh" srcnodeid="292" srcpinname="Mesh">
    </LINK>
@@ -524,48 +524,48 @@
    </LINK>
    <LINK dstnodeid="292" dstpinname="U Min" srcnodeid="232" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="301" nodename="Add (Value)" systemname="Add (Value)">
-   <PIN pinname="Input 2">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="1095" top="1845" type="Node" width="100">
-   </BOUNDS>
-   </NODE>
-   <NODE componentmode="InABox" id="300" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
+   <NODE componentmode="InABox" id="304" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Digits" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <BOUNDS height="0" left="1560" top="1470" type="Node" width="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <BOUNDS height="0" left="1575" top="1395" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="1560" top="1470" type="Box" width="450">
+   <BOUNDS height="240" left="1575" top="1395" type="Box" width="450">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="301" dstpinname="Input 2" srcnodeid="300" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="299" nodename="Add (Value)" systemname="Add (Value)">
+   <NODE componentmode="Hidden" id="303" nodename="Max (Value)" systemname="Max (Value)">
    <PIN pinname="Input 2" visible="1">
    </PIN>
+   <BOUNDS height="100" left="1035" top="1800" type="Node" width="100">
+   </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS height="100" left="1695" top="1860" type="Node" width="100">
-   </BOUNDS>
    </NODE>
-   <LINK dstnodeid="299" dstpinname="Input 2" srcnodeid="300" srcpinname="Y Output Value">
+   <NODE componentmode="Hidden" id="302" nodename="Max (Value)" systemname="Max (Value)">
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1560" top="1800" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="303" dstpinname="Input 2" srcnodeid="304" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="248" srcpinname="Y Output Value" dstnodeid="301" dstpinname="Input 1">
+   <LINK dstnodeid="302" dstpinname="Input 2" srcnodeid="304" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="299" dstpinname="Input 1">
+   <LINK srcnodeid="248" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="301" srcpinname="Output" dstnodeid="292" dstpinname="U Count">
+   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="302" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="299" srcpinname="Output" dstnodeid="292" dstpinname="V Count">
+   <LINK srcnodeid="303" srcpinname="Output" dstnodeid="292" dstpinname="U Count">
+   </LINK>
+   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="292" dstpinname="V Count">
    </LINK>
    </PATCH>
