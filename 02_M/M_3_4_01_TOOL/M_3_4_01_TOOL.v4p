@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.3.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_01_TOOL\M_3_4_01_TOOL.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="15120" left="540" top="0" type="Window" width="12165">
    </BOUNDS>
@@ -61,6 +61,10 @@
    </PIN>
    <BOUNDS height="13185" left="12660" top="0" type="Window" width="13245">
    </BOUNDS>
+   <PIN pinname="View Transform" visible="1">
+   </PIN>
+   <PIN pinname="Projection Transform" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="266" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
    <PIN pinname="Output" visible="1">
@@ -1343,9 +1347,9 @@
    </PIN>
    <BOUNDS height="100" left="4515" top="13365" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="242" dstpinname="Projection" srcnodeid="463" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="464" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,-1">
    </PIN>
@@ -1427,15 +1431,13 @@
    </PIN>
    <PIN pinname="TranslateZ" visible="1">
    </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
    <PIN pinname="Z" visible="1">
    </PIN>
    <BOUNDS height="100" left="4095" top="12915" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="242" dstpinname="View" srcnodeid="474" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="Hidden" filename="MeshTransform.v4p" id="483" nodename="MeshTransform.v4p" systemname="MeshTransform" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_01_TOOL\">
    <BOUNDS height="100" left="1515" top="10545" type="Node" width="100">
    </BOUNDS>
@@ -1476,8 +1478,6 @@
    <BOUNDS height="100" left="5745" top="13815" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="242" dstpinname="Aspect Ratio" srcnodeid="485" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="485" dstpinname="Aspect Width" srcnodeid="242" srcpinname="Actual Backbuffer Width">
    </LINK>
    <LINK dstnodeid="485" dstpinname="Aspect Height" srcnodeid="242" srcpinname="Actual Backbuffer Height">
@@ -1595,5 +1595,9 @@
    <LINK dstnodeid="487" dstpinname="Input 2" srcnodeid="488" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="486" dstpinname="Input 2" srcnodeid="488" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="474" srcpinname="Transform Out" dstnodeid="242" dstpinname="View Transform">
+   </LINK>
+   <LINK srcnodeid="463" srcpinname="Transform Out" dstnodeid="242" dstpinname="Projection Transform">
    </LINK>
    </PATCH>
