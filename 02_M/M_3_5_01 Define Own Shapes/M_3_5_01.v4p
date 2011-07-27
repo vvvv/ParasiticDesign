@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.3.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_5_01 Define Own Shapes\M_3_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="8340" left="4155" top="1020" type="Window" width="9495">
    </BOUNDS>
@@ -77,6 +77,10 @@
    </PIN>
    <BOUNDS height="10215" left="13605" top="1005" type="Window" width="9975">
    </BOUNDS>
+   <PIN pinname="View Transform" visible="1">
+   </PIN>
+   <PIN pinname="Projection Transform" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\effects\PhongDirectional.fx" id="241" nodename="PhongDirectional (EX9.Effect)" systemname="PhongDirectional (EX9.Effect)">
    <BOUNDS height="100" left="1275" top="4665" type="Node" width="100">
@@ -240,8 +244,6 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="242" dstpinname="Projection" srcnodeid="218" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="Hidden" id="266" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
    <BOUNDS height="100" left="2595" top="4080" type="Node" width="100">
    </BOUNDS>
@@ -365,13 +367,13 @@
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
    <PIN pinname="Z" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="290" dstpinname="Transform In" srcnodeid="288" srcpinname="Transform Out">
@@ -546,8 +548,6 @@
    </NODE>
    <LINK dstnodeid="297" dstpinname="Source Maximum" srcnodeid="305" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="242" dstpinname="View" srcnodeid="290" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="241" dstpinname="Ambient Color" srcnodeid="272" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="308" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -592,7 +592,7 @@
    <BOUNDS height="1110" left="4230" top="4140" type="Box" width="3150">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" filename="InterpolationMesh.v4p" id="292" nodename="InterpolationMesh.v4p" systemname="InterpolationMesh">
+   <NODE componentmode="Hidden" filename="InterpolationMesh.v4p" id="292" nodename="InterpolationMesh.v4p" systemname="InterpolationMesh" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_5_01 Define Own Shapes\">
    <BOUNDS height="13185" left="3915" top="3930" type="Window" width="13395">
    </BOUNDS>
    <PIN pinname="u Min" visible="1">
@@ -626,48 +626,52 @@
    </LINK>
    <LINK dstnodeid="292" dstpinname="Morph Parameter" srcnodeid="302" srcpinname="Output">
    </LINK>
-   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="312">
+   <NODE componentmode="Hidden" id="312" nodename="Max (Value)" systemname="Max (Value)">
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="735" top="2370" width="100" height="100">
+   <BOUNDS height="100" left="735" top="2370" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="313">
+   <NODE componentmode="Hidden" id="313" nodename="Max (Value)" systemname="Max (Value)">
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2">
    </PIN>
-   <BOUNDS type="Node" left="1260" top="2370" width="100" height="100">
+   <BOUNDS height="100" left="1260" top="2370" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="248" srcpinname="Y Output Value" dstnodeid="312" dstpinname="Input 1">
+   <LINK dstnodeid="312" dstpinname="Input 1" srcnodeid="248" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="313" dstpinname="Input 1">
+   <LINK dstnodeid="313" dstpinname="Input 1" srcnodeid="247" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="312" srcpinname="Output" dstnodeid="292" dstpinname="u Count">
+   <LINK dstnodeid="292" dstpinname="u Count" srcnodeid="312" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="313" srcpinname="Output" dstnodeid="292" dstpinname="v Count">
+   <LINK dstnodeid="292" dstpinname="v Count" srcnodeid="313" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="314" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="314" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN pinname="Digits" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Node" left="1320" top="1950" width="0" height="0">
+   <BOUNDS height="0" left="1320" top="1950" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1320" top="1950" width="450" height="240">
+   <BOUNDS height="240" left="1320" top="1950" type="Box" width="450">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="314" srcpinname="Y Output Value" dstnodeid="313" dstpinname="Input 2">
+   <LINK dstnodeid="313" dstpinname="Input 2" srcnodeid="314" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="314" srcpinname="Y Output Value" dstnodeid="312" dstpinname="Input 2">
+   <LINK dstnodeid="312" dstpinname="Input 2" srcnodeid="314" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="242" dstpinname="View Transform">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Transform Out" dstnodeid="242" dstpinname="Projection Transform">
    </LINK>
    </PATCH>
