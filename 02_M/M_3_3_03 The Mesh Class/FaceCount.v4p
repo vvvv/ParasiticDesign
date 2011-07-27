@@ -1,0 +1,115 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.3.dtd" >
+   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_03 The Mesh Class\CountOfFaces.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_4_03_TOOL\CountOfFaces.v4p" systemname="CountOfFaces">
+   <BOUNDS height="5685" left="15855" top="6105" type="Window" width="4755">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="19" nodename="Expr (Value)" systemname="Expr (Value)">
+   <PIN encoded="0" pinname="Variable Names" slicecount="1" values="|U, V|">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Term" visible="1">
+   </PIN>
+   <PIN pinname="U" visible="1">
+   </PIN>
+   <PIN pinname="V" visible="1">
+   </PIN>
+   <BOUNDS height="270" left="1065" top="3330" type="Node" width="1830">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="18" nodename="IOBox (String)" systemname="IOBox (String)">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="(u-1)*(v-1)*2">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="2850" top="1650" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2850" top="1650" type="Box" width="1470">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|U Count|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="330" top="480" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="330" top="480" type="Box" width="795">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|V Count|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1200" top="510" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1200" top="510" type="Box" width="795">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="15" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Count Of Faces|">
+   </PIN>
+   <BOUNDS height="100" left="330" top="4095" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="330" top="4095" type="Box" width="795">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Y Input Value" srcnodeid="19" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="14" nodename="Max (Value)" systemname="Max (Value)">
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1065" top="2475" type="Node" width="100">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input 1" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="13" nodename="Max (Value)" systemname="Max (Value)">
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1935" top="2490" type="Node" width="100">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Input 1" srcnodeid="16" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Digits" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS height="0" left="1605" top="1755" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1605" top="1755" type="Box" width="795">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Input 2" srcnodeid="12" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input 2" srcnodeid="12" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="Term" srcnodeid="18" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="U" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="19" dstpinname="V" srcnodeid="13" srcpinname="Output">
+   </LINK>
+   </PATCH>
