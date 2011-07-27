@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.3.dtd" >
    <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_04 The Mesh Class\M_3_3_04.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="8820" left="3210" top="495" type="Window" width="8670">
    </BOUNDS>
@@ -54,10 +54,10 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="242" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="InAWindow" id="242" nodename="RENDERER (EX9)" systemname="Renderer (EX9)">
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="View Transform" visible="1">
+   <PIN pinname="View" visible="1">
    </PIN>
    <BOUNDS height="270" left="1290" top="7215" type="Node" width="1755">
    </BOUNDS>
@@ -73,7 +73,7 @@
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
    </PIN>
-   <PIN pinname="Projection Transform" visible="1">
+   <PIN pinname="Projection" visible="1">
    </PIN>
    <BOUNDS height="10215" left="11865" top="480" type="Window" width="10830">
    </BOUNDS>
@@ -240,7 +240,7 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="242" dstpinname="Projection Transform" srcnodeid="218" srcpinname="Transform Out">
+   <LINK dstnodeid="242" dstpinname="Projection" srcnodeid="218" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="266" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
    <BOUNDS height="100" left="2610" top="3765" type="Node" width="100">
@@ -396,7 +396,7 @@
    </LINK>
    <LINK dstnodeid="242" dstpinname="Layers" srcnodeid="241" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="242" dstpinname="View Transform" srcnodeid="290" srcpinname="Transform Out">
+   <LINK dstnodeid="242" dstpinname="View" srcnodeid="290" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="293" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="480" left="4200" top="4590" type="Node" width="1200">
@@ -411,8 +411,6 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="MultipleMesh.v4p" id="292" nodename="MultipleMesh.v4p" systemname="MultipleMesh" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_04 The Mesh Class\">
-   <BOUNDS height="11970" left="17415" top="2580" type="Window" width="7800">
-   </BOUNDS>
    <PIN pinname="u Count" visible="1">
    </PIN>
    <PIN pinname="v Count" visible="1">
@@ -428,8 +426,6 @@
    <PIN pinname="Mesh" visible="1">
    </PIN>
    <PIN pinname="Mesh Distortion" visible="1">
-   </PIN>
-   <PIN pinname="Diffuse Color" visible="1">
    </PIN>
    <PIN pinname="P" visible="1">
    </PIN>
@@ -448,6 +444,10 @@
    <PIN pinname="U Count" visible="1">
    </PIN>
    <PIN pinname="V Count" visible="1">
+   </PIN>
+   <BOUNDS height="15675" left="16995" top="240" type="Window" width="10335">
+   </BOUNDS>
+   <PIN pinname="Diffuse Color" visible="1" slicecount="1" values="|0.21852,0.21852,0.21852,1.00000|">
    </PIN>
    </NODE>
    <LINK dstnodeid="241" dstpinname="Mesh" srcnodeid="292" srcpinname="Mesh">
@@ -486,16 +486,6 @@
    <BOUNDS height="240" left="6000" top="1665" type="Box" width="450">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="InABox" id="295" nodename="IOBox (Color)" systemname="IOBox (Color)">
-   <PIN pinname="Color Input" slicecount="1" values="|0.21852,0.21852,0.21852,1.00000|">
-   </PIN>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   <BOUNDS height="0" left="6765" top="1215" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="450" left="6765" top="1215" type="Box" width="345">
-   </BOUNDS>
-   </NODE>
    <NODE componentmode="InABox" id="294" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|^ form|">
    </PIN>
@@ -509,8 +499,6 @@
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="292" dstpinname="Mesh Distortion" srcnodeid="297" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="292" dstpinname="Diffuse Color" srcnodeid="295" srcpinname="Color Output">
    </LINK>
    <LINK dstnodeid="292" dstpinname="P" srcnodeid="296" srcpinname="Y Output Value">
    </LINK>
@@ -560,12 +548,12 @@
    </LINK>
    <LINK dstnodeid="302" dstpinname="Input 2" srcnodeid="304" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="248" srcpinname="Y Output Value" dstnodeid="303" dstpinname="Input 1">
+   <LINK dstnodeid="303" dstpinname="Input 1" srcnodeid="248" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="247" srcpinname="Y Output Value" dstnodeid="302" dstpinname="Input 1">
+   <LINK dstnodeid="302" dstpinname="Input 1" srcnodeid="247" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="303" srcpinname="Output" dstnodeid="292" dstpinname="U Count">
+   <LINK dstnodeid="292" dstpinname="U Count" srcnodeid="303" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="302" srcpinname="Output" dstnodeid="292" dstpinname="V Count">
+   <LINK dstnodeid="292" dstpinname="V Count" srcnodeid="302" srcpinname="Output">
    </LINK>
    </PATCH>
