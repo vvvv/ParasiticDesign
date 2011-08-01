@@ -719,7 +719,7 @@
    </PIN>
    <BOUNDS height="100" left="4320" top="12900" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="765" dstpinname="Color" srcnodeid="624" srcpinname="Output">
@@ -743,7 +743,7 @@
    </PIN>
    <BOUNDS height="100" left="1290" top="12495" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="771" nodename="NOT (Boolean)" systemname="NOT (Boolean)">
@@ -751,7 +751,7 @@
    </PIN>
    <BOUNDS height="100" left="3855" top="12030" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="770" nodename="AND (Boolean)" systemname="AND (Boolean)">
@@ -1178,17 +1178,9 @@
    <BOUNDS height="270" left="825" top="3435" type="Node" width="2910">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="769" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="921" srcpinname="&lt;SHIFT&gt; Pressed">
-   </LINK>
-   <LINK dstnodeid="765" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="921" srcpinname="&lt;SHIFT&gt; Pressed">
-   </LINK>
-   <LINK dstnodeid="771" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="921" srcpinname="&lt;SHIFT&gt; Pressed">
-   </LINK>
    <LINK dstnodeid="703" dstpinname="XYZ" hiddenwhenlocked="1" srcnodeid="921" srcpinname="XYZ">
    </LINK>
    <LINK dstnodeid="897" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="921" srcpinname="XYZ">
-   </LINK>
-   <LINK dstnodeid="751" dstpinname="Shift ON" hiddenwhenlocked="1" srcnodeid="921" srcpinname="&lt;SHIFT&gt; Pressed">
    </LINK>
    <LINK dstnodeid="909" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="921" srcpinname="XYZ">
    </LINK>
@@ -1196,7 +1188,7 @@
    </LINK>
    <LINK dstnodeid="913" dstpinname="Export" hiddenwhenlocked="1" srcnodeid="921" srcpinname="E On">
    </LINK>
-   <LINK dstnodeid="751" dstpinname="Left Button" srcnodeid="921" srcpinname="Is Pressure" hiddenwhenlocked="1">
+   <LINK dstnodeid="751" dstpinname="Left Button" hiddenwhenlocked="1" srcnodeid="921" srcpinname="Is Pressure">
    </LINK>
    <NODE componentmode="InABox" id="924" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Show Value" slicecount="1" values="0">
@@ -1213,11 +1205,11 @@
    </BOUNDS>
    <BOUNDS height="480" left="5880" top="2865" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="923" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -1232,22 +1224,20 @@
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; use pressure (true)|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="924" srcpinname="Y Output Value" dstnodeid="921" dstpinname="UsePressure" hiddenwhenlocked="1">
+   <LINK dstnodeid="921" dstpinname="UsePressure" hiddenwhenlocked="1" srcnodeid="924" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="921" srcpinname="Pressure" dstnodeid="931" dstpinname="A">
+   <LINK dstnodeid="751" dstpinname="Erasor ON" hiddenwhenlocked="1" srcnodeid="921" srcpinname="ErasorOn">
    </LINK>
-   <LINK srcnodeid="921" srcpinname="ErasorOn" dstnodeid="751" dstpinname="Erasor ON" hiddenwhenlocked="1">
+   <LINK dstnodeid="751" dstpinname="Eraser Radius" hiddenwhenlocked="1" srcnodeid="584" srcpinname="X Output Value">
    </LINK>
-   <LINK srcnodeid="584" srcpinname="X Output Value" dstnodeid="751" dstpinname="Eraser Radius" hiddenwhenlocked="1">
+   <LINK dstnodeid="751" dstpinname="pressure" hiddenwhenlocked="1" srcnodeid="921" srcpinname="Pressure">
    </LINK>
-   <LINK srcnodeid="921" srcpinname="Pressure" dstnodeid="751" dstpinname="pressure" hiddenwhenlocked="1">
+   <LINK dstnodeid="751" dstpinname="UsePressure" hiddenwhenlocked="1" srcnodeid="924" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="924" srcpinname="Y Output Value" dstnodeid="751" dstpinname="UsePressure" hiddenwhenlocked="1">
+   <LINK dstnodeid="772" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="751" srcpinname="Eraser Radius">
    </LINK>
-   <LINK srcnodeid="751" srcpinname="Eraser Radius" dstnodeid="772" dstpinname="Input 1" hiddenwhenlocked="1">
+   <LINK dstnodeid="765" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="921" srcpinname="ErasorOn">
    </LINK>
-   <LINK srcnodeid="921" srcpinname="ErasorOn" dstnodeid="765" dstpinname="Enabled" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="921" srcpinname="ErasorOn" dstnodeid="769" dstpinname="Input" hiddenwhenlocked="1">
+   <LINK dstnodeid="769" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="921" srcpinname="ErasorOn">
    </LINK>
    </PATCH>
