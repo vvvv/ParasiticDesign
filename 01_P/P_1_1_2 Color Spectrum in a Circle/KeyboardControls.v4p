@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_1_2 Color Spectrum in a Circle\KeyboardControls.v4p">
-   <BOUNDS height="6285" left="11370" top="3450" type="Window" width="10500">
+   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_1_2 Color Spectrum in a Circle\KeyboardControls.v4p">
+   <BOUNDS height="6285" left="2985" top="7935" type="Window" width="10500">
    </BOUNDS>
    <NODE componentmode="Hidden" id="1" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)">
    <BOUNDS height="100" left="6900" top="1890" type="Node" width="100">
@@ -225,9 +225,9 @@
    <NODE componentmode="InABox" id="29" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="690" top="1500" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="2325" left="690" top="1500" type="Box" width="4365">
+   <BOUNDS height="2700" left="690" top="1500" type="Box" width="4275">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The Keyboard (System Global) node returns all keypresses. &cr;&lf;&cr;&lf;The RadioKeymatch (String) node listens to the specified keys (1 to 5) and returns an index for the key pressed. &cr;&lf;&cr;&lf;Given an index the Switch (Value Input) node routes one of its inputs through to its output.&cr;&lf;&cr;&lf;Add|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The Keyboard (System Global) node returns all keypresses. &cr;&lf;&cr;&lf;The RadioKeymatch (String) node listens to the specified keys (1 to 5) and returns an index for the key pressed. &cr;&lf;&cr;&lf;Given an index the Switch (Value Input) node routes one of its inputs through to its output.&cr;&lf;&cr;&lf;For the Segment (DX9) node to draw a circle with 6 segments you need to specify a resolution of 7. i.e. you always have to spcify a value of one more than you want to see. Don&apos;t ask, thats just the way it is in vvvv. |">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -362,18 +362,34 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="7155" top="4200" width="0" height="0">
+   <NODE componentmode="InABox" id="35" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7155" top="4200" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7155" top="4200" width="345" height="240">
+   <BOUNDS height="240" left="7155" top="4200" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Input 2">
+   <LINK dstnodeid="20" dstpinname="Input 2" srcnodeid="35" srcpinname="Y Output Value">
    </LINK>
+   <NODE componentmode="InABox" id="36" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="240" top="3150" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="240" top="3150" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
    </PATCH>
