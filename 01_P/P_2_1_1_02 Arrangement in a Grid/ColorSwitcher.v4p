@@ -373,9 +373,9 @@
    <NODE componentmode="InABox" id="132" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="735" top="435" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="1830" left="735" top="435" type="Box" width="4320">
+   <BOUNDS height="2685" left="735" top="435" type="Box" width="4320">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Returns a spread of 2 colors which are specified using keys 4, 5, 6, 7 and 0 (for the default color).&cr;&lf;&cr;&lf;OnOpen a color different to the default color is being initialized&cr;&lf;&cr;&lf;Pressing the 0 key resets all Toggle (Animation) nodes so the switches connected below return their first input. &cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Returns a spread of 2 colors which are specified using keys 4, 5, 6, 7 and 0 (for the default color).&cr;&lf;&cr;&lf;OnOpen a color different to the default color is being initialized&cr;&lf;&cr;&lf;Pressing the 0 key resets all Toggle (Animation) nodes so the switches connected below return their first input. &cr;&lf;&cr;&lf;Concatenates the two colors to a spread whose two slices will be accessed by a GetSlice (Color) below.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -416,8 +416,8 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Cons (Color)" filename="%VVVV%\plugins\SpreadOperations.dll" nodename="Cons (Color)" componentmode="Hidden" id="133">
-   <BOUNDS type="Node" left="5475" top="6735" width="3375" height="270">
+   <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="133" nodename="Cons (Color)" systemname="Cons (Color)">
+   <BOUNDS height="270" left="5475" top="6735" type="Node" width="3375">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -426,11 +426,11 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="133" dstpinname="Input 1">
+   <LINK dstnodeid="133" dstpinname="Input 1" srcnodeid="84" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="133" dstpinname="Input 2">
+   <LINK dstnodeid="133" dstpinname="Input 2" srcnodeid="83" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="133" srcpinname="Output" dstnodeid="86" dstpinname="Color Input">
+   <LINK dstnodeid="86" dstpinname="Color Input" srcnodeid="133" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="134" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5355" top="2775" type="Node" width="315">
@@ -454,6 +454,118 @@
    <BOUNDS height="390" left="5355" top="3465" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="136" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="6225" top="4080" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6225" top="4080" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="125" srcpinname="Output" dstnodeid="136" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="137" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7800" top="4080" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7800" top="4080" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Output" dstnodeid="137" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="138" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="9330" top="4080" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9330" top="4080" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="138" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="139" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="11460" top="4080" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11460" top="4080" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="139" dstpinname="Y Input Value">
+   </LINK>
+   <NODE componentmode="InABox" id="140" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8910" top="6705" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="300" left="8910" top="6705" type="Box" width="345">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="F1">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="141" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="285" top="2295" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="285" top="2295" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="142" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4995" top="6570" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="4995" top="6570" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>

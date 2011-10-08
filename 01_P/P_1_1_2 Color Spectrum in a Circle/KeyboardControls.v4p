@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_1_2 Color Spectrum in a Circle\KeyboardControls.v4p">
    <BOUNDS height="6285" left="11370" top="3450" type="Window" width="10500">
    </BOUNDS>
@@ -23,7 +23,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="15630" top="9060" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|1 2 3 4 5 |" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="|1 2 3 4 5 |">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -171,7 +171,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Segment Count|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Segment Count|">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
@@ -195,7 +195,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="10620" top="8265" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="1">
+   <PIN pinname="Input 2">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -225,9 +225,9 @@
    <NODE componentmode="InABox" id="29" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="690" top="1500" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="1770" left="690" top="1500" type="Box" width="4365">
+   <BOUNDS height="2325" left="690" top="1500" type="Box" width="4365">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The Keyboard (System Global) node returns all keypresses. &cr;&lf;&cr;&lf;The RadioKeymatch (String) node listens to the specified keys (1 to 5) and returns an index for the key pressed. &cr;&lf;&cr;&lf;Given an index the Switch (Value Input) node routes one of its inputs through to its output.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The Keyboard (System Global) node returns all keypresses. &cr;&lf;&cr;&lf;The RadioKeymatch (String) node listens to the specified keys (1 to 5) and returns an index for the key pressed. &cr;&lf;&cr;&lf;Given an index the Switch (Value Input) node routes one of its inputs through to its output.&cr;&lf;&cr;&lf;Add|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -284,12 +284,12 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="30" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="210" top="195" width="5700" height="270">
+   <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="210" top="195" type="Node" width="5700">
    </BOUNDS>
-   <BOUNDS type="Box" left="210" top="195" width="3015" height="510">
+   <BOUNDS height="510" left="210" top="195" type="Box" width="3015">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|Depending on the key pressed returns a specified value for the segment count.|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Depending on the key pressed returns a specified value for the segment count.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -362,4 +362,18 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7155" top="4200" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7155" top="4200" width="345" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Input 2">
+   </LINK>
    </PATCH>

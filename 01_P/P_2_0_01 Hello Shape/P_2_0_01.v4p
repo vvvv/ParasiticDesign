@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_01 Hello Shape\P_2_0_01.v4p">
    <BOUNDS height="9150" left="0" top="0" type="Window" width="12000">
    </BOUNDS>
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="315" left="60" top="465" type="Box" width="3015">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|drawing a filled circle with lines.|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|drawing a filled circle with lines.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -21,7 +21,7 @@
    </BOUNDS>
    <BOUNDS height="465" left="60" top="75" type="Box" width="4110">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Hello Shape|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Hello Shape|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -35,7 +35,7 @@
    </BOUNDS>
    <BOUNDS height="810" left="90" top="765" type="Box" width="3855">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x:&tab;length of lines&cr;&lf;position y&tab;:&tab;thickness and number of lines|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x:&tab;length of lines&cr;&lf;position y&tab;:&tab;thickness and number of lines|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -49,7 +49,7 @@
    </BOUNDS>
    <BOUNDS height="810" left="3975" top="765" type="Box" width="1575">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="| KEYS&cr;&lf; ctrl+2:&tab;save png&cr;&lf;|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="| KEYS&cr;&lf; ctrl+2:&tab;save png&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -109,7 +109,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="4560" top="9420" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Transform In" pintype="Input" slicecount="1" visible="1" values="||">
    </PIN>
@@ -222,7 +222,7 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="48" dstpinname="Mouse XYZ" srcnodeid="47" srcpinname="XY" hiddenwhenlocked="1">
+   <LINK dstnodeid="48" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="47" srcpinname="XY">
    </LINK>
    <NODE componentmode="Hidden" id="49" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="6705" top="7515" type="Node" width="4470">
@@ -309,7 +309,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="30" dstpinname="CenterX" srcnodeid="61" srcpinname="Y Output Value">
@@ -403,7 +403,7 @@
    </BOUNDS>
    <BOUNDS height="4485" left="600" top="1965" type="Box" width="4320">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The mouses X coordinate is used as the scale X value of the quad without any mapping as it is in a suitable range of -1 to 1 already. For scaling factors negative values are just as good as positive values.&cr;&lf;&cr;&lf;The mouses Y coordinate is used twice: &cr;&lf;- for the quads scaling in Y where it is first mapped to a specific range (0.001 - 0.08)&cr;&lf;- to specify the number of quads in the circular arrangement where it is mapped to a value between 2 and 80.&cr;&lf;&cr;&lf;The LinearSpread returns a number of slices as specified by the mouse Y position. The slices span a value range of 1 which is suitable to for the Transforms rotation input as in vvvv a value range of 1 describes a whole rotation. i.e. a range of 0° to 360° equals a range of 0 to 1 in vvvv. &cr;&lf;&cr;&lf;Sets the transformations pivot point so the quads don&apos;t rotate about their center but around their edge.&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The mouses X coordinate is used as the scale X value of the quad without any mapping as it is in a suitable range of -1 to 1 already. For scaling factors negative values are just as good as positive values.&cr;&lf;&cr;&lf;The mouses Y coordinate is used twice: &cr;&lf;- for the quads scaling in Y (thickness) where it is first mapped to a specific range (0.001 - 0.08)&cr;&lf;- to specify the number of quads in the circular arrangement where it is mapped to a value between 2 and 80.&cr;&lf;&cr;&lf;The LinearSpread returns a number of slices as specified by the mouse Y position. The slices span a value range of 1 which is suitable for the Transform (Transform 2d)  rotation input as in vvvv a value range of 1 describes a whole rotation. i.e. a range of 0° to 360° equals a range of 0 to 1 in vvvv. &cr;&lf;Try also to change the LinearSpreads width input to understand how the circular arrangement is achieved. &cr;&lf;&cr;&lf;Sets the transformations pivot point so the quads don&apos;t rotate about their center but around their edge.&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -492,19 +492,19 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="9000" top="3405" width="0" height="0">
+   <NODE componentmode="InABox" id="82" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="9000" top="3405" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="9000" top="3405" width="345" height="240">
+   <BOUNDS height="240" left="9000" top="3405" type="Box" width="495">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="41" dstpinname="Width">
+   <LINK dstnodeid="41" dstpinname="Width" srcnodeid="82" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="83" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6915" top="1065" type="Node" width="315">

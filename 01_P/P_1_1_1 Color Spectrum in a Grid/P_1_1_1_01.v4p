@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_1_1 Color Spectrum in a Grid\P_1_1_1_01.v4p">
    <BOUNDS height="10680" left="360" top="720" type="Window" width="14895">
    </BOUNDS>
@@ -263,7 +263,7 @@
    </PIN>
    <PIN pinname="Source Minimum" visible="1">
    </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="1">
+   <PIN pinname="Destination Minimum">
    </PIN>
    <PIN pinname="Destination Maximum">
    </PIN>
@@ -471,7 +471,7 @@
    </BOUNDS>
    <BOUNDS height="6495" left="660" top="2040" type="Box" width="4500">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross node corresponds to 2 for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;By dividing 2 by the number of quads per horizontally and vertically this returns the scaling in X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).&cr;&lf;&cr;&lf;The Cursor (DX9) node is used to display the cursor of the mouse in the render window.&cr;&lf;&cr;&lf;A Group node allows you to combine several layers and feed them to a Renderer.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross node corresponds to 2 for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;By dividing 2 by the number of quads (horizontally and vertically) this returns the scaling in X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).&cr;&lf;&cr;&lf;The Cursor (DX9) node is used to display the cursor of the mouse in the render window.&cr;&lf;&cr;&lf;A Group node allows you to combine several layers and feed them to a Renderer.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -770,4 +770,20 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="205" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="9615" top="1530" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9615" top="1530" width="360" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="205" srcpinname="Y Output Value" dstnodeid="111" dstpinname="Destination Minimum">
+   </LINK>
    </PATCH>

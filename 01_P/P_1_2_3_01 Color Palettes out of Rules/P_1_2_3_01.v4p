@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\P_1_2_3_01.v4p">
    <BOUNDS height="8070" left="2580" top="3855" type="Window" width="11565">
    </BOUNDS>
@@ -100,7 +100,7 @@
    </LINK>
    <LINK dstnodeid="19" dstpinname="Y" linkstyle="PolyLine" srcnodeid="20" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="21" dstpinname="Mouse XYZ" srcnodeid="19" srcpinname="XY" hiddenwhenlocked="1">
+   <LINK dstnodeid="21" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="19" srcpinname="XY">
    </LINK>
    <LINK dstnodeid="22" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="21" srcpinname="Layer">
    </LINK>
@@ -193,7 +193,7 @@
    <NODE componentmode="Hidden" filename="ColorPalettes.v4p" id="69" nodename="ColorPalettes.v4p" systemname="ColorPalettes" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\">
    <BOUNDS height="100" left="8325" top="5385" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="11580" left="3600" top="2910" type="Window" width="19350">
+   <BOUNDS height="11580" left="6690" top="1545" type="Window" width="19350">
    </BOUNDS>
    <PIN pinname="CountX" visible="1">
    </PIN>
@@ -218,30 +218,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="79" nodename="GridSetup.v4p" systemname="GridSetup" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\">
-   <BOUNDS height="270" left="6360" top="4260" type="Node" width="1200">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X Max" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="X Min" visible="1">
-   </PIN>
-   <PIN pinname="Y Min" visible="1">
-   </PIN>
-   <PIN pinname="Y Max" visible="1">
-   </PIN>
-   <PIN pinname="Resolution X" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="79" dstpinname="XY" srcnodeid="19" srcpinname="XY">
-   </LINK>
-   <LINK dstnodeid="79" dstpinname="X Max" srcnodeid="33" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="79" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6630" top="3855" type="Node" width="100">
    </BOUNDS>
@@ -256,8 +232,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK dstnodeid="79" dstpinname="X Min" srcnodeid="80" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="81" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="7500" top="3705" type="Node" width="100">
    </BOUNDS>
@@ -336,10 +310,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Y Min">
-   </LINK>
-   <LINK srcnodeid="81" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Y Max">
-   </LINK>
    <NODE componentmode="InABox" id="93" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5880" top="4050" type="Node" width="315">
    </BOUNDS>
@@ -388,17 +358,15 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Count (Node)" nodename="Count (Node)" componentmode="Hidden" id="96">
-   <BOUNDS type="Node" left="8325" top="4935" width="100" height="100">
+   <NODE componentmode="Hidden" id="96" nodename="Count (Node)" systemname="Count (Node)">
+   <BOUNDS height="100" left="8325" top="4935" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="79" srcpinname="Transform Out" dstnodeid="96" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="96" srcpinname="Count" dstnodeid="69" dstpinname="Spreadcount">
+   <LINK dstnodeid="69" dstpinname="Spreadcount" srcnodeid="96" srcpinname="Count">
    </LINK>
    <NODE componentmode="InABox" id="97" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="315" top="3660" type="Node" width="315">
@@ -432,4 +400,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="99" nodename="GridSetup.v4p" systemname="GridSetup">
+   <BOUNDS height="270" left="6360" top="4260" type="Node" width="1200">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="99" dstpinname="XY" srcnodeid="19" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="99" dstpinname="X Max" srcnodeid="33" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="99" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="99" dstpinname="X Min" srcnodeid="80" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="99" dstpinname="Y Min" srcnodeid="80" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="99" dstpinname="Y Max" srcnodeid="81" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="96" dstpinname="Input" srcnodeid="99" srcpinname="Transform Out">
+   </LINK>
    </PATCH>

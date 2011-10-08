@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_1_2 Color Spectrum in a Circle\P_1_1_2_01.v4p" locked="0">
    <BOUNDS height="8550" left="915" top="1530" type="Window" width="15615">
    </BOUNDS>
@@ -50,7 +50,7 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="45" nodename="Vector (2d Join)" systemname="Vector (2d Join)" hiddenwhenlocked="1">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="45" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="13425" top="2085" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="13425" top="2085" type="Box" width="0">
@@ -64,11 +64,11 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="45" dstpinname="X" srcnodeid="44" srcpinname="X" hiddenwhenlocked="1">
+   <LINK dstnodeid="45" dstpinname="X" hiddenwhenlocked="1" srcnodeid="44" srcpinname="X">
    </LINK>
-   <LINK dstnodeid="45" dstpinname="Y" linkstyle="PolyLine" srcnodeid="44" srcpinname="Y" hiddenwhenlocked="1">
+   <LINK dstnodeid="45" dstpinname="Y" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="44" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="43" dstpinname="Mouse XYZ" srcnodeid="45" srcpinname="XY" hiddenwhenlocked="1">
+   <LINK dstnodeid="43" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="45" srcpinname="XY">
    </LINK>
    <NODE componentmode="Hidden" id="49" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
    <BOUNDS height="270" left="9810" top="4500" type="Node" width="3285">
@@ -311,15 +311,11 @@
    </PIN>
    <PIN pinname="KeyEvent" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="8760" top="1320">
+   <BOUNDS left="8760" top="1320" type="Box">
    </BOUNDS>
    <PIN pinname="Segment Count" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="131" dstpinname="Y Input Value" srcnodeid="57" srcpinname="SegmentCount">
-   </LINK>
-   <LINK dstnodeid="51" dstpinname="Spread Count" linkstyle="PolyLine" srcnodeid="57" srcpinname="SegmentCount">
-   </LINK>
    <NODE componentmode="Hidden" id="161" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="7170" top="6615" type="Node" width="4680">
    </BOUNDS>
@@ -333,8 +329,6 @@
    <LINK dstnodeid="161" dstpinname="Layer 2" srcnodeid="43" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="161" dstpinname="Layer 1" srcnodeid="144" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="144" dstpinname="Resolution" srcnodeid="57" srcpinname="SegmentCount">
    </LINK>
    <LINK dstnodeid="49" dstpinname="Hue" srcnodeid="51" srcpinname="Output">
    </LINK>
@@ -512,8 +506,10 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="51" dstpinname="Spread Count">
+   <LINK dstnodeid="51" dstpinname="Spread Count" srcnodeid="57" srcpinname="Segment Count">
    </LINK>
-   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="144" dstpinname="Resolution">
+   <LINK dstnodeid="144" dstpinname="Resolution" srcnodeid="57" srcpinname="Segment Count">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="131" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

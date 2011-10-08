@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\P_1_2_1_01.v4p">
    <BOUNDS height="8865" left="1470" top="2295" type="Window" width="16095">
    </BOUNDS>
@@ -100,7 +100,7 @@
    </LINK>
    <LINK dstnodeid="6" dstpinname="Y" linkstyle="PolyLine" srcnodeid="7" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="8" dstpinname="Mouse XYZ" srcnodeid="6" srcpinname="XY" linkstyle="PolyLine" hiddenwhenlocked="1">
+   <LINK dstnodeid="8" dstpinname="Mouse XYZ" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="6" srcpinname="XY">
    <LINKPOINT x="11925" y="2715">
    </LINKPOINT>
    </LINK>
@@ -167,9 +167,11 @@
    </PIN>
    <PIN pinname="Row Count" visible="1">
    </PIN>
+   <PIN pinname="Colors Left" visible="1">
+   </PIN>
+   <PIN pinname="Colors Right" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="124" dstpinname="LeftClick" linkstyle="PolyLine" srcnodeid="7" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="Hidden" filename="lerpHSV.v4p" id="125" nodename="lerpHSV.v4p" systemname="lerpHSV" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
    <BOUNDS height="270" left="9780" top="4620" type="Node" width="1365">
    </BOUNDS>
@@ -187,11 +189,13 @@
    </BOUNDS>
    <PIN pinname="Morph Factor" visible="1">
    </PIN>
+   <PIN pinname="Interpolation Factor" visible="1">
+   </PIN>
+   <PIN pinname="Colors Right" visible="1">
+   </PIN>
+   <PIN pinname="Colors Left" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="125" dstpinname="ColorsLeft" linkstyle="PolyLine" srcnodeid="124" srcpinname="ColorsLeft">
-   </LINK>
-   <LINK dstnodeid="125" dstpinname="ColorsRight" linkstyle="PolyLine" srcnodeid="124" srcpinname="ColorsRight">
-   </LINK>
    <NODE componentmode="InABox" id="133" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="75" top="600" type="Node" width="840">
    </BOUNDS>
@@ -267,11 +271,13 @@
    </BOUNDS>
    <PIN pinname="Morph Factor" visible="1">
    </PIN>
+   <PIN pinname="Interpolation Factor" visible="1">
+   </PIN>
+   <PIN pinname="Colors Left" visible="1">
+   </PIN>
+   <PIN pinname="Colors Right" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="134" dstpinname="ColorsLeft" linkstyle="PolyLine" srcnodeid="124" srcpinname="ColorsLeft">
-   </LINK>
-   <LINK dstnodeid="134" dstpinname="ColorsRight" linkstyle="PolyLine" srcnodeid="124" srcpinname="ColorsRight">
-   </LINK>
    <LINK dstnodeid="114" dstpinname="Input 1" srcnodeid="134" srcpinname="Out">
    </LINK>
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="116" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
@@ -313,14 +319,6 @@
    <LINK dstnodeid="147" dstpinname="XY" linkstyle="PolyLine" srcnodeid="6" srcpinname="XY">
    </LINK>
    <LINK dstnodeid="27" dstpinname="Transform" srcnodeid="147" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="124" dstpinname="X Count" srcnodeid="147" srcpinname="Resolution X">
-   </LINK>
-   <LINK dstnodeid="124" dstpinname="Y Count" srcnodeid="147" srcpinname="Resolution Y">
-   </LINK>
-   <LINK dstnodeid="134" dstpinname="Morph Factor" linkstyle="PolyLine" srcnodeid="124" srcpinname="Morph Factor">
-   </LINK>
-   <LINK dstnodeid="125" dstpinname="Morph Factor" linkstyle="PolyLine" srcnodeid="124" srcpinname="Morph Factor">
    </LINK>
    <NODE componentmode="InABox" id="156" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="750" top="2310" type="Node" width="7425">
@@ -384,65 +382,63 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="157" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="7815" top="2100" width="0" height="0">
+   <NODE componentmode="InABox" id="157" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="7815" top="2100" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7815" top="2100" width="345" height="240">
+   <BOUNDS height="240" left="7815" top="2100" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="157" srcpinname="Y Output Value" dstnodeid="147" dstpinname="X Min">
+   <LINK dstnodeid="147" dstpinname="X Min" srcnodeid="157" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="158" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8265" top="2100" width="0" height="0">
+   <NODE componentmode="InABox" id="158" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8265" top="2100" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8265" top="2100" width="360" height="240">
+   <BOUNDS height="240" left="8265" top="2100" type="Box" width="360">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="100">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="158" srcpinname="Y Output Value" dstnodeid="147" dstpinname="X Max">
+   <LINK dstnodeid="147" dstpinname="X Max" srcnodeid="158" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="159" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8835" top="2100" width="0" height="0">
+   <NODE componentmode="InABox" id="159" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8835" top="2100" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8835" top="2100" width="345" height="240">
+   <BOUNDS height="240" left="8835" top="2100" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Y Min">
+   <LINK dstnodeid="147" dstpinname="Y Min" srcnodeid="159" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Left Button" dstnodeid="124" dstpinname="Left Button">
+   <LINK dstnodeid="124" dstpinname="Left Button" srcnodeid="7" srcpinname="Left Button">
    <LINKPOINT x="9900" y="1790">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Interpolation Factor" dstnodeid="125" dstpinname="Morph Factor">
+   <LINK dstnodeid="125" dstpinname="Morph Factor" srcnodeid="124" srcpinname="Interpolation Factor">
    </LINK>
-   <LINK srcnodeid="124" srcpinname="Interpolation Factor" dstnodeid="134" dstpinname="Morph Factor">
+   <LINK dstnodeid="124" dstpinname="Interpolation Steps Count" srcnodeid="147" srcpinname="Resolution X">
    </LINK>
-   <LINK srcnodeid="147" srcpinname="Resolution X" dstnodeid="124" dstpinname="Interpolation Steps Count">
-   </LINK>
-   <LINK srcnodeid="147" srcpinname="Resolution Y" dstnodeid="124" dstpinname="Row Count">
+   <LINK dstnodeid="124" dstpinname="Row Count" srcnodeid="147" srcpinname="Resolution Y">
    </LINK>
    <NODE componentmode="InABox" id="161" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7095" top="2505" type="Node" width="315">
@@ -524,22 +520,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE id="160" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="9300" top="2100" width="0" height="0">
+   <NODE componentmode="InABox" hiddenwhenlocked="0" id="160" managers="" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="9300" top="2100" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="9300" top="2100" width="345" height="240">
+   <BOUNDS height="240" left="9300" top="2100" type="Box" width="345">
    </BOUNDS>
-   <PIN pinname="Value Type" slicecount="1" pintype="Configuration" values="Integer">
+   <PIN pinname="Value Type" pintype="Configuration" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" pintype="Input" visible="1" values="9">
+   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="9">
    </PIN>
-   <PIN pinname="Units" slicecount="1" pintype="Configuration" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" pintype="Configuration" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Precision" slicecount="1" pintype="Configuration" values="4">
+   <PIN pinname="Precision" pintype="Configuration" slicecount="1" values="4">
    </PIN>
-   <BOUNDS type="Window" left="0" top="0" width="0" height="0">
+   <BOUNDS height="0" left="0" top="0" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Pin Visibility" pintype="Configuration" slicecount="1" values="True">
    </PIN>
@@ -567,7 +563,7 @@
    </PIN>
    <PIN pinname="Maximum" pintype="Configuration" slicecount="1" values="1000">
    </PIN>
-   <PIN pinname="Default" pintype="Configuration" slicecount="1" values="0" encoded="0">
+   <PIN encoded="0" pinname="Default" pintype="Configuration" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" pintype="Configuration" slicecount="1" values="1">
    </PIN>
@@ -587,9 +583,9 @@
    </PIN>
    <PIN pinname="Slider Alignment" pintype="Configuration" slicecount="1" values="Grid">
    </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" visible="-1" slicecount="1" values="0">
+   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="-1" values="0">
    </PIN>
-   <PIN pinname="X Input Value" pintype="Input" visible="-1" slicecount="1" values="0">
+   <PIN pinname="X Input Value" pintype="Input" slicecount="1" visible="-1" values="0">
    </PIN>
    <PIN pinname="X Output Value" pintype="Output" visible="-1">
    </PIN>
@@ -598,6 +594,18 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Y Max">
+   <LINK dstnodeid="147" dstpinname="Y Max" srcnodeid="160" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Interpolation Factor" dstnodeid="134" dstpinname="Interpolation Factor">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Interpolation Factor" dstnodeid="125" dstpinname="Interpolation Factor">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Colors Left" dstnodeid="134" dstpinname="Colors Left">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Colors Right" dstnodeid="125" dstpinname="Colors Right">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Colors Right" dstnodeid="134" dstpinname="Colors Right">
+   </LINK>
+   <LINK srcnodeid="124" srcpinname="Colors Left" dstnodeid="125" dstpinname="Colors Left">
    </LINK>
    </PATCH>

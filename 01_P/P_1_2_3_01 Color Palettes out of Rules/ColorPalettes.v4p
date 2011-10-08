@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\ColorPalettes.v4p" locked="0">
-   <BOUNDS height="11580" left="3600" top="2910" type="Window" width="19350">
+   <BOUNDS height="11580" left="6690" top="1545" type="Window" width="19350">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="10" managers="" nodename="Select (Value)" systemname="Select (Value)">
    <PIN pinname="Select" pintype="Input" visible="1">
@@ -244,18 +244,6 @@
    <BOUNDS height="160" left="16125" top="1725" type="Window" width="215">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="361" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8610" top="2325" type="Node" width="3885">
-   </BOUNDS>
-   <BOUNDS height="525" left="8610" top="2325" type="Box" width="2805">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Triggers a bang when this patch is loaded to initialize the colors. |">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="10" dstpinname="Select" srcnodeid="102" srcpinname="Y Output Value">
@@ -844,24 +832,12 @@
    </LINK>
    <LINK dstnodeid="407" dstpinname="Input 2" srcnodeid="416" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" id="417" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7470" top="3915" type="Node" width="3660">
-   </BOUNDS>
-   <BOUNDS height="270" left="7470" top="3915" type="Box" width="3660">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Makes SpreadCount bangs out of the one bang.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="425" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="780" top="525" type="Node" width="7425">
    </BOUNDS>
    <BOUNDS height="3975" left="780" top="525" type="Box" width="4305">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A bang is trigged on opening the patch, when pressing on of the keys or when the incoming spreadcount changes.&cr;&lf;&cr;&lf;The bang is used below to trigger new random values for the color palettes. In order to get a random value per color-tile the single bang is being resampled (using the Select (Value) node) to the value of the incoming spreadcount.&cr;&lf;&cr;&lf;For the 3 color components creates a spread of random values which are then mapped to the desired value ranges for each of the ten rules.&cr;&lf;&cr;&lf;The switch returns the value for the rule chosen by the last key pressed. &cr;&lf;&cr;&lf;The values are joined together to colors using a HSV (Color Join) node.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A bang is triggered on opening the patch, when pressing one of the keys or when the incoming spreadcount changes. The bang is used below to trigger new random values for the color palettes. &cr;&lf;&cr;&lf;In order to get a random value per color-tile the single bang is being resampled (using the Select (Value) node) to the value of the incoming spreadcount.&cr;&lf;&cr;&lf;For the 3 color components creates a spread of random values which are then mapped to the desired value ranges for each of the ten rules.&cr;&lf;&cr;&lf;The switch returns the value for the rule chosen by the last key pressed. &cr;&lf;&cr;&lf;The values are joined together to colors using a HSV (Color Join) node.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -887,9 +863,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="423" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="330" top="1125" type="Node" width="315">
+   <BOUNDS height="270" left="330" top="1545" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="330" top="1125" type="Box" width="420">
+   <BOUNDS height="405" left="330" top="1545" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -934,26 +910,26 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="426">
-   <BOUNDS type="Node" left="7020" top="2265" width="100" height="100">
+   <NODE componentmode="Hidden" id="426" nodename="Change (Animation)" systemname="Change (Animation)">
+   <BOUNDS height="100" left="7020" top="2265" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="OnChange" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="102" srcpinname="Y Output Value" dstnodeid="426" dstpinname="Input">
+   <LINK dstnodeid="426" dstpinname="Input" srcnodeid="102" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="353" srcpinname="Bang" dstnodeid="352" dstpinname="Input 3">
+   <LINK dstnodeid="352" dstpinname="Input 3" srcnodeid="353" srcpinname="Bang">
    </LINK>
-   <LINK srcnodeid="426" srcpinname="OnChange" dstnodeid="352" dstpinname="Input 2">
+   <LINK dstnodeid="352" dstpinname="Input 2" srcnodeid="426" srcpinname="OnChange">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="427" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="7605" top="4650" width="420" height="270">
+   <NODE componentmode="InABox" id="427" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="7605" top="4650" type="Node" width="420">
    </BOUNDS>
-   <BOUNDS type="Box" left="7605" top="4650" width="420" height="270">
+   <BOUNDS height="270" left="7605" top="4650" type="Box" width="420">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="HUE" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="HUE">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -962,12 +938,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="428" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="11310" top="4650" width="1020" height="270">
+   <NODE componentmode="InABox" id="428" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="11310" top="4650" type="Node" width="1020">
    </BOUNDS>
-   <BOUNDS type="Box" left="11310" top="4650" width="1020" height="270">
+   <BOUNDS height="270" left="11310" top="4650" type="Box" width="1020">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="SATURATION" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="SATURATION">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -976,12 +952,12 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="429" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="15015" top="4650" width="990" height="270">
+   <NODE componentmode="InABox" id="429" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="15015" top="4650" type="Node" width="990">
    </BOUNDS>
-   <BOUNDS type="Box" left="15015" top="4650" width="990" height="270">
+   <BOUNDS height="270" left="15015" top="4650" type="Box" width="990">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="BRIGHTNESS" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="BRIGHTNESS">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
