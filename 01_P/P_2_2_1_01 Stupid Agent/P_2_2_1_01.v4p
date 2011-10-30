@@ -425,9 +425,9 @@
    <LINK dstnodeid="202" dstpinname="Input 1" srcnodeid="201" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="203" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="11925" top="4155" type="Node" width="100">
+   <BOUNDS height="100" left="11550" top="4305" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="255" left="11925" top="4155" type="Box" width="615">
+   <BOUNDS height="255" left="11550" top="4305" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -777,9 +777,9 @@
    <NODE componentmode="InABox" id="250" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="1935" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="12825" left="660" top="1935" type="Box" width="4575">
+   <BOUNDS height="13260" left="660" top="1935" type="Box" width="4575">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A stupid agent is going for a random walk. The direction of every step he takes is randomly chosen out of these 8 possibilities. &cr;&lf;&cr;&lf;The vectors are being scaled down to result in more meaningful stepsizes for the given coordinate space. &cr;&lf;&cr;&lf;The mouse X position defines the drawing speed. The speed-value determines the number of steps taken per frame. &cr;&lf;&cr;&lf;For each step to be taken in a frame a random value is generated to chose from one of the 8 direction-vectors.&cr;&lf;----------------------------------------------------------&cr;&lf;Suppose there have to be 10 steps taken in a specific frame so there will be 10 vectors (i.e. 20 single values) one for each single step and each of the vectors depending on the previous ones. &cr;&lf;&cr;&lf;No we could draw them one after the other, one each frame but this way the drawing speed would depend completely on the framerate. So instead what this sample demonstrates is how you can draw multiple points whose position depends on each other, in one frame. &cr;&lf;&cr;&lf;In processing this is done with for-loop that is executed N-times (where N represents the drawing speed). In vvvv instead this can be realized by calculating the position of all new dots (of one frame) in parallel.&cr;&lf;----------------------------------------------------------&cr;&lf;Of the given spread of vectors for this frame GetSpread prepares a new spread consisting of consecutive slices of vectors for the first, followed by the first and second, followed be the first, second and third, and so on.&cr;&lf;&cr;&lf;Given that the + Spectral nodes compute the positions of each dot for this frame by summing up the first, the first and the second, the first, second and third, ... slices. &cr;&lf;In other words:&cr;&lf;- the position of the first dot is the first vector&cr;&lf;- the position of the second dot is the position of the first dot plus the second vector&cr;&lf;- the position of the third dot is the position of the second dot plus the third vector&cr;&lf;&cr;&lf;The resulting spread holds the positions for all dots to be drawn in this frame and now they are all offset by (ie. added to) the positon of the last dot drawn in the previous frame. &cr;&lf;&cr;&lf;Returns the last dots position. &cr;&lf;&cr;&lf;Prevent from the case where drawing speed = 0 and no dot is drawn.&cr;&lf;&cr;&lf;The last frames last dots position is being delayed by one frame and fed back to add up with the new dots positions.&cr;&lf;&cr;&lf;The dots are being constrained to the renderers coordinate system by wrapping exceeding values around.&cr;&lf;&cr;&lf;Real pixel-sized dots can be drawn by scaling a primitive to 0 size and setting the fillmode to &apos;Point&apos;.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A stupid agent is going for a random walk. The direction of every step he takes is randomly chosen out of these 8 possibilities. &cr;&lf;&cr;&lf;The vectors are being scaled down to result in more meaningful stepsizes for the given coordinate space. &cr;&lf;&cr;&lf;The mouse X position defines the drawing speed. The speed-value determines the number of steps taken per frame. &cr;&lf;&cr;&lf;For each step to be taken in a frame a random value is generated to chose from one of the 8 direction-vectors.&cr;&lf;----------------------------------------------------------&cr;&lf;Suppose there have to be 10 steps taken in a specific frame so there will be 10 vectors (i.e. 20 single values) one for each single step and each of the vectors depending on the previous ones. &cr;&lf;&cr;&lf;No we could draw them one after the other, one each frame but this way the drawing speed would depend completely on the framerate. So instead what this sample demonstrates is how you can draw multiple points whose position depends on each other, in one frame. &cr;&lf;&cr;&lf;In processing this is done with for-loop that is executed N-times (where N represents the drawing speed). In vvvv instead this can be realized by calculating the position of all new dots (of one frame) in parallel.&cr;&lf;----------------------------------------------------------&cr;&lf;Of the given spread of vectors for this frame GetSpread prepares a new spread consisting of consecutive slices of vectors for the first, followed by the first and second, followed be the first, second and third, and so on.&cr;&lf;&cr;&lf;Given that the + (Value Spectral) nodes compute the positions of each dot for this frame by summing up the first, the first and the second, the first, second and third, ... slices. &cr;&lf;In other words:&cr;&lf;- the position of the first dot is the first vector&cr;&lf;- the position of the second dot is the position of the first dot plus the second vector&cr;&lf;- the position of the third dot is the position of the second dot plus the third vector&cr;&lf;&cr;&lf;The resulting spread holds the positions for all dots to be drawn in this frame and now they are all offset by (ie. added to) the positon of the last dot drawn in the previous frame. &cr;&lf;&cr;&lf;Returns the last dots position. &cr;&lf;&cr;&lf;Prevent from the case where drawing speed = 0 and no dot is drawn by only returning a value as long as there are slices on the input.&cr;&lf;&cr;&lf;The last frames last dots position is being delayed by one frame and fed back to add up with the new dots positions.&cr;&lf;&cr;&lf;The dots are being constrained to the renderers coordinate system by wrapping exceeding values around.&cr;&lf;&cr;&lf;Real pixel-sized dots can be drawn by scaling a primitive to 0 size and setting the fillmode to &apos;Point&apos;.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -916,26 +916,26 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="252" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8895" top="4290" width="0" height="0">
+   <NODE componentmode="InABox" id="252" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8895" top="4290" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8895" top="4290" width="345" height="240">
+   <BOUNDS height="240" left="8895" top="4290" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="252" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Bin Size">
+   <LINK dstnodeid="32" dstpinname="Bin Size" srcnodeid="252" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="253" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9195" top="6705" type="Node" width="315">
+   <BOUNDS height="270" left="10485" top="9810" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="300" left="9195" top="6705" type="Box" width="345">
+   <BOUNDS height="300" left="10485" top="9810" type="Box" width="345">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="F1">
    </PIN>
@@ -948,29 +948,29 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="192" dstpinname="Input 1">
+   <LINK dstnodeid="192" dstpinname="Input 1" srcnodeid="34" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="199" dstpinname="Input">
+   <LINK dstnodeid="199" dstpinname="Input" srcnodeid="32" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="192" srcpinname="Output" dstnodeid="32" dstpinname="Input">
+   <LINK dstnodeid="32" dstpinname="Input" srcnodeid="192" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="254" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8595" top="10785" width="0" height="0">
+   <NODE componentmode="InABox" id="254" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="8595" top="10785" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8595" top="10785" width="345" height="240">
+   <BOUNDS height="240" left="8595" top="10785" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="254" srcpinname="Y Output Value" dstnodeid="213" dstpinname="Source Width">
+   <LINK dstnodeid="213" dstpinname="Source Width" srcnodeid="254" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="254" srcpinname="Y Output Value" dstnodeid="213" dstpinname="Destination Width">
+   <LINK dstnodeid="213" dstpinname="Destination Width" srcnodeid="254" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6735" top="1590" type="Node" width="315">
@@ -1005,9 +1005,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="257" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="15" top="13050" type="Node" width="315">
+   <BOUNDS height="270" left="15" top="13260" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="15" top="13050" type="Box" width="585">
+   <BOUNDS height="405" left="15" top="13260" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="10.">
    </PIN>
@@ -1037,9 +1037,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="261" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="15" top="13665" type="Node" width="315">
+   <BOUNDS height="270" left="15" top="13875" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="15" top="13665" type="Box" width="585">
+   <BOUNDS height="405" left="15" top="13875" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="11.">
    </PIN>
@@ -1053,9 +1053,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="262" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="15" top="14295" type="Node" width="315">
+   <BOUNDS height="270" left="15" top="14505" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="15" top="14295" type="Box" width="585">
+   <BOUNDS height="405" left="15" top="14505" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="12.">
    </PIN>
@@ -1242,6 +1242,38 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="274" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="9195" top="5670" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="300" left="9195" top="5670" type="Box" width="345">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="F1">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="275" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="10125" top="8415" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="300" left="10125" top="8415" type="Box" width="345">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="F1">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
    </PATCH>
