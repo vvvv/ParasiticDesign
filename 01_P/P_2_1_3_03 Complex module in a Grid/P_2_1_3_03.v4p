@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\P_2_1_3_03.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_03 Complex module in the Grid\P_2_1_3_03.v4p" systemname="P_2_1_3_03">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\P_2_1_3_03.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_03 Complex module in the Grid\P_2_1_3_03.v4p" systemname="P_2_1_3_03">
    <BOUNDS height="7110" left="2235" top="2370" type="Window" width="8940">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="4" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="2310" left="300" top="5880" type="Box" width="2415">
    </BOUNDS>
-   <BOUNDS height="9360" left="12120" top="2400" type="Window" width="9120">
+   <BOUNDS height="9360" left="11175" top="2370" type="Window" width="9120">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -34,6 +34,12 @@
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="8" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -100,10 +106,10 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="Case2.v4p" id="241" nodename="Case2.v4p" stayontop="1" systemname="Case2" path="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
+   <NODE componentmode="Hidden" filename="Case2.v4p" id="241" nodename="Case2.v4p" stayontop="1" systemname="Case2" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
    <BOUNDS height="100" left="3300" top="4695" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="11430" left="8130" top="2340" type="Window" width="14820">
+   <BOUNDS height="11430" left="12045" top="6180" type="Window" width="14820">
    </BOUNDS>
    <PIN pinname="MouseX" visible="1">
    </PIN>
@@ -120,7 +126,7 @@
    <PIN pinname="MouseXY" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="Case3.v4p" id="242" nodename="Case3.v4p" systemname="Case3" path="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
+   <NODE componentmode="Hidden" filename="Case3.v4p" id="242" nodename="Case3.v4p" systemname="Case3" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
    <BOUNDS height="100" left="4800" top="4695" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="11430" left="8130" top="2340" type="Window" width="14820">
@@ -170,7 +176,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="149" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="149" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
    <BOUNDS height="270" left="315" top="2490" type="Node" width="1560">
    </BOUNDS>
    <BOUNDS height="6375" left="14160" top="6915" type="Window" width="11010">
@@ -218,32 +224,16 @@
    </LINK>
    <LINK dstnodeid="246" dstpinname="Input 3" srcnodeid="242" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="269" nodename="GridSetup.v4p" systemname="GridSetup">
-   <BOUNDS height="100" left="1815" top="3045" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS left="1815" top="3045" type="Box">
-   </BOUNDS>
-   <PIN pinname="Resolution XY" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="10665" top="5670" width="8640" height="6390">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="241" dstpinname="Transform In" srcnodeid="269" srcpinname="Transform Out">
+   <LINK dstnodeid="246" dstpinname="Switch" srcnodeid="149" srcpinname="Case">
    </LINK>
-   <LINK dstnodeid="242" dstpinname="Transform In" srcnodeid="269" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="149" srcpinname="Resolution XY" dstnodeid="269" dstpinname="Resolution XY">
-   </LINK>
-   <LINK srcnodeid="149" srcpinname="Case" dstnodeid="246" dstpinname="Switch">
-   </LINK>
-   <NODE id="240" componentmode="Hidden" filename="Case1.v4p" nodename="Case1.v4p" systemname="Case1">
+   <NODE componentmode="Hidden" filename="Case1.v4p" id="240" nodename="Case1.v4p" systemname="Case1" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
    <PIN pinname="MouseXY" visible="1">
    </PIN>
    <PIN pinname=" Transform In" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="8130" top="2340" width="14820" height="11430">
+   <BOUNDS height="11430" left="10260" top="3135" type="Window" width="14820">
    </BOUNDS>
-   <BOUNDS type="Node" height="100" left="1815" top="4695" width="100">
+   <BOUNDS height="100" left="1815" top="4695" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="MouseX" visible="1">
    </PIN>
@@ -251,15 +241,35 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="1815" top="4695">
+   <BOUNDS left="1815" top="4695" type="Box">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="269" srcpinname="Transform Out" dstnodeid="240" dstpinname=" Transform In">
+   <LINK dstnodeid="240" dstpinname="MouseXY" hiddenwhenlocked="1" srcnodeid="260" srcpinname="XY">
    </LINK>
-   <LINK srcnodeid="260" srcpinname="XY" dstnodeid="240" dstpinname="MouseXY" hiddenwhenlocked="1">
+   <LINK dstnodeid="246" dstpinname="Input 1" srcnodeid="240" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="240" srcpinname="Layer" dstnodeid="246" dstpinname="Input 1">
+   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="273" nodename="GridSetup.v4p" systemname="GridSetup" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\">
+   <BOUNDS height="100" left="1815" top="3075" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS left="1815" top="3075" type="Box">
+   </BOUNDS>
+   <BOUNDS height="7905" left="10665" top="5670" type="Window" width="5700">
+   </BOUNDS>
+   <PIN pinname="Resolution XY" visible="1">
+   </PIN>
+   <PIN pinname="Scale" visible="1">
+   </PIN>
+   <PIN pinname="Transformation" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="273" dstpinname="Resolution XY" srcnodeid="149" srcpinname="Resolution XY">
+   </LINK>
+   <LINK dstnodeid="240" dstpinname=" Transform In" srcnodeid="273" srcpinname="Transformation">
+   </LINK>
+   <LINK dstnodeid="241" dstpinname="Transform In" srcnodeid="273" srcpinname="Transformation">
+   </LINK>
+   <LINK dstnodeid="242" dstpinname="Transform In" srcnodeid="273" srcpinname="Transformation">
    </LINK>
    </PATCH>

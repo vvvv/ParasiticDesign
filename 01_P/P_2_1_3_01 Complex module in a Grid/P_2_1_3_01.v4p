@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\P_2_1_3_01.v4p" systemname="P_2_1_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\P_2_1_3_01.v4p" systemname="P_2_1_3_01">
    <BOUNDS height="12150" left="0" top="0" type="Window" width="13785">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="6405" top="10860" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="12510" left="15840" top="0" type="Window" width="12240">
+   <BOUNDS height="12510" left="13800" top="0" type="Window" width="12240">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -35,13 +35,19 @@
    </PIN>
    <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
    </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="60" top="600" type="Node" width="840">
    </BOUNDS>
    <BOUNDS height="285" left="60" top="600" type="Box" width="4200">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|changing circle amount, size and position in a grid|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|changing circle amount, size and position in a grid|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -55,7 +61,7 @@
    </BOUNDS>
    <BOUNDS height="465" left="60" top="150" type="Box" width="4800">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|Complex module in a Grid|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Complex module in a Grid|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -69,7 +75,7 @@
    </BOUNDS>
    <BOUNDS height="1005" left="90" top="900" type="Box" width="3180">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x:&tab;circle amount and size&cr;&lf;position y:&tab;circle position&cr;&lf;left click:&tab;&tab;random position|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;position x:&tab;circle amount and size&cr;&lf;position y:&tab;circle position&cr;&lf;left click:&tab;&tab;random position|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -83,7 +89,7 @@
    </BOUNDS>
    <BOUNDS height="1005" left="3375" top="900" type="Box" width="1620">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;ctrl+2:&tab;save png|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;ctrl+2:&tab;save png|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -382,7 +388,7 @@
    </LINK>
    <LINK dstnodeid="98" dstpinname="Y" srcnodeid="67" srcpinname="Y">
    </LINK>
-   <NODE componentmode="Hidden" filename="DrawModule.v4p" id="77" nodename="DrawModule.v4p" systemname="DrawModule" path="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\">
+   <NODE componentmode="Hidden" filename="DrawModule.v4p" id="77" nodename="DrawModule.v4p" systemname="DrawModule" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\">
    <BOUNDS height="270" left="6405" top="10275" type="Node" width="6210">
    </BOUNDS>
    <PIN pinname="SpreadCount" visible="1">
@@ -393,7 +399,7 @@
    </PIN>
    <BOUNDS left="6405" top="10275" type="Box">
    </BOUNDS>
-   <BOUNDS height="9990" left="7680" top="1905" type="Window" width="16350">
+   <BOUNDS height="9990" left="7650" top="4395" type="Window" width="18435">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -416,7 +422,7 @@
    </LINK>
    <LINK dstnodeid="77" dstpinname="Circle Count" srcnodeid="74" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="77" dstpinname="MouseXY" srcnodeid="98" srcpinname="XY" hiddenwhenlocked="0">
+   <LINK dstnodeid="77" dstpinname="MouseXY" hiddenwhenlocked="0" srcnodeid="98" srcpinname="XY">
    </LINK>
    <NODE componentmode="InABox" id="106" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="705" top="2370" type="Node" width="7425">
@@ -624,6 +630,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Y Out" dstnodeid="73" dstpinname="Input">
+   <LINK dstnodeid="73" dstpinname="Input" srcnodeid="54" srcpinname="Y Out">
    </LINK>
    </PATCH>
