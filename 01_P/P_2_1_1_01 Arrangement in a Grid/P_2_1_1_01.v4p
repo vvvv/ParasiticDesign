@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_01 Arrangement in a Grid\P_2_1_1_01.v4p">
-   <BOUNDS height="12075" left="0" top="0" type="Window" width="15675">
+   <BOUNDS height="15330" left="-2835" top="375" type="Window" width="17325">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="75" top="480" type="Node" width="840">
@@ -195,9 +195,9 @@
    <LINK dstnodeid="36" dstpinname="Input" srcnodeid="103" srcpinname="Output">
    </LINK>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="114" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6375" top="11040" type="Node" width="1890">
+   <BOUNDS height="270" left="6465" top="12750" type="Node" width="1890">
    </BOUNDS>
-   <BOUNDS height="1800" left="6375" top="11040" type="Box" width="2400">
+   <BOUNDS height="1800" left="6465" top="12750" type="Box" width="2400">
    </BOUNDS>
    <BOUNDS height="9510" left="15675" top="0" type="Window" width="9240">
    </BOUNDS>
@@ -444,8 +444,8 @@
    </LINK>
    <LINK dstnodeid="36" dstpinname="Select" srcnodeid="196" srcpinname="Count">
    </LINK>
-   <NODE componentmode="Hidden" filename="Stroke (EX9).v4p" id="188" nodename="Stroke (EX9)" systemname="Stroke (EX9)">
-   <BOUNDS height="270" left="6375" top="10485" type="Node" width="5175">
+   <NODE componentmode="InAWindow" filename="Stroke (EX9).v4p" id="188" nodename="Stroke (EX9)" systemname="Stroke (EX9)">
+   <BOUNDS height="270" left="9645" top="11220" type="Node" width="5175">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -459,17 +459,15 @@
    </PIN>
    <PIN pinname="Weight" visible="1">
    </PIN>
-   <BOUNDS height="11475" left="11130" top="3480" type="Window" width="13275">
+   <BOUNDS height="11475" left="-195" top="1590" type="Window" width="13275">
    </BOUNDS>
    <PIN pinname="Cap Resolution" slicecount="1" values="10">
    </PIN>
    <PIN pinname="Stroke Cap" visible="1">
    </PIN>
-   <BOUNDS left="6375" top="10485" type="Box">
+   <BOUNDS left="9645" top="11220" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="114" dstpinname="Layers" srcnodeid="188" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="188" dstpinname="FromXY" srcnodeid="189" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="188" dstpinname="ToXY" srcnodeid="191" srcpinname="Y Output Value">
@@ -477,7 +475,7 @@
    <LINK dstnodeid="188" dstpinname="Weight" srcnodeid="193" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="188" dstpinname="Stroke Cap" srcnodeid="197" srcpinname="Enum">
-   <LINKPOINT x="13470" y="9690">
+   <LINKPOINT x="15105" y="10058">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="210" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -745,5 +743,31 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="199" dstpinname="Input" srcnodeid="198" srcpinname="Keyboard Output">
+   </LINK>
+   <NODE systemname="stroke_study" filename="stroke_study.v4p" nodename="stroke_study.v4p" componentmode="InAWindow" id="223">
+   <BOUNDS type="Node" left="6915" top="11475" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13725" top="390" width="19440" height="15270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="From XY" visible="1">
+   </PIN>
+   <PIN pinname="To XY" visible="1">
+   </PIN>
+   <PIN pinname="Weight" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="223" srcpinname="Layer" dstnodeid="114" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="183" srcpinname="Transform Out" dstnodeid="223" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="223" dstpinname="From XY">
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="223" dstpinname="To XY">
+   </LINK>
+   <LINK srcnodeid="193" srcpinname="Output" dstnodeid="223" dstpinname="Weight">
    </LINK>
    </PATCH>
