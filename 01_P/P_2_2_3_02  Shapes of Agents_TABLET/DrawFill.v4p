@@ -1,0 +1,153 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\DrawFill.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\Case2.v4p" systemname="Case2">
+   <BOUNDS height="6615" left="15735" top="4320" type="Window" width="4965">
+   </BOUNDS>
+   <NODE componentmode="Hidden" filename="%VVVV%\effects\Constant.fx" id="8" nodename=":EFFECTS:\Constant.fx" systemname="Constant (EX9.Effect)">
+   <BOUNDS height="0" left="675" top="4815" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="6000" left="675" top="4815" type="Box" width="6000">
+   </BOUNDS>
+   <BOUNDS height="12000" left="4035" top="6435" type="Window" width="12000">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Render State" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\2dMeshNodes.dll" id="7" nodename="2dMeshNodes.dll|VVVV.Nodes.Polygon2dNode" systemname="Polygon (EX9.Geometry 2d)">
+   <BOUNDS height="270" left="840" top="3075" type="Node" width="735">
+   </BOUNDS>
+   <BOUNDS height="0" left="840" top="3075" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4080" top="5520" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="VerticesXY" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Vertices Count" visible="1">
+   </PIN>
+   <PIN pinname="Vertex Count" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="270" left="1530" top="1560" type="Node" width="630">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
+   <BOUNDS height="100" left="1515" top="2130" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="X" srcnodeid="6" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="5" dstpinname="Y" srcnodeid="6" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="VerticesXY" srcnodeid="5" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Mesh" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="2" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
+   <BOUNDS height="100" left="1155" top="4260" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Color" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Random (Value)" systemname="Random (Value)">
+   <BOUNDS height="100" left="1515" top="3795" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Value" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="10" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="975" top="510" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="975" top="510" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Transform" srcnodeid="10" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="11" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="1530" top="1065" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1530" top="1065" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYZ">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="XYZ" linkstyle="PolyLine" srcnodeid="11" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="12" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="675" top="5445" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="675" top="5445" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Input Node" srcnodeid="8" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="15" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="2385" top="3795" type="Node" width="3045">
+   </BOUNDS>
+   <BOUNDS height="585" left="2385" top="3795" type="Box" width="1920">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; Every frame a random grayscale value is chosen. |">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="17" nodename="Count (Value)" systemname="Count (Value)">
+   <BOUNDS height="100" left="1515" top="2655" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="5" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Vertex Count" srcnodeid="17" srcpinname="Count">
+   </LINK>
+   </PATCH>
