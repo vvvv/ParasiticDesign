@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\QueueCircles.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
-   <BOUNDS height="8280" left="1275" top="4560" type="Window" width="12450">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\QueueCircles.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
+   <BOUNDS height="8280" left="12030" top="4935" type="Window" width="12450">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="1" nodename="Queue (Spreads)" systemname="Queue (Spreads)">
    <BOUNDS height="100" left="5070" top="4140" type="Node" width="100">
@@ -94,6 +94,8 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="5" dstpinname="Input 1" srcnodeid="1" srcpinname="Output">
@@ -219,9 +221,9 @@
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="615" top="315" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="1650" left="615" top="315" type="Box" width="3810">
+   <BOUNDS height="2475" left="615" top="315" type="Box" width="3780">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Incoming position and radius are being appended to a spread of up to 1000 slices using Queue (Spreads) nodes.&cr;&lf;&cr;&lf;When the queue reaches its maximum capacity (1000) the FlipFlop (Animation) is reset and the queues stop inserting more values. |">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Incoming position and radius are being appended to a spread of up to 1000 slices using Queue (Spreads) nodes.&cr;&lf;&cr;&lf;When the queue reaches its maximum capacity (1000) the FlipFlop (Animation) is reset and the queues stop inserting more values. &cr;&lf;&cr;&lf;The FrameDelay (Animation) nodes make sure that after reset an initial circle with radius 0 and position (0/0) is returned by this patch.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -247,9 +249,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="19" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="930" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="1155" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="930" type="Box" width="420">
+   <BOUNDS height="405" left="165" top="1155" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -410,6 +412,38 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="27" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="165" top="1980" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="165" top="1980" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="28" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4485" top="5655" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="4485" top="5655" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
    </PATCH>
