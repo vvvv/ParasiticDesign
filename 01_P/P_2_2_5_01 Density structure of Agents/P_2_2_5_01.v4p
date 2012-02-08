@@ -7,7 +7,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="8685" top="8310" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8190" left="19395" top="0" type="Window" width="7920">
+   <BOUNDS height="8190" left="12750" top="0" type="Window" width="7920">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -46,7 +46,7 @@
    </LINK>
    <LINK dstnodeid="2" dstpinname="Aspect Height" srcnodeid="0" srcpinname="Actual Backbuffer Height">
    </LINK>
-   <NODE componentmode="Hidden" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)" hiddenwhenlocked="1">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
    <BOUNDS height="100" left="7680" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -56,7 +56,7 @@
    <PIN pinname="Initialize" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)" hiddenwhenlocked="1">
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
    <BOUNDS height="100" left="10380" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -212,12 +212,12 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="CreateCircle" filename="CreateCircle.v4p" componentmode="Hidden" id="87" nodename="CreateCircle.v4p">
-   <BOUNDS type="Node" left="8985" top="2310" width="100" height="100">
+   <NODE componentmode="Hidden" filename="CreateCircle.v4p" id="87" nodename="CreateCircle.v4p" systemname="CreateCircle">
+   <BOUNDS height="100" left="8985" top="2310" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8985" top="2310" width="4800" height="3600">
+   <BOUNDS height="3600" left="8985" top="2310" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS type="Window" left="12765" top="4965" width="6960" height="5640">
+   <BOUNDS height="5640" left="12765" top="4965" type="Window" width="6960">
    </BOUNDS>
    <PIN pinname="ROI Size" visible="1">
    </PIN>
@@ -228,20 +228,20 @@
    <PIN pinname="New Position" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="80" srcpinname="Size" dstnodeid="87" dstpinname="ROI Size">
+   <LINK dstnodeid="87" dstpinname="ROI Size" srcnodeid="80" srcpinname="Size">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="XY" dstnodeid="87" dstpinname="ROI Center">
+   <LINK dstnodeid="87" dstpinname="ROI Center" srcnodeid="80" srcpinname="XY">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="Position" dstnodeid="18" dstpinname="XY">
+   <LINK dstnodeid="18" dstpinname="XY" srcnodeid="87" srcpinname="Position">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="Position" dstnodeid="13" dstpinname="Input">
+   <LINK dstnodeid="13" dstpinname="Input" srcnodeid="87" srcpinname="Position">
    </LINK>
-   <NODE systemname="PlaceCircle" filename="PlaceCircle.v4p" componentmode="Hidden" id="88" nodename="PlaceCircle.v4p">
-   <BOUNDS type="Node" left="8685" top="3510" width="1260" height="270">
+   <NODE componentmode="Hidden" filename="PlaceCircle.v4p" id="88" nodename="PlaceCircle.v4p" systemname="PlaceCircle">
+   <BOUNDS height="270" left="8685" top="3510" type="Node" width="1260">
    </BOUNDS>
-   <BOUNDS type="Box" left="8685" top="3510" width="4800" height="3600">
+   <BOUNDS height="3600" left="8685" top="3510" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS type="Window" left="13290" top="6390" width="9525" height="10050">
+   <BOUNDS height="10650" left="12960" top="3645" type="Window" width="13185">
    </BOUNDS>
    <PIN pinname="New Position" visible="1">
    </PIN>
@@ -258,28 +258,28 @@
    <PIN pinname="Closest Circle Position" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="87" srcpinname="New Position" dstnodeid="88" dstpinname="New Position">
+   <LINK dstnodeid="88" dstpinname="New Position" srcnodeid="87" srcpinname="New Position">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Output 1" dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier">
+   <LINK dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier" srcnodeid="26" srcpinname="Output 1">
    <LINKPOINT x="7170" y="6795">
    </LINKPOINT>
    <LINKPOINT x="6825" y="1935">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Position of closest Circle" dstnodeid="43" dstpinname="Input">
+   <LINK dstnodeid="43" dstpinname="Input" srcnodeid="88" srcpinname="Position of closest Circle">
    </LINK>
-   <LINK srcnodeid="27" srcpinname="Output 1" dstnodeid="88" dstpinname="All Radii" linkstyle="Bezier">
+   <LINK dstnodeid="88" dstpinname="All Radii" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1">
    <LINKPOINT x="12015" y="6840">
    </LINKPOINT>
    <LINKPOINT x="12270" y="2040">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="QueueCircles" filename="QueueCircles.v4p" componentmode="Hidden" id="89" nodename="QueueCircles.v4p">
-   <BOUNDS type="Node" left="8685" top="4455" width="100" height="100">
+   <NODE componentmode="Hidden" filename="QueueCircles.v4p" id="89" nodename="QueueCircles.v4p" systemname="QueueCircles">
+   <BOUNDS height="100" left="8685" top="4455" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8685" top="4455" width="4800" height="3600">
+   <BOUNDS height="3600" left="8685" top="4455" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS type="Window" left="14835" top="8010" width="10245" height="5910">
+   <BOUNDS height="6555" left="14835" top="8010" type="Window" width="10005">
    </BOUNDS>
    <PIN pinname="Closest Circle Position" visible="1">
    </PIN>
@@ -298,20 +298,20 @@
    <PIN pinname="Insert" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="88" srcpinname="Closest Circle Position" dstnodeid="89" dstpinname="Closest Circle Position">
+   <LINK dstnodeid="89" dstpinname="Closest Circle Position" srcnodeid="88" srcpinname="Closest Circle Position">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="New Position" dstnodeid="89" dstpinname="Position">
+   <LINK dstnodeid="89" dstpinname="Position" srcnodeid="87" srcpinname="New Position">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="New Radius" dstnodeid="89" dstpinname="Radius">
+   <LINK dstnodeid="89" dstpinname="Radius" srcnodeid="88" srcpinname="New Radius">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="10875" top="2520" width="0" height="0">
+   <NODE componentmode="InABox" id="90" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="10875" top="2520" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="10875" top="2520" width="480" height="480">
+   <BOUNDS height="480" left="10875" top="2520" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -324,18 +324,18 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Reset">
+   <LINK dstnodeid="89" dstpinname="Reset" srcnodeid="90" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Insert new Position" dstnodeid="89" dstpinname="Insert">
+   <LINK dstnodeid="89" dstpinname="Insert" srcnodeid="88" srcpinname="Insert new Position">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Positions" dstnodeid="26" dstpinname="Input 1">
+   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
    </LINK>
-   <NODE systemname="DrawCirclesAndLines" filename="DrawCirclesAndLines.v4p" componentmode="Hidden" id="91" nodename="DrawCirclesAndLines.v4p">
-   <BOUNDS type="Node" left="8685" top="7110" width="100" height="100">
+   <NODE componentmode="Hidden" filename="DrawCirclesAndLines.v4p" id="91" nodename="DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
+   <BOUNDS height="100" left="8685" top="7110" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8685" top="7110" width="4800" height="3600">
+   <BOUNDS height="3600" left="8685" top="7110" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS type="Window" left="13275" top="8040" width="9000" height="6000">
+   <BOUNDS height="6000" left="12750" top="8190" type="Window" width="9000">
    </BOUNDS>
    <PIN pinname="Closest Circle Positions" visible="1">
    </PIN>
@@ -346,11 +346,11 @@
    <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Closest Circle Positions" dstnodeid="91" dstpinname="Closest Circle Positions">
+   <LINK dstnodeid="91" dstpinname="Closest Circle Positions" srcnodeid="89" srcpinname="Closest Circle Positions">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Positions" dstnodeid="91" dstpinname="Positions">
+   <LINK dstnodeid="91" dstpinname="Positions" srcnodeid="89" srcpinname="Positions">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Radii" dstnodeid="91" dstpinname="Radii">
+   <LINK dstnodeid="91" dstpinname="Radii" srcnodeid="89" srcpinname="Radii">
    </LINK>
    <NODE componentmode="Hidden" id="92" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="8685" top="7860" type="Node" width="1500">
@@ -360,9 +360,9 @@
    </NODE>
    <LINK dstnodeid="0" dstpinname="Layers" srcnodeid="92" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="91" srcpinname="Layer" dstnodeid="92" dstpinname="Layer 1">
+   <LINK dstnodeid="92" dstpinname="Layer 1" srcnodeid="91" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="80" srcpinname="Layer" dstnodeid="92" dstpinname="Layer 2" hiddenwhenlocked="1">
+   <LINK dstnodeid="92" dstpinname="Layer 2" hiddenwhenlocked="1" srcnodeid="80" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="93" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="4710" type="Node" width="315">
@@ -460,12 +460,12 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="99" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="11415" top="2595" width="795" height="270">
+   <NODE componentmode="InABox" id="99" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="11415" top="2595" type="Node" width="795">
    </BOUNDS>
-   <BOUNDS type="Box" left="11415" top="2595" width="795" height="270">
+   <BOUNDS height="270" left="11415" top="2595" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; restart|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; restart|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -474,6 +474,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Radii" dstnodeid="27" dstpinname="Input 1">
+   <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
    </LINK>
    </PATCH>
