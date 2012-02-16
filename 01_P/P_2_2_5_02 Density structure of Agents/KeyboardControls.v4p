@@ -1,0 +1,229 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\KeyboardControls.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\KeyboardControl.v4p" systemname="KeyboardControl">
+   <BOUNDS height="5445" left="5760" top="7725" type="Window" width="8895">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="12" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
+   <BOUNDS height="270" left="705" top="990" type="Node" width="3555">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="f231">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="F Output" visible="1">
+   </PIN>
+   <PIN pinname="3 Output" visible="1">
+   </PIN>
+   <PIN pinname="2 Output" visible="1">
+   </PIN>
+   <PIN pinname="1 Output" visible="1">
+   </PIN>
+   <PIN pinname="&lt;UP&gt; Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="11" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="270" left="4185" top="2655" type="Node" width="420">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="10" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
+   <BOUNDS height="270" left="4545" top="2235" type="Node" width="720">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="11" dstpinname="Input 2" srcnodeid="10" srcpinname="Bang">
+   </LINK>
+   <NODE componentmode="Hidden" id="9" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="4185" top="3120" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="8" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="3030" top="3120" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="6" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="3015" top="1560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="12" srcpinname="3 Output">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="6" srcpinname="Up Edge">
+   </LINK>
+   <NODE componentmode="Hidden" id="5" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="1860" top="3120" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="4" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="1860" top="1560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="5" dstpinname="Input" srcnodeid="4" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="4" dstpinname="Input" srcnodeid="12" srcpinname="2 Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="OR (Boolean)" systemname="OR (Boolean)">
+   <BOUNDS height="270" left="705" top="2655" type="Node" width="420">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="2" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
+   <BOUNDS height="270" left="1050" top="2235" type="Node" width="720">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input 2" srcnodeid="2" srcpinname="Bang">
+   </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <BOUNDS height="100" left="705" top="3120" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="13" nodename="Keyboard (System Window)" systemname="Keyboard (System Window)">
+   <BOUNDS height="270" left="690" top="465" type="Node" width="795">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Input" srcnodeid="13" srcpinname="Keyboard Output">
+   </LINK>
+   <NODE componentmode="InABox" id="15" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="720" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="720" top="3660" type="Box" width="480">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="f">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="15" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1860" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="1860" top="3660" type="Box" width="480">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="16" dstpinname="Y Input Value" srcnodeid="5" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="17" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="3030" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="3030" top="3660" type="Box" width="480">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="17" dstpinname="Y Input Value" srcnodeid="8" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="InABox" id="18" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="4185" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="4185" top="3660" type="Box" width="480">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Y Input Value" srcnodeid="9" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="19" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="720" top="1560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="19" dstpinname="Input" srcnodeid="12" srcpinname="F Output">
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Input 1" srcnodeid="19" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="3" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="20" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="4185" top="1560" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Input" srcnodeid="12" srcpinname="1 Output">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Input 1" srcnodeid="20" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   </PATCH>
