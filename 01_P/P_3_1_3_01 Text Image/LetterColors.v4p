@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_3_01 Text Image\LetterColors.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\Color.v4p" systemname="Color">
-   <BOUNDS height="11265" left="9750" top="1710" type="Window" width="9630">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_3_01 Text Image\LetterColors.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\Color.v4p" systemname="Color">
+   <BOUNDS height="10260" left="15630" top="3420" type="Window" width="8490">
    </BOUNDS>
    <NODE componentmode="Hidden" id="4" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
    <BOUNDS height="100" left="1200" top="4680" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="|1 &lt;NUMPAD1&gt;|" encoded="0">
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|1 &lt;NUMPAD1&gt;|">
    </PIN>
    <PIN pinname="1 Output" visible="1">
    </PIN>
@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="2" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="270" left="1215" top="5235" type="Node" width="825">
+   <BOUNDS height="270" left="1200" top="5235" type="Node" width="825">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -29,7 +29,7 @@
    <LINK dstnodeid="2" dstpinname="Input 2" srcnodeid="4" srcpinname="&lt;NUMPAD1&gt; Output">
    </LINK>
    <NODE componentmode="Hidden" id="1" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="1215" top="5700" type="Node" width="100">
+   <BOUNDS height="100" left="1200" top="5700" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -39,7 +39,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="0" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
-   <BOUNDS height="100" left="1215" top="6240" type="Node" width="100">
+   <BOUNDS height="100" left="1200" top="6240" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -55,7 +55,7 @@
    <LINK dstnodeid="0" dstpinname="Input" srcnodeid="1" srcpinname="Up Edge">
    </LINK>
    <NODE componentmode="Hidden" id="14" nodename="RGB (Color Join)" systemname="RGB (Color Join)">
-   <BOUNDS height="100" left="765" top="7995" type="Node" width="100">
+   <BOUNDS height="100" left="1200" top="8430" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -64,6 +64,8 @@
    <PIN pinname="Green" slicecount="1" values="0.137254901960784">
    </PIN>
    <PIN pinname="Blue" slicecount="1" values="0.505882352941176">
+   </PIN>
+   <PIN pinname="Alpha" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="11" nodename="Find (String)" systemname="Find (String)">
@@ -80,32 +82,8 @@
    <PIN pinname="Count" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="8" nodename="Multiply (Value)" systemname="Multiply (Value)">
-   <BOUNDS height="100" left="2970" top="6915" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2955" top="6330" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2955" top="6330" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="8" dstpinname="Input 2" srcnodeid="7" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="6" nodename="Divide (Value)" systemname="Divide (Value)">
-   <BOUNDS height="100" left="2970" top="7440" type="Node" width="100">
+   <BOUNDS height="100" left="2970" top="6990" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -114,30 +92,14 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="8" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="3510" top="7005" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="3510" top="7005" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="255">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="6" dstpinname="Input 2" srcnodeid="5" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="17" nodename="IOBox (Color)" systemname="IOBox (Color)">
-   <BOUNDS height="100" left="585" top="9765" type="Node" width="100">
+   <BOUNDS height="100" left="1200" top="9000" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="495" left="585" top="9765" type="Box" width="900">
+   <BOUNDS height="495" left="1200" top="9000" type="Box" width="900">
    </BOUNDS>
    <PIN pinname="Color Input" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Color" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Color">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="18" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -149,7 +111,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Alphabet" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Alphabet">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="19" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -161,7 +123,7 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Text" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Text">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="32" nodename="Split (String)" systemname="Split (String)">
@@ -203,7 +165,7 @@
    </BOUNDS>
    <BOUNDS height="945" left="3900" top="4635" type="Box" width="3030">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Returns for each character/position in the text its corresponding occurance-count in the alphabet which is used to set its transparency.|" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; Returns for each character/position in the text its corresponding occurance-count in the alphabet which is used to set its transparency.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -211,20 +173,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="53" dstpinname="Index" srcnodeid="11" srcpinname="Position">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input 1" srcnodeid="53" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="58" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
-   <BOUNDS height="270" left="1410" top="8655" type="Node" width="780">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Alpha" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="58" dstpinname="Input" srcnodeid="14" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="59" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="4065" top="1875" type="Node" width="100">
@@ -253,7 +201,7 @@
    </BOUNDS>
    <BOUNDS height="525" left="3105" top="3540" type="Box" width="3690">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Returns the occurance-count for each of the alphabets letters in the text. |" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; Returns the occurance-count for each of the alphabets letters in the text. |">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -261,7 +209,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="63" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
-   <BOUNDS height="270" left="2115" top="7995" type="Node" width="1755">
+   <BOUNDS height="270" left="1200" top="7830" type="Node" width="2970">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -272,32 +220,28 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="64" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="3405" top="7455" type="Node" width="100">
+   <NODE componentmode="InABox" id="64" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="4110" top="7470" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="3405" top="7455" type="Box" width="450">
+   <BOUNDS height="240" left="4110" top="7470" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
+   <PIN pinname="Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="58" dstpinname="Alpha" srcnodeid="63" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="17" dstpinname="Color Input" srcnodeid="58" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="65" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="1185" top="285" type="Node" width="100">
+   <BOUNDS height="100" left="1200" top="285" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1185" top="285" type="Box" width="795">
+   <BOUNDS height="240" left="1200" top="285" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Keyboard Input|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Keyboard Input|">
    </PIN>
    </NODE>
    <LINK dstnodeid="4" dstpinname="Input" srcnodeid="65" srcpinname="Output String">
@@ -305,10 +249,10 @@
    <NODE componentmode="Hidden" id="68" nodename="Find (String)" systemname="Find (String)">
    <BOUNDS height="100" left="2565" top="3540" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="68" dstpinname="Substring" srcnodeid="48" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="68" dstpinname="Input" srcnodeid="19" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="53" dstpinname="Input" srcnodeid="68" srcpinname="Count">
    </LINK>
@@ -320,16 +264,46 @@
    </LINK>
    <LINK dstnodeid="63" dstpinname="Switch" srcnodeid="0" srcpinname="Output">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="69" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="4410" top="2235" width="5190" height="270">
+   <NODE componentmode="InABox" id="69" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="4410" top="2235" type="Node" width="5190">
    </BOUNDS>
-   <BOUNDS type="Box" left="4410" top="2235" width="3720" height="1020">
+   <BOUNDS height="1020" left="4410" top="2235" type="Box" width="3720">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt;&lt; Returns the position of each of the texts characters in the alphabet. i.e. a 0-based index into the characters of the alphabet for each letter of the text. |" encoded="0">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; Returns the position of each of the texts characters in the alphabet. i.e. a 0-based index into the characters of the alphabet for each letter of the text. |">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <LINK dstnodeid="17" dstpinname="Color Input" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="14" dstpinname="Alpha" srcnodeid="63" srcpinname="Output">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="2550" top="1215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Output String" dstnodeid="70" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="68" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="3120" top="6375" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="71" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Maximum" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
    </PATCH>
