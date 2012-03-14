@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush_TABLET\KeyboardControls.v4p">
    <BOUNDS height="11430" left="3150" top="2385" type="Window" width="22605">
    </BOUNDS>
@@ -192,8 +192,6 @@
    <PIN pinname="Bang" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="32" dstpinname="Input 3" srcnodeid="34" srcpinname="Bang">
-   </LINK>
    <NODE componentmode="InABox" id="35" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="4425" top="1650" type="Node" width="4980">
    </BOUNDS>
@@ -383,7 +381,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -403,7 +401,7 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -758,9 +756,9 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="60" srcpinname="&lt;RIGHT&gt; Output" dstnodeid="55" dstpinname="Y Input Value">
+   <LINK dstnodeid="55" dstpinname="Y Input Value" srcnodeid="60" srcpinname="&lt;RIGHT&gt; Output">
    </LINK>
-   <LINK srcnodeid="60" srcpinname="&lt;LEFT&gt; Output" dstnodeid="54" dstpinname="Y Input Value">
+   <LINK dstnodeid="54" dstpinname="Y Input Value" srcnodeid="60" srcpinname="&lt;LEFT&gt; Output">
    </LINK>
    <NODE componentmode="InABox" id="109" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="8880" top="1920" type="Node" width="100">
@@ -944,8 +942,8 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="117">
-   <BOUNDS type="Node" left="7290" top="3900" width="100" height="100">
+   <NODE componentmode="Hidden" id="117" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
+   <BOUNDS height="100" left="7290" top="3900" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -954,18 +952,18 @@
    <PIN pinname="Down Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="115" srcpinname="Output" dstnodeid="117" dstpinname="Input">
+   <LINK dstnodeid="117" dstpinname="Input" srcnodeid="115" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="117" srcpinname="Up Edge" dstnodeid="112" dstpinname="Input">
+   <LINK dstnodeid="112" dstpinname="Input" srcnodeid="117" srcpinname="Up Edge">
    </LINK>
-   <LINK srcnodeid="117" srcpinname="Down Edge" dstnodeid="112" dstpinname="Reset">
+   <LINK dstnodeid="112" dstpinname="Reset" srcnodeid="117" srcpinname="Down Edge">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="121" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="1710" top="4305" width="0" height="0">
+   <NODE componentmode="InABox" id="121" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="1710" top="4305" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1710" top="4305" width="480" height="480">
+   <BOUNDS height="480" left="1710" top="4305" type="Box" width="480">
    </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -974,6 +972,18 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    </NODE>
-   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="121" dstpinname="Y Input Value">
+   <LINK dstnodeid="121" dstpinname="Y Input Value" srcnodeid="21" srcpinname="Output">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="122">
+   <BOUNDS type="Node" left="3600" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Bang" dstnodeid="122" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Output" dstnodeid="32" dstpinname="Input 3">
    </LINK>
    </PATCH>

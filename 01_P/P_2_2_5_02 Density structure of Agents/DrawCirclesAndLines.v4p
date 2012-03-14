@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
    <BOUNDS height="5565" left="7485" top="6990" type="Window" width="14370">
    </BOUNDS>
@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS height="330" left="7140" top="2550" type="Box" width="630">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" values="|0.58594,0.58594,0.58594,1.00000|" visible="1">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.58594,0.58594,0.58594,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -242,14 +242,14 @@
    </NODE>
    <LINK dstnodeid="11" dstpinname="Inner Radius" srcnodeid="17" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="11625" top="270" width="0" height="0">
+   <NODE componentmode="InABox" id="19" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="11625" top="270" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="11625" top="270" width="480" height="480">
+   <BOUNDS height="480" left="11625" top="270" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -257,19 +257,19 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Enable Lines|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Enable Lines|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled" hiddenwhenlocked="1">
+   <LINK dstnodeid="7" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Y Output Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="12900" top="270" width="0" height="0">
+   <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="12900" top="270" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="12900" top="270" width="480" height="480">
+   <BOUNDS height="480" left="12900" top="270" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -277,25 +277,25 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Enable Circles|" encoded="0">
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Enable Circles|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Enabled" hiddenwhenlocked="1">
+   <LINK dstnodeid="11" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="20" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="Fill (EX9.RenderState)" nodename="Fill (EX9.RenderState)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="8385" top="2655" width="100" height="100">
+   <NODE componentmode="Hidden" id="22" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
+   <BOUNDS height="100" left="8385" top="2655" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Render State Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="22" srcpinname="Render State Out" dstnodeid="11" dstpinname="Render State">
+   <LINK dstnodeid="11" dstpinname="Render State" srcnodeid="22" srcpinname="Render State Out">
    </LINK>
    <NODE componentmode="InABox" id="28" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="630" top="450" type="Node" width="7425">
    </BOUNDS>
    <BOUNDS height="1815" left="630" top="450" type="Box" width="3450">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Draws Lines from between circles and their closest neighbours.&cr;&lf;&cr;&lf;Draws circles. Inner Radius of the Segement defines here thickness of the circle.&cr;&lf;&cr;&lf;Radius multiplied by 2 gives diameter and scaling factor for the Transform of the circles.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Draws Lines between a circle and its closest neighbours.&cr;&lf;&cr;&lf;Draws circles. Inner Radius of the Segement defines here thickness of the circle.&cr;&lf;&cr;&lf;Radius multiplied by 2 gives diameter and scaling factor for the Transform of the circles.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
