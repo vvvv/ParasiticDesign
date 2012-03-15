@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\P_2_2_5_01.v4p" filename="0.v4p ////" systemname="0.v4p ////">
-   <BOUNDS height="9735" left="0" top="0" type="Window" width="12750">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\P_2_2_5_01.v4p" filename="0.v4p ////" systemname="0.v4p ////">
+   <BOUNDS height="9735" left="345" top="375" type="Window" width="12750">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="8685" top="8310" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="8685" top="8310" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8190" left="12750" top="0" type="Window" width="7920">
+   <BOUNDS height="8190" left="13095" top="375" type="Window" width="7920">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -19,13 +19,13 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
@@ -46,7 +46,7 @@
    </LINK>
    <LINK dstnodeid="2" dstpinname="Aspect Height" srcnodeid="0" srcpinname="Actual Backbuffer Height">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
    <BOUNDS height="100" left="7680" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -56,7 +56,7 @@
    <PIN pinname="Initialize" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
    <BOUNDS height="100" left="10380" top="5160" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS height="3030" left="585" top="2190" type="Box" width="4095">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Creates a random position (XY) for a new circle in a given region of interest. &cr;&lf;&cr;&lf;Defines the region of interest.&cr;&lf;&cr;&lf;Checks if the new position intersects with any of the existing circles. If not, it looks for the closest circle and chooses a radius so that the new circle touches its closest circle.&cr;&lf;&cr;&lf;Queues positions and radii of circles.&cr;&lf;&cr;&lf;Draws circles and lines to their closest neighbouring circle.&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Creates a random position (XY) for a new circle in a given region of interest. &cr;&lf;&cr;&lf;Defines the region of interest.&cr;&lf;&cr;&lf;Checks if the new position intersects with any of the existing circles. If not, it looks for the closest circle and chooses a radius so that the new circle touches its closest circle.&cr;&lf;&cr;&lf;Queues positions and radii of circles.&cr;&lf;&cr;&lf;Draws circles and lines.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -241,7 +241,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="8685" top="3510" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="10650" left="12960" top="3645" type="Window" width="13185">
+   <BOUNDS height="10650" left="12975" top="5985" type="Window" width="13185">
    </BOUNDS>
    <PIN pinname="New Position" visible="1">
    </PIN>
@@ -261,14 +261,14 @@
    <LINK dstnodeid="88" dstpinname="New Position" srcnodeid="87" srcpinname="New Position">
    </LINK>
    <LINK dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier" srcnodeid="26" srcpinname="Output 1">
-   <LINKPOINT x="7170" y="6795">
+   <LINKPOINT x="6690" y="6675">
    </LINKPOINT>
    <LINKPOINT x="6825" y="1935">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="43" dstpinname="Input" srcnodeid="88" srcpinname="Position of closest Circle">
    </LINK>
-   <LINK dstnodeid="88" dstpinname="All Radii" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1">
+   <LINK dstnodeid="88" dstpinname="All Radii" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1" hiddenwhenlocked="0">
    <LINKPOINT x="12015" y="6840">
    </LINKPOINT>
    <LINKPOINT x="12270" y="2040">
@@ -289,9 +289,9 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enable Lines">
+   <PIN pinname="Enable Lines" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Enable Circles">
+   <PIN pinname="Enable Circles" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="92" nodename="Group (EX9)" systemname="Group (EX9)">
@@ -498,11 +498,11 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
    </LINK>
-   <LINK dstnodeid="91" dstpinname="Radii" srcnodeid="89" srcpinname="Radii">
+   <LINK dstnodeid="91" dstpinname="Radii" srcnodeid="89" srcpinname="Radii" hiddenwhenlocked="0">
    </LINK>
-   <LINK dstnodeid="91" dstpinname="Positions" srcnodeid="89" srcpinname="Positions">
+   <LINK dstnodeid="91" dstpinname="Positions" srcnodeid="89" srcpinname="Positions" hiddenwhenlocked="0">
    </LINK>
-   <LINK dstnodeid="91" dstpinname="Closest Circle Positions" srcnodeid="89" srcpinname="Closest Circle Positions">
+   <LINK dstnodeid="91" dstpinname="Closest Circle Positions" srcnodeid="89" srcpinname="Closest Circle Positions" hiddenwhenlocked="0">
    </LINK>
    <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
    </LINK>
@@ -515,41 +515,5 @@
    <LINK dstnodeid="89" dstpinname="Closest Circle Position" srcnodeid="88" srcpinname="Closest Circle Position">
    </LINK>
    <LINK dstnodeid="89" dstpinname="Max Count" srcnodeid="101" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="104" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="10590" top="6300" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="10590" top="6300" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="91" dstpinname="Enable Lines" srcnodeid="104" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="105" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="11205" top="6330" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="480" left="11205" top="6330" type="Box" width="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="91" dstpinname="Enable Circles" srcnodeid="105" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

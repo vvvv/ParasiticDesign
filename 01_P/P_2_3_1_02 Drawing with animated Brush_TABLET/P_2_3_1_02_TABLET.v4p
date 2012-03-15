@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush_TABLET\P_2_3_1_02_TABLET.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush\P_2_3_1_02_2.v4p" systemname="P_2_3_1_02_2">
-   <BOUNDS height="15135" left="150" top="120" type="Window" width="17250">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush_TABLET\P_2_3_1_02_TABLET.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush\P_2_3_1_02_2.v4p" systemname="P_2_3_1_02_2">
+   <BOUNDS height="15555" left="330" top="270" type="Window" width="17310">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
@@ -33,9 +33,9 @@
    <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="75" top="750" type="Node" width="840">
    </BOUNDS>
-   <BOUNDS height="1380" left="75" top="750" type="Box" width="2085">
+   <BOUNDS height="1380" left="75" top="750" type="Box" width="1845">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|TABLET&cr;&lf;drag           : draw&cr;&lf;pressure&tab;  : module width|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|TABLET&cr;&lf;drag:&tab;draw&cr;&lf;pressure:&tab;module width|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -45,11 +45,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2235" top="750" type="Node" width="840">
+   <BOUNDS height="270" left="2025" top="750" type="Node" width="840">
    </BOUNDS>
-   <BOUNDS height="1380" left="2235" top="750" type="Box" width="3660">
+   <BOUNDS height="1380" left="2025" top="750" type="Box" width="3165">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;1-4             &tab;: switch default colors&cr;&lf;5-9               &tab;: switch brush element&cr;&lf;del, backspace  &tab;: clear screen&cr;&lf;d           &tab;&tab;: reverse direction and                                               mirrow angle &cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;1-4:&tab;&tab;switch default colors&cr;&lf;5-9:&tab;&tab;switch brush element&cr;&lf;del, backspace:&tab;clear screen&cr;&lf;d:&tab;&tab;reverse direction and                                    mirrow angle &cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -59,11 +59,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="55" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5970" top="750" type="Node" width="840">
+   <BOUNDS height="270" left="5295" top="750" type="Node" width="840">
    </BOUNDS>
-   <BOUNDS height="1380" left="5970" top="750" type="Box" width="3330">
+   <BOUNDS height="1380" left="5295" top="750" type="Box" width="3330">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|space &tab;&tab;: new random color&cr;&lf;arrow left       &tab;: rotaion speed -&cr;&lf;arrow right         &tab;: rotaion speed +&cr;&lf;p&tab;&tab;: toggle pressure on/off&cr;&lf;shift&tab;&tab;: limit drawing direction&cr;&lf;ctrl+2                   &tab;: save png|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|space:&tab;&tab;new random color&cr;&lf;arrow left:&tab;rotaion speed -&cr;&lf;arrow right:&tab;rotaion speed +&cr;&lf;p:&tab;&tab;toggle pressure on/off&cr;&lf;shift:&tab;&tab;limit drawing direction&cr;&lf;ctrl+2:&tab;&tab;save png|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -197,7 +197,7 @@
    </BOUNDS>
    <BOUNDS height="6015" left="630" top="2760" type="Box" width="4140">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A Tablet is used insted of mouse with it&apos;s additional pressure information.&cr;&lf;&cr;&lf;If a pressure is greater than zero, then the LFO will NOT be paused and the textured Quads will be enabled and drawn.&cr;&lf;&cr;&lf;Pressure information is mapped to a proper range and used as a scaling factor for the Quad, affecting the size of the drawing element.&cr;&lf;&cr;&lf;If Shift is pressed drawing is constrained to one or another direction.&cr;&lf;&cr;&lf;2-pass rendering is used to show the Cursor and the actual drawing.&cr;&lf;&cr;&lf;Drawing is made to a Renderer wich has a Clear pin set to 0, output window is hidden and everything is saved as a Texture.&cr;&lf;&cr;&lf;This texture is then applied to a Quad which fills the whole rendering window and a Cursor is drawn afterwards. Now everything is send to a second Renderer with it&apos;s Clear pin set to 1 (so the Cursor leaves no trail) and the Rendering window is one on the right.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A Tablet is used insted of mouse with it&apos;s additional pressure information.&cr;&lf;&cr;&lf;When pressure is greater than zero, the LFO will NOT be paused (ie. will run) and the textured Quads will be enabled and drawn.&cr;&lf;&cr;&lf;Pressure information is mapped to a proper range and used as a scaling factor for the Quad, affecting the size of the drawing element.&cr;&lf;&cr;&lf;If Shift is pressed drawing is constrained to one or another direction.&cr;&lf;&cr;&lf;2-pass rendering is used to show the Cursor and the actual drawing.&cr;&lf;&cr;&lf;Drawing is made to a Renderer which has its Clear pin set to 0, output window is hidden and everything is rendered as a Texture.&cr;&lf;&cr;&lf;This texture is then applied to a Quad which fills the whole rendering window and a Cursor is drawn afterwards. Now everything is sent to a second Renderer with it&apos;s Clear pin set to 1 (so the Cursor leaves no trail) and the Rendering window is the one on the right.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -493,7 +493,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="7380" top="14640" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8910" left="15375" top="510" type="Window" width="9660">
+   <BOUNDS height="8910" left="17640" top="270" type="Window" width="9660">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -501,28 +501,12 @@
    </PIN>
    <PIN pinname="Actual Backbuffer Height" visible="1">
    </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
+   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK dstnodeid="265" dstpinname="Layers" srcnodeid="263" srcpinname="Layer">
-   </LINK>
-   <NODE componentmode="Hidden" id="266" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="9120" top="14655" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="266" dstpinname="Aspect Width" srcnodeid="265" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="266" dstpinname="Aspect Height" srcnodeid="265" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="265" dstpinname="Aspect Ratio" srcnodeid="266" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\Tablet.dll" id="270" nodename="Tablet (Devices Wintab)" systemname="Tablet (Devices Wintab)">
    <BOUNDS height="270" left="6510" top="3105" type="Node" width="1950">
@@ -839,7 +823,7 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="271" dstpinname="Mouse XYZ" srcnodeid="252" srcpinname="XY">
-   <LINKPOINT x="5985" y="11175">
+   <LINKPOINT x="5940" y="11100">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="294" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -867,7 +851,7 @@
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
-   <BOUNDS height="9675" left="5595" top="585" type="Window" width="11985">
+   <BOUNDS height="8730" left="5595" top="585" type="Window" width="11970">
    </BOUNDS>
    <BOUNDS height="100" left="6675" top="5565" type="Node" width="100">
    </BOUNDS>
@@ -1043,9 +1027,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="305" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="8685" top="12285" type="Node" width="0">
+   <BOUNDS height="0" left="8625" top="12210" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="8685" top="12285" type="Box" width="345">
+   <BOUNDS height="240" left="8625" top="12210" type="Box" width="375">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
