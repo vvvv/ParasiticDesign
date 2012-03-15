@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\P_2_2_5_01.v4p" filename="0.v4p ////" systemname="0.v4p ////">
    <BOUNDS height="9735" left="0" top="0" type="Window" width="12750">
    </BOUNDS>
@@ -289,6 +289,10 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="Enable Lines">
+   </PIN>
+   <PIN pinname="Enable Circles">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="92" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="8685" top="7860" type="Node" width="2730">
@@ -464,7 +468,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE id="89" componentmode="Hidden" filename="QueueCircles.v4p" nodename="QueueCircles.v4p" systemname="QueueCircles">
+   <NODE componentmode="Hidden" filename="QueueCircles.v4p" id="89" nodename="QueueCircles.v4p" systemname="QueueCircles">
    <PIN pinname="Closest Circle Position" visible="1">
    </PIN>
    <PIN pinname="Position" visible="1">
@@ -475,9 +479,9 @@
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="5190" top="8070" width="12495" height="6555">
+   <BOUNDS height="6555" left="5190" top="8070" type="Window" width="12495">
    </BOUNDS>
-   <BOUNDS type="Node" width="1260" height="270" left="8685" top="4455">
+   <BOUNDS height="270" left="8685" top="4455" type="Node" width="1260">
    </BOUNDS>
    <PIN pinname="Radii" visible="1">
    </PIN>
@@ -485,31 +489,67 @@
    </PIN>
    <PIN pinname="Closest Circle Positions" visible="1">
    </PIN>
-   <BOUNDS type="Box" height="3600" left="8685" top="4455" width="4800">
+   <BOUNDS height="3600" left="8685" top="4455" type="Box" width="4800">
    </BOUNDS>
    <PIN pinname="Max Count" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="103" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Reset">
+   <LINK dstnodeid="89" dstpinname="Reset" srcnodeid="103" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Radii" dstnodeid="27" dstpinname="Input 1">
+   <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Radii" dstnodeid="91" dstpinname="Radii">
+   <LINK dstnodeid="91" dstpinname="Radii" srcnodeid="89" srcpinname="Radii">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Positions" dstnodeid="91" dstpinname="Positions">
+   <LINK dstnodeid="91" dstpinname="Positions" srcnodeid="89" srcpinname="Positions">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Closest Circle Positions" dstnodeid="91" dstpinname="Closest Circle Positions">
+   <LINK dstnodeid="91" dstpinname="Closest Circle Positions" srcnodeid="89" srcpinname="Closest Circle Positions">
    </LINK>
-   <LINK srcnodeid="89" srcpinname="Positions" dstnodeid="26" dstpinname="Input 1">
+   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Insert new Position" dstnodeid="89" dstpinname="Insert">
+   <LINK dstnodeid="89" dstpinname="Insert" srcnodeid="88" srcpinname="Insert new Position">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="New Radius" dstnodeid="89" dstpinname="Radius">
+   <LINK dstnodeid="89" dstpinname="Radius" srcnodeid="88" srcpinname="New Radius">
    </LINK>
-   <LINK srcnodeid="87" srcpinname="New Position" dstnodeid="89" dstpinname="Position">
+   <LINK dstnodeid="89" dstpinname="Position" srcnodeid="87" srcpinname="New Position">
    </LINK>
-   <LINK srcnodeid="88" srcpinname="Closest Circle Position" dstnodeid="89" dstpinname="Closest Circle Position">
+   <LINK dstnodeid="89" dstpinname="Closest Circle Position" srcnodeid="88" srcpinname="Closest Circle Position">
    </LINK>
-   <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Max Count">
+   <LINK dstnodeid="89" dstpinname="Max Count" srcnodeid="101" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="104" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="10590" top="6300" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="10590" top="6300" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="91" dstpinname="Enable Lines" srcnodeid="104" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="105" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="11205" top="6330" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="11205" top="6330" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="91" dstpinname="Enable Circles" srcnodeid="105" srcpinname="Y Output Value">
    </LINK>
    </PATCH>

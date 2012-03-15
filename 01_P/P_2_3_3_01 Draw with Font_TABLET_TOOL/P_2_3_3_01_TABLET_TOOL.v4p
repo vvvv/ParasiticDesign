@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\P_2_3_3_01_TABLET_TOOL.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
-   <BOUNDS height="12990" left="150" top="0" type="Window" width="17310">
+   <BOUNDS height="12990" left="195" top="-210" type="Window" width="18960">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="480" type="Node" width="840">
@@ -139,7 +139,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="200" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="9555" top="8790" type="Node" width="100">
+   <BOUNDS height="100" left="9555" top="8940" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1">
    </PIN>
@@ -153,7 +153,7 @@
    <LINK dstnodeid="200" dstpinname="Source" srcnodeid="27" srcpinname="EX9 Out">
    </LINK>
    <NODE componentmode="Hidden" id="201" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="9225" top="9720" type="Node" width="100">
+   <BOUNDS height="100" left="9225" top="9870" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -163,7 +163,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="202" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="9390" top="9240" type="Node" width="100">
+   <BOUNDS height="100" left="9390" top="9390" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -175,7 +175,7 @@
    <LINK dstnodeid="201" dstpinname="Texture" srcnodeid="200" srcpinname="Texture Out">
    </LINK>
    <NODE componentmode="Hidden" id="203" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="9225" top="10155" type="Node" width="4095">
+   <BOUNDS height="270" left="9225" top="10305" type="Node" width="4095">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -191,7 +191,7 @@
    <LINK dstnodeid="203" dstpinname="Layer 1" srcnodeid="201" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="206" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="100" left="13530" top="8730" type="Node" width="100">
+   <BOUNDS height="100" left="13290" top="8730" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -219,9 +219,9 @@
    <NODE componentmode="InABox" id="235" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="675" top="2280" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="3885" left="675" top="2280" type="Box" width="4335">
+   <BOUNDS height="6180" left="675" top="2280" type="Box" width="4425">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This example is more or less the same as P_2_3_3_01_TABLET, but with some additional features.&cr;&lf;&cr;&lf;Subpatch is updated, so it can handle Shift (limit drawing direction) feature.&cr;&lf;&cr;&lf;An underlying image can be turned on and off (u key). First of all an image is loaded into FileTexture.&cr;&lf;&cr;&lf;This texture is used on a Quad, which has to be properly scaled (to display image proportions correctly)&cr;&lf;&cr;&lf;Alpha of the Quad is set to some value, so the image will be semi-transparent&cr;&lf;&cr;&lf;u key turns off/on Enable pin of the Quad.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This example is more or less the same as P_2_3_3_01_TABLET, but with some additional features.&cr;&lf;&cr;&lf;Subpatch is updated, so it can handle Shift (limit drawing direction) feature.&cr;&lf;&cr;&lf;Underlay picture is loaded in the FileTexture.&cr;&lf;&cr;&lf;This texture is used on a Quad, which has to be properly scaled (to display image proportions correctly). Original Width and Height of the image are plugged into AspectRatio node which outputs the right Transform for the Quad. &cr;&lf;&cr;&lf;Aligment pin is set to FitHeight, so the Quad will be exactly one unit in height. Width of the Quad will be proportionately adjusted. &cr;&lf;&cr;&lf;Coordinate System covers 2 units in height (-1, 1), so to cover the render window with the image, the Quad (which is now 1 unit in height) has to be scaled with Uniform Scale pin set to 2.&cr;&lf;&cr;&lf;The Alpha of the Quad is ajusted, so the image will be semi-transparent&cr;&lf;&cr;&lf;u key turns off/on Enable pin of the Quad.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -247,9 +247,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="233" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="3525" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="3450" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="3525" type="Box" width="420">
+   <BOUNDS height="405" left="225" top="3450" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -263,9 +263,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="232" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="4155" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="4005" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="4155" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="4005" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -345,9 +345,9 @@
    <LINK dstnodeid="96" dstpinname="Input" srcnodeid="248" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="250" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="14730" top="6870" type="Node" width="315">
+   <BOUNDS height="270" left="14745" top="7365" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="14730" top="6870" type="Box" width="405">
+   <BOUNDS height="390" left="14745" top="7365" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -361,13 +361,15 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="254" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="11565" top="10605" type="Node" width="100">
+   <BOUNDS height="100" left="11565" top="11205" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
+   <PIN pinname="Aspect Width" visible="1" slicecount="1" values="648">
    </PIN>
-   <PIN pinname="Aspect Height" visible="1">
+   <PIN pinname="Aspect Height" visible="1" slicecount="1" values="522">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Alignment">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\Tablet.dll" id="255" nodename="Tablet (Devices Wintab)" systemname="Tablet (Devices Wintab)">
@@ -387,11 +389,11 @@
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="206" dstpinname="X" hiddenwhenlocked="1" srcnodeid="255" srcpinname="X">
-   <LINKPOINT x="13431" y="2759">
+   <LINKPOINT x="13305" y="3450">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="206" dstpinname="Y" hiddenwhenlocked="1" srcnodeid="255" srcpinname="Y">
-   <LINKPOINT x="13701" y="2594">
+   <LINKPOINT x="13575" y="3330">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" id="261" nodename="Multiply (Value)" systemname="Multiply (Value)">
@@ -487,11 +489,11 @@
    <LINK dstnodeid="255" dstpinname="Exclusive" srcnodeid="266" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" id="267" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <BOUNDS height="100" left="10575" top="9720" type="Node" width="100">
+   <BOUNDS height="100" left="10575" top="9870" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS left="10575" top="9720" type="Box">
+   <BOUNDS left="10575" top="9870" type="Box">
    </BOUNDS>
    <PIN pinname="Mouse XYZ" visible="1">
    </PIN>
@@ -504,7 +506,7 @@
    </NODE>
    <LINK dstnodeid="203" dstpinname="Layer 2" srcnodeid="267" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="267" dstpinname="Mouse XYZ" srcnodeid="206" srcpinname="XYZ">
+   <LINK dstnodeid="267" dstpinname="Mouse XYZ" linkstyle="PolyLine" srcnodeid="206" srcpinname="XYZ">
    </LINK>
    <NODE componentmode="Hidden" id="313" nodename="GT (Value)" systemname="GT (Value)">
    <BOUNDS height="270" left="9810" top="4380" type="Node" width="300">
@@ -692,56 +694,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="198" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <BOUNDS height="270" left="9225" top="10605" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="9225" top="10605" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7710" left="14520" top="750" type="Window" width="9840">
-   </BOUNDS>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="immediately">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="UI">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="198" dstpinname="Aspect Ratio" srcnodeid="254" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="254" dstpinname="Aspect Height" srcnodeid="198" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="254" dstpinname="Aspect Width" srcnodeid="198" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="198" dstpinname="Layers" srcnodeid="203" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" filename="CalculateNextPosition.v4p" id="342" nodename="CalculateNextPosition.v4p" systemname="CalculateNextPosition">
    <PIN pinname="Enable" visible="1">
    </PIN>
@@ -751,7 +703,7 @@
    </PIN>
    <PIN pinname="Shift" visible="1">
    </PIN>
-   <BOUNDS height="12720" left="2550" top="630" type="Window" width="10770">
+   <BOUNDS height="12720" left="2550" top="630" type="Window" width="11925">
    </BOUNDS>
    <BOUNDS height="270" left="7905" top="5040" type="Node" width="2370">
    </BOUNDS>
@@ -811,9 +763,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="347" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="15405" top="7365" type="Node" width="100">
+   <BOUNDS height="100" left="15405" top="6465" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="270" left="15405" top="7365" type="Box" width="1455">
+   <BOUNDS height="270" left="15405" top="6465" type="Box" width="1455">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" values="data\underlay.png">
    </PIN>
@@ -823,7 +775,7 @@
    <LINK dstnodeid="203" dstpinname="Layer 3" srcnodeid="349" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="352" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
-   <BOUNDS height="100" left="16050" top="8115" type="Node" width="100">
+   <BOUNDS height="100" left="16050" top="8145" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -834,30 +786,6 @@
    </NODE>
    <LINK dstnodeid="349" dstpinname="Color" srcnodeid="352" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" id="353" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="15420" top="6330" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="15420" top="6330" type="Box" width="375">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="354" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="15960" top="6510" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="15960" top="6510" type="Box" width="420">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1.5">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="228" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <PIN pinname="Underlay" visible="1">
    </PIN>
@@ -865,13 +793,13 @@
    </BOUNDS>
    <PIN pinname="Shift" visible="1">
    </PIN>
-   <BOUNDS height="270" left="12195" top="1440" type="Node" width="1920">
+   <BOUNDS height="270" left="12195" top="1485" type="Node" width="1920">
    </BOUNDS>
    <PIN pinname="UpDown" visible="1">
    </PIN>
    <PIN pinname="Angle Distortion" visible="1">
    </PIN>
-   <BOUNDS left="12195" top="1440" type="Box">
+   <BOUNDS left="12195" top="1485" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="349" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="228" srcpinname="Underlay">
@@ -883,15 +811,19 @@
    <LINK dstnodeid="108" dstpinname="Input 2" srcnodeid="228" srcpinname="Angle Distortion">
    </LINK>
    <LINK dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="228" srcpinname="Out">
+   <LINKPOINT x="13995" y="3810">
+   </LINKPOINT>
    </LINK>
    <LINK dstnodeid="27" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="228" srcpinname="Out">
+   <LINKPOINT x="14640" y="4230">
+   </LINKPOINT>
    <LINKPOINT x="14640" y="7230">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="355" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="14775" top="7740" type="Node" width="315">
+   <BOUNDS height="270" left="14925" top="6795" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="14775" top="7740" type="Box" width="405">
+   <BOUNDS height="390" left="14925" top="6795" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -905,9 +837,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="356" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="15585" top="8070" type="Node" width="315">
+   <BOUNDS height="270" left="15630" top="8085" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="15585" top="8070" type="Box" width="405">
+   <BOUNDS height="390" left="15630" top="8085" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -937,9 +869,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="358" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="16620" top="7770" type="Node" width="0">
+   <BOUNDS height="0" left="16905" top="7770" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="255" left="16620" top="7770" type="Box" width="360">
+   <BOUNDS height="255" left="16905" top="7770" type="Box" width="360">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.4">
    </PIN>
@@ -950,28 +882,8 @@
    </NODE>
    <LINK dstnodeid="352" dstpinname="Alpha" srcnodeid="358" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="350" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
-   <PIN pinname="TranslateX">
-   </PIN>
-   <PIN pinname="ScaleY">
-   </PIN>
-   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
-   </PIN>
-   <BOUNDS height="270" left="15255" top="6945" type="Node" width="1305">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="350" dstpinname="ScaleY" srcnodeid="354" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="350" dstpinname="TranslateX" srcnodeid="353" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="349" dstpinname="Transform" srcnodeid="350" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="Hidden" id="363" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
-   <BOUNDS height="270" left="15405" top="7770" type="Node" width="990">
+   <BOUNDS height="270" left="15405" top="6870" type="Node" width="900">
    </BOUNDS>
    <PIN pinname="Load In Background" slicecount="1" values="0">
    </PIN>
@@ -987,15 +899,19 @@
    </PIN>
    <PIN pinname="Preload" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Original Width" visible="1">
+   </PIN>
+   <PIN pinname="Original Height" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="363" dstpinname="Filename" srcnodeid="347" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="349" dstpinname="Texture" srcnodeid="363" srcpinname="Texture Out">
    </LINK>
    <NODE componentmode="InABox" id="364" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="4785" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="6870" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="4785" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="6870" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -1009,9 +925,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="365" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="5355" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="7500" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="5355" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="7500" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -1024,4 +940,108 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="366" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <BOUNDS height="270" left="15240" top="7425" type="Node" width="1455">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Alignment">
+   </PIN>
+   <PIN pinname="Uniform Scale">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="366" dstpinname="Aspect Width" srcnodeid="363" srcpinname="Original Width">
+   </LINK>
+   <LINK dstnodeid="366" dstpinname="Aspect Height" srcnodeid="363" srcpinname="Original Height">
+   </LINK>
+   <NODE componentmode="InABox" id="368" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="0" left="12525" top="10755" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="12525" top="10755" type="Box" width="975">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="FitHeight">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="254" dstpinname="Alignment" srcnodeid="368" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="349" dstpinname="Transform" srcnodeid="366" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="InABox" id="379" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="16470" top="6960" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="16470" top="6960" type="Box" width="390">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="366" dstpinname="Uniform Scale" srcnodeid="379" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="380" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
+   <BOUNDS height="0" left="16935" top="6930" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="16935" top="6930" type="Box" width="900">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="FitHeight">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="366" dstpinname="Alignment" srcnodeid="380" srcpinname="Output Enum">
+   </LINK>
+   <NODE id="198" componentmode="InAWindow" hiddenwhenlocked="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="15210" top="0" width="9840" height="8280">
+   </BOUNDS>
+   <BOUNDS type="Node" height="270" left="9225" top="11205" width="1890">
+   </BOUNDS>
+   <BOUNDS type="Box" height="1800" left="9225" top="11205" width="2400">
+   </BOUNDS>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Clear" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Presentation Interval" slicecount="1" values="immediately">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
+   </PIN>
+   <PIN pinname="Descriptive Name" encoded="0" slicecount="1" values="UI">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="203" srcpinname="Layer" dstnodeid="198" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Actual Backbuffer Width" dstnodeid="254" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Actual Backbuffer Height" dstnodeid="254" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="254" srcpinname="Transform Out" dstnodeid="198" dstpinname="Aspect Ratio">
+   </LINK>
    </PATCH>
