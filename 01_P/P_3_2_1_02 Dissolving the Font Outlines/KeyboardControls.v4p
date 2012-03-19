@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\KeyboardControls.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\Interaction.v4p" systemname="Interaction">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\KeyboardControls.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\Interaction.v4p" systemname="Interaction">
    <BOUNDS height="6705" left="11385" top="6645" type="Window" width="8565">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -22,66 +22,6 @@
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="8" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="1290" top="2940" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="570" left="1290" top="2940" type="Box" width="1365">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="7" nodename="GetSlice (String)" systemname="GetSlice (String)">
-   <BOUNDS height="100" left="3075" top="3555" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Index" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="6" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="3345" top="3090" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="3345" top="3090" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="7" dstpinname="Index" srcnodeid="6" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="75" top="2775" type="Node" width="2475">
-   </BOUNDS>
-   <BOUNDS height="720" left="75" top="2775" type="Box" width="1185">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|2 Slices, we need the second one. &gt;&gt;|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="3870" top="3585" type="Node" width="1185">
-   </BOUNDS>
-   <BOUNDS height="270" left="3870" top="3585" type="Box" width="1185">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Get Slice 1.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="11" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="2340" top="5190" type="Node" width="100">
    </BOUNDS>
@@ -92,8 +32,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Text">
    </PIN>
    </NODE>
-   <LINK dstnodeid="11" dstpinname="Input String" srcnodeid="7" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" filename="TypeWriter.dll" hiddenwhenlocked="0" id="30" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
    <BOUNDS height="270" left="3075" top="2505" type="Node" width="1800">
    </BOUNDS>
@@ -101,9 +39,17 @@
    </BOUNDS>
    <BOUNDS height="4860" left="0" top="0" type="Window" width="6120">
    </BOUNDS>
+   <PIN pinname="Text" visible="1" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Initial Text" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Insert Text" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="30" dstpinname="Text" srcnodeid="10" srcpinname="Output String">
-   </LINK>
    <LINK dstnodeid="30" dstpinname="KeyCode" srcnodeid="9" srcpinname="KeyCode">
    </LINK>
    <LINK dstnodeid="8" dstpinname="Input String" srcnodeid="30" srcpinname="ViewOutput">
@@ -146,7 +92,7 @@
    </NODE>
    <LINK dstnodeid="34" dstpinname="Mode" srcnodeid="35" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="InABox" id="37" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="37" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="5595" top="2670" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="255" left="5595" top="2670" type="Box" width="450">
@@ -158,7 +104,7 @@
    </NODE>
    <LINK dstnodeid="34" dstpinname="Maximum" srcnodeid="37" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="38" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="38" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="5490" top="3885" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="5490" top="3885" type="Box" width="795">
@@ -191,9 +137,9 @@
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="&lt;ALT&gt;" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="&lt;ALT&gt;">
    </PIN>
    <PIN pinname="&lt;ALT&gt; Output" visible="1">
    </PIN>
@@ -201,5 +147,17 @@
    <LINK srcnodeid="9" srcpinname="Keyboard Output" dstnodeid="31" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="31" srcpinname="&lt;ALT&gt; Output" dstnodeid="33" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output String" dstnodeid="30" dstpinname="Initial Text">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="4230" top="1845" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Bang" dstnodeid="30" dstpinname="Initialize">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Output" dstnodeid="11" dstpinname="Input String">
    </LINK>
    </PATCH>

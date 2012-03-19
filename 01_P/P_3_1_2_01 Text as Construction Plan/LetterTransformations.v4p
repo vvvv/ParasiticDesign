@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
    <BOUNDS height="9480" left="8640" top="2670" type="Window" width="6585">
    </BOUNDS>
    <NODE componentmode="Hidden" id="17" nodename="Rotate (Transform Vector)" systemname="Rotate (Transform Vector)">
@@ -78,7 +78,7 @@
    </LINK>
    <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="15" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="11" nodename="Integral (Spreads)" systemname="Integral (Spreads)">
+   <NODE componentmode="Hidden" id="11" nodename="Integral (Spreads)" systemname="Integral (Spreads Legacy)">
    <BOUNDS height="100" left="1665" top="1875" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -110,7 +110,7 @@
    </LINK>
    <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="9" srcpinname="Remainder">
    </LINK>
-   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1965" top="5145" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1965" top="5145" type="Box" width="450">
@@ -120,7 +120,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1845" top="6120" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1845" top="6120" type="Box" width="705">
@@ -153,6 +153,8 @@
    </PIN>
    <BOUNDS left="1665" top="1020" type="Box">
    </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
    </NODE>
    <LINK dstnodeid="6" dstpinname="Input" srcnodeid="5" srcpinname="Output">
    </LINK>
@@ -234,7 +236,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
+   <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
    <BOUNDS type="Node" left="2220" top="255" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2220" top="255" width="795" height="240">
@@ -243,12 +245,12 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Rotation">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Rotation" encoded="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
+   <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
    <BOUNDS type="Node" left="3180" top="285" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="3180" top="285" width="795" height="240">
@@ -257,7 +259,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Translation">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Translation" encoded="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XYZ">
@@ -269,7 +271,7 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|" encoded="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="20" dstpinname="Input Node">
