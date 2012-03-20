@@ -160,16 +160,6 @@
    </LINK>
    <LINK dstnodeid="518" dstpinname="Transform" srcnodeid="519" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="515" nodename="Integral (Spreads)" systemname="Integral (Spreads Legacy)">
-   <BOUNDS height="100" left="1230" top="6585" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bin Size" slicecount="1" visible="1" values="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="514" nodename="Multiply (Value)" systemname="Multiply (Value)">
    <BOUNDS height="100" left="3240" top="12870" type="Node" width="100">
    </BOUNDS>
@@ -185,13 +175,11 @@
    <NODE componentmode="Hidden" id="513" nodename="CAR (Spreads)" systemname="CAR (Spreads)">
    <BOUNDS height="100" left="1230" top="6990" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Remainder" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="513" dstpinname="Input" srcnodeid="515" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="514" dstpinname="Input 1" srcnodeid="513" srcpinname="Remainder">
    </LINK>
    <NODE componentmode="InABox" id="511" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -261,8 +249,6 @@
    <LINK dstnodeid="525" dstpinname="Layers" srcnodeid="628" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="516" dstpinname="Y" srcnodeid="513" srcpinname="Remainder">
-   </LINK>
-   <LINK dstnodeid="515" dstpinname="Input" srcnodeid="505" srcpinname="Remainder">
    </LINK>
    <LINK dstnodeid="521" dstpinname="TranslateX" srcnodeid="517" srcpinname="X">
    </LINK>
@@ -541,5 +527,19 @@
    <LINK dstnodeid="517" dstpinname="XYZ" srcnodeid="1083" srcpinname="Remainder">
    </LINK>
    <LINK srcnodeid="521" srcpinname="Transform Out" dstnodeid="1183" dstpinname="Transform">
+   </LINK>
+   <NODE componentmode="Hidden" id="515" nodename="Integral (Spreads)" systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1230" top="6585" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="513" dstpinname="Input" srcnodeid="515" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="515" dstpinname="Input" srcnodeid="505" srcpinname="Remainder">
    </LINK>
    </PATCH>

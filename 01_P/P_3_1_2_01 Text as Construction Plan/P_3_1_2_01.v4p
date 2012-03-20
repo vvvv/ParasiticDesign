@@ -84,28 +84,6 @@
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\plugins\DrawText.dll" id="507" nodename="Text (EX9)" systemname="Text (EX9 Legacy)">
-   <BOUNDS height="270" left="615" top="8295" type="Node" width="2550">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Text" visible="1">
-   </PIN>
-   <PIN pinname="Brush Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" visible="1" values="150">
-   </PIN>
-   <PIN pinname="Normalize" slicecount="1" visible="1" values="Height">
-   </PIN>
-   <BOUNDS left="615" top="8295" type="Box">
-   </BOUNDS>
-   <PIN pinname="Horizontal Align" slicecount="1" values="Left">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="628" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="2985" top="8970" type="Node" width="855">
    </BOUNDS>
@@ -120,8 +98,6 @@
    <PIN pinname="Layer 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="628" dstpinname="Layer 1" srcnodeid="507" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="525" dstpinname="Layers" srcnodeid="628" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="764" nodename="EQ (Value)" systemname="EQ (Value)">
@@ -150,8 +126,6 @@
    </NODE>
    <LINK dstnodeid="765" dstpinname="Select" srcnodeid="764" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="507" dstpinname="Text" srcnodeid="765" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="766" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
    <BOUNDS height="100" left="765" top="7785" type="Node" width="100">
    </BOUNDS>
@@ -164,10 +138,8 @@
    </NODE>
    <LINK dstnodeid="766" dstpinname="Index" srcnodeid="765" srcpinname="Former Slice">
    </LINK>
-   <LINK dstnodeid="507" dstpinname="Transform" srcnodeid="766" srcpinname="Output Node">
-   </LINK>
    <NODE componentmode="Hidden" filename="Shapes.v4p" id="680" nodename="Shapes.v4p" systemname="Shapes">
-   <BOUNDS height="270" left="3270" top="8295" type="Node" width="885">
+   <BOUNDS height="270" left="3570" top="8295" type="Node" width="885">
    </BOUNDS>
    <BOUNDS height="9285" left="10620" top="3015" type="Window" width="6705">
    </BOUNDS>
@@ -185,7 +157,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
-   <BOUNDS left="3270" top="8295" type="Box">
+   <BOUNDS left="3570" top="8295" type="Box">
    </BOUNDS>
    <PIN pinname="Shape Indexes" visible="1">
    </PIN>
@@ -205,7 +177,7 @@
    <LINK dstnodeid="525" dstpinname="View" hiddenwhenlocked="1" srcnodeid="794" srcpinname="Transform Out" linkstyle="PolyLine">
    </LINK>
    <NODE componentmode="Hidden" filename="BlinkingCursor.v4p" id="853" nodename="BlinkingCursor.v4p" systemname="BlinkingCursor">
-   <BOUNDS height="100" left="4275" top="8265" type="Node" width="100">
+   <BOUNDS height="100" left="4575" top="8265" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="5655" left="13095" top="10155" type="Window" width="3225">
    </BOUNDS>
@@ -313,5 +285,33 @@
    <LINK srcnodeid="858" srcpinname="Transform Out" dstnodeid="680" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="858" srcpinname="Transform Out" dstnodeid="766" dstpinname="Input Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="507" nodename="Text (EX9)" systemname="Text (EX9)">
+   <BOUNDS height="270" left="615" top="8295" type="Node" width="2550">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="150">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" visible="1" values="Height">
+   </PIN>
+   <BOUNDS left="615" top="8295" type="Box">
+   </BOUNDS>
+   <PIN pinname="Horizontal Align" slicecount="1" values="Left">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="628" dstpinname="Layer 1" srcnodeid="507" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="507" dstpinname="Text" srcnodeid="765" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="507" dstpinname="Transform" srcnodeid="766" srcpinname="Output Node">
    </LINK>
    </PATCH>

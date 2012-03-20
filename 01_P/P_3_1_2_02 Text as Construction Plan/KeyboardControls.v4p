@@ -5,7 +5,7 @@
    <NODE componentmode="Hidden" id="14" nodename="Split (String)" systemname="Split (String)">
    <BOUNDS height="100" left="1080" top="2700" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Input" visible="1" slicecount="1" encoded="0" values="text">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -139,7 +139,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="600" top="9240" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Binsizes" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Binsizes">
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -234,14 +234,6 @@
    </NODE>
    <LINK dstnodeid="107" dstpinname="Y Input Value" srcnodeid="102" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="108" nodename="Differential (Spreads)" systemname="Differential (Spreads Legacy)">
-   <BOUNDS height="100" left="1335" top="7935" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="111" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
    <BOUNDS height="100" left="1335" top="7515" type="Node" width="100">
    </BOUNDS>
@@ -257,8 +249,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="111" dstpinname="Input 2" srcnodeid="102" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="108" dstpinname="Input" srcnodeid="111" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="118" nodename="Count (Value)" systemname="Count (Value)">
    <BOUNDS height="100" left="1860" top="6930" type="Node" width="100">
@@ -288,8 +278,6 @@
    </LINK>
    <LINK dstnodeid="104" dstpinname="Input" srcnodeid="137" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="93" dstpinname="Y Input Value" srcnodeid="108" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="71" dstpinname="Input String" srcnodeid="14" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="137" dstpinname="Input 1" srcnodeid="95" srcpinname="Output">
@@ -299,7 +287,7 @@
    </BOUNDS>
    <BOUNDS height="510" left="2430" top="285" type="Box" width="3090">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|Was hier folgt ist Text! So asnt, und mag. Ich mag Text sehr.|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="|Was hier folgt ist Text! So asnt, und mag. Ich mag Text sehr.|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -349,5 +337,17 @@
    <LINK srcnodeid="160" srcpinname="Bang" dstnodeid="158" dstpinname="Initialize">
    </LINK>
    <LINK srcnodeid="158" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="Hidden" id="108" nodename="Differential (Spreads)" systemname="Differential (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1335" top="7935" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="108" dstpinname="Input" srcnodeid="111" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="93" dstpinname="Y Input Value" srcnodeid="108" srcpinname="Output">
    </LINK>
    </PATCH>

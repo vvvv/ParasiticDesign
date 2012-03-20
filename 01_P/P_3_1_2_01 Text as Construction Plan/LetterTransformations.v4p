@@ -78,14 +78,6 @@
    </LINK>
    <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="15" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="11" nodename="Integral (Spreads)" systemname="Integral (Spreads Legacy)">
-   <BOUNDS height="100" left="1665" top="1875" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="10" nodename="Multiply (Value)" systemname="Multiply (Value)">
    <BOUNDS height="100" left="2235" top="6795" type="Node" width="100">
    </BOUNDS>
@@ -106,8 +98,6 @@
    <PIN pinname="Remainder" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="11" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="9" srcpinname="Remainder">
    </LINK>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -173,8 +163,6 @@
    <LINK dstnodeid="4" dstpinname="Vector Size" srcnodeid="8" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="12" dstpinname="Y" srcnodeid="9" srcpinname="Remainder">
-   </LINK>
-   <LINK dstnodeid="11" dstpinname="Input" srcnodeid="6" srcpinname="Remainder">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="3" nodename="CDR (Spreads Advanced)" systemname="CDR (Spreads Advanced)">
    <BOUNDS height="100" left="1245" top="6285" type="Node" width="100">
@@ -245,7 +233,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Rotation" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Rotation">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 2">
@@ -259,7 +247,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Translation" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Translation">
    </PIN>
    </NODE>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XYZ">
@@ -271,9 +259,21 @@
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Out|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Transform Out|">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="20" dstpinname="Input Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="11" nodename="Integral (Spreads)" systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1665" top="1875" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="11" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Input" srcnodeid="6" srcpinname="Remainder">
    </LINK>
    </PATCH>
