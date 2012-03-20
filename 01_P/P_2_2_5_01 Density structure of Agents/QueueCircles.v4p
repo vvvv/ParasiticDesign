@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
-   <BOUNDS height="6555" left="5190" top="8070" type="Window" width="12495">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
+   <BOUNDS height="6555" left="5190" top="8070" type="Window" width="14220">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="4305" top="405" type="Node" width="0">
@@ -191,9 +191,9 @@
    </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="26" nodename="Queue (Spreads)" systemname="QUEUE (SPREADS)">
-   <BOUNDS height="100" left="5355" top="3075" type="Node" width="100">
+   <BOUNDS height="100" left="5355" top="3375" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS left="5355" top="3075" type="Box">
+   <BOUNDS left="5355" top="3375" type="Box">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -209,9 +209,9 @@
    <LINK dstnodeid="17" dstpinname="Input" srcnodeid="26" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="27" nodename="Queue (Spreads)" systemname="QUEUE (SPREADS)">
-   <BOUNDS height="100" left="4305" top="3075" type="Node" width="100">
+   <BOUNDS height="100" left="4305" top="3375" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS left="4305" top="3075" type="Box">
+   <BOUNDS left="4305" top="3375" type="Box">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -227,9 +227,9 @@
    <LINK dstnodeid="27" dstpinname="Insert" srcnodeid="19" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="28" nodename="Queue (Spreads)" systemname="QUEUE (SPREADS)">
-   <BOUNDS height="100" left="1485" top="3075" type="Node" width="100">
+   <BOUNDS height="100" left="1485" top="3375" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS left="1485" top="3075" type="Box">
+   <BOUNDS left="1485" top="3375" type="Box">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="28" dstpinname="Input" srcnodeid="5" srcpinname="Y Output Value">
@@ -293,11 +293,25 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Max Count|">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Y Input Value">
+   <LINK dstnodeid="7" dstpinname="Y Input Value" srcnodeid="33" srcpinname="Y Output Value">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="34" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="9360" top="1845" width="9825" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9360" top="1845" width="3420" height="1800">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; A maximum of 1000 circles is created. When this amount is exceeded the FlipFlop is reset and the Queue no longer accepts new values.&cr;&lf;&cr;&lf;Otherwise the Queue would just overwrite its oldest slices.|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
