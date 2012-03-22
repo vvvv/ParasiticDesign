@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\P_3_2_1_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\P_3_0_02.v4p" systemname="P_3_0_02">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\P_3_2_1_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_02 Dissolving the Font Outlines\P_3_0_02.v4p" systemname="P_3_0_02">
    <BOUNDS height="13170" left="780" top="705" type="Window" width="11040">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -44,18 +44,18 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="27" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="27" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="1380" top="11640" type="Node" width="1890">
    </BOUNDS>
    <BOUNDS height="1800" left="1380" top="11640" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="7860" left="13065" top="375" type="Window" width="15480">
+   <BOUNDS height="7860" left="11820" top="705" type="Window" width="15480">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
    <PIN pinname="Actual Backbuffer Height" visible="1">
    </PIN>
-   <PIN pinname="Aspect Ratio Transform" visible="1">
+   <PIN pinname="Aspect Ratio" visible="1">
    </PIN>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -76,6 +76,12 @@
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="62" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
@@ -108,7 +114,7 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="2880" top="5025" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="2880" top="5025" type="Box" width="675">
@@ -150,7 +156,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="110" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="110" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="5025" top="4125" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="5025" top="4125" type="Box" width="450">
@@ -159,14 +165,14 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
+   <PIN pinname="Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="109" dstpinname="Input 2" srcnodeid="110" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="109" dstpinname="Input 1" srcnodeid="105" srcpinname="Count">
    </LINK>
-   <NODE componentmode="InABox" id="207" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="207" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="4275" top="3885" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="4275" top="3885" type="Box" width="450">
@@ -202,7 +208,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="27" dstpinname="Aspect Ratio Transform" srcnodeid="62" srcpinname="Transform Out">
+   <LINK dstnodeid="27" dstpinname="Aspect Ratio" srcnodeid="62" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="289" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="8655" top="6840" type="Node" width="2880">
@@ -240,7 +246,7 @@
    </NODE>
    <LINK dstnodeid="62" dstpinname="Alignment" srcnodeid="302" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="InABox" id="303" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="303" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="3510" top="11235" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="3510" top="11235" type="Box" width="795">
@@ -270,7 +276,7 @@
    </LINK>
    <LINK dstnodeid="306" dstpinname="Spread Count" linkstyle="PolyLine" srcnodeid="109" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="TextureLayer.v4p" id="310" nodename="TextureLayer.v4p" systemname="TextureLayer" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\">
+   <NODE componentmode="Hidden" filename="TextureLayer.v4p" id="310" nodename="TextureLayer.v4p" systemname="TextureLayer">
    <BOUNDS height="100" left="1380" top="9450" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="1380" top="9450" type="Box" width="4800">
@@ -318,7 +324,7 @@
    </NODE>
    <LINK dstnodeid="310" dstpinname="Color" srcnodeid="313" srcpinname="Color Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="TextureLayer.v4p" id="315" nodename="TextureLayer.v4p" systemname="TextureLayer" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\">
+   <NODE componentmode="Hidden" filename="TextureLayer.v4p" id="315" nodename="TextureLayer.v4p" systemname="TextureLayer">
    <BOUNDS height="100" left="4650" top="9450" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="4650" top="9450" type="Box" width="4800">
@@ -408,7 +414,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="319" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="319" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="4770" top="8610" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="4770" top="8610" type="Box" width="660">
@@ -448,7 +454,7 @@
    </NODE>
    <LINK dstnodeid="321" dstpinname="Input" srcnodeid="322" srcpinname="Y">
    </LINK>
-   <NODE componentmode="InABox" id="324" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="324" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="7965" top="3495" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="7965" top="3495" type="Box" width="630">
@@ -482,7 +488,7 @@
    </LINK>
    <LINK dstnodeid="320" dstpinname="Destination Width" srcnodeid="324" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="325" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="325" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="8865" top="3495" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="8865" top="3495" type="Box" width="645">
@@ -494,7 +500,7 @@
    </NODE>
    <LINK dstnodeid="321" dstpinname="Destination Minimum" srcnodeid="325" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="326" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="326" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="9525" top="3495" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="9525" top="3495" type="Box" width="645">
@@ -518,7 +524,7 @@
    <LINKPOINT x="6285" y="6675">
    </LINKPOINT>
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="307" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_2_1_02 Dissolving the Font Outlines\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="307" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="4860" top="2685" type="Node" width="1080">
    </BOUNDS>
    <BOUNDS height="3600" left="4860" top="2685" type="Box" width="4800">
@@ -574,7 +580,7 @@
    </NODE>
    <LINK dstnodeid="334" dstpinname="X" srcnodeid="333" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" id="332" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="332" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="810" top="6195" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="255" left="810" top="6195" type="Box" width="660">

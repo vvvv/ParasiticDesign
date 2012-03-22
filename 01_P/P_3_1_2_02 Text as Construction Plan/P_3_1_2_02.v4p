@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\P_3_1_2_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\P_3_1_2_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
    <BOUNDS height="17145" left="2565" top="0" type="Window" width="11670">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -58,7 +58,7 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="525" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="InAWindow" id="525" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="405" top="16125" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="405" top="16125" type="Box" width="2400">
@@ -67,11 +67,21 @@
    </BOUNDS>
    <PIN pinname="Layers" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="View Transform" slicecount="1" visible="1" values="||">
+   <PIN pinname="View" slicecount="1" visible="1" values="||">
    </PIN>
-   <PIN pinname="Projection Transform" slicecount="1" visible="1" values="||">
+   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|0.93495,0.93495,0.93495,1.00000|">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="522" nodename="Rotate (Transform Vector)" systemname="Rotate (Transform Vector)">
@@ -150,16 +160,6 @@
    </LINK>
    <LINK dstnodeid="518" dstpinname="Transform" srcnodeid="519" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="515" nodename="Integral (Spreads)" systemname="Integral (Spreads)">
-   <BOUNDS height="100" left="1230" top="6585" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bin Size" slicecount="1" visible="1" values="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="514" nodename="Multiply (Value)" systemname="Multiply (Value)">
    <BOUNDS height="100" left="3240" top="12870" type="Node" width="100">
    </BOUNDS>
@@ -175,16 +175,14 @@
    <NODE componentmode="Hidden" id="513" nodename="CAR (Spreads)" systemname="CAR (Spreads)">
    <BOUNDS height="100" left="1230" top="6990" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" slicecount="1" visible="1" values="0">
+   <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Remainder" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="513" dstpinname="Input" srcnodeid="515" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="514" dstpinname="Input 1" srcnodeid="513" srcpinname="Remainder">
    </LINK>
-   <NODE componentmode="InABox" id="511" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="511" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1215" top="9360" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1215" top="9360" type="Box" width="450">
@@ -194,7 +192,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="510" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="510" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="3390" top="12480" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="3390" top="12480" type="Box" width="705">
@@ -227,6 +225,8 @@
    </PIN>
    <BOUNDS left="1230" top="5730" type="Box">
    </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="2">
+   </PIN>
    </NODE>
    <LINK dstnodeid="505" dstpinname="Input" srcnodeid="462" srcpinname="Output">
    </LINK>
@@ -250,8 +250,6 @@
    </LINK>
    <LINK dstnodeid="516" dstpinname="Y" srcnodeid="513" srcpinname="Remainder">
    </LINK>
-   <LINK dstnodeid="515" dstpinname="Input" srcnodeid="505" srcpinname="Remainder">
-   </LINK>
    <LINK dstnodeid="521" dstpinname="TranslateX" srcnodeid="517" srcpinname="X">
    </LINK>
    <LINK dstnodeid="519" dstpinname="Transform In" srcnodeid="522" srcpinname="Transform Out">
@@ -261,7 +259,7 @@
    </BOUNDS>
    <BOUNDS height="480" left="2145" top="8760" type="Box" width="3000">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; This is a spread of vectors pointing always from one character to the next.|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt;&lt; This is a spread of vectors pointing always from one character to the next.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -273,7 +271,7 @@
    </BOUNDS>
    <BOUNDS height="750" left="2460" top="9360" type="Box" width="2760">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Sums up those individual vectors slice after slice to compute the absolute position for each character.|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt;&lt; Sums up those individual vectors slice after slice to compute the absolute position for each character.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -285,14 +283,14 @@
    </BOUNDS>
    <BOUNDS height="705" left="4155" top="12480" type="Box" width="3555">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; A spread of rotations for all individual characters taken by -1 to compensate different rotation direction between Processing and vvvv.|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt;&lt; A spread of rotations for all individual characters taken by -1 to compensate different rotation direction between Processing and vvvv.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="794" nodename="ViewTransform.v4p" systemname="ViewTransform" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="794" nodename="ViewTransform.v4p" systemname="ViewTransform">
    <BOUNDS height="100" left="7860" top="4860" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="10785" left="12990" top="5925" type="Window" width="7965">
@@ -318,7 +316,7 @@
    </LINK>
    <LINK dstnodeid="524" dstpinname="Input" srcnodeid="518" srcpinname="XYZ Transformed">
    </LINK>
-   <NODE componentmode="Hidden" filename="Rectangles.v4p" id="966" nodename="Rectangles.v4p" systemname="Rectangles" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="Rectangles.v4p" id="966" nodename="Rectangles.v4p" systemname="Rectangles">
    <PIN pinname="Case" visible="1">
    </PIN>
    <PIN pinname="Letter Width" visible="1">
@@ -356,7 +354,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="1085" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="1085" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1500" top="10365" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1500" top="10365" type="Box" width="450">
@@ -365,7 +363,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Digits" slicecount="1" values="0">
+   <PIN pinname="Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="1084" dstpinname="Input 2" srcnodeid="1085" srcpinname="Y Output Value">
@@ -397,14 +395,14 @@
    </BOUNDS>
    <BOUNDS height="765" left="2070" top="10290" type="Box" width="1590">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; After the Integral operation, the bin sizes are bigger.|" encoded="0">
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt;&lt; After the Integral operation, the bin sizes are bigger.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="ReturnTransformations.v4p" id="1111" nodename="ReturnTransformations.v4p" systemname="ReturnTransformations" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="ReturnTransformations.v4p" id="1111" nodename="ReturnTransformations.v4p" systemname="ReturnTransformations">
    <BOUNDS height="270" left="420" top="12270" type="Node" width="1890">
    </BOUNDS>
    <BOUNDS height="6615" left="12570" top="7830" type="Window" width="17910">
@@ -420,7 +418,7 @@
    <PIN pinname="Bin Sizes" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="525" dstpinname="View Transform" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="794" srcpinname="Transform Out">
+   <LINK dstnodeid="525" dstpinname="View" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="794" srcpinname="Transform Out">
    <LINKPOINT x="7890" y="15720">
    </LINKPOINT>
    </LINK>
@@ -430,7 +428,7 @@
    </LINK>
    <LINK dstnodeid="628" dstpinname="Layer 2" srcnodeid="966" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="Shapes.v4p" id="1172" nodename="Shapes.v4p" systemname="Shapes" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="Shapes.v4p" id="1172" nodename="Shapes.v4p" systemname="Shapes">
    <BOUNDS height="270" left="405" top="14550" type="Node" width="1140">
    </BOUNDS>
    <BOUNDS height="12780" left="4020" top="2055" type="Window" width="11610">
@@ -450,7 +448,7 @@
    </LINK>
    <LINK dstnodeid="628" dstpinname="Layer 1" srcnodeid="1172" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="BlinkingCursor.v4p" id="1183" nodename="BlinkingCursor.v4p" systemname="BlinkingCursor" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="BlinkingCursor.v4p" id="1183" nodename="BlinkingCursor.v4p" systemname="BlinkingCursor">
    <BOUNDS height="100" left="5010" top="14550" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
@@ -476,7 +474,7 @@
    <BOUNDS type="Box" left="5010" top="14550">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" filename="LetterRuleTable.v4p" id="1185" nodename="LetterRuleTable.v4p" systemname="LetterRuleTable" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="LetterRuleTable.v4p" id="1185" nodename="LetterRuleTable.v4p" systemname="LetterRuleTable">
    <BOUNDS height="270" left="3165" top="4590" type="Node" width="2460">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -504,7 +502,7 @@
    </LINK>
    <LINK dstnodeid="1172" dstpinname="Dir" srcnodeid="1185" srcpinname="Dir">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1188" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1188" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="435" top="3870" type="Node" width="5205">
    </BOUNDS>
    <BOUNDS height="10710" left="8265" top="795" type="Window" width="9570">
@@ -529,5 +527,19 @@
    <LINK dstnodeid="517" dstpinname="XYZ" srcnodeid="1083" srcpinname="Remainder">
    </LINK>
    <LINK srcnodeid="521" srcpinname="Transform Out" dstnodeid="1183" dstpinname="Transform">
+   </LINK>
+   <NODE componentmode="Hidden" id="515" nodename="Integral (Spreads)" systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1230" top="6585" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="513" dstpinname="Input" srcnodeid="515" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="515" dstpinname="Input" srcnodeid="505" srcpinname="Remainder">
    </LINK>
    </PATCH>

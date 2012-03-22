@@ -100,34 +100,6 @@
    <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\plugins\DrawText.dll" id="33" nodename="Text (EX9)" systemname="Text (EX9 Legacy)">
-   <BOUNDS height="270" left="5655" top="7545" type="Node" width="2550">
-   </BOUNDS>
-   <PIN pinname="Text" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="500">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Horizontal Align" slicecount="1" visible="1" values="Center">
-   </PIN>
-   <PIN pinname="Vertical Align" visible="1">
-   </PIN>
-   <PIN pinname="Font" slicecount="1" visible="1" values="Arial">
-   </PIN>
-   <BOUNDS left="5655" top="7545" type="Box">
-   </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Normalize" slicecount="1" values="Height">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="33" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" id="96" nodename="GetSlice (String)" systemname="GetSlice (String)">
    <BOUNDS height="270" left="8535" top="6180" type="Node" width="1575">
    </BOUNDS>
@@ -138,8 +110,6 @@
    <PIN pinname="Index" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="33" dstpinname="Text" srcnodeid="96" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="108" nodename="Add (Value)" systemname="Add (Value)">
    <BOUNDS height="100" left="6900" top="5340" type="Node" width="100">
    </BOUNDS>
@@ -203,12 +173,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="99" dstpinname="Rotate" srcnodeid="108" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Transform" srcnodeid="99" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine" srcnodeid="110" srcpinname="Left Button">
-   <LINKPOINT x="8160" y="1755">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="191" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="10320" top="5715" type="Node" width="100">
@@ -548,10 +512,6 @@
    </LINK>
    <LINK dstnodeid="244" dstpinname="Input 1" srcnodeid="245" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="33" dstpinname="Color" srcnodeid="227" srcpinname="Color Output">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Vertical Align" srcnodeid="125" srcpinname="Output Enum">
-   </LINK>
    <LINK dstnodeid="108" dstpinname="Input 2" hiddenwhenlocked="1" srcnodeid="228" srcpinname="Angle Distortion">
    </LINK>
    <NODE componentmode="Hidden" id="248" nodename="Split (String)" systemname="Split (String)">
@@ -703,5 +663,45 @@
    <LINK dstnodeid="254" dstpinname="Aspect Height" srcnodeid="198" srcpinname="Actual Backbuffer Height">
    </LINK>
    <LINK dstnodeid="198" dstpinname="Aspect Ratio" srcnodeid="254" srcpinname="Transform Out">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="33" nodename="Text (EX9)" systemname="Text (EX9)">
+   <BOUNDS height="270" left="5655" top="7545" type="Node" width="2550">
+   </BOUNDS>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="500">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Horizontal Align" slicecount="1" visible="1" values="Center">
+   </PIN>
+   <PIN pinname="Vertical Align" visible="1">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" visible="1" values="Arial">
+   </PIN>
+   <BOUNDS left="5655" top="7545" type="Box">
+   </BOUNDS>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" values="Height">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="33" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Text" srcnodeid="96" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Transform" srcnodeid="99" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine" srcnodeid="110" srcpinname="Left Button">
+   <LINKPOINT x="8160" y="1755">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Color" srcnodeid="227" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="33" dstpinname="Vertical Align" srcnodeid="125" srcpinname="Output Enum">
    </LINK>
    </PATCH>
