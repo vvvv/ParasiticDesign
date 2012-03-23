@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" systemname="P_2_3_6_01">
-   <BOUNDS height="11100" left="165" top="345" type="Window" width="14805">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" systemname="P_2_3_6_01">
+   <BOUNDS height="10425" left="165" top="345" type="Window" width="14790">
    </BOUNDS>
    <LINK dstnodeid="52" dstpinname="Number of Tiles" srcnodeid="14" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="2" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
-   <BOUNDS height="100" left="7755" top="4440" type="Node" width="100">
+   <BOUNDS height="100" left="7755" top="3990" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Spread Count">
    </PIN>
@@ -46,12 +46,10 @@
    </NODE>
    <LINK dstnodeid="4" dstpinname="X In" srcnodeid="2" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="4" dstpinname="Y In" srcnodeid="2" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="7980" top="4005" type="Node" width="0">
+   <BOUNDS height="0" left="7980" top="3555" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="7980" top="4005" type="Box" width="345">
+   <BOUNDS height="240" left="7980" top="3555" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -117,7 +115,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="6720" top="9360" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="9795" left="14805" top="600" type="Window" width="9600">
+   <BOUNDS height="9795" left="14955" top="345" type="Window" width="9600">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -277,7 +275,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="9105" top="8340" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="7455" left="3375" top="2535" type="Window" width="12300">
+   <BOUNDS height="7455" left="6945" top="6000" type="Window" width="12300">
    </BOUNDS>
    <PIN pinname="Tiles Transform" visible="1">
    </PIN>
@@ -327,7 +325,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="9465" top="4845" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="8685" left="11325" top="7530" type="Window" width="11115">
+   <BOUNDS height="7980" left="11085" top="5040" type="Window" width="10860">
    </BOUNDS>
    <PIN pinname="Tiles State" visible="1">
    </PIN>
@@ -460,9 +458,9 @@
    </NODE>
    <LINK dstnodeid="341" dstpinname="X" srcnodeid="0" srcpinname="X">
    </LINK>
-   <LINK dstnodeid="341" dstpinname="Rows" srcnodeid="3" srcpinname="Y Output Value">
+   <LINK dstnodeid="341" dstpinname="Rows" srcnodeid="3" srcpinname="Y Output Value" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="341" dstpinname="Columns" srcnodeid="3" srcpinname="Y Output Value">
+   <LINK dstnodeid="341" dstpinname="Columns" srcnodeid="3" srcpinname="Y Output Value" hiddenwhenlocked="1">
    </LINK>
    <LINK dstnodeid="341" dstpinname="Width" srcnodeid="337" srcpinname="Y Output Value">
    </LINK>
@@ -471,8 +469,6 @@
    <LINK dstnodeid="340" dstpinname="Index" srcnodeid="341" srcpinname="Index">
    </LINK>
    <LINK dstnodeid="338" dstpinname="Input 2" srcnodeid="0" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="341" dstpinname="Y" srcnodeid="338" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="180" dstpinname="Index" srcnodeid="341" srcpinname="Index">
    </LINK>
@@ -513,7 +509,7 @@
    </BOUNDS>
    <BOUNDS height="6210" left="585" top="2355" type="Box" width="4320">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|LinearSpread is used to generate evenly separated n values. (n = resolution). Cross makes all possible combinations of them. These values are then used in Transform node to position the tiles. Scale of the Transform node has to be adjusted so that each tile have the right size. (screen width=2 units, so each tile has to be 2/resolution).&cr;&lf;&cr;&lf;Mouse coordinates are stuffed into GridPick which outputs corrdinates of the induvidual tiles. Mouse Y coordinate has to be inverted.&cr;&lf;&cr;&lf;SetTile makes a tile active or not, depending on the tile coordinates and pressed mouse buttons.&cr;&lf;&cr;&lf;Every active tile is checked along with its 4 neighbours (east, south, west and a north one). Depending on the tiles constellation different Modules (in this case SVG textures) are used to render the tiles.&cr;&lf;&cr;&lf;Renders a Grid. To make a nice pixel-lines, Line Width pin has to be set to 0 and Render State pin to WireFrame.&cr;&lf;&cr;&lf;Draws every tile on the screen with a texture, chosen in step 4.&cr;&lf;&cr;&lf;Quad is used as a cursor to highlight a tile under the mouse.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|LinearSpread is used to generate evenly spreaded n values. (n = resolution). Cross makes all possible combinations of them. These values are then used in the Transform node to position the tiles. Scale of the Transform node has to be adjusted so that each tile has the right size. (screen width=2 units, so each tile has to be 2/resolution).&cr;&lf;&cr;&lf;Mouse coordinates are stuffed into GridPick which outputs corrdinates of the induvidual tiles. Mouse Y coordinate has to be inverted.&cr;&lf;&cr;&lf;SetTile de/activates a tile depending if the left of right mouse button is pressed on it.&cr;&lf;&cr;&lf;Every active tile is checked along with its 4 neighbours (east, south, west and north). Depending on all neightbours tile-state different Modules (in this case SVG textures) are used to render the tiles.&cr;&lf;&cr;&lf;Renders a Grid. To make a nice pixel-lines, Line Width is set to 0 and FillState ís set to WireFrame.&cr;&lf;&cr;&lf;Draws every tile on the screen with a texture, chosen in step 4.&cr;&lf;&cr;&lf;A Quad is used as a cursor to highlight a tile under the mouse.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -539,9 +535,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="373" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="3840" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="3810" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="3840" type="Box" width="420">
+   <BOUNDS height="405" left="135" top="3810" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -555,9 +551,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="372" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="4695" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="4650" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="4695" type="Box" width="450">
+   <BOUNDS height="405" left="135" top="4650" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -587,9 +583,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="370" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="6375" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="6330" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="6375" type="Box" width="450">
+   <BOUNDS height="405" left="135" top="6330" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -603,9 +599,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="369" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="6990" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="6960" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="6990" type="Box" width="450">
+   <BOUNDS height="405" left="135" top="6960" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -619,9 +615,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="368" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="7620" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="7590" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="7620" type="Box" width="450">
+   <BOUNDS height="405" left="135" top="7590" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -769,7 +765,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="9480" top="6225" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="10695" left="6255" top="3165" type="Window" width="14265">
+   <BOUNDS height="10695" left="13230" top="3225" type="Window" width="14265">
    </BOUNDS>
    <PIN pinname="Module IDs" visible="1">
    </PIN>
@@ -789,5 +785,37 @@
    <LINK dstnodeid="326" dstpinname="Module Values" srcnodeid="288" srcpinname="Module Values">
    </LINK>
    <LINK dstnodeid="288" dstpinname="Resolution" hiddenwhenlocked="1" srcnodeid="3" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="384">
+   <BOUNDS type="Node" left="7920" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="384" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="384" srcpinname="Output" dstnodeid="4" dstpinname="Y In">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y" dstnodeid="341" dstpinname="Y">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="386" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="8175" top="4320" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8175" top="4320" width="345" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="386" srcpinname="Y Output Value" dstnodeid="384" dstpinname="Input 2">
    </LINK>
    </PATCH>
