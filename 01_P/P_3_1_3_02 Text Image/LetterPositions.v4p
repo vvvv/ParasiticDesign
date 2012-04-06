@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_02 Text Image\LetterPositions.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\LetterCoordinates.v4p" systemname="LetterCoordinates">
-   <BOUNDS height="12105" left="5670" top="2370" type="Window" width="9225">
+   <BOUNDS height="14640" left="5025" top="285" type="Window" width="11940">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="21" managers="" nodename="I (Spreads)" systemname="I (Spreads)">
    <BOUNDS height="100" left="3450" top="3315" type="Node" width="100">
@@ -139,7 +139,7 @@
    <NODE componentmode="InABox" id="52" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="5595" top="405" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="5595" top="405" type="Box" width="795">
+   <BOUNDS height="240" left="5595" top="405" type="Box" width="792">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="||">
    </PIN>
@@ -347,17 +347,15 @@
    <LINK dstnodeid="135" dstpinname="Y" srcnodeid="66" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="136" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="1215" top="11040" type="Node" width="100">
+   <BOUNDS height="100" left="4779" top="12336" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1215" top="11040" type="Box" width="795">
+   <BOUNDS height="240" left="4779" top="12336" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYZ">
    </PIN>
    </NODE>
-   <LINK dstnodeid="136" dstpinname="Y Input Value" srcnodeid="135" srcpinname="XYZ">
-   </LINK>
    <LINK dstnodeid="66" dstpinname="Input 2" srcnodeid="65" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="149" nodename="Length (String)" systemname="Length (String)">
@@ -461,5 +459,61 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="153" dstpinname="Input 2" srcnodeid="179" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="181" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="7023" top="405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="7023" top="405" type="Box" width="720">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="40">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Selected Letters|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="182">
+   <BOUNDS type="Node" left="4944" top="11016" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="181" srcpinname="Y Output Value" dstnodeid="182" dstpinname="Select">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="183">
+   <BOUNDS type="Node" left="4788" top="11628" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Bin Size">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="182" srcpinname="Former Slice" dstnodeid="183" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="184" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="5112" top="11340" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5112" top="11340" width="336" height="228">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="184" srcpinname="Y Output Value" dstnodeid="183" dstpinname="Bin Size">
+   </LINK>
+   <LINK srcnodeid="135" srcpinname="XYZ" dstnodeid="183" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="183" srcpinname="Output" dstnodeid="136" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
