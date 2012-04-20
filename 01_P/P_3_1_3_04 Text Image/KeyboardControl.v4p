@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_04 Text Image\KeyboardControl.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_3_02 Text Image\KeyboardControl.v4p" systemname="KeyboardControl">
-   <BOUNDS height="8310" left="465" top="2835" type="Window" width="20400">
+   <BOUNDS height="8310" left="2745" top="5775" type="Window" width="20400">
    </BOUNDS>
    <NODE componentmode="InABox" id="19" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="8247" top="285" type="Node" width="100">
@@ -122,16 +122,6 @@
    </NODE>
    <LINK dstnodeid="102" dstpinname="Input" srcnodeid="103" srcpinname="Up Edge">
    </LINK>
-   <NODE componentmode="Hidden" id="104" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="6645" top="285" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="72" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
-   </LINK>
-   <LINK dstnodeid="84" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="Hidden" id="110" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="8052" top="3528" type="Node" width="100">
    </BOUNDS>
@@ -203,7 +193,7 @@
    </BOUNDS>
    <BOUNDS height="5955" left="600" top="555" type="Box" width="4365">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|If the pressed key matches with letters from the Text, = (String) outputs 1 if not it sets the slice to 0. So this node outputs a spread with the length of Text where individual slices (corresponding to all letters of the Text) set to 1 or 0. &cr;&lf;&cr;&lf;Toggle &quot;saves&quot; the state of the Spread until next change or its Reset pin is toggled.&cr;&lf;&cr;&lf;If the key 3 OR 4 is pressed, then the Toggle clears a spread.&cr;&lf;&cr;&lf;FlipFlop ouputs 1 on it&apos;s Inverse Ouput if key 3 is pressed and 0 if key 4. These values choose which one of the Toggle&apos;s outputs is used.&cr;&lf;&cr;&lf;If the key 3 is pressed, then all letters must be switched off and only those which matches letters from the Keyboard has to be shown, so the normal Output of the toggle is used (all slices are 0 and some of them 1).&cr;&lf;&cr;&lf;If the key 4 is pressed, then all letter must be visible and only some of them has to be hidden. Now the Inverse Output of the Toggle is used (all slices are 1 after reset and only some of them (which matches the pressed letters) are 0).|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|If the pressed key matches with letters from the Text, = (String) outputs 1 if not it sets the slice to 0. So this node outputs a spread with the length of Text where individual slices (corresponding to all letters of the Text) set to 1 or 0.&cr;&lf;&cr;&lf;Toggle &quot;saves&quot; the state of the Spread until next change or its Reset pin is toggled.&cr;&lf;&cr;&lf;If the key 4 OR 5 is pressed, then the Toggle clears a spread.&cr;&lf;&cr;&lf;FlipFlop has 1 on it&apos;s Inverse Ouput if key 4 is pressed and 0 if key 5. These values choose which one of the Toggle&apos;s outputs is used.&cr;&lf;&cr;&lf;If the key 4 is pressed, then all letters must be switched off and only those which matches letters from the Keyboard has to be shown, so the normal Output of the toggle is used (all slices are 0 and some of them 1).&cr;&lf;&cr;&lf;If the key 5 is pressed, then all letter must be visible and only some of them has to be hidden. Now the Inverse Output of the Toggle is used (all slices are 1 after reset and only some of them (which matches the pressed letters) are 0).|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -229,9 +219,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="126" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="1815" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="1575" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="1815" type="Box" width="420">
+   <BOUNDS height="405" left="165" top="1575" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -261,9 +251,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="130" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="2370" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="2160" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="2370" type="Box" width="420">
+   <BOUNDS height="405" left="165" top="2160" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -277,9 +267,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="132" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="2835" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="2625" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="2835" type="Box" width="420">
+   <BOUNDS height="405" left="165" top="2625" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -491,7 +481,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" encoded="0">
+   <PIN encoded="0" pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -507,8 +497,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="143" dstpinname="Input" srcnodeid="144" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="144" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
    </LINK>
    <NODE componentmode="InABox" id="147" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="9903" top="5124" type="Node" width="0">
@@ -562,16 +550,28 @@
    </LINK>
    <LINK dstnodeid="152" dstpinname="Switch" srcnodeid="119" srcpinname="Inverse Output">
    </LINK>
-   <NODE systemname="Split (String)" nodename="Split (String)" componentmode="Hidden" id="153">
-   <BOUNDS type="Node" left="10980" top="2565" width="100" height="100">
+   <NODE componentmode="Hidden" id="153" nodename="Split (String)" systemname="Split (String)">
+   <BOUNDS height="100" left="10980" top="2565" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="141" srcpinname="Output String" dstnodeid="153" dstpinname="Input">
+   <LINK dstnodeid="153" dstpinname="Input" srcnodeid="141" srcpinname="Output String">
    </LINK>
-   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="144" dstpinname="Input 2">
+   <LINK dstnodeid="144" dstpinname="Input 2" srcnodeid="153" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="104" nodename="Keyboard (System Window)" systemname="Keyboard (System Window)">
+   <BOUNDS height="100" left="6645" top="285" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="72" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
+   </LINK>
+   <LINK dstnodeid="84" dstpinname="Input" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
+   </LINK>
+   <LINK dstnodeid="144" dstpinname="Input 1" hiddenwhenlocked="1" srcnodeid="104" srcpinname="Keyboard Output">
    </LINK>
    </PATCH>
