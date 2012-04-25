@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.1.dtd" >
-   <PATCH nodename="V:\Generativvvve Gestaltung\P_2_3_4_01 Drawing with elastic Brush\Element5.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_4_01 Drawing with elastic Brush\Element1.v4p" systemname="Element1">
-   <BOUNDS height="7635" left="11790" top="7365" type="Window" width="4935">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.2.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_4_01 Drawing with elastic Brush\Element5.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_4_01 Drawing with elastic Brush\Element1.v4p" systemname="Element1">
+   <BOUNDS height="6330" left="11790" top="7365" type="Window" width="6345">
    </BOUNDS>
    <NODE componentmode="Hidden" id="11" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="100" left="840" top="3390" type="Node" width="100">
@@ -11,7 +11,7 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
-   <PIN pinname="Resolution" slicecount="1" values="4">
+   <PIN pinname="Resolution">
    </PIN>
    <PIN pinname="Inner Radius" slicecount="1" visible="1" values="0">
    </PIN>
@@ -51,27 +51,27 @@
    </PIN>
    <PIN pinname="Output Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Transform">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Transform" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBox (Node)" systemname="IOBox (Node)">
-   <BOUNDS height="100" left="855" top="5595" type="Node" width="100">
+   <BOUNDS height="100" left="855" top="4545" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="855" top="5595" type="Box" width="795">
+   <BOUNDS height="240" left="855" top="4545" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Layer" encoded="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="6" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
    <BOUNDS height="100" left="1005" top="1740" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Rotate" slicecount="1" values="0.09">
+   <PIN pinname="Rotate">
    </PIN>
    <PIN pinname="CenterX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.3">
+   <PIN pinname="TranslateY">
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
@@ -83,7 +83,7 @@
    <LINK dstnodeid="11" dstpinname="Transform" srcnodeid="6" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="14" nodename="Segment (DX9)" systemname="Segment (DX9)">
-   <BOUNDS height="100" left="2685" top="3435" type="Node" width="100">
+   <BOUNDS height="100" left="2685" top="3390" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -91,9 +91,9 @@
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
-   <PIN pinname="Resolution" slicecount="1" values="4">
+   <PIN pinname="Resolution">
    </PIN>
-   <PIN pinname="Inner Radius" slicecount="1" visible="1" values="0.945">
+   <PIN pinname="Inner Radius" visible="1">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -123,7 +123,7 @@
    <LINK dstnodeid="14" dstpinname="Color" srcnodeid="13" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="15" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="855" top="4410" type="Node" width="3735">
+   <BOUNDS height="270" left="855" top="3960" type="Node" width="3735">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -140,10 +140,10 @@
    </LINK>
    <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="6" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="3375" top="375" type="Node" width="100">
+   <NODE componentmode="InABox" id="16" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="4830" top="195" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="3375" top="375" type="Box" width="480">
+   <BOUNDS height="480" left="4830" top="195" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -159,11 +159,85 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled" encoded="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="11" dstpinname="Enabled" srcnodeid="16" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="14" dstpinname="Enabled" srcnodeid="16" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="4455" top="2640" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4455" top="2640" width="345" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Resolution">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="2445" top="2820" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2445" top="2820" width="345" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Resolution">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1350" top="1305" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1350" top="1305" width="495" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.3">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="6" dstpinname="TranslateY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1950" top="1305" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1950" top="1305" width="435" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.09">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="6" dstpinname="Rotate">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="3945" top="3000" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3945" top="3000" width="660" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.945">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Inner Radius">
    </LINK>
    </PATCH>
