@@ -1,9 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
-   <BOUNDS height="9480" left="8640" top="2670" type="Window" width="6585">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
+   <BOUNDS height="12450" left="1380" top="1500" type="Window" width="10545">
    </BOUNDS>
    <NODE componentmode="Hidden" id="17" nodename="Rotate (Transform Vector)" systemname="Rotate (Transform Vector)">
-   <BOUNDS height="100" left="1260" top="3345" type="Node" width="100">
+   <BOUNDS height="100" left="6660" top="3345" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -12,26 +12,8 @@
    <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="16" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
-   <BOUNDS height="270" left="1020" top="7410" type="Node" width="1770">
-   </BOUNDS>
-   <PIN pinname="ScaleX" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1">
-   </PIN>
-   <PIN pinname="TranslateY" visible="1">
-   </PIN>
-   <PIN pinname="Rotate" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="15" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
-   <BOUNDS height="270" left="1260" top="3915" type="Node" width="2685">
+   <BOUNDS height="270" left="6660" top="3915" type="Node" width="2040">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -41,7 +23,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="14" nodename="ApplyTransform (Transform Vector)" systemname="ApplyTransform (Transform Vector)">
-   <BOUNDS height="100" left="1260" top="4485" type="Node" width="100">
+   <BOUNDS height="100" left="6660" top="4485" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XYZ Transformed" visible="1">
    </PIN>
@@ -51,7 +33,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="13" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
-   <BOUNDS height="270" left="1245" top="6765" type="Node" width="630">
+   <BOUNDS height="270" left="6645" top="6765" type="Node" width="630">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -62,24 +44,10 @@
    <PIN pinname="Z" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="16" dstpinname="TranslateY" srcnodeid="13" srcpinname="Z">
-   </LINK>
-   <NODE componentmode="Hidden" id="12" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="100" left="1845" top="2820" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="17" dstpinname="XYZ" srcnodeid="12" srcpinname="XYZ">
-   </LINK>
    <LINK dstnodeid="14" dstpinname="Transform" srcnodeid="15" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="10" nodename="Multiply (Value)" systemname="Multiply (Value)">
-   <BOUNDS height="100" left="2235" top="6795" type="Node" width="100">
+   <BOUNDS height="100" left="7635" top="6795" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -88,10 +56,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="16" dstpinname="Rotate" srcnodeid="10" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="9" nodename="CAR (Spreads)" systemname="CAR (Spreads)">
-   <BOUNDS height="100" left="1650" top="2280" type="Node" width="100">
+   <BOUNDS height="270" left="7050" top="2280" type="Node" width="615">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -101,9 +67,9 @@
    <LINK dstnodeid="10" dstpinname="Input 1" srcnodeid="9" srcpinname="Remainder">
    </LINK>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="1965" top="5145" type="Node" width="100">
+   <BOUNDS height="100" left="7335" top="5010" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1965" top="5145" type="Box" width="450">
+   <BOUNDS height="240" left="7335" top="5010" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
@@ -111,9 +77,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="1845" top="6120" type="Node" width="100">
+   <BOUNDS height="100" left="7905" top="6330" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1845" top="6120" type="Box" width="705">
+   <BOUNDS height="240" left="7905" top="6330" type="Box" width="705">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-1">
    </PIN>
@@ -123,7 +89,7 @@
    <LINK dstnodeid="10" dstpinname="Input 2" srcnodeid="7" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="6" nodename="CDR (Spreads)" systemname="CDR (Spreads)">
-   <BOUNDS height="100" left="1665" top="1455" type="Node" width="100">
+   <BOUNDS height="100" left="7050" top="1455" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -133,7 +99,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="5" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
-   <BOUNDS height="100" left="1665" top="1020" type="Node" width="100">
+   <BOUNDS height="100" left="7050" top="1020" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" slicecount="1" visible="1" values="0">
    </PIN>
@@ -141,15 +107,13 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS left="1665" top="1020" type="Box">
+   <BOUNDS left="7050" top="1020" type="Box">
    </BOUNDS>
    <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <LINK dstnodeid="6" dstpinname="Input" srcnodeid="5" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" filename="..\..\..\..\Desktop\vvvvs\vvvv_45alpha25.2-4602\addonpack\plugins\VectorSized.dll" id="4" nodename="Integral (Spreads Advanced)" systemname="Integral (Spreads Advanced)">
-   <BOUNDS height="100" left="1260" top="5475" type="Node" width="100">
+   <BOUNDS height="100" left="6660" top="5430" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Bin Size" slicecount="1" values="-1">
    </PIN>
@@ -162,10 +126,8 @@
    </NODE>
    <LINK dstnodeid="4" dstpinname="Vector Size" srcnodeid="8" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="12" dstpinname="Y" srcnodeid="9" srcpinname="Remainder">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="3" nodename="CDR (Spreads Advanced)" systemname="CDR (Spreads Advanced)">
-   <BOUNDS height="100" left="1245" top="6285" type="Node" width="100">
+   <BOUNDS height="100" left="6645" top="6285" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Vector Size" visible="1">
    </PIN>
@@ -182,52 +144,12 @@
    </LINK>
    <LINK dstnodeid="4" dstpinname="Input" srcnodeid="14" srcpinname="XYZ Transformed">
    </LINK>
-   <LINK dstnodeid="16" dstpinname="TranslateX" srcnodeid="13" srcpinname="X">
-   </LINK>
    <LINK dstnodeid="15" dstpinname="Transform In" srcnodeid="17" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="13" dstpinname="XYZ" srcnodeid="3" srcpinname="Remainder">
-   </LINK>
-   <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2805" top="4530" type="Node" width="5655">
-   </BOUNDS>
-   <BOUNDS height="480" left="2805" top="4530" type="Box" width="3000">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; This is a spread of vectors pointing always from one character to the next.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2505" top="5160" type="Node" width="7620">
-   </BOUNDS>
-   <BOUNDS height="750" left="2505" top="5160" type="Box" width="2760">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; Sums up those individual vectors slice after slice to compute the absolute position for each character.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="0" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="2625" top="6270" type="Node" width="3945">
-   </BOUNDS>
-   <BOUNDS height="705" left="2625" top="6270" type="Box" width="3555">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; A spread of rotations for all individual characters taken by -1 to compensate different rotation direction between Processing and vvvv.|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
-   <BOUNDS type="Node" left="2220" top="255" width="100" height="100">
+   <BOUNDS type="Node" left="7545" top="255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2220" top="255" width="795" height="240">
+   <BOUNDS type="Box" left="7545" top="255" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -236,12 +158,10 @@
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Rotation">
    </PIN>
    </NODE>
-   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
-   <BOUNDS type="Node" left="3180" top="285" width="100" height="100">
+   <BOUNDS type="Node" left="8640" top="255" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3180" top="285" width="795" height="240">
+   <BOUNDS type="Box" left="8640" top="255" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
    </PIN>
@@ -250,22 +170,18 @@
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Translation">
    </PIN>
    </NODE>
-   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XYZ">
-   </LINK>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="20">
-   <BOUNDS type="Node" left="1035" top="8460" width="100" height="100">
+   <BOUNDS type="Node" left="6435" top="8460" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1035" top="8460" width="795" height="240">
+   <BOUNDS type="Box" left="6435" top="8460" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Transform Out|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="20" dstpinname="Input Node">
-   </LINK>
    <NODE componentmode="Hidden" id="11" nodename="Integral (Spreads)" systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS height="100" left="1665" top="1875" type="Node" width="100">
+   <BOUNDS height="100" left="7050" top="1875" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -274,6 +190,294 @@
    </NODE>
    <LINK dstnodeid="9" dstpinname="Input" srcnodeid="11" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="11" dstpinname="Input" srcnodeid="6" srcpinname="Remainder">
+   <NODE componentmode="InABox" id="34" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="585" top="555" type="Node" width="7425">
+   </BOUNDS>
+   <BOUNDS height="10470" left="585" top="555" type="Box" width="4395">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Initial rotation for the first character should be 0, so a zero slice is added to the spread of rotations. Last rotation is not important so the last slice is thrown away with CDR (Spreads).&cr;&lf;&cr;&lf;All relative rotations are being accumulated for each character. So the rotation for the third one is the rotation of the 1st + 2nd. Integral (Spreads) returns one element more, so this last element of the spread is thrown away with CAR (Spreads).&cr;&lf;&cr;&lf;Characters should be translated on distinct angles, so for every character its translation should be rotated first of all. Rotations are happening in 3D space but a rotation only on one (i.e. Y) axis is needed, so a spread of vectors  (0, angle, 0) is created. This spread is feeded into the Rotate (Transform Vector) node which outputs a transformation matrix for each slice.&cr;&lf;&cr;&lf;A Translate (Transform Vector) applies these transformations to translation vectors and outputs new transformation matricies.&cr;&lf;&cr;&lf;At this point there is a spread of transformation matricies for each character. To go back to vectors ApplyTransform (Transform Vector) is used. It applies transformations to zero vectors and outputs a spread of vectors. &cr;&lf;&cr;&lf;These are rotated versions of the translation vectors. Wow.&cr;&lf;&cr;&lf;Translation vectors are stil relative (to previous characters).&cr;&lf;Integral (Spreads Advanced) sums up these individual vectors, vector after vector (given that each vector is 3 slices long) to compute the absolute position for each character. And again a last vector (with the size of 3) should be thrown away with CDR (Spreads Advanced)).&cr;&lf;&cr;&lf;To position characters only X and Z values of the vectors are used, these are going to Transform (Transform 2d) to create a spread of transformations for every character.&cr;&lf;&cr;&lf;And finally every character should be rotated. Inverse versions of &cr;&lf;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="33" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="165" top="540" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="165" top="540" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="165" top="2850" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="165" top="2850" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="29" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="165" top="5385" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="165" top="5385" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="5.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="28" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="165" top="6825" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="165" top="6825" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="6.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Remainder" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="InABox" id="41" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6585" top="930" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="6585" top="930" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="47" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6585" top="1755" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="6585" top="1755" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="48" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="165" top="1590" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="165" top="1590" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="50" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6135" top="3270" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="6135" top="3270" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="52" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="165" top="4545" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="165" top="4545" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="53" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6135" top="3840" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="6135" top="3840" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="56" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="6135" top="5400" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="6135" top="5400" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="6.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="55" componentmode="Hidden" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
+   <PIN pinname="X" visible="1" slicecount="607" values="0,0,0,0,0.125000292304375,0.125000292304375,0.125000292304375,0.125000292304375,0.25000058460875,0.25000058460875,0.25000058460875,0.25000058460875,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.375000876913125,0.250000876913125,0.250000876913125,0.250000876913125,0.250000876913125,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.3750011692175,0.500001461521875,0.500001461521875,0.500001461521875,0.375001461521875,0.375001461521875,0.375001461521875,0.375001461521875,0.250001461521875,0.250001461521875,0.250001461521875,0.250001461521875,0.250001461521875,0.125001461521875,0.625001461521875,0.625001461521875,1.12500146152188,1.12500146152188,1.12500146152188,1.12500146152188,1.12500146152188,1.25000175382625,1.25000175382625,1.25000175382625,1.25000175382625,1.25000175382625,1.25000175382625,1.25000175382625,1.25000175382625,1.75000175382625,1.75000175382625,1.75000175382625,1.75000175382625,1.75000175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.62500175382625,1.75000204613062,2.25000204613062,2.25000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,2.75000204613062,3.25000204613062,3.25000204613062,3.25000204613062,3.25000204613062,3.25000204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.12500204613062,3.62500204613062,3.62500204613062,3.62500204613062,3.62500204613062,3.62500204613062,3.50000204613062,3.50000204613062,3.50000204613062,3.50000204613062,3.50000204613062,3.625002338435,3.625002338435,3.625002338435,3.625002338435,3.75000263073937,3.75000263073937,3.75000263073937,3.75000263073937,3.75000263073937,3.75000263073937,3.62500263073937,3.62500263073937,3.62500263073937,3.62500263073937,3.62500263073937,3.62500263073937,3.75000292304375,3.75000292304375,3.75000292304375,3.75000292304375,3.75000292304375,3.75000292304375,3.87500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.37500321534812,4.5000035076525,4.5000035076525,4.5000035076525,4.62500379995688,4.62500379995688,4.62500379995688,4.62500379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.50000379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.37500379995688,4.25000379995688,4.75000379995688,4.75000379995688,5.25000379995688,5.25000379995688,5.25000379995688,5.25000379995688,5.25000379995688,5.37500409226125,5.37500409226125,5.37500409226125,5.37500409226125,5.50000438456563,5.50000438456563,5.50000438456563,5.50000438456563,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.62500467687,5.75000496917438,5.75000496917438,5.75000496917438,5.75000496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.62500496917438,5.50000496917438,5.50000496917438,5.50000496917438,5.62500526147875,5.62500526147875,5.62500526147875,5.62500526147875,5.50000526147875,5.50000526147875,5.50000526147875,5.50000526147875,5.50000526147875,5.37500526147875,5.87500526147875,5.87500526147875,6.37500526147875,6.37500526147875,6.37500526147875,6.37500526147875,6.37500526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.25000526147875,6.75000526147875,6.75000526147875,6.75000526147875,6.75000526147875,6.75000526147875,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,6.87500555378313,7.0000058460875,7.5000058460875,7.5000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.0000058460875,8.5000058460875,8.5000058460875,8.5000058460875,8.5000058460875,8.5000058460875,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,8.62500613839188,9.12500613839188,9.12500613839188,9.12500613839188,9.12500613839188,9.12500613839188,9.00000613839188,9.00000613839188,9.00000613839188,9.00000613839188,9.00000613839188,9.12500643069625,9.12500643069625,9.12500643069625,9.12500643069625,9.00000643069625,9.00000643069625,9.00000643069625,9.00000643069625,9.00000643069625,9.00000643069625,9.12500672300063,9.12500672300063,9.12500672300063,9.12500672300063,9.12500672300063,9.12500672300063,9.00000672300063,9.00000672300063,9.00000672300063,9.00000672300063,9.00000672300063,9.00000672300063,9.125007015305,9.625007015305,9.625007015305,9.625007015305,9.625007015305,9.625007015305,9.625007015305,9.625007015305,9.625007015305,9.500007015305,9.500007015305,9.500007015305,9.375007015305,9.375007015305,9.375007015305,9.375007015305,9.50000730760938,9.50000730760938,9.50000730760938,9.50000730760938,9.50000730760938,9.50000730760938,9.50000730760938,9.50000730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.37500730760938,9.25000730760938,9.75000730760938,9.75000730760938,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.2500073076094,10.1250073076094,10.1250073076094,10.1250073076094,10.1250073076094,10.2500075999138,10.2500075999138,10.2500075999138,10.2500075999138,10.2500075999138,10.2500075999138,10.2500075999138,10.2500075999138,10.1250075999138,9.87500759991375,10.0000078922181,10.0000078922181,10.0000078922181,10.0000078922181,10.0000078922181,10.0000078922181,10.0000078922181,10.1250081845225,10.0000081845225,10.0000081845225,10.0000081845225,10.0000081845225,10.0000081845225,9.8750081845225,9.8750081845225,9.8750081845225,9.8750081845225,9.8750081845225,10.0000084768269,10.0000084768269,10.0000084768269,10.0000084768269,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,9.87500847682687,10.0000087691312,10.1250090614356,10.1250090614356,10.1250090614356,10.1250090614356,10.1250090614356,10.25000935374,10.25000935374,10.25000935374,10.25000935374,10.3750096460444,10.3750096460444,10.3750096460444,10.3750096460444,10.5000099383487,10.5000099383487,10.5000099383487,10.5000099383487,10.5000099383487,10.5000099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.3750099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.1250099383487,10.0000099383487,10.1250102306531,10.1250102306531,10.1250102306531,10.1250102306531,10.1250102306531,10.1250102306531,10.2500105229575,10.2500105229575,10.2500105229575,10.2500105229575,10.2500105229575,10.3750108152619,10.3750108152619,10.3750108152619,10.2500108152619,10.2500108152619,10.2500108152619,10.2500108152619,10.2500108152619,10.2500108152619,10.2500108152619,10.3750111075662,10.3750111075662,10.3750111075662,10.3750111075662,10.2500111075662,10.2500111075662,10.2500111075662,10.2500111075662,10.2500111075662,10.2500111075662,10.2500111075662,10.3750113998706,10.3750113998706,10.3750113998706,10.3750113998706,10.3750113998706,10.3750113998706,10.3750113998706,10.3750113998706,10.500011692175,10.375011692175,10.375011692175,10.375011692175,10.250011692175,10.250011692175,10.250011692175,10.250011692175,10.3750119844794,10.3750119844794,10.3750119844794,10.3750119844794,10.3750119844794,10.3750119844794,10.2500119844794,10.2500119844794,10.2500119844794,10.2500119844794,10.3750122767837,10.3750122767837,10.2500122767837,10.2500122767837,10.2500122767837,10.2500122767837,10.2500122767837,10.2500122767837,10.0000122767837,10.1250125690881,10.1250125690881,10.1250125690881,10.1250125690881,10.1250125690881,10.1250125690881,10.1250125690881,10.2500128613925,10.2500128613925,10.2500128613925,10.2500128613925,10.2500128613925,10.2500128613925,10.2500128613925,10.3750131536969,10.3750131536969,10.3750131536969,10.3750131536969,10.3750131536969,10.5000134460012,10.3750134460012,10.3750134460012,10.3750134460012,10.5000137383056,10.5000137383056,10.5000137383056,10.5000137383056,10.5000137383056,10.5000137383056,10.62501403061,10.62501403061,10.37501403061,10.25001403061,10.25001403061,10.25001403061,10.25001403061,10.25001403061,10.12501403061,10.12501403061,10.12501403061,10.12501403061,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.2500143229144,10.3750146152187,10.3750146152187,10.3750146152187,10.3750146152187,10.3750146152187,10.3750146152187,10.3750146152187,10.5000149075231,10.5000149075231,10.5000149075231,10.5000149075231,10.5000149075231,10.5000149075231,10.5000149075231,10.5000149075231,10.6250151998275,10.6250151998275">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="6660" top="2910" width="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="XYZ" dstnodeid="17" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Remainder" dstnodeid="55" dstpinname="Y">
+   </LINK>
+   <NODE id="62" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="6135" top="6690" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="6135" top="6690" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="7.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="63" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="8040" top="6705" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="8040" top="6705" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="8.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE id="64" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="165" top="8355" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="165" top="8355" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="7.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="65" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
+   <BOUNDS height="270" left="6420" top="7410" type="Node" width="1770">
+   </BOUNDS>
+   <PIN pinname="Rotate" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="65" dstpinname="TranslateX" srcnodeid="13" srcpinname="X">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Transform Out" dstnodeid="20" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Z" dstnodeid="65" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="15" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Remainder" dstnodeid="13" dstpinname="XYZ">
+   </LINK>
+   <NODE id="72" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="270" left="6135" top="4410" width="315">
+   </BOUNDS>
+   <BOUNDS type="Box" height="405" left="6135" top="4410" width="450">
+   </BOUNDS>
+   <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="5.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="65" dstpinname="Rotate">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Input 2">
    </LINK>
    </PATCH>

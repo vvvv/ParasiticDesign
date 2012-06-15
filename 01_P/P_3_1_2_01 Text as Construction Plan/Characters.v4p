@@ -1,0 +1,95 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\Characters.v4p" systemname="Characters" filename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\Characters.v4p">
+   <NODE componentmode="Hidden" id="0" nodename="Select (String)" systemname="Select (String)">
+   <BOUNDS height="100" left="1785" top="1500" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
+   <BOUNDS height="100" left="1650" top="1980" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="2" nodename="Text (EX9)" systemname="Text (EX9)">
+   <BOUNDS height="270" left="1500" top="2490" type="Node" width="2550">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   <PIN pinname="Brush Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="150">
+   </PIN>
+   <PIN pinname="Normalize" slicecount="1" visible="1" values="Height">
+   </PIN>
+   <BOUNDS left="1500" top="2490" type="Box">
+   </BOUNDS>
+   <PIN pinname="Horizontal Align" slicecount="1" values="Left">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="2" dstpinname="Transform" srcnodeid="1" srcpinname="Output Node" linkstyle="PolyLine">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Text" srcnodeid="0" srcpinname="Output" linkstyle="PolyLine">
+   </LINK>
+   <NODE id="3" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
+   </PIN>
+   <BOUNDS type="Box" left="1500" top="3260" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1500" top="3260" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="3" dstpinname="Input Node">
+   </LINK>
+   <NODE id="4" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Input Node|">
+   </PIN>
+   <BOUNDS type="Box" left="1650" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1650" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="1" dstpinname="Input Node">
+   </LINK>
+   <LINK dstnodeid="1" dstpinname="Index" srcnodeid="0" srcpinname="Former Slice" linkstyle="PolyLine">
+   </LINK>
+   <NODE id="5" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Input">
+   </PIN>
+   <BOUNDS type="Box" left="2550" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2550" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <NODE id="6" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Character Indices|">
+   </PIN>
+   <BOUNDS type="Box" left="3900" top="500" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3900" top="500" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Select">
+   </LINK>
+   <BOUNDS type="Window" left="10440" top="6870" width="5550" height="4920">
+   </BOUNDS>
+   </PATCH>
