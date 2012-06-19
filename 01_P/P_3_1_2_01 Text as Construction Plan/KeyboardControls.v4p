@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="10935" left="1995" top="3165" type="Window" width="18015">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
+   <BOUNDS height="9945" left="1995" top="3165" type="Window" width="17400">
    </BOUNDS>
    <NODE componentmode="Hidden" id="14" nodename="Split (String)" systemname="Split (String)">
    <BOUNDS height="100" left="9930" top="7050" type="Node" width="100">
@@ -45,7 +45,7 @@
    </PIN>
    <PIN pinname="Up" visible="1">
    </PIN>
-   <PIN pinname="Down" visible="1">
+   <PIN pinname="Down" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="15" dstpinname="Default" srcnodeid="18" srcpinname="Y Output Value" linkstyle="PolyLine">
@@ -235,9 +235,9 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 4" visible="1">
+   <PIN pinname="Input 4" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 5" visible="1" slicecount="1" values="0">
    </PIN>
@@ -317,9 +317,9 @@
    <NODE componentmode="InABox" id="114" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="645" top="855" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="3750" left="645" top="855" type="Box" width="3660">
+   <BOUNDS height="2925" left="645" top="855" type="Box" width="3555">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|On reset a Typewriter (String) receives an Initial Text. After that it saves every new keystroke and outputs everything as a single string. This string is then splitted into a separate slices.&cr;&lf;&cr;&lf;Arrows should should be sorted out. If OR (Boolean) outputs true (one) then the Typewriter (String) gets a zero spread on it&apos;s input and saves nothing.&cr;&lf;&cr;&lf;Top / Bottom arrows are used to increment / decrement Counter (Animation) whose value is used for a zoom.&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|On reset a Typewriter (String) receives an Initial Text. After that it saves every new keystroke and returns everything as a single string. This string is then split into separate slices.&cr;&lf;&cr;&lf;Arrow-Keys are sorted out. If OR (Boolean) returns true (one) then the Typewriter (String) gets a zero spread on it&apos;s input and saves nothing.&cr;&lf;&cr;&lf;Up/ Down arrows are used to increment / decrement Counter (Animation) whose value is used for zooming the canvas.&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -447,9 +447,9 @@
    <NODE systemname="KeyMatch (String)" nodename="KeyMatch (String)" componentmode="Hidden" id="122">
    <BOUNDS type="Node" left="10545" top="3870" width="2370" height="270">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" values="&lt;LEFT&gt;&lt;RIGHT&gt;&lt;TOP&gt;&lt;BOTTOM&gt;&lt;ALT&gt;" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="&lt;LEFT&gt;&lt;RIGHT&gt;&lt;UP&gt;&lt;DOWN&gt;&lt;ALT&gt;">
    </PIN>
    <PIN pinname="&lt;LEFT&gt; Output" visible="1">
    </PIN>
@@ -462,6 +462,10 @@
    <PIN pinname="&lt;ALT&gt; Output" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="&lt;UP&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="&lt;DOWN&gt; Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="122" srcpinname="&lt;LEFT&gt; Output" dstnodeid="97" dstpinname="Input 1">
@@ -479,5 +483,13 @@
    <LINK srcnodeid="122" srcpinname="&lt;ALT&gt; Output" dstnodeid="43" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Keyboard Output" dstnodeid="122" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="&lt;UP&gt; Output" dstnodeid="15" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="&lt;DOWN&gt; Output" dstnodeid="15" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="&lt;UP&gt; Output" dstnodeid="97" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="&lt;DOWN&gt; Output" dstnodeid="97" dstpinname="Input 4">
    </LINK>
    </PATCH>
