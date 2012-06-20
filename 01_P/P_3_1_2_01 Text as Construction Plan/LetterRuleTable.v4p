@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterRuleTable.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterRuleTable.v4p" systemname="LetterRuleTable">
-   <BOUNDS height="13440" left="900" top="2085" type="Window" width="19260">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterRuleTable.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterRuleTable.v4p" systemname="LetterRuleTable">
+   <BOUNDS height="11265" left="7185" top="2175" type="Window" width="18960">
    </BOUNDS>
    <NODE componentmode="Hidden" id="60" nodename="GlyphInfo (String)" systemname="GlyphInfo (String)">
    <BOUNDS height="100" left="12375" top="4035" type="Node" width="100">
@@ -887,9 +887,9 @@
    <LINK srcnodeid="42" srcpinname="Output" dstnodeid="62" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="63">
-   <BOUNDS type="Node" left="5925" top="10260" width="100" height="100">
+   <BOUNDS type="Node" left="6975" top="10260" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5925" top="10260" width="795" height="240">
+   <BOUNDS type="Box" left="6975" top="10260" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -899,9 +899,9 @@
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="63" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="64">
-   <BOUNDS type="Node" left="6975" top="10260" width="100" height="100">
+   <BOUNDS type="Node" left="5940" top="10260" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6975" top="10260" width="795" height="240">
+   <BOUNDS type="Box" left="5940" top="10260" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -941,7 +941,7 @@
    </BOUNDS>
    <BOUNDS height="8415" left="630" top="3135" type="Box" width="4200">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Ord (String) converts characters back to their codes which are used then to look for special characters.&cr;&lf;&cr;&lf;Every character in the input spread is tested for being special and a spread of numbers is constructed.&cr;&lf;If a character is special, a MultiFlipFlop (Animation) outputs a number of its input where EQ (Value) has triggered true (1). This number corresponds to special character. &cr;&lf;If it&apos;s not special, the MultiFlipFlop outputs 0 because all Inverse Outputs (which are one if the character is not special) of EQ nodes are ANDed and connected to the first (number 0) input of the MultiFlipFlop.&cr;&lf;&cr;&lf;These numbers are used to choose a rotation for every character of the input spread. Some angles are just static values and some (i.e. angle for space) depend on some randomness (switching between 45 and -45 degrees).&cr;&lf;&cr;&lf;To create this randomness a spread of random integer values is created. If Randomize input is set to 1 (user pressed &quot;alt&quot; key) then the Select (Value) node creates a spread with so many ones as there are typed characters. This spread of ones enables Random (Value) node which outputs a random integer (zero or one) for every 1 in its input spread. These random  0s and 1s are used to switch between two angles.&cr;&lf;&cr;&lf;If the last typed character is a space then the random angle has to be choosen for that also. CDR (Spreads) returns only this last slice and if this slice is equal to 1 (i.e. space) SetSlice (Spreads) enables corresponding slice for the Random node. TogEdge (Animation) takes care that this happens only once, only in the frame when the character was typed.&cr;&lf;&cr;&lf;The same technique is used to choose a translation for every character of the input spread.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Ord (String) converts characters back to their codes which are used then to look for special characters.&cr;&lf;&cr;&lf;Every character in the input spread is tested for being special and a spread of numbers is constructed.&cr;&lf;If a character is special, the MultiFlipFlop (Animation) returns the number of its input where EQ (Value) has triggered true (1). This number corresponds to a special character. &cr;&lf;If it&apos;s not special, the MultiFlipFlop returns 0 for that slice (because all &quot;Inverse Outputs&quot; [which are one if the character is not special] of the EQ nodes are ANDed and connected to the first [number 0] input of the MultiFlipFlop).&cr;&lf;&cr;&lf;These numbers are used to choose a rotation for every character of the input spread. Some angles are just static values and some (i.e. angle for space) depend on some randomness (switching between 45 and -45 degrees).&cr;&lf;&cr;&lf;To create this randomness a spread of random integer values is created. If Randomize input is set to 1 (user pressed &quot;alt&quot; key) then the Select (Value) node creates a spread with so many 1s as there are typed characters. This spread of 1s enables Random (Value) node which returns a random integer (zero or one) for every 1 in its input spread. These random 0s and 1s are used to switch between two angles.&cr;&lf;&cr;&lf;If the last typed character is a space then the random angle has to be choosen for that also. CDR (Spreads) returns only this last slice and if this slice is equal to 1 (i.e. space) SetSlice (Spreads) enables corresponding slice for the Random node. TogEdge (Animation) takes care that this happens only once, only in the frame when the character was typed.&cr;&lf;&cr;&lf;The same technique is used to choose a translation for every character of the input spread.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -983,9 +983,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="70" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="210" top="6030" type="Node" width="315">
+   <BOUNDS height="270" left="210" top="6300" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="210" top="6030" type="Box" width="450">
+   <BOUNDS height="405" left="210" top="6300" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -999,9 +999,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="69" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="210" top="7095" type="Node" width="315">
+   <BOUNDS height="270" left="210" top="7365" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="210" top="7095" type="Box" width="450">
+   <BOUNDS height="405" left="210" top="7365" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -1063,9 +1063,9 @@
    </PIN>
    </NODE>
    <NODE id="67" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="210" top="8970" width="315">
+   <BOUNDS type="Node" height="270" left="210" top="9240" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="210" top="8970" width="450">
+   <BOUNDS type="Box" height="405" left="210" top="9240" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -1187,9 +1187,9 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="24" dstpinname="Enabled">
    </LINK>
    <NODE id="94" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="210" top="10650" width="315">
+   <BOUNDS type="Node" height="270" left="210" top="10920" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="210" top="10650" width="450">
+   <BOUNDS type="Box" height="405" left="210" top="10920" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -1205,9 +1205,9 @@
    <NODE componentmode="InABox" id="95" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="210" top="780" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="2010" left="210" top="780" type="Box" width="4290">
+   <BOUNDS height="2190" left="210" top="780" type="Box" width="4305">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Every typed character needs its translation and rotation. So two separate spreads are created to hold these values. Rotation and translation are relative to values of previous character.&cr;&lf;Special characters (such as space ,.!? and return) get some predefined static values, and normal characters get a 0 angle rotation, their Y position is always 0 and X depends on the previos character Width (check the GlyphInfo (String) node).|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Every typed character needs its translation and rotation. So two separate spreads are created to hold these values. The individual values for rotation and translation (per slice) are always relative to the values of the previous character.&cr;&lf;&cr;&lf;Special characters (such as space ,.!? and return) get some predefined static values, and normal characters get a 0 angle rotation, their Y position is always 0 and X depends on the previous characters width (check the GlyphInfo (String) node).|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>

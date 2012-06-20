@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\MouseControls.v4p" systemname="MouseControls">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\MouseControls.v4p" systemname="MouseControls">
    <BOUNDS height="10785" left="3300" top="2385" type="Window" width="12870">
    </BOUNDS>
    <NODE componentmode="Hidden" id="11" nodename="S+H (Animation)" systemname="S+H (Animation)">
@@ -233,9 +233,9 @@
    <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="330" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="6045" left="585" top="330" type="Box" width="4215">
+   <BOUNDS height="4830" left="585" top="330" type="Box" width="4200">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|When any of the Mouse Buttons is pressed TogEdge (Animation) will be triggered and S+H (Animation) will save current mouse coordinates.&cr;&lf;&cr;&lf;After that if the mouse is moved its coorinates are substracted from the saved ones, that is a relative position. &cr;&lf;&cr;&lf;And this relative position is added to the last saved position of the mouse. This is the position where the mouse was just right before the button was released (Down Edge of the TogEdge node). So this is the last position of the canvas, before it was dragged.&cr;&lf;&cr;&lf;This FrameDelay is used to save position of the mouse just right before the button is released.&cr;&lf;&cr;&lf;And this one is used to reset the canvas position OnOpen (vvvv) and on Reset.&cr;&lf;&cr;&lf;Position is a vector and a Translate (Transform Vector) is used to create a transformation out of it.&cr;&lf;&cr;&lf;Then the scale is added which acts as a zoom for the canvas.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|When any of the Mouse Buttons is pressed TogEdge (Animation) will be triggered and S+H (Animation) will save current mouse coordinates.&cr;&lf;&cr;&lf;After that if the mouse is moved its coorinates are substracted from the saved ones, to compute a directional vector of the mouse-movement.&cr;&lf;&cr;&lf;This is added to the last saved position of the mouse, ie the last position of the canvas, before it was dragged.&cr;&lf;&cr;&lf;This FrameDelay is used to save the position of the mouse just right before the button is released.&cr;&lf;&cr;&lf;And this one is used to reset the canvas position OnOpen (vvvv) and on Reset.&cr;&lf;&cr;&lf;Position is a vector and a Translate (Transform Vector) is used to create a transformation out of it.&cr;&lf;&cr;&lf;Then the scale is added which acts as a zoom for the canvas.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -295,9 +295,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="26" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3270" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="2640" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="3270" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="2640" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -421,15 +421,15 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Reset" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Reset">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Input 2">
    </LINK>
    <NODE componentmode="InABox" id="39" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3915" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="3285" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="3915" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="3285" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -443,9 +443,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="40" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="4530" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="3900" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="4530" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="3900" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -459,9 +459,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="41" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="5145" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="4515" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="5145" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="4515" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
