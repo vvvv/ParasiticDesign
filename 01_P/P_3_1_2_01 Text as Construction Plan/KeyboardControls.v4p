@@ -156,34 +156,6 @@
    </LINK>
    <LINK dstnodeid="15" dstpinname="Maximum" srcnodeid="81" srcpinname="Y Output Value" linkstyle="PolyLine">
    </LINK>
-   <NODE componentmode="Hidden" filename="TypeWriter.dll" hiddenwhenlocked="0" id="85" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
-   <BOUNDS height="270" left="9915" top="6165" type="Node" width="1305">
-   </BOUNDS>
-   <BOUNDS height="1800" left="9915" top="6165" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="5010" left="0" top="0" type="Window" width="6240">
-   </BOUNDS>
-   <PIN pinname="Text" visible="1" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Insert Text" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Initial Text" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" visible="1">
-   </PIN>
-   <PIN pinname="KeyCode" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="14" dstpinname="Input" srcnodeid="85" srcpinname="ViewOutput">
-   </LINK>
-   <LINK dstnodeid="85" dstpinname="String" srcnodeid="76" srcpinname="Output String">
-   </LINK>
-   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="14" dstpinname="Input" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Output String" dstnodeid="85" dstpinname="Initial Text" linkstyle="PolyLine">
-   </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="87">
    <BOUNDS type="Node" left="15990" top="4275" width="100" height="100">
    </BOUNDS>
@@ -200,8 +172,6 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="85" dstpinname="Initialize" linkstyle="PolyLine">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" left="15390" top="2415" width="0" height="0">
    </BOUNDS>
@@ -255,8 +225,6 @@
    <LINK srcnodeid="0" srcpinname="KeyCode" dstnodeid="98" dstpinname="Input 1" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Output" dstnodeid="98" dstpinname="Switch" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="85" dstpinname="KeyCode" linkstyle="PolyLine">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="100" systemname="IOBox (String)">
    <BOUNDS type="Node" left="10605" top="4200" width="405" height="270">
@@ -491,5 +459,33 @@
    <LINK srcnodeid="122" srcpinname="&lt;UP&gt; Output" dstnodeid="97" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="122" srcpinname="&lt;DOWN&gt; Output" dstnodeid="97" dstpinname="Input 4">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" hiddenwhenlocked="0" id="85" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
+   <BOUNDS height="270" left="9915" top="6165" type="Node" width="1305">
+   </BOUNDS>
+   <BOUNDS height="1800" left="9915" top="6165" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="5010" left="0" top="0" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Text" visible="1" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Insert Text" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Initial Text" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="KeyCode" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Output" dstnodeid="14" dstpinname="Input" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output String" dstnodeid="85" dstpinname="Initial Text" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="85" dstpinname="Initialize" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="85" dstpinname="KeyCode" linkstyle="PolyLine">
    </LINK>
    </PATCH>
