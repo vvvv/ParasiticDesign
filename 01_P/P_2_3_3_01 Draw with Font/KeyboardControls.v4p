@@ -1,15 +1,17 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\KeyboardControls.v4p">
-   <BOUNDS height="6240" left="11700" top="5160" type="Window" width="10005">
+   <BOUNDS height="6240" left="6600" top="4545" type="Window" width="10005">
    </BOUNDS>
    <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="1050" top="300" type="Node" width="100">
+   <BOUNDS height="100" left="1065" top="645" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="1050" top="300" type="Box" width="0">
+   <BOUNDS height="0" left="1065" top="645" type="Box" width="0">
    </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   <BOUNDS height="6840" left="4800" top="4110" type="Window" width="6540">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="28" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -89,7 +91,7 @@
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="21" managers="" nodename="EQ (String)" systemname="EQ (String)">
    <PIN pinname="Input 2" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Input 1" pintype="Input" visible="1">
+   <PIN pinname="Input 1" pintype="Input" visible="1" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Output" pintype="Output" visible="1">
    </PIN>
@@ -153,7 +155,7 @@
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="30" managers="" nodename="EQ (String)" systemname="EQ (String)">
    <PIN pinname="Input 2" pintype="Input" visible="1">
    </PIN>
-   <PIN pinname="Input 1" pintype="Input" visible="1">
+   <PIN pinname="Input 1" pintype="Input" visible="1" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Output" pintype="Output" visible="1">
    </PIN>
@@ -217,7 +219,7 @@
    </PIN>
    </NODE>
    <NODE hiddenwhenlocked="0" id="56" managers="" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
-   <PIN pinname="Input" pintype="Input" visible="1">
+   <PIN pinname="Input" pintype="Input" visible="1" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="&lt;SPACE&gt; Output" visible="1">
    </PIN>
@@ -324,12 +326,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="56" dstpinname="Input" linkstyle="VHV" srcnodeid="15" srcpinname="Keyboard Output">
-   <LINKPOINT x="135" y="850">
-   </LINKPOINT>
-   <LINKPOINT x="4895" y="650">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="InABox" id="60" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1215" top="3405" type="Node" width="100">
    </BOUNDS>
@@ -411,5 +407,21 @@
    <LINK srcnodeid="34" srcpinname="Bang" dstnodeid="63" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="63" srcpinname="Output" dstnodeid="32" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="KeyboardState (System Join)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyboardState (System Join)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="6090" top="3990" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="KeyboardState (System Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyboardState (System Split)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="1050" top="1155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Key" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Key" dstnodeid="56" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="71" dstpinname="Keyboard">
    </LINK>
    </PATCH>
