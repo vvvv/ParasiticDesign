@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01">
    <BOUNDS height="7860" left="0" top="0" type="Window" width="12705">
    </BOUNDS>
@@ -58,17 +58,7 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="433" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="8805" top="765" type="Node" width="2160">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="398" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="398" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="7035" top="5400" type="Node" width="1515">
    </BOUNDS>
    <PIN pinname="Out" visible="1">
@@ -95,15 +85,13 @@
    <NODE componentmode="Hidden" id="463" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="10065" top="1245" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="463" dstpinname="Input" srcnodeid="433" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="Hidden" id="494" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <BOUNDS height="270" left="7035" top="6210" type="Node" width="3555">
    </BOUNDS>
@@ -149,17 +137,13 @@
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="563" dstpinname="X" srcnodeid="433" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="433" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="562" dstpinname="Go To Position" srcnodeid="563" srcpinname="XYZ">
    </LINK>
    <NODE componentmode="Hidden" id="566" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
@@ -256,7 +240,7 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="CreateShape.v4p" id="608" nodename="CreateShape.v4p" systemname="CreateShape" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\">
+   <NODE componentmode="Hidden" filename="CreateShape.v4p" id="608" nodename="CreateShape.v4p" systemname="CreateShape">
    <BOUNDS height="100" left="10215" top="3795" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="10215" top="3795" type="Box" width="4800">
@@ -268,7 +252,7 @@
    <PIN pinname="Ouput XYZ" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="DrawStroke.v4p" id="491" nodename="DrawStroke.v4p" systemname="DrawStroke" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\">
+   <NODE componentmode="Hidden" filename="DrawStroke.v4p" id="491" nodename="DrawStroke.v4p" systemname="DrawStroke">
    <BOUNDS height="270" left="8790" top="4620" type="Node" width="1485">
    </BOUNDS>
    <BOUNDS height="3600" left="8790" top="4620" type="Box" width="4800">
@@ -288,7 +272,7 @@
    </LINK>
    <LINK dstnodeid="491" dstpinname="VerticesXYZ" srcnodeid="608" srcpinname="Ouput XYZ">
    </LINK>
-   <NODE componentmode="Hidden" filename="DrawFill.v4p" id="492" nodename="DrawFill.v4p" systemname="DrawFill" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\">
+   <NODE componentmode="Hidden" filename="DrawFill.v4p" id="492" nodename="DrawFill.v4p" systemname="DrawFill">
    <BOUNDS height="270" left="10530" top="4620" type="Node" width="1515">
    </BOUNDS>
    <BOUNDS height="3600" left="10530" top="4620" type="Box" width="4800">
@@ -396,7 +380,7 @@
    </LINK>
    <LINK dstnodeid="608" dstpinname="Update" srcnodeid="613" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="Rendering.v4p" id="550" nodename="Rendering.v4p" systemname="Rendering" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\">
+   <NODE componentmode="Hidden" filename="Rendering.v4p" id="550" nodename="Rendering.v4p" systemname="Rendering">
    <BOUNDS height="100" left="7035" top="6795" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3600" left="7035" top="6795" type="Box" width="4800">
@@ -440,4 +424,20 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="433" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="8805" top="765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="463" dstpinname="Input" srcnodeid="433" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="563" dstpinname="X" srcnodeid="433" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="433" srcpinname="Y">
+   </LINK>
    </PATCH>

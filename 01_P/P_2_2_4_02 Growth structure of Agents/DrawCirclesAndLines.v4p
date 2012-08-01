@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
    <BOUNDS height="8400" left="4695" top="6780" type="Window" width="17715">
    </BOUNDS>
@@ -556,24 +556,6 @@
    </LINK>
    <LINK dstnodeid="90" dstpinname="Color" srcnodeid="117" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="119" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="11595" top="660" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="120" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
-   <BOUNDS height="100" left="11595" top="1185" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Key Match" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="1 Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="120" dstpinname="Input" srcnodeid="119" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="Hidden" id="122" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="6525" top="5910" type="Node" width="3825">
    </BOUNDS>
@@ -593,16 +575,6 @@
    <LINK dstnodeid="23" dstpinname="Layer 1" srcnodeid="122" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="23" dstpinname="Layer 2" srcnodeid="8" srcpinname="Layer">
-   </LINK>
-   <NODE componentmode="Hidden" id="123" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
-   <BOUNDS height="100" left="11595" top="2010" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="122" dstpinname="Enabled" srcnodeid="123" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="127" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
    <BOUNDS height="100" left="12540" top="5535" type="Node" width="100">
@@ -756,16 +728,42 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="137" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="11595" top="1590" type="Node" width="100">
+   <NODE componentmode="Hidden" id="120" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="10665" top="1620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Up Edge" visible="1">
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="D1">
+   </PIN>
+   <PIN pinname="1 Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="1" visible="1">
+   </PIN>
+   <PIN pinname="D1" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="Input" srcnodeid="120" srcpinname="1 Output">
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="138" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="11790" top="1155" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11790" top="1155" width="930" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="138" srcpinname="Output Enum" dstnodeid="120" dstpinname="Key Mode">
    </LINK>
-   <LINK dstnodeid="123" dstpinname="Input" srcnodeid="137" srcpinname="Up Edge">
+   <NODE componentmode="Hidden" id="119" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="10665" top="1095" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="119" srcpinname="Keyboard" dstnodeid="120" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="120" srcpinname="D1" dstnodeid="122" dstpinname="Enabled">
    </LINK>
    </PATCH>

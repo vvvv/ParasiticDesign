@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\P_2_1_3_01.v4p" systemname="P_2_1_3_01">
    <BOUNDS height="12150" left="0" top="0" type="Window" width="13785">
    </BOUNDS>
@@ -134,16 +134,6 @@
    </NODE>
    <LINK dstnodeid="52" dstpinname="Spread Count" srcnodeid="55" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="67" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="10155" top="2475" type="Node" width="1515">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="66" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="7845" top="4470" type="Node" width="100">
    </BOUNDS>
@@ -151,7 +141,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="7680" top="2970" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
@@ -185,8 +175,6 @@
    <LINK dstnodeid="65" dstpinname="Input 2" srcnodeid="64" srcpinname="Bang">
    </LINK>
    <LINK dstnodeid="65" dstpinname="Input 1" srcnodeid="66" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="66" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="Left Button">
    </LINK>
    <NODE componentmode="Hidden" id="68" nodename="Random (Value)" systemname="Random (Value)">
    <BOUNDS height="100" left="7875" top="7470" type="Node" width="100">
@@ -241,7 +229,7 @@
    </BOUNDS>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="-0.920693928128872">
    </PIN>
    <PIN pinname="Destination Maximum" visible="1">
    </PIN>
@@ -250,8 +238,6 @@
    <PIN pinname="Destination Minimum" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="74" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="X">
-   </LINK>
    <NODE componentmode="InABox" id="76" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="8640" top="6945" type="Node" width="100">
    </BOUNDS>
@@ -377,18 +363,14 @@
    <NODE componentmode="Hidden" id="98" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="10560" top="3180" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.920693928128872">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="-0.184177997527812">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="98" dstpinname="X" srcnodeid="67" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="Y" srcnodeid="67" srcpinname="Y">
-   </LINK>
-   <NODE componentmode="Hidden" filename="DrawModule.v4p" id="77" nodename="DrawModule.v4p" systemname="DrawModule" path="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\">
+   <NODE componentmode="Hidden" filename="DrawModule.v4p" id="77" nodename="DrawModule.v4p" systemname="DrawModule">
    <BOUNDS height="270" left="6405" top="10275" type="Node" width="6210">
    </BOUNDS>
    <PIN pinname="SpreadCount" visible="1">
@@ -631,5 +613,23 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="73" dstpinname="Input" srcnodeid="54" srcpinname="Y Out">
+   </LINK>
+   <NODE componentmode="Hidden" id="67" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="10155" top="2475" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="66" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="74" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="98" dstpinname="X" srcnodeid="67" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="98" dstpinname="Y" srcnodeid="67" srcpinname="Y">
    </LINK>
    </PATCH>

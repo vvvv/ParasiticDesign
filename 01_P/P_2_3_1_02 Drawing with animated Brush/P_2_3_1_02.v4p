@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush\P_2_3_1_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush\P_2_3_1_02_2.v4p" systemname="P_2_3_1_02_2">
    <BOUNDS height="12420" left="435" top="330" type="Window" width="14565">
    </BOUNDS>
@@ -72,16 +72,6 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="232" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="5580" top="2775" type="Node" width="1740">
-   </BOUNDS>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="230" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
    <BOUNDS height="100" left="7020" top="11340" type="Node" width="100">
    </BOUNDS>
@@ -107,9 +97,9 @@
    </PIN>
    <PIN pinname="CenterX" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" visible="1">
+   <PIN pinname="TranslateX" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" visible="1">
+   <PIN pinname="TranslateY" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="228" nodename="LFO (Animation)" systemname="LFO (Animation)">
@@ -171,13 +161,11 @@
    <NODE componentmode="Hidden" id="223" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="6600" top="4380" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="223" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
-   </LINK>
    <LINK dstnodeid="224" dstpinname="Enabled" srcnodeid="223" srcpinname="Up Edge">
    </LINK>
    <NODE componentmode="Hidden" id="222" nodename="Map (Value)" systemname="Map (Value)">
@@ -222,20 +210,14 @@
    </NODE>
    <LINK dstnodeid="222" dstpinname="Destination Maximum" srcnodeid="220" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="229" dstpinname="TranslateX" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="229" dstpinname="TranslateY" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Y">
-   </LINK>
    <NODE componentmode="Hidden" id="219" nodename="NOT (Boolean)" systemname="NOT (Boolean)">
    <BOUNDS height="100" left="8100" top="6735" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="219" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
-   </LINK>
    <LINK dstnodeid="228" dstpinname="Pause" srcnodeid="219" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="218" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
@@ -380,7 +362,7 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="215" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <NODE componentmode="InAWindow" filename="KeyboardControls.v4p" id="215" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="8835" top="2775" type="Node" width="3345">
    </BOUNDS>
    <BOUNDS height="7560" left="4635" top="7455" type="Window" width="22605">
@@ -431,12 +413,12 @@
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK dstnodeid="236" dstpinname="Transform" srcnodeid="229" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="236" dstpinname="Color" srcnodeid="225" srcpinname="Out">
-   </LINK>
-   <LINK dstnodeid="236" dstpinname="Enabled" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
    </LINK>
    <NODE componentmode="Hidden" id="243" nodename="Dir (File)" systemname="Dir (File)">
    <BOUNDS height="100" left="10335" top="7620" type="Node" width="100">
@@ -645,5 +627,25 @@
    <LINK dstnodeid="228" dstpinname="Period" srcnodeid="215" srcpinname="Rotation">
    </LINK>
    <LINK srcnodeid="215" srcpinname="Clear" dstnodeid="226" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="232" nodename="Mouse (System Global)" systemname="Mouse (System Global)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Global).v4p">
+   <BOUNDS height="100" left="5415" top="2775" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="223" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="229" dstpinname="TranslateX" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="229" dstpinname="TranslateY" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="219" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="236" dstpinname="Enabled" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="232" srcpinname="Left Button">
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug27.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\P_2_2_3_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\P_2_2_3_02_2.v4p" systemname="P_2_2_3_02_2">
    <BOUNDS height="10995" left="555" top="1500" type="Window" width="7980">
    </BOUNDS>
@@ -16,28 +16,16 @@
    <PIN pinname="Size" slicecount="1" values="15">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="433" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="2700" top="4080" type="Node" width="3195">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="463" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="4575" top="4650" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="463" dstpinname="Input" srcnodeid="433" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="Hidden" id="494" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <BOUNDS height="270" left="810" top="9525" type="Node" width="3555">
    </BOUNDS>
@@ -81,17 +69,13 @@
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.9629057187017">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="-0.0797546012269939">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="563" dstpinname="X" srcnodeid="433" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="433" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="562" dstpinname="Go To Position" srcnodeid="563" srcpinname="XYZ">
    </LINK>
    <NODE componentmode="Hidden" id="566" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
@@ -379,5 +363,21 @@
    <LINK dstnodeid="492" dstpinname="Transform" linkstyle="PolyLine" srcnodeid="566" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="492" dstpinname="XYZ" srcnodeid="608" srcpinname="Ouput XYZ">
+   </LINK>
+   <NODE componentmode="Hidden" id="433" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="2700" top="4080" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="463" dstpinname="Input" srcnodeid="433" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="563" dstpinname="X" srcnodeid="433" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="433" srcpinname="Y">
    </LINK>
    </PATCH>
