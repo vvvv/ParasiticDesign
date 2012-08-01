@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\P_1_2_1_01.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\P_1_2_1_01.v4p">
    <BOUNDS height="8865" left="1470" top="2295" type="Window" width="16095">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="3" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -29,6 +29,14 @@
    </PIN>
    <PIN pinname="Right Button" visible="1">
    </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="4" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="7440" top="7125" type="Node" width="8025">
@@ -39,49 +47,13 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="3" dstpinname="Layers" srcnodeid="4" srcpinname="Layer">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Cursor (DX9).v4p" id="8" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <BOUNDS height="270" left="11415" top="6585" type="Node" width="1050">
-   </BOUNDS>
-   <BOUNDS height="3600" left="11415" top="6585" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="6000" left="9690" top="8880" type="Window" width="9000">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|0.01334,0.01334,0.01334,1.00000|">
-   </PIN>
-   <PIN pinname="Point Size" slicecount="3" values="0.008,0.008,0.008">
-   </PIN>
-   <PIN pinname="Mouse Down" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Selection" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="7" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="7620" top="765" type="Node" width="1260">
-   </BOUNDS>
-   <BOUNDS height="0" left="7635" top="765" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="9930" top="3120" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="6" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="7620" top="1365" type="Node" width="100">
    </BOUNDS>
@@ -89,23 +61,13 @@
    </BOUNDS>
    <BOUNDS height="0" left="10710" top="4065" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.992172211350294">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.628517823639775">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="6" dstpinname="X" srcnodeid="7" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="6" dstpinname="Y" linkstyle="PolyLine" srcnodeid="7" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Mouse XYZ" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="6" srcpinname="XY">
-   <LINKPOINT x="11925" y="2715">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="4" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="8" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" id="27" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="7440" top="6585" type="Node" width="100">
    </BOUNDS>
@@ -140,7 +102,7 @@
    </NODE>
    <LINK dstnodeid="27" dstpinname="Color" srcnodeid="114" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="ColorLeftRight.v4p" id="124" nodename="ColorLeftRight.v4p" systemname="ColorLeftRight" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
+   <NODE componentmode="Hidden" filename="ColorLeftRight.v4p" id="124" nodename="ColorLeftRight.v4p" systemname="ColorLeftRight">
    <BOUNDS height="100" left="8220" top="3645" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="10200" left="9105" top="3870" type="Window" width="16200">
@@ -159,7 +121,7 @@
    </PIN>
    <PIN pinname="Morph Factor" visible="1">
    </PIN>
-   <PIN pinname="Left Button" visible="1">
+   <PIN pinname="Left Button" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Interpolation Factor" visible="1">
    </PIN>
@@ -172,7 +134,7 @@
    <PIN pinname="Colors Right" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="lerpHSV.v4p" id="125" nodename="lerpHSV.v4p" systemname="lerpHSV" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
+   <NODE componentmode="Hidden" filename="lerpHSV.v4p" id="125" nodename="lerpHSV.v4p" systemname="lerpHSV">
    <BOUNDS height="270" left="9780" top="4620" type="Node" width="1365">
    </BOUNDS>
    <BOUNDS height="6060" left="10980" top="7065" type="Window" width="10770">
@@ -254,7 +216,7 @@
    </NODE>
    <LINK dstnodeid="114" dstpinname="Input 2" srcnodeid="125" srcpinname="Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="lerpRGB.v4p" id="134" nodename="lerpRGB~.xml" systemname="lerpRGB" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
+   <NODE componentmode="Hidden" filename="lerpRGB.v4p" id="134" nodename="lerpRGB~.xml" systemname="lerpRGB">
    <BOUNDS height="270" left="8205" top="4620" type="Node" width="1410">
    </BOUNDS>
    <PIN pinname="SwitchAmount" visible="1">
@@ -280,7 +242,7 @@
    </NODE>
    <LINK dstnodeid="114" dstpinname="Input 1" srcnodeid="134" srcpinname="Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="116" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="116" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="100" left="7875" top="5490" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="3105" left="12840" top="5340" type="Window" width="2535">
@@ -292,7 +254,7 @@
    </NODE>
    <LINK dstnodeid="114" dstpinname="Switch" srcnodeid="116" srcpinname="Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="147" nodename="GridSetup.v4p" systemname="GridSetup" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_1_2_1 Color Palettes through Interpolation\">
+   <NODE componentmode="Hidden" filename="GridSetup.v4p" id="147" nodename="GridSetup.v4p" systemname="GridSetup">
    <BOUNDS height="270" left="7620" top="2730" type="Node" width="1290">
    </BOUNDS>
    <BOUNDS height="3600" left="7620" top="2730" type="Box" width="4800">
@@ -429,10 +391,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="147" dstpinname="Y Min" srcnodeid="159" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="124" dstpinname="Left Button" srcnodeid="7" srcpinname="Left Button">
-   <LINKPOINT x="9900" y="1790">
-   </LINKPOINT>
    </LINK>
    <LINK dstnodeid="124" dstpinname="Interpolation Steps Count" srcnodeid="147" srcpinname="Resolution X">
    </LINK>
@@ -605,5 +563,59 @@
    <LINK dstnodeid="134" dstpinname="Colors Right" srcnodeid="124" srcpinname="Colors Right">
    </LINK>
    <LINK dstnodeid="125" dstpinname="Colors Left" srcnodeid="124" srcpinname="Colors Left">
+   </LINK>
+   <NODE componentmode="Hidden" id="7" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="7620" top="765" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="7635" top="765" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="9930" top="3120" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="X" srcnodeid="7" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Y" linkstyle="PolyLine" srcnodeid="7" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="124" dstpinname="Left Button" srcnodeid="7" srcpinname="Left Button">
+   <LINKPOINT x="9900" y="1790">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" id="8" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
+   <BOUNDS height="100" left="11415" top="6585" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="11415" top="6585" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6000" left="9690" top="8880" type="Window" width="9000">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Mouse XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.01334,0.01334,0.01334,1.00000|">
+   </PIN>
+   <PIN pinname="Point Size">
+   </PIN>
+   <PIN pinname="Mouse Down" visible="1">
+   </PIN>
+   <PIN pinname="Selection" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="4" dstpinname="Layer 2" linkstyle="PolyLine" srcnodeid="8" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Mouse" dstnodeid="8" dstpinname="Mouse" hiddenwhenlocked="1">
+   <LINKPOINT x="11445" y="2580">
+   </LINKPOINT>
    </LINK>
    </PATCH>

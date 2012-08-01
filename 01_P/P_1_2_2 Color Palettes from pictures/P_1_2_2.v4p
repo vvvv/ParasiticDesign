@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\P_1_2_2.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\P_1_2_2.v4p">
    <BOUNDS height="8310" left="1995" top="3120" type="Window" width="14670">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="6" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -26,6 +26,14 @@
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
    </PIN>
    <PIN pinname="View" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="5" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -86,18 +94,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="13" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="7935" top="1245" type="Node" width="900">
-   </BOUNDS>
-   <BOUNDS height="0" left="7935" top="1245" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="11175" top="3480" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="22" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -175,7 +171,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="5610" top="5475" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="-0.976516634050881">
    </PIN>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
@@ -186,9 +182,7 @@
    <PIN pinname="Destination Minimum" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="63" dstpinname="Input" srcnodeid="13" srcpinname="X">
-   </LINK>
-   <NODE componentmode="Hidden" filename="PictureSwitcher.v4p" id="64" nodename="PictureSwitcher.v4p" systemname="PictureSwitcher" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\">
+   <NODE componentmode="Hidden" filename="PictureSwitcher.v4p" id="64" nodename="PictureSwitcher.v4p" systemname="PictureSwitcher">
    <BOUNDS height="270" left="10455" top="4590" type="Node" width="1395">
    </BOUNDS>
    <BOUNDS height="4785" left="14745" top="3225" type="Window" width="7380">
@@ -216,7 +210,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="ColorSorting.v4p" id="71" nodename="ColorSorting.v4p" systemname="ColorSorting" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\">
+   <NODE componentmode="Hidden" filename="ColorSorting.v4p" id="71" nodename="ColorSorting.v4p" systemname="ColorSorting">
    <BOUNDS height="270" left="10455" top="5775" type="Node" width="1230">
    </BOUNDS>
    <BOUNDS height="6015" left="5310" top="6990" type="Window" width="13965">
@@ -287,17 +281,13 @@
    <NODE componentmode="Hidden" id="87" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="7725" top="1980" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.976516634050881">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="-0.976516634050881">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="87" dstpinname="X" srcnodeid="13" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="87" dstpinname="Y" srcnodeid="13" srcpinname="X">
-   </LINK>
    <NODE componentmode="InABox" id="88" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="9225" top="5190" type="Node" width="100">
    </BOUNDS>
@@ -571,5 +561,23 @@
    <LINK dstnodeid="105" dstpinname="Y Max" srcnodeid="88" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="105" dstpinname="X Max" srcnodeid="88" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="13" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="7725" top="1155" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="7725" top="1155" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="11175" top="3480" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="63" dstpinname="Input" srcnodeid="13" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="87" dstpinname="X" srcnodeid="13" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="87" dstpinname="Y" srcnodeid="13" srcpinname="X">
    </LINK>
    </PATCH>
