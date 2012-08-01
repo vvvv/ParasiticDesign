@@ -1,17 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_02 Hello Shape\KeyboardControls.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_0_02 Hello Shape\KeyboardControls.v4p">
    <BOUNDS height="4605" left="15945" top="6075" type="Window" width="8865">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="6165" top="765" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="6165" top="765" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="29" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" pintype="Input" visible="1">
    </PIN>
@@ -81,11 +71,11 @@
    </BOUNDS>
    <BOUNDS height="0" left="11370" top="10530" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -105,24 +95,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="32" dstpinname="Input 3" srcnodeid="34" srcpinname="Bang">
-   </LINK>
-   <NODE componentmode="Hidden" id="38" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
-   <BOUNDS height="100" left="6165" top="1470" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Key Match" slicecount="1" values="&lt;BACK&gt;&lt;DELETE&gt;">
-   </PIN>
-   <PIN pinname="&lt;BACK&gt; Output" visible="1">
-   </PIN>
-   <PIN pinname="&lt;DELETE&gt; Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="38" dstpinname="Input" srcnodeid="15" srcpinname="Keyboard Output">
-   </LINK>
-   <LINK dstnodeid="32" dstpinname="Input 1" srcnodeid="38" srcpinname="&lt;BACK&gt; Output">
-   </LINK>
-   <LINK dstnodeid="32" dstpinname="Input 2" srcnodeid="38" srcpinname="&lt;DELETE&gt; Output">
    </LINK>
    <NODE componentmode="InABox" id="41" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7080" top="1470" type="Node" width="315">
@@ -218,4 +190,42 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="6165" top="765" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="6165" top="765" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="38" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="6165" top="1470" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|Back, Delete|">
+   </PIN>
+   <PIN pinname="&lt;BACK&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="&lt;DELETE&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="Back" visible="1">
+   </PIN>
+   <PIN pinname="Delete" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="38" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Back" dstnodeid="32" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Delete" dstnodeid="32" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="38" dstpinname="Keyboard">
+   </LINK>
    </PATCH>

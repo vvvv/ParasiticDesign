@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_1_2_04 Displacement in a Grid\P_2_1_2_04.v4p" systemname="P_2_1_2_04">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_2_04 Displacement in a Grid\P_2_1_2_04.v4p" systemname="P_2_1_2_04">
    <BOUNDS height="14145" left="1320" top="690" type="Window" width="15030">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -74,6 +74,14 @@
    <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="discard">
    </PIN>
    <PIN pinname="Fullscreen Backbuffer Count" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="%VVVV%\effects\Constant.fx" id="27" nodename="Constant (EX9.Effect)" systemname="Constant (EX9.Effect)">
@@ -152,26 +160,14 @@
    </NODE>
    <LINK dstnodeid="98" dstpinname="Enabled" hiddenwhenlocked="0" srcnodeid="96" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="99" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="11400" top="390" type="Node" width="1740">
-   </BOUNDS>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="100" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="12405" top="885" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="100" dstpinname="Input" srcnodeid="99" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="InABox" id="223" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="0" left="7530" top="9765" type="Node" width="0">
    </BOUNDS>
@@ -729,17 +725,13 @@
    <NODE componentmode="Hidden" id="306" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="11400" top="840" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.953033268101761">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="-0.212475633528265">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="306" dstpinname="X" srcnodeid="99" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="306" dstpinname="Y" srcnodeid="99" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="284" dstpinname="Input" srcnodeid="306" srcpinname="XY">
    </LINK>
    <LINK dstnodeid="277" dstpinname="Input 2" srcnodeid="284" srcpinname="Output">
@@ -1080,4 +1072,20 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="99" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="11400" top="390" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Input" srcnodeid="99" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="306" dstpinname="X" srcnodeid="99" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="306" dstpinname="Y" srcnodeid="99" srcpinname="Y">
+   </LINK>
    </PATCH>

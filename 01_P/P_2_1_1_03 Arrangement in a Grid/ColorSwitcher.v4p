@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\ColorSwitcher2.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\ColorSwitcher2.v4p" systemname="ColorSwitcher2">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\ColorSwitcher.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\ColorSwitcher2.v4p" systemname="ColorSwitcher2">
    <BOUNDS height="11685" left="0" top="1320" type="Window" width="14460">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="91" nodename="Cons (Color)" systemname="Cons (Color)">
@@ -603,7 +603,7 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Input 1" visible="1">
+   <PIN encoded="0" pinname="Input 1" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="187" dstpinname="Input" srcnodeid="196" srcpinname="Output">
@@ -617,7 +617,7 @@
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="5">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="5" values="1,2,3,4,0">
+   <PIN encoded="0" pinname="Input String" slicecount="5" values="D1,D2,D3,D4,D0">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
@@ -655,14 +655,6 @@
    <LINK dstnodeid="93" dstpinname="Color Input" srcnodeid="200" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="200" dstpinname="Alpha" srcnodeid="168" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="201" nodename="Keyboard (System Window)" systemname="Keyboard (System Window)">
-   <BOUNDS height="100" left="795" top="405" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="196" dstpinname="Input 1" srcnodeid="201" srcpinname="Keyboard Output">
    </LINK>
    <NODE componentmode="InABox" id="203" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="3495" top="1980" type="Node" width="2445">
@@ -772,4 +764,14 @@
    </LINK>
    <INFO author="" description="" tags="">
    </INFO>
+   <NODE componentmode="Hidden" id="201" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="540" top="435" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Key" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="201" srcpinname="Key" dstnodeid="196" dstpinname="Input 1">
+   </LINK>
    </PATCH>

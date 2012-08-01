@@ -55,7 +55,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" visible="1">
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="361">
    </PIN>
    <PIN pinname="Width" slicecount="1" values="-1">
    </PIN>
@@ -123,7 +123,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="11475" top="1245" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="361">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="14">
    </PIN>
@@ -153,7 +153,7 @@
    </BOUNDS>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Resolution" visible="1">
+   <PIN pinname="Resolution" visible="1" slicecount="1" values="361">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -258,20 +258,6 @@
    </LINK>
    <LINK dstnodeid="155" dstpinname="ScaleY" srcnodeid="156" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="57" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="6285" left="2985" top="7935" type="Window" width="10500">
-   </BOUNDS>
-   <BOUNDS height="100" left="8760" top="1320" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="SegmentCount" visible="1">
-   </PIN>
-   <PIN pinname="KeyEvent" visible="1">
-   </PIN>
-   <BOUNDS left="8760" top="1320" type="Box">
-   </BOUNDS>
-   <PIN pinname="Segment Count" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="161" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="7170" top="6615" type="Node" width="4680">
    </BOUNDS>
@@ -462,12 +448,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK dstnodeid="51" dstpinname="Spread Count" srcnodeid="57" srcpinname="Segment Count">
-   </LINK>
-   <LINK dstnodeid="131" dstpinname="Y Input Value" srcnodeid="57" srcpinname="Segment Count">
-   </LINK>
-   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="144" dstpinname="Resolution">
-   </LINK>
    <NODE componentmode="Hidden" id="44" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
    <BOUNDS height="100" left="10905" top="1320" type="Node" width="100">
    </BOUNDS>
@@ -511,5 +491,25 @@
    <LINK srcnodeid="44" srcpinname="Mouse" dstnodeid="43" dstpinname="Mouse" hiddenwhenlocked="1">
    <LINKPOINT x="12945" y="2280">
    </LINKPOINT>
+   </LINK>
+   <NODE id="57" componentmode="Hidden" filename="KeyboardControls.v4p" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <BOUNDS type="Window" height="6285" left="2985" top="7935" width="10500">
+   </BOUNDS>
+   <BOUNDS type="Node" height="100" left="8760" top="1320" width="100">
+   </BOUNDS>
+   <PIN pinname="SegmentCount" visible="1">
+   </PIN>
+   <PIN pinname="KeyEvent" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="8760" top="1320">
+   </BOUNDS>
+   <PIN pinname="Segment Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="144" dstpinname="Resolution">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="131" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Segment Count" dstnodeid="51" dstpinname="Spread Count">
    </LINK>
    </PATCH>

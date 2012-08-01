@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\P_2_1_2_02.v4p" systemname="P_2_1_2_02">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\P_2_1_2_02.v4p" systemname="P_2_1_2_02">
    <BOUNDS height="12855" left="960" top="810" type="Window" width="16545">
    </BOUNDS>
    <NODE componentmode="InABox" id="42" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -75,6 +75,14 @@
    </PIN>
    <PIN pinname="Fullscreen Backbuffer Count" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="38" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="270" left="7155" top="10125" type="Node" width="1650">
@@ -124,16 +132,6 @@
    </NODE>
    <LINK dstnodeid="38" dstpinname="Transform" srcnodeid="34" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="33" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="7410" top="450" type="Node" width="900">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="32" nodename="Map (Value)" systemname="Map (Value)">
    <BOUNDS height="100" left="7395" top="2130" type="Node" width="100">
    </BOUNDS>
@@ -157,7 +155,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="7680" top="2970" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
@@ -191,8 +189,6 @@
    <LINK dstnodeid="29" dstpinname="Input 2" srcnodeid="28" srcpinname="Bang">
    </LINK>
    <LINK dstnodeid="29" dstpinname="Input 1" srcnodeid="30" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="30" dstpinname="Input" linkstyle="PolyLine" srcnodeid="33" srcpinname="Left Button">
    </LINK>
    <NODE componentmode="Hidden" id="26" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
    <BOUNDS height="100" left="11160" top="5190" type="Node" width="100">
@@ -326,7 +322,7 @@
    </LINK>
    <LINK dstnodeid="45" dstpinname="TranslateY" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="22" srcpinname="Y Out">
    </LINK>
-   <NODE componentmode="Hidden" filename="ColorSwitcher.v4p" id="52" nodename="ColorSwitcher.v4p" systemname="ColorSwitcher" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\">
+   <NODE componentmode="Hidden" filename="ColorSwitcher.v4p" id="52" nodename="ColorSwitcher.v4p" systemname="ColorSwitcher">
    <BOUNDS height="270" left="10290" top="9150" type="Node" width="1305">
    </BOUNDS>
    <BOUNDS height="10620" left="10170" top="3585" type="Window" width="14340">
@@ -343,8 +339,10 @@
    </PIN>
    <PIN pinname="Foreground Color" visible="1">
    </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="SizeController.v4p" id="54" nodename="SizeController.v4p" systemname="SizeController" path="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\">
+   <NODE componentmode="Hidden" filename="SizeController.v4p" id="54" nodename="SizeController.v4p" systemname="SizeController">
    <BOUNDS height="270" left="10290" top="7860" type="Node" width="1305">
    </BOUNDS>
    <BOUNDS height="8775" left="11580" top="4395" type="Window" width="10755">
@@ -360,6 +358,8 @@
    <PIN pinname="Background Size" visible="1">
    </PIN>
    <PIN pinname="Foreground Size" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="55" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -447,17 +447,13 @@
    <NODE componentmode="Hidden" id="78" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="7410" top="1035" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.775947281713344">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.589490968801314">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="78" dstpinname="X" srcnodeid="33" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="78" dstpinname="Y" srcnodeid="33" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="32" dstpinname="Input" srcnodeid="78" srcpinname="XY">
    </LINK>
    <NODE componentmode="Hidden" id="79" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -515,16 +511,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="32" dstpinname="Source Maximum" srcnodeid="82" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="84" nodename="Keyboard (System Window)" systemname="Keyboard (System Window)">
-   <BOUNDS height="100" left="10140" top="7200" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="54" dstpinname="Input" srcnodeid="84" srcpinname="Keyboard Output">
-   </LINK>
-   <LINK dstnodeid="52" dstpinname="Input" srcnodeid="84" srcpinname="Keyboard Output">
    </LINK>
    <LINK dstnodeid="34" dstpinname="ScaleX" srcnodeid="54" srcpinname="Background Size">
    </LINK>
@@ -694,4 +680,32 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="84" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="10140" top="7200" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Keyboard" dstnodeid="54" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Keyboard" dstnodeid="52" dstpinname="Keyboard">
+   </LINK>
+   <NODE componentmode="Hidden" id="33" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="7410" top="450" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="30" dstpinname="Input" linkstyle="PolyLine" srcnodeid="33" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="78" dstpinname="X" srcnodeid="33" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="78" dstpinname="Y" srcnodeid="33" srcpinname="Y">
+   </LINK>
    </PATCH>

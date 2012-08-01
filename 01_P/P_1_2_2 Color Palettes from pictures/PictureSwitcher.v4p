@@ -1,35 +1,19 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.4.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\PictureSwitcher.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\PictureSwitcher.v4p">
    <BOUNDS height="4785" left="14745" top="3225" type="Window" width="7380">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="14" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)">
-   <BOUNDS height="100" left="1425" top="1290" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="1425" top="1290" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="15135" top="10140" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Key Match" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="13" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="2580" top="645" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="270" left="2580" top="645" type="Box" width="495">
+   <BOUNDS height="255" left="2580" top="645" type="Box" width="855">
    </BOUNDS>
    <BOUNDS height="160" left="15630" top="9060" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="|1 2 3 |" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="|D1, D2, D3|">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="14" dstpinname="Key Match" srcnodeid="13" srcpinname="Output String">
-   </LINK>
    <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="465" top="1710" type="Node" width="100">
    </BOUNDS>
@@ -37,25 +21,11 @@
    </BOUNDS>
    <BOUNDS height="160" left="14490" top="10485" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="12" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="1425" top="405" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="1410" top="405" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="14" dstpinname="Input" srcnodeid="3" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="Hidden" id="15" nodename="Switch (String Input)" systemname="Switch (String Input)">
    <BOUNDS height="270" left="1425" top="2685" type="Node" width="4320">
    </BOUNDS>
@@ -63,7 +33,7 @@
    </BOUNDS>
    <BOUNDS height="0" left="17220" top="7305" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -76,8 +46,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="15" dstpinname="Switch" srcnodeid="14" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="2850" top="2085" type="Node" width="100">
    </BOUNDS>
@@ -85,7 +53,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="7995" top="10245" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="data\pic1.jpg" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="data\pic1.jpg">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -99,7 +67,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="7995" top="10245" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="data\pic3.jpg" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="data\pic3.jpg">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -113,7 +81,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="7995" top="10245" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="data\pic2.jpg" encoded="0">
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="data\pic2.jpg">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -139,9 +107,45 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1425" top="3825" width="765" height="240">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Texture Out|">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Texture Out" dstnodeid="23" dstpinname="Input Node">
+   </LINK>
+   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="1425" top="405" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="1410" top="405" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="14" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1425" top="1290" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="1425" top="1290" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="15135" top="10140" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Key Match" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" encoded="0">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="14" dstpinname="Key Match" srcnodeid="13" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="15" dstpinname="Switch" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="14" dstpinname="Keyboard">
    </LINK>
    </PATCH>

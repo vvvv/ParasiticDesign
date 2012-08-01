@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
-   <PATCH nodename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_02 Hello Shape\P_2_0_02.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_0_02 Hello Shape\P_2_0_02.v4p">
    <BOUNDS height="8970" left="495" top="765" type="Window" width="12915">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -77,7 +77,7 @@
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Clear" visible="1">
+   <PIN pinname="Clear" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Backbuffer Height" slicecount="1" values="0">
    </PIN>
@@ -91,19 +91,11 @@
    </PIN>
    <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="flip">
    </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="12" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="7710" top="1350" type="Node" width="3135">
-   </BOUNDS>
-   <BOUNDS height="0" left="7710" top="1350" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="6270" top="6240" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
-   <PIN pinname="Left Button" visible="1">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="11" nodename="Map (Value)" systemname="Map (Value)">
@@ -115,7 +107,7 @@
    </BOUNDS>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0.700575815738964">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -135,7 +127,7 @@
    </BOUNDS>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="-0.953757225433526">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -146,8 +138,6 @@
    <PIN pinname="Destination Minimum" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="9" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="X">
-   </LINK>
    <NODE componentmode="Hidden" id="21" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="270" left="6945" top="5835" type="Node" width="3960">
    </BOUNDS>
@@ -165,7 +155,7 @@
    </PIN>
    <PIN pinname="Inner Radius" visible="1">
    </PIN>
-   <PIN pinname="Enabled" visible="1">
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Cycles" slicecount="1" values="1">
    </PIN>
@@ -194,8 +184,6 @@
    </LINK>
    <LINK dstnodeid="20" dstpinname="Layers" srcnodeid="21" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="21" dstpinname="Enabled" srcnodeid="12" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="InABox" id="41" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="7845" top="6900" type="Node" width="100">
    </BOUNDS>
@@ -203,7 +191,7 @@
    </BOUNDS>
    <BOUNDS height="160" left="4710" top="11340" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -287,18 +275,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="21" dstpinname="Inner Radius" srcnodeid="31" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="39" nodename="KeyboardControls.v4p" systemname="KeyboardControls" path="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_02 Hello Shape\">
-   <BOUNDS height="4605" left="15945" top="6075" type="Window" width="8865">
-   </BOUNDS>
-   <BOUNDS height="100" left="7170" top="6405" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="20" dstpinname="Clear" srcnodeid="39" srcpinname="Out">
-   </LINK>
-   <LINK dstnodeid="41" dstpinname="Y Input Value" srcnodeid="39" srcpinname="Out">
    </LINK>
    <NODE componentmode="InABox" id="58" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="8205" top="2505" type="Node" width="100">
@@ -422,8 +398,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK dstnodeid="11" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="Y">
-   </LINK>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="34" managers="" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
    <PIN pinname="Saturation" pintype="Input" visible="1">
    </PIN>
@@ -592,4 +566,24 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="12" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="270" left="7140" top="1350" type="Node" width="3375">
+   </BOUNDS>
+   <BOUNDS height="0" left="7140" top="1350" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="6270" top="6240" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Enabled" srcnodeid="12" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="11" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="Y">
+   </LINK>
    </PATCH>

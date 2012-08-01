@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha27.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
    <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_1_01 Arrangement in a Grid\P_2_1_1_01.v4p">
    <BOUNDS height="12765" left="795" top="450" type="Window" width="15615">
    </BOUNDS>
@@ -134,20 +134,6 @@
    </NODE>
    <LINK dstnodeid="41" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="31" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="47" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="9270" top="1230" type="Node" width="1635">
-   </BOUNDS>
-   <BOUNDS height="0" left="9270" top="1230" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4755" top="4425" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="53" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="10230" top="2535" type="Node" width="100">
    </BOUNDS>
@@ -155,15 +141,13 @@
    </BOUNDS>
    <BOUNDS height="0" left="7680" top="2970" type="Window" width="0">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="53" dstpinname="Input" srcnodeid="47" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="Hidden" id="103" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <BOUNDS height="100" left="10230" top="2985" type="Node" width="100">
    </BOUNDS>
@@ -251,13 +235,11 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="163" dstpinname="Y Input Value" srcnodeid="47" srcpinname="Left Button">
-   </LINK>
    <NODE componentmode="InABox" id="177" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="8100" top="6660" type="Node" width="100">
    </BOUNDS>
@@ -293,17 +275,13 @@
    <NODE componentmode="Hidden" id="185" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="9270" top="1845" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.937397034596376">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.497536945812808">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="185" dstpinname="X" srcnodeid="47" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="185" dstpinname="Y" srcnodeid="47" srcpinname="Y">
-   </LINK>
    <NODE componentmode="InABox" id="187" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7635" top="3195" type="Node" width="1050">
    </BOUNDS>
@@ -421,23 +399,11 @@
    <NODE componentmode="Hidden" id="197" nodename="Ord2Enum (Enumerations)" systemname="Ord2Enum (Enumerations)">
    <BOUNDS height="100" left="13440" top="2175" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Ord Value" visible="1">
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="199" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)">
-   <BOUNDS height="100" left="13440" top="1710" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Key Match">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="197" dstpinname="Ord Value" srcnodeid="199" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="203" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="7515" top="4530" type="Node" width="100">
    </BOUNDS>
@@ -627,9 +593,9 @@
    <NODE componentmode="InABox" id="216" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="0" left="14595" top="1320" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="14595" top="1320" type="Box" width="495">
+   <BOUNDS height="270" left="14595" top="1320" type="Box" width="855">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="123">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="|D1, D2, D3|">
    </PIN>
    <PIN encoded="0" pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -638,8 +604,6 @@
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="199" dstpinname="Key Match" srcnodeid="216" srcpinname="Output String">
-   </LINK>
    <NODE componentmode="InABox" id="217" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="375" top="5700" type="Node" width="315">
    </BOUNDS>
@@ -706,14 +670,6 @@
    </LINK>
    <LINK dstnodeid="183" dstpinname="Rotate" srcnodeid="41" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="198" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="13440" top="1230" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="199" dstpinname="Input" srcnodeid="198" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="Hidden" filename="Stroke (EX9).v4p" id="223" nodename="Stroke (EX9)" systemname="Stroke (EX9)">
    <PIN pinname="Stroke Cap" visible="1">
    </PIN>
@@ -749,5 +705,55 @@
    <LINK dstnodeid="223" dstpinname="FromXY" srcnodeid="189" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="223" dstpinname="ToXY" srcnodeid="191" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="47" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="9270" top="1230" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="9270" top="1230" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4755" top="4425" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="53" dstpinname="Input" srcnodeid="47" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="163" dstpinname="Y Input Value" srcnodeid="47" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="185" dstpinname="X" srcnodeid="47" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="185" dstpinname="Y" srcnodeid="47" srcpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" id="198" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <BOUNDS height="100" left="13440" top="1230" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="199" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="13440" top="1710" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Key Match">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="197" dstpinname="Ord Value" srcnodeid="199" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="199" dstpinname="Key Match" srcnodeid="216" srcpinname="Output String">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Keyboard" dstnodeid="199" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Keyboard" dstnodeid="199" dstpinname="Keyboard">
    </LINK>
    </PATCH>
