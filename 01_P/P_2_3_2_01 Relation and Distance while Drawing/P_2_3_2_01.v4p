@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" systemname="P_2_3_2_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" systemname="P_2_3_2_01">
    <BOUNDS height="9915" left="960" top="1035" type="Window" width="13680">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -58,18 +58,6 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="57" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="9240" top="1035" type="Node" width="2055">
-   </BOUNDS>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Middle Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="58" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="270" left="8505" top="4260" type="Node" width="2160">
    </BOUNDS>
@@ -101,7 +89,7 @@
    </PIN>
    <PIN pinname="Generate New Color" visible="1">
    </PIN>
-   <PIN pinname="Generate Random Color" visible="1">
+   <PIN pinname="Generate Random Color" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="58" dstpinname="Color" srcnodeid="84" srcpinname="Out">
@@ -305,7 +293,7 @@
    </PIN>
    <PIN pinname="PlaceAnElement" visible="1">
    </PIN>
-   <PIN pinname="Mouse Pressed" visible="1">
+   <PIN pinname="Mouse Pressed" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Angle" visible="1">
    </PIN>
@@ -326,13 +314,7 @@
    <PIN pinname="Draw Mode" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="X" srcnodeid="57" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Y" srcnodeid="57" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="58" dstpinname="Enabled" linkstyle="PolyLine" srcnodeid="137" srcpinname="PlaceAnElement">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Mouse Pressed" srcnodeid="57" srcpinname="Left Button">
    </LINK>
    <LINK dstnodeid="61" dstpinname="Rotate" srcnodeid="137" srcpinname="Angle">
    </LINK>
@@ -371,7 +353,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="149" dstpinname="Layer 1" srcnodeid="144" srcpinname="Layer">
@@ -379,40 +361,14 @@
    <NODE componentmode="Hidden" id="156" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="9240" top="1485" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.18186555497655">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.644114921223355">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="156" dstpinname="X" srcnodeid="57" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="156" dstpinname="Y" srcnodeid="57" srcpinname="Y">
-   </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" id="157" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <BOUNDS height="100" left="8655" top="7305" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.00953,0.00953,0.00953,1.00000|">
-   </PIN>
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Point Size" slicecount="3" values="-0.01,-0.01,-0.01">
-   </PIN>
-   <BOUNDS left="8655" top="7305" type="Box">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="149" dstpinname="Layer 2" srcnodeid="157" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="157" dstpinname="Mouse XYZ" hiddenwhenlocked="0" srcnodeid="156" srcpinname="XY">
-   <LINKPOINT x="6630" y="3060">
-   </LINKPOINT>
-   <LINKPOINT x="6630" y="6240">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="84" dstpinname="Toggle Colors" srcnodeid="137" srcpinname="PlaceAnElement">
-   </LINK>
-   <LINK dstnodeid="84" dstpinname="Generate Random Color" srcnodeid="57" srcpinname="Left Button">
    </LINK>
    <LINK dstnodeid="61" dstpinname="TranslateX" srcnodeid="137" srcpinname="X">
    </LINK>
@@ -467,7 +423,7 @@
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="141" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="6825" top="1035" type="Node" width="1560">
    </BOUNDS>
-   <BOUNDS height="7650" left="3420" top="7380" type="Window" width="14625">
+   <BOUNDS height="6150" left="3420" top="7380" type="Window" width="11775">
    </BOUNDS>
    <PIN pinname="Clear" visible="1">
    </PIN>
@@ -541,5 +497,49 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="174" dstpinname="Layers" srcnodeid="149" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" id="157" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
+   <BOUNDS height="100" left="8655" top="7305" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|0.00953,0.00953,0.00953,1.00000|">
+   </PIN>
+   <PIN pinname="Mouse XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Point Size">
+   </PIN>
+   <BOUNDS left="8655" top="7305" type="Box">
+   </BOUNDS>
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="149" dstpinname="Layer 2" srcnodeid="157" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="57" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS height="100" left="9240" top="1035" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Middle Button" visible="1">
+   </PIN>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="137" dstpinname="Mouse Pressed" srcnodeid="57" srcpinname="Left Button">
+   </LINK>
+   <LINK dstnodeid="156" dstpinname="X" srcnodeid="57" srcpinname="X">
+   </LINK>
+   <LINK dstnodeid="156" dstpinname="Y" srcnodeid="57" srcpinname="Y">
+   </LINK>
+   <LINK dstnodeid="84" dstpinname="Generate Random Color" srcnodeid="57" srcpinname="Left Button">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Mouse" dstnodeid="157" dstpinname="Mouse" hiddenwhenlocked="1">
+   <LINKPOINT x="7740" y="4860">
+   </LINKPOINT>
    </LINK>
    </PATCH>

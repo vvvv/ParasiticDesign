@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
    <BOUNDS height="14835" left="255" top="555" type="Window" width="17310">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -231,7 +231,7 @@
    <NODE componentmode="Hidden" id="242" nodename="AND (Boolean)" systemname="AND (Boolean)">
    <BOUNDS height="270" left="13200" top="3465" type="Node" width="1305">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -255,9 +255,9 @@
    <NODE componentmode="Hidden" id="246" nodename="Heading (Animation)" systemname="Heading (Animation)">
    <BOUNDS height="100" left="9885" top="1890" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Length" visible="1">
    </PIN>
@@ -389,7 +389,7 @@
    </PIN>
    <BOUNDS left="8805" top="9495" type="Box">
    </BOUNDS>
-   <PIN pinname="Enabled" visible="1">
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Normalize">
    </PIN>
@@ -437,9 +437,9 @@
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="271">
    <BOUNDS type="Node" left="8520" top="1875" width="630" height="270">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -497,30 +497,6 @@
    <LINK srcnodeid="108" srcpinname="Output" dstnodeid="292" dstpinname="Rotate">
    </LINK>
    <LINK srcnodeid="282" srcpinname="X" dstnodeid="292" dstpinname="TranslateX">
-   </LINK>
-   <NODE componentmode="Hidden" id="110" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="8535" top="915" type="Node" width="2805">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Mouse" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="242" dstpinname="Input 2" srcnodeid="110" srcpinname="Left Button" linkstyle="Bezier">
-   </LINK>
-   <LINK dstnodeid="246" dstpinname="X" srcnodeid="110" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="246" dstpinname="Y" srcnodeid="110" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine" srcnodeid="110" srcpinname="Left Button">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="X" dstnodeid="271" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Y" dstnodeid="271" dstpinname="Y">
    </LINK>
    <INFO author="" description="" tags="">
    </INFO>
@@ -853,7 +829,7 @@
    </PIN>
    <PIN pinname="Point Size" visible="1" slicecount="3" values="0.0299999995529652,0.0299999995529652,0.0299999995529652">
    </PIN>
-   <PIN pinname="Mouse" visible="1">
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 3">
@@ -1088,6 +1064,30 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE id="110" componentmode="Hidden" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
+   <BOUNDS type="Node" height="270" left="8535" top="915" width="2805">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="110" srcpinname="Mouse" dstnodeid="199" dstpinname="Mouse" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Y" dstnodeid="271" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="X" dstnodeid="271" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Y" dstnodeid="246" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="X" dstnodeid="246" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="242" dstpinname="Input 2" linkstyle="Bezier">
    </LINK>
    </PATCH>
