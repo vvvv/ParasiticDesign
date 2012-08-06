@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET\P_2_3_3_01_TABLET.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET\P_2_3_3_01_TABLET.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
    <BOUNDS height="14370" left="0" top="360" type="Window" width="15270">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -181,7 +181,7 @@
    </BOUNDS>
    <BOUNDS height="3300" left="675" top="2310" type="Box" width="4590">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A pressure of a pen is adjusted and used as a font size.&cr;&lf;&cr;&lf;This subpatch calculates position of the next character given current position of the pen and the font size.&cr;&lf;Please check it for more details.&cr;&lf;&cr;&lf;The text is splitted into separate characters, every character is transformed according to the pen&apos;s position and a font size. Everything is like in the previous example.&cr;&lf;&cr;&lf;A Cursor (DX9) takes MouseState as an inout, not just the XY coordinates coming from that Tablet(Devices Wintab). So the MouseState (System Join) is used to construct MouseState from the position of the pen.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The pens pressure is adjusted and used as the font size.&cr;&lf;&cr;&lf;This calculates the position for the next character given current position of the pen and the font size.&cr;&lf;Please check the subpatch for more details.&cr;&lf;&cr;&lf;The text is split into separate characters, every character is transformed according to the pen&apos;s position and a font size. Everything is like in the previous example.&cr;&lf;&cr;&lf;A Cursor (DX9) takes MouseState as an inout, not just the XY coordinates coming from that Tablet(Devices Wintab). So the MouseState (System Join) is used to construct MouseState from the position of the pen.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -277,9 +277,9 @@
    <LINK dstnodeid="96" dstpinname="Input" srcnodeid="248" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="250" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8790" top="3360" type="Node" width="315">
+   <BOUNDS height="270" left="9930" top="3615" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8790" top="3360" type="Box" width="405">
+   <BOUNDS height="390" left="9930" top="3615" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -307,16 +307,6 @@
    </PIN>
    <BOUNDS left="8610" top="1890" type="Box">
    </BOUNDS>
-   </NODE>
-   <NODE componentmode="Hidden" id="263" nodename="Power (Value)" systemname="Power (Value)">
-   <BOUNDS height="100" left="9210" top="3255" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
    </NODE>
    <NODE componentmode="InABox" id="265" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="8625" top="1260" type="Node" width="0">
@@ -360,8 +350,6 @@
    </LINK>
    <LINK dstnodeid="33" dstpinname="Enabled" srcnodeid="312" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="165" dstpinname="Up" srcnodeid="312" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="312" dstpinname="TargetDistance" srcnodeid="244" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="317" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -385,13 +373,13 @@
    </PIN>
    <PIN pinname="Up" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS height="270" left="13365" top="6600" type="Node" width="1500">
+   <BOUNDS height="270" left="13365" top="6900" type="Node" width="1500">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Unlimited">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="-1">
+   <PIN pinname="Default" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
@@ -425,7 +413,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
-   <BOUNDS height="270" left="9840" top="6225" type="Node" width="330">
+   <BOUNDS height="270" left="9840" top="6825" type="Node" width="330">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -443,7 +431,7 @@
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Horizontal Align" slicecount="1" visible="1" values="Center">
+   <PIN pinname="Horizontal Align" slicecount="1" visible="1" values="Left">
    </PIN>
    <BOUNDS height="270" left="7815" top="8460" type="Node" width="3450">
    </BOUNDS>
@@ -473,7 +461,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="9315" top="12225" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="14370" left="15525" top="360" type="Window" width="9675">
+   <BOUNDS height="8115" left="15615" top="360" type="Window" width="13185">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -558,22 +546,8 @@
    </LINK>
    <LINK srcnodeid="108" srcpinname="Output" dstnodeid="99" dstpinname="Rotate">
    </LINK>
-   <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="365">
-   <BOUNDS type="Node" left="9210" top="4455" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Destination Maximum">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="255" srcpinname="Pressure" dstnodeid="263" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="365" srcpinname="Output" dstnodeid="33" dstpinname="Size">
-   </LINK>
    <NODE componentmode="Hidden" filename="CalculateNextPosition.v4p" id="372" nodename="CalculateNextPosition.v4p" systemname="CalculateNextPosition">
-   <BOUNDS height="14175" left="2760" top="975" type="Window" width="16440">
+   <BOUNDS height="12975" left="1710" top="3570" type="Window" width="14010">
    </BOUNDS>
    <BOUNDS height="270" left="8355" top="5685" type="Node" width="2280">
    </BOUNDS>
@@ -587,14 +561,16 @@
    </PIN>
    <PIN pinname="Enable" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Font Size" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Place Element" visible="1" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK dstnodeid="108" dstpinname="Input 1" srcnodeid="372" srcpinname="Angle">
    </LINK>
-   <LINK dstnodeid="165" dstpinname="Up" srcnodeid="372" srcpinname="Place Element">
-   </LINK>
    <LINK dstnodeid="33" dstpinname="Enabled" srcnodeid="372" srcpinname="Place Element">
-   </LINK>
-   <LINK srcnodeid="365" srcpinname="Output" dstnodeid="372" dstpinname="Font Size">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" id="375" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
    <BOUNDS height="100" left="11460" top="11325" type="Node" width="100">
@@ -687,62 +663,6 @@
    <LINK srcnodeid="386" srcpinname="Y Output Value" dstnodeid="385" dstpinname="Destination Center">
    </LINK>
    <LINK srcnodeid="386" srcpinname="Y Output Value" dstnodeid="385" dstpinname="Source Center">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="391" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="9765" top="2895" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9765" top="2895" width="345" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2.5">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="391" srcpinname="Y Output Value" dstnodeid="263" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="414">
-   <BOUNDS type="Node" left="9210" top="3960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="415" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="9450" top="3630" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9450" top="3630" width="345" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1.1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="415" srcpinname="Y Output Value" dstnodeid="414" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="263" srcpinname="Output" dstnodeid="414" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="414" srcpinname="Output" dstnodeid="365" dstpinname="Input">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="416" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="9900" top="3975" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="9900" top="3975" width="510" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="200">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="416" srcpinname="Y Output Value" dstnodeid="365" dstpinname="Destination Maximum">
    </LINK>
    <NODE id="363" nodename="IOBox (Enumerations)" componentmode="InABox" systemname="IOBox (Enumerations)">
    <BOUNDS type="Node" left="7275" top="6435" width="0" height="0">
@@ -903,5 +823,75 @@
    <LINK srcnodeid="255" srcpinname="X" dstnodeid="422" dstpinname="X">
    </LINK>
    <LINK srcnodeid="422" srcpinname="Mouse" dstnodeid="375" dstpinname="Mouse" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="429">
+   <BOUNDS type="Node" left="10560" top="3705" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Term" slicecount="1" encoded="0" values="|power(a*1.1, 2.5) * 200 + 5|">
+   </PIN>
+   <PIN pinname="A" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="255" srcpinname="Pressure" dstnodeid="429" dstpinname="A">
+   </LINK>
+   <LINK srcnodeid="429" srcpinname="Output" dstnodeid="372" dstpinname="Font Size">
+   </LINK>
+   <LINK srcnodeid="429" srcpinname="Output" dstnodeid="33" dstpinname="Size">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Output" dstnodeid="372" dstpinname="Character">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="430" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="8610" top="5145" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8610" top="5145" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="Arial">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="430" srcpinname="Output Enum" dstnodeid="372" dstpinname="Font">
+   </LINK>
+   <LINK srcnodeid="430" srcpinname="Output Enum" dstnodeid="33" dstpinname="Font">
+   </LINK>
+   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="431">
+   <BOUNDS type="Node" left="13365" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="372" srcpinname="Place Element" dstnodeid="431" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="431" srcpinname="Output 1" dstnodeid="165" dstpinname="Up">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="432" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="10230" top="8925" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10230" top="8925" width="675" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="Right">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="432" srcpinname="Output Enum" dstnodeid="33" dstpinname="Horizontal Align">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="433" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="10560" top="3285" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10560" top="3285" width="2085" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|power(a*1.1, 2.5) * 200 + 5|" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="0+0" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="433" srcpinname="Output String" dstnodeid="429" dstpinname="Term">
    </LINK>
    </PATCH>
