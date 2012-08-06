@@ -211,7 +211,7 @@
    </BOUNDS>
    <BOUNDS height="6180" left="675" top="2280" type="Box" width="4425">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This example is more or less the same as P_2_3_3_01_TABLET, but with some additional features.&cr;&lf;&cr;&lf;Subpatch is updated, so it can handle Shift (limit drawing direction) feature.&cr;&lf;&cr;&lf;Underlay picture is loaded in the FileTexture.&cr;&lf;&cr;&lf;This texture is used on a Quad, which has to be properly scaled (to display image proportions correctly). Original Width and Height of the image are plugged into AspectRatio node which outputs the right Transform for the Quad. &cr;&lf;&cr;&lf;Aligment pin is set to FitHeight, so the Quad will be exactly one unit in height. Width of the Quad will be proportionately adjusted. &cr;&lf;&cr;&lf;Coordinate System covers 2 units in height (-1, 1), so to cover the render window with the image, the Quad (which is now 1 unit in height) has to be scaled with Uniform Scale pin set to 2.&cr;&lf;&cr;&lf;The Alpha of the Quad is ajusted, so the image will be semi-transparent&cr;&lf;&cr;&lf;u key turns off/on Enable pin of the Quad.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This example is more or less the same as P_2_3_3_01_TABLET, but with some additional features.&cr;&lf;&cr;&lf;Subpatch is updated, so it can handle Shift (limit drawing direction) feature.&cr;&lf;&cr;&lf;Underlay picture is loaded in the FileTexture.&cr;&lf;&cr;&lf;This texture is used on a Quad, which has to be properly scaled (to display image proportions correctly). Original Width and Height of the image are plugged into AspectRatio node which returns the right transformation for the Quad. &cr;&lf;&cr;&lf;Aligment pin is set to FitHeight, so the Quad will be exactly one unit in height. Width of the Quad will be proportionately adjusted. &cr;&lf;&cr;&lf;The Renderers coordinate system covers 2 units in height (-1, 1), so to cover the render window with the image, the Quad (which is now 1 unit in height) has to be scaled with Uniform Scale pin set to 2.&cr;&lf;&cr;&lf;The Alpha of the Quad is adjusted, so the image will be semi-transparent&cr;&lf;&cr;&lf;u key turns off/on Enable pin of the Quad.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -725,9 +725,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="347" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="15405" top="6465" type="Node" width="100">
+   <BOUNDS height="100" left="15405" top="4365" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="270" left="15405" top="6465" type="Box" width="1455">
+   <BOUNDS height="270" left="15405" top="4365" type="Box" width="1455">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" values="data\underlay.png">
    </PIN>
@@ -1042,4 +1042,18 @@
    </LINK>
    <LINK srcnodeid="381" srcpinname="Mouse" dstnodeid="267" dstpinname="Mouse" hiddenwhenlocked="1">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="382" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="15630" top="4680" width="2775" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15630" top="4680" width="1605" height="525">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|^ rightclick here to choose an image.|" encoded="0">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
