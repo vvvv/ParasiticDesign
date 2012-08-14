@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\PictureSwitcher.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\PictureSwitcher.v4p">
    <BOUNDS height="4785" left="14745" top="3225" type="Window" width="7380">
    </BOUNDS>
    <NODE componentmode="InABox" id="13" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -112,18 +112,6 @@
    </NODE>
    <LINK srcnodeid="22" srcpinname="Texture Out" dstnodeid="23" dstpinname="Input Node">
    </LINK>
-   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="1425" top="405" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="1410" top="405" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="14" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="1425" top="1290" type="Node" width="100">
    </BOUNDS>
@@ -137,7 +125,7 @@
    </PIN>
    <PIN pinname="Input" visible="1" encoded="0">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="14" dstpinname="Key Match" srcnodeid="13" srcpinname="Output String">
@@ -146,6 +134,16 @@
    </LINK>
    <LINK dstnodeid="15" dstpinname="Switch" srcnodeid="14" srcpinname="Output">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="14" dstpinname="Keyboard">
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="24" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="1425" top="525" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1425" top="525" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Keyboard" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output Node" dstnodeid="14" dstpinname="Keyboard">
    </LINK>
    </PATCH>

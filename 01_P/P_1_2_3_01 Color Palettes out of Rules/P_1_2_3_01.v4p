@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\P_1_2_3_01.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\P_1_2_3_01.v4p">
    <BOUNDS height="8070" left="2580" top="3855" type="Window" width="11565">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="23" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -157,7 +157,7 @@
    <NODE componentmode="Hidden" filename="ColorPalettes.v4p" id="69" nodename="ColorPalettes.v4p" systemname="ColorPalettes">
    <BOUNDS height="100" left="8325" top="5385" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="11580" left="6690" top="1545" type="Window" width="19350">
+   <BOUNDS height="11580" left="8355" top="3870" type="Window" width="19350">
    </BOUNDS>
    <PIN pinname="CountX" visible="1">
    </PIN>
@@ -180,6 +180,10 @@
    <PIN pinname="value" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Key Pressed" visible="1">
+   </PIN>
+   <PIN pinname="Key Index" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -307,9 +311,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="95" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9000" top="4680" type="Node" width="315">
+   <BOUNDS height="270" left="7665" top="4680" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9000" top="4680" type="Box" width="450">
+   <BOUNDS height="405" left="7665" top="4680" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -323,7 +327,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="96" nodename="Count (Node)" systemname="Count (Node)">
-   <BOUNDS height="100" left="8325" top="4935" type="Node" width="100">
+   <BOUNDS height="100" left="8325" top="4815" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -349,9 +353,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="98" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9690" top="5205" type="Node" width="315">
+   <BOUNDS height="270" left="9795" top="5295" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9690" top="5205" type="Box" width="450">
+   <BOUNDS height="405" left="9795" top="5295" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -433,5 +437,17 @@
    <LINK srcnodeid="20" srcpinname="Mouse" dstnodeid="21" dstpinname="Mouse" hiddenwhenlocked="1">
    <LINKPOINT x="8250" y="2580">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="KeyboardControls" filename="KeyboardControls.v4p" nodename="KeyboardControls.v4p" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="8940" top="4065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Key Pressed" visible="1">
+   </PIN>
+   <PIN pinname="Key Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Key Pressed" dstnodeid="69" dstpinname="Key Pressed">
+   </LINK>
+   <LINK srcnodeid="100" srcpinname="Key Index" dstnodeid="69" dstpinname="Key Index">
    </LINK>
    </PATCH>
