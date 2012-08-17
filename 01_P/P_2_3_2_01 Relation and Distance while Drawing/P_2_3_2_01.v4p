@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" systemname="P_2_3_2_01">
-   <BOUNDS height="9915" left="960" top="1035" type="Window" width="13680">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" systemname="P_2_3_2_01">
+   <BOUNDS height="10020" left="255" top="2265" type="Window" width="13680">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
@@ -65,9 +65,9 @@
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Render State" visible="1">
    </PIN>
@@ -183,9 +183,9 @@
    <LINK dstnodeid="63" dstpinname="Period" srcnodeid="56" srcpinname="LeftRight">
    </LINK>
    <NODE componentmode="InABox" id="131" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8220" top="2835" type="Node" width="315">
+   <BOUNDS height="270" left="8310" top="2850" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8220" top="2835" type="Box" width="405">
+   <BOUNDS height="390" left="8310" top="2850" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -251,7 +251,7 @@
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Backbuffer Height" visible="1">
    </PIN>
@@ -267,9 +267,9 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1680 x 1050|">
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
    <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
@@ -279,44 +279,6 @@
    <LINK dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="56" srcpinname="Clear">
    </LINK>
    <LINK dstnodeid="20" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
-   </LINK>
-   <NODE componentmode="Hidden" filename="CalculateNewElement.v4p" id="137" nodename="CalculateNewElement.v4p" systemname="CalculateNewElement">
-   <BOUNDS height="270" left="8820" top="2910" type="Node" width="1830">
-   </BOUNDS>
-   <BOUNDS height="11985" left="4815" top="1395" type="Window" width="16605">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Step Size">
-   </PIN>
-   <PIN pinname="PlaceAnElement" visible="1">
-   </PIN>
-   <PIN pinname="Mouse Pressed" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Angle" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="Drawing Mode" visible="1">
-   </PIN>
-   <PIN pinname="Scale" visible="1">
-   </PIN>
-   <PIN pinname="Length" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Mouse XY" visible="1">
-   </PIN>
-   <PIN pinname="Place Element" visible="1">
-   </PIN>
-   <PIN pinname="Draw Mode" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="58" dstpinname="Enabled" linkstyle="PolyLine" srcnodeid="137" srcpinname="PlaceAnElement">
-   </LINK>
-   <LINK dstnodeid="61" dstpinname="Rotate" srcnodeid="137" srcpinname="Angle">
    </LINK>
    <LINK dstnodeid="61" dstpinname="ScaleX" srcnodeid="141" srcpinname="+/-">
    </LINK>
@@ -368,22 +330,8 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="84" dstpinname="Toggle Colors" srcnodeid="137" srcpinname="PlaceAnElement">
-   </LINK>
-   <LINK dstnodeid="61" dstpinname="TranslateX" srcnodeid="137" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="61" dstpinname="TranslateY" srcnodeid="137" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="XY" srcnodeid="156" srcpinname="XY">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Drawing Mode" srcnodeid="141" srcpinname="Drawing Mode">
-   </LINK>
-   <LINK dstnodeid="61" dstpinname="ScaleX" srcnodeid="137" srcpinname="Scale">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Length" srcnodeid="141" srcpinname="line length">
-   </LINK>
    <NODE componentmode="InABox" id="139" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.01">
    </PIN>
    <BOUNDS height="0" left="11310" top="1965" type="Node" width="0">
    </BOUNDS>
@@ -396,12 +344,6 @@
    <PIN pinname="Size" slicecount="1" values="13">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="Step Size" srcnodeid="139" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="58" dstpinname="Transform" srcnodeid="137" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Mouse XY" srcnodeid="156" srcpinname="XY">
-   </LINK>
    <NODE componentmode="InABox" id="167" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="12345" top="2055" type="Node" width="7425">
    </BOUNDS>
@@ -416,10 +358,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK dstnodeid="58" dstpinname="Enabled" srcnodeid="137" srcpinname="Place Element">
-   </LINK>
-   <LINK dstnodeid="84" dstpinname="Toggle Colors" srcnodeid="137" srcpinname="Place Element">
-   </LINK>
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="141" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="6825" top="1035" type="Node" width="1560">
    </BOUNDS>
@@ -440,10 +378,6 @@
    <PIN pinname="Line Length" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="Length" srcnodeid="141" srcpinname="Line Length">
-   </LINK>
-   <LINK dstnodeid="137" dstpinname="Draw Mode" srcnodeid="141" srcpinname="Draw Mode">
-   </LINK>
    <LINK dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="141" srcpinname="Clear">
    </LINK>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="168" managers="" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
@@ -483,6 +417,10 @@
    </BOUNDS>
    <BOUNDS height="7710" left="14640" top="1035" type="Window" width="9840">
    </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
    </NODE>
    <LINK dstnodeid="20" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="174" srcpinname="Actual Backbuffer Height">
    <LINKPOINT x="7040" y="11250">
@@ -517,7 +455,7 @@
    <LINK dstnodeid="149" dstpinname="Layer 2" srcnodeid="157" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="57" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="9240" top="1035" type="Node" width="100">
+   <BOUNDS height="270" left="9240" top="1035" type="Node" width="1410">
    </BOUNDS>
    <PIN pinname="Left Button" visible="1">
    </PIN>
@@ -530,8 +468,6 @@
    <PIN pinname="Mouse" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="Mouse Pressed" srcnodeid="57" srcpinname="Left Button">
-   </LINK>
    <LINK dstnodeid="156" dstpinname="X" srcnodeid="57" srcpinname="X">
    </LINK>
    <LINK dstnodeid="156" dstpinname="Y" srcnodeid="57" srcpinname="Y">
@@ -541,5 +477,55 @@
    <LINK srcnodeid="57" srcpinname="Mouse" dstnodeid="157" dstpinname="Mouse" hiddenwhenlocked="1">
    <LINKPOINT x="7740" y="4860">
    </LINKPOINT>
+   </LINK>
+   <NODE id="137" componentmode="Hidden" filename="CalculateNewElement.v4p" nodename="CalculateNewElement.v4p" systemname="CalculateNewElement">
+   <PIN pinname="Step Size">
+   </PIN>
+   <PIN pinname="Mouse XY" visible="1">
+   </PIN>
+   <PIN pinname="Length" visible="1">
+   </PIN>
+   <PIN pinname="Draw Mode" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Pressed" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="6690" top="2415" width="16170" height="11985">
+   </BOUNDS>
+   <BOUNDS type="Node" height="270" left="8820" top="2910" width="1830">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="PlaceAnElement" visible="1">
+   </PIN>
+   <PIN pinname="Angle" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Drawing Mode" visible="1">
+   </PIN>
+   <PIN pinname="Scale" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Place Element" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="57" srcpinname="Left Button" dstnodeid="137" dstpinname="Mouse Pressed">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Draw Mode" dstnodeid="137" dstpinname="Draw Mode">
+   </LINK>
+   <LINK srcnodeid="141" srcpinname="Line Length" dstnodeid="137" dstpinname="Length">
+   </LINK>
+   <LINK srcnodeid="137" srcpinname="Place Element" dstnodeid="84" dstpinname="Toggle Colors">
+   </LINK>
+   <LINK srcnodeid="137" srcpinname="Place Element" dstnodeid="58" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="156" srcpinname="XY" dstnodeid="137" dstpinname="Mouse XY">
+   </LINK>
+   <LINK srcnodeid="137" srcpinname="Transform Out" dstnodeid="58" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="139" srcpinname="Y Output Value" dstnodeid="137" dstpinname="Step Size">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\SizeController.v4p" systemname="SizeController">
-   <BOUNDS height="8775" left="11580" top="4395" type="Window" width="10755">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_2_02 Displacement in a Grid\SizeController.v4p" systemname="SizeController">
+   <BOUNDS height="8775" left="4260" top="6105" type="Window" width="10755">
    </BOUNDS>
    <NODE componentmode="InABox" id="12" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="0" left="120" top="2430" type="Node" width="0">
@@ -313,7 +313,7 @@
    <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="53">
    <BOUNDS type="Node" left="3195" top="1785" width="3720" height="270">
    </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="|Up, Down, Left, Right, D0|" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|Up, Down, Left, Right, D0|">
    </PIN>
    <PIN pinname="Up" visible="1">
    </PIN>
@@ -324,6 +324,8 @@
    <PIN pinname="Right" visible="1">
    </PIN>
    <PIN pinname="D0" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="54" systemname="IOBox (Enumerations)">
@@ -343,7 +345,9 @@
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Keyboard" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Keyboard">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="53" dstpinname="Input">
@@ -367,5 +371,7 @@
    <LINK srcnodeid="53" srcpinname="Left" dstnodeid="6" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="53" srcpinname="Right" dstnodeid="5" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output Node" dstnodeid="53" dstpinname="Keyboard">
    </LINK>
    </PATCH>
