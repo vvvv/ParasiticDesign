@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
-   <BOUNDS height="14835" left="255" top="555" type="Window" width="17310">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
+   <BOUNDS height="14835" left="225" top="570" type="Window" width="15120">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="480" type="Node" width="840">
@@ -149,9 +149,9 @@
    <NODE componentmode="InABox" id="235" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="675" top="2310" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="7500" left="675" top="2310" type="Box" width="4410">
+   <BOUNDS height="9675" left="675" top="2310" type="Box" width="4470">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Using Billboard (Transform) with its Object Space set to Pixel allows placing everything pixelwise on the screen. Every node down the patch will interpret its values in Pixel Space.&cr;&lf;&cr;&lf;The Heading (Animation) node returns Length and Angle of the mouse movement since the last frame. &cr;&lf;&cr;&lf;Mouse position, which is in (-1,1), (-1,1) range is mapped to Renderer coordinates (-width, width), (-height, height). A MapRange node gets mouse position as a Input spread of two slices (x,y) and Destinanation Width as a spread of Renderer&apos;s Backbuffer Width and Height.&cr;&lf;&cr;&lf;The Length is mapped to suitable pixel values and is used for the character&apos;s size.&cr;&lf;&cr;&lf;A TextMetrics (String) node returns a Descent value for a given Font and its Size. &cr;&lf;&cr;&lf;If the mouse goes to the right (FrameDifference (Animation) returns positive values) then the characters stay &cr;&lf;uphead and the Descent value should be substracted from character&apos;s Y position to place it on a baseline.&cr;&lf;If the mouse goes to the left, then the characters are upside down and the Descent value should be added.&cr;&lf;&cr;&lf;The Text is split into one character per slice and a new slice is chosen when the mousebutton is pressed and the mouse was moved (ie. the Length returned by Heading is bigger than 0).&cr;&lf;&cr;&lf;Since the Renderer has &apos;Clear&apos; off for the characters to leave a trail a mouse cursor drawn in the same renderer would also leave a trail. Therefore the text is drawn in a separate pass that is used on a fullscreen quad in a second renderer.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Using Billboard (Transform) with its Object Space set to Pixel allows placing everything pixelwise on the screen. Every node down the patch will interpret its values in Pixel Space.&cr;&lf;&cr;&lf;The Heading (Animation) node returns Length and Angle of the mouse movement since the last frame. &cr;&lf;&cr;&lf;This is the simplest way to know where to place the next character, but it&apos;s not exaclty the same what happens in Processing examples where a new character is only inserted when the pointer moved a distance that is big enough for the character to have enough space. &cr;&lf;&cr;&lf;The next example P_2_3_3_01_TABLET shows how to solve this problem.&cr;&lf;&cr;&lf;Mouse position, which is in (-1,1), (-1,1) range is mapped to Renderer coordinates (-width, width), (-height, height). A MapRange node gets mouse position as a Input spread of two slices (x,y) and Destinanation Width as a spread of Renderer&apos;s Backbuffer Width and Height.&cr;&lf;&cr;&lf;The Length is mapped to suitable pixel values and is used for the character&apos;s size.&cr;&lf;&cr;&lf;A TextMetrics (String) node returns a Descent value for a given Font and its Size. &cr;&lf;&cr;&lf;If the mouse goes to the right (FrameDifference (Animation) returns positive values) then the characters stay &cr;&lf;uphead and the Descent value should be substracted from character&apos;s Y position to place it on a baseline.&cr;&lf;If the mouse goes to the left, then the characters are upside down and the Descent value should be added.&cr;&lf;&cr;&lf;The Text is split into one character per slice and a new slice is chosen when the mousebutton is pressed and the mouse was moved (ie. the Length returned by Heading is bigger than 0).&cr;&lf;&cr;&lf;Since the Renderer has &apos;Clear&apos; off for the characters to leave a trail a mouse cursor drawn in the same renderer would also leave a trail. Therefore the text is drawn in a separate pass that is used on a fullscreen quad in a second renderer.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -195,9 +195,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="232" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="3750" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="5655" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="3750" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="5655" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -211,9 +211,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="231" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="5025" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="6930" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="5025" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="6930" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -253,7 +253,7 @@
    <LINK dstnodeid="165" dstpinname="Up" srcnodeid="242" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="246" nodename="Heading (Animation)" systemname="Heading (Animation)">
-   <BOUNDS height="100" left="9885" top="1890" type="Node" width="100">
+   <BOUNDS height="270" left="9885" top="1890" type="Node" width="825">
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="0">
    </PIN>
@@ -533,7 +533,7 @@
    <LINK srcnodeid="328" srcpinname="EX9 Out" dstnodeid="200" dstpinname="Source">
    </LINK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="332">
-   <BOUNDS type="Node" left="9885" top="4005" width="100" height="100">
+   <BOUNDS type="Node" left="9885" top="4005" width="1215" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -549,9 +549,9 @@
    <LINK srcnodeid="332" srcpinname="Output" dstnodeid="278" dstpinname="Size">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="333" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="10170" top="3600" width="0" height="0">
+   <BOUNDS type="Node" left="10815" top="3615" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="10170" top="3600" width="495" height="240">
+   <BOUNDS type="Box" left="10815" top="3615" width="495" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="800">
    </PIN>
@@ -621,7 +621,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="10305" top="12975" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="13065" left="17430" top="585" type="Window" width="7770">
+   <BOUNDS height="8040" left="15315" top="570" type="Window" width="9960">
    </BOUNDS>
    <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
    </PIN>
@@ -885,9 +885,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="389" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="5640" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="7545" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="5640" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="7545" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -901,9 +901,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="390" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="7740" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="9645" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="7740" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="9645" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -917,9 +917,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="391" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="8775" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="10680" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="8775" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="10680" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -989,7 +989,7 @@
    <LINK srcnodeid="282" srcpinname="X" dstnodeid="400" dstpinname="Input">
    </LINK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="402">
-   <BOUNDS type="Node" left="8445" top="7125" width="100" height="100">
+   <BOUNDS type="Node" left="8445" top="7395" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1001,9 +1001,9 @@
    <LINK srcnodeid="402" srcpinname="Output" dstnodeid="396" dstpinname="Switch">
    </LINK>
    <NODE componentmode="InABox" id="403" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="6315" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="8220" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="6315" type="Box" width="450">
+   <BOUNDS height="405" left="225" top="8220" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
