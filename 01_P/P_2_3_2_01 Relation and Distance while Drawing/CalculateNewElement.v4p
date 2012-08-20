@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" systemname="CalculateNewElement">
-   <BOUNDS height="11985" left="6690" top="2415" type="Window" width="16170">
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" systemname="CalculateNewElement">
+   <BOUNDS height="11985" left="8250" top="2235" type="Window" width="16170">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="13275" top="465" type="Node" width="100">
@@ -395,7 +395,7 @@
    </BOUNDS>
    <BOUNDS height="6975" left="705" top="1680" type="Box" width="4080">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Slope (2d) returns an angle (slope of the line) between two points: a mouse position in every frame is used as one point and previous element&apos;s position is used as the other.&cr;&lf;&cr;&lf;Cartesian (2d Vector) calculates a new vector based on the given Step Size and the angle (from the original vector).&cr;&lf;&cr;&lf;Adding this new vector to the position of the previously drawn element results in the position for a new element.&cr;&lf;&cr;&lf;Depending on the Draw Mode this new position or just the mouse position is used for the next element.&cr;&lf;&cr;&lf;Distance (2d) calculates the distance between a mouse position and previous element&apos;s position.&cr;&lf;&cr;&lf;If this distance is bigger than the Step Size (OR Mouse Button is just pressed), then...&cr;&lf;&cr;&lf;...the new element is drawn and its position is saved in S+H.&cr;&lf;&cr;&lf;Length of the element depends on the user defined value, some random value and a distance between the previous element and a mouse position.&cr;&lf;&cr;&lf;-90° are added to the angle to place every element perpendicular to the mouse path.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Slope (2d) returns an angle (slope of the line) between two points: the mouse&apos; current position is used as one point and the previous element&apos;s position is used as the other.&cr;&lf;&cr;&lf;Cartesian (2d Vector) calculates a new vector based on the given Angle and the specified Step Size (which is taken as the vectors length).&cr;&lf;&cr;&lf;Adding this new vector to the position of the previously drawn element results in the position for the new element.&cr;&lf;&cr;&lf;Depending on the Draw Mode this new position or simply the mouse position is used for the next element.&cr;&lf;&cr;&lf;Distance (2d) calculates the distance between the current mouse&apos; position and the previous element&apos;s position.&cr;&lf;&cr;&lf;If this distance is bigger than the Step Size (OR Mouse Button is just pressed), then...&cr;&lf;&cr;&lf;...the new element is drawn and its position is saved in S+H.&cr;&lf;&cr;&lf;Length of the element depends on the user defined value, some random value and a distance between the previous element and a the mouse position.&cr;&lf;&cr;&lf;-90° (ie. -0.25 in cycles) are added to the angle to place every element perpendicular to the mouse path.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -583,9 +583,9 @@
    <LINK dstnodeid="72" dstpinname="Rotate" srcnodeid="25" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="90" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="4215" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="4380" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="4215" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="4380" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -599,9 +599,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="91" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="4815" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="5025" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="4815" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="5025" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -615,9 +615,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="92" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="5445" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="5850" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="5445" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="5850" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -631,9 +631,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="93" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="6105" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="6510" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="6105" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="6510" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -647,9 +647,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="94" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="6735" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="7140" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="6735" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="7140" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -751,9 +751,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="100" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="255" top="7560" type="Node" width="315">
+   <BOUNDS height="270" left="255" top="7965" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="255" top="7560" type="Box" width="450">
+   <BOUNDS height="405" left="255" top="7965" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="9.">
    </PIN>
