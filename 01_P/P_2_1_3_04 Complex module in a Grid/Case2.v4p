@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_3_04 Complex module in a Grid\Case2.v4p" systemname="Case1">
-   <BOUNDS height="10920" left="13125" top="2910" type="Window" width="12570">
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_04 Complex module in a Grid\Case2.v4p" systemname="Case1">
+   <BOUNDS height="10920" left="10245" top="4065" type="Window" width="12570">
    </BOUNDS>
    <NODE componentmode="Hidden" id="38" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
    <BOUNDS height="270" left="6120" top="5385" type="Node" width="1050">
@@ -219,7 +219,7 @@
    <LINK dstnodeid="44" dstpinname="Input Node" srcnodeid="37" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="87" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
-   <BOUNDS height="100" left="9390" top="6240" type="Node" width="100">
+   <BOUNDS height="100" left="9405" top="6690" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Hue" slicecount="1" values="0.144444444444444">
    </PIN>
@@ -271,7 +271,7 @@
    <LINK dstnodeid="90" dstpinname="Input 2" srcnodeid="67" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="92" nodename="SetAlpha (Color)" systemname="SetAlpha (Color)">
-   <BOUNDS height="100" left="8520" top="7245" type="Node" width="100">
+   <BOUNDS height="100" left="8535" top="7695" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -373,11 +373,11 @@
    <LINK dstnodeid="99" dstpinname="Input 2" srcnodeid="103" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="104" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7695" top="6435" type="Node" width="690">
+   <BOUNDS height="270" left="7725" top="6405" type="Node" width="690">
    </BOUNDS>
-   <BOUNDS height="270" left="7695" top="6435" type="Box" width="690">
+   <BOUNDS height="480" left="7725" top="6405" type="Box" width="720">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; PI/4|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; PI/4&cr;&lf;in cycles|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -403,7 +403,7 @@
    </PIN>
    <PIN pinname="Switch" pintype="Input" visible="1">
    </PIN>
-   <BOUNDS height="100" left="8520" top="6690" type="Node" width="100">
+   <BOUNDS height="100" left="8535" top="7140" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" pintype="Output" visible="1">
    </PIN>
@@ -501,9 +501,9 @@
    <NODE componentmode="InABox" id="114" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="645" top="555" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="4185" left="645" top="555" type="Box" width="3390">
+   <BOUNDS height="5145" left="645" top="555" type="Box" width="3225">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Allmost the same as the Case1, plus:&cr;&lf;&cr;&lf;All primitive are drawn as Quads, which are rotated at the final stage of transformations by 45 degrees (PI/4 rad).&cr;&lf;&cr;&lf;Every Quad is drawn with a bit different color, therefore an InputMorph (Color) is used to morph values between black (0,0,0) and some color coming HSV (Color).&cr;&lf;&cr;&lf;The Switch input pin of the InputMorph controls the output color which is a linear interpolation of the two input colors. This pin takes values between 0 and 1.&cr;&lf;&cr;&lf;i/count does the trick to convert values coming from I(Spreads) to the (0,1) range suitable for the Switch pin of the InputMorph.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Almost the same as the Case1, plus:&cr;&lf;&cr;&lf;All primitive are drawn as Quads, which are rotated at the final stage of transformations by 45 degrees (=PI/4).&cr;&lf;&cr;&lf;Every Quad is drawn with a slightly different color, therefore an InputMorph (Color) is used to morph/blend/interpolate values between black (0,0,0) and some color coming HSV (Color).&cr;&lf;&cr;&lf;The Switch input pin of the InputMorph controls the output color which is a linear interpolation of the two input colors. This pin takes values between 0 and 1.&cr;&lf;&cr;&lf;i/count does the trick to convert values coming from I(Spreads) to the (0..1) range suitable for the Switch pin of the InputMorph. The same thing could be realized using a Map (Value) node since this operation is essentially mapping a range of values (i) to another range (0..1).&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -561,9 +561,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="117" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8085" top="6600" type="Node" width="315">
+   <BOUNDS height="270" left="8100" top="7050" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8085" top="6600" type="Box" width="390">
+   <BOUNDS height="390" left="8100" top="7050" type="Box" width="390">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -577,9 +577,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="119" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3900" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="4170" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="180" top="3900" type="Box" width="390">
+   <BOUNDS height="390" left="180" top="4170" type="Box" width="390">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
