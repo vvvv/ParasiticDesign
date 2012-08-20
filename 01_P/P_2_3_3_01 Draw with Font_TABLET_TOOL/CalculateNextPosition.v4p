@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" systemname="CalculateNextPosition">
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" systemname="CalculateNextPosition">
    <BOUNDS height="14535" left="2145" top="300" type="Window" width="15360">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -197,7 +197,7 @@
    </BOUNDS>
    <BOUNDS height="5730" left="675" top="510" type="Box" width="3975">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Actually it&apos;s the same patch as in previous example, but an additional block is there to constrain a pens movement only to vertical / horizontal direction.&cr;&lf;This block sits between Slope (2d) / Distance (2d) nodes and the Cartesian (2d) node.&cr;&lf;&cr;&lf;A Slope (2d) node returns float values from -0.5 to 0.5. The idea is to transform this continues interval to discrete values for every 45 degrees. So an output of the Slope (2d) is multiplied by 8 and the result is rounded. The result is the digits 0, 1, 2, ... 8 representing every 45 degrees of a full circle.&cr;&lf;&cr;&lf;Only every second value is taken (with Mod (Value) and EQ (Value)), so that only 0, 90, 180 degrees are used. &cr;&lf;&cr;&lf;For those values an angle is first converted to the original range (dividing by 8) and then is used in Cartesian (2d) node. Please note, that the angle value is still rounded.&cr;&lf;&cr;&lf;For the other values the distance that pen was travelled is set to 0, so the condition that this distance should be more that the character width returns false and the character is not placed.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Actually it&apos;s the same patch as in previous example, but an additional block is there to constrain a pens movement only to vertical / horizontal direction.&cr;&lf;This block sits between Slope (2d) / Distance (2d) nodes and the Cartesian (2d) node.&cr;&lf;&cr;&lf;A Slope (2d) node returns float values from -0.5 to 0.5. The idea is to transform this continues interval to discrete values for every 45 degrees. So an output of the Slope (2d) is multiplied by 8 and the result is rounded. The result are the digits -4, -3, ... 3, 4 representing every 45 degrees of a full circle.&cr;&lf;&cr;&lf;Mod (Value) makes a modulo 2 operation on these values, and only those values, which has 0 as a reminder (like 0, 2, 4) are used further. They are representing 0, 90, 180... degrees.&cr;&lf;&cr;&lf;For those values an angle is first converted to the original range (dividing by 8) and then is used in Cartesian (2d) node. Please note, that the angle value is still rounded.&cr;&lf;&cr;&lf;For the other values the distance that pen was travelled is set to 0, so the condition that this distance should be more that the character width returns false and the character is not placed.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -239,9 +239,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="196" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="3840" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="4290" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="3840" type="Box" width="420">
+   <BOUNDS height="405" left="225" top="4290" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -255,9 +255,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="197" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="225" top="4905" type="Node" width="315">
+   <BOUNDS height="270" left="225" top="5355" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="225" top="4905" type="Box" width="420">
+   <BOUNDS height="405" left="225" top="5355" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
