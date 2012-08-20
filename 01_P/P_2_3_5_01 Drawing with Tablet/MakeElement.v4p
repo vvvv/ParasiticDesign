@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\MakeElement.v4p" filename="C:\Work\Study\MakeElement.v4p" systemname="MakeElement">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\MakeElement.v4p" filename="C:\Work\Study\MakeElement.v4p" systemname="MakeElement">
    <BOUNDS height="11805" left="1350" top="2340" type="Window" width="14940">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -286,18 +286,18 @@
    </LINK>
    <LINK dstnodeid="23" dstpinname="XY" srcnodeid="13" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="40" nodename="Renderer (SVG)" systemname="Renderer (SVG)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="40" nodename="Renderer (SVG)" systemname="RENDERER (SVG)">
    <BOUNDS height="100" left="6420" top="9840" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="6420" top="9840" type="Box" width="2400">
    </BOUNDS>
    <BOUNDS height="4500" left="17880" top="2835" type="Window" width="6000">
    </BOUNDS>
-   <PIN pinname="Layer" visible="1">
+   <PIN pinname="Layers" visible="1">
    </PIN>
    <PIN pinname="Document" visible="1">
    </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,0.00000|">
    </PIN>
    </NODE>
    <NODE id="39" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
@@ -504,18 +504,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="48" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="9015" top="8940" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="9015" top="8940" type="Box" width="600">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.001">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="49" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="9630" top="8895" type="Node" width="1455">
    </BOUNDS>
@@ -571,6 +559,10 @@
    <NODE componentmode="Hidden" id="77" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="6735" top="5010" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="X" slicecount="1" values="0.01">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="-0.03">
+   </PIN>
    </NODE>
    <LINK dstnodeid="13" dstpinname="Input 1" srcnodeid="77" srcpinname="XY">
    </LINK>
@@ -611,12 +603,12 @@
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="95" nodename="Polygon (SVG)" systemname="Polygon (SVG)">
    <BOUNDS height="270" left="6420" top="9375" type="Node" width="3150">
    </BOUNDS>
+   <PIN pinname="Stroke Width" slicecount="1" values="0.0005">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="40" dstpinname="Layer" srcnodeid="95" srcpinname="Layer">
+   <LINK dstnodeid="40" dstpinname="Layers" srcnodeid="95" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="95" dstpinname="VerticesXY" srcnodeid="34" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="95" dstpinname="Stroke Width" srcnodeid="48" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="95" dstpinname="Stroke" srcnodeid="67" srcpinname="Color Output">
    </LINK>
@@ -701,9 +693,9 @@
    <LINK dstnodeid="98" dstpinname="Switch" srcnodeid="101" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="102" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="12165" top="930" type="Node" width="0">
+   <BOUNDS height="0" left="10980" top="1170" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="12165" top="930" type="Box" width="390">
+   <BOUNDS height="240" left="10980" top="1170" type="Box" width="390">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="4">
    </PIN>
@@ -934,4 +926,18 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="125" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="6870" top="4590" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6870" top="4590" width="510" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-0.03">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="77" dstpinname="Y">
+   </LINK>
    </PATCH>

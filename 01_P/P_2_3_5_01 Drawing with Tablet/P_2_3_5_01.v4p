@@ -1,37 +1,15 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\P_2_3_5_01.v4p" filename="C:\Work\Study\curves.v4p" systemname="curves">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\P_2_3_5_01.v4p" filename="C:\Work\Study\curves.v4p" systemname="curves">
    <BOUNDS height="9705" left="555" top="675" type="Window" width="15330">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="68" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="100" left="10350" top="5670" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="10350" top="5670" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="4950" left="18900" top="9630" type="Window" width="6120">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00572,0.00572,0.00572,1.00000|">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="76" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
    <BOUNDS height="100" left="11775" top="6405" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Source" visible="1">
+   <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="76" dstpinname="Source" srcnodeid="68" srcpinname="EX9 Out">
-   </LINK>
    <NODE componentmode="Hidden" id="77" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="11460" top="6870" type="Node" width="100">
    </BOUNDS>
@@ -89,18 +67,6 @@
    <LINK dstnodeid="80" dstpinname="Aspect Height" srcnodeid="79" srcpinname="Actual Backbuffer Height">
    </LINK>
    <LINK dstnodeid="79" dstpinname="Aspect Ratio" srcnodeid="80" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="68" dstpinname="Backbuffer Width" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="79" srcpinname="Actual Backbuffer Width">
-   <LINKPOINT x="10440" y="9635">
-   </LINKPOINT>
-   <LINKPOINT x="8790" y="4420">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="68" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="79" srcpinname="Actual Backbuffer Height">
-   <LINKPOINT x="10350" y="10580">
-   </LINKPOINT>
-   <LINKPOINT x="7740" y="3625">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" id="81" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="11475" top="7395" type="Node" width="3360">
@@ -300,12 +266,6 @@
    </LINK>
    <LINK dstnodeid="139" dstpinname="Draw Mode" srcnodeid="122" srcpinname="Draw Mode">
    </LINK>
-   <LINK dstnodeid="68" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="122" srcpinname="Reset">
-   <LINKPOINT x="13560" y="2610">
-   </LINKPOINT>
-   <LINKPOINT x="13560" y="4845">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="138" dstpinname="Transform In" srcnodeid="150" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="152" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -314,8 +274,6 @@
    <PIN pinname="Transform" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="68" dstpinname="Layers" srcnodeid="152" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="152" dstpinname="Texture" srcnodeid="138" srcpinname="Element Texture">
    </LINK>
    <LINK dstnodeid="152" dstpinname="Enabled" srcnodeid="143" srcpinname="Output">
@@ -497,9 +455,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="196" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10200" top="3510" type="Node" width="315">
+   <BOUNDS height="270" left="10200" top="3540" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="10200" top="3510" type="Box" width="405">
+   <BOUNDS height="390" left="10200" top="3540" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -562,4 +520,50 @@
    <PIN pinname="Size" slicecount="1" values="8">
    </PIN>
    </NODE>
+   <NODE id="68" componentmode="Hidden" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="10350" top="5670" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" height="1800" left="10350" top="5670" width="2400">
+   </BOUNDS>
+   <BOUNDS type="Window" height="8250" left="15885" top="675" width="8505">
+   </BOUNDS>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="68" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="122" srcpinname="Reset" dstnodeid="68" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine">
+   <LINKPOINT x="13560" y="2610">
+   </LINKPOINT>
+   <LINKPOINT x="13560" y="4845">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Height" dstnodeid="68" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="10350" y="10580">
+   </LINKPOINT>
+   <LINKPOINT x="7740" y="3625">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Width" dstnodeid="68" dstpinname="Backbuffer Width" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="10440" y="9635">
+   </LINKPOINT>
+   <LINKPOINT x="8790" y="4420">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="68" srcpinname="EX9 Out" dstnodeid="76" dstpinname="Source">
+   </LINK>
    </PATCH>
