@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\LetterParams.v4p" systemname="LetterParams" filename="C:\Work\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\LetterParams.v4p" bgcolor="15132390">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\LetterParams.v4p" systemname="LetterParams" filename="C:\Work\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\LetterParams.v4p" bgcolor="15132390">
    <NODE componentmode="Hidden" id="0" nodename="Count (String)" systemname="Count (String)">
    <BOUNDS height="270" left="14355" top="810" type="Node" width="690">
    </BOUNDS>
@@ -451,7 +451,7 @@
    </PIN>
    </NODE>
    <NODE id="88" systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden">
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="73" values="0,7,12,19,26,29,36,64,147,160,174,183,189,197,207,212,222,291,331,342,352,361,382,410,440,458,475,479,497,510,518,634,668,695,0,20,62,91,101,111,137,160,180,193,213,226,260,287,302,315,336,345,375,392,415,425,453,472,492,518,527,542,555,577,598,621,648,697,0,20,34,58,65">
    </PIN>
    <PIN pinname="Last Slice" visible="1">
    </PIN>
@@ -459,7 +459,7 @@
    </BOUNDS>
    </NODE>
    <NODE id="115" systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden">
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="73" values="0,7,12,19,26,29,36,64,147,160,174,183,189,197,207,212,222,291,331,342,352,361,382,410,440,458,475,479,497,510,518,634,668,695,0,20,62,91,101,111,137,160,180,193,213,226,260,287,302,315,336,345,375,392,415,425,453,472,492,518,527,542,555,577,598,621,648,697,0,20,34,58,65">
    </PIN>
    <PIN pinname="XYZ">
    </PIN>
@@ -868,18 +868,6 @@
    <BOUNDS type="Box" left="7095" top="12600">
    </BOUNDS>
    </NODE>
-   <NODE systemname="CDR (Spreads Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="CDR (Spreads Advanced)" componentmode="Hidden" id="351">
-   <BOUNDS type="Node" left="7095" top="13095" width="855" height="270">
-   </BOUNDS>
-   <PIN pinname="Bin Size" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Remainder" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="344" srcpinname="Output" dstnodeid="351" dstpinname="Input">
-   </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="352">
    <BOUNDS type="Node" left="8055" top="11115" width="100" height="100">
    </BOUNDS>
@@ -944,11 +932,7 @@
    </NODE>
    <LINK srcnodeid="354" srcpinname="Output" dstnodeid="357" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="351" dstpinname="Bin Size">
-   </LINK>
    <LINK srcnodeid="45" srcpinname="Width" dstnodeid="344" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="351" srcpinname="Remainder" dstnodeid="88" dstpinname="Input">
    </LINK>
    <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="359">
    <BOUNDS type="Node" left="9795" top="13530" width="100" height="100">
@@ -1033,8 +1017,6 @@
    <LINK srcnodeid="372" srcpinname="Y Output Value" dstnodeid="365" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="359" srcpinname="Output" dstnodeid="35" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="351" srcpinname="Remainder" dstnodeid="115" dstpinname="X">
    </LINK>
    <NODE componentmode="InABox" id="374" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6660" top="8895" type="Node" width="315">
@@ -1354,4 +1336,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE id="351" systemname="CDR (Spreads Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="CDR (Spreads Vector)" componentmode="Hidden">
+   <BOUNDS type="Node" left="7095" top="13095" width="855" height="270">
+   </BOUNDS>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Remainder" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="351" srcpinname="Remainder" dstnodeid="115" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="351" srcpinname="Remainder" dstnodeid="88" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="351" dstpinname="Bin Size">
+   </LINK>
+   <LINK srcnodeid="344" srcpinname="Output" dstnodeid="351" dstpinname="Input">
+   </LINK>
    </PATCH>
