@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2">
    <BOUNDS height="12540" left="660" top="1230" type="Window" width="16185">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
@@ -202,14 +202,6 @@
    </NODE>
    <LINK dstnodeid="114" dstpinname="Input" srcnodeid="115" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="123" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="9465" top="4155" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="125" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="5550" top="6375" type="Node" width="100">
    </BOUNDS>
@@ -331,9 +323,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="150" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="270" left="9465" top="2145" type="Node" width="795">
+   <BOUNDS height="270" left="9465" top="1845" type="Node" width="795">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="154" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
@@ -341,13 +335,19 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|&lt;DELETE&gt;, &lt;BACK&gt;|">
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|Delete, Back|">
    </PIN>
    <PIN pinname="&lt;DELELE&gt; Output" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="&lt;BACK&gt; Output" visible="1">
    </PIN>
    <PIN pinname="&lt;DELETE&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="Delete" visible="1">
+   </PIN>
+   <PIN pinname="Back" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="154" dstpinname="Input" srcnodeid="150" srcpinname="Keyboard Output">
@@ -370,33 +370,17 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="158" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="8370" top="2595" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="8370" top="2595" type="Box" width="795">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="158" dstpinname="Input String" srcnodeid="150" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="Hidden" id="153" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS height="270" left="9465" top="3075" type="Node" width="840">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="153" dstpinname="Input 1" srcnodeid="154" srcpinname="&lt;DELETE&gt; Output">
-   </LINK>
    <LINK dstnodeid="156" dstpinname="Y Input Value" srcnodeid="153" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="123" dstpinname="Input" srcnodeid="153" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="153" dstpinname="Input 2" srcnodeid="154" srcpinname="&lt;BACK&gt; Output">
    </LINK>
    <NODE componentmode="InABox" id="159" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="5880" top="4140" type="Node" width="100">
@@ -431,29 +415,13 @@
    <LINK dstnodeid="125" dstpinname="Transform" srcnodeid="160" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="162" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
-   <BOUNDS height="100" left="8610" top="4155" type="Node" width="100">
+   <BOUNDS height="100" left="9465" top="4245" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="163" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="100" left="9105" top="4755" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
+   <PIN pinname="Simulate" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="163" dstpinname="Input 1" srcnodeid="162" srcpinname="Bang">
-   </LINK>
-   <LINK dstnodeid="163" dstpinname="Input 2" srcnodeid="123" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="9" dstpinname="Clear" linkstyle="PolyLine" srcnodeid="163" srcpinname="Output" hiddenwhenlocked="1">
-   </LINK>
-   <LINK dstnodeid="125" dstpinname="Enabled" srcnodeid="163" srcpinname="Output" hiddenwhenlocked="1">
-   </LINK>
    <NODE componentmode="InABox" id="166" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6435" top="5265" type="Node" width="100">
    </BOUNDS>
@@ -653,7 +621,7 @@
    </BOUNDS>
    <BOUNDS height="6345" left="615" top="1920" type="Box" width="4200">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|1. draw an image&cr;&lf;2. choose a random narrow strip of the image&cr;&lf;3. copy that strip to a random position&cr;&lf;4. go back to 2.&cr;&lf;&cr;&lf;Draws the initial image, makes sure it is displayed with its native aspect ratio and fills the renderers width. &cr;&lf;&cr;&lf;Pressing the DELETE or BACKSPACE keys causes the Quad to be drawn for one frame and the Renderers backbuffer to be cleared at the same time. All other frames the backbuffer is not cleared thus keeping all the pixels ever drawn and leaving the desired trails.&cr;&lf;&cr;&lf;FrameDelay (EX9.Texture) is crucial in allowing the resulting texture being fed back into the rendering process upstream. &cr;&lf;&cr;&lf;Via this texture transformation the part of the image is chosen that is to be copied to a new place in this frame.&cr;&lf;&cr;&lf;Via this geometry transformation the narrow strip is placed in a random position of the Renderer. &cr;&lf;&cr;&lf;Point filtering during the texture sampling process prevents from blurry images in this example. Try setting the mode to &apos;Linear&apos; (which is the default) and watch the resulting image getting blurry edges.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|1. draw an image&cr;&lf;2. choose a random narrow strip of the image&cr;&lf;3. copy that strip to a random position&cr;&lf;4. go back to 2.&cr;&lf;&cr;&lf;Draws the initial image, makes sure it is displayed with its native aspect ratio and fills the renderers width. &cr;&lf;&cr;&lf;Opening of the patch or pressing the DELETE or BACKSPACE keys causes the Quad to be drawn for one frame and the Renderers backbuffer to be cleared at the same time. All other frames the backbuffer is not cleared thus keeping all the pixels ever drawn and leaving the desired trails.&cr;&lf;&cr;&lf;FrameDelay (EX9.Texture) is crucial in allowing the resulting texture being fed back into the rendering process upstream. &cr;&lf;&cr;&lf;Via this texture transformation the part of the image is chosen that is to be copied to a new place in this frame.&cr;&lf;&cr;&lf;Via this geometry transformation the narrow strip is placed in a random position of the Renderer. &cr;&lf;&cr;&lf;Point filtering during the texture sampling process prevents from blurry images in this example. Try setting the mode to &apos;Linear&apos; (which is the default) and watch the resulting image getting blurry edges.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -695,9 +663,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="191" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="150" top="4845" type="Node" width="315">
+   <BOUNDS height="270" left="150" top="5055" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="150" top="4845" type="Box" width="405">
+   <BOUNDS height="390" left="150" top="5055" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -711,9 +679,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="190" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="150" top="5670" type="Node" width="315">
+   <BOUNDS height="270" left="150" top="5880" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="150" top="5670" type="Box" width="405">
+   <BOUNDS height="390" left="150" top="5880" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -727,9 +695,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="189" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="150" top="6300" type="Node" width="315">
+   <BOUNDS height="270" left="150" top="6510" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="150" top="6300" type="Box" width="405">
+   <BOUNDS height="390" left="150" top="6510" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -763,9 +731,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="196" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9630" top="4680" type="Node" width="315">
+   <BOUNDS height="270" left="8940" top="4080" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="9630" top="4680" type="Box" width="405">
+   <BOUNDS height="390" left="8940" top="4080" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -827,9 +795,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="200" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="6990" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="7200" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="135" top="6990" type="Box" width="405">
+   <BOUNDS height="390" left="135" top="7200" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -858,4 +826,28 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <INFO author="" description="" tags="">
+   </INFO>
+   <LINK srcnodeid="150" srcpinname="Keyboard" dstnodeid="154" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="154" srcpinname="Delete" dstnodeid="153" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="154" srcpinname="Back" dstnodeid="153" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="202" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="9630" top="2325" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9630" top="2325" width="975" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="DownOnly">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="202" srcpinname="Output Enum" dstnodeid="154" dstpinname="Key Mode">
+   </LINK>
+   <LINK srcnodeid="153" srcpinname="Output" dstnodeid="162" dstpinname="Simulate">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="125" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="9" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
    </PATCH>
