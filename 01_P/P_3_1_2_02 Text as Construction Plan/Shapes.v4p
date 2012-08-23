@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
    <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\Shapes.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\Textures.v4p" systemname="Textures">
-   <BOUNDS height="12780" left="2970" top="5130" type="Window" width="17415">
+   <BOUNDS height="12780" left="-4260" top="8895" type="Window" width="23475">
    </BOUNDS>
    <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="11205" top="3255" type="Node" width="100">
@@ -223,7 +223,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9000" top="5175" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.23">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.24">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -538,8 +538,6 @@
    </LINK>
    <LINK dstnodeid="27" dstpinname="Transform In" srcnodeid="29" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="29" dstpinname="Transform In" srcnodeid="67" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="82" nodename="IOBox (Color)" systemname="IOBox (Color)">
    <BOUNDS height="100" left="10920" top="120" type="Node" width="100">
    </BOUNDS>
@@ -655,5 +653,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="90" srcpinname="Sampler State Out" dstnodeid="10" dstpinname="Sampler State">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="91" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="8475" top="9915" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8475" top="9915" width="720" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="Point">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Output Enum" dstnodeid="90" dstpinname="Minification Filter">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="92" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="8655" top="10215" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8655" top="10215" width="780" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="92" srcpinname="Output Enum" dstnodeid="90" dstpinname="MipMap Filter">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Transform Out" dstnodeid="29" dstpinname="Transform In">
    </LINK>
    </PATCH>
