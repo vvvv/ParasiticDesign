@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
    <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\Shapes.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\Textures.v4p" systemname="Textures">
-   <BOUNDS height="12780" left="4020" top="2055" type="Window" width="17415">
+   <BOUNDS height="12780" left="2970" top="5130" type="Window" width="17415">
    </BOUNDS>
    <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="11205" top="3255" type="Node" width="100">
@@ -50,6 +50,8 @@
    <PIN pinname="Color" visible="1">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Sampler State" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="7" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -221,7 +223,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9000" top="5175" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.25">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.23">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -415,7 +417,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="7995" top="5145" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="1.04">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -633,11 +635,25 @@
    </BOUNDS>
    <BOUNDS height="240" left="7065" top="7080" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.0025">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="88" dstpinname="Input 1" srcnodeid="89" srcpinname="Y Output Value">
+   </LINK>
+   <NODE systemname="Filter (EX9.SamplerState)" nodename="Filter (EX9.SamplerState)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="8130" top="10665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Sampler State Out" visible="1">
+   </PIN>
+   <PIN pinname="Magnification Filter" slicecount="1" values="Linear">
+   </PIN>
+   <PIN pinname="Minification Filter" slicecount="1" values="Point">
+   </PIN>
+   <PIN pinname="MipMap Filter" slicecount="1" values="None">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Sampler State Out" dstnodeid="10" dstpinname="Sampler State">
    </LINK>
    </PATCH>
