@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_3_04 Text Image\LetterParams.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_3_04 Text Image\LetterParams.v4p" locked="0" systemname="LetterParams">
-   <BOUNDS height="12435" left="570" top="180" type="Window" width="20865">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_04 Text Image\LetterParams.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_3_04 Text Image\LetterParams.v4p" locked="0" systemname="LetterParams">
+   <BOUNDS height="13605" left="570" top="180" type="Window" width="20865">
    </BOUNDS>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="21" managers="" nodename="I (Spreads)" systemname="I (Spreads)">
    <BOUNDS height="100" left="9348" top="5589" type="Node" width="100">
@@ -267,7 +267,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="10770" top="11175" type="Box" width="840">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="XYZ">
    </PIN>
@@ -1094,40 +1094,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Select (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll" nodename="Select (Value Advanced)" componentmode="Hidden" id="351">
-   <BOUNDS type="Node" left="10770" top="10590" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Vector Size">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="306" srcpinname="Output" dstnodeid="351" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="352" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="10965" top="10215" width="0" height="0">
+   <BOUNDS type="Node" left="11115" top="10230" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="10965" top="10215" width="465" height="240">
+   <BOUNDS type="Box" left="11115" top="10230" width="465" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="352" srcpinname="Y Output Value" dstnodeid="351" dstpinname="Vector Size">
-   </LINK>
-   <LINK srcnodeid="250" srcpinname="Y Output Value" dstnodeid="351" dstpinname="Select">
-   </LINK>
-   <LINK srcnodeid="351" srcpinname="Output" dstnodeid="136" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="GetSpread (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\GetSpreadAdv.dll" nodename="GetSpread (String Advanced)" componentmode="Hidden" id="353">
    <BOUNDS type="Node" left="6720" top="7095" width="100" height="100">
    </BOUNDS>
@@ -1155,7 +1137,37 @@
    <LINK srcnodeid="182" srcpinname="Position" dstnodeid="228" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="182" srcpinname="Count" dstnodeid="232" dstpinname="Y Input Value">
-   <LINKPOINT x="19485" y="6570">
+   <LINKPOINT x="19170" y="6540">
    </LINKPOINT>
+   </LINK>
+   <NODE systemname="Select (Value)" nodename="Select (Value)" componentmode="Hidden" id="354">
+   <BOUNDS type="Node" left="13710" top="9930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Former Slice" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="355">
+   <BOUNDS type="Node" left="10770" top="10710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="352" srcpinname="Y Output Value" dstnodeid="355" dstpinname="Bin Size">
+   </LINK>
+   <LINK srcnodeid="306" srcpinname="Output" dstnodeid="355" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="355" srcpinname="Output" dstnodeid="136" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="354" srcpinname="Former Slice" dstnodeid="355" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="250" srcpinname="Y Output Value" dstnodeid="354" dstpinname="Select">
    </LINK>
    </PATCH>
