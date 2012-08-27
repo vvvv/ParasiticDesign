@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
-   <BOUNDS height="10650" left="9330" top="3480" type="Window" width="12720">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\LetterTransformations.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\LetterTransformations.v4p" systemname="LetterTransformations">
+   <BOUNDS height="10650" left="2955" top="3225" type="Window" width="12720">
    </BOUNDS>
    <NODE componentmode="Hidden" id="15" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
    <BOUNDS height="270" left="6840" top="4665" type="Node" width="795">
@@ -71,9 +71,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="18">
-   <BOUNDS type="Node" left="10050" top="690" width="100" height="100">
+   <BOUNDS type="Node" left="9675" top="405" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="10050" top="690" width="795" height="240">
+   <BOUNDS type="Box" left="9675" top="405" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -83,9 +83,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
-   <BOUNDS type="Node" left="8595" top="690" width="100" height="100">
+   <BOUNDS type="Node" left="8745" top="390" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8595" top="690" width="795" height="240">
+   <BOUNDS type="Box" left="8745" top="390" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
    </PIN>
@@ -107,9 +107,9 @@
    <NODE componentmode="InABox" id="34" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="555" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="9225" left="585" top="555" type="Box" width="4350">
+   <BOUNDS height="9435" left="585" top="555" type="Box" width="4350">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Rotation of the next character is related to the rotation of the previous one, so the spread should be shifted to the right. Next character will get a rotation from the previous one. Last rotation is not important so the last slice is thrown away with CDR (Spreads).&cr;&lf;&cr;&lf;All relative rotations are being accumulated for each character using an Intergal (Spreads Vector). So the rotation for the 3rd one is the rotation of the 1st + 2nd. But after a return character (a new line was started) accumulation has to be cleared and started anew with this character. Input Bin Size pin is there to help with it. So, the accumulation happens only inside of the Bins. &cr;&lf;&cr;&lf;Integral returns one element more (for every bin), so the last element of every bin should be thrown away with CAR (Spreads Vector). Every bin size count should be increaced by one, because Integral node adds this one slice for every bin.&cr;&lf;&cr;&lf;The values for translation and rotation are being combined to a spread of transformations. &cr;&lf;&cr;&lf;Using ApplyTransform (Transform Vector) the transformatoins are being converted to 3D-vectors.&cr;&lf;&cr;&lf;Those are still relative (to previous characters).&cr;&lf;Integral (Spreads Advanced) sums up these individual vectors in every bin, vector after vector (given that each vector is 3 slices long) to compute the absolute position for each character. And again a last vector of every bin (with the size of 3) should be thrown away with CDR (Spreads Vector)).&cr;&lf;&cr;&lf;To position characters, only X and Z values of the vectors are used, these are going to Transform (Transform 2d) to create a spread of transformations for every character.&cr;&lf;&cr;&lf;And finally every character is rotated in itself in reverse direction (-1) to make it line up with the text direction. &cr;&lf;&cr;&lf;All transformations are applied on top of the incoming base transformation of each charater.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The Rotation of each character is based on the rotations of all previous ones. Using Cons (Spreads) one (0) rotation is inserted at the beginning in order for the first slice also to have a valid predecessor for the following computations. Using CDR (Spreads) the last rotation-slice is removed since it is not relevant for the computation (as it has no further predecessor).&cr;&lf;&cr;&lf;All relative rotations are being accumulated for each character using an Intergal (Spreads Vector). So the rotation for the 3rd one is the rotation of the 1st + 2nd. But after a &apos;Return&apos; character (a new line was started) accumulation has to be cleared and started anew with this character. Input Bin Size pin is there to help with it. So, the accumulation happens only per line. &cr;&lf;&cr;&lf;Integral returns one element more (for every bin), so the last element of every bin should be thrown away with CAR (Spreads Vector). Every bin size count should be increased by one, because Integral node adds this one slice for every bin.&cr;&lf;&cr;&lf;The values for translation and rotation are being combined to a spread of transformations. &cr;&lf;&cr;&lf;Using ApplyTransform (Transform Vector) the transformations are being converted to 3D-vectors.&cr;&lf;&cr;&lf;Those are still relative (to previous characters).&cr;&lf;Integral (Spreads Advanced) sums up these individual vectors in every bin, vector after vector (given that each vector is 3 slices long) to compute the absolute position for each character. And again a last vector of every bin (with the size of 3) should be thrown away with CDR (Spreads Vector)).&cr;&lf;&cr;&lf;To position characters, only X and Z values of the vectors are used, these are going to Transform (Transform 2d) to create a spread of transformations for every character.&cr;&lf;&cr;&lf;And finally every character is rotated in itself in reverse direction (-1) to make it line up with the text direction. &cr;&lf;&cr;&lf;All transformations are applied on top of the incoming base transformation of each charater.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -135,9 +135,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="3480" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="3900" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="3480" type="Box" width="450">
+   <BOUNDS height="405" left="165" top="3900" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -151,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE id="29" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="165" top="5385" width="315">
+   <BOUNDS type="Node" height="270" left="165" top="5805" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="165" top="5385" width="450">
+   <BOUNDS type="Box" height="405" left="165" top="5805" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -167,9 +167,9 @@
    </PIN>
    </NODE>
    <NODE id="28" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="165" top="6000" width="315">
+   <BOUNDS type="Node" height="270" left="165" top="6420" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="165" top="6000" width="450">
+   <BOUNDS type="Box" height="405" left="165" top="6420" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -217,9 +217,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="48" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="1785" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="2235" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="1785" type="Box" width="420">
+   <BOUNDS height="405" left="165" top="2235" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -249,9 +249,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="52" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="165" top="4770" type="Node" width="315">
+   <BOUNDS height="270" left="165" top="5190" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="165" top="4770" type="Box" width="450">
+   <BOUNDS height="405" left="165" top="5190" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -375,9 +375,9 @@
    <LINK srcnodeid="79" srcpinname="Y Output Value" dstnodeid="14" dstpinname="XYZ UnTransformed">
    </LINK>
    <NODE id="80" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="165" top="7485" width="315">
+   <BOUNDS type="Node" height="270" left="165" top="7905" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="165" top="7485" width="450">
+   <BOUNDS type="Box" height="405" left="165" top="7905" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -461,9 +461,9 @@
    <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Output">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="83" systemname="IOBox (Node)">
-   <BOUNDS type="Node" left="6285" top="690" width="0" height="0">
+   <BOUNDS type="Node" left="6285" top="390" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6285" top="690" width="795" height="240">
+   <BOUNDS type="Box" left="6285" top="390" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
@@ -489,9 +489,9 @@
    </PIN>
    </NODE>
    <NODE id="85" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="165" top="8325" width="315">
+   <BOUNDS type="Node" height="270" left="165" top="8745" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="165" top="8325" width="450">
+   <BOUNDS type="Box" height="405" left="165" top="8745" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -505,9 +505,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="86" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="7500" top="720" width="0" height="0">
+   <BOUNDS type="Node" left="7755" top="390" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7500" top="720" width="795" height="240">
+   <BOUNDS type="Box" left="7755" top="390" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-1">
    </PIN>
@@ -517,7 +517,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Bin Size|">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Characters Per Line|">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -534,8 +534,6 @@
    <PIN pinname="Input Bin Size" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Remainder" dstnodeid="11" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="86" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input Bin Size">
    </LINK>
    <NODE componentmode="Hidden" id="9" nodename="CAR (Spreads Vector)" systemname="CAR (Spreads Vector)" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll">
@@ -555,9 +553,9 @@
    <LINK dstnodeid="9" dstpinname="Input" srcnodeid="11" srcpinname="Output">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="89" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="11250" top="1440" width="0" height="0">
+   <BOUNDS type="Node" left="10500" top="1590" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="11250" top="1440" width="420" height="240">
+   <BOUNDS type="Box" left="10500" top="1590" width="420" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -567,7 +565,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="88">
-   <BOUNDS type="Node" left="10965" top="1830" width="100" height="100">
+   <BOUNDS type="Node" left="10215" top="1980" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -599,9 +597,9 @@
    </PIN>
    </NODE>
    <NODE id="91" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="165" top="8970" width="315">
+   <BOUNDS type="Node" height="270" left="165" top="9390" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="165" top="8970" width="450">
+   <BOUNDS type="Box" height="405" left="165" top="9390" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="9.">
    </PIN>
@@ -614,4 +612,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <LINK srcnodeid="6" srcpinname="Remainder" dstnodeid="11" dstpinname="Input">
+   </LINK>
    </PATCH>

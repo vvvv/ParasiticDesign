@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="10140" left="9225" top="3120" type="Window" width="12750">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
+   <BOUNDS height="10065" left="3300" top="5160" type="Window" width="13935">
    </BOUNDS>
    <NODE componentmode="Hidden" id="14" nodename="Split (String)" systemname="Split (String)">
    <BOUNDS height="100" left="6555" top="4320" type="Node" width="100">
@@ -109,7 +109,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="6285" top="8385" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Bin Sizes|">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Characters Per Line|">
    </PIN>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -175,9 +175,11 @@
    <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="137" dstpinname="Input 2">
    </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="160">
-   <BOUNDS type="Node" left="7935" top="2745" width="100" height="100">
+   <BOUNDS type="Node" left="7590" top="3120" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="108" nodename="Differential (Spreads)" systemname="Differential (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
@@ -234,26 +236,12 @@
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="165">
-   <BOUNDS type="Node" left="7575" top="3150" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="160" srcpinname="Bang" dstnodeid="165" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="165" dstpinname="Input 1">
-   </LINK>
    <NODE componentmode="InABox" id="169" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="645" top="855" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="5310" left="645" top="855" type="Box" width="3945">
+   <BOUNDS height="5700" left="645" top="855" type="Box" width="3975">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|On reset a Typewriter (String) receives an Initial Text. After that it saves every new keystroke and returns everything as a single string. This string is then split into separate slices.&cr;&lf;&cr;&lf;Several separated lines can be drawn on screen. Each line is separated with the Enter key. All the characters for every line will be packed into separate Bins. Here will be determinded how many these lines are in the incoming spread of characters.&cr;&lf;&cr;&lf;Select (Value) node has a pin Former Slice which returns original slices numbers where previous EQ (Value) found true.&cr;&lf;&cr;&lf;Now, a zero is added in front of this spread and a total count of characters is added to the end.&cr;&lf;&cr;&lf;And finally Differential (Spreads) returns a number of characters for every bin (e.g. characters in every line). It&apos;s just a difference between two neighbours.&cr;&lf;&cr;&lf;Up and Down keys are used to control a Zoom.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|On reset a Typewriter (String) receives an Initial Text. After that it saves every new keystroke and returns everything as a single string. This string is then split into separate slices.&cr;&lf;&cr;&lf;Several separate lines can be drawn on screen. Each line is separated with the Enter key. First it needs to be determined how many characters there are per line. For this all characters are converted to their ASCII representation using the Ord (String) node. Then those ASCII codes are checked for the code 10, which is a linefeed character.  &cr;&lf;&cr;&lf;Select (Value) node has a pin Former Slice which returns original slices numbers where previous EQ (Value) found true.&cr;&lf;&cr;&lf;Now, a zero is added in front of this spread and a total count of characters is added to the end.&cr;&lf;&cr;&lf;And finally Differential (Spreads) returns a number of characters for every bin (e.g. characters in every line). by returning the difference between 2 neighbouring slices. &cr;&lf;&cr;&lf;Up and Down keys are used to control a Zoom.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -297,9 +285,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="166" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3165" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="3585" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="3165" type="Box" width="420">
+   <BOUNDS height="405" left="180" top="3585" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -423,9 +411,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="182" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="4020" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="4440" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="4020" type="Box" width="420">
+   <BOUNDS height="405" left="180" top="4440" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -439,9 +427,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="183" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="4650" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="5070" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="4650" type="Box" width="420">
+   <BOUNDS height="405" left="180" top="5070" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -471,9 +459,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="185" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="5385" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="5805" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="5385" type="Box" width="420">
+   <BOUNDS height="405" left="180" top="5805" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -524,8 +512,10 @@
    </LINK>
    <LINK srcnodeid="161" srcpinname="Keyboard" dstnodeid="158" dstpinname="Keyboard State">
    </LINK>
-   <LINK srcnodeid="165" srcpinname="Output" dstnodeid="158" dstpinname="Initialize">
-   </LINK>
    <LINK srcnodeid="158" srcpinname="Output" dstnodeid="14" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="160" dstpinname="Simulate">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Bang" dstnodeid="158" dstpinname="Initialize">
    </LINK>
    </PATCH>
