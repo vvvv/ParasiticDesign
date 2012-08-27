@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_4_01_Treemap\P_3_1_4_01.v4p" systemname="P_3_1_4_01" filename="C:\Work\ParasiticDesign\01_P\P_3_1_4_01_Treemap\P_3_1_4_01.v4p">
-   <BOUNDS type="Window" left="645" top="240" width="16680" height="14325">
+   <BOUNDS type="Window" left="2745" top="1185" width="16680" height="14325">
    </BOUNDS>
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="6810" top="10275" width="100" height="100">
@@ -87,7 +87,7 @@
    <NODE nodename="Renderer (EX9)" componentmode="InAWindow" id="22" systemname="Renderer (EX9)">
    <BOUNDS type="Node" left="6825" top="11385" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Window" left="17505" top="255" width="7170" height="7530">
+   <BOUNDS type="Window" left="16485" top="180" width="8565" height="8850">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
@@ -655,11 +655,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="259" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="795" top="2025" type="Node" width="7425">
+   <BOUNDS height="270" left="675" top="2025" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="9615" left="795" top="2025" type="Box" width="4380">
+   <BOUNDS height="9615" left="675" top="2025" type="Box" width="4380">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Please bang this to read the file.&cr;&lf;&cr;&lf;This subpatch reads the text file, cleans it up and count the words in it. Please check it for more details.&cr;&lf;&cr;&lf;Treemap (2d) creates two spreads: positions and sizes of the elements according to the input spread of numbers. These numbers in this case are frequency of occurrence of different words of the next.&cr;&lf;&cr;&lf;For each word a rectangle will be drawn and a text will be placed in it. Everything is rendered pixelwise in this example, so Billboard (Transform) with its Object Space set to Pixel is used.&cr;&lf;&cr;&lf;Treemap returs its values in a range of (0,1). This range has to be stretched twice to cover full Renderer window (-1, 1).&cr;&lf;&cr;&lf;Rectangles should be drawn only with outlines, therefore 2 different Quads should be drawn on every position. One will be black and one will be white on top of it. White Quad is little bit smaller than the black one, resulting in a thin outline. So every transformation is duplicated here. And UniformScale (Transform) is also spreaded to have two slices for every rectangle.&cr;&lf;&cr;&lf;Treemap&apos;s position and size spreads are brought together into one spread, first items of this spread will be position and the second one - sized.&cr;&lf;&cr;&lf;This big spread is transformed to a suitable range. Every position and every size has different slices for X and Y which are following each other. Renderer&apos;s width and height are also combited together with a Vector (2d join) and used for this range transformation.&cr;&lf;&cr;&lf;This big spread is splitted again into two separate spreads - position and sizes.&cr;&lf;&cr;&lf;Positions are used directly to place words on the screen.&cr;&lf;&cr;&lf;And sizes are used in FindSuitableSize subpatch to find suitable font size for every word. Every word can be as big as its rectangle minus some margin.&cr;&lf;Please check this subpatch to see how it&apos;s done.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Please bang this to read the file.&cr;&lf;&cr;&lf;This subpatch reads the text file, cleans it up and count the words in it. Please check it for more details.&cr;&lf;&cr;&lf;Treemap (2d) creates two spreads: positions and sizes of the elements according to the input spread of numbers. These numbers in this case are frequency of occurrence of different words of the next.&cr;&lf;&cr;&lf;For each word a rectangle will be drawn and a text will be placed in it. Everything is rendered pixelwise in this example, so Billboard (Transform) with its Object Space set to Pixel is used.&cr;&lf;&cr;&lf;Treemap returs its values in a range of (0,1). This range has to be stretched twice to cover full Renderer window (-1, 1).&cr;&lf;&cr;&lf;Rectangles should be drawn only with outlines, therefore 2 different Quads should be drawn on every position. One will be black and one will be white on top of it. White Quad is little bit smaller than the black one, resulting in a thin outline. So every transformation is duplicated here. And UniformScale (Transform) is also spreaded to have two slices for every rectangle.&cr;&lf;&cr;&lf;Treemap&apos;s position and size spreads are brought together into one spread, first items of this spread will be position and the second one - sizes.&cr;&lf;&cr;&lf;This big spread is transformed to a suitable range. Every position and every size has different slices for X and Y which are following each other. Renderer&apos;s width and height are also combited together with a Vector (2d join) and used for this range transformation.&cr;&lf;&cr;&lf;This big spread is splitted again into two separate spreads - position and sizes.&cr;&lf;&cr;&lf;Positions are used directly to place words on the screen.&cr;&lf;&cr;&lf;And sizes are used in FindSuitableSize subpatch to find suitable font size for every word. Every word can be as big as its rectangle minus some margin.&cr;&lf;Please check this subpatch to see how it&apos;s done.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -671,9 +671,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="258" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="2025" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="2025" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="180" top="2025" type="Box" width="405">
+   <BOUNDS height="390" left="60" top="2025" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -687,9 +687,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="257" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="2430" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="2430" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="2430" type="Box" width="420">
+   <BOUNDS height="405" left="60" top="2430" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -703,9 +703,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="256" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3060" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="3060" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="3060" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="3060" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -719,9 +719,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="4095" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="4095" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="4095" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="4095" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -735,9 +735,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="254" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="6030" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="6030" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="6030" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="6030" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -751,9 +751,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="253" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="5145" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="5145" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="5145" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="5145" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -767,9 +767,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="252" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="7485" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="7485" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="7485" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="7485" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -783,9 +783,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="251" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="8295" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="8295" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="8295" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="8295" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -1089,9 +1089,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="288" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="9555" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="9555" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="9555" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="9555" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="9.">
    </PIN>
@@ -1105,9 +1105,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="289" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="10125" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="10125" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="375" left="180" top="10125" type="Box" width="600">
+   <BOUNDS height="375" left="60" top="10125" type="Box" width="600">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="10.">
    </PIN>
@@ -1121,9 +1121,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="290" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="10605" type="Node" width="315">
+   <BOUNDS height="270" left="75" top="10605" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="375" left="195" top="10605" type="Box" width="600">
+   <BOUNDS height="375" left="75" top="10605" type="Box" width="600">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="11.">
    </PIN>
