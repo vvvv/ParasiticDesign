@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\BigStations.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\BigStations.v4p" systemname="BigStations">
-   <BOUNDS height="11535" left="3270" top="2895" type="Window" width="16740">
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\BigStations.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\BigStations.v4p" systemname="BigStations">
+   <BOUNDS height="11535" left="2865" top="4050" type="Window" width="16740">
    </BOUNDS>
    <NODE componentmode="Hidden" id="30" nodename="GetSlice (Node)" systemname="GetSlice (Node)">
    <BOUNDS height="100" left="6285" top="2220" type="Node" width="100">
@@ -79,7 +79,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" visible="1">
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Index" visible="1">
    </PIN>
@@ -88,18 +88,6 @@
    <PIN pinname="Output Bins" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="7" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="8460" top="4140" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="8460" top="4140" type="Box" width="450">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="8" dstpinname="Bin Size" srcnodeid="7" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="6" nodename="Add (String Spectral)" systemname="Add (String Spectral)">
    <BOUNDS height="100" left="8115" top="5100" type="Node" width="100">
    </BOUNDS>
@@ -161,7 +149,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|BigStation Index|">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Is BigStation Index|">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="35" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -203,8 +191,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="39" dstpinname="Input Node" srcnodeid="24" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="37" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="41" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="11715" top="8595" type="Node" width="3990">
@@ -301,7 +287,7 @@
    <LINK dstnodeid="48" dstpinname="TranslateX" srcnodeid="54" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="57" nodename="Subtract (Value)" systemname="Subtract (Value)">
-   <BOUNDS height="270" left="8820" top="2670" type="Node" width="600">
+   <BOUNDS height="270" left="8790" top="2670" type="Node" width="600">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -323,7 +309,7 @@
    <LINK dstnodeid="57" dstpinname="Input 2" srcnodeid="58" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="60" nodename="I (Spreads)" systemname="I (Spreads)">
-   <BOUNDS height="270" left="8805" top="3570" type="Node" width="840">
+   <BOUNDS height="270" left="8790" top="3570" type="Node" width="840">
    </BOUNDS>
    <PIN pinname="[ From .." visible="1" slicecount="1" values="0">
    </PIN>
@@ -425,7 +411,7 @@
    <LINK srcnodeid="71" srcpinname="Former Slice" dstnodeid="57" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="89">
-   <BOUNDS type="Node" left="8820" top="3135" width="690" height="270">
+   <BOUNDS type="Node" left="8790" top="3135" width="690" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -463,7 +449,7 @@
    </BOUNDS>
    <BOUNDS height="8700" left="885" top="510" type="Box" width="4170">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|If a letter &quot;o&quot; was typed (case 6 in this example), then the last 8 typed letters will be to the station name.&cr;&lf;&cr;&lf;Slice indices of all the &quot;o&quot; letters are found.&cr;&lf;&cr;&lf;From every index an 8 is substucted. Max (Value) sets the lowest index to 0 therefore preventing from circular reading from the end of the text. &cr;&lf;&cr;&lf;Inbetween indices are created with I (Spread), where &quot;from&quot; is n-8 and &quot;to&quot; is n. So now there is a spread of all indices of the letters which will be rendered as station names.&cr;&lf;&cr;&lf;A spread of the letters with these indices is constructed.&cr;&lf;&cr;&lf;Add (String Spectral) concatenates these letters into words with the size 8.&cr;&lf;&cr;&lf;Substruct (String) removes all spaces from the incoming spread.&cr;&lf;&cr;&lf;And finally, all characters of every station name are set to lower case and then every first character is capitalized.&cr;&lf;&cr;&lf;Transformations for all characters in the station names are substructed from the spread of all transformations.&cr;&lf;&cr;&lf;And an additional Transform (Transform 2d) is used to place all the names correctly near to the stations.&cr;&lf;&cr;&lf;Stations are rendered as white circles with black outlines. Therefore two separeate GridSegement (DX9) are used. The one of them draws a filled white circle and a second one just a black donut. Inner Radius pin of this second GridSegment is set to 0.75 to controll thickness of the outline. &cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|If a letter &quot;o&quot; was typed (case 6 in this example), then the last 8 typed letters will used as the station name.&cr;&lf;&cr;&lf;Select returns the indices of all &quot;o&quot; characteres in the spread of all letters typed.&cr;&lf;&cr;&lf;From every index an 8 is substracted. Max (Value) sets the lowest index to 0 therefore preventing from circular reading from the end of the text (that would be caused by a negative index). &cr;&lf;&cr;&lf;Inbetween indices are created with I (Spread), where &quot;from&quot; is n-8 and &quot;to&quot; is n. So now there is a spread of all indices of the letters which will be rendered as station names.&cr;&lf;&cr;&lf;A spread of the letters with these indices is constructed.&cr;&lf;&cr;&lf;Add (String Spectral) concatenates these letters into words with the length 8.&cr;&lf;&cr;&lf;Substract (String) removes all spaces from the incoming spread.&cr;&lf;&cr;&lf;And finally, all characters of every station name are set to lower case and then every first character is capitalized.&cr;&lf;&cr;&lf;From the spread of transformations of all characters only the big-station indices are chosen...&cr;&lf;&cr;&lf;And an additional Transform (Transform 2d) is used to place all the names correctly near to the stations.&cr;&lf;&cr;&lf;Stations are rendered as white circles with black outlines. Therefore two separeate GridSegement (DX9) are used. The one of them draws a filled white circle and a second one just a black donut. Inner Radius pin of this second GridSegment is set to 0.75 to controll the thickness of the outline. &cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -507,9 +493,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="109" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="2385" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="2790" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="2385" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="2790" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -523,9 +509,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="108" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="3405" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="3810" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="3405" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="3810" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -539,9 +525,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="107" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="4485" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="4890" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="4485" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="4890" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -555,9 +541,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="106" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="3855" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="4260" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="3855" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="4260" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -571,9 +557,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="105" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="5115" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="5520" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="5115" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="5520" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -603,9 +589,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="114" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8385" top="2835" type="Node" width="315">
+   <BOUNDS height="270" left="8355" top="2835" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8385" top="2835" type="Box" width="405">
+   <BOUNDS height="390" left="8355" top="2835" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -619,9 +605,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="116" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8385" top="3495" type="Node" width="315">
+   <BOUNDS height="270" left="8355" top="3495" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8385" top="3495" type="Box" width="405">
+   <BOUNDS height="390" left="8355" top="3495" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -733,9 +719,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="123" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="5745" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="6150" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="5745" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="6150" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -749,9 +735,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="124" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="6375" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="6780" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="240" top="6375" type="Box" width="450">
+   <BOUNDS height="405" left="240" top="6780" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="9.">
    </PIN>
@@ -765,9 +751,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="125" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="240" top="6990" type="Node" width="315">
+   <BOUNDS height="270" left="240" top="7395" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="435" left="240" top="6990" type="Box" width="585">
+   <BOUNDS height="435" left="240" top="7395" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="10.">
    </PIN>
@@ -947,7 +933,7 @@
    </BOUNDS>
    <PIN pinname="Caps Mode">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="1" values="text" encoded="0">
+   <PIN pinname="Input" visible="1" slicecount="1" encoded="0" values="text">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -965,5 +951,7 @@
    <LINK srcnodeid="5" srcpinname="Result" dstnodeid="133" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="133" srcpinname="Output" dstnodeid="102" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Output String" dstnodeid="8" dstpinname="Input">
    </LINK>
    </PATCH>

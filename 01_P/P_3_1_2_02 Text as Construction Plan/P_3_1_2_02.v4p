@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\P_3_1_2_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
-   <BOUNDS height="12270" left="1050" top="930" type="Window" width="13485">
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\P_3_1_2_02.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
+   <BOUNDS height="10635" left="1050" top="930" type="Window" width="13620">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="480" type="Node" width="840">
@@ -51,7 +51,7 @@
    <NODE componentmode="Hidden" filename="ReturnTransformations.v4p" id="1111" nodename="ReturnTransformations.v4p" systemname="ReturnTransformations">
    <BOUNDS height="270" left="5775" top="5385" type="Node" width="2025">
    </BOUNDS>
-   <BOUNDS height="9765" left="4455" top="3330" type="Window" width="17280">
+   <BOUNDS height="9330" left="3330" top="4710" type="Window" width="18825">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -63,11 +63,13 @@
    </PIN>
    <PIN pinname="Bin Sizes" visible="1" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Characters Per Line" slicecount="1" visible="1" values="70">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="LetterRuleTable.v4p" id="1185" nodename="LetterRuleTable.v4p" systemname="LetterRuleTable">
    <BOUNDS height="270" left="6045" top="4560" type="Node" width="2550">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="61" values="W,a,s,| |,h,i,e,r,| |,f,o,l,g,t,| |,i,s,t,| |,T,e,x,t,!,| |,S,o,| |,a,s,n,t,|,|,| |,u,n,d,| |,m,a,g,.,| |,I,c,h,| |,m,a,g,| |,T,e,x,t,| |,s,e,h,r,." encoded="0">
    </PIN>
    <PIN pinname="Rotation" visible="1">
    </PIN>
@@ -82,22 +84,6 @@
    <BOUNDS type="Window" left="1365" top="2670" width="23040" height="10740">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1188" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="270" left="5790" top="3840" type="Node" width="3525">
-   </BOUNDS>
-   <BOUNDS height="10140" left="9225" top="3120" type="Window" width="12750">
-   </BOUNDS>
-   <BOUNDS height="3600" left="5685" top="1860" type="Box" width="4800">
-   </BOUNDS>
-   <PIN pinname="Zoom" visible="1">
-   </PIN>
-   <PIN pinname="Typed Characters" visible="1">
-   </PIN>
-   <PIN pinname="Bin Sizes" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="1185" dstpinname="Input" srcnodeid="1188" srcpinname="Typed Characters">
-   </LINK>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="1189">
    <BOUNDS type="Node" left="7575" top="9510" width="100" height="100">
    </BOUNDS>
@@ -170,8 +156,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1196" srcpinname="Y Output Value" dstnodeid="1188" dstpinname="Reset">
-   </LINK>
    <NODE id="525" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -187,7 +171,7 @@
    </PIN>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="13500" top="1065" width="11700" height="12000">
+   <BOUNDS type="Window" left="15285" top="870" width="11700" height="12000">
    </BOUNDS>
    <PIN pinname="Projection" slicecount="1" visible="1" values="||">
    </PIN>
@@ -215,7 +199,7 @@
    <NODE systemname="LetterTransformations" filename="LetterTransformations.v4p" nodename="LetterTransformations.v4p" componentmode="Hidden" id="1198">
    <BOUNDS type="Node" left="5775" top="6210" width="1905" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="9330" top="3480" width="12720" height="10650">
+   <BOUNDS type="Window" left="2955" top="3225" width="12720" height="10650">
    </BOUNDS>
    <PIN pinname="Rotation" visible="1">
    </PIN>
@@ -226,6 +210,8 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    <PIN pinname="Input Bin Size" visible="1">
+   </PIN>
+   <PIN pinname="Characters Per Line" slicecount="1" visible="1" values="70">
    </PIN>
    </NODE>
    <LINK srcnodeid="1185" srcpinname="Rotation" dstnodeid="1198" dstpinname="Rotation">
@@ -239,7 +225,7 @@
    </BOUNDS>
    <PIN pinname="Mouse XYZ" visible="1">
    </PIN>
-   <PIN pinname="Zoom" visible="1">
+   <PIN pinname="Zoom" visible="1" slicecount="1" values="0.05">
    </PIN>
    <PIN pinname="Mouse Buttons" visible="1">
    </PIN>
@@ -247,11 +233,13 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="6465" top="2835" width="12870" height="10785">
+   <BOUNDS type="Window" left="2100" top="3960" width="13425" height="10230">
    </BOUNDS>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="1203" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="9705" top="4020" type="Node" width="1380">
+   <BOUNDS height="270" left="9900" top="3840" type="Node" width="1050">
    </BOUNDS>
    <PIN pinname="Left Button" visible="1">
    </PIN>
@@ -263,47 +251,11 @@
    </PIN>
    <PIN pinname="Right Button" visible="1">
    </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="1202" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="100" left="9690" top="4545" type="Node" width="100">
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="9900" top="3840">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
    </NODE>
-   <LINK dstnodeid="1202" dstpinname="X" srcnodeid="1203" srcpinname="X">
-   </LINK>
-   <NODE componentmode="Hidden" id="1201" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="270" left="10515" top="4545" type="Node" width="585">
-   </BOUNDS>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Input 3" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1203" srcpinname="Y" dstnodeid="1202" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="1203" srcpinname="Left Button" dstnodeid="1201" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="1203" srcpinname="Middle Button" dstnodeid="1201" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="1203" srcpinname="Right Button" dstnodeid="1201" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="1202" srcpinname="XYZ" dstnodeid="1200" dstpinname="Mouse XYZ">
-   </LINK>
-   <LINK srcnodeid="1188" srcpinname="Zoom" dstnodeid="1200" dstpinname="Zoom">
-   </LINK>
-   <LINK srcnodeid="1201" srcpinname="Output" dstnodeid="1200" dstpinname="Mouse Buttons">
-   </LINK>
    <LINK srcnodeid="1196" srcpinname="Y Output Value" dstnodeid="1200" dstpinname="Reset" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="1200" srcpinname="Transform Out" dstnodeid="525" dstpinname="View" hiddenwhenlocked="1">
@@ -313,7 +265,7 @@
    </BOUNDS>
    <BOUNDS height="6780" left="585" top="2925" type="Box" width="4080">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KeyboardControls subpatch separates typed characters into slices, calculates bins for every line (how many characters it contains) and also sets the Zoom factor.&cr;&lf;&cr;&lf;This subpatch sets different transformations for every character and also converts character codes into more suitable values (i.e. &quot;cases&quot;). All transformations are relative to the characters neighbours.&cr;&lf;&cr;&lf;For every typed Enter a base transformation of a new line and a color is set.&cr;&lf;&cr;&lf;Transformations for every character are accumulated and transformed from relative to absolute.&cr;&lf;&cr;&lf;A difference between curved shapes (and icons) and straight parts of the line is made here and now all parts of the line (shapes, straight line and stops, big named stations) can be drawn.&cr;&lf;&cr;&lf;This subpatch draws all curved parts of the line as well as additional icons.&cr;&lf;&cr;&lf;This one draws straight parts and small stops.&cr;&lf;&cr;&lf;And finally big stations with names are added to the line.&cr;&lf;&cr;&lf;All subpatches are documented, please check their internals.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The KeyboardControls subpatch splits the typed characters into slices, calculates bins for every line (how many characters it contains) and also sets the Zoom factor.&cr;&lf;&cr;&lf;This subpatch sets different transformations for every character and also converts character codes into more suitable values (i.e. &quot;cases&quot;). All transformations are relative to the characters neighbours.&cr;&lf;&cr;&lf;For every typed &apos;Enter&apos; a base transformation of a new line and a color is set.&cr;&lf;&cr;&lf;Transformations for every character are accumulated and thus transformed from relative to absolute.&cr;&lf;&cr;&lf;Here the patch is further distinguishing the cases between curved shapes (and icons) and straight parts of so that all parts of the line (shapes, straight line and stops, big named stations) can next be drawn individually.&cr;&lf;&cr;&lf;This subpatch draws all curved parts of the line as well as additional icons.&cr;&lf;&cr;&lf;This one draws straight parts and small stops.&cr;&lf;&cr;&lf;And finally big stations with names are added to the line.&cr;&lf;&cr;&lf;All subpatches are documented, please check their internals.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -341,9 +293,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1210" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="3735" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="3960" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="3735" type="Box" width="420">
+   <BOUNDS height="405" left="180" top="3960" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -357,9 +309,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1209" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="4800" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="5025" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="4800" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="5025" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -373,9 +325,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1208" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="5415" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="5640" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="5415" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="5640" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -389,9 +341,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1207" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="7095" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="7470" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="7095" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="7470" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -405,9 +357,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1206" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="6045" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="6270" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="6045" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="6270" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -421,9 +373,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1205" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="7665" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="8160" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="7665" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="8160" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -437,9 +389,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1204" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="180" top="8115" type="Node" width="315">
+   <BOUNDS height="270" left="180" top="8610" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="180" top="8115" type="Box" width="450">
+   <BOUNDS height="405" left="180" top="8610" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -469,9 +421,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1214" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5310" top="4470" type="Node" width="315">
+   <BOUNDS height="270" left="5340" top="4470" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5310" top="4470" type="Box" width="420">
+   <BOUNDS height="405" left="5340" top="4470" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -555,7 +507,7 @@
    <NODE componentmode="Hidden" filename="BigStations.v4p" id="1215" nodename="BigStations.v4p" systemname="BigStations">
    <BOUNDS height="270" left="9915" top="8100" type="Node" width="1500">
    </BOUNDS>
-   <BOUNDS height="11535" left="3270" top="2895" type="Window" width="16740">
+   <BOUNDS height="11535" left="2865" top="4050" type="Window" width="16740">
    </BOUNDS>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -565,7 +517,7 @@
    </PIN>
    <PIN pinname="Letter Width" visible="1">
    </PIN>
-   <PIN pinname="Text Input" visible="1" encoded="0">
+   <PIN pinname="Text Input" visible="1" encoded="0" slicecount="61" values="W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W,a,W">
    </PIN>
    <PIN pinname="Transform" visible="1">
    </PIN>
@@ -581,8 +533,6 @@
    <LINK srcnodeid="1215" srcpinname="Layer" dstnodeid="628" dstpinname="Layer 3">
    </LINK>
    <LINK srcnodeid="1198" srcpinname="Transform Out" dstnodeid="1215" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="1188" srcpinname="Typed Characters" dstnodeid="1215" dstpinname="Text Input">
    </LINK>
    <NODE systemname="ShapesOrStraightLines" filename="ShapesOrStraightLines.v4p" nodename="ShapesOrStraightLines.v4p" componentmode="Hidden" id="1220">
    <BOUNDS type="Node" left="6825" top="7140" width="4080" height="270">
@@ -604,16 +554,12 @@
    </LINK>
    <LINK srcnodeid="1220" srcpinname="Line Types" dstnodeid="966" dstpinname="Line Types">
    </LINK>
-   <LINK srcnodeid="1220" srcpinname="Big Station Indices" dstnodeid="1215" dstpinname="BigStation Index">
-   </LINK>
-   <LINK srcnodeid="1188" srcpinname="Bin Sizes" dstnodeid="1111" dstpinname="Bin Sizes">
-   </LINK>
-   <LINK srcnodeid="1188" srcpinname="Bin Sizes" dstnodeid="1198" dstpinname="Bin Size">
+   <LINK srcnodeid="1220" srcpinname="Big Station Indices" dstnodeid="1215" dstpinname="Is BigStation Index">
    </LINK>
    <NODE componentmode="InABox" id="1221" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5250" top="5325" type="Node" width="315">
+   <BOUNDS height="270" left="5340" top="5325" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5250" top="5325" type="Box" width="420">
+   <BOUNDS height="405" left="5340" top="5325" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -627,9 +573,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1222" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5280" top="6150" type="Node" width="315">
+   <BOUNDS height="270" left="5340" top="6150" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5280" top="6150" type="Box" width="420">
+   <BOUNDS height="405" left="5340" top="6150" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -659,9 +605,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="1224" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5265" top="8010" type="Node" width="315">
+   <BOUNDS height="270" left="5340" top="8010" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5265" top="8010" type="Box" width="420">
+   <BOUNDS height="405" left="5340" top="8010" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -717,5 +663,29 @@
    <LINK srcnodeid="1198" srcpinname="Transform Out" dstnodeid="1228" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="1228" srcpinname="Layer" dstnodeid="628" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="1203" srcpinname="Mouse" dstnodeid="1200" dstpinname="Mouse">
+   </LINK>
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="1229" managers="" nodename="KeyboardControls" systemname="KeyboardControls">
+   <BOUNDS height="270" left="5790" top="3840" type="Node" width="3525">
+   </BOUNDS>
+   <BOUNDS height="10065" left="3300" top="5160" type="Window" width="13935">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5790" top="3840" type="Box" width="4800">
+   </BOUNDS>
+   <PIN pinname="Characters Per Line" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1185" dstpinname="Input" srcnodeid="1229" srcpinname="Typed Characters">
+   </LINK>
+   <LINK srcnodeid="1196" srcpinname="Y Output Value" dstnodeid="1229" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="1229" srcpinname="Zoom" dstnodeid="1200" dstpinname="Zoom">
+   </LINK>
+   <LINK srcnodeid="1229" srcpinname="Typed Characters" dstnodeid="1215" dstpinname="Text Input">
+   </LINK>
+   <LINK srcnodeid="1229" srcpinname="Characters Per Line" dstnodeid="1111" dstpinname="Characters Per Line">
+   </LINK>
+   <LINK srcnodeid="1229" srcpinname="Characters Per Line" dstnodeid="1198" dstpinname="Characters Per Line">
    </LINK>
    </PATCH>
