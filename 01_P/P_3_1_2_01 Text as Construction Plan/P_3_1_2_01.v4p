@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_2_01 Text as Construction Plan\P_3_1_2_01.v4p" locked="0" systemname="P_3_1_2_01">
    <BOUNDS height="10785" left="1050" top="1185" type="Window" width="11520">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -67,7 +67,7 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
-   <PIN pinname="View" visible="1">
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Projection" slicecount="1" visible="1" values="||">
    </PIN>
@@ -145,20 +145,24 @@
    <LINK dstnodeid="628" dstpinname="Layer 2" srcnodeid="680" srcpinname="Layer" linkstyle="PolyLine">
    </LINK>
    <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="794" nodename="ViewTransform.v4p" systemname="ViewTransform">
-   <BOUNDS height="100" left="8565" top="4890" type="Node" width="100">
+   <BOUNDS height="100" left="8580" top="3960" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="10785" left="3300" top="2385" type="Window" width="12870">
+   <BOUNDS height="10785" left="9975" top="2370" type="Window" width="13425">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Zoom" visible="1" slicecount="1" values="0.1">
+   <PIN pinname="Zoom" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Mouse XYZ" visible="1">
    </PIN>
    <PIN pinname="Mouse Buttons" visible="1">
    </PIN>
-   <PIN pinname="Reset" visible="1">
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="8580" top="3960">
+   </BOUNDS>
    </NODE>
    <LINK dstnodeid="525" dstpinname="View" hiddenwhenlocked="1" srcnodeid="794" srcpinname="Transform Out" linkstyle="PolyLine">
    </LINK>
@@ -463,9 +467,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="884" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10050" top="4830" type="Node" width="315">
+   <BOUNDS height="270" left="10065" top="3870" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="10050" top="4830" type="Box" width="450">
+   <BOUNDS height="405" left="10065" top="3870" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -479,7 +483,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="887" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="9015" top="3720" type="Node" width="1380">
+   <BOUNDS height="270" left="9225" top="3165" type="Node" width="1380">
    </BOUNDS>
    <PIN pinname="Left Button" visible="1">
    </PIN>
@@ -491,45 +495,11 @@
    </PIN>
    <PIN pinname="Right Button" visible="1">
    </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="886" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="100" left="9000" top="4290" type="Node" width="100">
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="9225" top="3165">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
    </NODE>
-   <LINK dstnodeid="886" dstpinname="X" srcnodeid="887" srcpinname="X">
-   </LINK>
-   <NODE componentmode="Hidden" id="885" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="270" left="9825" top="4290" type="Node" width="585">
-   </BOUNDS>
-   <PIN pinname="Input Count" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="887" srcpinname="Y" dstnodeid="886" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="887" srcpinname="Left Button" dstnodeid="885" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="887" srcpinname="Middle Button" dstnodeid="885" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="887" srcpinname="Right Button" dstnodeid="885" dstpinname="Input 3">
-   </LINK>
-   <LINK srcnodeid="886" srcpinname="XYZ" dstnodeid="794" dstpinname="Mouse XYZ">
-   </LINK>
-   <LINK srcnodeid="885" srcpinname="Output" dstnodeid="794" dstpinname="Mouse Buttons">
-   </LINK>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="888">
    <BOUNDS type="Node" left="9270" top="9645" width="100" height="100">
    </BOUNDS>
@@ -630,9 +600,7 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="794" dstpinname="Reset" hiddenwhenlocked="1">
-   <LINKPOINT x="9900" y="3540">
-   </LINKPOINT>
+   <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="794" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine">
    </LINK>
    <NODE id="893" componentmode="Hidden" systemname="LetterRuleTable" filename="LetterRuleTable.v4p" nodename="LetterRuleTable.v4p">
    <BOUNDS type="Window" left="6570" top="3615" width="18960" height="12285">
@@ -643,6 +611,8 @@
    </PIN>
    <PIN pinname="Typed Characters" slicecount="378" encoded="0" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
    </PIN>
+   <BOUNDS type="Box" left="5790" top="3960">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="893" srcpinname="Translation" dstnodeid="858" dstpinname="Translation">
    </LINK>
@@ -665,6 +635,10 @@
    </PIN>
    <PIN pinname="Randomize" visible="1">
    </PIN>
+   <PIN pinname="Zoom" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="5925" top="3165">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="854" srcpinname="Typed Characters" dstnodeid="893" dstpinname="Typed Characters">
    </LINK>
@@ -672,8 +646,10 @@
    </LINK>
    <LINK srcnodeid="854" srcpinname="Typed Characters" dstnodeid="890" dstpinname="Typed Characters">
    </LINK>
-   <LINK srcnodeid="854" srcpinname="Zoom" dstnodeid="794" dstpinname="Zoom">
+   <LINK srcnodeid="854" srcpinname="Zoom" dstnodeid="794" dstpinname="Zoom" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="882" srcpinname="Y Output Value" dstnodeid="854" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="887" srcpinname="Mouse" dstnodeid="794" dstpinname="Mouse">
    </LINK>
    </PATCH>
