@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_2_3_01 Font Contour out of Agents\P_3_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_01 Dissolving the Font Outlines\P_3_2_1_01.v4p" systemname="P_3_2_1_01" locked="0">
-   <BOUNDS height="13215" left="0" top="330" type="Window" width="15660">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_3_2_3_01 Font Contour out of Agents\P_3_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_2_1_01 Dissolving the Font Outlines\P_3_2_1_01.v4p" systemname="P_3_2_1_01" locked="0">
+   <BOUNDS height="11250" left="0" top="330" type="Window" width="15015">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="480" type="Node" width="840">
@@ -189,7 +189,7 @@
    </BOUNDS>
    <BOUNDS height="1800" left="6735" top="10230" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="9690" left="11175" top="960" type="Window" width="14025">
+   <BOUNDS height="7935" left="15015" top="330" type="Window" width="11400">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -673,6 +673,8 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="120">
+   </PIN>
    </NODE>
    <LINK srcnodeid="688" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum forground fps">
    </LINK>
@@ -743,7 +745,7 @@
    </PIN>
    <PIN pinname="Up" pintype="Input" visible="1">
    </PIN>
-   <BOUNDS height="10890" left="1215" top="1230" type="Window" width="20355">
+   <BOUNDS height="10425" left="1215" top="1230" type="Window" width="18795">
    </BOUNDS>
    <BOUNDS height="270" left="7605" top="1545" type="Node" width="1980">
    </BOUNDS>
@@ -771,9 +773,9 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="27" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="609" srcpinname="Clear">
-   <LINKPOINT x="5160" y="5110">
+   <LINKPOINT x="5715" y="5070">
    </LINKPOINT>
-   <LINKPOINT x="5190" y="8750">
+   <LINKPOINT x="5715" y="8850">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="609" srcpinname="Typed Letter" dstnodeid="427" dstpinname="Text">
@@ -1031,7 +1033,7 @@
    <NODE id="699" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
    <BOUNDS type="Box" width="4215" height="6675" left="555" top="2610">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|This subpatch controls all possible keyboard states, keeps track of how many letters was typed on every line (to get a X position for the letter) and how many lines was typed (for a Y position). Every letter is drawn induvidually on the screen and the Renderer is just not being refreshed.&cr;&lf;&cr;&lf;Translation for a letter is prepared.&cr;&lf;&cr;&lf;And a spread of locations (XY coordinates) along a letter shape is constructed.&cr;&lf;&cr;&lf;Some distortion is applied to each of these locations.&cr;&lf;&cr;&lf;In every location a circle is drawn. Circles with one pixel outline is just Segments with its InnerRadius set to 1 and RenderState set to WireFrame.&cr;&lf;&cr;&lf;The same locations are used as control points for a smooth curve. B-Spline (3d) calculates positions on this curve which are then connected with many straight lines.&cr;&lf;&cr;&lf;And finally a simple line is drawn between all locations.&cr;&lf;&cr;&lf;Mouse X position is mapped to suitable values and when a Left Mouse Button is pressed these values are used as a Dance (Distortion) Factor.&cr;&lf;&cr;&lf;MainLoop (vvvv) with its Maximum forground fps set to 15 slows the Frame Rate of vvvv down. It&apos;s just to help to see better what is happening.|">
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|This subpatch controls all possible keyboard states, keeps track of how many letters were typed on every line (to get a X position for the letter) and how many lines were typed (for a Y position). Every letter is drawn individually on the screen and the Renderer is just not being refreshed.&cr;&lf;&cr;&lf;The Translation for each letter is prepared.&cr;&lf;&cr;&lf;And a spread of points (XY coordinates) along a letter shape is constructed.&cr;&lf;&cr;&lf;Some distortion is applied to each of these points.&cr;&lf;&cr;&lf;In every location a circle is drawn. Circles with one pixel outline is just Segments with its InnerRadius set to 1 and RenderState set to WireFrame.&cr;&lf;&cr;&lf;The same points are used as control points for a smooth curve. B-Spline (3d) calculates positions on this curve which are then connected with many straight lines.&cr;&lf;&cr;&lf;And finally a simple line is drawn between all points.&cr;&lf;&cr;&lf;Mouse X position is mapped to suitable values and when the Left Mouse Button is pressed these values are used as a Dance (Distortion) Factor.&cr;&lf;&cr;&lf;MainLoop (vvvv) with its Maximum forground fps set to 15 slows the Frame Rate of vvvv down. It&apos;s just to help to see better what is happening.|">
    </PIN>
    <BOUNDS type="Node" left="555" top="2610" width="6210" height="270">
    </BOUNDS>
