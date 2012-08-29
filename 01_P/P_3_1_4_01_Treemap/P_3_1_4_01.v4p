@@ -187,7 +187,7 @@
    </PIN>
    <PIN pinname="Filename">
    </PIN>
-   <BOUNDS type="Window" left="3555" top="2880" width="13500" height="10080">
+   <BOUNDS type="Window" left="7335" top="4185" width="13500" height="10080">
    </BOUNDS>
    <BOUNDS type="Node" left="7621" top="1860" width="0" height="0">
    </BOUNDS>
@@ -263,9 +263,9 @@
    <NODE componentmode="InABox" id="259" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="525" top="2025" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="6360" left="525" top="2025" type="Box" width="4200">
+   <BOUNDS height="7470" left="525" top="2025" type="Box" width="4320">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Rightclick to load and parse the text file (this may take a while).&cr;&lf;&cr;&lf;This subpatch reads the text file, cleans it up and counts the words in it. Please check it for more details.&cr;&lf;&cr;&lf;Treemap (2d) essentially takes a spread of &apos;weights&apos; and returns packed rectangles (defined via two outputs CenterXY and SizeXY) that correspond to the input &apos;weights&apos;.&cr;&lf;&cr;&lf;For each word a rectangle will be drawn and a text will be placed in it. &cr;&lf;The combination of Segment, Fill, Rotate and Uniformscale is a workaround in vvvv to draw rectangles with a perfect single pixel outline.&cr;&lf;&cr;&lf;CenterXY and SizeXY of the Treemap are taken as is and a UniformScale is used to scale the treemaps area up to the renderers coordinate system. &cr;&lf;&cr;&lf;Text is drawn with &apos;Normalize&apos; set to &apos;Width&apos; which ensures that by default each word is drawn with a width of 1, independent of its character-count. &cr;&lf;&cr;&lf;Like this simply the sizeX (multiplied with some factor to make the words a bit smaller than the rectangles) can be used to scale the words.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Rightclick to load and parse the text file (this may take a while).&cr;&lf;&cr;&lf;This subpatch reads the text file, cleans it up and counts the words in it. Please check it for more details.&cr;&lf;&cr;&lf;Treemap (2d) essentially takes a spread of &apos;weights&apos; and returns packed rectangles (defined via two outputs CenterXY and SizeXY) that correspond to the input &apos;weights&apos;.&cr;&lf;&cr;&lf;For each word a rectangle will be drawn and a text will be placed in it. &cr;&lf;The combination of Segment, Fill, Rotate and Uniformscale is a workaround in vvvv to draw rectangles with a perfect single pixel outline.&cr;&lf;&cr;&lf;CenterXY and SizeXY of the Treemap are taken as is and a UniformScale is used to scale the treemaps area up to the renderers coordinate system. &cr;&lf;&cr;&lf;The order of the rectangles returned by Treemap does not necessarily correspond to the order of the input &apos;weights&apos;. Therefore the &apos;Former Index&apos; is returned as well which together with GetSlice (String) is used to get the right word for every rectangle.&cr;&lf;&cr;&lf;Text is drawn with &apos;Normalize&apos; set to &apos;Width&apos; which ensures that by default each word is drawn with a width of 1, independent of its character-count. &cr;&lf;&cr;&lf;Like this simply the sizeX (multiplied with some factor to make the words a bit smaller than the rectangles) can be used to scale the words.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -373,9 +373,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="252" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="60" top="7275" type="Node" width="315">
+   <BOUNDS height="270" left="60" top="7680" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="60" top="7275" type="Box" width="450">
+   <BOUNDS height="405" left="60" top="7680" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -583,9 +583,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="291" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10095" top="10200" type="Node" width="315">
+   <BOUNDS height="270" left="10410" top="5580" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="375" left="10095" top="10200" type="Box" width="405">
+   <BOUNDS height="375" left="10410" top="5580" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -750,7 +750,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="242" srcpinname="Output" dstnodeid="305" dstpinname="Input">
+   <LINK srcnodeid="242" srcpinname="Unique Words" dstnodeid="305" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Former Slice" dstnodeid="305" dstpinname="Index">
    </LINK>
@@ -785,7 +785,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.75">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -793,11 +793,43 @@
    <LINK srcnodeid="308" srcpinname="Y Output Value" dstnodeid="307" dstpinname="Input 2">
    </LINK>
    <NODE componentmode="InABox" id="309" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10215" top="9585" type="Node" width="315">
+   <BOUNDS height="270" left="10050" top="10215" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="10215" top="9585" type="Box" width="450">
+   <BOUNDS height="405" left="10050" top="10215" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="310" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="60" top="8505" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="60" top="8505" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="311" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="10200" top="9645" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="10200" top="9645" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
