@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_4_3_1_01 Graphic out of pixel values\Case1.v4p" filename="C:\Documents and Settings\Roman\Desktop\Case1.v4p" systemname="Case1">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_1_01 Graphic out of pixel values\Case1.v4p" filename="C:\Documents and Settings\Roman\Desktop\Case1.v4p" systemname="Case1">
    <BOUNDS height="9255" left="3180" top="5625" type="Window" width="12375">
    </BOUNDS>
    <NODE componentmode="InABox" id="4" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -67,7 +67,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9090" top="1215" type="Box" width="360">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -130,6 +130,8 @@
    <PIN pinname="Transform Each Bin" visible="1">
    </PIN>
    <PIN pinname="VerticesXYZ" slicecount="6" values="-0.5,0,0,0.5,0,0">
+   </PIN>
+   <PIN pinname="Antialias" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="35" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -338,8 +340,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="36" dstpinname="Width">
-   </LINK>
    <NODE systemname="Stroke (EX9)" filename="%VVVV%\addonpack\lib\nodes\modules\EX9\Stroke (EX9).v4p" nodename="Stroke (EX9)" componentmode="Hidden" id="52">
    <BOUNDS type="Node" left="3855" top="6375" width="3510" height="270">
    </BOUNDS>
@@ -389,6 +389,32 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="54" srcpinname="Color Output" dstnodeid="52" dstpinname="Color">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="7815" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="56" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
+   <BOUNDS height="100" left="8070" top="3225" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="8070" top="3225" type="Box" width="360">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="55" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="55" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="36" dstpinname="Width">
    </LINK>
    <LINK srcnodeid="52" srcpinname="Layer" dstnodeid="6" dstpinname="Input Node">
    </LINK>
