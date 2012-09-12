@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\AnalyzeGrayscale.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02_supplement.v4p" systemname="P.4.3.1_02_supplement">
-   <BOUNDS height="8370" left="4515" top="3825" type="Window" width="10110">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.2.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\AnalyzeGrayscale.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02_supplement.v4p" systemname="P.4.3.1_02_supplement">
+   <BOUNDS height="8370" left="4515" top="3915" type="Window" width="10110">
    </BOUNDS>
    <NODE componentmode="Hidden" id="4" nodename="Dir (File)" systemname="Dir (File)">
    <BOUNDS height="270" left="5505" top="1665" type="Node" width="750">
@@ -209,7 +209,7 @@
    </BOUNDS>
    <BOUNDS height="5940" left="615" top="435" type="Box" width="3495">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|All SVGs from the given directory have been read and converted to Textures (rasterized) with a SVGTexture (EX9.Texture).&cr;&lf;&cr;&lf;A grid of 20x20=400 values is created.&cr;&lf;&cr;&lf;These values are used to access 400 pixels of each texture.&cr;&lf;&cr;&lf;HSL (Color Split) returns values for each color component of every pixel.&cr;&lf;&cr;&lf;Average of the Lightness part across these 400 pixels is calculated with a Mean (Spectral). So this is an approximation of how dark/light particular SVG is.&cr;&lf;&cr;&lf;A spread of all average lighnesses is Sort&apos;ed (Spreads). This node returns also a spread of former indices of now sorted slices.&cr;&lf;&cr;&lf;These indices (Revers&apos;ed first of all, so an index of the darkest slice comes first) are used to get slices of the texture spread in the right order to create a sorted (by their lightness) spread of textures.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|All SVGs from the given directory have been read and converted to Textures (rasterized) with a SVGTexture (EX9.Texture).&cr;&lf;&cr;&lf;A grid of 20x20=400 values is created.&cr;&lf;&cr;&lf;These values are used to access 400 pixels of each texture.&cr;&lf;&cr;&lf;HSL (Color Split) returns values for each color component of every pixel.&cr;&lf;&cr;&lf;Average of the Lightness part across these 400 pixels is calculated with a Mean (Spectral). So this is an approximation of how dark/light each particular SVG is.&cr;&lf;&cr;&lf;The spread of all average lighnesses is sorted using Sort (Spreads). This node returns also a spread of former indices of the now sorted slices.&cr;&lf;&cr;&lf;These indices (reversed first of all, so the index of the darkest slice comes first) are used to get slices of the texture spread in the right order to create a sorted (by their lightness) spread of textures.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
