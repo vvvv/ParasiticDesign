@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\AgentLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\AgentLine.v4p" systemname="AgentLine">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.1.dtd" >
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\AgentLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\AgentLine.v4p" systemname="AgentLine">
    <BOUNDS height="13005" left="2310" top="1200" type="Window" width="18390">
    </BOUNDS>
    <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -445,7 +445,7 @@
    <NODE systemname="CDR (Spreads Vector)" nodename="CDR (Spreads Vector)" componentmode="Hidden" id="156" filename="%VVVV%\addonpack\lib\nodes\plugins\VectorSized.dll">
    <BOUNDS type="Node" left="6210" top="7215" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="16" values="0.487018838796701,-0.980246793407453,0,0.529595106065703,-0.934757056366122,0,0.49370930008546,-1,0,0.493688901262331,-0.978710264351977,0,0.530511007193338,-0.957902230671264,0,0.416705611810211,-1,0,0.519526992506631,-1,0,0.419213509786141,-0.991501783399423,0,0.452624845825972,-0.944525533985973,0,0.500766527536557,-1,0,0.429422418025199,-1,0,0.416484969552835,-0.968369083876594,0,0.439185618384691,-0.979669810829138,0,0.430305437379511,-0.988369341560396,0,0.493011349229753,-1,0,0.438689722965206,-1,0,0.501952945335941,-1,0,0.396983162250735,-0.999519901929753,0,0.480585902180446,-0.980682277248591,0,0.466307667444036,-1,0,0.404630777883946,-1,0,0.453772485839542,-0.961835846677202,0,0.440642005995121,-1,0,0.529437448304145,-1,0,0.4076867906851,-1,0,0.449348188901504,-0.979280604824192,0,0.47578662222779,-1,0,0.409538298409045,-1,0">
+   <PIN pinname="Input" visible="1" slicecount="4" values="0.487018838796701,-0.980246793407453,0,0.529595106065703,-0.934757056366122,0,0.49370930008546,-1,0,0.493688901262331,-0.978710264351977,0,0.530511007193338,-0.957902230671264,0,0.416705611810211,-1,0,0.519526992506631,-1,0,0.419213509786141,-0.991501783399423,0,0.452624845825972,-0.944525533985973,0,0.500766527536557,-1,0,0.429422418025199,-1,0,0.416484969552835,-0.968369083876594,0,0.439185618384691,-0.979669810829138,0,0.430305437379511,-0.988369341560396,0,0.493011349229753,-1,0,0.438689722965206,-1,0,0.501952945335941,-1,0,0.396983162250735,-0.999519901929753,0,0.480585902180446,-0.980682277248591,0,0.466307667444036,-1,0,0.404630777883946,-1,0,0.453772485839542,-0.961835846677202,0,0.440642005995121,-1,0,0.529437448304145,-1,0,0.4076867906851,-1,0,0.449348188901504,-0.979280604824192,0,0.47578662222779,-1,0,0.409538298409045,-1,0">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -633,7 +633,7 @@
    </BOUNDS>
    <BOUNDS height="11940" left="825" top="345" type="Box" width="3990">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|In Processing a loop is used to create several curves in every frame and another (inner) loop creates several points for each curve.&cr;&lf;&cr;&lf;vvvv patch works without this kind of loops. All points for every curve (per frame) are generated at once. Then it&apos;s just a matter of defining which points belong to which curve. And a color for every curve has to be defined.&cr;&lf;&cr;&lf;Number of points which should be generated in every frame is the Number of curves multiplied by the Number of points per curve.&cr;&lf;&cr;&lf;Two Random (Value) nodes are spreaded (their Enabled pins get many slices) and generate new X and Y values for every point (in every curve) each frame.&cr;&lf;&cr;&lf;These random XY values are added to the last point from the previous frame, thus generating new points.&cr;&lf;&cr;&lf;Points are clamped to the range of (-1, 1), so there will be no points outside of the window.&cr;&lf;&cr;&lf;When the key &quot;q&quot; or &quot;w&quot; is pressed the drawing process has to be stopped / continued. Therefore, when the Stop is active, a  S+H (Animation) saves the spread of the points and a Switch (Value Input) gives this saved spread further, resulting in a line with the points in every frame.&cr;&lf;&cr;&lf;To get a last point of a spread of all points, a CDR (Spreads Vector) is used. This point will be used in the next frame as a starting point. Please note that the Vector Size is set to 2 (each point is defined as a vector with two coordinates).&cr;&lf;&cr;&lf;Each curve has its own color, which is the color of a texture under the first point of the curve. The slices of those points have to be defined. First of all a simple integer spread is created and then it is multiplied by a Number of points of every curve. Voila. These are the slices indices of the first point of each curve.&cr;&lf;&cr;&lf;A spread of first points is created. Please note a Bin Size again.&cr;&lf;&cr;&lf;These points are mapped from window coordinates (-1, 1) into textre coordinates (0,1).&cr;&lf;&cr;&lf;A Pipet (EX9.Texture) gets colors of those pixels in the texture. Then a Select (Color) duplicates each color so many times as there are points in every curve.&cr;&lf;&cr;&lf;A width of the Line depends on one of the color components of the pixel.&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|In Processing a for-loop is used to create several curves per frame and another (inner) for-loop creates several points for each curve.&cr;&lf;&cr;&lf;This patch works without this kind of loops: All points for every curve (per frame) are generated at once. Then it&apos;s just a matter of defining which points belong to which curve (Bin Size). And a color for every curve has to be defined.&cr;&lf;&cr;&lf;The Number of points which need to be generated in every frame is the &apos;Number of curves&apos; multiplied by the &apos;Number of points per curve&apos;.&cr;&lf;&cr;&lf;Two Random (Value) nodes are spreaded (their Enabled pins get many slices) and generate new X and Y values for every point (in every curve) each frame.&cr;&lf;&cr;&lf;These random XY values are added to the last point from the previous frame, thus generating new points.&cr;&lf;&cr;&lf;Points are clamped to the range of (-1, 1), so there will be no points outside of the window.&cr;&lf;&cr;&lf;When the key &quot;q&quot; or &quot;w&quot; is pressed the drawing process has to be stopped / continued. Therefore, when the Stop is active, a  S+H (Animation) saves the spread of the points and a Switch (Value Input) gives this saved spread further, resulting in a line with the points in every frame.&cr;&lf;&cr;&lf;To get the last point of a spread of all points, a CDR (Spreads Vector) is used. This point will be used in the next frame as a starting point. Please note that the Vector Size is set to 2 (each point is defined as a vector with two coordinates).&cr;&lf;&cr;&lf;Each curve has its own color, which is the color of a pixel under the first point of the curve. The slices of those points have to be defined. First of all a simple integer spread is created and then it is multiplied by a Number of points of every curve. Voila. These are the slices indices of the first point of each curve.&cr;&lf;&cr;&lf;A spread of first points is created. Please note the Bin Size again.&cr;&lf;&cr;&lf;These points are mapped from window coordinates (-1, 1) into textre coordinates (0,1).&cr;&lf;&cr;&lf;A Pipet (EX9.Texture) gets colors of those pixels in the texture. Then a Select (Color) duplicates each color so many times as there are points in every curve.&cr;&lf;&cr;&lf;The width of the Line depends on one of the color components of the pixel.&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1074,19 +1074,11 @@
    </NODE>
    <LINK srcnodeid="198" srcpinname="Output" dstnodeid="197" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="192" srcpinname="Up Edge" dstnodeid="198" dstpinname="Set">
-   </LINK>
    <LINK srcnodeid="113" srcpinname="Output" dstnodeid="198" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="197" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="113" srcpinname="Output" dstnodeid="197" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="156" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="178" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="162" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="162" srcpinname="Output" dstnodeid="133" dstpinname="Input">
    </LINK>
@@ -1347,5 +1339,13 @@
    <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="213" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="213" srcpinname="Output" dstnodeid="137" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="162" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="178" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Output" dstnodeid="156" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="192" srcpinname="Up Edge" dstnodeid="198" dstpinname="Set">
    </LINK>
    </PATCH>
