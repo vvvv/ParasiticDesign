@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
-   <BOUNDS height="11925" left="885" top="555" type="Window" width="13200">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
+   <BOUNDS height="11925" left="435" top="720" type="Window" width="17850">
    </BOUNDS>
    <NODE componentmode="InABox" id="1" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="210" top="930" type="Node" width="840">
@@ -77,7 +77,7 @@
    <LINK dstnodeid="6" dstpinname="Video Format" srcnodeid="7" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="8" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="9465" top="2805" type="Node" width="100">
+   <BOUNDS height="100" left="12420" top="2115" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -87,9 +87,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="9" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="9450" top="3345" type="Node" width="100">
+   <BOUNDS height="100" left="12405" top="2655" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2385" left="9450" top="3345" type="Box" width="2985">
+   <BOUNDS height="2235" left="12405" top="2655" type="Box" width="2475">
    </BOUNDS>
    <BOUNDS height="4860" left="15525" top="14745" type="Window" width="6120">
    </BOUNDS>
@@ -104,6 +104,8 @@
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="9" dstpinname="Layers" srcnodeid="8" srcpinname="Layer">
@@ -120,29 +122,17 @@
    </NODE>
    <LINK dstnodeid="10" dstpinname="Video" srcnodeid="6" srcpinname="Video">
    </LINK>
-   <LINK dstnodeid="8" dstpinname="Texture" srcnodeid="10" srcpinname="Texture Out">
-   </LINK>
    <NODE componentmode="InABox" id="11" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="8595" top="570" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="8595" top="570" type="Box" width="1785">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|HP Webcam [2 MP Macro]|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Apple Built-in iSight|">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="6" dstpinname="Driver" srcnodeid="11" srcpinname="Output Enum">
-   </LINK>
-   <NODE componentmode="Hidden" id="40" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="9630" top="2355" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="8" dstpinname="Transform" srcnodeid="40" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="181" nodename="Line (EX9)" systemname="Line (EX9)">
    <BOUNDS height="270" left="6495" top="10140" type="Node" width="3000">
@@ -175,7 +165,7 @@
    </BOUNDS>
    <BOUNDS height="5715" left="6495" top="10845" type="Box" width="8085">
    </BOUNDS>
-   <BOUNDS height="9405" left="14085" top="555" type="Window" width="12120">
+   <BOUNDS height="9405" left="14040" top="960" type="Window" width="9840">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -183,7 +173,7 @@
    </PIN>
    <PIN pinname="Clear" visible="1">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
    <PIN pinname="View" slicecount="1" visible="1" values="||">
    </PIN>
@@ -193,7 +183,7 @@
    </PIN>
    <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
@@ -301,7 +291,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="AgentLine.v4p" id="485" nodename="AgentLine.v4p" systemname="AgentLine">
-   <BOUNDS height="13005" left="2310" top="1200" type="Window" width="18390">
+   <BOUNDS height="15060" left="825" top="90" type="Window" width="18390">
    </BOUNDS>
    <BOUNDS height="270" left="7395" top="9600" type="Node" width="1860">
    </BOUNDS>
@@ -342,8 +332,6 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Texture Out" dstnodeid="485" dstpinname="Texture">
-   </LINK>
    <LINK srcnodeid="485" srcpinname="Color" dstnodeid="181" dstpinname="Color">
    </LINK>
    <LINK srcnodeid="485" srcpinname="Width" dstnodeid="181" dstpinname="Width">
@@ -517,9 +505,9 @@
    </PIN>
    </NODE>
    <NODE id="495" nodename="IOBox (Enumerations)" componentmode="InABox" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="11385" top="5985" width="0" height="0">
+   <BOUNDS type="Node" left="11385" top="5865" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="11385" top="5985" width="1050" height="240">
+   <BOUNDS type="Box" left="11385" top="5865" width="1050" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="DownOnly">
    </PIN>
@@ -673,7 +661,7 @@
    </BOUNDS>
    <BOUNDS height="3420" left="660" top="2895" type="Box" width="3675">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A texture is created from the incoming video.&cr;&lf;&cr;&lf;This subpatch generates points for a line (or several lines) to be drawn in every frame. Colors and widths of these lines depend on the pixels of the texture. &cr;&lf;&cr;&lf;Number of lines drawn per frame and number of points per line are controlled via Mouse and Keyboard.&cr;&lf;&cr;&lf;Several lines (with individual colors) can be drawn per frame using the lines &apos;Bin Size&apos; which allows &quot;sublines&quot; to be defined that can have their own colors.  |">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A texture is created from the incoming video.&cr;&lf;&cr;&lf;This subpatch generates points for a line (or several lines) to be drawn in every frame. Colors and widths of these lines depend on the pixels of the texture. &cr;&lf;&cr;&lf;Number of lines drawn per frame and number of points per line are controlled via Mouse and Keyboard.&cr;&lf;&cr;&lf;Several lines (with individual colors) can be drawn per frame using the line&apos;s &apos;Bin Size&apos; which allows &quot;sublines&quot; to be defined that can have their own colors.  |">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -842,4 +830,106 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="546">
+   <BOUNDS type="Node" left="12645" top="1005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Original Width" visible="1">
+   </PIN>
+   <PIN pinname="Original Height" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="547" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="12660" top="645" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12660" top="645" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="pic.png">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="image.jpg">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="|All Pictures (*.bmp, *.dds, *.hdr, *.jpg, *.png, *.tif, *.tga)||*.bmp;*.dds;*.hdr;*.jpg;*.png;*.tif;*.tga||Bitmap (*.bmp)||*.bmp||HDR (*.hdr)||*.hdr||DDS (*.dds)||*.dds||JPG (*.jpg)||*.jpg||PNG (*.png)||*.png||TIFF (*.tif)||*.tif||Targa (*.tga)||*.tga|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="547" srcpinname="Output String" dstnodeid="546" dstpinname="Filename">
+   </LINK>
+   <LINK srcnodeid="546" srcpinname="Texture Out" dstnodeid="8" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="549">
+   <BOUNDS type="Node" left="12570" top="1695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" slicecount="1" values="FitWidth">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="546" srcpinname="Original Width" dstnodeid="549" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="546" srcpinname="Original Height" dstnodeid="549" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="549" srcpinname="Transform Out" dstnodeid="8" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="550" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="13290" top="1335" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13290" top="1335" width="405" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="550" srcpinname="Y Output Value" dstnodeid="549" dstpinname="Uniform Scale">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="551">
+   <BOUNDS type="Node" left="14820" top="5010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="EX9 Out" dstnodeid="551" dstpinname="Source">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="552" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="14775" top="5355" width="240" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14775" top="5355" width="240" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="^">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="553" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="14775" top="5595" width="240" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14775" top="5595" width="1350" height="960">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|Take a texture from here if you are missing a webcam.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Texture Out" dstnodeid="485" dstpinname="Texture">
+   </LINK>
    </PATCH>
