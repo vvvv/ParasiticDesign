@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\CameraRotation.v4p" systemname="CameraRotation">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_4_01 Noisy Landscapes\CameraRotation.v4p" systemname="CameraRotation">
    <BOUNDS height="11055" left="840" top="3885" type="Window" width="14850">
    </BOUNDS>
    <NODE componentmode="Hidden" id="16" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS height="750" left="13335" top="465" type="Box" width="1095">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt;&lt; initial value of -PI/3|">
+   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|&lt; initial value of -PI/3|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -381,7 +381,7 @@
    </BOUNDS>
    <BOUNDS height="8160" left="585" top="450" type="Box" width="3960">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|When the right mousebutton is pressed, a mouse position is saved in S+H (Animation).&cr;&lf;&cr;&lf;An offset between last saved mouse position and a current position is calculated.&cr;&lf;&cr;&lf;When the right mousebutton goes up, current rotation value is saved. It will be used when the mouse will be right-dragged again to change the rotation.&cr;&lf;&cr;&lf;Clamping the XY values to the defined range of view rotations.&cr;&lf;&cr;&lf;When the right mousebutton is pressed a Switch (Value Input) passes the XY values through, otherwise it outputs only the last XY values (vie FrameDelay). And the same FrameDelay is used to set up initial rotation of -PI/3.&cr;&lf;&cr;&lf;The view has to rotate smoothly toward the new rotation (which depends on mouse position), slowing down in the end. &cr;&lf;Here is how it&apos;s realized:&cr;&lf;&cr;&lf;Switch (Value) from the step 5 always outputs the &quot;target&quot; rotation value.&cr;&lf;&cr;&lf;From this target value a value from the last frame is subtructed resulting in a &quot;distance&quot; (how much the view has to be rotated to reach the target value).&cr;&lf;&cr;&lf;This distance is scaled down by 1/4 (Multiply (Value) with 0.25) and added to the position from the last frame. Resulting in a step toward the target.&cr;&lf;&cr;&lf;Inverted X value of the rotation is used to rotate the view on Z axis in 3d space and the Y value is used for the X axis. &cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|When the right mousebutton is pressed, the mouse position is saved in S+H (Animation).&cr;&lf;&cr;&lf;An offset between last saved mouse position and the current position is calculated.&cr;&lf;&cr;&lf;When the right mousebutton goes up, current rotation value is saved. It will be used when the mouse will be right-dragged again to change the rotation.&cr;&lf;&cr;&lf;Clamping the XY values to the defined range of view rotations.&cr;&lf;&cr;&lf;When the right mousebutton is pressed a Switch (Value Input) passes the XY values through, otherwise it returns only the last XY values (via FrameDelay). And the same FrameDelay is used to set up the initial rotation of -PI/3.&cr;&lf;&cr;&lf;The view has to rotate smoothly towards the new rotation (which depends on mouse position), slowing down in the end. &cr;&lf;Here is how it&apos;s realized:&cr;&lf;&cr;&lf;Switch (Value) from the step 5 always returns the &quot;target&quot; rotation value.&cr;&lf;&cr;&lf;From this target value a value from the last frame is subtracted resulting in a &quot;distance&quot; (how much the view has to be rotated to reach the target value).&cr;&lf;&cr;&lf;This distance is scaled down by 1/4 (Multiply (Value) with 0.25) and added to the position from the last frame. Resulting in a step towards the target.&cr;&lf;&cr;&lf;The Inverted X value of the rotation is used to rotate the view on Z axis in 3d space and the Y value is used for the X axis. &cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -626,6 +626,22 @@
    <BOUNDS height="270" left="135" top="7785" type="Node" width="315">
    </BOUNDS>
    <BOUNDS height="405" left="135" top="7785" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="96" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="6210" top="8310" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="6210" top="8310" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
