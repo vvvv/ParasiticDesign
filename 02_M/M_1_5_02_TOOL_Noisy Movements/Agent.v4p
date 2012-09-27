@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_1_5_02_TOOL_Noisy Movements\Agent.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_03\AgentLine.v4p" systemname="AgentLine">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_5_02_TOOL_Noisy Movements\Agent.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_03\AgentLine.v4p" systemname="AgentLine">
    <BOUNDS height="16470" left="0" top="1110" type="Window" width="15000">
    </BOUNDS>
    <NODE componentmode="Hidden" id="310" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
@@ -705,7 +705,7 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="6.28318530717959" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="6.28318530717959">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -733,7 +733,7 @@
    </BOUNDS>
    <BOUNDS height="7995" left="585" top="840" type="Box" width="3585">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Random start position for Agents.&cr;&lf;&cr;&lf;The output of Perlin Noise is roughly -0.35 to 0.35. MapRange (Value) is mapping this range to 0..1 which corresponds to the output of processings noise() function. &cr;&lf;&cr;&lf;Switches between noise modes.&cr;&lf;&cr;&lf;Angles in vvvv are between 0 and 1 so to comply to the Processing sample this has to be divided by 2*Pi=6.2832...&cr;&lf;&cr;&lf;Reduce the stepsize given in pixels (in Processing) to a meaningful value for vvvv.&cr;&lf;&cr;&lf;Converts from polar to cartesian coordinates.&cr;&lf;&cr;&lf;Verifying if agent is outside the image. Note the Epsilon (tolerance) pin.&cr;&lf;&cr;&lf;If an agent is outside the view a new random position is chosen and set as start- and end-coordinates for the agent (this is done with the Switches 8.1 and 8.2).&cr;&lf;&cr;&lf;When reducing the agents count the framedelayed spread will carry more agents than the current spread. Two GetSpreads (Spreads) are used here to get exactly the current amount of agents out of the spread for the Lines From and To coordinates in order not to confuse the Line with spreads of differing spreadcounts. &cr;&lf;&cr;&lf;Count pins of these GetSpreads are set to &apos;Agent Count&apos; multiplied by 3 as there are three coordinates for every agent.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Random start position for Agents.&cr;&lf;&cr;&lf;The output of Perlin Noise is roughly -0.35 to 0.35. MapRange (Value) is mapping this range to 0..1 which corresponds to the output of processings noise() function. &cr;&lf;&cr;&lf;Switches between noise modes.&cr;&lf;&cr;&lf;Angles in vvvv are between 0 and 1 so to comply to the Processing sample this has to be divided by 2PI.&cr;&lf;&cr;&lf;Reduce the stepsize given in pixels (in Processing) to a meaningful value for vvvv.&cr;&lf;&cr;&lf;Converts from polar to cartesian coordinates.&cr;&lf;&cr;&lf;Verifying if agent is outside the image. Note the Epsilon (tolerance) pin.&cr;&lf;&cr;&lf;If an agent is outside the view a new random position is chosen and set as start- and end-coordinates for the agent (this is done with the Switches 8.1 and 8.2).&cr;&lf;&cr;&lf;When reducing the agents count the framedelayed spread will carry more agents than the current spread. Two GetSpreads (Spreads) are used here to get exactly the current amount of agents out of the spread for the Lines From and To coordinates in order not to confuse the Line with spreads of differing spreadcounts. &cr;&lf;&cr;&lf;Count pins of these GetSpreads are set to &apos;Agent Count&apos; multiplied by 3 as there are three coordinates for every agent.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -759,9 +759,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="481" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="120" top="2280" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="2265" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="120" top="2280" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="2265" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -775,9 +775,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="480" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="120" top="2745" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="2730" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="120" top="2745" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="2730" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -921,9 +921,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="494" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="120" top="3570" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="3555" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="120" top="3570" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="3555" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -937,9 +937,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="495" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="120" top="4170" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="4155" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="120" top="4170" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="4155" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -953,9 +953,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="496" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="150" top="4635" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="4620" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="150" top="4635" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="4620" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -1017,9 +1017,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="500" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="5235" type="Node" width="315">
+   <BOUNDS height="270" left="120" top="5235" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="5235" type="Box" width="420">
+   <BOUNDS height="405" left="120" top="5235" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -1117,7 +1117,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="24">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -1159,7 +1159,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -1173,7 +1173,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0.7">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -1181,9 +1181,9 @@
    <LINK srcnodeid="507" srcpinname="Y Output Value" dstnodeid="423" dstpinname="Source Width">
    </LINK>
    <NODE componentmode="InABox" id="508" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8280" top="5250" type="Node" width="315">
+   <BOUNDS height="270" left="8280" top="5325" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8280" top="5250" type="Box" width="405">
+   <BOUNDS height="390" left="8280" top="5325" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
