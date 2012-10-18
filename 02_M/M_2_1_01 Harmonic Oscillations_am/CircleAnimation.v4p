@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations_am\CircleAnimation.v4p" systemname="CircleAnimation" filename="C:\Work\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations_am\CircleAnimation.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations_am\CircleAnimation.v4p" systemname="CircleAnimation" filename="C:\Work\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations_am\CircleAnimation.v4p">
    <NODE id="3" componentmode="InABox" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" height="100" left="9435" top="4350" width="100">
    </BOUNDS>
@@ -264,7 +264,7 @@
    </LINK>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="XYZ">
    </LINK>
-   <BOUNDS type="Window" left="7050" top="2160" width="18000" height="10965">
+   <BOUNDS type="Window" left="5625" top="4605" width="18000" height="10965">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="33">
    <BOUNDS type="Node" left="6315" top="5475" width="10635" height="270">
@@ -761,7 +761,7 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Color">
+   <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="53" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Resolution">
@@ -781,21 +781,15 @@
    <LINK srcnodeid="41" srcpinname="Transform Out" dstnodeid="1" dstpinname="Transform">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="62" systemname="IOBox (Color)">
-   <BOUNDS type="Node" left="13785" top="750" width="0" height="0">
+   <BOUNDS type="Node" left="7140" top="3990" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="13785" top="750" width="345" height="375">
+   <BOUNDS type="Box" left="7140" top="3990" width="345" height="285">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" values="|0.11631,0.11631,0.11631,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Color Output" dstnodeid="1" dstpinname="Color" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Color Output" dstnodeid="2" dstpinname="Color" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="62" srcpinname="Color Output" dstnodeid="13" dstpinname="Color" hiddenwhenlocked="1">
-   </LINK>
    <NODE componentmode="InABox" id="63" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6375" top="5040" type="Node" width="315">
    </BOUNDS>
@@ -851,7 +845,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -939,7 +933,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -1114,4 +1108,32 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE systemname="SetAlpha (Color)" nodename="SetAlpha (Color)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="9285" top="1695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Alpha">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="88" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="10020" top="1305" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10020" top="1305" width="420" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Alpha">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="13" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="89" srcpinname="Output" dstnodeid="2" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="62" srcpinname="Color Output" dstnodeid="1" dstpinname="Color" hiddenwhenlocked="0">
+   </LINK>
    </PATCH>
