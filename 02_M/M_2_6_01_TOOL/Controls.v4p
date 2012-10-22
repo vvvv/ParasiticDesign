@@ -1,15 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
    <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
-   <BOUNDS height="4155" left="7785" top="3465" type="Window" width="9000">
+   <BOUNDS height="4155" left="1500" top="1425" type="Window" width="11640">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|&lt;SHIFT&gt; Pressed|">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Endless">
    </PIN>
-   <BOUNDS type="Node" left="6525" top="2715" width="0" height="0">
+   <BOUNDS type="Node" left="7695" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6525" top="2715" width="450" height="240">
+   <BOUNDS type="Box" left="7695" top="2715" width="450" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -27,9 +27,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|I ON|">
    </PIN>
-   <BOUNDS type="Node" left="5025" top="2715" width="0" height="0">
+   <BOUNDS type="Node" left="4455" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="5025" top="2715" width="480" height="480">
+   <BOUNDS type="Box" left="4455" top="2715" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -89,13 +89,15 @@
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|E, I|">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|E, I, Back|">
    </PIN>
    <PIN pinname="E" visible="1">
    </PIN>
    <PIN pinname="I" visible="1">
    </PIN>
    <PIN pinname="ShiftKey" visible="1">
+   </PIN>
+   <PIN pinname="Back" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="16" systemname="IOBox (Enumerations)">
@@ -159,7 +161,7 @@
    <LINK srcnodeid="17" srcpinname="Right Button" dstnodeid="19" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="6540" top="1200" width="1200" height="270">
+   <BOUNDS type="Node" left="7710" top="1200" width="1200" height="270">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
@@ -175,9 +177,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="21" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="7695" top="720" width="0" height="0">
+   <BOUNDS type="Node" left="8865" top="720" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7695" top="720" width="600" height="240">
+   <BOUNDS type="Box" left="8865" top="720" width="600" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="Press">
    </PIN>
@@ -186,7 +188,7 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="ShiftKey" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="14">
+   <NODE systemname="Keyboard (System Window)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Window).v4p" nodename="Keyboard (System Window)" componentmode="Hidden" id="14">
    <BOUNDS type="Node" left="3885" top="390" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1">
@@ -195,5 +197,25 @@
    <LINK srcnodeid="14" srcpinname="Keyboard" dstnodeid="15" dstpinname="Keyboard">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Keyboard" dstnodeid="20" dstpinname="Keyboard">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="5310" top="2715" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5310" top="2715" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Backspace">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Back" dstnodeid="22" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

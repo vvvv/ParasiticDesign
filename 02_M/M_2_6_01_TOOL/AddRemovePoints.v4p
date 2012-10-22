@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
    <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL\AddRemovePoints.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Draw2.v4p" systemname="Draw2">
-   <BOUNDS height="11205" left="2460" top="1965" type="Window" width="18360">
+   <BOUNDS height="13140" left="1620" top="2715" type="Window" width="21375">
    </BOUNDS>
    <NODE componentmode="Hidden" id="51" nodename="AND (Boolean)" systemname="AND (Boolean)">
    <PIN pinname="Input 1" visible="1">
@@ -115,9 +115,9 @@
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Min Distance|">
    </PIN>
-   <BOUNDS height="100" left="15090" top="420" type="Node" width="100">
+   <BOUNDS height="100" left="14715" top="420" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="15090" top="420" type="Box" width="795">
+   <BOUNDS height="240" left="14715" top="420" type="Box" width="795">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="50" dstpinname="Input 2" srcnodeid="14" srcpinname="Y Output Value" hiddenwhenlocked="0">
@@ -464,8 +464,6 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="132" dstpinname="Switch" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="122" dstpinname="Remove" hiddenwhenlocked="0">
-   </LINK>
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="122" dstpinname="Insert" hiddenwhenlocked="0" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Input 2" hiddenwhenlocked="1">
@@ -770,4 +768,36 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="195">
+   <BOUNDS type="Node" left="11985" top="2160" width="675" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="195" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="195" srcpinname="Output" dstnodeid="122" dstpinname="Remove">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="196" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="13590" top="435" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13590" top="435" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Backspace" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="196" srcpinname="Y Output Value" dstnodeid="195" dstpinname="Input 2">
+   </LINK>
    </PATCH>
