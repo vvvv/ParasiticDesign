@@ -1,72 +1,20 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.2.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
-   <BOUNDS height="6000" left="13605" top="7380" type="Window" width="7110">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
+   <BOUNDS height="4155" left="7785" top="3465" type="Window" width="9000">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="4" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="1545" top="675" type="Node" width="1185">
-   </BOUNDS>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="3" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|&lt;SHIFT&gt; i e|">
-   </PIN>
-   <PIN pinname="E Output" visible="1">
-   </PIN>
-   <PIN pinname="&lt;SHIFT&gt; Output" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="2895" top="1275" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="I Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="2" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="100" left="2880" top="705" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="2" srcpinname="Keyboard Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="1" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="4155" top="1965" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="1" dstpinname="Input" srcnodeid="3" srcpinname="E Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="3300" top="1965" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Up Edge" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="0" dstpinname="Input" srcnodeid="3" srcpinname="I Output">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|&lt;SHIFT&gt; Pressed|" encoded="0">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBOX (VALUE ADVANCED)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|&lt;SHIFT&gt; Pressed|">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Endless">
    </PIN>
-   <BOUNDS type="Node" left="5415" top="4290" width="0" height="0">
+   <BOUNDS type="Node" left="6525" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="5415" top="4290" width="450" height="240">
+   <BOUNDS type="Box" left="6525" top="2715" width="450" height="240">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="&lt;SHIFT&gt; Output" dstnodeid="7" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
@@ -77,16 +25,16 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|I ON|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|I ON|">
    </PIN>
-   <BOUNDS type="Node" left="3855" top="3510" width="0" height="0">
+   <BOUNDS type="Node" left="5025" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3855" top="3510" width="480" height="480">
+   <BOUNDS type="Box" left="5025" top="2715" width="480" height="480">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Up Edge" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
@@ -97,16 +45,16 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|E On|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|E On|">
    </PIN>
-   <BOUNDS type="Node" left="3210" top="3510" width="0" height="0">
+   <BOUNDS type="Node" left="3900" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3210" top="3510" width="480" height="480">
+   <BOUNDS type="Box" left="3900" top="2715" width="480" height="480">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Up Edge" dstnodeid="9" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
@@ -117,35 +65,135 @@
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Left Button|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Left Button|">
    </PIN>
-   <BOUNDS type="Node" left="1785" top="3750" width="0" height="0">
+   <BOUNDS type="Node" left="1350" top="2715" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="1785" top="3750" width="480" height="480">
+   <BOUNDS type="Box" left="1350" top="2715" width="480" height="480">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Left Button" dstnodeid="10" dstpinname="Y Input Value">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBOX (VALUE ADVANCED)">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="XYZ">
+   </PIN>
+   <BOUNDS type="Node" left="555" top="2715" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="555" top="2715" width="525" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3885" top="1125" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|E, I|">
+   </PIN>
+   <PIN pinname="E" visible="1">
+   </PIN>
+   <PIN pinname="I" visible="1">
+   </PIN>
+   <PIN pinname="ShiftKey" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="16" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="5040" top="720" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5040" top="720" width="1005" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="DownOnly">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Output Enum" dstnodeid="15" dstpinname="Key Mode">
    </LINK>
-   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="11">
+   <LINK srcnodeid="15" srcpinname="E" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="I" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p" nodename="Mouse (System Window)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="315" top="345" width="1620" height="270">
+   </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="1545" top="2580" width="630" height="270">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="X" dstnodeid="11" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="4" srcpinname="Y" dstnodeid="11" dstpinname="Y">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="XYZ" encoded="0">
+   <PIN pinname="Left Button" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="825" top="4650" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="825" top="4650" width="795" height="240">
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Left Button" dstnodeid="10" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="11" systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden">
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <BOUNDS type="Node" left="570" top="1965" width="630" height="270">
    </BOUNDS>
    </NODE>
+   <LINK srcnodeid="17" srcpinname="Y" dstnodeid="11" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="X" dstnodeid="11" dstpinname="X">
+   </LINK>
    <LINK srcnodeid="11" srcpinname="XYZ" dstnodeid="12" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="2355" top="2715" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2355" top="2715" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Right Button|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Right Button" dstnodeid="19" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="6540" top="1200" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="ShiftKey">
+   </PIN>
+   <PIN pinname="E" visible="1">
+   </PIN>
+   <PIN pinname="I" visible="1">
+   </PIN>
+   <PIN pinname="ShiftKey" visible="1">
+   </PIN>
+   <PIN pinname="Key Mode" visible="1" slicecount="1" values="Press">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="21" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Node" left="7695" top="720" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7695" top="720" width="600" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="Press">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Output Enum" dstnodeid="20" dstpinname="Key Mode">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="ShiftKey" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="3885" top="390" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Keyboard" dstnodeid="15" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Keyboard" dstnodeid="20" dstpinname="Keyboard">
    </LINK>
    </PATCH>
