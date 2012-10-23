@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL\Draw.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\DrawLissajous.v4p" systemname="DrawLissajous">
-   <BOUNDS height="9525" left="1560" top="3885" type="Window" width="16575">
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Draw.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\DrawLissajous.v4p" systemname="DrawLissajous">
+   <BOUNDS height="9525" left="2355" top="5265" type="Window" width="16410">
    </BOUNDS>
    <NODE componentmode="InABox" id="25" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="13740" top="285" type="Node" width="100">
@@ -115,7 +115,7 @@
    <NODE componentmode="Hidden" id="120" nodename="Cross (2d)" systemname="Cross (2d)">
    <BOUNDS height="270" left="5850" top="2775" type="Node" width="870">
    </BOUNDS>
-   <PIN pinname="Include Upper" slicecount="1" values="0">
+   <PIN pinname="Include Upper" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Include Equal" slicecount="1" values="0">
    </PIN>
@@ -123,11 +123,13 @@
    </PIN>
    <PIN pinname="Y Out" visible="1">
    </PIN>
+   <PIN pinname="Include Lower" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="121" nodename="Cross (2d)" systemname="Cross (2d)">
    <BOUNDS height="270" left="6810" top="2790" type="Node" width="750">
    </BOUNDS>
-   <PIN pinname="Include Upper" slicecount="1" values="0">
+   <PIN pinname="Include Upper" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Include Equal" slicecount="1" values="0">
    </PIN>
@@ -468,8 +470,6 @@
    </LINK>
    <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Invert Hue">
    </LINK>
-   <LINK srcnodeid="133" srcpinname="Output" dstnodeid="142" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Transform Each Bin">
    </LINK>
    <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Single Input">
@@ -477,9 +477,9 @@
    <NODE componentmode="InABox" id="149" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="690" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="4320" left="660" top="690" type="Box" width="3585">
+   <BOUNDS height="5055" left="660" top="690" type="Box" width="3495">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|All possible combinations of X coordinates and Y coordinates of the points are generated separately by two Cross (2d).&cr;&lf;&cr;&lf;Starting and ending points of the lines are generated on crossed pairs of values.&cr;&lf;&cr;&lf;If the user uncheck Connect All Points then only the curve points are used.&cr;&lf;&cr;&lf;Excludes lines which have a bigger distance between points than Connection Raidus.&cr;&lf;&cr;&lf;Calculates a color for each line with respect to a distance between its points.&cr;&lf;&cr;&lf;Only those points are Select&apos;ed and used for the lines which has a smaller (than Connection Radius) distance between them.&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|All possible combinations of X coordinates and Y coordinates of the points are generated separately by two Cross (2d).&cr;&lf;&cr;&lf;Z coordinates are used for the calculation of the connection radius.&cr;&lf;&cr;&lf;Starting and ending points of the lines are generated on crossed pairs of values.&cr;&lf;&cr;&lf;If the user uncheck Connect All Points then only the curve points are used.&cr;&lf;&cr;&lf;Excludes lines which have a bigger distance between points than Connection Raidus.&cr;&lf;&cr;&lf;Calculates a color for each line with respect to a distance between its points.&cr;&lf;&cr;&lf;Only those points are Select&apos;ed and used for the lines which has a smaller (than Connection Radius) distance between them.&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -505,9 +505,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="147" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="210" top="1545" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="1530" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="210" top="1545" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="1530" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -521,9 +521,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="145" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="2790" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="2760" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="2790" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="2760" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -537,9 +537,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="144" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="3390" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="3420" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="3390" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="3420" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -581,6 +581,8 @@
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="120" dstpinname="X In" srcnodeid="37" srcpinname="X">
    </LINK>
@@ -613,7 +615,7 @@
    </BOUNDS>
    <BOUNDS height="390" left="5385" top="3495" type="Box" width="405">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -629,7 +631,7 @@
    </BOUNDS>
    <BOUNDS height="390" left="4845" top="4005" type="Box" width="405">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -645,7 +647,7 @@
    </BOUNDS>
    <BOUNDS height="390" left="7455" top="5775" type="Box" width="405">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -661,7 +663,7 @@
    </BOUNDS>
    <BOUNDS height="390" left="8535" top="5760" type="Box" width="405">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -677,7 +679,7 @@
    </BOUNDS>
    <BOUNDS height="390" left="6885" top="6735" type="Box" width="405">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -689,9 +691,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="156" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="2130" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="2145" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="2130" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="2145" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -733,5 +735,151 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="158" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="160">
+   <BOUNDS type="Node" left="8220" top="3570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Variable Names" slicecount="1" encoded="0" values="|p1, p2, maxRadius|">
+   </PIN>
+   <PIN pinname="cr" visible="1">
+   </PIN>
+   <PIN pinname="p1" visible="1">
+   </PIN>
+   <PIN pinname="p2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="maxRadius" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="161" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="8745" top="3075" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8745" top="3075" width="2325" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" values="|pow((p1+p2)/2, 2) *maxRadius|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" encoded="0" values="0+0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="161" srcpinname="Output String" dstnodeid="160" dstpinname="Term">
+   </LINK>
+   <LINK srcnodeid="133" srcpinname="Output" dstnodeid="160" dstpinname="cr">
+   </LINK>
+   <NODE componentmode="Hidden" id="162" nodename="Cross (2d)" systemname="Cross (2d)">
+   <BOUNDS height="270" left="7695" top="2790" type="Node" width="750">
+   </BOUNDS>
+   <PIN pinname="Include Upper" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Include Equal" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X Out" visible="1">
+   </PIN>
+   <PIN pinname="Y Out" visible="1">
+   </PIN>
+   <PIN pinname="X In" visible="1">
+   </PIN>
+   <PIN pinname="Y In" visible="1">
+   </PIN>
+   <PIN pinname="Include Lower" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Z" dstnodeid="162" dstpinname="X In">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Z" dstnodeid="162" dstpinname="Y In">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="X Out" dstnodeid="160" dstpinname="p1">
+   </LINK>
+   <LINK srcnodeid="162" srcpinname="Y Out" dstnodeid="160" dstpinname="p2">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Output" dstnodeid="142" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="163" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7350" top="1905" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7350" top="1905" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Include Lower">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Include Lower">
+   </LINK>
+   <LINK srcnodeid="163" srcpinname="Y Output Value" dstnodeid="162" dstpinname="Include Lower">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="164" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="8400" top="1905" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8400" top="1905" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="162" dstpinname="Include Equal">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="162" dstpinname="Include Upper">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Include Upper">
+   </LINK>
+   <LINK srcnodeid="164" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Include Upper">
+   </LINK>
+   <NODE componentmode="InABox" id="165" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="195" top="4665" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="195" top="4665" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="166" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="7770" top="3495" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="7770" top="3495" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="127" srcpinname="Y Output Value" dstnodeid="160" dstpinname="maxRadius" hiddenwhenlocked="1">
    </LINK>
    </PATCH>

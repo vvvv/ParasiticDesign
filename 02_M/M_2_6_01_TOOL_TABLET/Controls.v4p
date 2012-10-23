@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
    <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
-   <BOUNDS height="7065" left="7785" top="3465" type="Window" width="8295">
+   <BOUNDS height="7065" left="3270" top="765" type="Window" width="10560">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Show Value" slicecount="1" values="0">
@@ -165,6 +165,8 @@
    </PIN>
    <BOUNDS type="Node" left="4020" top="3255" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="8">
@@ -195,9 +197,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4020" top="5550" width="480" height="480">
    </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="41" dstpinname="Y Input Value">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\Tablet.dll" id="26" nodename="Tablet (Devices Wintab)" systemname="Tablet (Devices Wintab)">
    <BOUNDS height="270" left="585" top="1770" type="Node" width="3270">
    </BOUNDS>
@@ -206,6 +208,8 @@
    <PIN pinname="Enable" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Cursor" visible="1">
+   </PIN>
+   <PIN pinname="Buttons" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="11" dstpinname="X" srcnodeid="26" srcpinname="X">
@@ -233,9 +237,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|I ON|">
    </PIN>
-   <BOUNDS type="Node" left="6555" top="5550" width="0" height="0">
+   <BOUNDS type="Node" left="7905" top="5550" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6555" top="5550" width="480" height="480">
+   <BOUNDS type="Box" left="7905" top="5550" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -253,17 +257,17 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|E On|">
    </PIN>
-   <BOUNDS type="Node" left="5430" top="5550" width="0" height="0">
+   <BOUNDS type="Node" left="6780" top="5550" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="5430" top="5550" width="480" height="480">
+   <BOUNDS type="Box" left="6780" top="5550" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="5415" top="2265" width="1200" height="270">
+   <BOUNDS type="Node" left="6765" top="2265" width="1200" height="270">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|E, I|">
    </PIN>
@@ -275,9 +279,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="43" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="6570" top="1860" width="0" height="0">
+   <BOUNDS type="Node" left="7920" top="1860" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6570" top="1860" width="1005" height="240">
+   <BOUNDS type="Box" left="7920" top="1860" width="1005" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="DownOnly">
    </PIN>
@@ -290,14 +294,6 @@
    </LINK>
    <LINK srcnodeid="44" srcpinname="I" dstnodeid="46" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="5415" top="1530" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="42" srcpinname="Keyboard" dstnodeid="44" dstpinname="Keyboard">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="47" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" left="3795" top="1095" width="0" height="0">
    </BOUNDS>
@@ -305,7 +301,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -323,7 +319,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -333,5 +329,101 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Enable">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="4020" top="4005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="51" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="53">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2">
+   </PIN>
+   <BOUNDS type="Node" left="4605" top="3255" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="52" systemname="IOBOX (VALUE ADVANCED)">
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS type="Node" left="4785" top="2790" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4785" top="2790" width="450" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Y Output Value" dstnodeid="53" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="53" srcpinname="Output" dstnodeid="51" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="41" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Cursor" dstnodeid="53" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="6765" top="1530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="6765" top="1530">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Keyboard" dstnodeid="44" dstpinname="Keyboard">
+   </LINK>
+   <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="55">
+   <BOUNDS type="Node" left="5580" top="2400" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Buttons" dstnodeid="55" dstpinname="XYZ">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="56" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="5865" top="5550" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5865" top="5550" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Right Button|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="57">
+   <BOUNDS type="Node" left="5865" top="3060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Y" dstnodeid="57" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Z" dstnodeid="57" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
