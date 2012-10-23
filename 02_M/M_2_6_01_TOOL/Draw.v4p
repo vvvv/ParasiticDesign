@@ -115,9 +115,9 @@
    <NODE componentmode="Hidden" id="120" nodename="Cross (2d)" systemname="Cross (2d)">
    <BOUNDS height="270" left="5850" top="2775" type="Node" width="870">
    </BOUNDS>
-   <PIN pinname="Include Upper" slicecount="1" values="0">
+   <PIN pinname="Include Upper" slicecount="1" values="0" visible="1">
    </PIN>
-   <PIN pinname="Include Equal" slicecount="1" values="0">
+   <PIN pinname="Include Equal" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="X Out" visible="1">
    </PIN>
@@ -127,13 +127,15 @@
    <NODE componentmode="Hidden" id="121" nodename="Cross (2d)" systemname="Cross (2d)">
    <BOUNDS height="270" left="6810" top="2790" type="Node" width="750">
    </BOUNDS>
-   <PIN pinname="Include Upper" slicecount="1" values="0">
+   <PIN pinname="Include Upper" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Include Equal" slicecount="1" values="0">
    </PIN>
    <PIN pinname="X Out" visible="1">
    </PIN>
    <PIN pinname="Y Out" visible="1">
+   </PIN>
+   <PIN pinname="Include Lower" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="122" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
@@ -733,5 +735,53 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="158" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="159" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7350" top="1800" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7350" top="1800" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Include Lower">
+   </LINK>
+   <LINK srcnodeid="159" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Include Lower">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="160" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="7920" top="1800" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7920" top="1800" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Include Equal">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="121" dstpinname="Include Upper">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Include Equal">
+   </LINK>
+   <LINK srcnodeid="160" srcpinname="Y Output Value" dstnodeid="120" dstpinname="Include Upper">
    </LINK>
    </PATCH>
