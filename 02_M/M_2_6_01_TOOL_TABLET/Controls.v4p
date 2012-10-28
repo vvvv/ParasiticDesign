@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
-   <BOUNDS height="7065" left="3270" top="765" type="Window" width="10560">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
+   <BOUNDS height="7065" left="1080" top="900" type="Window" width="10560">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Show Value" slicecount="1" values="0">
@@ -381,7 +381,7 @@
    <LINK srcnodeid="42" srcpinname="Keyboard" dstnodeid="44" dstpinname="Keyboard">
    </LINK>
    <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="55">
-   <BOUNDS type="Node" left="5580" top="2400" width="100" height="100">
+   <BOUNDS type="Node" left="5595" top="3225" width="720" height="270">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -411,7 +411,7 @@
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="57">
-   <BOUNDS type="Node" left="5865" top="3060" width="100" height="100">
+   <BOUNDS type="Node" left="5910" top="3885" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -424,6 +424,30 @@
    </LINK>
    <LINK srcnodeid="55" srcpinname="Z" dstnodeid="57" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="57" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="59">
+   <BOUNDS type="Node" left="5865" top="4815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="5865" top="4440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="59" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Output" dstnodeid="59" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
