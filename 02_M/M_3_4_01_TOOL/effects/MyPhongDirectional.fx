@@ -80,10 +80,10 @@ float4 PS(vs2ps In): COLOR
 
     float4 col = In.Color;
 
-    col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);
+	col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);
+		
     col.a *= Alpha;
     
-
     return mul(col, tColor);
 }
 
