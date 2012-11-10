@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\MultipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
-   <BOUNDS height="14025" left="1965" top="2670" type="Window" width="18270">
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\MultipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
+   <BOUNDS height="14025" left="1665" top="930" type="Window" width="18270">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="" id="73" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <PIN pinname="Layer" visible="1">
@@ -421,7 +421,7 @@
    <LINK dstnodeid="121" dstpinname="Input 1" hiddenwhenlocked="0" srcnodeid="125" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" filename="Forms.v4p" id="128" nodename="Forms.v4p" systemname="Forms" debug="0">
-   <BOUNDS height="14370" left="6870" top="2835" type="Window" width="20535">
+   <BOUNDS height="12540" left="4755" top="2475" type="Window" width="20790">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -753,7 +753,7 @@
    </BOUNDS>
    <BOUNDS height="9930" left="795" top="285" type="Box" width="4515">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A plain grid mesh is created as a base mesh. Its vertices will be displaced according to different equations resulting in different 3D forms.&cr;&lf;&cr;&lf;U and V coordinates sitting on a surface of the mesh are mapped to different ranges according to pressed keys.&cr;&lf;&cr;&lf;This subpatch contains spreads equations for different 3D forms. One spread for calculating X positions one for Y and one for Z.&cr;&lf;&cr;&lf;Equations are evaluated here for every vertex.&cr;&lf;&cr;&lf;In order to be able to distort the mesh (i.e. explode it into separate triangles) every vertex should be duplicated so many times as it appears in a spread of indices. Please note BinSize pin set to 3, there are XYZ values for each vertex.&cr;&lf;&cr;&lf;For example a simple quad contains 4 vertices, and 2 triangles are built on top of these vertices, so two of the vertices will be apearing twice (they are shared between two &cr;&lf;triangles). These shared vertices should be duplicated in order to be able to draw triangles separately (eventually with a gap between them).&cr;&lf;&cr;&lf;Some random value from MeshDistortion subpatch are added to the vertices of each triangle, so that the triangles will be displaced from their original positions. FaceCount subpatch calculates how many triangles there are in a mesh.&cr;&lf;&cr;&lf;The whole mesh can be transformed (translated, scaled or rotated), so this transformation is applied to every vertex.&cr;&lf;&cr;&lf;In order to avoid interpolation between the colors, a Resample (Color) is used with a mode pin set to Point.&cr;&lf;&cr;&lf;A Vertex Buffer is constructed from all the vertices and then a mesh is created. Vertices for this mesh are duplicated (see step 5), so the indices are just spread of integers from 0 to the number of indices of the original mesh.&cr;&lf;&cr;&lf;Normals are created for the whole mesh.&cr;&lf;&cr;&lf;These are just a values used for the equations of different 3D forms. They depend on what from is chosen.&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A plain grid mesh is created as a base mesh. Its vertices will be displaced according to different equations resulting in different 3D forms.&cr;&lf;&cr;&lf;U and V coordinates sitting on the surface of the mesh are mapped to different ranges according to pressed keys.&cr;&lf;&cr;&lf;This subpatch contains spreads of equations for different 3D forms. One spread for calculating X positions one for Y and one for Z.&cr;&lf;&cr;&lf;Equations are evaluated here for every vertex.&cr;&lf;&cr;&lf;In order to be able to distort the mesh (i.e. explode it into separate triangles) every vertex is duplicated so many times as it appears in the spread of indices. Please note BinSize pin set to 3, there are XYZ values for each vertex.&cr;&lf;&cr;&lf;For example a simple quad contains 4 vertices, and 2 triangles are built on top of these vertices, so two of the vertices will be apearing twice (they are shared between two &cr;&lf;triangles). These shared vertices are duplicated in order to be able to draw triangles separately (eventually with a gap between them).&cr;&lf;&cr;&lf;Some random values from the MeshDistortion subpatch are added to the vertices of each triangle, so that the triangles are displaced from their original positions. The FaceCount subpatch calculates how many triangles there are in a mesh.&cr;&lf;&cr;&lf;The whole mesh can be transformed (translated, scaled or rotated), so this transformation is applied to every vertex.&cr;&lf;&cr;&lf;In order to avoid interpolation between the colors, a Resample (Color) is used with a mode pin set to Point.&cr;&lf;&cr;&lf;A VertexBuffer is constructed from all the vertices and then a mesh is created. Vertices for this mesh are duplicated (see step 5), so the indices are just a spread of integers from 0 to the number of indices of the original mesh.&cr;&lf;&cr;&lf;Normals are created for the whole mesh.&cr;&lf;&cr;&lf;These are just a values used for the equations of different 3D forms. They depend on what form is chosen.&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1209,7 +1209,7 @@
    </PIN>
    <PIN pinname="Diffuse Color" visible="1">
    </PIN>
-   <PIN pinname="Apply" slicecount="1" values="0" visible="1">
+   <PIN pinname="Apply" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="386" srcpinname="Vertex Buffer" dstnodeid="293" dstpinname="Vertex Buffer">

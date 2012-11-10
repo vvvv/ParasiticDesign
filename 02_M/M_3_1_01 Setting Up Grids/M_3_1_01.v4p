@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_1_01 Setting Up Grids\M_3_1_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01" locked="0">
+   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\02_M\M_3_1_01 Setting Up Grids\M_3_1_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01" locked="0">
    <BOUNDS height="10320" left="6165" top="1365" type="Window" width="12210">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -332,18 +332,6 @@
    </NODE>
    <LINK dstnodeid="120" dstpinname="Spread Count" srcnodeid="117" srcpinname="Y Output Value" linkstyle="PolyLine">
    </LINK>
-   <NODE componentmode="InABox" id="116" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9900" top="1470" type="Node" width="3540">
-   </BOUNDS>
-   <BOUNDS height="780" left="9900" top="1470" type="Box" width="1485">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" encoded="0" values="|Offsets to the 20X20 positions in the main grid. &gt;&gt;|">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="115" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)" hiddenwhenlocked="0">
    <BOUNDS height="100" left="9165" top="2385" type="Node" width="100">
    </BOUNDS>
@@ -593,7 +581,7 @@
    </BOUNDS>
    <BOUNDS height="6780" left="600" top="1635" type="Box" width="3675">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|4 corner points for a single quad are created.&cr;&lf;&cr;&lf;Then 16 positions (4x4) are defined. &cr;&lf;&cr;&lf;Every position is copied 4 times, because there will be a quad built on 4 points at every position.&cr;&lf;&cr;&lf;Add (Value) offsets 4 points of the quad into each of these 16 positions. Result is 16x4 points forming a plain grid.&cr;&lf;&cr;&lf;A Vertex Buffer is created from these points.&cr;&lf;&cr;&lf;Meshes are built from triangles, indices define which vertices from Vertex Buffer are used to construct each triangle.&cr;&lf;&cr;&lf;To create the indices a simple spread of integers (0..15) is created first of all. Each of them is multiplied by 4 (there are four vertices in every quad). Quads are built from 2 triangles so every integer is copied 6 time. &cr;&lf;&cr;&lf;These integers can be seen as offsets for the &quot;base&quot; indices which are forming two triangles of a single quad. Adding these offsets to the &quot;base&quot; indices results in a spread of indices for the whole mesh.&cr;&lf;&cr;&lf;A transformation for the Renderer&apos;s view is prepared.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|4 corner points for a single quad are created.&cr;&lf;&cr;&lf;Then 16 positions (4x4) are defined. &cr;&lf;&cr;&lf;Every position is copied 4 times, because there will be a quad built on 4 points at every position.&cr;&lf;&cr;&lf;+ (Value) offsets the 4 points of the quad into each of these 16 positions. Result is 16x4 points forming a plain grid.&cr;&lf;&cr;&lf;A Vertex Buffer is created from these points.&cr;&lf;&cr;&lf;Meshes are built from triangles, indices define which vertices from the VertexBuffer are used to construct each triangle.&cr;&lf;&cr;&lf;To create the indices a simple spread of integers (0..15) is created first of all. Each of them is multiplied by 4 (there are four vertices in every quad). Quads are built from 2 triangles so every integer is copied 6 time. &cr;&lf;&cr;&lf;These integers can be seen as offsets for the &quot;base&quot; indices which are forming two triangles of a single quad. Adding these offsets to the &quot;base&quot; indices results in a spread of indices for the whole mesh.&cr;&lf;&cr;&lf;A transformation for the Renderer&apos;s view is prepared.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
