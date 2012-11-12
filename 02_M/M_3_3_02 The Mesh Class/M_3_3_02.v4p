@@ -432,14 +432,6 @@
    <BOUNDS type="Box" height="240" left="9540" top="2430" width="645">
    </BOUNDS>
    </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="330" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="11010" top="2025" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="11010" top="2025" width="1590" height="240">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="shell">
-   </PIN>
-   </NODE>
    <NODE systemname="MyPhongDirectional (EX9.Effect)" filename="..\M_3_4_01_TOOL\effects\MyPhongDirectional.fx" nodename="MyPhongDirectional (EX9.Effect)" componentmode="Hidden" id="335">
    <BOUNDS type="Node" left="6525" top="4470" width="100" height="100">
    </BOUNDS>
@@ -483,9 +475,9 @@
    </PIN>
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
-   <BOUNDS height="270" left="10935" top="1755" type="Node" width="1185">
+   <BOUNDS height="270" left="10935" top="2145" type="Node" width="1185">
    </BOUNDS>
-   <BOUNDS height="240" left="10935" top="1755" type="Box" width="510">
+   <BOUNDS height="240" left="10935" top="2145" type="Box" width="510">
    </BOUNDS>
    </NODE>
    <NODE componentmode="InABox" id="342" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -564,8 +556,6 @@
    </LINK>
    <LINK srcnodeid="231" srcpinname="Y Output Value" dstnodeid="304" dstpinname="V Max">
    </LINK>
-   <LINK srcnodeid="330" srcpinname="Output Enum" dstnodeid="304" dstpinname="Form">
-   </LINK>
    <LINK srcnodeid="304" srcpinname="Mesh" dstnodeid="335" dstpinname="Mesh">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="346" systemname="IOBox (Value Advanced)">
@@ -575,7 +565,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -601,7 +591,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="8">
    </PIN>
-   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
@@ -619,5 +609,21 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="353" srcpinname="Color Output" dstnodeid="335" dstpinname="Diffuse Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="354" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="10980" top="2430" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10980" top="2430" width="450" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="17">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="354" srcpinname="Y Output Value" dstnodeid="304" dstpinname="FormID">
    </LINK>
    </PATCH>
