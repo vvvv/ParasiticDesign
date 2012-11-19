@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_4_03_TOOL\MultipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
-   <BOUNDS height="14085" left="6720" top="840" type="Window" width="17775">
+   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_3_3_02 The Mesh Class\MultipleMesh.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_3_01 The Mesh Class\Draw.v4p" systemname="Draw">
+   <BOUNDS height="14025" left="1965" top="2670" type="Window" width="18270">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="" id="73" nodename="Grid (EX9.Geometry)" systemname="Grid (EX9.Geometry)">
    <PIN pinname="Layer" visible="1">
@@ -751,7 +751,7 @@
    </BOUNDS>
    <BOUNDS height="10545" left="795" top="285" type="Box" width="4515">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A plain grid mesh is created as a base mesh. Its vertices will be displaced according to different equations resulting in different 3D forms.&cr;&lf;&cr;&lf;MultipleMesh can be spreaded in order to generate several meshes at once. That&apos;s why U and V ranges should be duplicated, so that every UV-position on every surface will get its rangle.&cr;&lf;&cr;&lf;Positions are mapped to their ranges.&cr;&lf;&cr;&lf;This subpatch contains spreads of equations for different 3D forms. One spread for calculating X positions one for Y and one for Z.&cr;&lf;&cr;&lf;Equations are evaluated here for every vertex.&cr;&lf;&cr;&lf;In order to be able to distort the mesh (i.e. explode it into separate triangles) every vertex is duplicated so many times as it appears in the spread of indices. Please note BinSize pin set to 3, there are XYZ values for each vertex.&cr;&lf;&cr;&lf;For example a simple quad contains 4 vertices, and 2 triangles are built on top of these vertices, so two of the vertices will be apearing twice (they are shared between two &cr;&lf;triangles). These shared vertices are duplicated in order to be able to draw triangles separately (eventually with a gap between them).&cr;&lf;&cr;&lf;Some random values from the MeshDistortion subpatch are added to the vertices of each triangle, so that the triangles are displaced from their original positions. The FaceCount subpatch calculates how many triangles there are in a mesh.&cr;&lf;&cr;&lf;The whole mesh can be transformed (translated, scaled or rotated), so this transformation is applied to every vertex.&cr;&lf;&cr;&lf;In order to avoid interpolation between the colors, a Resample (Color) is used with a mode pin set to Point.&cr;&lf;&cr;&lf;A VertexBuffer is constructed from all the vertices and then a mesh is created. Vertices for this mesh are duplicated (see step 5), so the indices are just a spread of integers from 0 to the number of indices of the original mesh.&cr;&lf;&cr;&lf;Normals are created for the whole mesh.&cr;&lf;&cr;&lf;These are just a values used for the equations of different 3D forms. They depend on what form is chosen.&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|A plain grid mesh is created as a base mesh. Its vertices will be displaced according to different equations resulting in different 3D forms.&cr;&lf;&cr;&lf;MultipleMesh can be spreaded in order to generate several meshes at once. That&apos;s why U and V ranges are duplicated, so that every UV-position on every surface gets its range.&cr;&lf;&cr;&lf;Positions are mapped to their ranges.&cr;&lf;&cr;&lf;This subpatch contains spreads of equations for different 3D forms. One spread for calculating X positions one for Y and one for Z.&cr;&lf;&cr;&lf;Equations are evaluated here for every vertex.&cr;&lf;&cr;&lf;In order to be able to distort the mesh (i.e. explode it into separate triangles) every vertex is duplicated so many times as it appears in the spread of indices. Please note BinSize pin set to 3, there are XYZ values for each vertex.&cr;&lf;&cr;&lf;For example a simple quad contains 4 vertices, and 2 triangles are built on top of these vertices, so two of the vertices will be apearing twice (they are shared between two &cr;&lf;triangles). These shared vertices are duplicated in order to be able to draw triangles separately (eventually with a gap between them).&cr;&lf;&cr;&lf;Some random values from the MeshDistortion subpatch are added to the vertices of each triangle, so that the triangles are displaced from their original positions. The FaceCount subpatch calculates how many triangles there are in a mesh.&cr;&lf;&cr;&lf;The whole mesh can be transformed (translated, scaled or rotated), so this transformation is applied to every vertex.&cr;&lf;&cr;&lf;In order to avoid interpolation between the colors, a Resample (Color) is used with its mode pin set to Point.&cr;&lf;&cr;&lf;A VertexBuffer is constructed from all the vertices and then a mesh is created. Vertices for this mesh are duplicated (see step 5), so the indices are just a spread of integers from 0 to the number of indices of the original mesh.&cr;&lf;&cr;&lf;Normals are created for the whole mesh.&cr;&lf;&cr;&lf;These are just a values used for the equations of different 3D forms. They depend on what form is chosen.&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -855,9 +855,9 @@
    <LINK srcnodeid="217" srcpinname="Output" dstnodeid="226" dstpinname="Input 1">
    </LINK>
    <NODE componentmode="InABox" id="327" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="2145" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="1950" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="2145" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="1950" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -871,9 +871,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="328" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="2595" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="2400" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="2595" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="2400" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -903,9 +903,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="330" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="3405" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="3210" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="3405" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="3210" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -935,9 +935,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="332" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="3825" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="3630" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="3825" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="3630" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -989,9 +989,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="343" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="6390" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="6195" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="6390" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="6195" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
@@ -1039,9 +1039,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="351" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="7440" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="7245" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="7440" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="7245" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="8.">
    </PIN>
@@ -1075,9 +1075,9 @@
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="358" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="8070" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="7875" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="8070" type="Box" width="405">
+   <BOUNDS height="390" left="195" top="7875" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="9.">
    </PIN>
@@ -1107,9 +1107,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="360" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="8670" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="8475" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="8670" type="Box" width="585">
+   <BOUNDS height="390" left="195" top="8475" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="10.">
    </PIN>
@@ -1187,9 +1187,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="388" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="9705" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="9510" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="9705" type="Box" width="585">
+   <BOUNDS height="390" left="195" top="9510" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="11.">
    </PIN>
@@ -1363,9 +1363,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="404" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="10170" type="Node" width="315">
+   <BOUNDS height="270" left="195" top="9975" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="195" top="10170" type="Box" width="585">
+   <BOUNDS height="390" left="195" top="9975" type="Box" width="585">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="12.">
    </PIN>
