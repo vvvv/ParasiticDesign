@@ -1,1 +1,1 @@
-This is [vvvvs](http://vvvv.org) public source code. Please check the [vvvv sdk](http://vvvv.org/documentation/vvvv-sdk) page for instructions on how to missuse it.
+for more info and download, see: http://vvvv.org/contribution/parasitic-design-a-vvvv-beginners-cookbook
