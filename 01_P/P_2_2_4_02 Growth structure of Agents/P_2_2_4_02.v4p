@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\P_2_2_4_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\P_2_2_4_02_2.v4p" systemname="P_2_2_4_02_2">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\P_2_2_4_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\P_2_2_4_02_2.v4p" systemname="P_2_2_4_02_2">
    <BOUNDS height="5340" left="840" top="810" type="Window" width="13890">
    </BOUNDS>
    <NODE componentmode="InABox" id="55" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -269,9 +269,9 @@
    <LINK dstnodeid="217" dstpinname="Initial Radii" srcnodeid="230" srcpinname="Radii">
    </LINK>
    <NODE componentmode="Hidden" filename="QueueCircles.v4p" hiddenwhenlocked="0" id="223" managers="" nodename="QueueCircles.v4p" systemname="QueueCircles">
-   <PIN pinname="Position" pintype="Input" visible="1">
+   <PIN pinname="Position" pintype="Input" visible="1" slicecount="2" values="0.988299422781241,-0.0294116945787488">
    </PIN>
-   <PIN pinname="Radius" pintype="Input" visible="1">
+   <PIN pinname="Radius" pintype="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Reset" pintype="Input" visible="1">
    </PIN>
@@ -324,44 +324,6 @@
    </LINK>
    <LINK dstnodeid="217" dstpinname="Radii" srcnodeid="223" srcpinname="Radii">
    </LINK>
-   <NODE componentmode="Hidden" filename="PlaceCircle.v4p" id="212" nodename="PlaceCircle.v4p" systemname="PlaceCircle">
-   <BOUNDS height="270" left="9825" top="1875" type="Node" width="1755">
-   </BOUNDS>
-   <BOUNDS height="3600" left="9825" top="1875" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="8700" left="-180" top="4980" type="Window" width="14955">
-   </BOUNDS>
-   <PIN pinname="New Position" visible="1">
-   </PIN>
-   <PIN pinname="New Radius" visible="1">
-   </PIN>
-   <PIN pinname="Radii" visible="1">
-   </PIN>
-   <PIN pinname="Positions" visible="1">
-   </PIN>
-   <PIN pinname="Radius" visible="1">
-   </PIN>
-   <PIN pinname="Modified Position" visible="1">
-   </PIN>
-   <PIN pinname="Position" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="223" dstpinname="Radius" srcnodeid="212" srcpinname="Radius">
-   </LINK>
-   <LINK dstnodeid="223" dstpinname="Position" srcnodeid="212" srcpinname="Position">
-   </LINK>
-   <LINK dstnodeid="212" dstpinname="Radii" linkstyle="Bezier" srcnodeid="223" srcpinname="Radii">
-   <LINKPOINT x="12330" y="3570">
-   </LINKPOINT>
-   <LINKPOINT x="12600" y="1050">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="212" dstpinname="Positions" linkstyle="Bezier" srcnodeid="223" srcpinname="Positions">
-   <LINKPOINT x="8805" y="3585">
-   </LINKPOINT>
-   <LINKPOINT x="8850" y="1125">
-   </LINKPOINT>
-   </LINK>
    <NODE componentmode="Hidden" filename="CreateCircle.v4p" id="211" nodename="CreateCircle.v4p" systemname="CreateCircle">
    <BOUNDS height="100" left="9015" top="585" type="Node" width="100">
    </BOUNDS>
@@ -380,8 +342,48 @@
    </LINK>
    <LINK dstnodeid="230" dstpinname="Position" srcnodeid="211" srcpinname="Position">
    </LINK>
-   <LINK dstnodeid="212" dstpinname="New Position" srcnodeid="211" srcpinname="Position">
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE id="212" componentmode="Hidden" filename="PlaceCircle.v4p" nodename="PlaceCircle.v4p" systemname="PlaceCircle">
+   <BOUNDS type="Node" height="270" left="9825" top="1875" width="1755">
+   </BOUNDS>
+   <BOUNDS type="Box" height="3600" left="9825" top="1875" width="4800">
+   </BOUNDS>
+   <BOUNDS type="Window" height="8700" left="-180" top="4980" width="14955">
+   </BOUNDS>
+   <PIN pinname="New Position" visible="1">
+   </PIN>
+   <PIN pinname="New Radius" visible="1">
+   </PIN>
+   <PIN pinname="Radii" visible="1">
+   </PIN>
+   <PIN pinname="Positions" visible="1">
+   </PIN>
+   <PIN pinname="Radius" visible="1">
+   </PIN>
+   <PIN pinname="Modified Position" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="211" srcpinname="Radius" dstnodeid="212" dstpinname="New Radius">
    </LINK>
-   <LINK dstnodeid="212" dstpinname="New Radius" srcnodeid="211" srcpinname="Radius">
+   <LINK srcnodeid="211" srcpinname="Position" dstnodeid="212" dstpinname="New Position">
+   </LINK>
+   <LINK srcnodeid="223" srcpinname="Positions" dstnodeid="212" dstpinname="Positions" linkstyle="Bezier">
+   <LINKPOINT x="8805" y="3585">
+   </LINKPOINT>
+   <LINKPOINT x="8850" y="1125">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="223" srcpinname="Radii" dstnodeid="212" dstpinname="Radii" linkstyle="Bezier">
+   <LINKPOINT x="12330" y="3570">
+   </LINKPOINT>
+   <LINKPOINT x="12600" y="1050">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Position" dstnodeid="223" dstpinname="Position">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Radius" dstnodeid="223" dstpinname="Radius">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" systemname="P_2_1_3_05">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" systemname="P_2_1_3_05">
    <BOUNDS height="12000" left="660" top="1905" type="Window" width="11760">
    </BOUNDS>
    <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -366,18 +366,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="123" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="7920" top="3885" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.209225700164745">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="-0.369458128078818">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="113" dstpinname="Input" srcnodeid="123" srcpinname="XY">
-   </LINK>
    <NODE componentmode="Hidden" filename="DrawModule.v4p" id="93" nodename="DrawModule.v4p" systemname="DrawModule">
    <BOUNDS height="270" left="4290" top="9750" type="Node" width="3675">
    </BOUNDS>
@@ -438,22 +426,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="105" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="7755" top="2640" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="104" dstpinname="Input" linkstyle="PolyLine" srcnodeid="105" srcpinname="Left Button">
-   </LINK>
-   <LINK dstnodeid="123" dstpinname="X" srcnodeid="105" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="123" dstpinname="Y" srcnodeid="105" srcpinname="Y">
-   </LINK>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="108" dstpinname="Width">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="126" systemname="IOBox (Value Advanced)">
@@ -470,4 +442,22 @@
    </NODE>
    <LINK srcnodeid="126" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Source Maximum">
    </LINK>
+   <NODE componentmode="Hidden" id="105" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="7755" top="2640" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="104" dstpinname="Input" linkstyle="PolyLine" srcnodeid="105" srcpinname="Left Button">
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="PositionXY" dstnodeid="113" dstpinname="Input">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

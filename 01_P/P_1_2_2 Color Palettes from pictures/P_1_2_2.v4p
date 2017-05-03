@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\P_1_2_2.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_1_2_2 Color Palettes from pictures\P_1_2_2.v4p">
    <BOUNDS height="8310" left="1995" top="3120" type="Window" width="14670">
    </BOUNDS>
    <NODE componentmode="InAWindow" id="6" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Backbuffer Height" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="4">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="View" slicecount="1" visible="1" values="||">
    </PIN>
@@ -183,17 +183,17 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="PictureSwitcher.v4p" id="64" nodename="PictureSwitcher.v4p" systemname="PictureSwitcher">
-   <BOUNDS height="270" left="10455" top="4590" type="Node" width="1395">
+   <BOUNDS height="270" left="10650" top="4605" type="Node" width="1395">
    </BOUNDS>
    <BOUNDS height="4785" left="14745" top="3225" type="Window" width="7380">
    </BOUNDS>
    <PIN pinname="Pictures" visible="1">
    </PIN>
-   <BOUNDS left="10455" top="4590" type="Box">
+   <BOUNDS left="10650" top="4605" type="Box">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="48" dstpinname="Spread Count" linkstyle="PolyLine" srcnodeid="63" srcpinname="Output">
@@ -223,7 +223,7 @@
    </PIN>
    <BOUNDS left="10455" top="5775" type="Box">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="71" dstpinname="ColorIn" srcnodeid="49" srcpinname="Color">
@@ -231,9 +231,9 @@
    <LINK dstnodeid="5" dstpinname="Color" srcnodeid="71" srcpinname="ColorOut">
    </LINK>
    <NODE componentmode="InABox" id="80" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="10905" top="1890" type="Node" width="100">
+   <BOUNDS height="100" left="11055" top="1755" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="10905" top="1890" type="Box" width="345">
+   <BOUNDS height="240" left="11055" top="1755" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="100">
    </PIN>
@@ -243,9 +243,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="81" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="10380" top="1890" type="Node" width="100">
+   <BOUNDS height="100" left="10530" top="1755" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="10380" top="1890" type="Box" width="345">
+   <BOUNDS height="240" left="10530" top="1755" type="Box" width="345">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -282,16 +282,6 @@
    </NODE>
    <LINK dstnodeid="48" dstpinname="Width" srcnodeid="84" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="87" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="7725" top="1980" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.976516634050881">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="-0.976516634050881">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="88" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="9225" top="5190" type="Node" width="100">
    </BOUNDS>
@@ -323,7 +313,7 @@
    </BOUNDS>
    <BOUNDS height="4305" left="750" top="2895" type="Box" width="4380">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The GridSetup subpatch is used as in the previous patch.&cr;&lf;&cr;&lf;The resolution of the color-grid is specified by the mouse position and constrained from 1 to 100.&cr;&lf;&cr;&lf;The PictureSwitcher subpatch switches between different textures depending on the key pressed. &cr;&lf;&cr;&lf;LinearSpread and Cross are used to set up a grid of coordinates to sample at across the texture. Texture coordinates are specified from 0/0 (topleft) to 1/1 (bottomright).&cr;&lf;&cr;&lf;The Pipet (EX9.Texture) is the key element of this patch. It returns the color of the pixel of a texture at a given texture coordinate.&cr;&lf;&cr;&lf;The ColorSorting subpatch sorts the incoming spread of colors depending on the key pressed.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The GridSetup subpatch is used as in the previous patch.&cr;&lf;&cr;&lf;The resolution of the color-grid is specified by the mouse X position and constrained from 1 to 100.&cr;&lf;&cr;&lf;The PictureSwitcher subpatch switches between different textures depending on the key pressed. &cr;&lf;&cr;&lf;LinearSpread and Cross are used to set up a grid of coordinates to sample at across the texture. Texture coordinates are specified from 0/0 (topleft) to 1/1 (bottomright).&cr;&lf;&cr;&lf;The Pipet (EX9.Texture) is the key element of this patch. It returns the color of the pixel of a texture at a given texture coordinate.&cr;&lf;&cr;&lf;The ColorSorting subpatch sorts the incoming spread of colors depending on the key pressed.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -453,9 +443,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="99" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7230" top="5175" type="Node" width="315">
+   <BOUNDS height="270" left="7230" top="5700" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="7230" top="5175" type="Box" width="405">
+   <BOUNDS height="390" left="7230" top="5700" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -469,9 +459,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="100" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9915" top="1650" type="Node" width="315">
+   <BOUNDS height="270" left="10035" top="1635" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9915" top="1650" type="Box" width="420">
+   <BOUNDS height="405" left="10035" top="1635" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -485,9 +475,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="101" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9930" top="4365" type="Node" width="315">
+   <BOUNDS height="270" left="10005" top="4545" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9930" top="4365" type="Box" width="450">
+   <BOUNDS height="405" left="10005" top="4545" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -517,9 +507,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="103" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10695" top="5145" type="Node" width="315">
+   <BOUNDS height="270" left="10695" top="5085" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="10695" top="5145" type="Box" width="450">
+   <BOUNDS height="405" left="10695" top="5085" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -533,9 +523,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="104" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9930" top="5610" type="Node" width="315">
+   <BOUNDS height="270" left="9930" top="5655" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9930" top="5610" type="Box" width="450">
+   <BOUNDS height="405" left="9930" top="5655" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
    </PIN>
@@ -553,9 +543,9 @@
    </BOUNDS>
    <BOUNDS type="Window" left="13980" top="3630" width="13515" height="7590">
    </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="105" dstpinname="XY" srcnodeid="87" srcpinname="XY">
-   </LINK>
    <LINK dstnodeid="5" dstpinname="Transform" srcnodeid="105" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="105" dstpinname="X Min" srcnodeid="89" srcpinname="Y Output Value">
@@ -566,32 +556,44 @@
    </LINK>
    <LINK dstnodeid="105" dstpinname="X Max" srcnodeid="88" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="13" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="7725" top="1155" type="Node" width="100">
+   <NODE id="13" componentmode="Hidden" nodename="Mouse (System Window)" systemname="Mouse (System Window Legacy2)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
+   <BOUNDS type="Node" height="100" left="7545" top="1155" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="7725" top="1155" type="Box" width="0">
+   <BOUNDS type="Box" height="0" left="7545" top="1155" width="0">
    </BOUNDS>
-   <BOUNDS height="0" left="11175" top="3480" type="Window" width="0">
+   <BOUNDS type="Window" height="0" left="11175" top="3480" width="0">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="63" dstpinname="Input" srcnodeid="13" srcpinname="X">
+   <LINK srcnodeid="13" srcpinname="X" dstnodeid="105" dstpinname="XY">
    </LINK>
-   <LINK dstnodeid="87" dstpinname="X" srcnodeid="13" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="87" dstpinname="Y" srcnodeid="13" srcpinname="X">
-   </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="106">
-   <BOUNDS type="Node" left="10455" top="3960" width="100" height="100">
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="107">
+   <BOUNDS type="Node" left="9105" top="1725" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="106" srcpinname="Keyboard" dstnodeid="64" dstpinname="Keyboard">
+   <LINK srcnodeid="13" srcpinname="X" dstnodeid="107" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="106" srcpinname="Keyboard" dstnodeid="71" dstpinname="Keyboard">
+   <LINK srcnodeid="107" srcpinname="X" dstnodeid="63" dstpinname="Input">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE id="106" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden">
+   <BOUNDS type="Node" left="10455" top="3960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="106" srcpinname="Device" dstnodeid="64" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Device" dstnodeid="71" dstpinname="Keyboard">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\P_2_1_1_04.v4p" systemname="P_2_1_1_04">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\P_2_1_1_04.v4p" systemname="P_2_1_1_04">
    <BOUNDS height="10515" left="1875" top="2820" type="Window" width="14055">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -458,28 +458,6 @@
    </LINK>
    <LINK srcnodeid="170" srcpinname="Color" dstnodeid="5" dstpinname="Color">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="79" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="6660" top="2760" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="220">
-   <BOUNDS type="Node" left="6720" top="4665" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="79" srcpinname="X" dstnodeid="220" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Y" dstnodeid="220" dstpinname="Y">
-   </LINK>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="221">
    <BOUNDS type="Node" left="7815" top="4665" width="100" height="100">
    </BOUNDS>
@@ -506,8 +484,6 @@
    <BOUNDS type="Box" left="6735" top="5520">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="220" srcpinname="XY" dstnodeid="219" dstpinname="XY1">
-   </LINK>
    <LINK srcnodeid="221" srcpinname="XY" dstnodeid="219" dstpinname="XY2">
    </LINK>
    <LINK srcnodeid="219" srcpinname="Angle" dstnodeid="179" dstpinname="Input 1">
@@ -524,12 +500,26 @@
    <BOUNDS type="Box" left="7830" top="5520">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="220" srcpinname="XY" dstnodeid="223" dstpinname="XY1">
-   </LINK>
    <LINK srcnodeid="221" srcpinname="XY" dstnodeid="223" dstpinname="XY2">
    </LINK>
    <LINK srcnodeid="223" srcpinname="Distance" dstnodeid="205" dstpinname="Distance to Mouse">
    </LINK>
    <LINK srcnodeid="223" srcpinname="Distance" dstnodeid="170" dstpinname="Distance to Mouse">
    </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="79" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="6555" top="2760" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="PositionXY" dstnodeid="219" dstpinname="XY1">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="PositionXY" dstnodeid="223" dstpinname="XY1">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

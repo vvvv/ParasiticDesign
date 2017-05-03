@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\PlaceCircle.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\PlaceCircle.v4p" systemname="PlaceCircle">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\PlaceCircle.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\PlaceCircle.v4p" systemname="PlaceCircle">
    <BOUNDS height="8700" left="1725" top="6810" type="Window" width="14955">
    </BOUNDS>
    <NODE componentmode="Hidden" id="14" nodename="EQ (Value)" systemname="EQ (Value)">
@@ -12,22 +12,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\..\..\..\Desktop\vvvvs\vvvv_45alpha25.2-4602\addonpack\plugins\VectorSized.dll" id="13" nodename="Select (Value Advanced)" systemname="Select (Value Vector)">
-   <BOUNDS height="100" left="6945" top="4725" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Vector Size" visible="1">
-   </PIN>
-   <PIN pinname="Select" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS left="6945" top="4725" type="Box">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="13" dstpinname="Select" srcnodeid="14" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="12" nodename="Vector2Points (2d)" systemname="Vector2Points (2d)">
    <BOUNDS height="100" left="6945" top="5790" type="Node" width="100">
    </BOUNDS>
@@ -65,15 +49,13 @@
    <NODE componentmode="Hidden" id="10" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
    <BOUNDS height="100" left="6945" top="5220" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="XY" visible="1">
+   <PIN pinname="XY" visible="1" slicecount="2" values="0.769200029745674,-0.422734464924071">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="10" dstpinname="XY" srcnodeid="13" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="12" dstpinname="X" srcnodeid="10" srcpinname="X">
    </LINK>
    <LINK dstnodeid="12" dstpinname="Y" srcnodeid="10" srcpinname="Y">
@@ -148,8 +130,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Positions">
    </PIN>
    </NODE>
-   <LINK dstnodeid="13" dstpinname="Input" srcnodeid="17" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="18" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="8385" top="1140" type="Node" width="0">
    </BOUNDS>
@@ -306,24 +286,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="28" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="7125" top="4005" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="7125" top="4005" type="Box" width="345">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="13" dstpinname="Vector Size" srcnodeid="28" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="30" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="315" top="2820" type="Node" width="315">
    </BOUNDS>
@@ -500,22 +462,6 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="7320" top="4335" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7320" top="4335" width="345" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Bin Size">
-   </LINK>
    <NODE systemname="Slope (2d)" filename="%VVVV%\lib\nodes\modules\2D\Slope (2d).v4p" nodename="Slope (2d)" componentmode="Hidden" id="42">
    <BOUNDS type="Node" left="8655" top="2400" width="100" height="100">
    </BOUNDS>
@@ -554,4 +500,32 @@
    </LINK>
    <LINK srcnodeid="43" srcpinname="Distance" dstnodeid="14" dstpinname="Input 1">
    </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="13" nodename="Select (2d)" systemname="Select (2d)">
+   <BOUNDS height="100" left="6945" top="4725" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Vector Size" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS left="6945" top="4725" type="Box">
+   </BOUNDS>
+   <PIN pinname="InputXY" visible="1">
+   </PIN>
+   <PIN pinname="OutputXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="13" dstpinname="Select" srcnodeid="14" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input" srcnodeid="17" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="13" dstpinname="InputXY">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="OutputXY" dstnodeid="10" dstpinname="XY">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

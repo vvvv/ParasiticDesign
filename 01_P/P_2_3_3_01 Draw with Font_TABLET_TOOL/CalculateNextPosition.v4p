@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" systemname="CalculateNextPosition">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\CalculateNextPosition.v4p" systemname="CalculateNextPosition">
    <BOUNDS height="14535" left="2145" top="300" type="Window" width="15360">
    </BOUNDS>
    <NODE componentmode="InABox" id="10" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -328,18 +328,6 @@
    </NODE>
    <LINK srcnodeid="211" srcpinname="Width" dstnodeid="217" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="FrameDelay (Animation)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="219">
-   <BOUNDS type="Node" left="7725" top="9975" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="2" values="169.870718753015,-26.6302492736205">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Default 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Initialize" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="113" dstpinname="Size">
    </LINK>
    <LINK srcnodeid="112" srcpinname="Output Enum" dstnodeid="211" dstpinname="Font" hiddenwhenlocked="1">
@@ -431,18 +419,12 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="3,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="237" srcpinname="Up Edge" dstnodeid="244" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="244" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="219" srcpinname="Output 1" dstnodeid="244" dstpinname="Input 1" linkstyle="Bezier">
-   <LINKPOINT x="13245" y="12485">
-   </LINKPOINT>
-   <LINKPOINT x="9360" y="10">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="224">
    <BOUNDS type="Node" left="5220" top="10995" width="100" height="100">
@@ -477,8 +459,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="240" srcpinname="Output" dstnodeid="218" dstpinname="Set">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Output" dstnodeid="219" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="244" srcpinname="Output" dstnodeid="269" dstpinname="XY1">
    </LINK>
@@ -880,4 +860,26 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="219" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="7725" top="9975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="169.870718753015,-26.6302492736205">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Default 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Initialize" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="219" srcpinname="Output 1" dstnodeid="244" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="13245" y="12485">
+   </LINKPOINT>
+   <LINKPOINT x="9360" y="10">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Output" dstnodeid="219" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

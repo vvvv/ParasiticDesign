@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
    <BOUNDS height="14835" left="225" top="570" type="Window" width="15120">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -88,7 +88,7 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="13200" top="5250" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Mode" slicecount="1" values="Unlimited">
@@ -123,7 +123,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer 2" visible="1">
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer Template Count" slicecount="1" values="2">
    </PIN>
@@ -418,18 +418,6 @@
    </LINK>
    <LINK srcnodeid="279" srcpinname="Output Enum" dstnodeid="278" dstpinname="Font">
    </LINK>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="271">
-   <BOUNDS type="Node" left="8115" top="1920" width="630" height="270">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="270">
    <BOUNDS type="Node" left="11655" top="13605" width="630" height="270">
    </BOUNDS>
@@ -601,9 +589,9 @@
    <LINK srcnodeid="329" srcpinname="Transform Out" dstnodeid="292" dstpinname="Transform In">
    </LINK>
    <NODE id="251" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS type="Node" height="270" left="9270" top="1755" width="315">
+   <BOUNDS type="Node" height="270" left="9405" top="1575" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="9270" top="1755" width="420">
+   <BOUNDS type="Box" height="405" left="9405" top="1575" width="420">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -771,7 +759,7 @@
    </PIN>
    <BOUNDS type="Node" height="270" left="11895" top="915" width="1560">
    </BOUNDS>
-   <BOUNDS type="Window" height="6510" left="6600" top="4545" width="5775">
+   <BOUNDS type="Window" height="9390" left="6600" top="4545" width="5775">
    </BOUNDS>
    <PIN pinname="UpDown" visible="1">
    </PIN>
@@ -793,32 +781,6 @@
    <LINK srcnodeid="228" srcpinname="Clear" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="350" srcpinname="Actual Backbuffer Height" dstnodeid="270" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="271" srcpinname="XY" dstnodeid="264" dstpinname="Input">
-   </LINK>
-   <NODE id="199" componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="View Projection" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <BOUNDS type="Node" height="100" left="12210" top="12090" width="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="12210" top="12090">
-   </BOUNDS>
-   <BOUNDS type="Window" left="15840" top="6300" width="11400" height="7380">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Point Size" visible="1" slicecount="3" values="0.0299999995529652,0.0299999995529652,0.0299999995529652">
-   </PIN>
-   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 3">
-   </LINK>
-   <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 2">
    </LINK>
    <NODE id="384" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS type="Node" height="270" left="7620" top="3855" width="315">
@@ -1032,8 +994,48 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE id="110" componentmode="Hidden" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS type="Node" height="270" left="8535" top="915" width="2805">
+   <NODE id="199" componentmode="Hidden" filename="..\..\..\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\DX9\Cursor (DX9).v4p" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
+   <PIN pinname="Mouse XYZ" visible="1">
+   </PIN>
+   <PIN pinname="View Projection" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="12210" top="12090" width="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12210" top="12090">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15840" top="6300" width="11400" height="7380">
+   </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Point Size" visible="1" slicecount="3" values="0.0299999995529652,0.0299999995529652,0.0299999995529652">
+   </PIN>
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Cursor Type" slicecount="1" values="Pointer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Layer" dstnodeid="203" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="405">
+   <BOUNDS type="Node" left="9885" top="1515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="405" srcpinname="X" dstnodeid="246" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="405" srcpinname="Y" dstnodeid="246" dstpinname="Y">
+   </LINK>
+   <NODE id="110" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" height="270" left="7770" top="885" width="2715">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -1043,19 +1045,19 @@
    </PIN>
    <PIN pinname="Mouse" visible="1">
    </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="110" srcpinname="Mouse" dstnodeid="199" dstpinname="Mouse" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Y" dstnodeid="271" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="X" dstnodeid="271" dstpinname="X">
-   </LINK>
    <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Y" dstnodeid="246" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="X" dstnodeid="246" dstpinname="X">
    </LINK>
    <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="242" dstpinname="Input 2" linkstyle="Bezier">
    </LINK>
+   <LINK srcnodeid="110" srcpinname="Mouse" dstnodeid="199" dstpinname="Mouse" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="PositionXY" dstnodeid="264" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="PositionXY" dstnodeid="405" dstpinname="XY">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

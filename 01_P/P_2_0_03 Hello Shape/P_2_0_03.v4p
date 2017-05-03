@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" filename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" systemname="P_2_0_03">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" filename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" systemname="P_2_0_03">
    <BOUNDS height="8970" left="1140" top="1605" type="Window" width="12915">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -119,9 +119,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="9" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="7695" top="3015" type="Node" width="100">
+   <BOUNDS height="100" left="7830" top="3015" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="7695" top="3090" type="Box" width="0">
+   <BOUNDS height="0" left="7830" top="3090" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="5955" top="6900" type="Window" width="0">
    </BOUNDS>
@@ -163,9 +163,9 @@
    <LINK dstnodeid="21" dstpinname="Resolution" srcnodeid="11" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="26" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
-   <BOUNDS height="270" left="7185" top="5235" type="Node" width="1200">
+   <BOUNDS height="270" left="7335" top="5220" type="Node" width="1200">
    </BOUNDS>
-   <BOUNDS height="0" left="7185" top="4965" type="Box" width="0">
+   <BOUNDS height="0" left="7335" top="4950" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="4260" top="11265" type="Window" width="0">
    </BOUNDS>
@@ -263,9 +263,9 @@
    <LINK dstnodeid="21" dstpinname="Inner Radius" srcnodeid="31" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="58" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="8205" top="2505" type="Node" width="100">
+   <BOUNDS height="100" left="8340" top="2505" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="8205" top="2505" type="Box" width="450">
+   <BOUNDS height="240" left="8340" top="2505" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-2">
    </PIN>
@@ -277,9 +277,9 @@
    <LINK dstnodeid="9" dstpinname="Destination Minimum" srcnodeid="58" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="59" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="8805" top="2505" type="Node" width="100">
+   <BOUNDS height="100" left="8940" top="2505" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="8805" top="2505" type="Box" width="450">
+   <BOUNDS height="240" left="8940" top="2505" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -374,10 +374,24 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="12" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="270" left="7200" top="1350" type="Node" width="3060">
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="7830" top="1770" width="100" height="100">
    </BOUNDS>
-   <BOUNDS height="0" left="7200" top="1350" type="Box" width="0">
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="81" srcpinname="X" dstnodeid="9" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Y" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="Hidden" id="12" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="7455" top="1290" type="Node" width="3060">
+   </BOUNDS>
+   <BOUNDS height="0" left="7455" top="1290" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="6270" top="6240" type="Window" width="0">
    </BOUNDS>
@@ -387,11 +401,13 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="9" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="X">
-   </LINK>
    <LINK dstnodeid="21" dstpinname="Enabled" srcnodeid="12" srcpinname="Left Button">
    </LINK>
-   <LINK dstnodeid="11" dstpinname="Input" linkstyle="PolyLine" srcnodeid="12" srcpinname="Y">
+   <LINK srcnodeid="12" srcpinname="PositionXY" dstnodeid="81" dstpinname="XY">
    </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

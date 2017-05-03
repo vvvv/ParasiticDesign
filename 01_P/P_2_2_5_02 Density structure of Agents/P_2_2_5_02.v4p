@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\P_2_2_5_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\P_2_2_5_02.v4p" systemname="P_2_2_5_02">
-   <BOUNDS height="10095" left="675" top="330" type="Window" width="14730">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\P_2_2_5_02.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\P_2_2_5_02.v4p" systemname="P_2_2_5_02">
+   <BOUNDS height="11640" left="675" top="330" type="Window" width="14730">
    </BOUNDS>
    <LINK dstnodeid="18" dstpinname="XY" srcnodeid="87" srcpinname="Position">
    </LINK>
@@ -35,6 +35,8 @@
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="2" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
    <BOUNDS height="100" left="10680" top="8880" type="Node" width="100">
@@ -54,28 +56,6 @@
    </LINK>
    <LINK dstnodeid="2" dstpinname="Aspect Height" srcnodeid="0" srcpinname="Actual Backbuffer Height">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
-   <BOUNDS height="100" left="7980" top="4980" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
-   <BOUNDS height="100" left="10575" top="4965" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Default 1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="57" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="120" top="510" type="Node" width="840">
    </BOUNDS>
@@ -141,7 +121,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS height="6000" left="14925" top="8715" type="Window" width="9000">
+   <BOUNDS height="6000" left="5100" top="3555" type="Window" width="9000">
    </BOUNDS>
    </NODE>
    <NODE componentmode="InABox" id="86" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -394,24 +374,20 @@
    </NODE>
    <LINK dstnodeid="89" dstpinname="Reset" srcnodeid="90" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
-   </LINK>
-   <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
-   </LINK>
    <NODE componentmode="Hidden" filename="PlaceCircle.v4p" id="88" nodename="PlaceCircle.v4p" systemname="PlaceCircle">
    <BOUNDS height="270" left="8985" top="3330" type="Node" width="1260">
    </BOUNDS>
    <BOUNDS height="3600" left="8985" top="3330" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="10650" left="1425" top="7125" type="Window" width="15015">
+   <BOUNDS height="10650" left="1995" top="1965" type="Window" width="15015">
    </BOUNDS>
    <PIN pinname="New Position" visible="1">
    </PIN>
-   <PIN pinname="All Positions" visible="1">
+   <PIN pinname="All Positions" visible="1" slicecount="820" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Position of closest Circle" visible="1">
    </PIN>
-   <PIN pinname="All Radii" visible="1">
+   <PIN pinname="All Radii" visible="1" slicecount="384" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Insert new Position" visible="1">
    </PIN>
@@ -422,18 +398,6 @@
    <PIN pinname="Max Radius" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier" srcnodeid="26" srcpinname="Output 1">
-   <LINKPOINT x="7470" y="6615">
-   </LINKPOINT>
-   <LINKPOINT x="7125" y="1755">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="88" dstpinname="All Radii" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1">
-   <LINKPOINT x="12245" y="6650">
-   </LINKPOINT>
-   <LINKPOINT x="12535" y="1855">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="89" dstpinname="Closest Circle Position" srcnodeid="88" srcpinname="Closest Circle Position">
    </LINK>
    <LINK dstnodeid="89" dstpinname="Radius" srcnodeid="88" srcpinname="New Radius">
@@ -609,5 +573,83 @@
    <LINK dstnodeid="87" dstpinname="Enable" hiddenwhenlocked="1" srcnodeid="173" srcpinname="f">
    </LINK>
    <LINK dstnodeid="92" dstpinname="Layer 1" srcnodeid="91" srcpinname="Layer">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="174">
+   <BOUNDS type="Node" left="10410" top="9345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="EX9 Out" dstnodeid="174" dstpinname="Source">
+   </LINK>
+   <NODE systemname="S (Node)" nodename="S (Node)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="10395" top="10110" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Send String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="174" srcpinname="Texture Out" dstnodeid="175" dstpinname="Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="176" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="11175" top="9780" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11175" top="9780" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="texture">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Output String" dstnodeid="175" dstpinname="Send String">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="27" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="10350" top="4950" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
+   </LINK>
+   <LINK dstnodeid="88" dstpinname="All Radii" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1">
+   <LINKPOINT x="12095" y="6640">
+   </LINKPOINT>
+   <LINKPOINT x="12460" y="1850">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="26" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="7980" top="4980" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
+   </LINK>
+   <LINK dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier" srcnodeid="26" srcpinname="Output 1">
+   <LINKPOINT x="7470" y="6615">
+   </LINKPOINT>
+   <LINKPOINT x="7125" y="1755">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="1" dstnodeid="126" dstpinname="Enabled" hiddenwhenlocked="1">
    </LINK>
    </PATCH>

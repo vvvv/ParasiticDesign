@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\ROI.v4p" systemname="1.v4p ////" filename="1.v4p ////">
-   <BOUNDS type="Window" left="9975" top="9705" width="9000" height="6000">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\ROI.v4p" systemname="1.v4p ////" filename="1.v4p ////">
+   <BOUNDS type="Window" left="5100" top="3555" width="9000" height="6000">
    </BOUNDS>
    <NODE componentmode="Hidden" id="12" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="100" left="3885" top="4500" type="Node" width="100">
@@ -42,16 +42,6 @@
    </NODE>
    <LINK dstnodeid="11" dstpinname="Transform In" srcnodeid="10" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="8" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="100" left="2370" top="1515" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.976878612716763">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="-0.915547024952015">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="7" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
    <BOUNDS height="100" left="4065" top="2130" type="Node" width="100">
    </BOUNDS>
@@ -60,11 +50,9 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="XYZ" srcnodeid="8" srcpinname="XYZ">
-   </LINK>
    <LINK dstnodeid="10" dstpinname="Transform In" srcnodeid="7" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="4" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="4" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="6000" top="1920" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1" slicecount="1" values="0">
@@ -134,16 +122,6 @@
    </NODE>
    <LINK srcnodeid="12" srcpinname="Layer" dstnodeid="13" dstpinname="Input Node">
    </LINK>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="1545" top="1530" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.976878612716763">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="-0.915547024952015">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="15">
    <BOUNDS type="Node" left="990" top="5055" width="100" height="100">
    </BOUNDS>
@@ -174,8 +152,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="14" srcpinname="XY" dstnodeid="17" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="15" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="18">
@@ -195,9 +171,9 @@
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="18" dstpinname="Input 2">
    </LINK>
    <NODE systemname="IOBOX (VALUE ADVANCED)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
-   <BOUNDS type="Node" left="3075" top="3990" width="100" height="100">
+   <BOUNDS type="Node" left="3060" top="4020" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3075" top="3990" width="510" height="240">
+   <BOUNDS type="Box" left="3060" top="4020" width="510" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -218,33 +194,7 @@
    </NODE>
    <LINK srcnodeid="20" srcpinname="Color Output" dstnodeid="12" dstpinname="Color">
    </LINK>
-   <NODE componentmode="Hidden" id="9" nodename="Mouse (System Global)" systemname="Mouse (System Global)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Global).v4p">
-   <BOUNDS height="270" left="1140" top="780" type="Node" width="2535">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="1140" top="780">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="8" dstpinname="X" srcnodeid="9" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Y" srcnodeid="9" srcpinname="Y">
-   </LINK>
-   <LINK dstnodeid="12" dstpinname="Enabled" srcnodeid="9" srcpinname="Left Button" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="X" dstnodeid="14" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Y" dstnodeid="14" dstpinname="Y">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Left Button" dstnodeid="17" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Left Button" dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1">
-   </LINK>
-   <NODE componentmode="Hidden" id="5" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="5" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="6015" top="1335" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -255,27 +205,65 @@
    </PIN>
    <PIN pinname="&lt;DOWN&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Up" visible="1">
    </PIN>
    <PIN pinname="Down" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="6" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <LINK srcnodeid="5" srcpinname="Up" dstnodeid="4" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Down" dstnodeid="4" dstpinname="Down">
+   </LINK>
+   <NODE componentmode="Hidden" id="9" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="1170" top="780" type="Node" width="2535">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1170" top="780">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Enabled" srcnodeid="9" srcpinname="Left Button" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Left Button" dstnodeid="17" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Left Button" dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="PositionXY" dstnodeid="17" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="4740" top="1755" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="PositionXY" dstnodeid="21" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="XYZ" dstnodeid="7" dstpinname="XYZ">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE componentmode="Hidden" id="6" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="6015" top="780" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Box" left="6015" top="780">
    </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="6" srcpinname="Keyboard" dstnodeid="5" dstpinname="Keyboard">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Up" dstnodeid="4" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Down" dstnodeid="4" dstpinname="Down">
+   <LINK srcnodeid="6" srcpinname="Device" dstnodeid="5" dstpinname="Keyboard">
    </LINK>
    </PATCH>

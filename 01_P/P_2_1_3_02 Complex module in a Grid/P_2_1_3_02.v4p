@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_3_02 Complex module in a Grid\P_2_1_3_02.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_02 Complex module in the Grid\P_2_1_3_02.v4p" locked="0" systemname="P_2_1_3_02">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_3_02 Complex module in a Grid\P_2_1_3_02.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_02 Complex module in the Grid\P_2_1_3_02.v4p" locked="0" systemname="P_2_1_3_02">
    <BOUNDS height="7830" left="885" top="945" type="Window" width="11250">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="4" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -105,7 +105,7 @@
    </BOUNDS>
    <PIN pinname="DrawMode2" visible="1">
    </PIN>
-   <PIN pinname="MouseX" visible="1" slicecount="1" values="-0.383011985409067">
+   <PIN pinname="MouseX" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="DrawMode3" visible="1">
    </PIN>
@@ -140,16 +140,6 @@
    <PIN pinname="Draw Mode" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="172" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="6645" top="2115" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.383011985409067">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0.63855421686747">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="173" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6870" top="2550" type="Node" width="100">
    </BOUNDS>
@@ -163,9 +153,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="174" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7605" top="2550" type="Node" width="100">
+   <BOUNDS height="100" left="7545" top="2550" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="7605" top="2550" type="Box" width="375">
+   <BOUNDS height="240" left="7545" top="2550" type="Box" width="375">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="20">
    </PIN>
@@ -251,7 +241,7 @@
    <NODE componentmode="Hidden" filename="GridSetup.v4p" id="184" nodename="GridSetup.v4p" systemname="GridSetup">
    <BOUNDS height="100" left="6630" top="3165" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="XY" visible="1">
+   <PIN pinname="XY" visible="1" slicecount="2" values="0.5,0.5">
    </PIN>
    <PIN pinname="X Min" visible="1">
    </PIN>
@@ -263,8 +253,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="169" dstpinname="Transform" srcnodeid="184" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="184" dstpinname="XY" srcnodeid="172" srcpinname="XY">
    </LINK>
    <LINK dstnodeid="184" dstpinname="X Min" srcnodeid="173" srcpinname="Y Output Value">
    </LINK>
@@ -306,22 +294,40 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="17" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="6630" top="1020" type="Node" width="100">
+   <NODE id="17" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" height="100" left="6465" top="1005" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="6630" top="1020" type="Box" width="0">
+   <BOUNDS type="Box" height="0" left="6465" top="1005" width="0">
    </BOUNDS>
-   <BOUNDS height="0" left="11175" top="3480" type="Window" width="0">
+   <BOUNDS type="Window" height="0" left="11175" top="3480" width="0">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="110" dstpinname="MouseX" linkstyle="PolyLine" srcnodeid="17" srcpinname="X">
-   </LINK>
+   <NODE componentmode="Hidden" id="172" nodename="Vector (2d Split)" systemname="Vector (2d Split)">
+   <BOUNDS height="100" left="9165" top="2025" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
+   </PIN>
+   </NODE>
    <LINK dstnodeid="172" dstpinname="X" srcnodeid="17" srcpinname="X">
    </LINK>
    <LINK dstnodeid="172" dstpinname="Y" srcnodeid="17" srcpinname="Y">
    </LINK>
+   <LINK srcnodeid="17" srcpinname="PositionXY" dstnodeid="172" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="172" srcpinname="X" dstnodeid="110" dstpinname="MouseX">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="PositionXY" dstnodeid="184" dstpinname="XY">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

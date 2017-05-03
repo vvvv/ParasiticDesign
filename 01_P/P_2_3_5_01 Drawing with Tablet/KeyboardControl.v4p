@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\KeyboardControl.v4p" filename="C:\Work\Study\KeyboardControl.v4p" systemname="KeyboardControl">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\KeyboardControl.v4p" filename="C:\Work\Study\KeyboardControl.v4p" systemname="KeyboardControl">
    <BOUNDS height="5715" left="4455" top="6975" type="Window" width="11850">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="24" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="24" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="390" top="3015" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Increment" slicecount="1" values="1">
@@ -68,7 +68,7 @@
    </NODE>
    <LINK dstnodeid="27" dstpinname="Y Input Value" srcnodeid="26" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="30" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="30" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="2400" top="3015" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Increment" slicecount="1" values="1">
@@ -264,10 +264,10 @@
    </NODE>
    <LINK dstnodeid="30" dstpinname="Default" srcnodeid="46" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="47">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="47">
    <BOUNDS type="Node" left="375" top="1365" width="2235" height="270">
    </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="|Left, Right, Up, Down|" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|Left, Right, Up, Down|">
    </PIN>
    <PIN pinname="Left" visible="1">
    </PIN>
@@ -277,7 +277,7 @@
    </PIN>
    <PIN pinname="Down" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Box" left="375" top="1365">
    </BOUNDS>
@@ -290,14 +290,14 @@
    </LINK>
    <LINK srcnodeid="47" srcpinname="Down" dstnodeid="30" dstpinname="Down">
    </LINK>
-   <NODE componentmode="Hidden" id="38" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="38" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="4440" top="1365" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Key Match">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Box" left="4440" top="1365">
    </BOUNDS>
@@ -306,14 +306,14 @@
    </LINK>
    <LINK dstnodeid="40" dstpinname="Y Input Value" srcnodeid="38" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="43" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="43" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="5880" top="1365" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Key Match">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Box" left="5880" top="1365">
    </BOUNDS>
@@ -322,16 +322,16 @@
    </LINK>
    <LINK dstnodeid="41" dstpinname="Y Input Value" srcnodeid="43" srcpinname="Output">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="48">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="48">
    <BOUNDS type="Node" left="8640" top="1365" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="|Back, Delete|" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="|Back, Delete|">
    </PIN>
    <PIN pinname="Back" visible="1">
    </PIN>
    <PIN pinname="Delete" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <BOUNDS type="Box" left="8640" top="1365">
    </BOUNDS>
@@ -340,20 +340,24 @@
    </LINK>
    <LINK srcnodeid="48" srcpinname="Delete" dstnodeid="35" dstpinname="Input 2">
    </LINK>
-   <NODE componentmode="Hidden" id="3" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <NODE componentmode="Hidden" id="3" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="375" top="285" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="47" dstpinname="Keyboard" hiddenwhenlocked="1">
+   <LINK srcnodeid="3" srcpinname="Device" dstnodeid="47" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="38" dstpinname="Keyboard" hiddenwhenlocked="1">
+   <LINK srcnodeid="3" srcpinname="Device" dstnodeid="38" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="43" dstpinname="Keyboard" hiddenwhenlocked="1">
+   <LINK srcnodeid="3" srcpinname="Device" dstnodeid="43" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Keyboard" dstnodeid="48" dstpinname="Keyboard" hiddenwhenlocked="1">
+   <LINK srcnodeid="3" srcpinname="Device" dstnodeid="48" dstpinname="Keyboard">
    </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

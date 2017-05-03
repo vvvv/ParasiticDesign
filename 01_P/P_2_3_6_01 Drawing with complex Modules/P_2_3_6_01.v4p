@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" systemname="P_2_3_6_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" systemname="P_2_3_6_01">
    <BOUNDS height="10425" left="495" top="660" type="Window" width="14790">
    </BOUNDS>
    <LINK dstnodeid="52" dstpinname="Number of Tiles" srcnodeid="14" srcpinname="Output">
@@ -127,6 +127,8 @@
    </PIN>
    <PIN pinname="Aspect Ratio" visible="1">
    </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="15" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="6720" top="8865" type="Node" width="7215">
@@ -235,7 +237,7 @@
    <LINK dstnodeid="319" dstpinname="Text" srcnodeid="288" srcpinname="Selected Tiles Text">
    </LINK>
    <NODE componentmode="Hidden" id="324" nodename="Change (Animation)" systemname="Change (Animation)">
-   <BOUNDS height="270" left="11610" top="3825" type="Node" width="855">
+   <BOUNDS height="270" left="11550" top="3810" type="Node" width="855">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -413,9 +415,9 @@
    <NODE componentmode="Hidden" id="341" nodename="GridPick (2d)" systemname="GridPick (2d)">
    <BOUNDS height="270" left="9435" top="3090" type="Node" width="900">
    </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   <PIN pinname="X" visible="1" slicecount="1" values="-0.823434991974318">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.0541871921182266">
    </PIN>
    <PIN pinname="Rows" visible="1">
    </PIN>
@@ -782,8 +784,18 @@
    </NODE>
    <LINK dstnodeid="384" dstpinname="Input 2" srcnodeid="386" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="0" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="9435" top="1770" type="Node" width="100">
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="387">
+   <BOUNDS type="Node" left="9420" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="0" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="9255" top="1770" type="Node" width="1380">
    </BOUNDS>
    <PIN pinname="Y" visible="1">
    </PIN>
@@ -797,13 +809,19 @@
    </PIN>
    <BOUNDS type="Window" left="11175" top="2280" width="9900" height="3630">
    </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="180" dstpinname="True" srcnodeid="0" srcpinname="Left Button">
    </LINK>
-   <LINK dstnodeid="341" dstpinname="X" srcnodeid="0" srcpinname="X">
-   </LINK>
    <LINK dstnodeid="180" dstpinname="False" srcnodeid="0" srcpinname="Right Button">
    </LINK>
-   <LINK dstnodeid="341" dstpinname="Y" srcnodeid="0" srcpinname="Y">
+   <LINK srcnodeid="0" srcpinname="PositionXY" dstnodeid="387" dstpinname="XY">
    </LINK>
+   <LINK srcnodeid="387" srcpinname="X" dstnodeid="341" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="387" srcpinname="Y" dstnodeid="341" dstpinname="Y">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

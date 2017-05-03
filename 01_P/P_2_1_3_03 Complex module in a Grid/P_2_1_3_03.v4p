@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\P_2_1_3_03.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_03 Complex module in the Grid\P_2_1_3_03.v4p" systemname="P_2_1_3_03">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_3_03 Complex module in a Grid\P_2_1_3_03.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_03 Complex module in the Grid\P_2_1_3_03.v4p" systemname="P_2_1_3_03">
    <BOUNDS height="7110" left="2235" top="2370" type="Window" width="8940">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="4" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -194,20 +194,6 @@
    <PIN pinname="Case" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="260" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="270" left="5565" top="3075" type="Node" width="630">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.886477462437396">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0.225375626043406">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="241" dstpinname="MouseXY" hiddenwhenlocked="1" srcnodeid="260" srcpinname="XY">
-   </LINK>
-   <LINK dstnodeid="242" dstpinname="MouseXY" hiddenwhenlocked="1" srcnodeid="260" srcpinname="XY">
-   </LINK>
    <LINK dstnodeid="246" dstpinname="Input 2" srcnodeid="241" srcpinname="Layer">
    </LINK>
    <LINK dstnodeid="246" dstpinname="Input 3" srcnodeid="242" srcpinname="Layer">
@@ -234,8 +220,6 @@
    <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="240" dstpinname="MouseXY" hiddenwhenlocked="1" srcnodeid="260" srcpinname="XY">
-   </LINK>
    <LINK dstnodeid="246" dstpinname="Input 1" srcnodeid="240" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" filename="GridSetup.v4p" id="273" nodename="GridSetup.v4p" systemname="GridSetup">
@@ -260,16 +244,22 @@
    </LINK>
    <LINK dstnodeid="242" dstpinname="Transform In" srcnodeid="273" srcpinname="Transformation">
    </LINK>
-   <NODE componentmode="Hidden" id="179" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="5565" top="2550" type="Node" width="100">
+   <NODE componentmode="Hidden" id="179" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="5340" top="2625" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="260" dstpinname="X" srcnodeid="179" srcpinname="X">
+   <LINK srcnodeid="179" srcpinname="PositionXY" dstnodeid="242" dstpinname="MouseXY" hiddenwhenlocked="1">
    </LINK>
-   <LINK dstnodeid="260" dstpinname="Y" srcnodeid="179" srcpinname="Y">
+   <LINK srcnodeid="179" srcpinname="PositionXY" dstnodeid="241" dstpinname="MouseXY" hiddenwhenlocked="1">
    </LINK>
+   <LINK srcnodeid="179" srcpinname="PositionXY" dstnodeid="240" dstpinname="MouseXY" hiddenwhenlocked="1">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

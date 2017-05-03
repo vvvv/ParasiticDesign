@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\QueueCircles.v4p" systemname="QueueCircles">
    <BOUNDS height="6555" left="5190" top="8070" type="Window" width="14220">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -159,7 +159,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Reset" visible="1">
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="19" nodename="AND (Boolean)" systemname="AND (Boolean)">
@@ -175,20 +175,6 @@
    <LINK dstnodeid="19" dstpinname="Input 1" srcnodeid="14" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="19" dstpinname="Input 2" srcnodeid="18" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="21" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
-   <BOUNDS height="100" left="7500" top="5025" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="18" dstpinname="Reset" linkstyle="Bezier" srcnodeid="21" srcpinname="Output 1">
-   <LINKPOINT x="9405" y="7090">
-   </LINKPOINT>
-   <LINKPOINT x="9525" y="605">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\plugins\SpreadOperations.dll" id="26" nodename="Queue (Spreads)" systemname="QUEUE (SPREADS)">
    <BOUNDS height="100" left="5355" top="3375" type="Node" width="100">
@@ -254,8 +240,6 @@
    </NODE>
    <LINK dstnodeid="20" dstpinname="Input 2" srcnodeid="7" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="21" dstpinname="Input 1" srcnodeid="20" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="20" dstpinname="Input 1" srcnodeid="17" srcpinname="Count">
    </LINK>
    <NODE componentmode="Hidden" id="30" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
@@ -305,7 +289,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9360" top="1845" width="3420" height="1800">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|&lt; A maximum of 1000 circles is created. When this amount is exceeded the FlipFlop is reset and the Queue no longer accepts new values.&cr;&lf;&cr;&lf;Otherwise the Queue would just overwrite its oldest slices.|" encoded="0">
+   <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|&lt; A maximum of 1000 circles is created. When this amount is exceeded the FlipFlop is reset and the Queue no longer accepts new values.&cr;&lf;&cr;&lf;Otherwise the Queue would just overwrite its oldest slices.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -314,4 +298,22 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE componentmode="Hidden" id="21" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="7500" top="5025" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="18" dstpinname="Reset" linkstyle="Bezier" srcnodeid="21" srcpinname="Output 1">
+   <LINKPOINT x="9405" y="7090">
+   </LINKPOINT>
+   <LINKPOINT x="9525" y="605">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="21" dstpinname="Input 1" srcnodeid="20" srcpinname="Output">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

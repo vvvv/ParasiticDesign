@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\P_2_1_3_01.v4p" systemname="P_2_1_3_01">
-   <BOUNDS height="12150" left="0" top="0" type="Window" width="13785">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_3_01 Complex module in a Grid\P_2_1_3_01.v4p" systemname="P_2_1_3_01">
+   <BOUNDS height="12150" left="0" top="0" type="Window" width="13695">
    </BOUNDS>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="6405" top="10860" type="Node" width="1890">
    </BOUNDS>
    <BOUNDS height="1800" left="6405" top="10860" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="9360" left="13800" top="0" type="Window" width="9120">
+   <BOUNDS height="9360" left="13560" top="0" type="Window" width="9120">
    </BOUNDS>
    <PIN pinname="Actual Backbuffer Width" visible="1">
    </PIN>
@@ -123,9 +123,9 @@
    <LINK dstnodeid="54" dstpinname="X In" srcnodeid="52" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="55" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="8145" top="1770" type="Node" width="100">
+   <BOUNDS height="100" left="8205" top="1785" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="255" left="8145" top="1770" type="Box" width="450">
+   <BOUNDS height="255" left="8205" top="1785" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="10">
    </PIN>
@@ -345,7 +345,7 @@
    <LINK dstnodeid="52" dstpinname="Width" srcnodeid="89" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="90" nodename="Divide (Value)" systemname="Divide (Value)">
-   <BOUNDS height="100" left="7875" top="2940" type="Node" width="100">
+   <BOUNDS height="100" left="8025" top="2940" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -360,16 +360,6 @@
    </LINK>
    <LINK dstnodeid="88" dstpinname="Y Input Value" srcnodeid="90" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="98" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <BOUNDS height="100" left="12555" top="3570" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="-0.920693928128872">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="-0.184177997527812">
-   </PIN>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="106" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="705" top="2370" type="Node" width="7425">
    </BOUNDS>
@@ -481,9 +471,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="108" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7425" top="2850" type="Node" width="315">
+   <BOUNDS height="270" left="7575" top="2850" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="7425" top="2850" type="Box" width="420">
+   <BOUNDS height="405" left="7575" top="2850" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -578,24 +568,6 @@
    </NODE>
    <LINK dstnodeid="73" dstpinname="Input" srcnodeid="54" srcpinname="Y Out">
    </LINK>
-   <NODE componentmode="Hidden" id="67" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="9315" top="2445" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="66" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="Left Button">
-   </LINK>
-   <LINK dstnodeid="74" dstpinname="Input" linkstyle="PolyLine" srcnodeid="67" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="X" srcnodeid="67" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="98" dstpinname="Y" srcnodeid="67" srcpinname="Y">
-   </LINK>
    <NODE id="77" componentmode="Hidden" filename="DrawModule.v4p" nodename="DrawModule.v4p" systemname="DrawModule">
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -624,12 +596,36 @@
    <PIN pinname="End Offset" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="98" srcpinname="XY" dstnodeid="77" dstpinname="MouseXY" hiddenwhenlocked="0">
-   </LINK>
    <LINK srcnodeid="74" srcpinname="Output" dstnodeid="77" dstpinname="Circle Count">
    </LINK>
    <LINK srcnodeid="83" srcpinname="Transform Out" dstnodeid="77" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="77" srcpinname="Layer" dstnodeid="0" dstpinname="Layers">
    </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="114">
+   <BOUNDS type="Node" left="9300" top="2595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="115">
+   <BOUNDS type="Node" left="9480" top="8310" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="114" srcpinname="PositionXY" dstnodeid="115" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="X" dstnodeid="74" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="PositionXY" dstnodeid="77" dstpinname="MouseXY">
+   </LINK>
+   <LINK srcnodeid="114" srcpinname="Left Button" dstnodeid="66" dstpinname="Input">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

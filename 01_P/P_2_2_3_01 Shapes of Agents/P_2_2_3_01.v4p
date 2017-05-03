@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01">
    <BOUNDS height="7860" left="0" top="0" type="Window" width="12705">
    </BOUNDS>
    <NODE componentmode="InABox" id="17" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -132,20 +132,6 @@
    </NODE>
    <LINK dstnodeid="562" dstpinname="Filter Time" srcnodeid="565" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="563" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
-   <BOUNDS height="270" left="8805" top="1260" type="Node" width="630">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="562" dstpinname="Go To Position" srcnodeid="563" srcpinname="XYZ">
-   </LINK>
    <NODE componentmode="Hidden" id="566" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
    <BOUNDS height="270" left="8790" top="3150" type="Node" width="795">
    </BOUNDS>
@@ -159,8 +145,6 @@
    <LINK dstnodeid="566" dstpinname="XYZ" srcnodeid="562" srcpinname="Position Out">
    </LINK>
    <LINK dstnodeid="562" dstpinname="Jump" srcnodeid="463" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="562" dstpinname="Jump To Position" srcnodeid="563" srcpinname="XYZ">
    </LINK>
    <NODE componentmode="InABox" id="606" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="2340" type="Node" width="7425">
@@ -398,10 +382,6 @@
    <PIN pinname="Layers" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="550" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="563" srcpinname="XYZ">
-   <LINKPOINT x="8040" y="2055">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="550" dstpinname="Clear" srcnodeid="398" srcpinname="Clear">
    </LINK>
    <LINK dstnodeid="550" dstpinname="Enabled" srcnodeid="398" srcpinname="Freeze">
@@ -424,8 +404,18 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="433" nodename="Mouse (System Window)" systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p">
-   <BOUNDS height="100" left="8655" top="690" type="Node" width="100">
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="616">
+   <BOUNDS type="Node" left="8835" top="1215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="433" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" height="100" left="8655" top="690" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -433,11 +423,19 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="463" dstpinname="Input" srcnodeid="433" srcpinname="Left Button">
+   <LINK srcnodeid="433" srcpinname="Left Button" dstnodeid="463" dstpinname="Input">
    </LINK>
-   <LINK dstnodeid="563" dstpinname="X" srcnodeid="433" srcpinname="X">
+   <LINK srcnodeid="433" srcpinname="PositionXY" dstnodeid="616" dstpinname="XY">
    </LINK>
-   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="433" srcpinname="Y">
+   <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="562" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="562" dstpinname="Jump To Position">
+   </LINK>
+   <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="550" dstpinname="Mouse XYZ">
+   <LINKPOINT x="7980" y="1680">
+   </LINKPOINT>
    </LINK>
    </PATCH>

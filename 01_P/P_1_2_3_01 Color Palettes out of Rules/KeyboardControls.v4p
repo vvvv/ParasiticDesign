@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\KeyboardControls.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_1_2_3_01 Color Palettes out of Rules\KeyboardControls.v4p">
    <BOUNDS height="4260" left="17370" top="5460" type="Window" width="10650">
    </BOUNDS>
    <NODE componentmode="InABox" id="2" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -65,17 +65,15 @@
    <NODE componentmode="Hidden" id="90" nodename="Sift (String)" systemname="Sift (String)">
    <BOUNDS height="100" left="4905" top="1470" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="text">
    </PIN>
-   <PIN pinname="Filter" visible="1" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Filter" visible="1" encoded="0">
    </PIN>
    <PIN pinname="Comparison" slicecount="1" values="Contains">
    </PIN>
    <PIN pinname="Hits" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="90" dstpinname="Input" srcnodeid="2" srcpinname="Output String">
-   </LINK>
    <NODE componentmode="InABox" id="91" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5550" top="1470" type="Node" width="315">
    </BOUNDS>
@@ -92,25 +90,7 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="6120" top="555" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="6120" top="555" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="KeyCode" visible="1">
-   </PIN>
-   <PIN pinname="Buffered Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   <PIN pinname="Key" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="1" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="1" nodename="RadioKeyMatch (String)" systemname="RadioKeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="6120" top="1440" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="6120" top="1440" type="Box" width="0">
@@ -123,16 +103,12 @@
    </PIN>
    <PIN pinname="Input" visible="1" encoded="0">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="1" dstpinname="Key Match" srcnodeid="2" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="11" dstpinname="Y Input Value" srcnodeid="1" srcpinname="Output">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="1" dstpinname="Keyboard">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Key" dstnodeid="90" dstpinname="Filter">
    </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="92">
    <BOUNDS type="Node" left="4905" top="1995" width="100" height="100">
@@ -145,5 +121,49 @@
    <LINK srcnodeid="90" srcpinname="Hits" dstnodeid="92" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="92" srcpinname="Output" dstnodeid="35" dstpinname="Y Input Value">
+   </LINK>
+   <NODE componentmode="Hidden" id="15" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="6120" top="555" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="6120" top="555" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="KeyCode" visible="1">
+   </PIN>
+   <PIN pinname="Buffered Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key" visible="1">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   <PIN pinname="Key Name" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Device" dstnodeid="1" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="90" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Key Name" dstnodeid="90" dstpinname="Filter">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="93">
+   <BOUNDS type="Box" left="7785" top="2625" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7785" top="2625" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="93" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

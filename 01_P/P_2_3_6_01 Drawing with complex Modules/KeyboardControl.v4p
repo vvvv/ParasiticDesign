@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\KeyboardControl.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\KeyboardControl.v4p" systemname="KeyboardControl">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\KeyboardControl.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\KeyboardControl.v4p" systemname="KeyboardControl">
    <BOUNDS height="5070" left="8535" top="5400" type="Window" width="4770">
    </BOUNDS>
    <NODE componentmode="Hidden" id="8" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
@@ -80,12 +80,12 @@
    </NODE>
    <LINK srcnodeid="8" srcpinname="Bang" dstnodeid="11" dstpinname="Input 3">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="26">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="26">
    <BOUNDS type="Node" left="510" top="1050" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|Back, Delete|">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Back" visible="1">
    </PIN>
@@ -94,16 +94,6 @@
    <PIN pinname="Key Mode" slicecount="1" visible="1" values="Press">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="1" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="510" top="165" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1" srcpinname="Keyboard" dstnodeid="26" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="Back" dstnodeid="11" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Delete" dstnodeid="11" dstpinname="Input 2">
@@ -118,7 +108,7 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="28">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="28">
    <BOUNDS type="Node" left="1920" top="1065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|G, D|">
@@ -136,8 +126,6 @@
    <PIN pinname="G" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1" srcpinname="Keyboard" dstnodeid="28" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="27" srcpinname="Output Enum" dstnodeid="28" dstpinname="Key Mode">
    </LINK>
    <LINK srcnodeid="28" srcpinname="D" dstnodeid="25" dstpinname="Y Input Value">
@@ -154,4 +142,20 @@
    </LINK>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
+   <NODE componentmode="Hidden" id="1" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="510" top="165" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Device" dstnodeid="26" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Device" dstnodeid="28" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

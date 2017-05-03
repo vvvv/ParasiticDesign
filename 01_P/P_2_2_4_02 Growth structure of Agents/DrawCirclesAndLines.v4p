@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_4_02 Growth structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
    <BOUNDS height="8400" left="4695" top="6780" type="Window" width="17715">
    </BOUNDS>
    <NODE componentmode="Hidden" id="8" nodename="Segment (DX9)" systemname="Segment (DX9)">
@@ -478,7 +478,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" hiddenwhenlocked="0" id="112" managers="" nodename="Line (EX9)" systemname="Line (EX9)">
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" hiddenwhenlocked="0" id="112" managers="" nodename="Line (EX9)" systemname="Line (EX9 Legacy)">
    <PIN pinname="Layer" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="From" pintype="Input" visible="1">
@@ -728,7 +728,7 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="120" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="120" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="10665" top="1620" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -737,7 +737,7 @@
    </PIN>
    <PIN pinname="1 Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="1" visible="1">
    </PIN>
@@ -754,16 +754,20 @@
    </NODE>
    <LINK srcnodeid="138" srcpinname="Output Enum" dstnodeid="120" dstpinname="Key Mode">
    </LINK>
-   <NODE componentmode="Hidden" id="119" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <LINK srcnodeid="120" srcpinname="D1" dstnodeid="122" dstpinname="Enabled">
+   </LINK>
+   <NODE componentmode="Hidden" id="119" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="10665" top="1095" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="119" srcpinname="Keyboard" dstnodeid="120" dstpinname="Keyboard">
+   <LINK srcnodeid="119" srcpinname="Device" dstnodeid="120" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="120" srcpinname="D1" dstnodeid="122" dstpinname="Enabled">
-   </LINK>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>

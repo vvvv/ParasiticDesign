@@ -1,15 +1,15 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" systemname="CreateShape">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" systemname="CreateShape">
    <BOUNDS height="11430" left="13095" top="2610" type="Window" width="14565">
    </BOUNDS>
-   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\3D\B-Spline (3D).v4p" id="26" nodename="B-Spline (3d)" systemname="B-Spline (3d)">
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\3D\B-Spline (3D).v4p" id="26" nodename="B-Spline (3d)" systemname="B-SPLINE (3D)">
    <BOUNDS height="270" left="5220" top="7095" type="Node" width="5370">
    </BOUNDS>
-   <PIN pinname="Ouput XYZ" visible="1">
+   <PIN pinname="OutputXYZ" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Control XYZ" visible="1">
+   <PIN pinname="ControlXYZ" visible="1">
    </PIN>
    <PIN pinname="Input Room" slicecount="1" values="|Symmetry -0.5..0.5|">
    </PIN>
@@ -190,7 +190,7 @@
    </LINK>
    <LINK dstnodeid="9" dstpinname="Y" srcnodeid="10" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="26" dstpinname="Control XYZ" srcnodeid="9" srcpinname="XYZ">
+   <LINK dstnodeid="26" dstpinname="ControlXYZ" srcnodeid="9" srcpinname="XYZ">
    </LINK>
    <NODE componentmode="InABox" id="8" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="8070" top="2385" type="Node" width="100">
@@ -242,7 +242,7 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <NODE componentmode="Hidden" id="0" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
    <BOUNDS height="100" left="7485" top="5700" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -674,9 +674,9 @@
    </NODE>
    <LINK dstnodeid="56" dstpinname="Vector Size" srcnodeid="54" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Ouput XYZ" dstnodeid="56" dstpinname="Input">
+   <LINK srcnodeid="26" srcpinname="OutputXYZ" dstnodeid="56" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Ouput XYZ" dstnodeid="55" dstpinname="Input 1">
+   <LINK srcnodeid="26" srcpinname="OutputXYZ" dstnodeid="55" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="57">
    <BOUNDS type="Node" left="3450" top="9180" width="3645" height="270">
@@ -692,7 +692,7 @@
    </NODE>
    <LINK srcnodeid="55" srcpinname="Output" dstnodeid="57" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="26" srcpinname="Ouput XYZ" dstnodeid="57" dstpinname="Input 2">
+   <LINK srcnodeid="26" srcpinname="OutputXYZ" dstnodeid="57" dstpinname="Input 2">
    <LINKPOINT x="7050" y="8075">
    </LINKPOINT>
    </LINK>
@@ -842,4 +842,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <PACK Name="addonpack" Version="35.0.0">
+   </PACK>
    </PATCH>
