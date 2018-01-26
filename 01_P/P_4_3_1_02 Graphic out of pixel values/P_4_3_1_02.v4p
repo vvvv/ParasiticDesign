@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\P_4_3_1_02.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02.v4p" systemname="P.4.3.1_02">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\P_4_3_1_02.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02.v4p" systemname="P.4.3.1_02">
    <BOUNDS height="10665" left="195" top="210" type="Window" width="13965">
    </BOUNDS>
    <NODE componentmode="InABox" id="53" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="11055" top="3120" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2175" left="11055" top="3120" type="Box" width="1500">
+   <BOUNDS height="2010" left="11055" top="3120" type="Box" width="1650">
    </BOUNDS>
    <BOUNDS height="4860" left="10230" top="7980" type="Window" width="6120">
    </BOUNDS>
@@ -19,13 +19,19 @@
    </PIN>
    <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="AsDesktop">
    </PIN>
    <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Fullscreen Format" slicecount="1" values="X8R8G8B8">
+   </PIN>
+   <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="52" nodename="Quad (DX9)" systemname="Quad (DX9)">
@@ -35,7 +41,7 @@
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK dstnodeid="53" dstpinname="Layers" srcnodeid="52" srcpinname="Layer">
@@ -122,30 +128,6 @@
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="57" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="6045" top="9375" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="9855" left="6045" top="9375" type="Box" width="8430">
-   </BOUNDS>
-   <BOUNDS height="13455" left="14160" top="210" type="Window" width="9495">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="57" dstpinname="Layers" srcnodeid="54" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="InABox" id="82" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="8385" top="5895" type="Node" width="100">
    </BOUNDS>
@@ -360,28 +342,16 @@
    </LINK>
    <LINK dstnodeid="48" dstpinname="Y" srcnodeid="116" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="117" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="11220" top="1905" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Uniform Scale" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="52" dstpinname="Transform" srcnodeid="117" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="118" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="11925" top="1500" type="Node" width="100">
+   <BOUNDS height="100" left="12165" top="1530" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="11925" top="1500" type="Box" width="675">
+   <BOUNDS height="240" left="12165" top="1530" type="Box" width="675">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="117" dstpinname="Uniform Scale" srcnodeid="118" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="51" dstpinname="Filename" srcnodeid="100" srcpinname="Output String">
    </LINK>
    <LINK dstnodeid="52" dstpinname="Texture" linkstyle="PolyLine" srcnodeid="51" srcpinname="Texture Out" hiddenwhenlocked="1">
@@ -571,7 +541,7 @@
    <LINK srcnodeid="136" srcpinname="Output Node" dstnodeid="88" dstpinname="Input Node">
    </LINK>
    <NODE componentmode="Hidden" id="126" nodename="Count (Node)" systemname="Count (Node)">
-   <BOUNDS height="100" left="9225" top="6795" type="Node" width="100">
+   <BOUNDS height="100" left="9285" top="6930" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" encoded="0">
    </PIN>
@@ -667,5 +637,39 @@
    <LINK srcnodeid="51" srcpinname="Original Height" dstnodeid="110" dstpinname="Spread Count">
    </LINK>
    <LINK srcnodeid="51" srcpinname="Original Height" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   <NODE componentmode="Hidden" id="117" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
+   <BOUNDS height="100" left="11220" top="1905" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="52" dstpinname="Transform" srcnodeid="117" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="117" dstpinname="Uniform Scale" srcnodeid="118" srcpinname="Y Output Value">
+   </LINK>
+   <LINK srcnodeid="118" srcpinname="Y Output Value" dstnodeid="117" dstpinname="XYZ">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="InAWindow" id="137" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="6045" top="9375" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="9855" left="6045" top="9375" type="Box" width="8430">
+   </BOUNDS>
+   <BOUNDS height="13455" left="14160" top="210" type="Window" width="9495">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="137" dstpinname="Layers" srcnodeid="54" srcpinname="Layer">
    </LINK>
    </PATCH>

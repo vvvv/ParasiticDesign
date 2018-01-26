@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2">
    <BOUNDS height="12540" left="660" top="1230" type="Window" width="16185">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
@@ -14,36 +14,8 @@
    <PIN pinname="Original Height" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="9" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="7800" top="9855" type="Node" width="1500">
-   </BOUNDS>
-   <BOUNDS height="2940" left="7800" top="9855" type="Box" width="3555">
-   </BOUNDS>
-   <BOUNDS height="9480" left="16845" top="1230" type="Window" width="10545">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Output">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="26" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="9345" top="10350" type="Node" width="100">
+   <BOUNDS height="100" left="9390" top="10350" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -72,6 +44,8 @@
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="85" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
@@ -159,9 +133,9 @@
    <LINK dstnodeid="107" dstpinname="Destination Width" srcnodeid="111" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="113" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="14880" top="3825" type="Node" width="100">
+   <BOUNDS height="100" left="14970" top="3825" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="14880" top="3825" type="Box" width="645">
+   <BOUNDS height="240" left="14970" top="3825" type="Box" width="645">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -204,16 +178,18 @@
    </NODE>
    <LINK dstnodeid="125" dstpinname="Texture" linkstyle="PolyLine" srcnodeid="2" srcpinname="Texture Out">
    </LINK>
-   <NODE componentmode="Hidden" id="-6" nodename="MainLoop (VVVV)" systemname="MainLoop (VVVV)">
+   <NODE componentmode="Hidden" id="-6" nodename="MainLoop (VVVV)" systemname="MAINLOOP (VVVV)">
    <BOUNDS height="100" left="660" top="9585" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Current Frame" visible="1">
    </PIN>
-   <PIN pinname="Maximum background fpsS" slicecount="1" visible="1" values="30">
+   <PIN pinname="Maximum Background FPS" slicecount="1" visible="1" values="30">
    </PIN>
-   <PIN pinname="Maximum forground fps" visible="1" slicecount="1" values="120">
+   <PIN pinname="Maximum Foreground FPS" visible="1" slicecount="1" values="120">
    </PIN>
    <PIN pinname="Time Mode" slicecount="1" visible="1" values="Raw">
+   </PIN>
+   <PIN pinname="Increase Timing Precision" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="137" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -308,15 +284,7 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="150" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
-   <BOUNDS height="270" left="6705" top="2835" type="Node" width="795">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="154" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
+   <NODE componentmode="Hidden" id="154" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)">
    <BOUNDS height="270" left="6705" top="3690" type="Node" width="840">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -329,15 +297,13 @@
    </PIN>
    <PIN pinname="&lt;DELETE&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Delete" visible="1">
    </PIN>
    <PIN pinname="Back" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="154" dstpinname="Input" srcnodeid="150" srcpinname="Keyboard Output">
-   </LINK>
    <NODE componentmode="InABox" id="156" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6975" top="4500" type="Node" width="100">
    </BOUNDS>
@@ -430,16 +396,16 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="-6" dstpinname="Maximum forground fps" srcnodeid="139" srcpinname="Y Output Value">
+   <LINK dstnodeid="-6" dstpinname="Maximum Foreground FPS" srcnodeid="139" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="85" dstpinname="TranslateX" srcnodeid="95" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="172" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="9960" top="4305" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="9960" top="4305" type="Box" width="855">
+   <BOUNDS height="240" left="9960" top="4305" type="Box" width="1035">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="FitWidth">
+   <PIN pinname="Input Enum" slicecount="1" values="FitHeight">
    </PIN>
    <PIN pinname="Output Enum" visible="1">
    </PIN>
@@ -469,7 +435,7 @@
    <LINK dstnodeid="95" dstpinname="Destination Width" srcnodeid="175" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="176" nodename="Divide (Value)" systemname="Divide (Value)">
-   <BOUNDS height="270" left="14625" top="4290" type="Node" width="315">
+   <BOUNDS height="270" left="14790" top="4275" type="Node" width="315">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -583,7 +549,7 @@
    <LINK dstnodeid="184" dstpinname="Magnification Filter" srcnodeid="186" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="83" nodename="FrameDelay (EX9.Texture)" systemname="FrameDelay (EX9.Texture)">
-   <BOUNDS height="100" left="9345" top="10905" type="Node" width="100">
+   <BOUNDS height="100" left="9390" top="10905" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -595,9 +561,9 @@
    <LINK dstnodeid="83" dstpinname="Texture In" srcnodeid="26" srcpinname="Texture Out">
    </LINK>
    <LINK dstnodeid="27" dstpinname="Texture" linkstyle="Bezier" srcnodeid="83" srcpinname="Texture Out">
-   <LINKPOINT x="11940" y="14625">
+   <LINKPOINT x="11970" y="14625">
    </LINKPOINT>
-   <LINKPOINT x="9210" y="3060">
+   <LINKPOINT x="9225" y="3060">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="194" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -731,9 +697,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="197" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8835" top="10785" type="Node" width="315">
+   <BOUNDS height="270" left="8880" top="10785" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8835" top="10785" type="Box" width="405">
+   <BOUNDS height="390" left="8880" top="10785" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -812,8 +778,6 @@
    </NODE>
    <INFO author="" description="" tags="">
    </INFO>
-   <LINK srcnodeid="150" srcpinname="Keyboard" dstnodeid="154" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="154" srcpinname="Delete" dstnodeid="153" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="154" srcpinname="Back" dstnodeid="153" dstpinname="Input 2">
@@ -829,10 +793,6 @@
    <LINK srcnodeid="202" srcpinname="Output Enum" dstnodeid="154" dstpinname="Key Mode">
    </LINK>
    <LINK srcnodeid="153" srcpinname="Output" dstnodeid="162" dstpinname="Simulate">
-   </LINK>
-   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="9" dstpinname="Clear" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="EX9 Out" dstnodeid="26" dstpinname="Source">
    </LINK>
    <NODE componentmode="Hidden" id="84" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
    <BOUNDS height="270" left="7800" top="7815" type="Node" width="600">
@@ -858,6 +818,40 @@
    </LINK>
    <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="84" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="9" dstpinname="Layers">
+   <NODE componentmode="InAWindow" id="203" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="7800" top="9855" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="2940" left="7800" top="9855" type="Box" width="3555">
+   </BOUNDS>
+   <BOUNDS height="9480" left="16845" top="1230" type="Window" width="10545">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="203" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="EX9 Out" dstnodeid="26" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="203" dstpinname="Layers">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="Hidden" id="150" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="6705" top="2835" type="Node" width="795">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="154" dstpinname="Input" srcnodeid="150" srcpinname="Keyboard Output">
+   </LINK>
+   <LINK srcnodeid="150" srcpinname="Device" dstnodeid="154" dstpinname="Keyboard">
    </LINK>
    </PATCH>

@@ -1,39 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.2.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02.v4p" bgcolor="15527148" filename="C:\Work\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02_am.v4p" systemname="P_4_2_1_02_am">
-   <BOUNDS height="11040" left="285" top="435" type="Window" width="17745">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02.v4p" bgcolor="15527148" filename="C:\Work\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02_am.v4p" systemname="P_4_2_1_02_am">
+   <BOUNDS height="11535" left="285" top="435" type="Window" width="17745">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="100" left="4965" top="10140" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="4965" top="10140" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="10260" left="18015" top="435" type="Window" width="9720">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.98582,0.98582,0.98582,1.00000|">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="15" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="4980" top="2715" type="Node" width="100">
    </BOUNDS>
@@ -100,8 +68,6 @@
    <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="0" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="178" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="5130" top="3345" type="Node" width="100">
    </BOUNDS>
@@ -806,15 +772,7 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="153" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="9300" top="495" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="152" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="152" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="9300" top="1020" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="Input" visible="1" encoded="0">
@@ -833,7 +791,7 @@
    </PIN>
    <PIN pinname="&lt;NUMPAD3&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="D1" visible="1">
    </PIN>
@@ -848,8 +806,6 @@
    <PIN pinname="NumPad3" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="153" srcpinname="Keyboard" dstnodeid="152" dstpinname="Keyboard">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="277" systemname="IOBox (Enumerations)">
    <BOUNDS type="Node" left="11430" top="600" width="0" height="0">
    </BOUNDS>
@@ -1340,20 +1296,34 @@
    </LINK>
    <LINK srcnodeid="176" srcpinname="Layer" dstnodeid="57" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="303">
-   <BOUNDS type="Node" left="6645" top="10140" width="100" height="100">
+   <NODE componentmode="Hidden" id="153" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="9300" top="495" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
+   <PIN pinname="Keyboard Output" visible="1">
    </PIN>
-   <PIN pinname="Aspect Height" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Transform Out" visible="1">
+   <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="303" dstpinname="Aspect Width">
+   <LINK srcnodeid="153" srcpinname="Device" dstnodeid="152" dstpinname="Keyboard">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Height" dstnodeid="303" dstpinname="Aspect Height">
+   <NODE componentmode="InAWindow" id="304" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="4965" top="10140" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4965" top="10140" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="10260" left="18015" top="435" type="Window" width="9720">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="304" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="303" srcpinname="Transform Out" dstnodeid="0" dstpinname="Aspect Ratio">
-   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

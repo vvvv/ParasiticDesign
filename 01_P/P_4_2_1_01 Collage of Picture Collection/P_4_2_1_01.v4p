@@ -1,33 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_2_1_01 Collage of Picture Collection\P_4_2_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.2.1\P.4.4.1.v4p" systemname="P.4.4.1">
    <BOUNDS height="11550" left="195" top="285" type="Window" width="17850">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="4665" top="10140" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="4665" top="10140" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7560" left="15480" top="345" type="Window" width="9720">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.98582,0.98582,0.98582,1.00000|">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="15" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="100" left="4680" top="2715" type="Node" width="100">
    </BOUNDS>
@@ -94,8 +68,6 @@
    <PIN pinname="Layer 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="0" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" filename="Layer.v4p" id="176" nodename="Layer.v4p" systemname="Layer">
    <BOUNDS height="270" left="4665" top="9240" type="Node" width="1650">
    </BOUNDS>
@@ -1082,15 +1054,7 @@
    </NODE>
    <LINK srcnodeid="276" srcpinname="Y Output Value" dstnodeid="187" dstpinname="Y">
    </LINK>
-   <NODE componentmode="Hidden" id="153" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="8850" top="495" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="152" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="152" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="8850" top="1020" type="Node" width="2190">
    </BOUNDS>
    <PIN pinname="Input" visible="1" encoded="0">
@@ -1109,7 +1073,7 @@
    </PIN>
    <PIN pinname="&lt;NUMPAD3&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="D1" visible="1">
    </PIN>
@@ -1124,8 +1088,6 @@
    <PIN pinname="NumPad3" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="153" srcpinname="Keyboard" dstnodeid="152" dstpinname="Keyboard">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="277" systemname="IOBox (Enumerations)">
    <BOUNDS type="Node" left="10980" top="600" width="0" height="0">
    </BOUNDS>
@@ -1157,5 +1119,33 @@
    <LINK srcnodeid="248" srcpinname="Output" dstnodeid="243" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="248" srcpinname="Output" dstnodeid="227" dstpinname="Enabled">
+   </LINK>
+   <NODE componentmode="Hidden" id="153" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="8850" top="495" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Device" dstnodeid="152" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="InAWindow" id="278" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="4665" top="10140" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4665" top="10140" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7560" left="17910" top="345" type="Window" width="7290">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="278" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
    </LINK>
    </PATCH>
