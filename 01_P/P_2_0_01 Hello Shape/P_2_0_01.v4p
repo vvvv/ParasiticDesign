@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_0_01 Hello Shape\P_2_0_01.v4p">
    <BOUNDS height="9150" left="0" top="0" type="Window" width="12000">
    </BOUNDS>
@@ -176,40 +176,10 @@
    <PIN pinname="Destination Minimum" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="49" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="6705" top="7515" type="Node" width="4470">
-   </BOUNDS>
-   <BOUNDS height="0" left="6705" top="7515" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4005" top="14220" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="49" dstpinname="Layer 1" srcnodeid="28" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="41" dstpinname="Spread Count" srcnodeid="43" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="30" dstpinname="ScaleY" srcnodeid="44" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InABox" id="53" nodename="IOBox (Color)" systemname="IOBox (Color)">
-   <BOUNDS height="100" left="8895" top="6375" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="345" left="8895" top="6375" type="Box" width="345">
-   </BOUNDS>
-   <BOUNDS height="160" left="4050" top="10575" type="Window" width="215">
-   </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   <PIN pinname="Show Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="55" nodename="Count (Value)" systemname="Count (Value)">
    <BOUNDS height="100" left="9285" top="4230" type="Node" width="100">
    </BOUNDS>
@@ -255,42 +225,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="30" dstpinname="CenterX" srcnodeid="61" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="27" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <BOUNDS height="7905" left="12000" top="0" type="Window" width="7740">
-   </BOUNDS>
-   <BOUNDS height="270" left="6705" top="8115" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6705" top="8115" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="49" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="70" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="10155" top="1995" type="Node" width="100">
@@ -504,18 +438,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="..\..\..\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\DX9\Cursor (DX9).v4p" id="88" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <BOUNDS height="100" left="8910" top="6930" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3600" left="8910" top="6930" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="6000" left="9690" top="8880" type="Window" width="9000">
-   </BOUNDS>
-   </NODE>
-   <LINK dstnodeid="88" dstpinname="Color" srcnodeid="53" srcpinname="Color Output">
-   </LINK>
-   <LINK dstnodeid="49" dstpinname="Layer 2" srcnodeid="88" srcpinname="Layer">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="90">
    <BOUNDS type="Node" left="7365" top="1140" width="100" height="100">
    </BOUNDS>
@@ -532,11 +454,7 @@
    </LINK>
    <LINK srcnodeid="90" srcpinname="X" dstnodeid="30" dstpinname="ScaleX">
    </LINK>
-   <LINK srcnodeid="42" srcpinname="Mouse" dstnodeid="88" dstpinname="Mouse" hiddenwhenlocked="1">
-   <LINKPOINT x="8859" y="1369">
-   </LINKPOINT>
-   </LINK>
-   <NODE id="42" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE id="42" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" height="100" left="7200" top="645" width="100">
    </BOUNDS>
    <BOUNDS type="Box" height="0" left="7200" top="645" width="0">
@@ -549,12 +467,12 @@
    </PIN>
    <PIN pinname="Mouse" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="PositionXY" dstnodeid="90" dstpinname="XY">
+   <LINK srcnodeid="42" srcpinname="Position (Projection) XY" dstnodeid="90" dstpinname="XY">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
    <NODE id="87" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS type="Node" height="270" left="8700" top="4950" width="315">
@@ -588,4 +506,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="92" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="7905" left="12000" top="0" type="Window" width="7740">
+   </BOUNDS>
+   <BOUNDS height="270" left="6720" top="7605" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6720" top="7605" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Layer" dstnodeid="92" dstpinname="Layers">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
    </PATCH>

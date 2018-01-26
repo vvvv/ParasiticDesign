@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_1_01 Stupid Agent\P_2_2_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.2.2.1.v4p" systemname="P.2.2.1">
    <BOUNDS height="10410" left="495" top="615" type="Window" width="15045">
    </BOUNDS>
@@ -708,18 +708,22 @@
    </LINK>
    <LINK srcnodeid="234" srcpinname="Delete" dstnodeid="235" dstpinname="Input 2">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
    <NODE componentmode="InAWindow" id="289" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="8100" top="9135" type="Node" width="2385">
+   <BOUNDS height="270" left="8085" top="9180" type="Node" width="2385">
    </BOUNDS>
-   <BOUNDS height="1800" left="8100" top="9135" type="Box" width="2400">
+   <BOUNDS height="1800" left="8085" top="9180" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8040" left="15840" top="540" type="Window" width="7800">
+   <BOUNDS height="8040" left="15495" top="600" type="Window" width="7800">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Cursor" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="289" dstpinname="Layers" srcnodeid="5" srcpinname="Layer">
@@ -738,12 +742,12 @@
    </LINK>
    <LINK srcnodeid="290" srcpinname="Output 1" dstnodeid="235" dstpinname="Input 3">
    </LINK>
-   <NODE componentmode="Hidden" id="72" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="72" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="10305" top="495" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="291">
@@ -754,7 +758,7 @@
    <PIN pinname="X" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="72" srcpinname="PositionXY" dstnodeid="291" dstpinname="XY">
+   <LINK srcnodeid="72" srcpinname="Position (Projection) XY" dstnodeid="291" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="291" srcpinname="X" dstnodeid="214" dstpinname="Input">
    </LINK>
@@ -770,4 +774,6 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Device" dstnodeid="234" dstpinname="Keyboard">
    </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
    </PATCH>

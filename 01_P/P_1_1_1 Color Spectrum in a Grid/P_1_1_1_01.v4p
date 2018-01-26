@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_1_1_1 Color Spectrum in a Grid\P_1_1_1_01.v4p">
-   <BOUNDS height="10680" left="360" top="720" type="Window" width="14895">
+   <BOUNDS height="10275" left="360" top="720" type="Window" width="14895">
    </BOUNDS>
    <NODE componentmode="Hidden" id="85" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="6285" top="8310" type="Node" width="100">
@@ -42,24 +42,6 @@
    <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="81" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="6285" top="8985" type="Node" width="7905">
-   </BOUNDS>
-   <BOUNDS height="0" left="6285" top="8985" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="9135" top="12450" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer Template Count" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Layer 3" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="89" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
@@ -234,16 +216,14 @@
    </LINK>
    <LINK dstnodeid="85" dstpinname="Transform" linkstyle="Bezier" srcnodeid="84" srcpinname="Transform Out">
    </LINK>
-   <LINK dstnodeid="81" dstpinname="Layer 1" srcnodeid="85" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="89" dstpinname="Spread Count" srcnodeid="110" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="90" dstpinname="Spread Count" srcnodeid="111" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="172" nodename="Count (Value)" systemname="Count (Value)">
-   <BOUNDS height="100" left="8670" top="5820" type="Node" width="100">
+   <BOUNDS height="100" left="8625" top="5820" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="8670" top="5805" type="Box" width="0">
+   <BOUNDS height="0" left="8625" top="5805" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="12600" top="5925" type="Window" width="0">
    </BOUNDS>
@@ -271,9 +251,9 @@
    <LINK dstnodeid="173" dstpinname="Input 2" srcnodeid="172" srcpinname="Count">
    </LINK>
    <NODE componentmode="Hidden" id="175" nodename="Count (Value)" systemname="Count (Value)">
-   <BOUNDS height="100" left="7845" top="5820" type="Node" width="100">
+   <BOUNDS height="100" left="7815" top="5820" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="7845" top="5820" type="Box" width="0">
+   <BOUNDS height="0" left="7815" top="5820" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="12600" top="5925" type="Window" width="0">
    </BOUNDS>
@@ -389,9 +369,9 @@
    <NODE componentmode="InABox" id="191" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="2040" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="6495" left="660" top="2040" type="Box" width="4500">
+   <BOUNDS height="5325" left="660" top="2040" type="Box" width="4455">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross node corresponds to 2 for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;By dividing 2 by the number of quads (horizontally and vertically) this returns the scaling in X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).&cr;&lf;&cr;&lf;The Cursor (DX9) node is used to display the cursor of the mouse in the render window.&cr;&lf;&cr;&lf;A Group node allows you to combine several layers and feed them to a Renderer.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross node corresponds to 2 for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;Dividing 2 by the number of quads (horizontally and vertically) returns the scaling on X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -470,38 +450,6 @@
    <BOUNDS height="405" left="210" top="6420" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="184" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="210" top="7260" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="210" top="7260" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="183" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="210" top="7920" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="210" top="7920" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -593,9 +541,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="198" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9390" top="6045" type="Node" width="315">
+   <BOUNDS height="270" left="8970" top="6255" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="9390" top="6045" type="Box" width="450">
+   <BOUNDS height="405" left="8970" top="6255" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -632,38 +580,6 @@
    <BOUNDS height="405" left="10500" top="7095" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="201" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9630" top="8250" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="9630" top="8250" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="6.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="202" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5760" top="8880" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="5760" top="8880" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="7.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -716,7 +632,7 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <NODE id="107" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE id="107" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" height="270" left="7800" top="630" width="1350">
    </BOUNDS>
    <BOUNDS type="Box" height="0" left="7800" top="630" width="0">
@@ -729,39 +645,33 @@
    </PIN>
    <PIN pinname="Mouse" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="107" srcpinname="PositionXY" dstnodeid="206" dstpinname="XY">
+   <LINK srcnodeid="107" srcpinname="Position (Projection) XY" dstnodeid="206" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="206" srcpinname="X" dstnodeid="110" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="206" srcpinname="Y" dstnodeid="111" dstpinname="Input">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="208" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="270" left="6285" top="9465" type="Node" width="1530">
+   <NODE componentmode="InAWindow" id="211" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6285" top="8940" type="Node" width="1530">
    </BOUNDS>
-   <BOUNDS height="1800" left="6285" top="9465" type="Box" width="2400">
+   <BOUNDS height="1800" left="6285" top="8940" type="Box" width="2400">
    </BOUNDS>
    <BOUNDS height="4755" left="15240" top="720" type="Window" width="7800">
    </BOUNDS>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="208" dstpinname="Layers" srcnodeid="81" srcpinname="Layer">
-   </LINK>
-   <NODE systemname="Cursor (DX9)" filename="..\..\..\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\DX9\Cursor (DX9).v4p" nodename="Cursor (DX9)" componentmode="Hidden" id="210">
-   <BOUNDS type="Node" left="10200" top="8325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="210" srcpinname="Layer" dstnodeid="81" dstpinname="Layer 2">
+   <LINK srcnodeid="85" srcpinname="Layer" dstnodeid="211" dstpinname="Layers">
    </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
    </PATCH>

@@ -1,71 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_0_02 Hello Shape\KeyboardControls.v4p">
    <BOUNDS height="4605" left="12930" top="4650" type="Window" width="13815">
    </BOUNDS>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="29" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <PIN pinname="Y Input Value" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Show Value" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Slider" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Slider Behavior" pintype="Configuration" slicecount="1" values="Toggle">
-   </PIN>
-   <BOUNDS height="480" left="5745" top="3195" type="Box" width="480">
-   </BOUNDS>
-   <BOUNDS height="100" left="5745" top="3195" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="160" left="9510" top="11040" type="Window" width="215">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="Out">
-   </PIN>
-   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
-   </PIN>
-   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Connections" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Background" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Sticky Slider" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Allow MouseOffset" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Precision" pintype="Configuration" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Slider Alignment" pintype="Configuration" slicecount="1" values="Grid">
-   </PIN>
-   <PIN pinname="Slider Constraints" pintype="Configuration" slicecount="1" values="scX">
-   </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="X Output Value" pintype="Output" visible="0">
-   </PIN>
-   <PIN pinname="Y Output Value" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="32" nodename="OR (Boolean)" systemname="OR (Boolean)">
-   <BOUNDS height="270" left="6165" top="2430" type="Node" width="1605">
+   <BOUNDS height="270" left="6165" top="2430" type="Node" width="1545">
    </BOUNDS>
    <BOUNDS height="0" left="6165" top="2430" type="Box" width="0">
    </BOUNDS>
@@ -82,12 +20,10 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="29" dstpinname="Y Input Value" srcnodeid="32" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="34" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
-   <BOUNDS height="100" left="7710" top="1860" type="Node" width="100">
+   <BOUNDS height="100" left="7635" top="1995" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="7710" top="1920" type="Box" width="0">
+   <BOUNDS height="0" left="7635" top="2055" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="6270" top="5895" type="Window" width="0">
    </BOUNDS>
@@ -232,6 +168,26 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Device" dstnodeid="38" dstpinname="Keyboard">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="51">
+   <BOUNDS type="Box" left="6150" top="3000" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6150" top="3000" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="51" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    </PATCH>

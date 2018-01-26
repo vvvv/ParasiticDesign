@@ -1,9 +1,9 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_5_01 Drawing with Tablet\P_2_3_5_01.v4p" filename="C:\Work\Study\curves.v4p" systemname="curves">
-   <BOUNDS height="9705" left="555" top="675" type="Window" width="15330">
+   <BOUNDS height="9705" left="555" top="675" type="Window" width="15750">
    </BOUNDS>
    <NODE componentmode="Hidden" id="76" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="11775" top="6405" type="Node" width="100">
+   <BOUNDS height="100" left="11940" top="6735" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -11,7 +11,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="77" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="11460" top="6870" type="Node" width="100">
+   <BOUNDS height="100" left="11625" top="7200" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Transform" visible="1">
    </PIN>
@@ -21,23 +21,25 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="78" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <BOUNDS height="100" left="10230" top="6405" type="Node" width="100">
+   <BOUNDS height="100" left="10395" top="6735" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="XYZ">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="77" dstpinname="Transform" srcnodeid="78" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="77" dstpinname="Texture" srcnodeid="76" srcpinname="Texture Out">
    </LINK>
-   <NODE componentmode="InAWindow" id="79" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="100" left="11460" top="7890" type="Node" width="100">
+   <NODE componentmode="InAWindow" id="79" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="11625" top="8220" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="1800" left="11460" top="7890" type="Box" width="2400">
+   <BOUNDS height="1800" left="11625" top="8220" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="8250" left="15885" top="675" type="Window" width="8505">
+   <BOUNDS height="8130" left="16155" top="645" type="Window" width="7245">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -51,25 +53,27 @@
    </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="80" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="13200" top="7890" type="Node" width="100">
+   <BOUNDS height="100" left="12210" top="5685" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
+   <PIN pinname="Aspect Width" visible="1" slicecount="1" values="551">
    </PIN>
-   <PIN pinname="Aspect Height" visible="1">
+   <PIN pinname="Aspect Height" visible="1" slicecount="1" values="511">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="80" dstpinname="Aspect Width" srcnodeid="79" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="80" dstpinname="Aspect Height" srcnodeid="79" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="79" dstpinname="Aspect Ratio" srcnodeid="80" srcpinname="Transform Out">
+   <LINK dstnodeid="79" dstpinname="Aspect Ratio" srcnodeid="80" srcpinname="Transform Out" hiddenwhenlocked="1">
    </LINK>
    <NODE componentmode="Hidden" id="81" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="11475" top="7395" type="Node" width="3360">
+   <BOUNDS height="270" left="11640" top="7725" type="Node" width="3360">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -83,7 +87,7 @@
    <LINK dstnodeid="79" dstpinname="Layers" srcnodeid="81" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="85" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="13110" top="6870" type="Node" width="100">
+   <BOUNDS height="100" left="13275" top="7200" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
@@ -97,9 +101,9 @@
    <LINK dstnodeid="81" dstpinname="Layer 2" srcnodeid="85" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="124" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="11235" top="6075" type="Node" width="0">
+   <BOUNDS height="0" left="11310" top="6315" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="11235" top="6075" type="Box" width="480">
+   <BOUNDS height="240" left="11310" top="6315" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -141,7 +145,7 @@
    </BOUNDS>
    <BOUNDS height="3600" left="11895" top="2835" type="Box" width="4800">
    </BOUNDS>
-   <BOUNDS height="7860" left="7050" top="4800" type="Window" width="13890">
+   <BOUNDS height="7860" left="6780" top="8445" type="Window" width="13890">
    </BOUNDS>
    <PIN pinname="Draw Mode" visible="1">
    </PIN>
@@ -224,8 +228,6 @@
    </NODE>
    <LINK dstnodeid="140" dstpinname="Exclusive" srcnodeid="145" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="139" dstpinname="Pressure" srcnodeid="140" srcpinname="Pressure">
-   </LINK>
    <NODE componentmode="InABox" id="148" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="9225" top="3015" type="Node" width="0">
    </BOUNDS>
@@ -273,24 +275,24 @@
    </BOUNDS>
    <PIN pinname="Transform" visible="1">
    </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="152" dstpinname="Texture" srcnodeid="138" srcpinname="Element Texture">
-   </LINK>
-   <LINK dstnodeid="152" dstpinname="Enabled" srcnodeid="143" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="156" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
    <BOUNDS height="100" left="8745" top="3600" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="85" dstpinname="Transform" linkstyle="PolyLine" srcnodeid="156" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="156" dstpinname="ScaleX" srcnodeid="148" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="156" dstpinname="ScaleY" srcnodeid="148" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="156" dstpinname="TranslateX" srcnodeid="140" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="156" dstpinname="TranslateY" srcnodeid="140" srcpinname="Y">
    </LINK>
    <LINK dstnodeid="156" dstpinname="Rotate" srcnodeid="122" srcpinname="Angle">
    </LINK>
@@ -489,9 +491,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="198" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8265" top="6240" type="Node" width="315">
+   <BOUNDS height="270" left="7725" top="6240" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="8265" top="6240" type="Box" width="450">
+   <BOUNDS height="405" left="7725" top="6240" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -505,9 +507,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="199" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8940" top="5565" type="Node" width="315">
+   <BOUNDS height="270" left="8400" top="5565" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="3105" left="8940" top="5565" type="Box" width="420">
+   <BOUNDS height="3105" left="8400" top="5565" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;||&cr;&lf;|">
    </PIN>
@@ -520,52 +522,66 @@
    <PIN pinname="Size" slicecount="1" values="8">
    </PIN>
    </NODE>
-   <NODE id="68" componentmode="Hidden" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <PIN pinname="Backbuffer Width" visible="1">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE systemname="WithinNormalizedProjection (Transform)" nodename="WithinNormalizedProjection (Transform)" componentmode="Hidden" id="200">
+   <BOUNDS type="Node" left="9150" top="6315" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
+   </NODE>
+   <LINK srcnodeid="200" srcpinname="Transform Out" dstnodeid="78" dstpinname="Transform In">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <NODE id="203" componentmode="Hidden" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS type="Node" height="100" left="10350" top="5670" width="100">
    </BOUNDS>
    <BOUNDS type="Box" height="1800" left="10350" top="5670" width="2400">
    </BOUNDS>
    <BOUNDS type="Window" height="8250" left="15885" top="675" width="8505">
    </BOUNDS>
-   <PIN pinname="EX9 Out" visible="1">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="68" dstpinname="Layers">
+   <LINK srcnodeid="152" srcpinname="Layer" dstnodeid="203" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="122" srcpinname="Reset" dstnodeid="68" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine">
+   <LINK srcnodeid="122" srcpinname="Reset" dstnodeid="203" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine">
    <LINKPOINT x="13560" y="2610">
    </LINKPOINT>
    <LINKPOINT x="13560" y="4845">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Height" dstnodeid="68" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier">
-   <LINKPOINT x="10350" y="10580">
+   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Height" dstnodeid="203" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="10460" y="10800">
    </LINKPOINT>
-   <LINKPOINT x="7740" y="3625">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Width" dstnodeid="68" dstpinname="Backbuffer Width" hiddenwhenlocked="1" linkstyle="Bezier">
-   <LINKPOINT x="10440" y="9635">
-   </LINKPOINT>
-   <LINKPOINT x="8790" y="4420">
+   <LINKPOINT x="7795" y="3735">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="68" srcpinname="EX9 Out" dstnodeid="76" dstpinname="Source">
+   <LINK srcnodeid="79" srcpinname="Actual Backbuffer Width" dstnodeid="203" dstpinname="Backbuffer Width" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="10550" y="9855">
+   </LINKPOINT>
+   <LINKPOINT x="8845" y="4530">
+   </LINKPOINT>
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
-   </PACK>
+   <LINK srcnodeid="203" srcpinname="EX9 Out" dstnodeid="76" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Width" dstnodeid="80" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Height" dstnodeid="80" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="80" srcpinname="Transform Out" dstnodeid="203" dstpinname="Aspect Ratio">
+   </LINK>
+   <LINK srcnodeid="140" srcpinname="X" dstnodeid="156" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="140" srcpinname="Y" dstnodeid="156" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="143" srcpinname="Output" dstnodeid="152" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="140" srcpinname="Pressure" dstnodeid="139" dstpinname="Pressure">
+   </LINK>
    </PATCH>

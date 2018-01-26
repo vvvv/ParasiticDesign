@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" systemname="DrawCircles">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" systemname="DrawCircles">
    <BOUNDS height="5490" left="1170" top="7605" type="Window" width="4500">
    </BOUNDS>
    <NODE componentmode="Hidden" id="8" nodename="Segment (DX9)" systemname="Segment (DX9)">
@@ -14,18 +14,6 @@
    <PIN pinname="Draw Slicewise" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="6" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="2610" top="4530" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1" slicecount="1" values="520">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1" slicecount="1" values="522">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Alignment" slicecount="1" values="FitWidth">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="5" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
@@ -118,56 +106,24 @@
    </NODE>
    <LINK dstnodeid="2" dstpinname="XY" srcnodeid="9" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="InABox" id="10" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="3660" top="4530" type="Node" width="315">
+   <NODE id="11" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS type="Node" height="270" left="645" top="4260" width="1755">
    </BOUNDS>
-   <BOUNDS height="300" left="3660" top="4530" type="Box" width="345">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="F1">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="10">
-   </PIN>
-   </NODE>
-   <NODE id="7" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <BOUNDS type="Node" height="270" left="645" top="4545" width="1755">
-   </BOUNDS>
-   <BOUNDS type="Box" height="1800" left="645" top="4545" width="2400">
+   <BOUNDS type="Box" height="1800" left="645" top="4260" width="2400">
    </BOUNDS>
    <BOUNDS type="Window" height="8190" left="11955" top="0" width="7920">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Actual Backbuffer Width" dstnodeid="6" dstpinname="Aspect Width">
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="11" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Actual Backbuffer Height" dstnodeid="6" dstpinname="Aspect Height">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Transform Out" dstnodeid="7" dstpinname="Aspect Ratio">
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
-   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

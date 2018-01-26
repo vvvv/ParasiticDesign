@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\P_2_1_1_03.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_1_1_03 Arrangement in a Grid\P_2_1_1_03_2.v4p" systemname="P_2_1_1_03_2" scrollx="0" scrolly="-720">
-   <BOUNDS height="13755" left="3135" top="900" type="Window" width="13515">
+   <BOUNDS height="13755" left="870" top="375" type="Window" width="13515">
    </BOUNDS>
    <NODE componentmode="InABox" id="223" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="585" type="Node" width="840">
@@ -452,28 +452,6 @@
    </NODE>
    <LINK dstnodeid="336" dstpinname="Input 2" srcnodeid="337" srcpinname="Whole Part">
    </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="395" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="5190" top="15510" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5190" top="15510" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="9510" left="14760" top="495" type="Window" width="9240">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Layers">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="261" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="8160" top="1095" type="Node" width="840">
    </BOUNDS>
@@ -1008,8 +986,6 @@
    <PIN pinname="Cap Resolution">
    </PIN>
    </NODE>
-   <LINK dstnodeid="395" dstpinname="Layers" srcnodeid="232" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="232" dstpinname="FromXY" srcnodeid="359" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="232" dstpinname="ToXY" srcnodeid="357" srcpinname="Output">
@@ -1040,10 +1016,10 @@
    </LINK>
    <LINK srcnodeid="497" srcpinname="Angle" dstnodeid="492" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="498">
+   <NODE systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="498">
    <BOUNDS type="Node" left="8010" top="2550" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
@@ -1058,7 +1034,7 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="498" srcpinname="PositionXY" dstnodeid="499" dstpinname="XY">
+   <LINK srcnodeid="498" srcpinname="Position (Projection) XY" dstnodeid="499" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="499" srcpinname="X" dstnodeid="271" dstpinname="Input">
    </LINK>
@@ -1068,6 +1044,24 @@
    </LINK>
    <LINK srcnodeid="498" srcpinname="Left Button" dstnodeid="250" dstpinname="Y Input Value">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="500" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="5190" top="15510" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5190" top="15510" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7140" left="14265" top="405" type="Window" width="7110">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="500" dstpinname="Layers" srcnodeid="232" srcpinname="Layer">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    </PATCH>

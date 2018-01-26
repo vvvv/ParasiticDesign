@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents_TABLET\P_2_2_3_02_TABLET.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\P_2_2_3_02_2.v4p" systemname="P_2_2_3_02_2">
-   <BOUNDS height="11955" left="360" top="1995" type="Window" width="9285">
+   <BOUNDS height="13575" left="375" top="690" type="Window" width="9285">
    </BOUNDS>
    <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="150" type="Node" width="945">
@@ -484,10 +484,6 @@
    </NODE>
    <LINK dstnodeid="639" dstpinname="Exclusive" srcnodeid="638" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="563" dstpinname="X" srcnodeid="639" srcpinname="X">
-   </LINK>
-   <LINK dstnodeid="563" dstpinname="Y" srcnodeid="639" srcpinname="Y">
-   </LINK>
    <LINK dstnodeid="632" dstpinname="Input" srcnodeid="639" srcpinname="Pressure">
    </LINK>
    <LINK dstnodeid="636" dstpinname="Input" srcnodeid="639" srcpinname="Buttons">
@@ -528,34 +524,32 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="Rendering.v4p" id="550" nodename="Rendering.v4p" systemname="Rendering">
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <BOUNDS height="270" left="375" top="10950" type="Node" width="1560">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <LINK srcnodeid="639" srcpinname="X" dstnodeid="563" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="639" srcpinname="Y" dstnodeid="563" dstpinname="Y">
+   </LINK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="645" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="390" top="11205" type="Node" width="1650">
    </BOUNDS>
-   <BOUNDS height="3600" left="375" top="10950" type="Box" width="4800">
+   <BOUNDS height="1800" left="390" top="11205" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="7545" left="9450" top="6465" type="Window" width="12270">
+   <BOUNDS height="6705" left="9525" top="705" type="Window" width="6435">
    </BOUNDS>
-   <PIN pinname="Texture" visible="1">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    </NODE>
-   <LINK dstnodeid="550" dstpinname="Enabled" srcnodeid="398" srcpinname="Freeze">
+   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="645" dstpinname="Layers">
    </LINK>
-   <LINK dstnodeid="550" dstpinname="Clear" srcnodeid="398" srcpinname="Clear">
+   <LINK srcnodeid="398" srcpinname="Freeze" dstnodeid="645" dstpinname="Enabled">
    </LINK>
-   <LINK dstnodeid="550" dstpinname="Layers" srcnodeid="494" srcpinname="Output">
+   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="645" dstpinname="Clear">
    </LINK>
-   <LINK dstnodeid="550" dstpinname="Mouse XYZ" hiddenwhenlocked="1" srcnodeid="563" srcpinname="XYZ">
-   <LINKPOINT x="1890" y="6045">
-   </LINKPOINT>
-   </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
-   </PACK>
    </PATCH>

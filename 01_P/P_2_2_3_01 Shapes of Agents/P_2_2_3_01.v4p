@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01">
-   <BOUNDS height="7860" left="0" top="0" type="Window" width="12705">
+   <BOUNDS height="9135" left="0" top="0" type="Window" width="12705">
    </BOUNDS>
    <NODE componentmode="InABox" id="17" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="540" type="Node" width="840">
@@ -327,9 +327,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="612" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="6510" top="6720" type="Node" width="315">
+   <BOUNDS height="270" left="6525" top="6885" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="6510" top="6720" type="Box" width="450">
+   <BOUNDS height="405" left="6525" top="6885" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
    </PIN>
@@ -364,30 +364,6 @@
    </LINK>
    <LINK dstnodeid="608" dstpinname="Update" srcnodeid="613" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="Rendering.v4p" id="550" nodename="Rendering.v4p" systemname="Rendering">
-   <BOUNDS height="100" left="7035" top="6795" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3600" left="7035" top="6795" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="7545" left="9195" top="5040" type="Window" width="12270">
-   </BOUNDS>
-   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="550" dstpinname="Clear" srcnodeid="398" srcpinname="Clear">
-   </LINK>
-   <LINK dstnodeid="550" dstpinname="Enabled" srcnodeid="398" srcpinname="Freeze">
-   </LINK>
-   <LINK dstnodeid="550" dstpinname="Layers" srcnodeid="494" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="615" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="9795" top="2490" type="Node" width="315">
    </BOUNDS>
@@ -404,7 +380,7 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="616">
    <BOUNDS type="Node" left="8835" top="1215" width="100" height="100">
@@ -414,7 +390,7 @@
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <NODE id="433" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE id="433" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS type="Node" height="100" left="8655" top="690" width="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
@@ -423,19 +399,45 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="433" srcpinname="Left Button" dstnodeid="463" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="433" srcpinname="PositionXY" dstnodeid="616" dstpinname="XY">
+   <LINK srcnodeid="433" srcpinname="Position (Projection) XY" dstnodeid="616" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="562" dstpinname="Go To Position">
    </LINK>
    <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="562" dstpinname="Jump To Position">
    </LINK>
-   <LINK srcnodeid="616" srcpinname="XYZ" dstnodeid="550" dstpinname="Mouse XYZ">
-   <LINKPOINT x="7980" y="1680">
-   </LINKPOINT>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="617">
+   <BOUNDS type="Node" left="7050" top="6975" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7050" top="6975" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12585" top="0" width="5610" height="5280">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="617" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="617" dstpinname="Clear">
    </LINK>
    </PATCH>

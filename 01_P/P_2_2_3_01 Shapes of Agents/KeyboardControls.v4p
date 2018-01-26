@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\KeyboardControls.v4p">
    <BOUNDS height="4905" left="15600" top="5700" type="Window" width="5550">
    </BOUNDS>
@@ -109,17 +109,15 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="52" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
-   <BOUNDS height="100" left="3150" top="2205" type="Node" width="100">
+   <BOUNDS height="100" left="3180" top="1950" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="3150" top="2235" type="Box" width="0">
+   <BOUNDS height="0" left="3180" top="1980" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="6270" top="5895" type="Window" width="0">
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="55" dstpinname="Input 3" srcnodeid="52" srcpinname="Bang">
-   </LINK>
    <LINK dstnodeid="29" dstpinname="Y Input Value" srcnodeid="55" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="67" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -256,7 +254,7 @@
    </NODE>
    <LINK srcnodeid="71" srcpinname="Output Enum" dstnodeid="68" dstpinname="Key Mode">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
    <NODE componentmode="Hidden" id="15" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="495" top="195" type="Node" width="100">
@@ -276,4 +274,20 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Device" dstnodeid="68" dstpinname="Keyboard">
    </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="72">
+   <BOUNDS type="Node" left="3180" top="2310" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3180" top="2310" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="52" srcpinname="Bang" dstnodeid="72" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="72" srcpinname="Output 1" dstnodeid="55" dstpinname="Input 3">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
    </PATCH>

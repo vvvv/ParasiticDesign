@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_02 Text Image\KeyboardControl.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_3_02 Text Image\KeyboardControl.v4p" systemname="KeyboardControl">
    <BOUNDS height="7230" left="3975" top="4995" type="Window" width="13260">
    </BOUNDS>
@@ -360,7 +360,7 @@
    </NODE>
    <LINK dstnodeid="138" dstpinname="Y Input Value" srcnodeid="120" srcpinname="Output">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="141">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="141">
    <BOUNDS type="Node" left="8655" top="1695" width="1515" height="270">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|D3,D4,D1,D2|">
@@ -373,7 +373,7 @@
    </PIN>
    <PIN pinname="D2" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="141" srcpinname="D3" dstnodeid="125" dstpinname="Input 1">
@@ -388,30 +388,38 @@
    </LINK>
    <LINK srcnodeid="141" srcpinname="D2" dstnodeid="87" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="142">
-   <BOUNDS type="Node" left="7095" top="585" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   <PIN pinname="Key" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="7095" top="585">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="142" srcpinname="Keyboard" dstnodeid="141" dstpinname="Keyboard">
-   </LINK>
    <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="143">
    <BOUNDS type="Node" left="8040" top="1185" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="||" encoded="0">
+   <PIN pinname="Default" slicecount="1" encoded="0" values="||">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="142" srcpinname="Key" dstnodeid="143" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="143" srcpinname="Output" dstnodeid="72" dstpinname="Input 1">
    </LINK>
+   <NODE id="142" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden">
+   <BOUNDS type="Node" left="7095" top="585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7095" top="585">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   <PIN pinname="Key Name" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="142" srcpinname="Device" dstnodeid="141" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="142" srcpinname="Key Name" dstnodeid="143" dstpinname="Input">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

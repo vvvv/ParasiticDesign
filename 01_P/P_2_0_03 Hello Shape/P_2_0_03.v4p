@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" filename="C:\Users\Joreg\Documents\vvvv\ParasiticDesign\01_P\P_2_0_03 Hello Shape\P_2_0_03.v4p" systemname="P_2_0_03">
    <BOUNDS height="8970" left="1140" top="1605" type="Window" width="12915">
    </BOUNDS>
@@ -56,46 +56,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="20" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6960" top="7590" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6960" top="7590" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="8190" left="14055" top="1605" type="Window" width="7920">
-   </BOUNDS>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="|wait for 4 frames|">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="discard">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="11" nodename="Map (Value)" systemname="Map (Value)">
@@ -182,16 +142,14 @@
    </LINK>
    <LINK dstnodeid="26" dstpinname="ScaleY" linkstyle="PolyLine" srcnodeid="9" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="20" dstpinname="Layers" srcnodeid="21" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="InABox" id="41" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="7845" top="6900" type="Node" width="100">
+   <BOUNDS height="100" left="7560" top="6855" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="7845" top="6900" type="Box" width="480">
+   <BOUNDS height="480" left="7560" top="6855" type="Box" width="480">
    </BOUNDS>
    <BOUNDS height="160" left="4710" top="11340" type="Window" width="215">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -339,13 +297,13 @@
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="39" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="3960" left="13590" top="4830" type="Window" width="3960">
    </BOUNDS>
-   <BOUNDS height="100" left="7170" top="6405" type="Node" width="100">
+   <BOUNDS height="100" left="7140" top="6420" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Out" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="20" dstpinname="Clear" srcnodeid="39" srcpinname="Out">
-   </LINK>
    <LINK dstnodeid="41" dstpinname="Y Input Value" srcnodeid="39" srcpinname="Out">
    </LINK>
    <NODE componentmode="Hidden" filename="ColorSwitcher.v4p" id="79" nodename="ColorSwitcher.v4p" systemname="ColorSwitcher">
@@ -388,7 +346,7 @@
    </LINK>
    <LINK srcnodeid="81" srcpinname="Y" dstnodeid="11" dstpinname="Input">
    </LINK>
-   <NODE componentmode="Hidden" id="12" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="12" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="7455" top="1290" type="Node" width="3060">
    </BOUNDS>
    <BOUNDS height="0" left="7455" top="1290" type="Box" width="0">
@@ -401,13 +359,35 @@
    </PIN>
    <PIN pinname="Left Button" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="21" dstpinname="Enabled" srcnodeid="12" srcpinname="Left Button">
    </LINK>
-   <LINK srcnodeid="12" srcpinname="PositionXY" dstnodeid="81" dstpinname="XY">
+   <LINK srcnodeid="12" srcpinname="Position (Projection) XY" dstnodeid="81" dstpinname="XY">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="41" dstpinname="SliceOffset">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="82" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6960" top="7590" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6960" top="7590" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8190" left="14055" top="1605" type="Window" width="7920">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="82" dstpinname="Layers" srcnodeid="21" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="82" dstpinname="Clear">
+   </LINK>
    </PATCH>

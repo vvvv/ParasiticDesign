@@ -1,69 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug28.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_0_03 Hello Shape\KeyboardControls.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_0_03 Hello Shape\KeyboardControls.v4p">
    <BOUNDS height="3960" left="13590" top="4830" type="Window" width="3960">
    </BOUNDS>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="29" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <PIN pinname="Y Input Value" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Show Value" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Slider" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Minimum" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Slider Behavior" pintype="Configuration" slicecount="1" values="Toggle">
-   </PIN>
-   <BOUNDS height="480" left="675" top="2640" type="Box" width="480">
-   </BOUNDS>
-   <BOUNDS height="100" left="675" top="2640" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="160" left="9510" top="11040" type="Window" width="215">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="Out">
-   </PIN>
-   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
-   </PIN>
-   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
-   </PIN>
-   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Connections" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Show Background" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Sticky Slider" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Allow MouseOffset" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Precision" pintype="Configuration" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Slider Alignment" pintype="Configuration" slicecount="1" values="Grid">
-   </PIN>
-   <PIN pinname="Slider Constraints" pintype="Configuration" slicecount="1" values="scX">
-   </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="X Input Value" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="X Output Value" pintype="Output" visible="0">
-   </PIN>
-   <PIN pinname="Y Output Value" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="32" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <BOUNDS height="270" left="1095" top="1875" type="Node" width="1635">
    </BOUNDS>
@@ -82,8 +20,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="29" dstpinname="Y Input Value" srcnodeid="32" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="34" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
    <BOUNDS height="100" left="2670" top="1155" type="Node" width="100">
    </BOUNDS>
@@ -96,7 +32,7 @@
    </NODE>
    <LINK dstnodeid="32" dstpinname="Input 3" srcnodeid="34" srcpinname="Bang">
    </LINK>
-   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
+   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global Legacy2)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
    <BOUNDS height="100" left="1095" top="330" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="0" left="1095" top="330" type="Box" width="0">
@@ -105,10 +41,10 @@
    </BOUNDS>
    <PIN pinname="Keyboard Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="39" nodename="KeyMatch (String)" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="39" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="1110" top="1170" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" encoded="0" values="||">
@@ -134,4 +70,26 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="39" dstpinname="Keyboard">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40">
+   <BOUNDS type="Box" left="1080" top="2520" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1080" top="2520" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="40" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_1_01 Drawing with animated Brush\P_2_3_1_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_1_01 Drawing with animated Brush\P_2_3_1_01.v4p" systemname="P_2_3_1_01">
    <BOUNDS height="11640" left="360" top="285" type="Window" width="14610">
    </BOUNDS>
@@ -84,16 +84,6 @@
    <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Render State" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="60" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="8085" top="10590" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="61" nodename="Transform (Transform 2d)" systemname="Transform (Transform 2d)">
@@ -301,8 +291,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="104" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="56" srcpinname="UpDown">
-   </LINK>
-   <LINK dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="56" srcpinname="Out">
    </LINK>
    <LINK dstnodeid="84" dstpinname="SwitchColor" linkstyle="PolyLine" srcnodeid="56" srcpinname="SwitchColor">
    </LINK>
@@ -584,63 +572,11 @@
    </NODE>
    <LINK dstnodeid="84" dstpinname="SwitchColor" srcnodeid="56" srcpinname="Color">
    </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="20" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <BOUNDS height="270" left="6060" top="10590" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6060" top="10590" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7710" left="14970" top="285" type="Window" width="9840">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="immediately">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="discard">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="20" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="60" dstpinname="Aspect Width" srcnodeid="20" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="60" dstpinname="Aspect Height" srcnodeid="20" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="20" dstpinname="Aspect Ratio" srcnodeid="60" srcpinname="Transform Out">
-   </LINK>
    <LINK srcnodeid="56" srcpinname="Length" dstnodeid="104" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="56" srcpinname="Rotation" dstnodeid="63" dstpinname="Period">
    </LINK>
-   <LINK srcnodeid="56" srcpinname="Clear" dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1">
-   </LINK>
-   <NODE componentmode="Hidden" id="57" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="57" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="6465" top="2760" type="Node" width="1425">
    </BOUNDS>
    <PIN pinname="Left Button" visible="1">
@@ -649,7 +585,7 @@
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="88" dstpinname="Input" hiddenwhenlocked="0" linkstyle="PolyLine" srcnodeid="57" srcpinname="Left Button">
@@ -668,12 +604,34 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="57" srcpinname="PositionXY" dstnodeid="137" dstpinname="XY">
+   <LINK srcnodeid="57" srcpinname="Position (Projection) XY" dstnodeid="137" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="137" srcpinname="X" dstnodeid="61" dstpinname="TranslateX">
    </LINK>
    <LINK srcnodeid="137" srcpinname="Y" dstnodeid="61" dstpinname="TranslateY">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <LINK dstnodeid="139" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="56" srcpinname="Out">
+   </LINK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="139" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6060" top="10590" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6060" top="10590" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7710" left="14970" top="285" type="Window" width="9840">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="139" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="56" srcpinname="Clear" dstnodeid="139" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
    </PATCH>

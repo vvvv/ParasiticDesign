@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_02 Text Image\P_3_1_3_02.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\P_3_1_3_01.v4p" systemname="P_3_1_3_01">
    <BOUNDS height="12990" left="435" top="945" type="Window" width="16245">
    </BOUNDS>
@@ -102,36 +102,6 @@
    <PIN pinname="Character Encoding" slicecount="1" values="ANSI">
    </PIN>
    <PIN pinname="Former Index" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InAWindow" id="127" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="8925" top="11595" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="5550" left="8925" top="11595" type="Box" width="3855">
-   </BOUNDS>
-   <BOUNDS height="10110" left="16785" top="975" type="Window" width="7860">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="106" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -238,7 +208,7 @@
    </NODE>
    <LINK dstnodeid="130" dstpinname="Normalize" srcnodeid="207" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="Hidden" id="217" nodename="Reader (File)" systemname="Reader (File)">
+   <NODE componentmode="Hidden" id="217" nodename="Reader (File)" systemname="Reader (String)">
    <BOUNDS height="270" left="7590" top="1155" type="Node" width="660">
    </BOUNDS>
    <PIN pinname="Filename" visible="1">
@@ -246,6 +216,8 @@
    <PIN pinname="Read" visible="1">
    </PIN>
    <PIN pinname="Content" visible="1">
+   </PIN>
+   <PIN pinname="Encoding" slicecount="1" values="|System Default|">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="218" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -322,7 +294,7 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String)">
+   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String Legacy)">
    <BOUNDS height="100" left="7590" top="1875" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -554,8 +526,6 @@
    <PIN pinname="Layer 2" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="127" dstpinname="Layers" srcnodeid="267" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" id="269" nodename="Line (EX9.Geometry)" systemname="Line (EX9.Geometry)">
    <BOUNDS height="270" left="13080" top="10290" type="Node" width="1500">
    </BOUNDS>
@@ -589,7 +559,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="LetterPositions.v4p" hiddenwhenlocked="0" id="220" nodename="LetterPositions.v4p" systemname="LetterPositions">
-   <PIN pinname="Mouse X Position" visible="1">
+   <PIN pinname="Mouse X Position" visible="1" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="PosY" visible="1">
    </PIN>
@@ -846,30 +816,48 @@
    </LINK>
    <LINK dstnodeid="220" dstpinname="Selected Letters" hiddenwhenlocked="1" srcnodeid="312" srcpinname="Selected Letters">
    </LINK>
-   <NODE systemname="Mouse (System Global)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Global).v4p" nodename="Mouse (System Global)" componentmode="Hidden" id="328">
+   <NODE componentmode="InAWindow" id="330" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="8925" top="11595" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="5550" left="8925" top="11595" type="Box" width="3855">
+   </BOUNDS>
+   <BOUNDS height="10110" left="16785" top="975" type="Window" width="7860">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="330" dstpinname="Layers" srcnodeid="267" srcpinname="Layer">
+   </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="328">
    <BOUNDS type="Node" left="10530" top="5760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <BOUNDS type="Box" left="10530" top="5760">
    </BOUNDS>
+   <PIN pinname="Position (Projection) XY" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="328" srcpinname="X" dstnodeid="220" dstpinname="Mouse X Position">
-   </LINK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="329">
-   <BOUNDS type="Node" left="10605" top="11595" width="100" height="100">
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="331">
+   <BOUNDS type="Node" left="10695" top="6150" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
+   <PIN pinname="XY" visible="1">
    </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
+   <PIN pinname="X" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="127" srcpinname="Actual Backbuffer Width" dstnodeid="329" dstpinname="Aspect Width">
+   <LINK srcnodeid="328" srcpinname="Position (Projection) XY" dstnodeid="331" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="127" srcpinname="Actual Backbuffer Height" dstnodeid="329" dstpinname="Aspect Height">
+   <LINK srcnodeid="331" srcpinname="X" dstnodeid="220" dstpinname="Mouse X Position">
    </LINK>
-   <LINK srcnodeid="329" srcpinname="Transform Out" dstnodeid="127" dstpinname="Aspect Ratio">
-   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

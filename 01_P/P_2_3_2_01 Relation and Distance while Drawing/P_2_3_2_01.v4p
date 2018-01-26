@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\P_2_3_2_01.v4p" systemname="P_2_3_2_01">
-   <BOUNDS height="10020" left="3765" top="1035" type="Window" width="13680">
+   <BOUNDS height="6840" left="3765" top="1035" type="Window" width="13680">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
@@ -121,9 +121,9 @@
    <NODE componentmode="InABox" id="127" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="645" top="2745" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="3420" left="645" top="2745" type="Box" width="4260">
+   <BOUNDS height="1350" left="645" top="2745" type="Box" width="4290">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This subpatch calculates everything about every new element drawn on screen. Its position, rotation and length.&cr;&lf;&cr;&lf;Every element is then drawn with a Quad with FillMode set to WireFrame and ScaleY set to 0. So there are nice pixellines following the mouse. &cr;&lf;&cr;&lf;Rendering is done in two passes. The first Renderer is not clearing itself every frame, so every drawn pixelline stays on the screen, but nobody actually sees this &quot;screen&quot;, because it&apos;s hidden. Output of this Renderer is used as a texture for a Quad, which is scaled to fill the whole visible area of the second Renderer. This Renderer clears itself every frame with a Background Color and in every frame a textured Quad and a Cursor are drawn.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|This subpatch calculates everything about every new element drawn on screen. Its position, rotation and length.&cr;&lf;&cr;&lf;Every element is then drawn with a Quad with FillMode set to WireFrame and ScaleY set to 0. So there are nice pixellines following the mouse.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -154,22 +154,6 @@
    <BOUNDS height="405" left="195" top="3345" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="124" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="195" top="4185" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="195" top="4185" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -214,111 +198,9 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="136" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="9405" top="7215" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="9405" top="7215" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
    <LINK dstnodeid="84" dstpinname="SwitchColor" srcnodeid="56" srcpinname="Color">
    </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="20" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <PIN pinname="Aspect Ratio" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <BOUNDS height="270" left="8505" top="5610" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="8505" top="5610" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7710" left="13230" top="5475" type="Window" width="9840">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="immediately">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Swap Effect" slicecount="1" values="discard">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="EX9 Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="56" srcpinname="Clear">
-   </LINK>
-   <LINK dstnodeid="20" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="61" dstpinname="ScaleX" srcnodeid="141" srcpinname="+/-">
-   </LINK>
-   <NODE componentmode="Hidden" id="142" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="10320" top="6555" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Source" visible="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="142" dstpinname="Source" srcnodeid="20" srcpinname="EX9 Out">
-   </LINK>
-   <NODE componentmode="Hidden" id="144" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="100" left="9990" top="7305" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Texture Transform" slicecount="1" visible="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="144" dstpinname="Texture" srcnodeid="142" srcpinname="Texture Out">
-   </LINK>
-   <NODE componentmode="Hidden" id="149" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="10005" top="7815" type="Node" width="1905">
-   </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="149" dstpinname="Layer 1" srcnodeid="144" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="139" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <PIN pinname="Y Input Value" slicecount="1" values="0.01">
@@ -368,64 +250,6 @@
    <PIN pinname="Line Length" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="20" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="141" srcpinname="Clear">
-   </LINK>
-   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="168" managers="" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
-   <PIN pinname="Transform Out" pintype="Output" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="9165" top="6555" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="XYZ" pintype="Input" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Transform In" pintype="Input" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="144" dstpinname="Transform" srcnodeid="168" srcpinname="Transform Out">
-   </LINK>
-   <NODE componentmode="InABox" id="171" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="9855" top="6180" type="Node" width="0">
-   </BOUNDS>
-   <BOUNDS height="240" left="9855" top="6180" type="Box" width="375">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="2">
-   </PIN>
-   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="168" dstpinname="XYZ" srcnodeid="171" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="174" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="270" left="10005" top="8295" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="10005" top="8295" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7710" left="17445" top="1035" type="Window" width="9840">
-   </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="20" dstpinname="Backbuffer Height" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="174" srcpinname="Actual Backbuffer Height">
-   <LINKPOINT x="7930" y="11220">
-   </LINKPOINT>
-   <LINKPOINT x="4910" y="3975">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="20" dstpinname="Backbuffer Width" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="174" srcpinname="Actual Backbuffer Width">
-   <LINKPOINT x="8290" y="10755">
-   </LINKPOINT>
-   <LINKPOINT x="5990" y="4395">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="174" dstpinname="Layers" srcnodeid="149" srcpinname="Layer">
-   </LINK>
    <NODE id="137" componentmode="Hidden" filename="CalculateNewElement.v4p" nodename="CalculateNewElement.v4p" systemname="CalculateNewElement">
    <PIN pinname="Step Size">
    </PIN>
@@ -472,29 +296,9 @@
    </LINK>
    <LINK srcnodeid="139" srcpinname="Y Output Value" dstnodeid="137" dstpinname="Step Size">
    </LINK>
-   <NODE componentmode="Hidden" filename="..\..\..\vvvv-private\public-vl\VL.EditingFramework\vvvv\nodes\modules\DX9\Cursor (DX9).v4p" id="157" nodename="Cursor (DX9)" systemname="Cursor (DX9)">
-   <BOUNDS height="100" left="11445" top="7320" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|0.00953,0.00953,0.00953,1.00000|">
-   </PIN>
-   <PIN pinname="Mouse XYZ" visible="1">
-   </PIN>
-   <PIN pinname="Point Size">
-   </PIN>
-   <BOUNDS left="11445" top="7320" type="Box">
-   </BOUNDS>
-   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Cursor Type" slicecount="1" values="Pointer">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="149" dstpinname="Layer 2" srcnodeid="157" srcpinname="Layer">
-   </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
    </PACK>
-   <NODE componentmode="Hidden" id="57" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="57" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="9075" top="1095" type="Node" width="1350">
    </BOUNDS>
    <PIN pinname="Left Button" visible="1">
@@ -507,17 +311,35 @@
    </PIN>
    <PIN pinname="Mouse" visible="1">
    </PIN>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="84" dstpinname="Generate Random Color" srcnodeid="57" srcpinname="Left Button">
    </LINK>
    <LINK srcnodeid="57" srcpinname="Left Button" dstnodeid="137" dstpinname="Mouse Pressed">
    </LINK>
-   <LINK srcnodeid="57" srcpinname="Mouse" dstnodeid="157" dstpinname="Mouse" hiddenwhenlocked="1">
-   <LINKPOINT x="9053" y="4898">
-   </LINKPOINT>
+   <LINK srcnodeid="57" srcpinname="Position (Projection) XY" dstnodeid="137" dstpinname="Mouse XY">
    </LINK>
-   <LINK srcnodeid="57" srcpinname="PositionXY" dstnodeid="137" dstpinname="Mouse XY">
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="180" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="8490" top="4920" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="8490" top="4920" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="6810" left="17250" top="1065" type="Window" width="6270">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="180" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="56" srcpinname="Clear">
+   </LINK>
+   <LINK dstnodeid="180" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="180" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="141" srcpinname="Clear">
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_6_01 Drawing with complex Modules\P_2_3_6_01.v4p" systemname="P_2_3_6_01">
    <BOUNDS height="10425" left="495" top="660" type="Window" width="14790">
    </BOUNDS>
@@ -110,26 +110,6 @@
    </LINK>
    <LINK dstnodeid="6" dstpinname="ScaleY" srcnodeid="7" srcpinname="Output">
    </LINK>
-   <NODE componentmode="InAWindow" id="10" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
-   <BOUNDS height="100" left="6720" top="9360" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6720" top="9360" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="9735" left="15270" top="630" type="Window" width="9600">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="15" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="270" left="6720" top="8865" type="Node" width="7215">
    </BOUNDS>
@@ -158,24 +138,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="10" dstpinname="Layers" srcnodeid="15" srcpinname="Layer">
-   </LINK>
-   <NODE componentmode="Hidden" id="33" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="8610" top="9360" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="33" dstpinname="Aspect Width" srcnodeid="10" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="33" dstpinname="Aspect Height" srcnodeid="10" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="10" dstpinname="Aspect Ratio" srcnodeid="33" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="318" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
    </BOUNDS>
@@ -794,7 +756,7 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="0" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="9255" top="1770" type="Node" width="1380">
    </BOUNDS>
    <PIN pinname="Y" visible="1">
@@ -809,19 +771,37 @@
    </PIN>
    <BOUNDS type="Window" left="11175" top="2280" width="9900" height="3630">
    </BOUNDS>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="180" dstpinname="True" srcnodeid="0" srcpinname="Left Button">
    </LINK>
    <LINK dstnodeid="180" dstpinname="False" srcnodeid="0" srcpinname="Right Button">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="PositionXY" dstnodeid="387" dstpinname="XY">
+   <LINK srcnodeid="0" srcpinname="Position (Projection) XY" dstnodeid="387" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="387" srcpinname="X" dstnodeid="341" dstpinname="X">
    </LINK>
    <LINK srcnodeid="387" srcpinname="Y" dstnodeid="341" dstpinname="Y">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="InAWindow" id="388" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="6720" top="9360" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6720" top="9360" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="9735" left="15270" top="630" type="Window" width="9600">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="388" dstpinname="Layers" srcnodeid="15" srcpinname="Layer">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    </PATCH>
