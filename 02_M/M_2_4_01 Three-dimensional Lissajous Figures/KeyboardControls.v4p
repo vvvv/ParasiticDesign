@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_4_01 Three-dimensional Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="5940" left="3450" top="4170" type="Window" width="9945">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="855" top="2745" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -20,7 +20,7 @@
    <PIN pinname="Maximum" slicecount="1" visible="1" values="99">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="270" left="5115" top="2745" type="Node" width="1395">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -67,7 +67,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Frequency X|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Frequency X|">
    </PIN>
    </NODE>
    <LINK dstnodeid="16" dstpinname="Y Input Value" srcnodeid="14" srcpinname="Output">
@@ -79,7 +79,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Phi X|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Phi X|">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="30" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -94,7 +94,7 @@
    </NODE>
    <LINK dstnodeid="14" dstpinname="Minimum" srcnodeid="30" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="57" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="57" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="2295" top="2745" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -131,7 +131,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Frequency Y|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Frequency Y|">
    </PIN>
    </NODE>
    <LINK dstnodeid="53" dstpinname="Y Input Value" srcnodeid="57" srcpinname="Output">
@@ -160,7 +160,7 @@
    </NODE>
    <LINK dstnodeid="10" dstpinname="Default" srcnodeid="58" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="64" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="64" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="270" left="6750" top="2745" type="Node" width="1395">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -221,10 +221,10 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Phi Y|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Phi Y|">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="72" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="72" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="3705" top="2745" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -273,7 +273,7 @@
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Frequency Z|" encoded="0">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Frequency Z|">
    </PIN>
    </NODE>
    <LINK dstnodeid="73" dstpinname="Y Input Value" srcnodeid="72" srcpinname="Output">
@@ -330,7 +330,7 @@
    </LINK>
    <LINK dstnodeid="65" dstpinname="Y Input Value" srcnodeid="77" srcpinname="Output">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="81">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="1035" top="1200" width="6465" height="270">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|D1, D2, D3, D4, D5, D6, Left, Right, Up, Down|">
@@ -400,12 +400,18 @@
    </LINK>
    <LINK srcnodeid="81" srcpinname="Right" dstnodeid="10" dstpinname="Up">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="84">
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="84">
    <BOUNDS type="Node" left="1050" top="345" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="84" srcpinname="Keyboard" dstnodeid="81" dstpinname="Keyboard">
+   <LINK srcnodeid="84" srcpinname="Device" dstnodeid="81" dstpinname="Keyboard">
    </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

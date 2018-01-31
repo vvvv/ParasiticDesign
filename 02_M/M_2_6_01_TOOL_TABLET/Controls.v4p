@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Controls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_6_01_TOOL\Controls.v4p" systemname="Controls">
    <BOUNDS height="7065" left="1080" top="900" type="Window" width="10560">
    </BOUNDS>
@@ -264,7 +264,7 @@
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="44">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="6765" top="2265" width="1200" height="270">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
@@ -370,16 +370,6 @@
    </LINK>
    <LINK srcnodeid="26" srcpinname="Cursor" dstnodeid="53" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="6765" top="1530" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="6765" top="1530">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="42" srcpinname="Keyboard" dstnodeid="44" dstpinname="Keyboard">
-   </LINK>
    <NODE systemname="Vector (3d Split)" nodename="Vector (3d Split)" componentmode="Hidden" id="55">
    <BOUNDS type="Node" left="5595" top="3225" width="720" height="270">
    </BOUNDS>
@@ -450,4 +440,20 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Output" dstnodeid="56" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="42">
+   <BOUNDS type="Node" left="6765" top="1530" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="6765" top="1530">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="42" srcpinname="Device" dstnodeid="44" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_4_03_TOOL\ViewTransform.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_4_01_TOOL\ViewTransform.v4p" systemname="ViewTransform">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_4_03_TOOL\ViewTransform.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_4_01_TOOL\ViewTransform.v4p" systemname="ViewTransform">
    <BOUNDS height="10800" left="5340" top="1470" type="Window" width="10545">
    </BOUNDS>
    <NODE componentmode="Hidden" id="105" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -45,11 +45,11 @@
    <NODE componentmode="Hidden" id="95" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -244,26 +244,6 @@
    </NODE>
    <LINK srcnodeid="108" srcpinname="Transform Out" dstnodeid="84" dstpinname="Transform In">
    </LINK>
-   <NODE systemname="MouseState (System Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseState (System Split)" componentmode="Hidden" id="109">
-   <BOUNDS type="Node" left="6495" top="705" width="1380" height="270">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Middle Button" visible="1">
-   </PIN>
-   <PIN pinname="Right Button" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="109" srcpinname="Left Button" dstnodeid="95" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="109" srcpinname="Middle Button" dstnodeid="95" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="109" srcpinname="Right Button" dstnodeid="95" dstpinname="Input 3">
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="110" systemname="IOBox (Node)">
    <BOUNDS type="Node" left="6510" top="90" width="0" height="0">
    </BOUNDS>
@@ -274,15 +254,13 @@
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Mouse">
    </PIN>
    </NODE>
-   <LINK srcnodeid="110" srcpinname="Output Node" dstnodeid="109" dstpinname="Mouse">
-   </LINK>
    <LINK srcnodeid="87" srcpinname="Y Output Value" dstnodeid="88" dstpinname="FilterTime">
    </LINK>
    <LINK srcnodeid="94" srcpinname="Y" dstnodeid="86" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="94" srcpinname="X" dstnodeid="83" dstpinname="Input 1">
    </LINK>
-   <NODE componentmode="Hidden" id="116" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <NODE componentmode="Hidden" id="116" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
    <BOUNDS height="100" left="6510" top="5595" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
@@ -293,22 +271,6 @@
    </LINKPOINT>
    <LINKPOINT x="12420" y="565">
    </LINKPOINT>
-   </LINK>
-   <NODE id="107" componentmode="Hidden" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="XYZ" visible="1">
-   </PIN>
-   <BOUNDS type="Node" height="100" left="6495" top="1725" width="100">
-   </BOUNDS>
-   <PIN pinname="XY" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="109" srcpinname="X" dstnodeid="107" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="109" srcpinname="Y" dstnodeid="107" dstpinname="Y">
    </LINK>
    <NODE id="117" componentmode="Hidden" nodename="Subtract (Value)" systemname="Subtract (Value)">
    <BOUNDS type="Node" height="100" left="6495" top="2850" width="100">
@@ -327,10 +289,6 @@
    <LINK srcnodeid="105" srcpinname="Up Edge" dstnodeid="118" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="118" srcpinname="Output" dstnodeid="117" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="107" srcpinname="XY" dstnodeid="118" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="107" srcpinname="XY" dstnodeid="117" dstpinname="Input 1">
    </LINK>
    <NODE componentmode="Hidden" id="119" nodename="Add (Value)" systemname="Add (Value)">
    <BOUNDS height="100" left="6510" top="3360" type="Node" width="100">
@@ -604,4 +562,36 @@
    </LINK>
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="108" dstpinname="Z">
    </LINK>
+   <NODE systemname="MouseStates (Mouse Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Split)" componentmode="Hidden" id="109">
+   <BOUNDS type="Node" left="6495" top="705" width="1380" height="270">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Middle Button" visible="1">
+   </PIN>
+   <PIN pinname="Right Button" visible="1">
+   </PIN>
+   <PIN pinname="Position (Projection) XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="109" srcpinname="Left Button" dstnodeid="95" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Middle Button" dstnodeid="95" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Right Button" dstnodeid="95" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="110" srcpinname="Output Node" dstnodeid="109" dstpinname="Mouse">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Position (Projection) XY" dstnodeid="118" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Position (Projection) XY" dstnodeid="117" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

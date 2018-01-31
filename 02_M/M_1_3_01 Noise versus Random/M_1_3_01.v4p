@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_1_3_01 Noise versus Random\M_1_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\simulations\M\M.1.3_01.v4p" systemname="M.1.3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_3_01 Noise versus Random\M_1_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\simulations\M\M.1.3_01.v4p" systemname="M.1.3_01">
    <BOUNDS height="9285" left="510" top="645" type="Window" width="11820">
    </BOUNDS>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="134" nodename="Line (EX9)" systemname="Line (EX9)">
+   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="134" nodename="Line (EX9)" systemname="Line (EX9 Legacy)">
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Single Input" visible="1">
@@ -17,34 +17,6 @@
    </PIN>
    <BOUNDS left="4995" top="6960" type="Box">
    </BOUNDS>
-   </NODE>
-   <NODE componentmode="InAWindow" id="133" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <BOUNDS height="100" left="4995" top="8265" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="2550" left="4995" top="8265" type="Box" width="7365">
-   </BOUNDS>
-   <BOUNDS height="3390" left="12330" top="645" type="Window" width="11895">
-   </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="132" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <PIN pinname="X" visible="1">
@@ -111,7 +83,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="6870" top="6585" type="Box" width="645">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -133,8 +105,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="117" dstpinname="Layer 1" srcnodeid="134" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="133" dstpinname="Layers" srcnodeid="117" srcpinname="Layer">
    </LINK>
    <NODE componentmode="Hidden" id="116" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="270" left="7905" top="6960" type="Node" width="1650">
@@ -191,13 +161,15 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="-0.697058823529412">
    </PIN>
    <PIN pinname="Source Minimum" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Destination Minimum" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Destination Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Mapping" visible="1" slicecount="1" values="Float">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="157" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -215,7 +187,7 @@
    <LINK dstnodeid="149" dstpinname="Destination Maximum" srcnodeid="155" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="127" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="8">
    </PIN>
    <BOUNDS height="100" left="5490" top="2160" type="Node" width="100">
    </BOUNDS>
@@ -281,7 +253,7 @@
    <NODE componentmode="Hidden" id="185" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="7875" top="1035" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Up Edge" visible="1">
    </PIN>
@@ -359,7 +331,7 @@
    <NODE componentmode="InABox" id="204" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="150" top="180" type="Node" width="945">
    </BOUNDS>
-   <BOUNDS height="435" left="150" top="180" type="Box" width="7215">
+   <BOUNDS height="420" left="150" top="180" type="Box" width="4725">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Noise versus Random|">
    </PIN>
@@ -387,24 +359,6 @@
    <LINK dstnodeid="138" dstpinname="Random Seed" linkstyle="PolyLine" srcnodeid="193" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="138" dstpinname="X" srcnodeid="149" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="228" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="6735" top="8265" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Alignment" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="228" dstpinname="Aspect Width" srcnodeid="133" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="228" dstpinname="Aspect Height" srcnodeid="133" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="133" dstpinname="Aspect Ratio" srcnodeid="228" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="215" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
    <BOUNDS height="100" left="8085" top="6060" type="Node" width="100">
@@ -437,28 +391,16 @@
    <LINK dstnodeid="116" dstpinname="Transform" srcnodeid="229" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="InABox" id="231" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="9075" top="6060" type="Node" width="100">
+   <BOUNDS height="100" left="9000" top="6075" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="9075" top="6060" type="Box" width="510">
+   <BOUNDS height="240" left="9000" top="6075" type="Box" width="510">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.00799999999999993">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.029">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="229" dstpinname="XYZ" srcnodeid="231" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="InABox" id="232" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
-   <BOUNDS height="100" left="7680" top="7920" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="7680" top="7920" type="Box" width="825">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="FitWidth">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="228" dstpinname="Alignment" srcnodeid="232" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="226" nodename="Multiply (Value)" systemname="Multiply (Value)">
    <BOUNDS height="100" left="6480" top="4890" type="Node" width="100">
@@ -544,24 +486,12 @@
    </NODE>
    <LINK srcnodeid="155" srcpinname="Output" dstnodeid="246" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p" nodename="Mouse (System Window)" componentmode="Hidden" id="247">
-   <BOUNDS type="Node" left="7215" top="645" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="247" srcpinname="X" dstnodeid="155" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="247" srcpinname="Left Button" dstnodeid="185" dstpinname="Input">
-   </LINK>
    <NODE componentmode="InABox" id="252" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="2205" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="3075" left="585" top="2205" type="Box" width="3525">
+   <BOUNDS height="4095" left="585" top="2205" type="Box" width="3675">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Maps the mouse X position to the desired range over which to sample the perlin noise.&cr;&lf;&cr;&lf;According to Processings documentation those are the default values for the noise() function:&cr;&lf;&quot;By default, noise is computed over 4 octaves with each octave contributing exactly half than its predecessor, starting at 50% strength for the 1st octave.&quot;&cr;&lf;&cr;&lf;Corresponds to noise(noiseX) * height;&cr;&lf;where height is 0.5 here as the window has an aspect ratio of 4:1 hence the height is a quarter of the width which is 2 units.|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Maps the mouse X position to the desired range over which to sample the perlin noise. &cr;&lf;&cr;&lf;Note, in this case the Position (Normalized Projection) output pin of the Mouse node is in use (it&apos;s hidden by default, see Inspector). So the Mouse&apos;s X position is in -1..1 range.&cr;&lf;&cr;&lf;According to Processings documentation those are the default values for the noise() function:&cr;&lf;&quot;By default, noise is computed over 4 octaves with each octave contributing exactly half than its predecessor, starting at 50% strength for the 1st octave.&quot;&cr;&lf;&cr;&lf;Corresponds to noise(noiseX) * height;&cr;&lf;where height is 0.5 here as the window has an aspect ratio of 4:1 hence the height is a quarter of the width which is 2 units.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -587,9 +517,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="250" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="135" top="2790" type="Node" width="315">
+   <BOUNDS height="270" left="135" top="3855" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="135" top="2790" type="Box" width="420">
+   <BOUNDS height="405" left="135" top="3855" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -603,9 +533,9 @@
    </PIN>
    </NODE>
    <NODE id="248" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" height="270" left="135" top="4275" width="315">
+   <BOUNDS type="Node" height="270" left="135" top="5340" width="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="405" left="135" top="4275" width="450">
+   <BOUNDS type="Box" height="405" left="135" top="5340" width="450">
    </BOUNDS>
    <PIN pinname="Input String" encoded="0" slicecount="1" visible="0" pintype="Input" values="3.">
    </PIN>
@@ -734,22 +664,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="256" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7230" top="7815" type="Node" width="315">
-   </BOUNDS>
-   <BOUNDS height="405" left="7230" top="7815" type="Box" width="450">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
-   </PIN>
-   <PIN pinname="Output String" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="String Type" slicecount="1" values="MultiLine">
-   </PIN>
-   <PIN pinname="Size" slicecount="1" values="16">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="257" systemname="IOBox (Color)">
    <BOUNDS type="Node" left="6645" top="6075" width="0" height="0">
    </BOUNDS>
@@ -761,5 +675,49 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="257" srcpinname="Color Output" dstnodeid="134" dstpinname="Color">
+   </LINK>
+   <NODE componentmode="InAWindow" id="258" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="5010" top="8070" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="2550" left="5010" top="8070" type="Box" width="7365">
+   </BOUNDS>
+   <BOUNDS height="3900" left="12150" top="645" type="Window" width="10455">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="258" dstpinname="Layers" srcnodeid="117" srcpinname="Layer">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="259">
+   <BOUNDS type="Node" left="7380" top="1425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1" slicecount="2" values="-2.664546251297,0.127272725105286">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="X" dstnodeid="155" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="247">
+   <BOUNDS type="Node" left="7065" top="675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   <PIN pinname="Position (Projection) XY" visible="1">
+   </PIN>
+   <PIN pinname="Position (Normalized Projection) XY" visible="1" pintype="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="247" srcpinname="Left Button" dstnodeid="185" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="247" srcpinname="Position (Normalized Projection) XY" dstnodeid="259" dstpinname="XY">
    </LINK>
    </PATCH>

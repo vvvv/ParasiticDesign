@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_02 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="10065" left="10455" top="4080" type="Window" width="13935">
    </BOUNDS>
@@ -144,26 +144,18 @@
    </LINK>
    <LINK dstnodeid="93" dstpinname="Y Input Value" srcnodeid="108" srcpinname="Output">
    </LINK>
-   <NODE systemname="Keyboard (System Global Legacy2)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="161">
-   <BOUNDS type="Node" left="6540" top="2385" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="162">
    <BOUNDS type="Node" left="9765" top="3150" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|Up, Down|">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Up" visible="1">
    </PIN>
    <PIN pinname="Down" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="161" srcpinname="Keyboard" dstnodeid="162" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="162" srcpinname="Up" dstnodeid="15" dstpinname="Up">
    </LINK>
    <LINK srcnodeid="162" srcpinname="Down" dstnodeid="15" dstpinname="Down">
@@ -455,12 +447,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="154" srcpinname="Output String" dstnodeid="158" dstpinname="Initial Text">
-   </LINK>
-   <LINK srcnodeid="161" srcpinname="Keyboard" dstnodeid="158" dstpinname="Keyboard">
    </LINK>
    <LINK srcnodeid="158" srcpinname="Output" dstnodeid="14" dstpinname="Input">
    </LINK>
@@ -555,5 +545,17 @@
    <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="190" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="190" srcpinname="Output" dstnodeid="20" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="161">
+   <BOUNDS type="Node" left="6540" top="2385" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="161" srcpinname="Device" dstnodeid="162" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="161" srcpinname="Device" dstnodeid="158" dstpinname="Keyboard">
    </LINK>
    </PATCH>

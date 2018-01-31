@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\02_M\M_1_5_03_TOOL_Noisy Movements\M_1_5_03_TOOL.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_02_TOOL.v4p" systemname="M.1.5_02_TOOL">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_5_03_TOOL_Noisy Movements\M_1_5_03_TOOL.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_02_TOOL.v4p" systemname="M.1.5_02_TOOL">
    <BOUNDS height="9300" left="1470" top="315" type="Window" width="11595">
    </BOUNDS>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="242" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -66,34 +66,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InAWindow" id="461" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="3465" top="7125" type="Node" width="1500">
-   </BOUNDS>
-   <BOUNDS height="5715" left="3465" top="7125" type="Box" width="8085">
-   </BOUNDS>
-   <BOUNDS height="9300" left="13065" top="315" type="Window" width="13500">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="460" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -278,8 +250,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="461" dstpinname="Layers" srcnodeid="457" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="457" dstpinname="Layer 1" srcnodeid="458" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="454" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -562,8 +532,6 @@
    </LINK>
    <LINK srcnodeid="440" srcpinname="Clear Screen" dstnodeid="443" dstpinname="Simulate">
    </LINK>
-   <LINK srcnodeid="443" srcpinname="Bang" dstnodeid="461" dstpinname="Clear">
-   </LINK>
    <NODE componentmode="InABox" id="437" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="5550" top="5760" type="Node" width="315">
    </BOUNDS>
@@ -648,4 +616,26 @@
    </LINK>
    <LINK srcnodeid="462" srcpinname="Layer" dstnodeid="457" dstpinname="Layer 2">
    </LINK>
+   <NODE componentmode="InAWindow" id="467" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="3465" top="7125" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="5715" left="3465" top="7125" type="Box" width="8085">
+   </BOUNDS>
+   <BOUNDS height="6480" left="13065" top="315" type="Window" width="8880">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="467" dstpinname="Layers" srcnodeid="457" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="443" srcpinname="Bang" dstnodeid="467" dstpinname="Clear">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

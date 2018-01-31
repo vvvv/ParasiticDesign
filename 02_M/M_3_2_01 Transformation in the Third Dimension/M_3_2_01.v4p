@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\02_M\M_3_2_01 Transformation in the Third Dimension\M_3_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_2_01 Transformation in the Third Dimension\M_3_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="9825" left="1875" top="360" type="Window" width="10620">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -106,7 +106,7 @@
    </NODE>
    <LINK dstnodeid="36" dstpinname="Vertex Buffer" srcnodeid="37" srcpinname="Vertex Buffer">
    </LINK>
-   <NODE componentmode="Hidden" id="38" nodename="Mesh (EX9.Geometry Join)" systemname="Mesh (EX9.Geometry Join)">
+   <NODE componentmode="Hidden" id="38" nodename="Mesh (EX9.Geometry Join)" systemname="MESH (EX9.GEOMETRY JOIN)">
    <BOUNDS height="270" left="5850" top="4455" type="Node" width="1125">
    </BOUNDS>
    <PIN pinname="Indices" visible="1">
@@ -115,10 +115,12 @@
    </PIN>
    <PIN pinname="Mesh" visible="1">
    </PIN>
+   <PIN pinname="Apply On Device Change" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK dstnodeid="38" dstpinname="Indices" srcnodeid="37" srcpinname="Indices">
    </LINK>
-   <NODE componentmode="Hidden" id="39" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VertexBuffer (EX9.Geometry Join)">
+   <NODE componentmode="Hidden" id="39" nodename="VertexBuffer (EX9.Geometry Join)" systemname="VERTEXBUFFER (EX9.GEOMETRY JOIN)">
    <PIN pinname="Vertex Buffer" visible="1">
    </PIN>
    <PIN pinname="Position XYZ" visible="1">
@@ -126,6 +128,8 @@
    <BOUNDS height="100" left="5325" top="3930" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Normal XYZ" slicecount="120" visible="1" values="0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1">
+   </PIN>
+   <PIN pinname="Apply On Device Change" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="38" dstpinname="Vertex Buffer" srcnodeid="39" srcpinname="Vertex Buffer">
@@ -260,40 +264,6 @@
    </NODE>
    <LINK dstnodeid="56" dstpinname="Fill Mode" srcnodeid="53" srcpinname="Output Enum">
    </LINK>
-   <NODE componentmode="InAWindow" id="17" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="View" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <BOUNDS height="9840" left="12510" top="360" type="Window" width="9840">
-   </BOUNDS>
-   <BOUNDS height="100" left="5685" top="8535" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5685" top="8535" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="86" nodename="MapRange (Value)" systemname="MapRange (Value)">
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -319,25 +289,23 @@
    <NODE componentmode="Hidden" id="118" nodename="Perspective (Transform)" systemname="Perspective (Transform)">
    <PIN pinname="FOV">
    </PIN>
-   <BOUNDS height="100" left="8550" top="8055" type="Node" width="100">
+   <BOUNDS height="100" left="8700" top="8055" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="17" dstpinname="Projection" srcnodeid="118" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="120" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="0.166666666666667">
    </PIN>
-   <BOUNDS height="0" left="8850" top="7635" type="Node" width="0">
+   <BOUNDS height="0" left="9000" top="7635" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="8850" top="7635" type="Box" width="615">
+   <BOUNDS height="240" left="9000" top="7635" type="Box" width="615">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="118" dstpinname="FOV" srcnodeid="120" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="122" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7155" top="7065" type="Node" width="100">
+   <BOUNDS height="100" left="7305" top="7065" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="7155" top="7065" type="Box" width="375">
+   <BOUNDS height="240" left="7305" top="7065" type="Box" width="375">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -351,9 +319,9 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="2">
    </PIN>
-   <BOUNDS height="100" left="7560" top="7065" type="Node" width="100">
+   <BOUNDS height="100" left="7710" top="7065" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="7560" top="7065" type="Box" width="450">
+   <BOUNDS height="240" left="7710" top="7065" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1.5">
    </PIN>
@@ -385,7 +353,7 @@
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="124" managers="" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <PIN pinname="Z" pintype="Input" visible="1">
    </PIN>
-   <BOUNDS height="100" left="6810" top="7455" type="Node" width="100">
+   <BOUNDS height="100" left="6960" top="7455" type="Node" width="100">
    </BOUNDS>
    <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -422,30 +390,16 @@
    </LINK>
    <LINK dstnodeid="60" dstpinname="Render State" srcnodeid="56" srcpinname="Render State Out">
    </LINK>
-   <LINK dstnodeid="17" dstpinname="Layers" srcnodeid="60" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="60" dstpinname="Color" srcnodeid="52" srcpinname="Color Output">
    </LINK>
-   <NODE componentmode="Hidden" id="132" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Alignment" slicecount="1" values="FitIn">
-   </PIN>
-   <BOUNDS height="100" left="7470" top="8535" type="Node" width="100">
-   </BOUNDS>
-   </NODE>
    <NODE componentmode="InABox" id="134" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="1">
    </PIN>
-   <BOUNDS height="0" left="6660" top="7065" type="Node" width="0">
+   <BOUNDS height="0" left="6810" top="7065" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="6660" top="7065" type="Box" width="450">
+   <BOUNDS height="240" left="6810" top="7065" type="Box" width="450">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="124" dstpinname="X" srcnodeid="134" srcpinname="Y Output Value">
@@ -486,12 +440,6 @@
    </NODE>
    <LINK dstnodeid="137" dstpinname="Y" srcnodeid="141" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="132" dstpinname="Aspect Height" srcnodeid="17" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="132" dstpinname="Aspect Width" srcnodeid="17" srcpinname="Actual Backbuffer Height">
-   </LINK>
-   <LINK dstnodeid="17" dstpinname="Aspect Ratio" srcnodeid="132" srcpinname="Transform Out">
-   </LINK>
    <NODE componentmode="InABox" id="142" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; Amplitude|">
    </PIN>
@@ -504,27 +452,17 @@
    <BOUNDS height="270" left="8745" top="2130" type="Box" width="1065">
    </BOUNDS>
    </NODE>
-   <NODE systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p" nodename="Mouse (System Window)" componentmode="Hidden" id="143">
-   <BOUNDS type="Node" left="8130" top="7215" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Mouse" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="139" nodename="ViewTransform.v4p" systemname="ViewTransform">
    <BOUNDS height="11295" left="4290" top="4185" type="Window" width="10155">
    </BOUNDS>
-   <BOUNDS height="100" left="6810" top="7890" type="Node" width="100">
+   <BOUNDS height="100" left="6960" top="7890" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS left="6810" top="7890" type="Box">
+   <BOUNDS left="6960" top="7890" type="Box">
    </BOUNDS>
-   <PIN pinname="Mouse" visible="1">
+   <PIN pinname="Mouse" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="17" dstpinname="View" srcnodeid="139" srcpinname="Transform Out">
-   </LINK>
    <LINK dstnodeid="139" dstpinname="Transform In" srcnodeid="124" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="143" srcpinname="Mouse" dstnodeid="139" dstpinname="Mouse">
    </LINK>
    <NODE componentmode="InABox" id="153" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="1575" type="Node" width="315">
@@ -796,4 +734,38 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE componentmode="InAWindow" id="163" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="9840" left="12510" top="360" type="Window" width="9840">
+   </BOUNDS>
+   <BOUNDS height="270" left="5685" top="8535" type="Node" width="1650">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5685" top="8535" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="163" dstpinname="Projection" srcnodeid="118" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="163" dstpinname="Layers" srcnodeid="60" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="163" dstpinname="View" srcnodeid="139" srcpinname="Transform Out">
+   </LINK>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="143">
+   <BOUNDS type="Node" left="8190" top="7215" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mouse" visible="1">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="143" srcpinname="Device" dstnodeid="139" dstpinname="Mouse">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

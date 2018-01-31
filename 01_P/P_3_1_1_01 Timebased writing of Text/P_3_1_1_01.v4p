@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\P_3_1_1_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_1_01 timebased writing of Text\P_3_1_1_01.v4p" systemname="P_3_1_1_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_1_01 Timebased writing of Text\P_3_1_1_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_1_1_01 timebased writing of Text\P_3_1_1_01.v4p" systemname="P_3_1_1_01">
    <BOUNDS height="13515" left="780" top="330" type="Window" width="14775">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -92,46 +92,8 @@
    <PIN pinname="Layer 3" visible="1" slicecount="1" encoded="0" values="||">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="259" nodename="Mouse (System Window)" systemname="Mouse (System Window)">
-   <BOUNDS height="270" left="10245" top="3375" type="Node" width="1020">
-   </BOUNDS>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="10245" top="3375">
-   </BOUNDS>
-   </NODE>
-   <NODE componentmode="InAWindow" id="172" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <BOUNDS height="9240" left="15570" top="330" type="Window" width="11175">
-   </BOUNDS>
-   <BOUNDS height="100" left="8205" top="9810" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3870" left="8205" top="9810" type="Box" width="5190">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="172" dstpinname="Layers" srcnodeid="62" srcpinname="Layer">
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="636">
-   <BOUNDS type="Node" left="11505" top="3345" width="1365" height="270">
+   <BOUNDS type="Node" left="11790" top="3375" width="1365" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -226,22 +188,14 @@
    </LINK>
    <LINK srcnodeid="683" srcpinname="Layer" dstnodeid="62" dstpinname="Layer 1">
    </LINK>
-   <LINK srcnodeid="259" srcpinname="Y" dstnodeid="683" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="172" srcpinname="Actual Backbuffer Width" dstnodeid="683" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="6360" y="11895">
-   </LINKPOINT>
-   <LINKPOINT x="4980" y="5400">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="683" srcpinname="Last X" dstnodeid="659" dstpinname="X">
    </LINK>
    <LINK srcnodeid="683" srcpinname="Last Y" dstnodeid="659" dstpinname="Y">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="689" systemname="IOBox (String)" hiddenwhenlocked="1">
-   <BOUNDS type="Node" left="13410" top="2580" width="2100" height="270">
+   <BOUNDS type="Node" left="13695" top="2610" width="2100" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="13410" top="2580" width="855" height="270">
+   <BOUNDS type="Box" left="13695" top="2610" width="855" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" encoded="0" values="|&lt; Reset|">
    </PIN>
@@ -275,13 +229,13 @@
    <NODE id="706" systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden">
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="11505" top="2490" width="100" height="100">
+   <BOUNDS type="Node" left="11790" top="2520" width="100" height="100">
    </BOUNDS>
    </NODE>
    <NODE id="705" systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden">
    <PIN pinname="Set" visible="1">
    </PIN>
-   <BOUNDS type="Node" left="11505" top="2880" width="100" height="100">
+   <BOUNDS type="Node" left="11790" top="2910" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -333,10 +287,10 @@
    </PIN>
    <PIN pinname="Current Size" visible="1">
    </PIN>
+   <PIN pinname="MouseY" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="764" dstpinname="Text">
-   </LINK>
-   <LINK srcnodeid="259" srcpinname="Y" dstnodeid="764" dstpinname="MouseY">
    </LINK>
    <LINK srcnodeid="764" srcpinname="Last Y" dstnodeid="659" dstpinname="Y">
    </LINK>
@@ -393,9 +347,9 @@
    <LINK srcnodeid="47" srcpinname="Output" dstnodeid="771" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="773" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="12825" top="2520" width="0" height="0">
+   <BOUNDS type="Node" left="13110" top="2550" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="12825" top="2520" width="480" height="480">
+   <BOUNDS type="Box" left="13110" top="2550" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -460,14 +414,8 @@
    </LINK>
    <LINK srcnodeid="776" srcpinname="Output Enum" dstnodeid="777" dstpinname="Object Space">
    </LINK>
-   <LINK srcnodeid="172" srcpinname="Actual Backbuffer Width" dstnodeid="797" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="5210" y="12880">
-   </LINKPOINT>
-   <LINKPOINT x="4885" y="1295">
-   </LINKPOINT>
-   </LINK>
    <NODE id="797" systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Y Input Value" visible="1" pintype="Input">
+   <PIN pinname="Y Input Value" visible="1" pintype="Input" slicecount="1" values="729">
    </PIN>
    <PIN pinname="Y Output Value" visible="1" pintype="Output">
    </PIN>
@@ -1028,7 +976,7 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE id="583" componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" hiddenwhenlocked="0" managers="" nodename="Typewriter (String)" systemname="Typewriter (String)">
+   <NODE id="583" componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" hiddenwhenlocked="0" managers="" nodename="Typewriter (String)" systemname="TYPEWRITER (STRING)">
    <PIN pinname="Initial Text" pintype="Input" visible="1" encoded="0">
    </PIN>
    <PIN pinname="Initialize" visible="1" pintype="Input">
@@ -1055,7 +1003,7 @@
    </PIN>
    <PIN pinname="Text" slicecount="1" encoded="0" values="||">
    </PIN>
-   <PIN pinname="Keyboard State" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="636" srcpinname="Output" dstnodeid="583" dstpinname="Initialize" hiddenwhenlocked="1">
@@ -1064,16 +1012,72 @@
    </LINK>
    <LINK srcnodeid="583" srcpinname="Output" dstnodeid="47" dstpinname="Input">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="806">
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="806">
    <BOUNDS type="Node" left="9120" top="3375" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Window" left="14715" top="7005" width="6495" height="5940">
    </BOUNDS>
    <BOUNDS type="Box" left="9120" top="3375">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="806" srcpinname="Keyboard" dstnodeid="583" dstpinname="Keyboard State">
+   <LINK srcnodeid="806" srcpinname="Device" dstnodeid="583" dstpinname="Keyboard">
+   </LINK>
+   <NODE componentmode="Hidden" id="259" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="10245" top="3375" type="Node" width="1020">
+   </BOUNDS>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="10245" top="3375">
+   </BOUNDS>
+   <PIN pinname="Position (Projection) XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="Y" dstnodeid="683" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="847">
+   <BOUNDS type="Node" left="10395" top="3930" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="259" srcpinname="Position (Projection) XY" dstnodeid="847" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="847" srcpinname="Y" dstnodeid="764" dstpinname="MouseY">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="InAWindow" id="848" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="9240" left="15570" top="330" type="Window" width="11175">
+   </BOUNDS>
+   <BOUNDS height="100" left="8205" top="9810" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3870" left="8205" top="9810" type="Box" width="5190">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="848" dstpinname="Layers" srcnodeid="62" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="848" srcpinname="Actual Backbuffer Width" dstnodeid="683" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="6360" y="11895">
+   </LINKPOINT>
+   <LINKPOINT x="4980" y="5400">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="848" srcpinname="Actual Backbuffer Width" dstnodeid="797" dstpinname="Y Input Value" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="5210" y="12880">
+   </LINKPOINT>
+   <LINKPOINT x="4885" y="1295">
+   </LINKPOINT>
    </LINK>
    </PATCH>

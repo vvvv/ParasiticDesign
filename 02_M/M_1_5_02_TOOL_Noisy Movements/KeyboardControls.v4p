@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_5_02 Noisy Movements\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_02 Noisy Movements\KeyboardControls.v4p" systemname="KeyboardControls">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_5_02_TOOL_Noisy Movements\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_1_5_02 Noisy Movements\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="4365" left="11325" top="6090" type="Window" width="7155">
    </BOUNDS>
    <NODE componentmode="Hidden" id="6" nodename="Random (Value)" systemname="Random (Value)">
@@ -58,14 +58,8 @@
    </NODE>
    <LINK dstnodeid="10" dstpinname="Y Input Value" srcnodeid="28" srcpinname="Output">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="645" top="330" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="30" systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Keyboard" visible="1" pintype="Input">
+   <NODE id="30" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Keyboard" visible="1" pintype="Input" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Key Match" slicecount="1" encoded="0" pintype="Configuration" values="|Back, Space, D1, D2|">
    </PIN>
@@ -94,8 +88,6 @@
    <PIN pinname="Back" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="29" srcpinname="Keyboard" dstnodeid="30" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="30" srcpinname="D1" dstnodeid="28" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="30" srcpinname="D2" dstnodeid="28" dstpinname="Reset">
@@ -114,4 +106,18 @@
    </LINK>
    <LINK srcnodeid="30" srcpinname="Back" dstnodeid="9" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="Keyboard (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Window)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="645" top="330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Device" dstnodeid="30" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_3_02 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_3_02 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="5100" left="2490" top="10275" type="Window" width="11040">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="2385" top="2460" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -20,7 +20,7 @@
    <PIN pinname="Maximum" slicecount="1" visible="1" values="99">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="270" left="3795" top="2460" type="Node" width="1395">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -126,7 +126,7 @@
    </NODE>
    <LINK dstnodeid="14" dstpinname="Minimum" srcnodeid="30" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="37" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="37" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="6135" top="2460" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -180,7 +180,7 @@
    </LINK>
    <LINK dstnodeid="37" dstpinname="Maximum" srcnodeid="35" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="45" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="45" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="8985" top="2460" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -234,7 +234,7 @@
    </LINK>
    <LINK dstnodeid="45" dstpinname="Maximum" srcnodeid="43" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="57" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="57" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="7560" top="2460" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -328,18 +328,12 @@
    </LINK>
    <LINK dstnodeid="17" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="60" srcpinname="Output">
    </LINK>
-   <NODE systemname="Keyboard (System Window)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Window).v4p" nodename="Keyboard (System Window)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="1095" top="225" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="62">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="62">
    <BOUNDS type="Node" left="1095" top="1260" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Key Match" slicecount="1" values="d" encoded="0">
+   <PIN pinname="Key Match" slicecount="1" encoded="0" values="d">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="D" visible="1">
    </PIN>
@@ -356,8 +350,6 @@
    </NODE>
    <LINK srcnodeid="63" srcpinname="Output Enum" dstnodeid="62" dstpinname="Key Mode">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Keyboard" dstnodeid="62" dstpinname="Keyboard">
-   </LINK>
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="1110" top="1710" width="100" height="100">
    </BOUNDS>
@@ -370,7 +362,7 @@
    </LINK>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="0" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="68">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="68">
    <BOUNDS type="Node" left="2565" top="1260" width="6465" height="270">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|D1, D2, Left, Right, D7, D8, D3, D4, D9, D0|">
@@ -432,6 +424,20 @@
    </LINK>
    <LINK srcnodeid="68" srcpinname="D0" dstnodeid="45" dstpinname="Up">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Keyboard" dstnodeid="68" dstpinname="Keyboard">
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="1095" top="225" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Device" dstnodeid="62" dstpinname="Keyboard">
    </LINK>
+   <LINK srcnodeid="61" srcpinname="Device" dstnodeid="68" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls" scrollx="0" scrolly="2625">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\KeyboardControls.v4p" systemname="KeyboardControls" scrollx="0" scrolly="1545">
    <BOUNDS height="9870" left="-1770" top="3975" type="Window" width="17400">
    </BOUNDS>
    <NODE componentmode="Hidden" id="14" nodename="Split (String)" systemname="Split (String)">
@@ -18,16 +18,6 @@
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Zoom">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="Keyboard (System Global)" systemname="Keyboard (System Global Legacy2)">
-   <BOUNDS height="100" left="9930" top="2355" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="KeyCode" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="43" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -365,7 +355,7 @@
    </PIN>
    <PIN pinname="&lt;DOWN&gt; Output" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Alt" visible="1">
    </PIN>
@@ -382,8 +372,6 @@
    <PIN pinname="Menu" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Keyboard Output" dstnodeid="122" dstpinname="Input">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\lib\nodes\plugins\TypeWriter.dll" hiddenwhenlocked="0" id="85" managers="" nodename="Typewriter (String)" systemname="TYPEWRITER (STRING)">
    <BOUNDS height="270" left="9915" top="6165" type="Node" width="1305">
    </BOUNDS>
@@ -403,7 +391,7 @@
    </PIN>
    <PIN pinname="KeyCode" visible="1">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="85" srcpinname="Output" dstnodeid="14" dstpinname="Input" linkstyle="PolyLine">
@@ -413,8 +401,6 @@
    <LINK srcnodeid="89" srcpinname="Output" dstnodeid="85" dstpinname="Initialize" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="98" srcpinname="Output" dstnodeid="85" dstpinname="KeyCode" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Keyboard" dstnodeid="122" dstpinname="Keyboard">
    </LINK>
    <LINK srcnodeid="122" srcpinname="Left" dstnodeid="97" dstpinname="Input 1">
    </LINK>
@@ -439,8 +425,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Keyboard" dstnodeid="85" dstpinname="Keyboard">
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -564,38 +548,24 @@
    </NODE>
    <LINK srcnodeid="142" srcpinname="Output Enum" dstnodeid="122" dstpinname="Key Mode">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="144">
-   <BOUNDS type="Box" left="12735" top="4920" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="12735" top="4920" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="122" srcpinname="Alt" dstnodeid="144" dstpinname="Y Input Value">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="145">
-   <BOUNDS type="Box" left="13875" top="4710" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="13875" top="4710" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="122" srcpinname="Alt" dstnodeid="145" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="122" srcpinname="Menu" dstnodeid="43" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="Hidden" id="0" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="9930" top="2355" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="KeyCode" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Keyboard Output" dstnodeid="122" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Device" dstnodeid="122" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Device" dstnodeid="85" dstpinname="Keyboard">
    </LINK>
    </PATCH>

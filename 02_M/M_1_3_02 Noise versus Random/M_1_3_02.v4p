@@ -1,41 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_1_3_02 Noise versus Random\M_1_3_02.v4p" bgcolor="15724527" filename="C:\Documents and Settings\Roman\Desktop\M.1.3_02.v4p" systemname="M.1.3_02">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_3_02 Noise versus Random\M_1_3_02.v4p" bgcolor="15724527" filename="C:\Documents and Settings\Roman\Desktop\M.1.3_02.v4p" systemname="M.1.3_02">
    <BOUNDS height="6825" left="1050" top="1065" type="Window" width="9540">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="5010" top="4470" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="5565" left="5010" top="4470" type="Box" width="5085">
-   </BOUNDS>
-   <BOUNDS height="5745" left="10590" top="1065" type="Window" width="5760">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Refresh Rate" slicecount="1" values="60">
-   </PIN>
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Is Fullscreen" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="15" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
    <BOUNDS height="100" left="6600" top="2985" type="Node" width="100">
    </BOUNDS>
@@ -51,9 +17,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="20" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
-   <BOUNDS height="100" left="7365" top="1365" type="Node" width="100">
+   <BOUNDS height="100" left="7305" top="1365" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Down Edge" visible="1">
    </PIN>
@@ -61,7 +27,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="22" nodename="Random (Value)" systemname="Random (Value)">
-   <BOUNDS height="100" left="7365" top="1755" type="Node" width="100">
+   <BOUNDS height="100" left="7305" top="1755" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -178,8 +144,6 @@
    <PIN pinname="Transform" slicecount="1" visible="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="0" dstpinname="Layers" srcnodeid="34" srcpinname="Layer">
-   </LINK>
    <LINK srcnodeid="33" srcpinname="Texture Out" dstnodeid="34" dstpinname="Texture">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="33" dstpinname="Red">
@@ -206,14 +170,6 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Up Edge" dstnodeid="22" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="Mouse (System Window)" filename="%VVVV%\lib\nodes\modules\System\Mouse (System Window).v4p" nodename="Mouse (System Window)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="6705" top="960" width="1050" height="270">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="5265" top="2340" width="100" height="100">
    </BOUNDS>
@@ -238,12 +194,10 @@
    </LINK>
    <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="34" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Left Button" dstnodeid="20" dstpinname="Input">
-   </LINK>
-   <NODE id="31" componentmode="Hidden" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
-   <PIN pinname="Input 1" visible="1">
+   <NODE id="31" componentmode="Hidden" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="368">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="344">
    </PIN>
    <BOUNDS type="Node" height="100" left="6090" top="4860" width="100">
    </BOUNDS>
@@ -269,10 +223,6 @@
    </LINKPOINT>
    <LINKPOINT x="8565" y="0">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Height" dstnodeid="31" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Actual Backbuffer Width" dstnodeid="31" dstpinname="Input 1">
    </LINK>
    <NODE componentmode="InABox" id="43" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="2205" type="Node" width="7425">
@@ -352,4 +302,36 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="6645" top="960" width="1050" height="270">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Left Button" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Left Button" dstnodeid="20" dstpinname="Input">
+   </LINK>
+   <NODE componentmode="InAWindow" id="46" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="5010" top="4470" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="5565" left="5010" top="4470" type="Box" width="5085">
+   </BOUNDS>
+   <BOUNDS height="6765" left="10590" top="1065" type="Window" width="6030">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="46" dstpinname="Layers" srcnodeid="34" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Height" dstnodeid="31" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Width" dstnodeid="31" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

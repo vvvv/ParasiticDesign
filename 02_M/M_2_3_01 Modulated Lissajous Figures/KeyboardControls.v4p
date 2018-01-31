@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_2_3_01 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls" locked="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_3_01 Modulated Lissajous Figures\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\KeyboardControls.v4p" systemname="KeyboardControls" locked="0">
    <BOUNDS height="5490" left="9840" top="3525" type="Window" width="11025">
    </BOUNDS>
-   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="14" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="100" left="4065" top="2445" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Up" visible="1" slicecount="1" values="0">
@@ -22,7 +22,7 @@
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="270" left="7920" top="2445" type="Node" width="1395">
    </BOUNDS>
    <PIN pinname="Up" visible="1">
@@ -128,7 +128,7 @@
    </NODE>
    <LINK dstnodeid="14" dstpinname="Minimum" srcnodeid="30" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="37" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <NODE componentmode="Hidden" id="37" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
    <BOUNDS height="270" left="5985" top="2445" type="Node" width="1500">
    </BOUNDS>
    <PIN pinname="Up" visible="1" slicecount="1" values="0">
@@ -234,16 +234,10 @@
    </LINK>
    <LINK dstnodeid="17" dstpinname="Y Input Value" srcnodeid="42" srcpinname="Output">
    </LINK>
-   <NODE systemname="Keyboard (System Global)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p" nodename="Keyboard (System Global)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="1485" top="180" width="1005" height="270">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="45">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="45">
    <BOUNDS type="Node" left="4230" top="1380" width="4935" height="270">
    </BOUNDS>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Key Match" slicecount="1" encoded="0" values="|D1, D2, D7, D8, Left, Right|">
    </PIN>
@@ -270,13 +264,11 @@
    <PIN pinname="D8" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="44" srcpinname="Keyboard" dstnodeid="45" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="45" srcpinname="Left" dstnodeid="10" dstpinname="Down">
    </LINK>
    <LINK srcnodeid="45" srcpinname="Right" dstnodeid="10" dstpinname="Up">
    </LINK>
-   <NODE systemname="KeyMatch (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="46">
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="46">
    <BOUNDS type="Node" left="1470" top="1380" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
@@ -302,8 +294,6 @@
    <BOUNDS type="Box" left="1470" top="1380">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="44" srcpinname="Keyboard" dstnodeid="46" dstpinname="Keyboard">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="47" systemname="IOBox (Enumerations)">
    <BOUNDS type="Node" left="2250" top="990" width="0" height="0">
    </BOUNDS>
@@ -346,4 +336,20 @@
    </LINK>
    <LINK srcnodeid="49" srcpinname="Output" dstnodeid="0" dstpinname="Y Input Value">
    </LINK>
+   <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="1485" top="180" width="1005" height="270">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Device" dstnodeid="46" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Device" dstnodeid="45" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

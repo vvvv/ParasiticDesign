@@ -1,57 +1,7 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\M_2_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\M_2_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
    <BOUNDS height="7440" left="2040" top="240" type="Window" width="9465">
    </BOUNDS>
-   <NODE componentmode="InAWindow" id="37" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="4440" top="6240" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="4440" top="6240" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="View" slicecount="1" visible="1" values="||">
-   </PIN>
-   <BOUNDS height="11010" left="11790" top="240" type="Window" width="10740">
-   </BOUNDS>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="67" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
-   <BOUNDS height="100" left="6060" top="6240" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Alignment" slicecount="1" visible="1" values="FitIn">
-   </PIN>
-   <PIN pinname="Uniform Scale" slicecount="1" visible="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="37" dstpinname="Aspect Ratio" srcnodeid="67" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="67" dstpinname="Aspect Width" srcnodeid="37" srcpinname="Actual Backbuffer Width">
-   </LINK>
-   <LINK dstnodeid="67" dstpinname="Aspect Height" srcnodeid="37" srcpinname="Actual Backbuffer Height">
-   </LINK>
    <NODE componentmode="InABox" id="339" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="270" top="420" type="Node" width="840">
    </BOUNDS>
@@ -352,8 +302,6 @@
    </LINK>
    <LINK srcnodeid="569" srcpinname="Y Output Value" dstnodeid="548" dstpinname="Line Alpha">
    </LINK>
-   <LINK srcnodeid="548" srcpinname="Layer" dstnodeid="37" dstpinname="Layers">
-   </LINK>
    <NODE componentmode="InABox" id="580" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="6300" top="4680" type="Node" width="1200">
    </BOUNDS>
@@ -378,4 +326,24 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
+   <NODE componentmode="InAWindow" id="582" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="4440" top="6240" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4440" top="6240" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="11010" left="11790" top="240" type="Window" width="10740">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="548" srcpinname="Layer" dstnodeid="582" dstpinname="Layers">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

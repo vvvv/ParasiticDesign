@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\KeyboardControls.v4p" scrollx="0" scrolly="2160">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\KeyboardControls.v4p" scrollx="0" scrolly="-360">
    <BOUNDS height="6360" left="4875" top="6360" type="Window" width="9405">
    </BOUNDS>
    <NODE componentmode="InABox" id="61" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -41,27 +41,13 @@
    </PIN>
    <PIN pinname="Key Mode" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="U" visible="1">
    </PIN>
    <BOUNDS type="Box" left="6975" top="1560">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" id="15" nodename="Keyboard (System Global)" systemname="Keyboard (System Global Legacy2)" filename="%VVVV%\lib\nodes\modules\System\Keyboard (System Global).v4p">
-   <BOUNDS height="100" left="1050" top="300" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="0" left="1050" top="300" type="Box" width="0">
-   </BOUNDS>
-   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
-   </BOUNDS>
-   <PIN pinname="Keyboard Output" visible="1">
-   </PIN>
-   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="78" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="78" srcpinname="U" dstnodeid="69" dstpinname="Y Input Value">
    </LINK>
    <NODE componentmode="Hidden" id="89" nodename="OR (Boolean)" systemname="OR (Boolean)">
@@ -240,8 +226,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="84" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="86" srcpinname="Output" dstnodeid="61" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="90" systemname="IOBox (Enumerations)">
@@ -255,9 +239,9 @@
    <LINK srcnodeid="90" srcpinname="Output Enum" dstnodeid="84" dstpinname="Key Mode">
    </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="91" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="7770" top="780" width="0" height="0">
+   <BOUNDS type="Node" left="7695" top="750" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7770" top="780" width="885" height="240">
+   <BOUNDS type="Box" left="7695" top="750" width="885" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="Toggle">
    </PIN>
@@ -289,7 +273,7 @@
    </PIN>
    <PIN pinname="Key Mode">
    </PIN>
-   <PIN pinname="Keyboard" visible="1">
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="U" visible="1">
    </PIN>
@@ -298,12 +282,10 @@
    <PIN pinname="ShiftKey" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="15" srcpinname="Keyboard" dstnodeid="93" dstpinname="Keyboard">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="92" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="6465" top="780" width="0" height="0">
+   <BOUNDS type="Node" left="6405" top="780" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6465" top="780" width="885" height="240">
+   <BOUNDS type="Box" left="6405" top="780" width="885" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="Press">
    </PIN>
@@ -386,6 +368,28 @@
    </NODE>
    <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Increment">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
+   <NODE componentmode="Hidden" id="15" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="1050" top="300" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="1050" top="300" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4800" top="4110" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Device" dstnodeid="84" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Device" dstnodeid="93" dstpinname="Keyboard">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Device" dstnodeid="78" dstpinname="Keyboard">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    </PATCH>

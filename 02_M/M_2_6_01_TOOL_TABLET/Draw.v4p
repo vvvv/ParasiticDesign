@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha28.2.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_6_01_TOOL_TABLET\Draw.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_5_01 Rendering of Lissajous Figures\DrawLissajous.v4p" systemname="DrawLissajous">
    <BOUNDS height="9525" left="11760" top="3750" type="Window" width="16710">
    </BOUNDS>
@@ -303,57 +303,11 @@
    </BOUNDS>
    <BOUNDS height="240" left="5325" top="8250" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Input Node" visible="1">
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" hiddenwhenlocked="0" id="140" managers="" nodename="Line (EX9)" systemname="Line (EX9)">
-   <PIN pinname="Single Input" pintype="Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="VerticesXYZ" pintype="Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Width" pintype="Input" visible="1" slicecount="1" values="3">
-   </PIN>
-   <BOUNDS height="270" left="5340" top="7455" type="Node" width="5310">
-   </BOUNDS>
-   <BOUNDS height="3600" left="5340" top="7455" type="Box" width="4800">
-   </BOUNDS>
-   <PIN pinname="Layer" pintype="Output" visible="1">
-   </PIN>
-   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Transform Each Bin" pintype="Input" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Render State" pintype="Input" slicecount="1" visible="1" values="||">
-   </PIN>
-   <BOUNDS height="7140" left="1455" top="8415" type="Window" width="12045">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="BinSize" pintype="Input" slicecount="1" visible="1" values="-1">
-   </PIN>
-   <PIN pinname="Antialias" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Pattern" pintype="Input" slicecount="32" visible="1" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
-   </PIN>
-   <PIN pinname="PatternScale" pintype="Input" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Patch" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   <PIN pinname="From" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="To" pintype="Input" visible="1">
-   </PIN>
-   <PIN pinname="Color" pintype="Input" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="141" dstpinname="Input Node" srcnodeid="140" srcpinname="Layer">
-   </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\VectorSized.dll" id="139" nodename="Select (Value Advanced)" systemname="Select (Value Vector)">
    <PIN pinname="Vector Size" slicecount="1" values="3">
    </PIN>
@@ -398,12 +352,6 @@
    </LINK>
    <LINK dstnodeid="139" dstpinname="Select" srcnodeid="142" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="140" dstpinname="From" srcnodeid="139" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="140" dstpinname="To" srcnodeid="138" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="140" dstpinname="Color" srcnodeid="137" srcpinname="Output">
-   </LINK>
    <NODE systemname="ColorCalculation" filename="ColorCalculation.v4p" nodename="ColorCalculation.v4p" componentmode="Hidden" id="135">
    <BOUNDS type="Node" left="8970" top="5850" width="1800" height="270">
    </BOUNDS>
@@ -434,22 +382,6 @@
    </NODE>
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="137" dstpinname="Input">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="143" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="6150" top="6795" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6150" top="6795" width="345" height="240">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Line Alpha">
    </LINK>
    <LINK srcnodeid="133" srcpinname="Output" dstnodeid="135" dstpinname="Connection Radius">
@@ -466,13 +398,7 @@
    </LINK>
    <LINK srcnodeid="105" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Saturation">
    </LINK>
-   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Width">
-   </LINK>
    <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Invert Hue">
-   </LINK>
-   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Transform Each Bin">
-   </LINK>
-   <LINK srcnodeid="143" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Single Input">
    </LINK>
    <NODE componentmode="InABox" id="149" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="690" type="Node" width="7425">
@@ -734,8 +660,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="158" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
-   </LINK>
    <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="160">
    <BOUNDS type="Node" left="8220" top="3570" width="100" height="100">
    </BOUNDS>
@@ -882,4 +806,64 @@
    </NODE>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="160" dstpinname="maxRadius">
    </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Line (EX9 FromTo).v4p" hiddenwhenlocked="0" id="140" managers="" nodename="Line (EX9 FromTo)" systemname="Line (EX9 FromTo)">
+   <PIN pinname="Single Input" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="VerticesXYZ" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Width" pintype="Input" visible="1" slicecount="1" values="3">
+   </PIN>
+   <BOUNDS height="270" left="5340" top="7455" type="Node" width="6210">
+   </BOUNDS>
+   <BOUNDS height="3600" left="5340" top="7455" type="Box" width="4800">
+   </BOUNDS>
+   <PIN pinname="Layer" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Transform" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Each Bin" pintype="Input" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" pintype="Input" slicecount="1" visible="1" values="||">
+   </PIN>
+   <BOUNDS height="7140" left="1455" top="8415" type="Window" width="12045">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="BinSize" pintype="Input" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Antialias" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Pattern" pintype="Input" slicecount="32" visible="1" values="1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1">
+   </PIN>
+   <PIN pinname="PatternScale" pintype="Input" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="From" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="To" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Color" pintype="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="141" dstpinname="Input Node" srcnodeid="140" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="140" dstpinname="From" srcnodeid="139" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="140" dstpinname="To" srcnodeid="138" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="140" dstpinname="Color" srcnodeid="137" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Width">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Output Node" dstnodeid="140" dstpinname="Transform">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

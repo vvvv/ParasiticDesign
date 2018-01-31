@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.1.dtd" >
-   <PATCH nodename="C:\Users\joreg\dev\github\ParasiticDesign\02_M\M_3_3_03 The Mesh Class\M_3_3_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_3_03 The Mesh Class\M_3_3_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="7380" left="1800" top="870" type="Window" width="13110">
    </BOUNDS>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -56,34 +56,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InAWindow" id="242" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
-   <PIN pinname="Clear Depth Buffer" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D16">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <BOUNDS height="270" left="4965" top="6420" type="Node" width="1755">
-   </BOUNDS>
-   <BOUNDS height="1800" left="4965" top="6420" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="10410" left="14910" top="855" type="Window" width="10140">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
-   </PIN>
-   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="239" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -442,10 +414,6 @@
    <PIN pinname="Ambient Color" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="242" dstpinname="View">
-   </LINK>
-   <LINK srcnodeid="296" srcpinname="Transform Out" dstnodeid="242" dstpinname="Projection">
-   </LINK>
    <NODE systemname="Light (EX9 Direction)" filename="%VVVV%\lib\nodes\modules\EX9\Light (EX9 Direction).v4p" nodename="Light (EX9 Direction)" componentmode="Hidden" id="340">
    <BOUNDS type="Node" left="3810" top="3315" width="100" height="100">
    </BOUNDS>
@@ -578,8 +546,6 @@
    </NODE>
    <LINK srcnodeid="350" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Power">
    </LINK>
-   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="242" dstpinname="Layers">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="359" systemname="IOBox (Color)">
    <BOUNDS type="Node" left="5265" top="3315" width="0" height="0">
    </BOUNDS>
@@ -595,7 +561,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6180" top="3315" width="345" height="345">
    </BOUNDS>
-   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.89844,0.89844,0.89844,1.00000|">
+   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.13849,0.13849,0.13849,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -605,7 +571,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5730" top="3315" width="345" height="375">
    </BOUNDS>
-   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.78130,0.78130,0.78130,1.00000|">
+   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.55146,0.55146,0.55146,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -632,4 +598,30 @@
    </NODE>
    <LINK srcnodeid="361" srcpinname="Y Output Value" dstnodeid="304" dstpinname="FormID">
    </LINK>
+   <NODE componentmode="InAWindow" id="362" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <BOUNDS height="270" left="4965" top="6420" type="Node" width="1755">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4965" top="6420" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="10410" left="14910" top="855" type="Window" width="10140">
+   </BOUNDS>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="362" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="296" srcpinname="Transform Out" dstnodeid="362" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="362" dstpinname="Layers">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>

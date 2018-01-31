@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha25.3.dtd" >
-   <PATCH nodename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_5_2_01 Read Data From The Harddisk\M_5_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_5_2_01\M_5_2_01.v4p" systemname="M_5_2_01">
-   <BOUNDS height="17175" left="5175" top="0" type="Window" width="13170">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_5_2_01 Read Data From The Harddisk\M_5_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_5_2_01\M_5_2_01.v4p" systemname="M_5_2_01">
+   <BOUNDS height="16500" left="5175" top="0" type="Window" width="13125">
    </BOUNDS>
    <NODE componentmode="InABox" id="255" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="390" type="Node" width="840">
@@ -11,7 +11,7 @@
    </PIN>
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|press &apos;o&apos; to select an input folder! console output only!&cr;&lf;take care of very big folders, loading will take up to several minutes. &cr;&lf;program takes a file directory (hierarchical tree) on harddisk &cr;&lf;as input and prints all filenames to the console.&cr;&lf;and shows also how to traverse a hierarchical tree in two&cr;&lf;different ways: Depth First Search + Breadth First Search|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|take care of very big folders, loading will take up to several minutes. &cr;&lf;program takes a file directory (hierarchical tree) on harddisk &cr;&lf;as input and prints all filenames to the console.&cr;&lf;and shows also how to traverse a hierarchical tree in two&cr;&lf;different ways: Depth First Search + Breadth First Search|">
    </PIN>
    <BOUNDS height="1380" left="135" top="390" type="Box" width="5115">
    </BOUNDS>
@@ -30,44 +30,6 @@
    <BOUNDS height="375" left="120" top="45" type="Box" width="4890">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="InABox" hiddenwhenlocked="0" id="294" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
-   <PIN pinname="Output String" pintype="Output" visible="0">
-   </PIN>
-   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
-   </PIN>
-   <BOUNDS height="0" left="0" top="0" type="Window" width="0">
-   </BOUNDS>
-   <PIN encoded="0" pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
-   </PIN>
-   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
-   </PIN>
-   <PIN pinname="Character Encoding" pintype="Configuration" slicecount="1" values="ANSI">
-   </PIN>
-   <PIN pinname="Show Characters [#0..#32,#127]" pintype="Configuration" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="SliceOffset" pintype="Input" slicecount="1" visible="0" values="0">
-   </PIN>
-   <PIN pinname="ID" pintype="Output" visible="-1">
-   </PIN>
-   <PIN encoded="0" pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;o:&tab;&tab;&tab;select an input folder|">
-   </PIN>
-   <BOUNDS height="270" left="150" top="1725" type="Node" width="840">
-   </BOUNDS>
-   <BOUNDS height="480" left="150" top="1725" type="Box" width="3735">
-   </BOUNDS>
-   </NODE>
    <NODE componentmode="InABox" id="377" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN encoded="0" pinname="Default" slicecount="1" values="C:\">
    </PIN>
@@ -77,14 +39,18 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
-   <PIN encoded="0" pinname="Input String" slicecount="1" values="|C:\Documents and Settings\Roman\Desktop\effects\|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="..\..\02_M">
    </PIN>
-   <BOUNDS height="0" left="1680" top="2355" type="Node" width="0">
+   <BOUNDS height="0" left="1800" top="2235" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="315" left="1680" top="2355" type="Box" width="4005">
+   <BOUNDS height="315" left="1800" top="2235" type="Box" width="4005">
    </BOUNDS>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
    </NODE>
-   <NODE componentmode="InABox" id="378" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <NODE componentmode="InABox" id="378" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <BOUNDS height="0" left="1425" top="2895" type="Node" width="0">
@@ -92,7 +58,7 @@
    <BOUNDS height="240" left="1425" top="2895" type="Box" width="450">
    </BOUNDS>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Dir.dll" id="380" nodename="Dir (File Advanced)" systemname="Dir (File Advanced)">
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\Dir.dll" id="380" nodename="Dir (File Advanced)" systemname="DIR (FILE ADVANCED)">
    <PIN pinname="Count" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Update" slicecount="1" visible="1" values="1">
@@ -101,21 +67,23 @@
    </PIN>
    <PIN pinname="Show Short Filename" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Files" visible="1">
+   <PIN pinname="Filenames" visible="1">
    </PIN>
    <PIN pinname="Sort Order">
    </PIN>
    <BOUNDS height="100" left="1665" top="3270" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Directory" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Mask" visible="1" slicecount="1" values="*.*">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="380" dstpinname="Directory" srcnodeid="377" srcpinname="Output String">
-   </LINK>
    <LINK dstnodeid="380" dstpinname="Include Subdirectories" srcnodeid="378" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="Hidden" id="392" nodename="Subtract (String)" systemname="Subtract (String)">
    <PIN pinname="Operand 1" visible="1">
    </PIN>
-   <PIN pinname="Operand 2" visible="1">
+   <PIN pinname="Operand 2" visible="1" slicecount="1" values="text">
    </PIN>
    <PIN pinname="Result" visible="1">
    </PIN>
@@ -124,9 +92,7 @@
    <BOUNDS height="270" left="1680" top="3885" type="Node" width="1185">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="392" dstpinname="Operand 1" srcnodeid="380" srcpinname="Files">
-   </LINK>
-   <LINK dstnodeid="392" dstpinname="Operand 2" srcnodeid="377" srcpinname="Output String">
+   <LINK dstnodeid="392" dstpinname="Operand 1" srcnodeid="380" srcpinname="Filenames">
    </LINK>
    <NODE componentmode="Hidden" filename="" id="393" nodename="TreeView (String)" systemname="TreeView (String)">
    <PIN pinname="Levels">
@@ -288,13 +254,15 @@
    </LINK>
    <LINK dstnodeid="399" dstpinname="Input String" srcnodeid="439" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="489" nodename="Sort (Spreads)" systemname="Sort (Spreads)">
+   <NODE componentmode="Hidden" id="489" nodename="Sort (Spreads)" systemname="SORT (SPREADS)">
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Former Index" visible="1">
    </PIN>
    <BOUNDS height="100" left="11505" top="9105" type="Node" width="100">
    </BOUNDS>
+   <PIN pinname="Algorithm" slicecount="1" values="QuickSort">
+   </PIN>
    </NODE>
    <LINK dstnodeid="489" dstpinname="Input" srcnodeid="393" srcpinname="Depth">
    </LINK>
@@ -366,7 +334,7 @@
    </LINK>
    <LINK dstnodeid="439" dstpinname="Input 1" srcnodeid="542" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" filename="ParentFinder.v4p" id="543" nodename="ParentFinder.v4p" systemname="ParentFinder" path="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_5_2_01 Read Data From The Harddisk\">
+   <NODE componentmode="Hidden" filename="ParentFinder.v4p" id="543" nodename="ParentFinder.v4p" systemname="ParentFinder">
    <BOUNDS height="14490" left="14835" top="2415" type="Window" width="6135">
    </BOUNDS>
    <PIN pinname="Depth" visible="1">
@@ -488,4 +456,12 @@
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt;&lt; String for depth information.|">
    </PIN>
    </NODE>
+   <LINK srcnodeid="377" srcpinname="Output String" dstnodeid="392" dstpinname="Operand 2">
+   </LINK>
+   <LINK srcnodeid="377" srcpinname="Output String" dstnodeid="380" dstpinname="Directory">
+   </LINK>
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="35.9.0">
+   </PACK>
    </PATCH>
