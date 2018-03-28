@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_2_3_01 Shapes of Agents\P_2_2_3_01.v4p" systemname="P_2_2_3_01" scrollx="0" scrolly="15">
    <BOUNDS height="9135" left="0" top="0" type="Window" width="12705">
    </BOUNDS>
    <NODE componentmode="InABox" id="17" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -63,7 +63,7 @@
    </BOUNDS>
    <PIN pinname="Out" visible="1">
    </PIN>
-   <BOUNDS height="4905" left="15600" top="5700" type="Window" width="5550">
+   <BOUNDS height="6540" left="15600" top="5700" type="Window" width="8355">
    </BOUNDS>
    <PIN pinname="RandomCount" visible="1">
    </PIN>
@@ -80,6 +80,8 @@
    <PIN pinname="Fill Style" visible="1">
    </PIN>
    <PIN pinname="Clear" visible="1">
+   </PIN>
+   <PIN pinname="Enable Renderer" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="463" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -149,9 +151,9 @@
    <NODE componentmode="InABox" id="606" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="660" top="2340" type="Node" width="7425">
    </BOUNDS>
-   <BOUNDS height="2760" left="660" top="2340" type="Box" width="4500">
+   <BOUNDS height="2460" left="660" top="2340" type="Box" width="4350">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Damper (Animation Jump) is used here to realize the shapes floating towards the mouse position. But on clicking the left mouse button the shape stops floating and makes a jump to the current mouse position. &cr;&lf;&cr;&lf;The shape centered around the mouse position is created.&cr;&lf;&cr;&lf;Two different draw modes for the shape.&cr;&lf;&cr;&lf;The Renderers Clear-pin is set to 0 so everything thats drawn leaves a trail. In order for the cursor not to leave a trail as well, a separate renderpass is used. |">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Damper (Animation Jump) is used here to realize the shapes floating towards the mouse position. But on clicking the left mouse button the shape stops floating and makes a jump to the current mouse position. &cr;&lf;&cr;&lf;The shape centered around the mouse position is created.&cr;&lf;&cr;&lf;Two different draw modes for the shape.&cr;&lf;&cr;&lf;The Renderer&apos;s &apos;Clear&apos; pin is set to 0 so everything that is drawn leaves a trail.|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -380,7 +382,7 @@
    <PIN pinname="Size" slicecount="1" values="10">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="616">
    <BOUNDS type="Node" left="8835" top="1215" width="100" height="100">
@@ -412,32 +414,28 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="617">
+   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="619">
    <BOUNDS type="Node" left="7050" top="6975" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="7050" top="6975" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="12585" top="0" width="5610" height="5280">
+   <BOUNDS type="Window" left="12495" top="0" width="5610" height="5280">
    </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Layers" visible="1">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="617" dstpinname="Layers">
+   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="619" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="617" dstpinname="Clear">
+   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="619" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="398" srcpinname="Enable Renderer" dstnodeid="619" dstpinname="Enabled">
    </LINK>
    </PATCH>

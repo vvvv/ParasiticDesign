@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.dtd" >
-   <PATCH nodename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_02 Density structure of Agents\DrawCirclesAndLines.v4p" filename="C:\Users\joreg\dev\github\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
    <BOUNDS height="5820" left="7095" top="8985" type="Window" width="14055">
    </BOUNDS>
    <NODE componentmode="Hidden" id="11" nodename="Segment (DX9)" systemname="Segment (DX9)">
@@ -62,24 +62,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Line (EX9).v4p" id="7" nodename="Line (EX9)" systemname="Line (EX9)">
-   <BOUNDS height="100" left="5355" top="3600" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="From" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="To" visible="1">
-   </PIN>
-   <PIN pinname="Width" slicecount="1" values="2">
-   </PIN>
-   <BOUNDS left="5355" top="3600" type="Box">
-   </BOUNDS>
-   <PIN pinname="Enabled">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="6" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
    <BOUNDS height="100" left="6465" top="2400" type="Node" width="100">
    </BOUNDS>
@@ -118,10 +100,6 @@
    </LINK>
    <LINK dstnodeid="5" dstpinname="Y" srcnodeid="4" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="7" dstpinname="From" srcnodeid="5" srcpinname="XYZ">
-   </LINK>
-   <LINK dstnodeid="7" dstpinname="To" srcnodeid="6" srcpinname="XYZ">
-   </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="10245" top="1170" type="Node" width="100">
    </BOUNDS>
@@ -144,8 +122,6 @@
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Color" srcnodeid="0" srcpinname="Color Output">
-   </LINK>
    <LINK dstnodeid="10" dstpinname="ScaleX" srcnodeid="8" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="10" dstpinname="ScaleY" srcnodeid="8" srcpinname="Output">
@@ -153,13 +129,11 @@
    <NODE componentmode="Hidden" id="12" nodename="Group (EX9)" systemname="Group (EX9)">
    <BOUNDS height="100" left="5355" top="4305" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Layer 1" visible="1">
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer 2" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="12" dstpinname="Layer 1" srcnodeid="7" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="12" dstpinname="Layer 2" srcnodeid="11" srcpinname="Layer">
    </LINK>
    <NODE componentmode="InABox" id="13" nodename="IOBox (Node)" systemname="IOBox (Node)">
@@ -260,8 +234,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Enable Lines|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="12900" top="270" type="Node" width="0">
    </BOUNDS>
@@ -412,4 +384,34 @@
    </NODE>
    <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="22" dstpinname="Fill Mode">
    </LINK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Line (EX9 FromTo).v4p" id="7" nodename="Line (EX9 FromTo)" systemname="Line (EX9 FromTo)">
+   <BOUNDS height="100" left="5355" top="3600" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="From" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="To" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="2">
+   </PIN>
+   <BOUNDS left="5355" top="3600" type="Box">
+   </BOUNDS>
+   <PIN pinname="Enabled">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="From" srcnodeid="5" srcpinname="XYZ">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="To" srcnodeid="6" srcpinname="XYZ">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Color" srcnodeid="0" srcpinname="Color Output">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Layer 1" srcnodeid="7" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="7" dstpinname="Enabled" hiddenwhenlocked="1" srcnodeid="19" srcpinname="Y Output Value">
+   </LINK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
    </PATCH>
