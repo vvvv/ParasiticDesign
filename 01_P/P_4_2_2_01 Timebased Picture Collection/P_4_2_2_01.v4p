@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_2_2_01 Timebased Picture Collection\P_4_2_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.2.2.v4p" systemname="P.4.2.2" scrollx="0" scrolly="-360">
    <BOUNDS height="11655" left="1380" top="1305" type="Window" width="14865">
    </BOUNDS>
@@ -210,24 +210,6 @@
    </NODE>
    <LINK dstnodeid="208" dstpinname="Input 2" srcnodeid="101" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="212" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="8820" top="5130" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Overflow" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="212" dstpinname="Up" srcnodeid="133" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="217" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="9795" top="3750" type="Node" width="100">
    </BOUNDS>
@@ -347,31 +329,13 @@
    </BOUNDS>
    <PIN pinname="Source Maximum" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="191">
    </PIN>
-   <PIN pinname="Destination Maximum" visible="1">
+   <PIN pinname="Destination Maximum" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="252" dstpinname="Input" srcnodeid="212" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="253" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="11085" top="7815" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="253" dstpinname="Input 1" srcnodeid="234" srcpinname="Duration">
-   </LINK>
-   <LINK dstnodeid="252" dstpinname="Destination Maximum" linkstyle="Bezier" srcnodeid="253" srcpinname="Output 1">
-   <LINKPOINT x="14405" y="9905">
-   </LINKPOINT>
-   <LINKPOINT x="13645" y="3970">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="234" dstpinname="Seek Time" srcnodeid="252" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="124" nodename="Buffer (EX9.Texture)" systemname="BUFFER (EX9.TEXTURE)">
@@ -385,7 +349,7 @@
    </PIN>
    <PIN pinname="Frame Count" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="191">
    </PIN>
    </NODE>
    <LINK dstnodeid="92" dstpinname="Texture" srcnodeid="124" srcpinname="Texture Out">
@@ -393,8 +357,6 @@
    <LINK dstnodeid="124" dstpinname="Frame Count" srcnodeid="163" srcpinname="Count">
    </LINK>
    <LINK dstnodeid="252" dstpinname="Source Maximum" srcnodeid="163" srcpinname="High">
-   </LINK>
-   <LINK dstnodeid="212" dstpinname="Maximum" srcnodeid="163" srcpinname="High">
    </LINK>
    <LINK dstnodeid="163" dstpinname="Input" srcnodeid="97" srcpinname="Y Out">
    </LINK>
@@ -625,21 +587,13 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="217" srcpinname="Y Output Value" dstnodeid="278" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="FrameDelay (Animation Legacy)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="279">
-   <BOUNDS type="Node" left="11085" top="9000" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="280">
    <BOUNDS type="Node" left="11085" top="8610" width="100" height="100">
    </BOUNDS>
@@ -650,29 +604,7 @@
    </NODE>
    <LINK srcnodeid="108" srcpinname="Output String" dstnodeid="280" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="280" srcpinname="OnChange" dstnodeid="279" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="279" srcpinname="Output 1" dstnodeid="278" dstpinname="Input 2" linkstyle="Bezier">
-   <LINKPOINT x="14690" y="11975">
-   </LINKPOINT>
-   <LINKPOINT x="14425" y="2590">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="212" dstpinname="Reset">
-   </LINK>
    <LINK srcnodeid="235" srcpinname="Texture Out" dstnodeid="124" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="FrameDelay (Animation Legacy)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="282">
-   <BOUNDS type="Node" left="6570" top="8550" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="282" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="282" srcpinname="Output 1" dstnodeid="124" dstpinname="Index">
    </LINK>
    <NODE id="276" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS type="Node" height="270" left="5445" top="9420" width="315">
@@ -716,6 +648,74 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="212" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="8820" top="5130" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Overflow" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="212" dstpinname="Up" srcnodeid="133" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="252" dstpinname="Input" srcnodeid="212" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="212" dstpinname="Maximum" srcnodeid="163" srcpinname="High">
+   </LINK>
+   <LINK srcnodeid="278" srcpinname="Output" dstnodeid="212" dstpinname="Reset">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="279" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="11085" top="9000" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="280" srcpinname="OnChange" dstnodeid="279" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="279" srcpinname="Output 1" dstnodeid="278" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="14690" y="11975">
+   </LINKPOINT>
+   <LINKPOINT x="14425" y="2590">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" id="253" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="11085" top="7815" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="253" dstpinname="Input 1" srcnodeid="234" srcpinname="Duration">
+   </LINK>
+   <LINK dstnodeid="252" dstpinname="Destination Maximum" linkstyle="Bezier" srcnodeid="253" srcpinname="Output 1">
+   <LINKPOINT x="14405" y="9905">
+   </LINKPOINT>
+   <LINKPOINT x="13645" y="3970">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="282" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="6570" top="8550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="191">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="282" srcpinname="Output 1" dstnodeid="124" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="282" dstpinname="Input 1">
+   </LINK>
    </PATCH>

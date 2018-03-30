@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\P_2_3_3_01_TABLET_TOOL.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\P_2_3_3_01_TABLET_TOOL.v4p" systemname="P_2_3_3_01_TABLET_TOOL" scrollx="0" scrolly="-1080">
    <BOUNDS height="14355" left="0" top="360" type="Window" width="17415">
    </BOUNDS>
@@ -111,7 +111,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="200" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
@@ -304,22 +304,6 @@
    <PIN pinname="Size" slicecount="1" values="7">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <BOUNDS height="270" left="15615" top="6600" type="Node" width="1500">
-   </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="Unlimited">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="343" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="10215" top="2040" type="Node" width="100">
    </BOUNDS>
@@ -602,8 +586,6 @@
    </NODE>
    <LINK srcnodeid="419" srcpinname="Output" dstnodeid="421" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="421" srcpinname="Output" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1">
-   </LINK>
    <LINK srcnodeid="421" srcpinname="Output" dstnodeid="27" dstpinname="Clear" hiddenwhenlocked="1">
    </LINK>
    <NODE systemname="Expr (Value)" nodename="Expr (Value)" componentmode="Hidden" id="429">
@@ -802,7 +784,7 @@
    </LINK>
    <LINK dstnodeid="445" dstpinname="Texture" srcnodeid="438" srcpinname="Texture Out">
    </LINK>
-   <NODE componentmode="Hidden" id="437" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <NODE componentmode="Hidden" id="437" nodename="AspectRatio (Transform)" systemname="ASPECTRATIO (TRANSFORM)">
    <BOUNDS height="270" left="6870" top="9630" type="Node" width="1455">
    </BOUNDS>
    <PIN pinname="Aspect Width" visible="1">
@@ -811,7 +793,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Alignment">
+   <PIN pinname="Alignment" slicecount="1" values="FitIn">
    </PIN>
    <PIN pinname="Uniform Scale">
    </PIN>
@@ -1090,23 +1072,11 @@
    </NODE>
    <LINK srcnodeid="466" srcpinname="Color Output" dstnodeid="349" dstpinname="Background Color">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="431" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS type="Node" left="15615" top="6180" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="431" srcpinname="Output 1" dstnodeid="165" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="372" srcpinname="Place Element" dstnodeid="431" dstpinname="Input 1">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="470">
+   <NODE systemname="ASPECTRATIO (TRANSFORM)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="470">
    <BOUNDS type="Node" left="12090" top="9525" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Aspect Width" visible="1">
@@ -1149,5 +1119,35 @@
    <LINK srcnodeid="472" srcpinname="Output Enum" dstnodeid="470" dstpinname="Alignment">
    </LINK>
    <LINK srcnodeid="470" srcpinname="Transform Out" dstnodeid="27" dstpinname="Aspect Ratio">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="431" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="15615" top="6180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="372" srcpinname="Place Element" dstnodeid="431" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS height="270" left="15615" top="6600" type="Node" width="1500">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Unlimited">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="421" srcpinname="Output" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="431" srcpinname="Output 1" dstnodeid="165" dstpinname="Up">
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\P_4_3_3_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.3\P.4.3.3_new.v4p" systemname="P.4.3.3_new">
    <BOUNDS height="11925" left="255" top="375" type="Window" width="12900">
    </BOUNDS>
@@ -227,7 +227,7 @@
    </PIN>
    <PIN pinname="Staring Point" slicecount="2" values="0,0">
    </PIN>
-   <PIN pinname="Number of Points" visible="1">
+   <PIN pinname="Number of Points" visible="1" slicecount="1" values="10">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -239,7 +239,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9810" top="7500" type="Box" width="525">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="496">
@@ -384,32 +384,6 @@
    <PIN pinname="Input" visible="1">
    </PIN>
    </NODE>
-   <NODE id="338" componentmode="Hidden" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <BOUNDS type="Node" height="270" left="9810" top="7050" width="1200">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="30">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="485" dstpinname="Number of points">
-   </LINK>
-   <LINK srcnodeid="339" srcpinname="Down" dstnodeid="338" dstpinname="Down">
-   </LINK>
-   <LINK srcnodeid="339" srcpinname="Up" dstnodeid="338" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="493" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="339" srcpinname="W" dstnodeid="479" dstpinname="Reset">
    </LINK>
    <LINK srcnodeid="339" srcpinname="Q" dstnodeid="479" dstpinname="Set">
@@ -654,8 +628,6 @@
    </NODE>
    <LINK srcnodeid="543" srcpinname="Y Output Value" dstnodeid="485" dstpinname="Staring Point">
    </LINK>
-   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="485" dstpinname="Number of Points">
-   </LINK>
    <LINK srcnodeid="505" srcpinname="Whole Part" dstnodeid="485" dstpinname="Number of Curves">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="544" systemname="IOBox (String)">
@@ -690,7 +662,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="546">
    <BOUNDS type="Node" left="6285" top="5580" width="100" height="100">
@@ -741,7 +713,7 @@
    </BOUNDS>
    <PIN pinname="VerticesXYZ" visible="1">
    </PIN>
-   <PIN pinname="BinSize" visible="1">
+   <PIN pinname="BinSize" visible="1" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
@@ -751,8 +723,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="485" srcpinname="XY" dstnodeid="549" dstpinname="VerticesXYZ">
-   </LINK>
-   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="549" dstpinname="BinSize">
    </LINK>
    <LINK srcnodeid="485" srcpinname="Color" dstnodeid="549" dstpinname="Color">
    </LINK>
@@ -793,5 +763,35 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="131" srcpinname="Device" dstnodeid="339" dstpinname="Keyboard">
+   </LINK>
+   <NODE id="338" componentmode="Hidden" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="270" left="9810" top="7050" width="1200">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="485" dstpinname="Number of points">
+   </LINK>
+   <LINK srcnodeid="339" srcpinname="Down" dstnodeid="338" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="339" srcpinname="Up" dstnodeid="338" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="493" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="485" dstpinname="Number of Points">
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Output" dstnodeid="549" dstpinname="BinSize">
    </LINK>
    </PATCH>

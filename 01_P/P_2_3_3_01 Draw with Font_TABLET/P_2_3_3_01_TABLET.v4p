@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET\P_2_3_3_01_TABLET.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
    <BOUNDS height="11220" left="0" top="360" type="Window" width="15270">
    </BOUNDS>
@@ -65,7 +65,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="227" nodename="IOBox (Color)" systemname="IOBox (Color)">
@@ -275,22 +275,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="330" dstpinname="Target Distance" srcnodeid="322" srcpinname="Output">
-   </LINK>
-   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <BOUNDS height="270" left="13365" top="6900" type="Node" width="1500">
-   </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="Unlimited">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="343" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
    <BOUNDS height="100" left="7965" top="2340" type="Node" width="100">
@@ -562,8 +546,6 @@
    </LINK>
    <LINK srcnodeid="419" srcpinname="Output" dstnodeid="421" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="421" srcpinname="Output" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1">
-   </LINK>
    <NODE componentmode="InABox" id="425" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7425" top="7245" type="Node" width="315">
    </BOUNDS>
@@ -626,18 +608,6 @@
    </LINK>
    <LINK srcnodeid="430" srcpinname="Output Enum" dstnodeid="33" dstpinname="Font">
    </LINK>
-   <NODE systemname="FrameDelay (Animation Legacy)" nodename="FrameDelay (Animation)" componentmode="Hidden" id="431">
-   <BOUNDS type="Node" left="13365" top="6480" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="372" srcpinname="Place Element" dstnodeid="431" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="431" srcpinname="Output 1" dstnodeid="165" dstpinname="Up">
-   </LINK>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="432" systemname="IOBox (Enumerations)">
    <BOUNDS type="Node" left="10050" top="7800" width="0" height="0">
    </BOUNDS>
@@ -664,7 +634,7 @@
    </NODE>
    <LINK srcnodeid="433" srcpinname="Output String" dstnodeid="429" dstpinname="Term">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -693,5 +663,35 @@
    <LINK dstnodeid="438" dstpinname="Layers" srcnodeid="33" srcpinname="Layer">
    </LINK>
    <LINK srcnodeid="421" srcpinname="Output" dstnodeid="438" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
+   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <BOUNDS height="270" left="13365" top="6900" type="Node" width="1500">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Unlimited">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="421" srcpinname="Output" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" nodename="FrameDelay (Value)" componentmode="Hidden" id="431" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" left="13365" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="372" srcpinname="Place Element" dstnodeid="431" dstpinname="Input 1" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="431" srcpinname="Output 1" dstnodeid="165" dstpinname="Up">
    </LINK>
    </PATCH>

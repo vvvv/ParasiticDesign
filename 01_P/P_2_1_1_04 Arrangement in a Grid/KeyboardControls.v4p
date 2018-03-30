@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.5.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\KeyboardControls.v4p">
    <BOUNDS height="7095" left="12915" top="5835" type="Window" width="12705">
    </BOUNDS>
@@ -24,24 +24,6 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Texture Index|">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="63" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="4545" top="4155" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Mode" visible="1">
-   </PIN>
-   <PIN pinname="Down" slicecount="1" visible="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="61" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
    <BOUNDS height="100" left="4545" top="3060" type="Node" width="100">
    </BOUNDS>
@@ -55,35 +37,9 @@
    </BOUNDS>
    <BOUNDS height="240" left="4545" top="5580" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Size Mode|">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="56" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="63" srcpinname="Output">
-   </LINK>
-   <NODE id="71" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="0" left="6960" top="4155" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum">
-   </PIN>
-   <PIN pinname="Mode">
-   </PIN>
-   <PIN pinname="Default" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Minimum" visible="1">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" values="0.1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="88" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -91,33 +47,9 @@
    </BOUNDS>
    <BOUNDS height="240" left="6945" top="5580" type="Box" width="660">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Shape Size|">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="88" dstpinname="Y Input Value" srcnodeid="71" srcpinname="Output">
-   </LINK>
-   <NODE id="89" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="0" left="2925" top="4155" type="Node" width="0">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Unlimited">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" values="0.01">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="93" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -125,13 +57,11 @@
    </BOUNDS>
    <BOUNDS height="240" left="2910" top="5580" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Shape Angle|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="63" dstpinname="Up" srcnodeid="61" srcpinname="Up Edge">
-   </LINK>
    <NODE componentmode="InABox" id="105" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="5685" top="3795" type="Node" width="100">
    </BOUNDS>
@@ -142,8 +72,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="63" dstpinname="Mode" srcnodeid="105" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="InABox" id="106" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="4650" top="3795" type="Node" width="100">
    </BOUNDS>
@@ -152,26 +80,6 @@
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="63" dstpinname="Maximum" srcnodeid="106" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="111" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="10320" top="4155" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Mode" visible="1">
-   </PIN>
-   <PIN pinname="Down" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="110" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -187,15 +95,11 @@
    </BOUNDS>
    <BOUNDS height="240" left="10320" top="5580" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Fill Mode|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="109" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="111" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="111" dstpinname="Up" srcnodeid="110" srcpinname="Up Edge">
-   </LINK>
    <NODE componentmode="InABox" id="108" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="11460" top="3795" type="Node" width="100">
    </BOUNDS>
@@ -206,8 +110,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="111" dstpinname="Mode" srcnodeid="108" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="InABox" id="107" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="10425" top="3795" type="Node" width="100">
    </BOUNDS>
@@ -216,32 +118,6 @@
    <PIN pinname="Y Input Value" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="111" dstpinname="Maximum" srcnodeid="107" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="116" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="690" top="4155" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" values="5">
-   </PIN>
-   <PIN pinname="Mode" visible="1">
-   </PIN>
-   <PIN pinname="Down" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Overflow" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="115" nodename="TogEdge (Animation)" systemname="TogEdge (Animation)">
@@ -262,14 +138,10 @@
    <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Tile Count|">
    </PIN>
    </NODE>
-   <LINK dstnodeid="116" dstpinname="Up" srcnodeid="115" srcpinname="Up Edge">
-   </LINK>
-   <LINK dstnodeid="93" dstpinname="Y Input Value" srcnodeid="89" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="121" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7170" top="3375" type="Node" width="100">
+   <BOUNDS height="100" left="7290" top="2985" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="7170" top="3375" type="Box" width="420">
+   <BOUNDS height="240" left="7290" top="2985" type="Box" width="420">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
@@ -278,12 +150,10 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK dstnodeid="71" dstpinname="Minimum" srcnodeid="121" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="Hidden" id="122" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="100" left="705" top="5055" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -296,8 +166,6 @@
    <PIN pinname="Input 3">
    </PIN>
    </NODE>
-   <LINK dstnodeid="122" dstpinname="Switch" srcnodeid="116" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="114" dstpinname="Y Input Value" srcnodeid="122" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="123" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -316,8 +184,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="116" dstpinname="Maximum" srcnodeid="123" srcpinname="Y Output Value">
-   </LINK>
    <NODE componentmode="InABox" id="124" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="885" top="4680" type="Node" width="0">
    </BOUNDS>
@@ -374,8 +240,6 @@
    <PIN pinname="Input Enum" slicecount="1" values="Wrap">
    </PIN>
    </NODE>
-   <LINK dstnodeid="116" dstpinname="Mode" srcnodeid="127" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="InABox" id="128" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="0" left="8115" top="3780" type="Node" width="0">
    </BOUNDS>
@@ -384,8 +248,6 @@
    <PIN pinname="Input Enum" slicecount="1" values="Clamp">
    </PIN>
    </NODE>
-   <LINK dstnodeid="71" dstpinname="Mode" srcnodeid="128" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="InABox" id="129" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="1980" top="4125" type="Node" width="315">
    </BOUNDS>
@@ -403,9 +265,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="130" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="7455" top="3750" width="0" height="0">
+   <BOUNDS type="Node" left="7455" top="3270" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="7455" top="3750" width="390" height="240">
+   <BOUNDS type="Box" left="7455" top="3270" width="390" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="10">
    </PIN>
@@ -416,8 +278,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="130" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Maximum">
-   </LINK>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="131">
    <BOUNDS type="Node" left="690" top="2310" width="7770" height="270">
    </BOUNDS>
@@ -444,15 +304,7 @@
    </NODE>
    <LINK srcnodeid="131" srcpinname="G" dstnodeid="115" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="131" srcpinname="Left" dstnodeid="89" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Right" dstnodeid="89" dstpinname="Down">
-   </LINK>
    <LINK srcnodeid="131" srcpinname="D" dstnodeid="61" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Up" dstnodeid="71" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Down" dstnodeid="71" dstpinname="Down">
    </LINK>
    <LINK srcnodeid="131" srcpinname="C" dstnodeid="110" dstpinname="Input">
    </LINK>
@@ -498,6 +350,202 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Device" dstnodeid="1" dstpinname="Keyboard">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="116" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="690" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" values="5" visible="1">
+   </PIN>
+   <PIN pinname="Mode" visible="1">
+   </PIN>
+   <PIN pinname="Down" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Overflow" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="116" dstpinname="Up" srcnodeid="115" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="122" dstpinname="Switch" srcnodeid="116" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="116" dstpinname="Maximum" srcnodeid="123" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="116" dstpinname="Mode" srcnodeid="127" srcpinname="Output Enum">
+   </LINK>
+   <NODE id="89" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="0" left="2925" top="4155" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Unlimited">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="93" dstpinname="Y Input Value" srcnodeid="89" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Left" dstnodeid="89" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Right" dstnodeid="89" dstpinname="Down">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="133">
+   <BOUNDS type="Box" left="3555" top="3780" width="435" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3555" top="3780" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="133" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Increment">
+   </LINK>
+   <NODE componentmode="Hidden" id="63" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="4545" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Mode" visible="1">
+   </PIN>
+   <PIN pinname="Down" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="56" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="63" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="63" dstpinname="Up" srcnodeid="61" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="63" dstpinname="Mode" srcnodeid="105" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="63" dstpinname="Maximum" srcnodeid="106" srcpinname="Y Output Value">
+   </LINK>
+   <NODE id="71" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="0" left="6960" top="4155" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Maximum">
+   </PIN>
+   <PIN pinname="Mode">
+   </PIN>
+   <PIN pinname="Default" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Minimum" visible="1">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="88" dstpinname="Y Input Value" srcnodeid="71" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="71" dstpinname="Minimum" srcnodeid="121" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="71" dstpinname="Mode" srcnodeid="128" srcpinname="Output Enum">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Maximum">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Up" dstnodeid="71" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Down" dstnodeid="71" dstpinname="Down">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="134">
+   <BOUNDS type="Box" left="7605" top="3540" width="480" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7605" top="3540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="134" srcpinname="Y Output Value" dstnodeid="71" dstpinname="Increment">
+   </LINK>
+   <NODE componentmode="Hidden" id="111" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="10320" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Mode" visible="1">
+   </PIN>
+   <PIN pinname="Down" slicecount="1" visible="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="109" dstpinname="Y Input Value" linkstyle="PolyLine" srcnodeid="111" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="111" dstpinname="Up" srcnodeid="110" srcpinname="Up Edge">
+   </LINK>
+   <LINK dstnodeid="111" dstpinname="Mode" srcnodeid="108" srcpinname="Output Enum">
+   </LINK>
+   <LINK dstnodeid="111" dstpinname="Maximum" srcnodeid="107" srcpinname="Y Output Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="135">
+   <BOUNDS type="Box" left="1320" top="3420" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1320" top="3420" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="135" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Increment">
+   </LINK>
    </PATCH>

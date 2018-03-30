@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_3_02 Shapes of Agents\CreateShape.v4p" systemname="CreateShape">
    <BOUNDS height="11430" left="13095" top="2610" type="Window" width="14565">
    </BOUNDS>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="30" values="0.89904771690024,-0.244044552664273,0.21059023030817,-0.739573389876069,-0.0574752047248222,0.157533166213876,-1.21369391854798,0.336421045376734,0.584309621591041,0.218535705130502,0.0241227373061689,0.408480546471101,-0.939322804494846,-0.0841597063715144,0.0331018191044345,-0.495133668855932,0.129891140310013,0.302664906732906,0.124148127755066,-0.312318194618771,-0.0141011505667117,-0.643051679228801,0.611433905412363,0.145857738460459,0.275947811357296,-1.0336995618416,0.816065469541583,-0.569072216950339,0.208803682031739,-0.308724451621628">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="11" nodename="Vector (2d Join)" systemname="Vector (2d Join)">
@@ -242,24 +242,6 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="0" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="7485" top="5700" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Default 1" slicecount="30" visible="1" values="0.16980338904541,0,0.155123114754754,0.0690652604432241,0.113620644673744,0.126188509917621,0.0524721329174924,0.161492619640638,-0.0177492873145562,0.168873188313397,-0.0849016945227049,0.147054048562017,-0.137373827440197,0.0998079278701732,-0.166092777591237,0.035304109723017,-0.166092777591237,-0.035304109723017,-0.137373827440197,-0.0998079278701732,-0.084901694522705,-0.147054048562017,-0.0177492873145562,-0.168873188313397,0.0524721329174925,-0.161492619640638,0.113620644673744,-0.126188509917621,0.155123114754754,-0.0690652604432241">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="12" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="0" srcpinname="Output 1">
-   <LINKPOINT x="9735" y="6990">
-   </LINKPOINT>
-   <LINKPOINT x="8115" y="4005">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="1" dstpinname="Input 1" srcnodeid="12" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="27" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -379,8 +361,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="10" dstpinname="XY" srcnodeid="1" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="0" dstpinname="Input 1" srcnodeid="1" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="34" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="210" top="3015" type="Node" width="315">
@@ -842,6 +822,26 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="0" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="7485" top="5700" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="30" visible="1" values="0.16980338904541,0,0.155123114754754,0.0690652604432241,0.113620644673744,0.126188509917621,0.0524721329174924,0.161492619640638,-0.0177492873145562,0.168873188313397,-0.0849016945227049,0.147054048562017,-0.137373827440197,0.0998079278701732,-0.166092777591237,0.035304109723017,-0.166092777591237,-0.035304109723017,-0.137373827440197,-0.0998079278701732,-0.084901694522705,-0.147054048562017,-0.0177492873145562,-0.168873188313397,0.0524721329174925,-0.161492619640638,0.113620644673744,-0.126188509917621,0.155123114754754,-0.0690652604432241">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="12" dstpinname="Input 2" linkstyle="Bezier" srcnodeid="0" srcpinname="Output 1">
+   <LINKPOINT x="9735" y="6990">
+   </LINKPOINT>
+   <LINKPOINT x="8115" y="4005">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="0" dstpinname="Input 1" srcnodeid="1" srcpinname="Output">
+   </LINK>
    </PATCH>

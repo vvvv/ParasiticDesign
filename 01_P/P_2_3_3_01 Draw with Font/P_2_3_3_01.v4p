@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font\P_2_3_3_01.v4p" systemname="P_2_3_3_01">
    <BOUNDS height="13035" left="225" top="570" type="Window" width="15120">
    </BOUNDS>
@@ -65,7 +65,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="-1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="108" nodename="Add (Value)" systemname="Add (Value)">
@@ -88,22 +88,6 @@
    <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="13200" top="5250" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Mode" slicecount="1" values="Unlimited">
-   </PIN>
-   <PIN pinname="Up" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="227" nodename="IOBox (Color)" systemname="IOBox (Color)">
    <BOUNDS height="100" left="10185" top="9030" type="Node" width="100">
    </BOUNDS>
@@ -223,8 +207,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="242" dstpinname="Input 1" srcnodeid="243" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="165" dstpinname="Up" srcnodeid="242" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="246" nodename="Heading (Animation)" systemname="Heading (Animation)">
    <BOUNDS height="270" left="9885" top="1890" type="Node" width="825">
@@ -614,8 +596,6 @@
    </LINK>
    <LINK srcnodeid="228" srcpinname="Angle Distortion" dstnodeid="108" dstpinname="Input 2" hiddenwhenlocked="0">
    </LINK>
-   <LINK srcnodeid="228" srcpinname="Clear" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine">
-   </LINK>
    <NODE id="384" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS type="Node" height="270" left="7620" top="3855" width="315">
    </BOUNDS>
@@ -848,7 +828,7 @@
    </LINK>
    <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="242" dstpinname="Input 2" linkstyle="Bezier">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
@@ -897,5 +877,25 @@
    <LINK srcnodeid="409" srcpinname="Actual Backbuffer Width" dstnodeid="408" dstpinname="X">
    </LINK>
    <LINK srcnodeid="409" srcpinname="Actual Backbuffer Height" dstnodeid="408" dstpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="13200" top="5250" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Mode" slicecount="1" values="Unlimited">
+   </PIN>
+   <PIN pinname="Up" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="96" dstpinname="Index" srcnodeid="165" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="165" dstpinname="Up" srcnodeid="242" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="Clear" dstnodeid="165" dstpinname="Reset" hiddenwhenlocked="1" linkstyle="PolyLine">
    </LINK>
    </PATCH>

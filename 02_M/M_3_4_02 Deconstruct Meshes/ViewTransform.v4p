@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_4_02 Deconstruct Meshes\ViewTransform.v4p" filename="C:\Users\Marco Tempest\ParasiticDesign\02_M\M_3_4_01_TOOL\ViewTransform.v4p" systemname="ViewTransform">
    <BOUNDS height="10800" left="6555" top="1395" type="Window" width="10545">
    </BOUNDS>
@@ -17,7 +17,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="3" values="-0.355555555555556,0.0233333333333333,0">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" slicecount="3" visible="1" values="0,0,0">
    </PIN>
@@ -258,18 +258,6 @@
    </LINK>
    <LINK srcnodeid="94" srcpinname="Y" dstnodeid="86" dstpinname="Input 1">
    </LINK>
-   <NODE componentmode="Hidden" id="116" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="6510" top="5595" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="101" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="116" srcpinname="Output 1">
-   <LINKPOINT x="8100" y="7595">
-   </LINKPOINT>
-   <LINKPOINT x="12420" y="565">
-   </LINKPOINT>
-   </LINK>
    <NODE id="117" componentmode="Hidden" nodename="Subtract (Value)" systemname="Subtract (Value)">
    <BOUNDS type="Node" height="100" left="6495" top="2850" width="100">
    </BOUNDS>
@@ -321,8 +309,6 @@
    <LINK srcnodeid="95" srcpinname="Output" dstnodeid="121" dstpinname="Set">
    </LINK>
    <LINK srcnodeid="121" srcpinname="Output" dstnodeid="88" dstpinname="Go To Position">
-   </LINK>
-   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="116" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="101" srcpinname="Output" dstnodeid="120" dstpinname="Input">
    </LINK>
@@ -592,6 +578,20 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="116" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="6510" top="5595" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="101" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="116" srcpinname="Output 1">
+   <LINKPOINT x="8100" y="7595">
+   </LINKPOINT>
+   <LINKPOINT x="12420" y="565">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="116" dstpinname="Input 1">
+   </LINK>
    </PATCH>

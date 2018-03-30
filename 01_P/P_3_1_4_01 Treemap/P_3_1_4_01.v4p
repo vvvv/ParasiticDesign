@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_4_01 Treemap\P_3_1_4_01.v4p" systemname="P_3_1_4_01" filename="C:\Work\ParasiticDesign\01_P\P_3_1_4_01_Treemap\P_3_1_4_01.v4p">
    <BOUNDS type="Window" left="390" top="600" width="15390" height="13335">
    </BOUNDS>
@@ -360,16 +360,6 @@
    </NODE>
    <LINK srcnodeid="266" srcpinname="Output Enum" dstnodeid="265" dstpinname="Key Mode">
    </LINK>
-   <NODE systemname="Ord2Enum (Enumerations Legacy)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="267">
-   <BOUNDS type="Node" left="12270" top="2715" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   <PIN pinname="Ord Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="267" srcpinname="Enum" dstnodeid="148" dstpinname="Input Enum">
-   </LINK>
    <NODE systemname="MultiFlipFlop (Animation)" nodename="MultiFlipFlop (Animation)" componentmode="Hidden" id="268">
    <BOUNDS type="Node" left="12270" top="2280" width="100" height="100">
    </BOUNDS>
@@ -383,8 +373,6 @@
    <LINK srcnodeid="265" srcpinname="D1" dstnodeid="268" dstpinname="Set 0">
    </LINK>
    <LINK srcnodeid="265" srcpinname="D2" dstnodeid="268" dstpinname="Set 1">
-   </LINK>
-   <LINK srcnodeid="268" srcpinname="Output" dstnodeid="267" dstpinname="Ord Value">
    </LINK>
    <NODE id="271" systemname="Transform (Transform 2d Vector)" nodename="Transform (Transform 2d Vector)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="10740" top="8475" width="100" height="100">
@@ -792,7 +780,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE nodename="Renderer (EX9)" componentmode="InAWindow" id="312" systemname="RENDERER (EX9)">
    <BOUNDS type="Node" left="6975" top="11400" width="0" height="0">
@@ -807,5 +795,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Layer" dstnodeid="312" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="267">
+   <BOUNDS type="Node" left="12270" top="2715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="267" srcpinname="Enum" dstnodeid="148" dstpinname="Input Enum">
+   </LINK>
+   <LINK srcnodeid="268" srcpinname="Output" dstnodeid="267" dstpinname="Ord Value">
    </LINK>
    </PATCH>

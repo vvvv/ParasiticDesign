@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_0_01 Hello Font\P_3_0_01.v4p" filename="V:\Generativvvve Gestaltung\P_3_0_01\P_3_0_01.v4p" systemname="P_3_0_01">
    <BOUNDS height="10950" left="240" top="195" type="Window" width="13875">
    </BOUNDS>
@@ -108,24 +108,6 @@
    <PIN pinname="Input String" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="118" nodename="Change (Animation)" systemname="Change (Animation)">
-   <BOUNDS height="100" left="11715" top="2220" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="OnChange" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="Hidden" id="119" nodename="OR (Boolean Spectral)" systemname="OR (Boolean Spectral)">
-   <BOUNDS height="100" left="11715" top="2700" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="119" dstpinname="Input" srcnodeid="118" srcpinname="OnChange">
-   </LINK>
    <NODE componentmode="Hidden" id="126" nodename="Billboard (Transform)" systemname="Billboard (Transform)">
    <BOUNDS height="100" left="6990" top="8130" type="Node" width="100">
    </BOUNDS>
@@ -256,10 +238,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="152" dstpinname="Input" srcnodeid="119" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="152" dstpinname="Input 1" srcnodeid="119" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="158" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="2295" type="Node" width="7425">
    </BOUNDS>
@@ -496,20 +474,6 @@
    </LINK>
    <LINK dstnodeid="32" dstpinname="Text" srcnodeid="159" srcpinname="Output">
    </LINK>
-   <NODE systemname="KeyboardState (System Split Legacy)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyboardState (System Split)" componentmode="Hidden" id="175">
-   <BOUNDS type="Node" left="8280" top="1410" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Key Code" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="8280" top="1410">
-   </BOUNDS>
-   <PIN pinname="Key" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="175" srcpinname="Key Code" dstnodeid="106" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="164" srcpinname="Output" dstnodeid="165" dstpinname="Input 2">
    </LINK>
    <NODE componentmode="InABox" id="178" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -554,7 +518,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="InABox" id="180" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="5835" type="Node" width="315">
@@ -589,7 +553,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="173">
-   <BOUNDS type="Node" left="7155" top="810" width="100" height="100">
+   <BOUNDS type="Node" left="6255" top="765" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
@@ -602,8 +566,6 @@
    <PIN pinname="Key Char" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="173" srcpinname="Device" dstnodeid="175" dstpinname="Keyboard">
-   </LINK>
    <LINK srcnodeid="173" srcpinname="Key Char" dstnodeid="75" dstpinname="Input 1">
    </LINK>
    <NODE id="48" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
@@ -620,8 +582,6 @@
    <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Position (Projection) XY" dstnodeid="118" dstpinname="Input">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="187">
    <BOUNDS type="Node" left="8145" top="6570" width="100" height="100">
    </BOUNDS>
@@ -659,5 +619,33 @@
    <LINK srcnodeid="188" srcpinname="Y Output Value" dstnodeid="164" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="188" srcpinname="Y Output Value" dstnodeid="152" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="KeyStates (Keyboard Split)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyStates (Keyboard Split)" componentmode="Hidden" id="175">
+   <BOUNDS type="Node" left="8205" top="1410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Key Code" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="8205" top="1410">
+   </BOUNDS>
+   <PIN pinname="Key" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="175" srcpinname="Key Code" dstnodeid="106" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="Device" dstnodeid="175" dstpinname="Keyboard">
+   </LINK>
+   <NODE componentmode="Hidden" id="118" nodename="Change (Animation Spectral)" systemname="Change (Animation Spectral)" filename="%VVVV%\lib\nodes\modules\Animation\Change (Animation Spectral).v4p">
+   <BOUNDS height="100" left="11715" top="2220" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Position (Projection) XY" dstnodeid="118" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="118" srcpinname="OnChange" dstnodeid="152" dstpinname="Input 1">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\ROI.v4p" systemname="1.v4p ////" filename="1.v4p ////">
-   <BOUNDS type="Window" left="5100" top="3555" width="9000" height="6000">
+   <BOUNDS type="Window" left="6450" top="5055" width="9000" height="6615">
    </BOUNDS>
    <NODE componentmode="Hidden" id="12" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="100" left="3885" top="4500" type="Node" width="100">
@@ -52,36 +52,18 @@
    </NODE>
    <LINK dstnodeid="10" dstpinname="Transform In" srcnodeid="7" srcpinname="Transform Out">
    </LINK>
-   <NODE componentmode="Hidden" id="4" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="100" left="6000" top="1920" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Up" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Down" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Unlimited">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="20">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="3" nodename="Divide (Value)" systemname="Divide (Value)">
    <BOUNDS height="100" left="6000" top="2505" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="20">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6465" top="2310" type="Node" width="100">
    </BOUNDS>
@@ -212,11 +194,7 @@
    <PIN pinname="Down" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Up" dstnodeid="4" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Down" dstnodeid="4" dstpinname="Down">
-   </LINK>
-   <NODE componentmode="Hidden" id="9" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <NODE componentmode="Hidden" id="9" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="1170" top="780" type="Node" width="2535">
    </BOUNDS>
    <PIN pinname="X" visible="1">
@@ -227,7 +205,7 @@
    </PIN>
    <BOUNDS type="Box" left="1170" top="780">
    </BOUNDS>
-   <PIN pinname="PositionXY" visible="1">
+   <PIN pinname="Position (Projection) XY" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="12" dstpinname="Enabled" srcnodeid="9" srcpinname="Left Button" hiddenwhenlocked="1">
@@ -236,7 +214,7 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Left Button" dstnodeid="18" dstpinname="Switch" hiddenwhenlocked="1">
    </LINK>
-   <LINK srcnodeid="9" srcpinname="PositionXY" dstnodeid="17" dstpinname="Input 2">
+   <LINK srcnodeid="9" srcpinname="Position (Projection) XY" dstnodeid="17" dstpinname="Input 2">
    </LINK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="4740" top="1755" width="100" height="100">
@@ -246,11 +224,11 @@
    <PIN pinname="XYZ" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="PositionXY" dstnodeid="21" dstpinname="XY">
+   <LINK srcnodeid="9" srcpinname="Position (Projection) XY" dstnodeid="21" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="21" srcpinname="XYZ" dstnodeid="7" dstpinname="XYZ">
    </LINK>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" id="6" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="6015" top="780" type="Node" width="100">
@@ -265,5 +243,27 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Device" dstnodeid="5" dstpinname="Keyboard">
+   </LINK>
+   <NODE componentmode="Hidden" id="4" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="100" left="6000" top="1920" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Up" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Down" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Unlimited">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="20">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="3" dstpinname="Input" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Up" dstnodeid="4" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Down" dstnodeid="4" dstpinname="Down">
    </LINK>
    </PATCH>

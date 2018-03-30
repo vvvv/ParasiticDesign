@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_02 Arrangement in a Grid\P_2_1_1_02.v4p" filename="C:\Users\joreg\work\ParasiticDesign\01_P\P_2_1_1_02 Arrangement in a Grid\P_2_1_1_02a.v4p" systemname="P_2_1_1_02a">
    <BOUNDS height="13230" left="660" top="855" type="Window" width="13050">
    </BOUNDS>
@@ -406,14 +406,6 @@
    </LINK>
    <LINK dstnodeid="228" dstpinname="Input" srcnodeid="229" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="224" nodename="Ord2Enum (Enumerations)" systemname="Ord2Enum (Enumerations Legacy)">
-   <BOUNDS height="100" left="9645" top="3450" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   </NODE>
    <LINK dstnodeid="234" dstpinname="Z" srcnodeid="245" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="221" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -447,7 +439,7 @@
    </BOUNDS>
    <PIN pinname="Cap Resolution" slicecount="1" values="10">
    </PIN>
-   <PIN pinname="Stroke Cap" visible="1">
+   <PIN pinname="Stroke Cap" visible="1" slicecount="1" values="Round">
    </PIN>
    <BOUNDS left="2580" top="11760" type="Box">
    </BOUNDS>
@@ -459,10 +451,6 @@
    <LINK dstnodeid="220" dstpinname="Transform In" srcnodeid="234" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="220" dstpinname="Weight" srcnodeid="228" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="220" dstpinname="Stroke Cap" srcnodeid="224" srcpinname="Enum">
-   <LINKPOINT x="9675" y="10965">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="217" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="0" left="10800" top="2595" type="Node" width="0">
@@ -594,8 +582,6 @@
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="224" dstpinname="Ord Value" srcnodeid="222" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="222" dstpinname="Key Match" srcnodeid="217" srcpinname="Output String">
    </LINK>
    <NODE componentmode="Hidden" id="223" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
@@ -614,7 +600,7 @@
    </LINK>
    <LINK srcnodeid="223" srcpinname="Device" dstnodeid="210" dstpinname="Keyboard">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" id="244" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="5295" top="2505" type="Node" width="100">
@@ -656,4 +642,18 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <NODE componentmode="Hidden" id="224" nodename="Ord2Enum (Enumerations)" systemname="Ord2Enum (Enumerations)">
+   <BOUNDS height="100" left="9645" top="3450" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="220" dstpinname="Stroke Cap" srcnodeid="224" srcpinname="Enum">
+   <LINKPOINT x="9675" y="10965">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="224" dstpinname="Ord Value" srcnodeid="222" srcpinname="Output">
+   </LINK>
    </PATCH>

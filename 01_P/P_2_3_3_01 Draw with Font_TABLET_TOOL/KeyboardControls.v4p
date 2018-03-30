@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET_TOOL\KeyboardControls.v4p" scrollx="0" scrolly="-360">
    <BOUNDS height="6360" left="4875" top="6360" type="Window" width="9405">
    </BOUNDS>
@@ -68,30 +68,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <NODE id="88" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="270" left="1035" top="3585" type="Node" width="1440">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1">
-   </PIN>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Up/Down">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" visible="1" values="-1">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" visible="1" values="0.001">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="87" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="1200" top="4815" type="Node" width="100">
    </BOUNDS>
@@ -146,15 +122,9 @@
    <BOUNDS type="Box" left="1035" top="1560">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="84" srcpinname="Up" dstnodeid="88" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="Down" dstnodeid="88" dstpinname="Down">
-   </LINK>
    <LINK srcnodeid="84" srcpinname="Back" dstnodeid="89" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="84" srcpinname="Delete" dstnodeid="89" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="C" dstnodeid="88" dstpinname="Reset">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="83" systemname="IOBox (String)">
    <BOUNDS type="Node" left="1155" top="1830" width="330" height="270">
@@ -332,22 +302,16 @@
    </NODE>
    <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="88" dstpinname="Minimum">
-   </LINK>
-   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Maximum">
-   </LINK>
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="99">
    <BOUNDS type="Node" left="1050" top="4230" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="99" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="99" srcpinname="Output" dstnodeid="86" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="99" dstpinname="Input 2">
@@ -366,9 +330,7 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Increment">
-   </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" id="15" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="1050" top="300" type="Node" width="100">
@@ -392,4 +354,42 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <NODE id="88" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="270" left="1035" top="3585" type="Node" width="1440">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Up/Down">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" visible="1" values="0.001">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Up" dstnodeid="88" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Down" dstnodeid="88" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="C" dstnodeid="88" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="98" srcpinname="Output" dstnodeid="88" dstpinname="Minimum">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Maximum">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="99" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Y Output Value" dstnodeid="88" dstpinname="Increment">
+   </LINK>
    </PATCH>

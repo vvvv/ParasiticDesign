@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.6.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_2_01 Relation and Distance while Drawing\CalculateNewElement.v4p" systemname="CalculateNewElement">
    <BOUNDS height="11985" left="8250" top="2235" type="Window" width="16170">
    </BOUNDS>
@@ -121,7 +121,7 @@
    <NODE componentmode="Hidden" id="39" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="270" left="7785" top="2085" type="Node" width="885">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -140,14 +140,6 @@
    </NODE>
    <LINK dstnodeid="44" dstpinname="Input" srcnodeid="22" srcpinname="Y Output Value">
    </LINK>
-   <NODE componentmode="Hidden" id="47" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="270" left="7605" top="8055" type="Node" width="960">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="46" nodename="S+H (Animation)" systemname="S+H (Animation)">
    <BOUNDS height="270" left="7605" top="7605" type="Node" width="630">
    </BOUNDS>
@@ -158,8 +150,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="47" dstpinname="Input 1" srcnodeid="46" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="46" dstpinname="Input" srcnodeid="31" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="39" dstpinname="Switch" srcnodeid="44" srcpinname="Up Edge">
@@ -179,12 +169,6 @@
    <LINK dstnodeid="38" dstpinname="Input 1" srcnodeid="39" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="39" dstpinname="Input 2" srcnodeid="14" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="39" dstpinname="Input 1" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="47" srcpinname="Output 1">
-   <LINKPOINT x="5640" y="10250">
-   </LINKPOINT>
-   <LINKPOINT x="4650" y="15">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="52" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="10170" top="8805" type="Node" width="0">
@@ -766,6 +750,22 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="35.0.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="47" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="270" left="7605" top="8055" type="Node" width="960">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="47" dstpinname="Input 1" srcnodeid="46" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="39" dstpinname="Input 1" hiddenwhenlocked="1" linkstyle="Bezier" srcnodeid="47" srcpinname="Output 1">
+   <LINKPOINT x="5640" y="10250">
+   </LINKPOINT>
+   <LINKPOINT x="4650" y="15">
+   </LINKPOINT>
+   </LINK>
    </PATCH>

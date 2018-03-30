@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_1_04 Arrangement in a Grid\P_2_1_1_04.v4p" systemname="P_2_1_1_04">
-   <BOUNDS height="10515" left="1875" top="2820" type="Window" width="14055">
+   <BOUNDS height="10515" left="1875" top="2820" type="Window" width="14070">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="105" top="465" type="Node" width="840">
@@ -93,7 +93,7 @@
    </PIN>
    <BOUNDS left="12210" top="7965" type="Box">
    </BOUNDS>
-   <PIN pinname="Fill Mode" visible="1">
+   <PIN pinname="Fill Mode" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Vector Length" visible="1">
    </PIN>
@@ -107,7 +107,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="183" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -137,7 +137,7 @@
    </PIN>
    <PIN pinname="Y Out" visible="1">
    </PIN>
-   <PIN pinname="Resolution" visible="1">
+   <PIN pinname="Resolution" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -169,26 +169,6 @@
    <LINK dstnodeid="199" dstpinname="Transform In" srcnodeid="198" srcpinname="Transform Out">
    </LINK>
    <LINK dstnodeid="5" dstpinname="Transform" srcnodeid="199" srcpinname="Transform Out">
-   </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="206" nodename="KeyboardControls.v4p" stayontop="0" systemname="KeyboardControls">
-   <BOUNDS height="270" left="8220" top="2760" type="Node" width="3435">
-   </BOUNDS>
-   <BOUNDS height="7095" left="12915" top="5835" type="Window" width="12705">
-   </BOUNDS>
-   <BOUNDS left="8220" top="2760" type="Box">
-   </BOUNDS>
-   <PIN pinname="Texture Index" visible="1">
-   </PIN>
-   <PIN pinname="Size Mode" visible="1">
-   </PIN>
-   <PIN pinname="Shape Size" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="170" dstpinname="Fill Mode" srcnodeid="206" srcpinname="Fill Mode">
-   </LINK>
-   <LINK dstnodeid="174" dstpinname="Resolution" srcnodeid="206" srcpinname="Tile Count">
-   </LINK>
-   <LINK dstnodeid="179" dstpinname="Input 2" srcnodeid="206" srcpinname="Shape Angle">
    </LINK>
    <NODE componentmode="InABox" id="208" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="735" top="2475" type="Node" width="7425">
@@ -367,9 +347,9 @@
    <NODE componentmode="Hidden" filename="SizeModeSwitcher.v4p" id="205" nodename="SizeModeSwitcher.v4p" systemname="SizeModeSwitcher">
    <PIN pinname="Distance to Mouse" visible="1">
    </PIN>
-   <PIN pinname="Shape Size" visible="1">
+   <PIN pinname="Shape Size" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Size Mode" visible="1">
+   <PIN pinname="Size Mode" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS height="5595" left="16320" top="9660" type="Window" width="13440">
    </BOUNDS>
@@ -382,16 +362,12 @@
    <BOUNDS left="8325" top="7965" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="205" dstpinname="Size Mode" srcnodeid="206" srcpinname="Size Mode">
-   </LINK>
-   <LINK dstnodeid="205" dstpinname="Shape Size" srcnodeid="206" srcpinname="Shape Size">
-   </LINK>
    <LINK dstnodeid="199" dstpinname="XYZ" srcnodeid="205" srcpinname="Scaling">
    </LINK>
    <NODE componentmode="Hidden" filename="TextureSwitcher.v4p" id="173" nodename="TextureSwitcher.v4p" systemname="TextureSwitcher">
-   <PIN pinname="Texture Index" visible="1">
+   <PIN pinname="Texture Index" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Shape Size" visible="1">
+   <PIN pinname="Shape Size" visible="1" slicecount="1" values="0">
    </PIN>
    <BOUNDS height="7185" left="480" top="6945" type="Window" width="9960">
    </BOUNDS>
@@ -408,11 +384,7 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="173" dstpinname="Shape Size" srcnodeid="206" srcpinname="Shape Size">
-   </LINK>
    <LINK dstnodeid="5" dstpinname="Texture" srcnodeid="173" srcpinname="Texture Out">
-   </LINK>
-   <LINK dstnodeid="173" dstpinname="Texture Index" srcnodeid="206" srcpinname="Texture Index">
    </LINK>
    <LINK srcnodeid="170" srcpinname="Color" dstnodeid="5" dstpinname="Color">
    </LINK>
@@ -478,7 +450,7 @@
    </LINK>
    <LINK srcnodeid="79" srcpinname="Position (Projection) XY" dstnodeid="223" dstpinname="XY1">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="224" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="6540" top="9495" type="Node" width="1500">
@@ -500,4 +472,32 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="206" nodename="KeyboardControls" stayontop="0" systemname="KeyboardControls">
+   <BOUNDS height="270" left="8220" top="2760" type="Node" width="3435">
+   </BOUNDS>
+   <BOUNDS height="7095" left="12915" top="5835" type="Window" width="12705">
+   </BOUNDS>
+   <BOUNDS left="8220" top="2760" type="Box">
+   </BOUNDS>
+   <PIN pinname="Texture Index" visible="1">
+   </PIN>
+   <PIN pinname="Size Mode" visible="1">
+   </PIN>
+   <PIN pinname="Shape Size" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="170" dstpinname="Fill Mode" srcnodeid="206" srcpinname="Fill Mode">
+   </LINK>
+   <LINK dstnodeid="174" dstpinname="Resolution" srcnodeid="206" srcpinname="Tile Count">
+   </LINK>
+   <LINK dstnodeid="179" dstpinname="Input 2" srcnodeid="206" srcpinname="Shape Angle">
+   </LINK>
+   <LINK dstnodeid="205" dstpinname="Size Mode" srcnodeid="206" srcpinname="Size Mode">
+   </LINK>
+   <LINK dstnodeid="205" dstpinname="Shape Size" srcnodeid="206" srcpinname="Shape Size">
+   </LINK>
+   <LINK dstnodeid="173" dstpinname="Shape Size" srcnodeid="206" srcpinname="Shape Size">
+   </LINK>
+   <LINK dstnodeid="173" dstpinname="Texture Index" srcnodeid="206" srcpinname="Texture Index">
+   </LINK>
    </PATCH>

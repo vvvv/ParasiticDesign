@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\ViewTransform.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_2_01 Text as Construction Plan\MouseControls.v4p" systemname="MouseControls">
    <BOUNDS height="10785" left="9975" top="2370" type="Window" width="13425">
    </BOUNDS>
@@ -65,7 +65,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Input 2" slicecount="3" visible="1" values="0,0,0">
    </PIN>
@@ -80,58 +80,18 @@
    </NODE>
    <LINK dstnodeid="111" dstpinname="Input" srcnodeid="108" srcpinname="Output">
    </LINK>
-   <NODE componentmode="Hidden" id="106" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="7485" top="6150" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" visible="1">
-   </PIN>
-   <PIN pinname="Default 1" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="105" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="100" left="7500" top="5400" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="106" dstpinname="Input 1" srcnodeid="105" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="105" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="106" srcpinname="Output 1">
-   <LINKPOINT x="7905" y="8565">
-   </LINKPOINT>
-   <LINKPOINT x="10320" y="4245">
-   </LINKPOINT>
-   </LINK>
-   <NODE componentmode="Hidden" id="104" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="9390" top="6150" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Default 1" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="104" dstpinname="Input 1" srcnodeid="105" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="108" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="104" srcpinname="Output 1">
-   <LINKPOINT x="11005" y="9735">
-   </LINKPOINT>
-   <LINKPOINT x="14960" y="315">
-   </LINKPOINT>
-   </LINK>
    <LINK dstnodeid="109" dstpinname="Input 1" srcnodeid="110" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="113" dstpinname="Set" srcnodeid="112" srcpinname="Up Edge">
@@ -462,8 +422,6 @@
    </LINK>
    <LINK srcnodeid="107" srcpinname="Bang" dstnodeid="108" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="107" srcpinname="Bang" dstnodeid="106" dstpinname="Initialize">
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="80">
    <BOUNDS type="Node" left="9000" top="1515" width="100" height="100">
    </BOUNDS>
@@ -532,6 +490,48 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="106" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="7485" top="6150" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="106" dstpinname="Input 1" srcnodeid="105" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="105" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="106" srcpinname="Output 1">
+   <LINKPOINT x="7905" y="8565">
+   </LINKPOINT>
+   <LINKPOINT x="10320" y="4245">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Bang" dstnodeid="106" dstpinname="Initialize">
+   </LINK>
+   <NODE componentmode="Hidden" id="104" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="9390" top="6150" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="104" dstpinname="Input 1" srcnodeid="105" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="108" dstpinname="Input 1" linkstyle="Bezier" srcnodeid="104" srcpinname="Output 1">
+   <LINKPOINT x="11005" y="9735">
+   </LINKPOINT>
+   <LINKPOINT x="14960" y="315">
+   </LINKPOINT>
+   </LINK>
    </PATCH>

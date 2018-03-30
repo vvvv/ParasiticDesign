@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_3_01 Draw with Font_TABLET\KeyboardControls.v4p">
    <BOUNDS height="8175" left="4875" top="6360" type="Window" width="6015">
    </BOUNDS>
@@ -18,30 +18,6 @@
    <PIN pinname="Input Count" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Input 3" visible="1">
-   </PIN>
-   </NODE>
-   <NODE id="79" nodename="Counter (Animation)" systemname="Counter (Animation Legacy)">
-   <BOUNDS height="270" left="945" top="4320" type="Node" width="2190">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Down" visible="1">
-   </PIN>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Clamp">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Up/Down">
-   </PIN>
-   <PIN pinname="Minimum" slicecount="1" visible="1" values="-1">
-   </PIN>
-   <PIN pinname="Increment" slicecount="1" visible="1" values="0.001">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="78" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -112,15 +88,9 @@
    <PIN pinname="C" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="73" srcpinname="Up" dstnodeid="79" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="73" srcpinname="Down" dstnodeid="79" dstpinname="Down">
-   </LINK>
    <LINK srcnodeid="73" srcpinname="Back" dstnodeid="80" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="73" srcpinname="Delete" dstnodeid="80" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="73" srcpinname="C" dstnodeid="79" dstpinname="Reset">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="72" systemname="IOBox (String)">
    <BOUNDS type="Node" left="1050" top="2115" width="330" height="270">
@@ -213,15 +183,13 @@
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="81">
    <BOUNDS type="Node" left="945" top="4905" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="81" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="77" dstpinname="Switch">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82">
@@ -238,8 +206,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Minimum">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="83">
    <BOUNDS type="Box" left="2010" top="3150" width="795" height="240">
    </BOUNDS>
@@ -256,8 +222,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Maximum">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84">
    <BOUNDS type="Box" left="2880" top="3165" width="795" height="240">
    </BOUNDS>
@@ -272,8 +236,6 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Increment">
-   </LINK>
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="81" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85">
@@ -290,9 +252,7 @@
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
    </NODE>
-   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Default">
-   </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="74">
    <BOUNDS type="Node" left="930" top="1140" width="100" height="100">
@@ -308,4 +268,44 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <NODE id="79" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="270" left="945" top="4320" type="Node" width="2190">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Down" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Clamp">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Up/Down">
+   </PIN>
+   <PIN pinname="Minimum" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Increment" slicecount="1" visible="1" values="0.001">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Up" dstnodeid="79" dstpinname="Up">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="Down" dstnodeid="79" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="73" srcpinname="C" dstnodeid="79" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="81" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Minimum">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Maximum">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Increment">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="79" dstpinname="Default">
+   </LINK>
    </PATCH>

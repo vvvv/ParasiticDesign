@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_2_2_01 Variations of Font Contour\P_3_2_2_01.v4p" bgcolor="15329769" filename="V:\Generativvvve Gestaltung\P_3_2_1_01 Dissolving the Font Outlines\P_3_2_1_01.v4p" systemname="P_3_2_1_01">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_2_2_01 Variations of Font Contour\P_3_2_2_01.v4p" bgcolor="15329769" filename="V:\Generativvvve Gestaltung\P_3_2_1_01 Dissolving the Font Outlines\P_3_2_1_01.v4p" systemname="P_3_2_1_01" scrollx="0" scrolly="-720">
    <BOUNDS height="17970" left="360" top="0" type="Window" width="12015">
    </BOUNDS>
    <NODE componentmode="InABox" id="31" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -57,7 +57,7 @@
    </PIN>
    <PIN pinname="Aspect Ratio" visible="1">
    </PIN>
-   <PIN pinname="Layers" visible="1">
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Background Color" slicecount="1" visible="1" values="|0.99833,0.99833,0.99833,1.00000|">
    </PIN>
@@ -656,24 +656,6 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="%VVVV%\modules\vvvv group\EX9\Line (EX9).v4p" id="315" nodename="Line (EX9)" systemname="Line (EX9 Legacy)">
-   <BOUNDS height="100" left="1500" top="15840" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="VerticesXYZ" visible="1">
-   </PIN>
-   <PIN pinname="Single Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Color" visible="1">
-   </PIN>
-   <PIN pinname="Width" slicecount="1" values="1.32">
-   </PIN>
-   <PIN pinname="BinSize" slicecount="1" visible="1" values="-1">
-   </PIN>
-   <PIN pinname="Transform" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="256" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -868,11 +850,7 @@
    </LINK>
    <LINK dstnodeid="324" dstpinname="Input" srcnodeid="265" srcpinname="Y">
    </LINK>
-   <LINK dstnodeid="315" dstpinname="VerticesXYZ" srcnodeid="341" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="341" dstpinname="Control" srcnodeid="241" srcpinname="XYZ">
-   </LINK>
-   <LINK dstnodeid="315" dstpinname="Color" srcnodeid="327" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="341" dstpinname="Spreadcount" srcnodeid="325" srcpinname="Output">
    </LINK>
@@ -986,8 +964,6 @@
    </LINK>
    <LINK dstnodeid="379" dstpinname="Alpha" srcnodeid="382" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="315" srcpinname="Layer">
-   </LINK>
    <LINK dstnodeid="321" dstpinname="Angle" srcnodeid="300" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="385" nodename="Subtract (Value)" systemname="Subtract (Value)">
@@ -1083,8 +1059,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="401" srcpinname="Transform Out" dstnodeid="407" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="407" srcpinname="Transform Out" dstnodeid="315" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="395" srcpinname="Output" dstnodeid="407" dstpinname="TranslateX">
    </LINK>
@@ -1244,6 +1218,32 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Line (EX9).v4p" id="315" nodename="Line (EX9)" systemname="Line (EX9)">
+   <BOUNDS height="270" left="1500" top="15840" type="Node" width="2400">
+   </BOUNDS>
+   <PIN pinname="VerticesXYZ" visible="1">
+   </PIN>
+   <PIN pinname="Single Input" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1">
+   </PIN>
+   <PIN pinname="Width" slicecount="1" values="1.32">
+   </PIN>
+   <PIN pinname="BinSize" slicecount="1" visible="1" values="-1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="315" dstpinname="VerticesXYZ" srcnodeid="341" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="315" dstpinname="Color" srcnodeid="327" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="27" dstpinname="Layers" srcnodeid="315" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="407" srcpinname="Transform Out" dstnodeid="315" dstpinname="Transform">
+   </LINK>
    </PATCH>

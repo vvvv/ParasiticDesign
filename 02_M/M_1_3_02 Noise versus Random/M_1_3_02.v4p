@@ -1,13 +1,13 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_3_02 Noise versus Random\M_1_3_02.v4p" bgcolor="15724527" filename="C:\Documents and Settings\Roman\Desktop\M.1.3_02.v4p" systemname="M.1.3_02">
-   <BOUNDS height="6825" left="1050" top="1065" type="Window" width="9540">
+   <BOUNDS height="7410" left="1050" top="1065" type="Window" width="9645">
    </BOUNDS>
    <NODE componentmode="Hidden" id="15" nodename="RandomSpread (Spreads)" systemname="RandomSpread (Spreads)">
-   <BOUNDS height="100" left="6600" top="2985" type="Node" width="100">
+   <BOUNDS height="100" left="6600" top="3585" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" visible="1">
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="159032">
    </PIN>
    <PIN pinname="Random Seed" visible="1">
    </PIN>
@@ -121,7 +121,7 @@
    <LINK dstnodeid="15" dstpinname="Random Seed" srcnodeid="22" srcpinname="Output">
    </LINK>
    <NODE systemname="DynamicTexture (EX9.Texture Value)" nodename="DynamicTexture (EX9.Texture Value)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="5565" top="3570" width="100" height="100">
+   <BOUNDS type="Node" left="5565" top="4170" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -131,15 +131,15 @@
    </PIN>
    <PIN pinname="Blue" visible="1">
    </PIN>
-   <PIN pinname="Height" visible="1" slicecount="1" values="359">
+   <PIN pinname="Height" visible="1" slicecount="1" values="412">
    </PIN>
    <PIN pinname="Depth" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Width" visible="1" slicecount="1" values="376">
+   <PIN pinname="Width" visible="1" slicecount="1" values="386">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="34" nodename="Quad (DX9)" systemname="Quad (DX9)">
-   <BOUNDS height="270" left="5010" top="4020" type="Node" width="1980">
+   <BOUNDS height="270" left="5010" top="4620" type="Node" width="1980">
    </BOUNDS>
    <PIN pinname="Transform" slicecount="1" visible="1" values="||">
    </PIN>
@@ -152,22 +152,6 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="33" dstpinname="Blue">
    </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="6750" top="5460" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="376">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="359">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="35" srcpinname="Output" dstnodeid="15" dstpinname="Spread Count" linkstyle="Bezier">
-   <LINKPOINT x="7710" y="6990">
-   </LINKPOINT>
-   <LINKPOINT x="8895" y="2220">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="20" srcpinname="Up Edge" dstnodeid="22" dstpinname="Enabled">
    </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="32">
@@ -179,9 +163,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="6270" top="1965" width="0" height="0">
+   <BOUNDS type="Node" left="6210" top="1980" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6270" top="1965" width="345" height="240">
+   <BOUNDS type="Box" left="6210" top="1980" width="345" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -193,36 +177,6 @@
    <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="32" dstpinname="XYZ">
    </LINK>
    <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="34" dstpinname="Transform">
-   </LINK>
-   <NODE id="31" componentmode="Hidden" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="368">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="344">
-   </PIN>
-   <BOUNDS type="Node" height="100" left="6090" top="4860" width="100">
-   </BOUNDS>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Count" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Output 2" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="31" srcpinname="Output 2" dstnodeid="35" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output 1" dstnodeid="35" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output 2" dstnodeid="33" dstpinname="Height" linkstyle="Bezier">
-   <LINKPOINT x="9645" y="5275">
-   </LINKPOINT>
-   <LINKPOINT x="8760" y="20">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output 1" dstnodeid="33" dstpinname="Width" linkstyle="Bezier">
-   <LINKPOINT x="10680" y="6220">
-   </LINKPOINT>
-   <LINKPOINT x="8565" y="0">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="43" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="2205" type="Node" width="7425">
@@ -271,9 +225,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="44" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="6150" top="2910" type="Node" width="315">
+   <BOUNDS height="270" left="6150" top="3510" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="6150" top="2910" type="Box" width="405">
+   <BOUNDS height="390" left="6150" top="3510" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -287,9 +241,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="45" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5115" top="3495" type="Node" width="315">
+   <BOUNDS height="270" left="5115" top="4095" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5115" top="3495" type="Box" width="420">
+   <BOUNDS height="405" left="5115" top="4095" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
    </PIN>
@@ -313,25 +267,87 @@
    <LINK srcnodeid="36" srcpinname="Left Button" dstnodeid="20" dstpinname="Input">
    </LINK>
    <NODE componentmode="InAWindow" id="46" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="5010" top="4470" type="Node" width="100">
+   <BOUNDS height="100" left="5010" top="5070" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="5565" left="5010" top="4470" type="Box" width="5085">
+   <BOUNDS height="5565" left="5010" top="5070" type="Box" width="5085">
    </BOUNDS>
-   <BOUNDS height="6765" left="10590" top="1065" type="Window" width="6030">
+   <BOUNDS height="6435" left="10590" top="1065" type="Window" width="6030">
    </BOUNDS>
    <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
    </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="46" dstpinname="Layers" srcnodeid="34" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Height" dstnodeid="31" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Width" dstnodeid="31" dstpinname="Input 1">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="47">
+   <BOUNDS type="Node" left="6060" top="5595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Width" dstnodeid="47" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Height" dstnodeid="47" dstpinname="Y">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="48">
+   <BOUNDS type="Node" left="6060" top="6015" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6060" top="6015" width="3000" height="3000">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="47" srcpinname="XY" dstnodeid="48" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="49">
+   <BOUNDS type="Node" left="6930" top="2550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="48" srcpinname="Output 1" dstnodeid="49" dstpinname="XY" linkstyle="Bezier">
+   <LINKPOINT x="8840" y="7985">
+   </LINKPOINT>
+   <LINKPOINT x="11110" y="1135">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="50">
+   <BOUNDS type="Node" left="7665" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="49" srcpinname="X" dstnodeid="50" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Y" dstnodeid="50" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="50" srcpinname="Output" dstnodeid="15" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="X" dstnodeid="33" dstpinname="Width">
+   </LINK>
+   <LINK srcnodeid="49" srcpinname="Y" dstnodeid="33" dstpinname="Height">
+   </LINK>
    </PATCH>

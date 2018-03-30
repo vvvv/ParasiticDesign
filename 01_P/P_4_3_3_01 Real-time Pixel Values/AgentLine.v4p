@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\AgentLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\AgentLine.v4p" systemname="AgentLine" scrollx="0" scrolly="360">
-   <BOUNDS height="14490" left="825" top="0" type="Window" width="18390">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_3_01 Real-time Pixel Values\AgentLine.v4p" filename="C:\Documents and Settings\Roman\Desktop\AgentLine.v4p" systemname="AgentLine" scrollx="0" scrolly="-360">
+   <BOUNDS height="14490" left="825" top="0" type="Window" width="18405">
    </BOUNDS>
    <NODE componentmode="InABox" id="45" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="6765" top="12780" type="Node" width="100">
@@ -125,7 +125,7 @@
    <NODE componentmode="Hidden" id="86" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="3" values="-0.570776352354064,-0.561570448126926,0.395198400662089,0.36639409711173,-0.069766306675501,-0.0309356770419871">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="0.0914845028892159,0.790112042799592">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
@@ -995,7 +995,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1026,20 +1026,6 @@
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    </NODE>
-   <NODE systemname="NULL (Enumerations Legacy)" nodename="NULL (Enumerations)" componentmode="Hidden" id="205">
-   <BOUNDS type="Node" left="16125" top="1365" width="690" height="270">
-   </BOUNDS>
-   </NODE>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="206" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="16125" top="885" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="16125" top="885" width="1590" height="240">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Color Components|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="206" srcpinname="Output Enum" dstnodeid="205" dstpinname="Enum">
-   </LINK>
    <NODE id="203" systemname="CreateEnum (Enumerations)" nodename="CreateEnum (Enumerations)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <PIN pinname="Strings" encoded="0" pintype="Input" visible="1">
    </PIN>
@@ -1072,20 +1058,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Color Component|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="208" srcpinname="Output Enum" dstnodeid="205" dstpinname="Receive">
-   </LINK>
-   <NODE systemname="Enum2Ord (Enumerations Legacy)" nodename="Enum2Ord (Enumerations)" componentmode="Hidden" id="209">
-   <BOUNDS type="Node" left="12600" top="9810" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Enum" visible="1">
-   </PIN>
-   <PIN pinname="Ord Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="208" srcpinname="Output Enum" dstnodeid="209" dstpinname="Enum">
-   </LINK>
-   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="202" dstpinname="Switch">
-   </LINK>
    <LINK srcnodeid="202" srcpinname="Output" dstnodeid="138" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="210">
@@ -1099,7 +1071,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1126,8 +1098,6 @@
    </LINK>
    <LINK srcnodeid="210" srcpinname="Output" dstnodeid="138" dstpinname="Destination Maximum">
    </LINK>
-   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="210" dstpinname="Switch">
-   </LINK>
    <NODE componentmode="InABox" id="214" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <BOUNDS height="100" left="14040" top="10110" type="Node" width="100">
    </BOUNDS>
@@ -1149,7 +1119,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="-1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1187,8 +1157,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="215" srcpinname="Y Output Value" dstnodeid="213" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="213" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="213" srcpinname="Output" dstnodeid="137" dstpinname="Input 2">
    </LINK>
@@ -1229,26 +1197,6 @@
    <LINK srcnodeid="146" srcpinname="Y Output Value" dstnodeid="218" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="198" srcpinname="Output" dstnodeid="156" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="116" srcpinname="Output 1" dstnodeid="86" dstpinname="Input 1" linkstyle="Bezier">
-   <LINKPOINT x="4475" y="8475">
-   </LINKPOINT>
-   <LINKPOINT x="5875" y="2625">
-   </LINKPOINT>
-   </LINK>
-   <NODE id="116" componentmode="Hidden" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   <PIN pinname="Initialize" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <BOUNDS type="Node" height="100" left="5955" top="6975" width="100">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="156" srcpinname="Last Slice" dstnodeid="116" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="148" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Initialize">
    </LINK>
    <LINK srcnodeid="110" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Input 2">
    </LINK>
@@ -1327,7 +1275,7 @@
    <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="282">
    <BOUNDS type="Node" left="6765" top="7545" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="0.0914845028892159,0.790112042799592">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -1336,8 +1284,6 @@
    <BOUNDS type="Box" left="6765" top="7545">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="116" srcpinname="Output 1" dstnodeid="282" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="198" srcpinname="Output" dstnodeid="282" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="282" srcpinname="Output" dstnodeid="246" dstpinname="Spread">
@@ -1456,7 +1402,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="xyZ (3d XY)" nodename="xyZ (3d XY)" componentmode="Hidden" id="289">
    <BOUNDS type="Node" left="6765" top="11745" width="100" height="100">
@@ -1469,5 +1415,45 @@
    <LINK srcnodeid="246" srcpinname="Output" dstnodeid="289" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="289" srcpinname="XYZ" dstnodeid="45" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Enum2Ord (Enumerations Explicit)" nodename="Enum2Ord (Enumerations Explicit)" componentmode="Hidden" id="209">
+   <BOUNDS type="Node" left="12600" top="9810" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   <PIN pinname="Enumeration" slicecount="1" values="|Color Components|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="208" srcpinname="Output Enum" dstnodeid="209" dstpinname="Enum">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="202" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="210" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Ord Value" dstnodeid="213" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Output 1" dstnodeid="86" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="4475" y="8475">
+   </LINKPOINT>
+   <LINKPOINT x="5875" y="2625">
+   </LINKPOINT>
+   </LINK>
+   <NODE id="116" componentmode="Hidden" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <BOUNDS type="Node" height="100" left="5955" top="6975" width="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Last Slice" dstnodeid="116" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Initialize">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Output 1" dstnodeid="282" dstpinname="Input 1">
    </LINK>
    </PATCH>

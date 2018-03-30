@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_03 Text Image\P_3_1_3_03.v4p" filename="C:\Work\ParasiticDesign\01_P\P_3_1_3_03 Text Image\P_3_1_3_03.v4p" systemname="P_3_1_3_03">
    <BOUNDS height="10710" left="0" top="405" type="Window" width="17625">
    </BOUNDS>
@@ -156,20 +156,10 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String Legacy)">
-   <BOUNDS height="100" left="7590" top="1875" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="238" nodename="Add (String Spectral)" systemname="Add (String Spectral)">
    <BOUNDS height="100" left="7590" top="2580" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="17" values="|Ihr naht euch wieder, schwankende Gestalten,|,|Die früh sich einst dem trüben Blick gezeigt.|,|Versuch ich wohl, euch diesmal festzuhalten?|,|Fühl ich mein Herz noch jenem Wahn geneigt?|,|Ihr drängt euch zu! nun gut, so mögt ihr walten,|,|Wie ihr aus Dunst und Nebel um mich steigt;|,|Mein Busen fühlt sich jugendlich erschüttert|,|Vom Zauberhauch, der euren Zug umwittert.|,,|Ihr bringt mit euch die Bilder froher Tage,|,|Und manche liebe Schatten steigen auf;|,|Gleich einer alten, halbverklungnen Sage|,|Kommt erste Lieb und Freundschaft mit herauf;|,|Der Schmerz wird neu, es wiederholt die Klage|,|Des Lebens labyrinthisch irren Lauf,|,|Und nennt die Guten, die, um schöne Stunden|,|Vom Glück getäuscht, vor mir hinweggeschwunden.|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -178,8 +168,6 @@
    <PIN encoded="0" pinname="Intersperse String" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="238" dstpinname="Input" srcnodeid="239" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="237" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="7950" top="2235" type="Node" width="100">
    </BOUNDS>
@@ -191,8 +179,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="238" dstpinname="Intersperse" srcnodeid="237" srcpinname="Output Enum">
-   </LINK>
-   <LINK dstnodeid="239" dstpinname="Input" srcnodeid="217" srcpinname="Content">
    </LINK>
    <NODE componentmode="InABox" id="247" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="8490" top="5106" type="Node" width="0">
@@ -276,8 +262,6 @@
    <PIN pinname="Input Enum" slicecount="1" values="NewLineAutoDetection">
    </PIN>
    </NODE>
-   <LINK dstnodeid="239" dstpinname="Intersperse" srcnodeid="256" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="Hidden" id="264" nodename="WordWrap (String)" systemname="WordWrap (String)">
    <BOUNDS height="270" left="7590" top="3300" type="Node" width="855">
    </BOUNDS>
@@ -796,6 +780,22 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String)">
+   <BOUNDS height="100" left="7590" top="1875" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="238" dstpinname="Input" srcnodeid="239" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="239" dstpinname="Input" srcnodeid="217" srcpinname="Content">
+   </LINK>
+   <LINK dstnodeid="239" dstpinname="Intersperse" srcnodeid="256" srcpinname="Output Enum">
+   </LINK>
    </PATCH>

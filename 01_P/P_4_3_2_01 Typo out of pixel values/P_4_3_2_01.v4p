@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_2_01 Typo out of pixel values\P_4_3_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.2.v4p" systemname="P.4.3.2">
    <BOUNDS height="12345" left="240" top="1140" type="Window" width="14790">
    </BOUNDS>
@@ -384,32 +384,16 @@
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="537" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation Legacy)">
-   <BOUNDS height="100" left="10005" top="11040" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="536" srcpinname="XY" dstnodeid="537" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="538" hiddenwhenlocked="0">
    <BOUNDS type="Node" left="7770" top="3660" width="930" height="270">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
-   <PIN pinname="XY" visible="1">
+   <PIN pinname="XY" visible="1" slicecount="2" values="525,754">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="537" srcpinname="Output 1" dstnodeid="538" dstpinname="XY" hiddenwhenlocked="1" linkstyle="Bezier">
-   <LINKPOINT x="5795" y="13485">
-   </LINKPOINT>
-   <LINKPOINT x="5995" y="2580">
-   </LINKPOINT>
-   </LINK>
    <NODE id="539" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS type="Node" height="270" left="8760" top="2565" width="315">
    </BOUNDS>
@@ -856,7 +840,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="InAWindow" id="569" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="8940" top="10155" type="Node" width="100">
@@ -877,5 +861,21 @@
    <LINK srcnodeid="569" srcpinname="Actual Backbuffer Width" dstnodeid="536" dstpinname="X">
    </LINK>
    <LINK srcnodeid="569" srcpinname="Actual Backbuffer Height" dstnodeid="536" dstpinname="Y">
+   </LINK>
+   <NODE componentmode="Hidden" id="537" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS height="100" left="10005" top="11040" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="536" srcpinname="XY" dstnodeid="537" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="537" srcpinname="Output 1" dstnodeid="538" dstpinname="XY" hiddenwhenlocked="1" linkstyle="Bezier">
+   <LINKPOINT x="5795" y="13485">
+   </LINKPOINT>
+   <LINKPOINT x="5995" y="2580">
+   </LINKPOINT>
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_3_1_3_01 Text Image\P_3_1_3_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\01_P\P_3_1_3_01\P_3_1_3_01.v4p" systemname="P_3_1_3_01">
    <BOUNDS height="12435" left="450" top="330" type="Window" width="16485">
    </BOUNDS>
@@ -366,20 +366,10 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String Legacy)">
-   <BOUNDS height="100" left="7590" top="1875" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Intersperse">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="Hidden" id="238" nodename="Add (String Spectral)" systemname="Add (String Spectral)">
    <BOUNDS height="100" left="7590" top="2580" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="17" values="|Ihr naht euch wieder, schwankende Gestalten,|,|Die früh sich einst dem trüben Blick gezeigt.|,|Versuch ich wohl, euch diesmal festzuhalten?|,|Fühl ich mein Herz noch jenem Wahn geneigt?|,|Ihr drängt euch zu! nun gut, so mögt ihr walten,|,|Wie ihr aus Dunst und Nebel um mich steigt;|,|Mein Busen fühlt sich jugendlich erschüttert|,|Vom Zauberhauch, der euren Zug umwittert.|,,|Ihr bringt mit euch die Bilder froher Tage,|,|Und manche liebe Schatten steigen auf;|,|Gleich einer alten, halbverklungnen Sage|,|Kommt erste Lieb und Freundschaft mit herauf;|,|Der Schmerz wird neu, es wiederholt die Klage|,|Des Lebens labyrinthisch irren Lauf,|,|Und nennt die Guten, die, um schöne Stunden|,|Vom Glück getäuscht, vor mir hinweggeschwunden.|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -388,8 +378,6 @@
    <PIN encoded="0" pinname="Intersperse String" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK dstnodeid="238" dstpinname="Input" srcnodeid="239" srcpinname="Output">
-   </LINK>
    <NODE componentmode="InABox" id="237" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
    <BOUNDS height="100" left="7950" top="2235" type="Node" width="100">
    </BOUNDS>
@@ -401,8 +389,6 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="238" dstpinname="Intersperse" srcnodeid="237" srcpinname="Output Enum">
-   </LINK>
-   <LINK dstnodeid="239" dstpinname="Input" srcnodeid="217" srcpinname="Content">
    </LINK>
    <NODE componentmode="InABox" id="246" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="585" top="1905" type="Node" width="7425">
@@ -591,15 +577,13 @@
    <LINK dstnodeid="217" dstpinname="Read" srcnodeid="221" srcpinname="Bang">
    </LINK>
    <NODE componentmode="InABox" id="256" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
-   <BOUNDS height="0" left="7770" top="1530" type="Node" width="0">
+   <BOUNDS height="0" left="7740" top="1515" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="7770" top="1530" type="Box" width="1845">
+   <BOUNDS height="240" left="7740" top="1515" type="Box" width="1845">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="NewLineAutoDetection">
    </PIN>
    </NODE>
-   <LINK dstnodeid="239" dstpinname="Intersperse" srcnodeid="256" srcpinname="Output Enum">
-   </LINK>
    <NODE componentmode="InABox" id="257" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="7155" top="2445" type="Node" width="315">
    </BOUNDS>
@@ -760,7 +744,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (Devices Desktop)" componentmode="Hidden" id="268">
    <BOUNDS type="Node" left="12180" top="5805" width="100" height="100">
@@ -791,5 +775,21 @@
    </PIN>
    </NODE>
    <LINK dstnodeid="270" dstpinname="Layers" srcnodeid="130" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="Hidden" id="239" nodename="Separate (String)" systemname="Separate (String)">
+   <BOUNDS height="100" left="7590" top="1875" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="238" dstpinname="Input" srcnodeid="239" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="239" dstpinname="Input" srcnodeid="217" srcpinname="Content">
+   </LINK>
+   <LINK dstnodeid="239" dstpinname="Intersperse" srcnodeid="256" srcpinname="Output Enum">
    </LINK>
    </PATCH>
