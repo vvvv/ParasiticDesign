@@ -27,7 +27,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="494" nodename="Switch (Node Input)" systemname="Switch (Node Input)">
-   <BOUNDS height="270" left="810" top="9525" type="Node" width="3555">
+   <BOUNDS height="270" left="825" top="10170" type="Node" width="3555">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -125,9 +125,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="610" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="5325" top="7860" type="Node" width="315">
+   <BOUNDS height="270" left="5340" top="8505" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="5325" top="7860" type="Box" width="420">
+   <BOUNDS height="405" left="5340" top="8505" type="Box" width="420">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
    </PIN>
@@ -203,9 +203,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="CreateShape.v4p" id="608" nodename="CreateShape.v4p" systemname="CreateShape">
-   <BOUNDS height="100" left="4005" top="7950" type="Node" width="100">
+   <BOUNDS height="100" left="4020" top="8595" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="3600" left="4005" top="7950" type="Box" width="4800">
+   <BOUNDS height="3600" left="4020" top="8595" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="11430" left="13095" top="2610" type="Window" width="14565">
    </BOUNDS>
@@ -219,9 +219,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="DrawStroke.v4p" id="491" nodename="DrawStroke.v4p" systemname="DrawStroke">
-   <BOUNDS height="270" left="2580" top="8775" type="Node" width="1485">
+   <BOUNDS height="270" left="2595" top="9420" type="Node" width="1485">
    </BOUNDS>
-   <BOUNDS height="3600" left="2580" top="8775" type="Box" width="4800">
+   <BOUNDS height="3600" left="2595" top="9420" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="4065" left="15990" top="4125" type="Window" width="3405">
    </BOUNDS>
@@ -255,9 +255,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="DrawFill.v4p" id="492" nodename="DrawFill" systemname="DrawFill">
-   <BOUNDS height="270" left="4320" top="8775" type="Node" width="1515">
+   <BOUNDS height="270" left="4335" top="9420" type="Node" width="1515">
    </BOUNDS>
-   <BOUNDS height="3600" left="4320" top="8775" type="Box" width="4800">
+   <BOUNDS height="3600" left="4335" top="9420" type="Box" width="4800">
    </BOUNDS>
    <BOUNDS height="6615" left="15735" top="4320" type="Window" width="4965">
    </BOUNDS>
@@ -357,7 +357,7 @@
    <LINK dstnodeid="608" dstpinname="Shape Type" srcnodeid="398" srcpinname="Shape Type">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="627">
-   <BOUNDS type="Node" left="4545" top="7410" width="100" height="100">
+   <BOUNDS type="Node" left="4560" top="8055" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -366,8 +366,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="398" srcpinname="Shape Type" dstnodeid="627" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="613" srcpinname="Output" dstnodeid="627" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="627" srcpinname="Output" dstnodeid="608" dstpinname="Update">
@@ -375,9 +373,9 @@
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="633">
-   <BOUNDS type="Node" left="810" top="10185" width="100" height="100">
+   <BOUNDS type="Node" left="825" top="10830" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="810" top="10185" width="2400" height="1800">
+   <BOUNDS type="Box" left="825" top="10830" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="8385" top="1515" width="6240" height="5265">
    </BOUNDS>
@@ -398,4 +396,18 @@
    </LINK>
    <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="633" dstpinname="Clear">
    </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="634">
+   <BOUNDS type="Node" left="4545" top="7665" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="398" srcpinname="Shape Type" dstnodeid="634" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="634" srcpinname="Up Edge" dstnodeid="627" dstpinname="Input 1">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

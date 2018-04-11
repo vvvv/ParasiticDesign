@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2">
-   <BOUNDS height="12540" left="660" top="1230" type="Window" width="16185">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2" scrollx="0" scrolly="0">
+   <BOUNDS height="12645" left="660" top="1230" type="Window" width="16185">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
    <BOUNDS height="270" left="8685" top="3690" type="Node" width="900">
@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="26" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="9390" top="10350" type="Node" width="100">
+   <BOUNDS height="100" left="8190" top="10635" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -549,7 +549,7 @@
    <LINK dstnodeid="184" dstpinname="Magnification Filter" srcnodeid="186" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="83" nodename="FrameDelay (EX9.Texture)" systemname="FrameDelay (EX9.Texture)">
-   <BOUNDS height="100" left="9390" top="10905" type="Node" width="100">
+   <BOUNDS height="100" left="8190" top="11190" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -561,9 +561,9 @@
    <LINK dstnodeid="83" dstpinname="Texture In" srcnodeid="26" srcpinname="Texture Out">
    </LINK>
    <LINK dstnodeid="27" dstpinname="Texture" linkstyle="Bezier" srcnodeid="83" srcpinname="Texture Out">
-   <LINKPOINT x="11970" y="14625">
+   <LINKPOINT x="14250" y="13830">
    </LINKPOINT>
-   <LINKPOINT x="9225" y="3060">
+   <LINKPOINT x="8205" y="3615">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="194" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -697,9 +697,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="197" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="8880" top="10785" type="Node" width="315">
+   <BOUNDS height="270" left="7575" top="10665" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="8880" top="10785" type="Box" width="405">
+   <BOUNDS height="390" left="7575" top="10665" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -829,6 +829,14 @@
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="203" dstpinname="Clear" hiddenwhenlocked="1">
    </LINK>
@@ -838,7 +846,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" id="150" nodename="Keyboard (Devices Desktop)" systemname="Keyboard (Devices Desktop)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="270" left="6705" top="2835" type="Node" width="795">
@@ -854,4 +862,44 @@
    </LINK>
    <LINK srcnodeid="150" srcpinname="Device" dstnodeid="154" dstpinname="Keyboard">
    </LINK>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="204">
+   <BOUNDS type="Node" left="9270" top="10620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Alignment" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Width" dstnodeid="204" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Height" dstnodeid="204" dstpinname="Aspect Height">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="205">
+   <BOUNDS type="Box" left="10155" top="10200" width="615" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10155" top="10200" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="FitIn">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="FitOut">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="205" srcpinname="Output Enum" dstnodeid="204" dstpinname="Alignment">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Transform Out" dstnodeid="203" dstpinname="Aspect Ratio" linkstyle="Bezier">
+   <LINKPOINT x="10390" y="12235">
+   </LINKPOINT>
+   <LINKPOINT x="12275" y="9275">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>
