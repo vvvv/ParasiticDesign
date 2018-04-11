@@ -489,7 +489,7 @@
    </PIN>
    <PIN pinname="Agent Count" visible="1">
    </PIN>
-   <PIN pinname="RandomSeed" visible="1" slicecount="1" values="7505.19008608535">
+   <PIN pinname="RandomSeed" visible="1" slicecount="1" values="97">
    </PIN>
    <PIN pinname="NoiseStrength" visible="1">
    </PIN>
@@ -517,7 +517,7 @@
    </PIN>
    <PIN pinname="maxStroke" visible="1">
    </PIN>
-   <PIN pinname="Moving Nose" visible="1">
+   <PIN pinname="Moving Nose" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK dstnodeid="439" dstpinname="NoiseStrength" srcnodeid="410" srcpinname="X Output Value" hiddenwhenlocked="1">
@@ -533,28 +533,6 @@
    <LINK srcnodeid="546" srcpinname="X Output Value" dstnodeid="439" dstpinname="Min Stroke" hiddenwhenlocked="1">
    </LINK>
    <LINK srcnodeid="544" srcpinname="X Output Value" dstnodeid="439" dstpinname="Max Stroke" hiddenwhenlocked="1">
-   </LINK>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="524" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="270" left="9105" top="2160" type="Node" width="1485">
-   </BOUNDS>
-   <BOUNDS height="4680" left="9660" top="6255" type="Window" width="8370">
-   </BOUNDS>
-   <PIN pinname="Draw" visible="1">
-   </PIN>
-   <PIN pinname="Random Seed" visible="1">
-   </PIN>
-   <PIN pinname="Z Translate" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="9105" top="2160">
-   </BOUNDS>
-   <PIN pinname="Draw Mode" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="439" dstpinname="Draw" srcnodeid="524" srcpinname="Draw">
-   </LINK>
-   <LINK dstnodeid="439" dstpinname="RandomSeed" srcnodeid="524" srcpinname="Random Seed">
-   </LINK>
-   <LINK srcnodeid="524" srcpinname="Draw Mode" dstnodeid="439" dstpinname="Moving Nose">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="549" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Node" left="8070" top="5190" width="0" height="0">
@@ -585,7 +563,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Z Translate" visible="1">
+   <PIN pinname="Z Translate" visible="1" slicecount="1" values="4.5">
    </PIN>
    <PIN pinname="MouseXY" visible="1">
    </PIN>
@@ -594,8 +572,6 @@
    <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="524" srcpinname="Z Translate" dstnodeid="507" dstpinname="Z Translate">
-   </LINK>
    <NODE componentmode="InABox" id="564" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="780" top="5550" type="Node" width="7425">
    </BOUNDS>
@@ -741,5 +717,31 @@
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="524" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <BOUNDS height="270" left="9105" top="2160" type="Node" width="1485">
+   </BOUNDS>
+   <BOUNDS height="8880" left="9660" top="6255" type="Window" width="8370">
+   </BOUNDS>
+   <PIN pinname="Draw" visible="1">
+   </PIN>
+   <PIN pinname="Random Seed" visible="1">
+   </PIN>
+   <PIN pinname="Z Translate" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="9105" top="2160">
+   </BOUNDS>
+   <PIN pinname="Draw Mode" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="439" dstpinname="Draw" srcnodeid="524" srcpinname="Draw">
+   </LINK>
+   <LINK dstnodeid="439" dstpinname="RandomSeed" srcnodeid="524" srcpinname="Random Seed">
+   </LINK>
+   <LINK srcnodeid="524" srcpinname="Draw Mode" dstnodeid="439" dstpinname="Moving Nose">
+   </LINK>
+   <LINK srcnodeid="524" srcpinname="Z Translate" dstnodeid="507" dstpinname="Z Translate">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

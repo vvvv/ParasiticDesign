@@ -371,7 +371,7 @@
    </PIN>
    <PIN pinname="New Position" visible="1">
    </PIN>
-   <PIN pinname="Enable" visible="1">
+   <PIN pinname="Enable" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="87" dstpinname="ROI Size" srcnodeid="80" srcpinname="Size">
@@ -397,9 +397,9 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Enable Lines" visible="1">
+   <PIN pinname="Enable Lines" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Enable Circles" visible="1">
+   <PIN pinname="Enable Circles" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="91" dstpinname="Closest Circle Positions" srcnodeid="89" srcpinname="Closest Circle Positions">
@@ -500,30 +500,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="173" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="100" left="12375" top="1665" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3600" left="12375" top="1665" type="Box" width="4800">
-   </BOUNDS>
-   <BOUNDS height="5220" left="5760" top="7725" type="Window" width="6210">
-   </BOUNDS>
-   <PIN pinname="1" visible="1">
-   </PIN>
-   <PIN pinname="2" visible="1">
-   </PIN>
-   <PIN pinname="3" visible="1">
-   </PIN>
-   <PIN pinname="4" visible="1">
-   </PIN>
-   <PIN pinname="f" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="91" dstpinname="Enable Lines" hiddenwhenlocked="1" srcnodeid="173" srcpinname="2">
-   </LINK>
-   <LINK dstnodeid="91" dstpinname="Enable Circles" hiddenwhenlocked="1" srcnodeid="173" srcpinname="3">
-   </LINK>
-   <LINK dstnodeid="87" dstpinname="Enable" hiddenwhenlocked="1" srcnodeid="173" srcpinname="f">
-   </LINK>
    <LINK dstnodeid="92" dstpinname="Layer 1" srcnodeid="91" srcpinname="Layer">
    </LINK>
    <PACK Name="addonpack" Version="36.0.0">
@@ -566,8 +542,6 @@
    <LINKPOINT x="7125" y="1755">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="173" srcpinname="1" dstnodeid="126" dstpinname="Enabled" hiddenwhenlocked="1">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <NODE componentmode="InAWindow" id="179" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
@@ -588,4 +562,30 @@
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="173" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
+   <BOUNDS height="100" left="12375" top="1665" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="12375" top="1665" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="5220" left="5760" top="7725" type="Window" width="6210">
+   </BOUNDS>
+   <PIN pinname="1" visible="1">
+   </PIN>
+   <PIN pinname="2" visible="1">
+   </PIN>
+   <PIN pinname="3" visible="1">
+   </PIN>
+   <PIN pinname="4" visible="1">
+   </PIN>
+   <PIN pinname="f" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="91" dstpinname="Enable Lines" hiddenwhenlocked="1" srcnodeid="173" srcpinname="2">
+   </LINK>
+   <LINK dstnodeid="91" dstpinname="Enable Circles" hiddenwhenlocked="1" srcnodeid="173" srcpinname="3">
+   </LINK>
+   <LINK dstnodeid="87" dstpinname="Enable" hiddenwhenlocked="1" srcnodeid="173" srcpinname="f">
+   </LINK>
+   <LINK srcnodeid="173" srcpinname="1" dstnodeid="126" dstpinname="Enabled" hiddenwhenlocked="1">
+   </LINK>
    </PATCH>

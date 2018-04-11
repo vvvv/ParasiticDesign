@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_5_01 Noisy Movements\KeyboardControls.v4p" filename="C:\Documents and Settings\Roman\Desktop\M.1.5_01\KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="5520" left="3840" top="9450" type="Window" width="10395">
+   <BOUNDS height="8685" left="3840" top="6285" type="Window" width="10395">
    </BOUNDS>
    <NODE componentmode="InABox" id="174" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="7995" top="3840" type="Node" width="100">
+   <BOUNDS height="100" left="7995" top="5040" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="480" left="7995" top="3840" type="Box" width="480">
+   <BOUNDS height="480" left="7995" top="5040" type="Box" width="480">
    </BOUNDS>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
@@ -23,9 +23,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="173" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="2220" top="3840" type="Node" width="100">
+   <BOUNDS height="100" left="2220" top="5040" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="2220" top="3840" type="Box" width="795">
+   <BOUNDS height="240" left="2220" top="5040" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="4">
    </PIN>
@@ -45,9 +45,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="168" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="915" top="3840" type="Node" width="100">
+   <BOUNDS height="100" left="915" top="5040" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="915" top="3840" type="Box" width="795">
+   <BOUNDS height="240" left="915" top="5040" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -77,9 +77,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="212" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="5190" top="3840" type="Node" width="100">
+   <BOUNDS height="100" left="5190" top="5040" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="5190" top="3840" type="Box" width="795">
+   <BOUNDS height="240" left="5190" top="5040" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0.5">
    </PIN>
@@ -101,7 +101,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="6030" top="2250" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="100">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="6585" top="2250" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" values="50">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -271,14 +271,14 @@
    </BOUNDS>
    <PIN pinname="Increment" visible="1">
    </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
    </NODE>
    <LINK dstnodeid="235" dstpinname="Minimum" srcnodeid="210" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="235" dstpinname="Maximum" srcnodeid="209" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="235" dstpinname="Default" srcnodeid="207" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="212" dstpinname="Y Input Value" srcnodeid="235" srcpinname="Output">
    </LINK>
    <LINK srcnodeid="228" srcpinname="Output Enum" dstnodeid="235" dstpinname="Mode">
    </LINK>
@@ -291,7 +291,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6330" top="2580" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -302,4 +302,22 @@
    </NODE>
    <LINK srcnodeid="236" srcpinname="Y Output Value" dstnodeid="235" dstpinname="Increment">
    </LINK>
+   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="237">
+   <BOUNDS type="Node" left="5190" top="3945" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="235" srcpinname="Output" dstnodeid="237" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="237" srcpinname="Output" dstnodeid="212" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="209" srcpinname="Y Output Value" dstnodeid="237" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

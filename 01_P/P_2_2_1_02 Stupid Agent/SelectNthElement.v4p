@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45alpha26.1.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_1_02 Stupid Agent\SelectNthElement.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_1_02 Stupid Agent\SelectNthElement.v4p" systemname="SelectNthElement">
-   <BOUNDS height="10800" left="10680" top="5400" type="Window" width="13365">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_1_02 Stupid Agent\SelectNthElement.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_2_1_02 Stupid Agent\SelectNthElement.v4p" systemname="SelectNthElement" scrollx="0" scrolly="0">
+   <BOUNDS height="10800" left="11055" top="8400" type="Window" width="13365">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="4170" top="480" type="Node" width="0">
@@ -150,22 +150,6 @@
    </LINK>
    <LINK dstnodeid="15" dstpinname=".. To [" srcnodeid="11" srcpinname="Whole Part">
    </LINK>
-   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation)">
-   <BOUNDS height="270" left="7020" top="2355" type="Node" width="1275">
-   </BOUNDS>
-   <PIN pinname="Increment" visible="1">
-   </PIN>
-   <PIN pinname="Maximum" visible="1">
-   </PIN>
-   <PIN pinname="Up" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Overflow" visible="1">
-   </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="9870" top="1275" type="Node" width="0">
    </BOUNDS>
@@ -185,7 +169,7 @@
    <NODE componentmode="Hidden" id="8" nodename="Mod (Value)" systemname="Mod (Value)">
    <BOUNDS height="100" left="7680" top="3570" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="38">
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
@@ -197,13 +181,11 @@
    </BOUNDS>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="38">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="7" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="6" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
    <BOUNDS height="270" left="7005" top="4095" type="Node" width="720">
    </BOUNDS>
@@ -211,7 +193,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="38">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -219,8 +201,6 @@
    <LINK dstnodeid="6" dstpinname="Switch" srcnodeid="7" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="6" dstpinname="Input 2" srcnodeid="8" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="6" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" id="5" nodename="Cons (Spreads)" systemname="Cons (Spreads)">
    <BOUNDS height="270" left="3975" top="6570" type="Node" width="2955">
@@ -244,10 +224,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="10" dstpinname="Up" srcnodeid="4" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="10" dstpinname="Increment" srcnodeid="4" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="1" dstpinname="Y Input Value" srcnodeid="5" srcpinname="Output">
    </LINK>
    <LINK dstnodeid="17" dstpinname="Input" srcnodeid="0" srcpinname="Y Output Value">
@@ -255,8 +231,6 @@
    <LINK dstnodeid="4" dstpinname="Input 1" srcnodeid="0" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="17" dstpinname="Input 2" srcnodeid="2" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="10" dstpinname="Maximum" linkstyle="PolyLine" srcnodeid="9" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="4" dstpinname="Input 2" linkstyle="PolyLine" srcnodeid="9" srcpinname="Y Output Value">
    </LINK>
@@ -331,14 +305,10 @@
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="Set" visible="1">
+   <PIN pinname="Set" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="41" dstpinname="Input" srcnodeid="26" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="41" dstpinname="Set" srcnodeid="10" srcpinname="Overflow">
-   <LINKPOINT x="10967" y="4658">
-   </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="42" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="0" left="10545" top="6675" type="Node" width="0">
@@ -465,27 +435,61 @@
    </BOUNDS>
    <BOUNDS height="240" left="10650" top="3090" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="38">
    </PIN>
    </NODE>
-   <LINK dstnodeid="52" dstpinname="Y Input Value" srcnodeid="10" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="8" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
-   </LINK>
    <NODE componentmode="Hidden" id="53" nodename="OR (Boolean)" systemname="OR (Boolean)">
    <BOUNDS height="100" left="7890" top="4095" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="53" dstpinname="Input 1" srcnodeid="7" srcpinname="Output">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Input 2" srcnodeid="10" srcpinname="Overflow">
-   </LINK>
    <LINK dstnodeid="29" dstpinname="Switch" srcnodeid="53" srcpinname="Output">
    </LINK>
+   <NODE componentmode="Hidden" id="10" nodename="Counter (Animation)" systemname="Counter (Animation)">
+   <BOUNDS height="270" left="7020" top="2355" type="Node" width="1275">
+   </BOUNDS>
+   <PIN pinname="Increment" visible="1">
+   </PIN>
+   <PIN pinname="Maximum" visible="1">
+   </PIN>
+   <PIN pinname="Up" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Overflow" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="7" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Up" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Increment" srcnodeid="4" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="10" dstpinname="Maximum" linkstyle="PolyLine" srcnodeid="9" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="41" dstpinname="Set" srcnodeid="10" srcpinname="Overflow">
+   <LINKPOINT x="10967" y="4658">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="52" dstpinname="Y Input Value" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="8" dstpinname="Input 1" srcnodeid="10" srcpinname="Output">
+   </LINK>
+   <LINK dstnodeid="53" dstpinname="Input 2" srcnodeid="10" srcpinname="Overflow">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
    </PATCH>
