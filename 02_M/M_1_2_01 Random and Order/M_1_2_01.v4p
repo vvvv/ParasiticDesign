@@ -506,22 +506,6 @@
    </LINK>
    <LINK srcnodeid="111" srcpinname="Y Output Value" dstnodeid="10" dstpinname="ScaleY">
    </LINK>
-   <NODE componentmode="InAWindow" id="112" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="6525" top="7920" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="3900" left="6525" top="7920" type="Box" width="4260">
-   </BOUNDS>
-   <BOUNDS height="6420" left="12210" top="255" type="Window" width="5340">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="112" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="113">
    <BOUNDS type="Node" left="6840" top="1425" width="100" height="100">
    </BOUNDS>
@@ -546,4 +530,28 @@
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="115">
+   <BOUNDS type="Box" left="6855" top="7695" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6855" top="7695" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="116" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="6540" top="8040" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3900" left="6540" top="8040" type="Box" width="4260">
+   </BOUNDS>
+   <BOUNDS height="6585" left="12210" top="255" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="116" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="115" srcpinname="Color Output" dstnodeid="116" dstpinname="Background Color">
+   </LINK>
    </PATCH>

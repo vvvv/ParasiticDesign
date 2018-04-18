@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_1_01 Setting Up Grids\M_3_1_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01" locked="0">
-   <BOUNDS height="10320" left="6165" top="1365" type="Window" width="12210">
+   <BOUNDS height="10320" left="570" top="1095" type="Window" width="12210">
    </BOUNDS>
    <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="150" top="480" type="Node" width="840">
@@ -880,28 +880,6 @@
    </NODE>
    <LINK srcnodeid="176" srcpinname="Transform Out" dstnodeid="148" dstpinname="Transform In">
    </LINK>
-   <NODE componentmode="InAWindow" id="180" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6045" top="9210" type="Node" width="1920">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6045" top="9210" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7515" left="18405" top="1365" type="Window" width="7275">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="180" dstpinname="Projection" srcnodeid="135" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="180" dstpinname="Layers" srcnodeid="132" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="180" dstpinname="View" linkstyle="PolyLine" srcnodeid="148" srcpinname="Transform Out">
-   </LINK>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="150">
    <BOUNDS type="Node" left="9075" top="7680" width="100" height="100">
    </BOUNDS>
@@ -914,6 +892,40 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE componentmode="InAWindow" id="181" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6045" top="9210" type="Node" width="1920">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6045" top="9210" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7335" left="12585" top="1095" type="Window" width="6990">
+   </BOUNDS>
+   <PIN pinname="Background Color" visible="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="181" dstpinname="Projection" srcnodeid="135" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="Layers" srcnodeid="132" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="181" dstpinname="View" linkstyle="PolyLine" srcnodeid="148" srcpinname="Transform Out">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="182">
+   <BOUNDS type="Box" left="6420" top="8730" width="285" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6420" top="8730" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="182" srcpinname="Color Output" dstnodeid="181" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

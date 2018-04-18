@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_2_2_01 Lissajous Figures\M_2_2_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_2_1_01 Harmonic Oscillations\M_2_1_01 Harmonic Oscillations.v4p" systemname="M_2_1_01 Harmonic Oscillations">
-   <BOUNDS height="7890" left="1155" top="720" type="Window" width="10500">
+   <BOUNDS height="8070" left="1155" top="720" type="Window" width="10500">
    </BOUNDS>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="340" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN encoded="0" pinname="Input String" pintype="Input" slicecount="1" visible="0" values="|KEYS&cr;&lf;a: &tab;&tab;toggle oscillation animation&cr;&lf;1/2: &tab;&tab;frequency X -/+&cr;&lf;3/4: &tab;&tab;frequency Y-/+&cr;&lf;arrow left/right : &tab;phi -/+&cr;&lf;ctrl+2:&tab; &tab;save png|">
@@ -250,6 +250,8 @@
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="408" srcpinname="Y Output Value" dstnodeid="407" dstpinname="XOscillator">
@@ -506,22 +508,34 @@
    </LINK>
    <LINK srcnodeid="411" srcpinname="Output" dstnodeid="355" dstpinname="Phase">
    </LINK>
-   <NODE componentmode="InAWindow" id="425" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="9255" left="11655" top="720" type="Window" width="9885">
-   </BOUNDS>
-   <BOUNDS height="270" left="5565" top="6480" type="Node" width="1650">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5565" top="6480" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="425" dstpinname="Layers" srcnodeid="369" srcpinname="Layer">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="426">
+   <BOUNDS type="Box" left="5865" top="6390" width="285" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5865" top="6390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="427" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="8085" left="11655" top="720" type="Window" width="7740">
+   </BOUNDS>
+   <BOUNDS height="270" left="5550" top="6855" type="Node" width="1650">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5550" top="6855" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="427" dstpinname="Layers" srcnodeid="369" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="426" srcpinname="Color Output" dstnodeid="427" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

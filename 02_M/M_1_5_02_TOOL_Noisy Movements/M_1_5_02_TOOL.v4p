@@ -684,26 +684,36 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="435" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6915" top="7170" type="Node" width="1500">
-   </BOUNDS>
-   <BOUNDS height="5715" left="6915" top="7170" type="Box" width="8085">
-   </BOUNDS>
-   <BOUNDS height="6825" left="13140" top="240" type="Window" width="9720">
-   </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="435" dstpinname="Layers" srcnodeid="261" srcpinname="Layer">
-   </LINK>
-   <LINK srcnodeid="421" srcpinname="Bang" dstnodeid="435" dstpinname="Clear">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="436">
+   <BOUNDS type="Box" left="7815" top="6675" width="285" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7815" top="6675" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="437" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6915" top="7200" type="Node" width="1650">
+   </BOUNDS>
+   <BOUNDS height="5715" left="6915" top="7200" type="Box" width="8085">
+   </BOUNDS>
+   <BOUNDS height="8085" left="13140" top="240" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="437" dstpinname="Layers" srcnodeid="261" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="421" srcpinname="Bang" dstnodeid="437" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="436" srcpinname="Color Output" dstnodeid="437" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

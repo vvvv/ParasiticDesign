@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_4_03_TOOL\M_3_4_03_TOOL.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01" scrollx="0" scrolly="-360">
    <BOUNDS height="15780" left="0" top="345" type="Window" width="17085">
    </BOUNDS>
@@ -1898,31 +1898,9 @@
    </NODE>
    <LINK srcnodeid="582" srcpinname="Color Output" dstnodeid="241" dstpinname="Ambient Color">
    </LINK>
-   <NODE componentmode="InAWindow" id="583" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="4710" top="14760" type="Node" width="4005">
-   </BOUNDS>
-   <BOUNDS height="1800" left="4710" top="14760" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="9330" left="15555" top="345" type="Window" width="11745">
-   </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="583" dstpinname="Layers" srcnodeid="241" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="583" dstpinname="Background Color" srcnodeid="528" srcpinname="Background Color">
-   </LINK>
-   <LINK dstnodeid="583" dstpinname="Projection" srcnodeid="554" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="559" srcpinname="Transform Out" dstnodeid="583" dstpinname="View">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="560">
    <BOUNDS type="Node" left="9105" top="13095" width="100" height="100">
@@ -1936,4 +1914,28 @@
    </NODE>
    <LINK srcnodeid="560" srcpinname="Device" dstnodeid="559" dstpinname="Mouse">
    </LINK>
+   <NODE componentmode="InAWindow" id="584" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="4710" top="14760" type="Node" width="4005">
+   </BOUNDS>
+   <BOUNDS height="1800" left="4710" top="14760" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8085" left="16905" top="345" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="584" dstpinname="Layers" srcnodeid="241" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="584" dstpinname="Background Color" srcnodeid="528" srcpinname="Background Color">
+   </LINK>
+   <LINK dstnodeid="584" dstpinname="Projection" srcnodeid="554" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="559" srcpinname="Transform Out" dstnodeid="584" dstpinname="View">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

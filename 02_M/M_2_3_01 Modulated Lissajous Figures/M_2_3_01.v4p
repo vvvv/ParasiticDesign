@@ -545,15 +545,17 @@
    <LINK srcnodeid="362" srcpinname="Output Y" dstnodeid="416" dstpinname="Input 1">
    </LINK>
    <NODE componentmode="InAWindow" id="431" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="6510" left="13950" top="690" type="Window" width="6810">
+   <BOUNDS height="7335" left="13950" top="690" type="Window" width="6990">
    </BOUNDS>
-   <BOUNDS height="100" left="4545" top="9840" type="Node" width="100">
+   <BOUNDS height="100" left="4545" top="10095" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="1800" left="4545" top="9840" type="Box" width="2400">
+   <BOUNDS height="1800" left="4545" top="10095" type="Box" width="2400">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|" visible="1">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="431" dstpinname="Layers" srcnodeid="369" srcpinname="Layer">
@@ -659,5 +661,17 @@
    <LINK dstnodeid="407" dstpinname="VerticesXYZ" srcnodeid="406" srcpinname="XYZ">
    </LINK>
    <LINK srcnodeid="420" srcpinname="Y Output Value" dstnodeid="407" dstpinname="Transform Each Bin">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="432">
+   <BOUNDS type="Box" left="4860" top="9645" width="285" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4860" top="9645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="432" srcpinname="Color Output" dstnodeid="431" dstpinname="Background Color">
    </LINK>
    </PATCH>

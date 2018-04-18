@@ -844,28 +844,6 @@
    </NODE>
    <LINK srcnodeid="143" srcpinname="Device" dstnodeid="139" dstpinname="Mouse">
    </LINK>
-   <NODE componentmode="InAWindow" id="214" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="12315" left="12150" top="345" type="Window" width="12045">
-   </BOUNDS>
-   <BOUNDS height="100" left="5145" top="11355" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5145" top="11355" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="214" dstpinname="Projection" srcnodeid="118" srcpinname="Transform Out">
-   </LINK>
-   <LINK dstnodeid="214" dstpinname="View" srcnodeid="139" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="60" srcpinname="Layer" dstnodeid="214" dstpinname="Layers">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
@@ -894,4 +872,36 @@
    </LINK>
    <LINK srcnodeid="207" srcpinname="uMin" dstnodeid="195" dstpinname="Destination Minimum">
    </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="215">
+   <BOUNDS type="Box" left="5445" top="10950" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5445" top="10950" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="216" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="8085" left="11955" top="360" type="Window" width="7740">
+   </BOUNDS>
+   <BOUNDS height="100" left="5145" top="11355" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5145" top="11355" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="216" dstpinname="Projection" srcnodeid="118" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="216" dstpinname="View" srcnodeid="139" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Layer" dstnodeid="216" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="215" srcpinname="Color Output" dstnodeid="216" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

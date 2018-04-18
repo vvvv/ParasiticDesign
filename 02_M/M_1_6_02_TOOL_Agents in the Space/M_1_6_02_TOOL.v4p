@@ -602,22 +602,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="569" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="6375" top="8715" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6375" top="8715" width="345" height="360">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="570" managers="" nodename="IOBox (String)" systemname="IOBox (String)">
    <PIN pinname="Input String" pintype="Input" slicecount="1" visible="0" encoded="0" values="|space:&tab;&tab;new noise seed&cr;&lf;arrow up:&tab;&tab;zoom in&cr;&lf;arrow down:&tab;zoom out&cr;&lf;ctrl+2:&tab;&tab;save png|">
    </PIN>
@@ -692,34 +676,12 @@
    </LINK>
    <LINK srcnodeid="528" srcpinname="Position (Projection) XY" dstnodeid="507" dstpinname="MouseXY">
    </LINK>
-   <NODE componentmode="InAWindow" id="571" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6210" top="9705" type="Node" width="1785">
-   </BOUNDS>
-   <BOUNDS height="5715" left="6210" top="9705" type="Box" width="8085">
-   </BOUNDS>
-   <BOUNDS height="9780" left="15030" top="1335" type="Window" width="10500">
-   </BOUNDS>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="571" dstpinname="Layers" srcnodeid="398" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="571" dstpinname="Projection" srcnodeid="509" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="535" srcpinname="Color Output" dstnodeid="571" dstpinname="Background Color">
-   </LINK>
-   <LINK dstnodeid="571" dstpinname="View" hiddenwhenlocked="0" srcnodeid="507" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="569" srcpinname="Y Output Value" dstnodeid="571" dstpinname="Clear">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="524" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
-   <BOUNDS height="270" left="9105" top="2160" type="Node" width="1485">
+   <BOUNDS height="270" left="9150" top="2160" type="Node" width="1485">
    </BOUNDS>
    <BOUNDS height="8880" left="9660" top="6255" type="Window" width="8370">
    </BOUNDS>
@@ -729,7 +691,7 @@
    </PIN>
    <PIN pinname="Z Translate" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="9105" top="2160">
+   <BOUNDS type="Box" left="9150" top="2160">
    </BOUNDS>
    <PIN pinname="Draw Mode" visible="1">
    </PIN>
@@ -744,4 +706,24 @@
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE componentmode="InAWindow" id="572" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6210" top="9705" type="Node" width="1785">
+   </BOUNDS>
+   <BOUNDS height="5715" left="6210" top="9705" type="Box" width="8085">
+   </BOUNDS>
+   <BOUNDS height="8085" left="13815" top="405" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="572" dstpinname="Layers" srcnodeid="398" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="572" dstpinname="Projection" srcnodeid="509" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="535" srcpinname="Color Output" dstnodeid="572" dstpinname="Background Color">
+   </LINK>
+   <LINK dstnodeid="572" dstpinname="View" hiddenwhenlocked="0" srcnodeid="507" srcpinname="Transform Out">
+   </LINK>
    </PATCH>

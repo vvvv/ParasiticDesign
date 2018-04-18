@@ -223,7 +223,7 @@
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" hiddenwhenlocked="0" id="321" managers="" nodename="KeyboardControls.v4p" systemname="KeyboardControls">
    <BOUNDS height="270" left="5280" top="2940" type="Node" width="2175">
    </BOUNDS>
-   <BOUNDS height="5100" left="2490" top="10275" type="Window" width="11040">
+   <BOUNDS height="5895" left="2490" top="9480" type="Window" width="11040">
    </BOUNDS>
    <PIN pinname="Phi" pintype="Output" visible="1">
    </PIN>
@@ -638,22 +638,6 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="500" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="5280" top="9555" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5280" top="9555" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="9510" left="12480" top="1050" type="Window" width="9240">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="500" dstpinname="Layers" srcnodeid="452" srcpinname="Output">
-   </LINK>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="480">
    <BOUNDS type="Node" left="8610" top="2745" width="100" height="100">
    </BOUNDS>
@@ -674,4 +658,30 @@
    </LINK>
    <LINK srcnodeid="501" srcpinname="X" dstnodeid="416" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="502">
+   <BOUNDS type="Box" left="5610" top="9330" width="285" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5610" top="9330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="503" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="5295" top="9750" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5295" top="9750" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="9585" left="12480" top="1050" type="Window" width="9240">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="503" dstpinname="Layers" srcnodeid="452" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="502" srcpinname="Color Output" dstnodeid="503" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

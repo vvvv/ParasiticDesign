@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_5_01 Define Own Shapes\M_3_5_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="8685" left="1110" top="1020" type="Window" width="12405">
    </BOUNDS>
@@ -179,9 +179,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="219" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7755" top="5715" type="Node" width="795">
+   <BOUNDS height="270" left="7695" top="5715" type="Node" width="795">
    </BOUNDS>
-   <BOUNDS height="270" left="7755" top="5715" type="Box" width="795">
+   <BOUNDS height="270" left="7695" top="5715" type="Box" width="795">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; zoom|">
    </PIN>
@@ -211,9 +211,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="287" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="6345" top="6435" type="Node" width="100">
+   <BOUNDS height="100" left="6315" top="6435" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6345" top="6435" type="Box" width="450">
+   <BOUNDS height="240" left="6315" top="6435" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-0.57">
    </PIN>
@@ -223,9 +223,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="286" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="6525" top="6735" type="Node" width="100">
+   <BOUNDS height="100" left="6495" top="6735" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6525" top="6735" type="Box" width="450">
+   <BOUNDS height="240" left="6495" top="6735" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-0.15">
    </PIN>
@@ -243,9 +243,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="289" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="6870" top="5715" type="Node" width="100">
+   <BOUNDS height="100" left="6810" top="5715" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="6870" top="5715" type="Box" width="795">
+   <BOUNDS height="240" left="6810" top="5715" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="9.56">
    </PIN>
@@ -648,20 +648,10 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="317">
-   <BOUNDS type="Node" left="8820" top="765" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Position (Projection) XY" visible="1">
-   </PIN>
-   <PIN pinname="Position (Normalized Projection) XY" visible="1" pintype="Output">
-   </PIN>
-   </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="334">
    <BOUNDS type="Node" left="9120" top="1305" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="XY" visible="1">
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -670,28 +660,44 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="335" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
+   <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="336">
+   <BOUNDS type="Node" left="8940" top="750" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="336" srcpinname="Position (Projection) XY" dstnodeid="334" dstpinname="XY">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="337">
+   <BOUNDS type="Box" left="5145" top="7215" width="345" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5145" top="7215" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="338" nodename="RENDERER (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="4800" top="7590" type="Node" width="1755">
    </BOUNDS>
    <BOUNDS height="1800" left="4800" top="7590" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="10215" left="13515" top="1005" type="Window" width="9975">
+   <BOUNDS height="8085" left="13305" top="1020" type="Window" width="7740">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
    </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="335" dstpinname="View">
+   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="338" dstpinname="View">
    </LINK>
-   <LINK srcnodeid="218" srcpinname="Transform Out" dstnodeid="335" dstpinname="Projection">
+   <LINK srcnodeid="218" srcpinname="Transform Out" dstnodeid="338" dstpinname="Projection">
    </LINK>
-   <LINK srcnodeid="315" srcpinname="Layer" dstnodeid="335" dstpinname="Layers">
+   <LINK srcnodeid="315" srcpinname="Layer" dstnodeid="338" dstpinname="Layers">
    </LINK>
-   <LINK srcnodeid="317" srcpinname="Position (Normalized Projection) XY" dstnodeid="334" dstpinname="XY">
+   <LINK srcnodeid="337" srcpinname="Color Output" dstnodeid="338" dstpinname="Background Color">
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_5_1_01 Recursion\M_5_1_01.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_5_1_01 Recursion\M_5_1_01.v4p" systemname="M_5_1_01">
    <BOUNDS height="11745" left="5610" top="0" type="Window" width="7785">
    </BOUNDS>
@@ -424,25 +424,9 @@
    <PIN pinname="Key Name" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="375" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="7905" left="13335" top="0" type="Window" width="7515">
-   </BOUNDS>
-   <BOUNDS height="100" left="570" top="10170" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="1800" left="570" top="10170" type="Box" width="2400">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="375" dstpinname="Layers" srcnodeid="326" srcpinname="Layer">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="376">
    <BOUNDS type="Node" left="6000" top="1935" width="100" height="100">
@@ -522,4 +506,32 @@
    </LINK>
    <LINK srcnodeid="338" srcpinname="Key Name" dstnodeid="340" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="378">
+   <BOUNDS type="Box" left="885" top="9795" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="885" top="9795" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="379" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="7335" left="13215" top="0" type="Window" width="6990">
+   </BOUNDS>
+   <BOUNDS height="100" left="570" top="10170" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="570" top="10170" type="Box" width="2400">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="379" dstpinname="Layers" srcnodeid="326" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="378" srcpinname="Color Output" dstnodeid="379" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

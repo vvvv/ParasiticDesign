@@ -625,7 +625,7 @@
    </BOUNDS>
    <BOUNDS height="4635" left="585" top="3090" type="Box" width="3510">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|In this example the Perlin function influences the rotation and the transparency of the debug elements. Arrows serve to show the direction of the movement (rotation).&cr;&lf;&cr;&lf;Builds a grid 20x20 elements.&cr;&lf;&cr;&lf;Maps mouse poisition to a suitable range.&cr;&lf;&cr;&lf;Mapped Perlin (2d) output is used to control:&cr;&lf;&cr;&lf;- the brightness of the black circles (see HSL (Color Join));&cr;&lf;&cr;&lf;- the angle of the arcs;&cr;&lf;&cr;&lf;- the direction of the arrows.&cr;&lf;&cr;&lf;The angle in Processing&apos;s arc() function increases clockwise, whereas in vvvv it increases counter clockwise, therefore -1+value.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|In this example the Perlin function influences the rotation and the transparency of the debug elements. Arrows serve to show the direction of the movement (rotation).&cr;&lf;&cr;&lf;Builds a grid 20x20 elements.&cr;&lf;&cr;&lf;Maps mouse poisition to a suitable range.&cr;&lf;&cr;&lf;Mapped Perlin (2d) output is used to control:&cr;&lf;&cr;&lf;- the brightness of the black circles &cr;&lf;(see HSL (Color Join));&cr;&lf;&cr;&lf;- the angle of the arcs;&cr;&lf;&cr;&lf;- the direction of the arrows.&cr;&lf;&cr;&lf;The angle in Processing&apos;s arc() function increases clockwise, whereas in vvvv it increases counter clockwise, therefore -1+value.&cr;&lf;&cr;&lf;&cr;&lf;&cr;&lf;|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -870,22 +870,30 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="202" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="4770" top="11745" type="Node" width="100">
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="203">
+   <BOUNDS type="Box" left="5100" top="11625" width="285" height="270">
    </BOUNDS>
-   <BOUNDS height="7905" left="4770" top="11745" type="Box" width="10380">
+   <BOUNDS type="Node" left="5100" top="11625" width="0" height="0">
    </BOUNDS>
-   <BOUNDS height="11205" left="13155" top="390" type="Window" width="10965">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="204" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="4785" top="12030" type="Node" width="100">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <BOUNDS height="7905" left="4785" top="12030" type="Box" width="10380">
+   </BOUNDS>
+   <BOUNDS height="8835" left="13155" top="390" type="Window" width="8490">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
    </NODE>
-   <LINK dstnodeid="202" dstpinname="Layers" srcnodeid="1" srcpinname="Layer">
+   <LINK dstnodeid="204" dstpinname="Layers" srcnodeid="1" srcpinname="Layer">
    </LINK>
-   <PACK Name="dx11" Version="1.2">
-   </PACK>
+   <LINK srcnodeid="203" srcpinname="Color Output" dstnodeid="204" dstpinname="Background Color">
+   </LINK>
    </PATCH>

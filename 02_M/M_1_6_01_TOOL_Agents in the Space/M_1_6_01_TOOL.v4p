@@ -508,24 +508,6 @@
    <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="544" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="6990" top="8280" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6990" top="8280" width="480" height="480">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="550" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="780" top="5190" type="Node" width="7425">
    </BOUNDS>
@@ -720,28 +702,6 @@
    </LINK>
    <LINK srcnodeid="528" srcpinname="Position (Projection) XY" dstnodeid="507" dstpinname="MouseXY">
    </LINK>
-   <NODE componentmode="InAWindow" id="556" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6810" top="9405" type="Node" width="1785">
-   </BOUNDS>
-   <BOUNDS height="5715" left="6810" top="9405" type="Box" width="8085">
-   </BOUNDS>
-   <BOUNDS height="9780" left="14280" top="420" type="Window" width="10500">
-   </BOUNDS>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="556" dstpinname="Layers" srcnodeid="398" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="556" dstpinname="Projection" srcnodeid="509" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="535" srcpinname="Color Output" dstnodeid="556" dstpinname="Background Color">
-   </LINK>
-   <LINK dstnodeid="556" dstpinname="View" hiddenwhenlocked="0" srcnodeid="507" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="544" srcpinname="Y Output Value" dstnodeid="556" dstpinname="Clear">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
@@ -767,5 +727,27 @@
    <LINK dstnodeid="439" dstpinname="RandomSeed" srcnodeid="524" srcpinname="Random Seed">
    </LINK>
    <LINK srcnodeid="524" srcpinname="Z Translate" dstnodeid="507" dstpinname="Z Translate">
+   </LINK>
+   <NODE componentmode="InAWindow" id="557" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6810" top="9405" type="Node" width="1785">
+   </BOUNDS>
+   <BOUNDS height="5715" left="6810" top="9405" type="Box" width="8085">
+   </BOUNDS>
+   <BOUNDS height="9585" left="14145" top="420" type="Window" width="9240">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="557" dstpinname="Layers" srcnodeid="398" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="557" dstpinname="Projection" srcnodeid="509" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="535" srcpinname="Color Output" dstnodeid="557" dstpinname="Background Color">
+   </LINK>
+   <LINK dstnodeid="557" dstpinname="View" hiddenwhenlocked="0" srcnodeid="507" srcpinname="Transform Out">
    </LINK>
    </PATCH>

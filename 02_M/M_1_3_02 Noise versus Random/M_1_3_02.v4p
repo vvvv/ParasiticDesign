@@ -266,54 +266,20 @@
    </NODE>
    <LINK srcnodeid="36" srcpinname="Left Button" dstnodeid="20" dstpinname="Input">
    </LINK>
-   <NODE componentmode="InAWindow" id="46" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="5010" top="5070" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="5565" left="5010" top="5070" type="Box" width="5085">
-   </BOUNDS>
-   <BOUNDS height="6435" left="10590" top="1065" type="Window" width="6030">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="46" dstpinname="Layers" srcnodeid="34" srcpinname="Layer">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="47">
-   <BOUNDS type="Node" left="6060" top="5595" width="100" height="100">
+   <BOUNDS type="Node" left="6060" top="6045" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1">
+   <PIN pinname="X" visible="1" slicecount="1" values="386">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="390">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Width" dstnodeid="47" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="46" srcpinname="Actual Backbuffer Height" dstnodeid="47" dstpinname="Y">
-   </LINK>
-   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="48">
-   <BOUNDS type="Node" left="6060" top="6015" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6060" top="6015" width="3000" height="3000">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="47" srcpinname="XY" dstnodeid="48" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="49">
    <BOUNDS type="Node" left="6930" top="2550" width="100" height="100">
    </BOUNDS>
@@ -324,12 +290,6 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Output 1" dstnodeid="49" dstpinname="XY" linkstyle="Bezier">
-   <LINKPOINT x="8840" y="7985">
-   </LINKPOINT>
-   <LINKPOINT x="11110" y="1135">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="50">
    <BOUNDS type="Node" left="7665" top="3180" width="100" height="100">
    </BOUNDS>
@@ -349,5 +309,41 @@
    <LINK srcnodeid="49" srcpinname="X" dstnodeid="33" dstpinname="Width">
    </LINK>
    <LINK srcnodeid="49" srcpinname="Y" dstnodeid="33" dstpinname="Height">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="XY" dstnodeid="49" dstpinname="XY" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="8850" y="7545">
+   </LINKPOINT>
+   <LINKPOINT x="9210" y="1455">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="51">
+   <BOUNDS type="Box" left="5310" top="5145" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5310" top="5145" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="52" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="5010" top="5520" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="5565" left="5010" top="5520" type="Box" width="5085">
+   </BOUNDS>
+   <BOUNDS height="6585" left="10590" top="1065" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="52" dstpinname="Layers" srcnodeid="34" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Actual Backbuffer Width" dstnodeid="47" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Actual Backbuffer Height" dstnodeid="47" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Color Output" dstnodeid="52" dstpinname="Background Color">
    </LINK>
    </PATCH>

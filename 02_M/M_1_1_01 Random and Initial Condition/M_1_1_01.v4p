@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_1_1_01 Random and Initial Condition\M_1_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\M.1.1_01.v4p" systemname="M.1.1_01">
    <BOUNDS height="7755" left="0" top="0" type="Window" width="12645">
    </BOUNDS>
@@ -486,23 +486,9 @@
    </NODE>
    <LINK srcnodeid="65" srcpinname="Left Button" dstnodeid="44" dstpinname="Input">
    </LINK>
-   <NODE componentmode="InAWindow" id="75" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="5805" top="6705" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="2280" left="5805" top="6705" type="Box" width="2970">
-   </BOUNDS>
-   <BOUNDS height="4305" left="12540" top="0" type="Window" width="10410">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="75" dstpinname="Layers" srcnodeid="23" srcpinname="Layer">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\modules\EX9\Line (EX9).v4p" id="4" nodename="Line (EX9)" systemname="Line (EX9)">
    <PIN pinname="Layer" visible="1">
@@ -530,4 +516,30 @@
    </LINK>
    <LINK dstnodeid="23" dstpinname="Layer 1" srcnodeid="4" srcpinname="Layer">
    </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="76">
+   <BOUNDS type="Box" left="6120" top="6285" width="285" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6120" top="6285" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="77" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="5805" top="6705" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="2280" left="5805" top="6705" type="Box" width="2970">
+   </BOUNDS>
+   <BOUNDS height="4500" left="12540" top="0" type="Window" width="10410">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="77" dstpinname="Layers" srcnodeid="23" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Color Output" dstnodeid="77" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

@@ -151,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" hiddenwhenlocked="0" id="456" managers="" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="4005" top="5085" type="Node" width="100">
+   <BOUNDS height="100" left="4215" top="4875" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="4005" top="5085" type="Box" width="795">
+   <BOUNDS height="240" left="4215" top="4875" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Input Value" pintype="Input" slicecount="1" visible="1" values="2">
    </PIN>
@@ -207,7 +207,7 @@
    </PIN>
    <PIN pinname="X Input Value" pintype="Input" slicecount="1" visible="0" values="0">
    </PIN>
-   <PIN pinname="X Output Value" pintype="Output" visible="0">
+   <PIN pinname="X Output Value" pintype="Output" visible="1">
    </PIN>
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
@@ -468,8 +468,6 @@
    <PIN pinname="Transform Out" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="444" dstpinname="XYZ" srcnodeid="456" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="458" dstpinname="Transform" srcnodeid="444" srcpinname="Transform Out">
    </LINK>
    <NODE componentmode="Hidden" id="443" nodename="OnOpen (VVVV)" systemname="OnOpen (VVVV)">
@@ -481,7 +479,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="441" managers="" nodename="Expr (Value)" systemname="Expr (Value)">
-   <BOUNDS height="100" left="5970" top="5055" type="Node" width="100">
+   <BOUNDS height="270" left="5970" top="5055" type="Node" width="570">
    </BOUNDS>
    <PIN pinname="Term" pintype="Input" visible="1" encoded="0">
    </PIN>
@@ -515,9 +513,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="439" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6405" top="4710" width="0" height="0">
+   <BOUNDS type="Node" left="6480" top="4635" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6405" top="4710" width="795" height="240">
+   <BOUNDS type="Box" left="6480" top="4635" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" encoded="0" values="round(a)">
    </PIN>
@@ -616,26 +614,38 @@
    </LINK>
    <LINK srcnodeid="462" srcpinname="Layer" dstnodeid="457" dstpinname="Layer 2">
    </LINK>
-   <NODE componentmode="InAWindow" id="467" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="3465" top="7125" type="Node" width="1500">
-   </BOUNDS>
-   <BOUNDS height="5715" left="3465" top="7125" type="Box" width="8085">
-   </BOUNDS>
-   <BOUNDS height="6480" left="13065" top="315" type="Window" width="8880">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="467" dstpinname="Layers" srcnodeid="457" srcpinname="Layer">
-   </LINK>
-   <LINK srcnodeid="443" srcpinname="Bang" dstnodeid="467" dstpinname="Clear">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="468">
+   <BOUNDS type="Box" left="4425" top="6645" width="300" height="390">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4425" top="6645" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="469" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="3480" top="7320" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="5715" left="3480" top="7320" type="Box" width="8085">
+   </BOUNDS>
+   <BOUNDS height="8085" left="13065" top="315" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="469" dstpinname="Layers" srcnodeid="457" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="443" srcpinname="Bang" dstnodeid="469" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="468" srcpinname="Color Output" dstnodeid="469" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <LINK srcnodeid="456" srcpinname="X Output Value" dstnodeid="444" dstpinname="XYZ">
+   </LINK>
    </PATCH>

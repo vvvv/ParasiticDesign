@@ -326,24 +326,34 @@
    <PIN pinname="Show Grid" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="582" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="583">
+   <BOUNDS type="Box" left="4755" top="5760" width="285" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4755" top="5760" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="584" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="4440" top="6240" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="4440" top="6240" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="11010" left="11790" top="240" type="Window" width="10740">
+   <BOUNDS height="8085" left="11790" top="240" type="Window" width="7740">
    </BOUNDS>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="548" srcpinname="Layer" dstnodeid="582" dstpinname="Layers">
+   <LINK srcnodeid="548" srcpinname="Layer" dstnodeid="584" dstpinname="Layers">
    </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="36.0.0">
+   <LINK srcnodeid="583" srcpinname="Color Output" dstnodeid="584" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

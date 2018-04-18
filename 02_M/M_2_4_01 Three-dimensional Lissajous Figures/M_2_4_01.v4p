@@ -153,9 +153,9 @@
    <NODE componentmode="InABox" id="587" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
    <PIN pinname="Y Input Value" slicecount="1" values="1.7">
    </PIN>
-   <BOUNDS height="0" left="7515" top="5280" type="Node" width="0">
+   <BOUNDS height="0" left="7470" top="5310" type="Node" width="0">
    </BOUNDS>
-   <BOUNDS height="240" left="7515" top="5280" type="Box" width="495">
+   <BOUNDS height="240" left="7470" top="5310" type="Box" width="495">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" filename="ViewTransform.v4p" id="601" nodename="ViewTransform.v4p" systemname="ViewTransform">
@@ -402,28 +402,6 @@
    <PIN pinname="Size" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="645" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="5070" top="7440" type="Node" width="2160">
-   </BOUNDS>
-   <BOUNDS height="1800" left="5070" top="7440" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="9360" left="13410" top="540" type="Window" width="9210">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="645" dstpinname="Layers" srcnodeid="495" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="645" dstpinname="Projection" srcnodeid="603" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="601" srcpinname="Transform Out" dstnodeid="645" dstpinname="View">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
@@ -445,5 +423,35 @@
    <LINK srcnodeid="635" srcpinname="Right Button" dstnodeid="601" dstpinname="Right Mouse Button">
    </LINK>
    <LINK srcnodeid="635" srcpinname="Device" dstnodeid="601" dstpinname="Mouse">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="646">
+   <BOUNDS type="Box" left="5505" top="7005" width="285" height="300">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5505" top="7005" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="647" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="5070" top="7440" type="Node" width="2160">
+   </BOUNDS>
+   <BOUNDS height="1800" left="5070" top="7440" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8085" left="13005" top="540" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="647" dstpinname="Layers" srcnodeid="495" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="647" dstpinname="Projection" srcnodeid="603" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="601" srcpinname="Transform Out" dstnodeid="647" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="646" srcpinname="Color Output" dstnodeid="647" dstpinname="Background Color">
    </LINK>
    </PATCH>

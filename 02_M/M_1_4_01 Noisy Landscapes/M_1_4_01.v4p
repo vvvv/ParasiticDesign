@@ -520,30 +520,6 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="992" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="5115" top="9765" type="Node" width="3405">
-   </BOUNDS>
-   <BOUNDS height="6660" left="5115" top="9765" type="Box" width="9405">
-   </BOUNDS>
-   <BOUNDS height="8190" left="15105" top="465" type="Window" width="9240">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="992" dstpinname="Layers" linkstyle="Bezier" srcnodeid="388" srcpinname="Layer">
-   <LINKPOINT x="5130" y="9205">
-   </LINKPOINT>
-   <LINKPOINT x="5130" y="9290">
-   </LINKPOINT>
-   </LINK>
-   <LINK dstnodeid="992" dstpinname="Projection" srcnodeid="958" srcpinname="Transform Out">
-   </LINK>
-   <LINK srcnodeid="974" srcpinname="Transform Out" dstnodeid="992" dstpinname="View">
-   </LINK>
    <NODE systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Mouse (Devices Window)" componentmode="Hidden" id="976">
    <BOUNDS type="Node" left="5130" top="3900" width="100" height="100">
    </BOUNDS>
@@ -601,5 +577,37 @@
    <LINK srcnodeid="657" srcpinname="Octaves" dstnodeid="833" dstpinname="Octaves">
    </LINK>
    <LINK srcnodeid="657" srcpinname="RandomSeed" dstnodeid="833" dstpinname="Random Seed">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="993">
+   <BOUNDS type="Box" left="5805" top="9330" width="450" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5805" top="9330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="994" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="5115" top="9765" type="Node" width="3405">
+   </BOUNDS>
+   <BOUNDS height="6660" left="5115" top="9765" type="Box" width="9405">
+   </BOUNDS>
+   <BOUNDS height="8085" left="14955" top="465" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="994" dstpinname="Layers" linkstyle="Bezier" srcnodeid="388" srcpinname="Layer">
+   <LINKPOINT x="5130" y="9205">
+   </LINKPOINT>
+   <LINKPOINT x="5130" y="9290">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="994" dstpinname="Projection" srcnodeid="958" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="974" srcpinname="Transform Out" dstnodeid="994" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="993" srcpinname="Color Output" dstnodeid="994" dstpinname="Background Color">
    </LINK>
    </PATCH>

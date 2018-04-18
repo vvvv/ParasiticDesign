@@ -537,7 +537,7 @@
    <NODE systemname="MapRange (Value)" nodename="MapRange (Value)" componentmode="Hidden" id="264">
    <BOUNDS type="Node" left="8100" top="4020" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="2" values="0,0">
    </PIN>
    <PIN pinname="Source Minimum">
    </PIN>
@@ -797,34 +797,12 @@
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
-   <PIN pinname="XY" visible="1">
+   <PIN pinname="XY" visible="1" slicecount="2" values="0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="405" srcpinname="X" dstnodeid="246" dstpinname="X">
    </LINK>
    <LINK srcnodeid="405" srcpinname="Y" dstnodeid="246" dstpinname="Y">
-   </LINK>
-   <NODE id="110" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS type="Node" height="270" left="7770" top="870" width="2625">
-   </BOUNDS>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Left Button" visible="1">
-   </PIN>
-   <PIN pinname="Mouse" visible="1">
-   </PIN>
-   <PIN pinname="Position (Projection) XY" visible="1">
-   </PIN>
-   <PIN pinname="Position (Normalized Projection) XY" visible="-1" pintype="Output">
-   </PIN>
-   <PIN pinname="Position (Normalized Window) XY" visible="-1" pintype="Output">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Left Button" dstnodeid="242" dstpinname="Input 2" linkstyle="Bezier">
    </LINK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
@@ -847,10 +825,6 @@
    </LINKPOINT>
    <LINKPOINT x="6350" y="1890">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Position (Projection) XY" dstnodeid="264" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="110" srcpinname="Position (Projection) XY" dstnodeid="405" dstpinname="XY">
    </LINK>
    <NODE componentmode="Hidden" id="165" nodename="Counter (Animation)" systemname="Counter (Animation)">
    <BOUNDS height="100" left="13200" top="5250" type="Node" width="100">
@@ -905,5 +879,17 @@
    <PACK Name="dx11" Version="1.2">
    </PACK>
    <LINK srcnodeid="264" srcpinname="Output" dstnodeid="282" dstpinname="XY">
+   </LINK>
+   <NODE id="413" componentmode="Hidden" nodename="Mouse (Devices Window)" systemname="MOUSE (DEVICES WINDOW)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
+   <BOUNDS type="Node" height="270" left="7770" top="870" width="2625">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="413" srcpinname="Left Button" dstnodeid="33" dstpinname="Enabled" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="413" srcpinname="Left Button" dstnodeid="242" dstpinname="Input 2" linkstyle="Bezier">
+   </LINK>
+   <LINK srcnodeid="413" srcpinname="Position (Projection) XY" dstnodeid="264" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="413" srcpinname="Position (Projection) XY" dstnodeid="405" dstpinname="XY">
    </LINK>
    </PATCH>

@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\02_M\M_3_3_03 The Mesh Class\M_3_3_03.v4p" filename="C:\Documents and Settings\Roman\Desktop\ParasiticDesign\02_M\M_3_1_01\M_3_1_01.v4p" systemname="M_3_1_01">
    <BOUNDS height="7380" left="1800" top="870" type="Window" width="13110">
    </BOUNDS>
@@ -598,15 +598,25 @@
    </NODE>
    <LINK srcnodeid="361" srcpinname="Y Output Value" dstnodeid="304" dstpinname="FormID">
    </LINK>
-   <NODE componentmode="InAWindow" id="362" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="363">
+   <BOUNDS type="Box" left="5310" top="6030" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5310" top="6030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="364" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
    <BOUNDS height="270" left="4965" top="6420" type="Node" width="1755">
    </BOUNDS>
    <BOUNDS height="1800" left="4965" top="6420" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="10410" left="14910" top="855" type="Window" width="10140">
+   <BOUNDS height="8085" left="14715" top="870" type="Window" width="7740">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="D24X8">
@@ -614,14 +624,14 @@
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="362" dstpinname="View">
+   <LINK srcnodeid="290" srcpinname="Transform Out" dstnodeid="364" dstpinname="View">
    </LINK>
-   <LINK srcnodeid="296" srcpinname="Transform Out" dstnodeid="362" dstpinname="Projection">
+   <LINK srcnodeid="296" srcpinname="Transform Out" dstnodeid="364" dstpinname="Projection">
    </LINK>
-   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="362" dstpinname="Layers">
+   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="364" dstpinname="Layers">
    </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <LINK srcnodeid="363" srcpinname="Color Output" dstnodeid="364" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>
