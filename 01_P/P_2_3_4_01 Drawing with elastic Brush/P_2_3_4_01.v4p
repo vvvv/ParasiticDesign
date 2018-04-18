@@ -298,22 +298,6 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="350" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6450" top="6930" type="Node" width="1665">
-   </BOUNDS>
-   <BOUNDS height="1800" left="6450" top="6930" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="7530" left="12735" top="465" type="Window" width="6465">
-   </BOUNDS>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="296" srcpinname="Output" dstnodeid="350" dstpinname="Layers">
-   </LINK>
    <NODE componentmode="Hidden" filename="KeyboardControls.v4p" id="204" nodename="KeyboardControls" systemname="KeyboardControls">
    <BOUNDS height="270" left="6150" top="2295" type="Node" width="1560">
    </BOUNDS>
@@ -342,8 +326,32 @@
    </LINK>
    <LINK srcnodeid="204" srcpinname="SwitchElement" dstnodeid="344" dstpinname="Y Input Value">
    </LINK>
-   <LINK dstnodeid="350" dstpinname="Clear" srcnodeid="204" srcpinname="Reset" hiddenwhenlocked="0">
-   </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="351">
+   <BOUNDS type="Box" left="6765" top="6540" width="330" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6765" top="6540" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="352" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6450" top="6930" type="Node" width="1665">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6450" top="6930" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="7485" left="12735" top="465" type="Window" width="7140">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="296" srcpinname="Output" dstnodeid="352" dstpinname="Layers">
+   </LINK>
+   <LINK dstnodeid="352" dstpinname="Clear" srcnodeid="204" srcpinname="Reset" hiddenwhenlocked="0">
+   </LINK>
+   <LINK srcnodeid="351" srcpinname="Color Output" dstnodeid="352" dstpinname="Background Color">
+   </LINK>
    </PATCH>

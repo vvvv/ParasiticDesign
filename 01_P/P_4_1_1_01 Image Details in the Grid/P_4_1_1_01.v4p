@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_1_01 Image Details in the Grid\P_4_1_1_01.v4p" filename="\\PRAXIS-SERVER\vvvv\Generativvvve Gestaltung\joregs4.1.1\P.4.4.1.v4p" systemname="P.4.4.1">
    <BOUNDS height="13935" left="2670" top="585" type="Window" width="15270">
    </BOUNDS>
@@ -309,7 +309,7 @@
    </PIN>
    <PIN pinname="Random Seed" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.53" visible="1">
+   <PIN pinname="Width" slicecount="1" visible="1" values="0.53">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="59" nodename="Count (Value)" systemname="Count (Value)">
@@ -968,7 +968,7 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <NODE componentmode="Hidden" id="26" nodename="Mouse (Devices Window)" systemname="Mouse (Devices Window)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
    <BOUNDS height="100" left="6015" top="2370" type="Node" width="100">
@@ -1014,22 +1014,24 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="100" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <NODE componentmode="InAWindow" id="101" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="6390" top="12900" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="1800" left="6390" top="12900" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="7560" left="17805" top="615" type="Window" width="9675">
+   <BOUNDS height="7485" left="17805" top="615" type="Window" width="7140">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="100" dstpinname="Layers" srcnodeid="22" srcpinname="Layer">
+   <LINK dstnodeid="101" dstpinname="Layers" srcnodeid="22" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="37" srcpinname="Transform Out" dstnodeid="100" dstpinname="View">
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <LINK srcnodeid="37" srcpinname="Transform Out" dstnodeid="101" dstpinname="View">
    </LINK>
    </PATCH>

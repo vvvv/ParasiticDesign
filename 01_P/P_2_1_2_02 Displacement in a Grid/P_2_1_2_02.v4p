@@ -229,7 +229,7 @@
    <LINK dstnodeid="16" dstpinname="Enabled" srcnodeid="29" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="43" nodename="Group (EX9)" systemname="Group (EX9)">
-   <BOUNDS height="270" left="7155" top="11010" type="Node" width="6165">
+   <BOUNDS height="270" left="7155" top="10785" type="Node" width="6165">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
@@ -658,22 +658,6 @@
    </LINK>
    <LINK srcnodeid="84" srcpinname="Device" dstnodeid="52" dstpinname="Keyboard">
    </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="97" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="7140" top="11715" type="Node" width="1890">
-   </BOUNDS>
-   <BOUNDS height="1800" left="7140" top="11715" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="5940" left="15090" top="795" type="Window" width="6195">
-   </BOUNDS>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="97" dstpinname="Layers" srcnodeid="43" srcpinname="Layer">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="98">
@@ -692,4 +676,30 @@
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="99">
+   <BOUNDS type="Box" left="7500" top="11265" width="285" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7500" top="11265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Show Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="100" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="7140" top="11715" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="7140" top="11715" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="6285" left="15090" top="795" type="Window" width="5940">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Layers" srcnodeid="43" srcpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Color Output" dstnodeid="100" dstpinname="Background Color">
+   </LINK>
    </PATCH>

@@ -372,30 +372,6 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="633">
-   <BOUNDS type="Node" left="825" top="10830" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="825" top="10830" width="2400" height="1800">
-   </BOUNDS>
-   <BOUNDS type="Window" left="8385" top="1515" width="6240" height="5265">
-   </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Show Cursor" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Clear" visible="1">
-   </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="633" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="398" srcpinname="Enable Renderer" dstnodeid="633" dstpinname="Enabled">
-   </LINK>
-   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="633" dstpinname="Clear">
-   </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="634">
    <BOUNDS type="Node" left="4545" top="7665" width="100" height="100">
    </BOUNDS>
@@ -410,4 +386,32 @@
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="635">
+   <BOUNDS type="Box" left="1140" top="11055" width="285" height="360">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1140" top="11055" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="RENDERER (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="637">
+   <BOUNDS type="Node" left="840" top="11595" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="11595" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="8385" top="1515" width="6240" height="6585">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="494" srcpinname="Output" dstnodeid="637" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="398" srcpinname="Enable Renderer" dstnodeid="637" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="398" srcpinname="Clear" dstnodeid="637" dstpinname="Clear">
+   </LINK>
+   <LINK srcnodeid="635" srcpinname="Color Output" dstnodeid="637" dstpinname="Background Color">
+   </LINK>
    </PATCH>

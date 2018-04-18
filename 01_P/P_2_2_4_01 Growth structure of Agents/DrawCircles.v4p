@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" filename="C:\Users\Joreg\dev\github\ParasiticDesign\01_P\P_2_2_4_01 Growth structure of Agents\DrawCircles.v4p" systemname="DrawCircles">
-   <BOUNDS height="5490" left="1170" top="7605" type="Window" width="4500">
+   <BOUNDS height="6375" left="1170" top="7605" type="Window" width="4500">
    </BOUNDS>
    <NODE componentmode="Hidden" id="8" nodename="Segment (DX9)" systemname="Segment (DX9)">
    <BOUNDS height="100" left="645" top="3690" type="Node" width="100">
@@ -106,24 +106,34 @@
    </NODE>
    <LINK dstnodeid="2" dstpinname="XY" srcnodeid="9" srcpinname="Y Output Value">
    </LINK>
-   <NODE id="11" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS type="Node" height="270" left="645" top="4260" width="1755">
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="12">
+   <BOUNDS type="Box" left="960" top="4590" width="285" height="315">
    </BOUNDS>
-   <BOUNDS type="Box" height="1800" left="645" top="4260" width="2400">
+   <BOUNDS type="Node" left="960" top="4590" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Window" height="8190" left="11955" top="0" width="7920">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE id="13" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS type="Node" height="270" left="630" top="5055" width="1755">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <BOUNDS type="Box" height="1800" left="630" top="5055" width="2400">
+   </BOUNDS>
+   <BOUNDS type="Window" height="8085" left="11745" top="0" width="7740">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
    </NODE>
-   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="11" dstpinname="Layers">
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="13" dstpinname="Layers">
    </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <LINK srcnodeid="12" srcpinname="Color Output" dstnodeid="13" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
    </PACK>
    </PATCH>

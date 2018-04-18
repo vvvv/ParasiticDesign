@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_1_01 Drawing with animated Brush\P_2_3_1_01.v4p" filename="V:\Generativvvve Gestaltung\P_2_3_1_01 Drawing with animated Brush\P_2_3_1_01.v4p" systemname="P_2_3_1_01">
-   <BOUNDS height="11640" left="360" top="285" type="Window" width="14610">
+   <BOUNDS height="12225" left="360" top="285" type="Window" width="14610">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
@@ -614,26 +614,34 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <LINK dstnodeid="139" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="56" srcpinname="Out">
-   </LINK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="139" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="6060" top="10590" type="Node" width="1890">
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="140">
+   <BOUNDS type="Box" left="6420" top="10530" width="345" height="345">
    </BOUNDS>
-   <BOUNDS height="1800" left="6060" top="10590" type="Box" width="2400">
+   <BOUNDS type="Node" left="6420" top="10530" width="0" height="0">
    </BOUNDS>
-   <BOUNDS height="7710" left="14970" top="285" type="Window" width="9840">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
+   </NODE>
+   <LINK dstnodeid="141" dstpinname="Clear" hiddenwhenlocked="1" linkstyle="PolyLine" srcnodeid="56" srcpinname="Out">
+   </LINK>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="141" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="6075" top="11025" type="Node" width="1890">
+   </BOUNDS>
+   <BOUNDS height="1800" left="6075" top="11025" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8085" left="14790" top="285" type="Window" width="7740">
+   </BOUNDS>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="139" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
+   <LINK dstnodeid="141" dstpinname="Layers" srcnodeid="58" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="56" srcpinname="Clear" dstnodeid="139" dstpinname="Clear" hiddenwhenlocked="1">
+   <LINK srcnodeid="56" srcpinname="Clear" dstnodeid="141" dstpinname="Clear" hiddenwhenlocked="1">
    </LINK>
-   <PACK Name="dx11" Version="1.2">
-   </PACK>
+   <LINK srcnodeid="140" srcpinname="Color Output" dstnodeid="141" dstpinname="Background Color">
+   </LINK>
    </PATCH>

@@ -1,11 +1,11 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_1_02 Graphic out of pixel values\P_4_3_1_02.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.1_02.v4p" systemname="P.4.3.1_02">
-   <BOUNDS height="10665" left="195" top="210" type="Window" width="13965">
+   <BOUNDS height="11400" left="195" top="210" type="Window" width="13965">
    </BOUNDS>
    <NODE componentmode="InABox" id="53" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="100" left="11055" top="3120" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="2010" left="11055" top="3120" type="Box" width="1650">
+   <BOUNDS height="2175" left="11055" top="3120" type="Box" width="1650">
    </BOUNDS>
    <BOUNDS height="4860" left="10230" top="7980" type="Window" width="6120">
    </BOUNDS>
@@ -200,6 +200,8 @@
    <PIN pinname="ScaleX" visible="1">
    </PIN>
    <PIN pinname="ScaleY" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="112" nodename="LinearSpread (Spreads)" systemname="LinearSpread (Spreads)">
@@ -656,20 +658,54 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="137" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="6045" top="9375" type="Node" width="100">
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="138">
+   <BOUNDS type="Node" left="5145" top="5700" width="100" height="100">
    </BOUNDS>
-   <BOUNDS height="9855" left="6045" top="9375" type="Box" width="8430">
-   </BOUNDS>
-   <BOUNDS height="13455" left="14160" top="210" type="Window" width="9495">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Aspect Width" visible="1">
    </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Uniform Scale" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="137" dstpinname="Layers" srcnodeid="54" srcpinname="Layer">
+   <LINK srcnodeid="51" srcpinname="Original Width" dstnodeid="138" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Original Height" dstnodeid="138" dstpinname="Aspect Height">
+   </LINK>
+   <LINK srcnodeid="138" srcpinname="Transform Out" dstnodeid="113" dstpinname="Transform In">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE componentmode="InAWindow" id="139" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="6045" top="9735" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="9855" left="6045" top="9735" type="Box" width="8430">
+   </BOUNDS>
+   <BOUNDS height="8085" left="13980" top="225" type="Window" width="7740">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Background Color" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="139" dstpinname="Layers" srcnodeid="54" srcpinname="Layer">
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="140">
+   <BOUNDS type="Box" left="6375" top="9345" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6375" top="9345" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="140" srcpinname="Color Output" dstnodeid="139" dstpinname="Background Color">
    </LINK>
    </PATCH>

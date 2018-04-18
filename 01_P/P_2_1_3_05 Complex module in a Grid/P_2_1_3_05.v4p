@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" filename="V:\Generativvvve Gestaltung\P_2_1_3_05 Complex module in a Grid\P_2_1_3_05.v4p" systemname="P_2_1_3_05">
-   <BOUNDS height="12000" left="660" top="1905" type="Window" width="11760">
+   <BOUNDS height="12000" left="270" top="1875" type="Window" width="11760">
    </BOUNDS>
    <NODE componentmode="InABox" id="4" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="60" top="600" type="Node" width="840">
@@ -416,26 +416,36 @@
    </LINK>
    <LINK srcnodeid="105" srcpinname="Position (Projection) XY" dstnodeid="113" dstpinname="Input">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="127" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="4305" top="10485" type="Node" width="1890">
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="128" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="4290" top="10770" type="Node" width="1890">
    </BOUNDS>
-   <BOUNDS height="1800" left="4305" top="10485" type="Box" width="2400">
+   <BOUNDS height="1800" left="4290" top="10770" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="9510" left="12420" top="1890" type="Window" width="9240">
+   <BOUNDS height="8085" left="11820" top="1860" type="Window" width="7740">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Presentation Interval" slicecount="1" values="default">
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Show Cursor" visible="1" slicecount="1" values="1">
+   <PIN pinname="Background Color" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="127" dstpinname="Layers" srcnodeid="93" srcpinname="Layer">
+   <LINK dstnodeid="128" dstpinname="Layers" srcnodeid="93" srcpinname="Layer">
    </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="129">
+   <BOUNDS type="Box" left="4650" top="10275" width="285" height="330">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4650" top="10275" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="129" srcpinname="Color Output" dstnodeid="128" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

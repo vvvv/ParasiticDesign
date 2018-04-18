@@ -133,9 +133,9 @@
    </PIN>
    <PIN pinname="Slider Behavior" pintype="Configuration" slicecount="1" values="Toggle">
    </PIN>
-   <BOUNDS height="480" left="4185" top="5295" type="Box" width="480">
+   <BOUNDS height="480" left="4365" top="5310" type="Box" width="480">
    </BOUNDS>
-   <BOUNDS height="100" left="4185" top="5295" type="Node" width="100">
+   <BOUNDS height="100" left="4365" top="5310" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="160" left="9510" top="11040" type="Window" width="215">
    </BOUNDS>
@@ -183,7 +183,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="70" nodename="Toggle (Animation)" systemname="Toggle (Animation)">
-   <BOUNDS height="100" left="4080" top="2715" type="Node" width="100">
+   <BOUNDS height="100" left="4260" top="2730" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -303,7 +303,7 @@
    <LINK srcnodeid="80" srcpinname="Output" dstnodeid="78" dstpinname="Y Input Value">
    </LINK>
    <NODE componentmode="Hidden" id="68" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS height="270" left="2580" top="1410" type="Node" width="1560">
+   <BOUNDS height="270" left="2505" top="1410" type="Node" width="1560">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -317,7 +317,7 @@
    </PIN>
    <PIN pinname="Keyboard" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Key Mode" slicecount="1" values="DownOnly">
+   <PIN pinname="Key Mode" slicecount="1" values="DownOnly" visible="1">
    </PIN>
    <PIN pinname="Back" visible="1">
    </PIN>
@@ -325,7 +325,7 @@
    </PIN>
    <PIN pinname="F" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="2580" top="1410">
+   <BOUNDS type="Box" left="2505" top="1410">
    </BOUNDS>
    </NODE>
    <NODE componentmode="Hidden" id="77" nodename="KeyMatch (String)" systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
@@ -347,13 +347,15 @@
    </PIN>
    <BOUNDS type="Box" left="7005" top="1410">
    </BOUNDS>
+   <PIN pinname="Key Mode" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="Back" dstnodeid="55" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="68" srcpinname="Delete" dstnodeid="55" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="81">
-   <BOUNDS type="Node" left="7035" top="3660" width="100" height="100">
+   <BOUNDS type="Node" left="7035" top="3810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="1" values="1">
    </PIN>
@@ -365,9 +367,9 @@
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="75" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="82">
-   <BOUNDS type="Box" left="7245" top="3225" width="795" height="240">
+   <BOUNDS type="Box" left="7245" top="3375" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7245" top="3225" width="0" height="0">
+   <BOUNDS type="Node" left="7245" top="3375" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="100">
    </PIN>
@@ -451,5 +453,55 @@
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="81" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="83" srcpinname="Y Output Value" dstnodeid="84" dstpinname="Maximum">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="86">
+   <BOUNDS type="Box" left="3015" top="4245" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3015" top="4245" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="55" srcpinname="Output" dstnodeid="86" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="87">
+   <BOUNDS type="Box" left="7770" top="855" width="1125" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7770" top="855" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="DownOnly">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Press">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="87" srcpinname="Output Enum" dstnodeid="77" dstpinname="Key Mode">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="88">
+   <BOUNDS type="Box" left="4005" top="900" width="930" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4005" top="900" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="DownOnly">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Press">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output Enum" dstnodeid="68" dstpinname="Key Mode">
    </LINK>
    </PATCH>

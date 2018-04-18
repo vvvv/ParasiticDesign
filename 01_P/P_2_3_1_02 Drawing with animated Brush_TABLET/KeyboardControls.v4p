@@ -177,7 +177,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="9690" top="3675" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-10">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -700,12 +700,40 @@
    </LINK>
    <LINK dstnodeid="91" dstpinname="Default" srcnodeid="83" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Y Input Value" srcnodeid="91" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="91" dstpinname="Mode" srcnodeid="93" srcpinname="Output Enum">
    </LINK>
-   <LINK srcnodeid="60" srcpinname="Right" dstnodeid="91" dstpinname="Up">
+   <LINK srcnodeid="60" srcpinname="Left" dstnodeid="91" dstpinname="Up">
    </LINK>
-   <LINK srcnodeid="60" srcpinname="Left" dstnodeid="91" dstpinname="Down">
+   <LINK srcnodeid="60" srcpinname="Right" dstnodeid="91" dstpinname="Down">
    </LINK>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="136">
+   <BOUNDS type="Node" left="9015" top="5325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="136" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="137">
+   <BOUNDS type="Box" left="9375" top="4935" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9375" top="4935" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="137" srcpinname="Y Output Value" dstnodeid="136" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="136" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

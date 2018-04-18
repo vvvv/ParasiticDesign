@@ -1,4 +1,4 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.15.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02.v4p" bgcolor="15527148" filename="C:\Work\ParasiticDesign\01_P\P_4_2_1_02 Collage of Picture Collection\P_4_2_1_02_am.v4p" systemname="P_4_2_1_02_am">
    <BOUNDS height="11535" left="285" top="435" type="Window" width="17745">
    </BOUNDS>
@@ -1061,7 +1061,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="14355" top="6435" type="Box" width="405">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.66">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -1308,22 +1308,36 @@
    </NODE>
    <LINK srcnodeid="153" srcpinname="Device" dstnodeid="152" dstpinname="Keyboard">
    </LINK>
-   <NODE componentmode="InAWindow" id="304" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="4965" top="10140" type="Node" width="100">
+   <PACK Name="VVVV.Packs" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="36.0.0">
+   </PACK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE componentmode="InAWindow" id="305" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="4980" top="10485" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="1800" left="4965" top="10140" type="Box" width="2400">
+   <BOUNDS height="1800" left="4980" top="10485" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="10260" left="18015" top="435" type="Window" width="9720">
+   <BOUNDS height="9585" left="18015" top="435" type="Window" width="9240">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
+   <PIN pinname="Background Color" visible="1">
+   </PIN>
    </NODE>
-   <LINK dstnodeid="304" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
+   <LINK dstnodeid="305" dstpinname="Layers" srcnodeid="57" srcpinname="Layer">
    </LINK>
-   <PACK Name="VVVV.Packs" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="35.9.0">
-   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="306">
+   <BOUNDS type="Box" left="5295" top="10080" width="285" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5295" top="10080" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="306" srcpinname="Color Output" dstnodeid="305" dstpinname="Background Color">
+   </LINK>
    </PATCH>

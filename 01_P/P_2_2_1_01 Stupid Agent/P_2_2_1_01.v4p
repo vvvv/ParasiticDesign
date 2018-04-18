@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.16.dtd" >
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_2_1_01 Stupid Agent\P_2_2_1_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.2.2.1.v4p" systemname="P.2.2.1">
-   <BOUNDS height="10410" left="495" top="615" type="Window" width="15045">
+   <BOUNDS height="10995" left="495" top="615" type="Window" width="15045">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="135" top="555" type="Node" width="840">
@@ -141,9 +141,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="107" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
-   <BOUNDS height="100" left="9870" top="3645" type="Node" width="100">
+   <BOUNDS height="100" left="9810" top="3660" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="9870" top="3645" type="Box" width="405">
+   <BOUNDS height="240" left="9810" top="3660" type="Box" width="405">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="999">
    </PIN>
@@ -708,28 +708,8 @@
    </LINK>
    <LINK srcnodeid="234" srcpinname="Delete" dstnodeid="235" dstpinname="Input 2">
    </LINK>
-   <PACK Name="addonpack" Version="35.9.0">
+   <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="289" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="8085" top="9180" type="Node" width="2385">
-   </BOUNDS>
-   <BOUNDS height="1800" left="8085" top="9180" type="Box" width="2400">
-   </BOUNDS>
-   <BOUNDS height="8040" left="15495" top="600" type="Window" width="7800">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Show Cursor" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="289" dstpinname="Layers" srcnodeid="5" srcpinname="Layer">
-   </LINK>
-   <LINK dstnodeid="289" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="235" srcpinname="Output">
-   </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="290">
    <BOUNDS type="Node" left="13650" top="1665" width="100" height="100">
    </BOUNDS>
@@ -776,4 +756,32 @@
    </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="292">
+   <BOUNDS type="Box" left="8565" top="9015" width="285" height="345">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8565" top="9015" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" id="293" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="8115" top="9615" type="Node" width="2385">
+   </BOUNDS>
+   <BOUNDS height="1800" left="8115" top="9615" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8040" left="15495" top="600" type="Window" width="7800">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="293" dstpinname="Layers" srcnodeid="5" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="293" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="235" srcpinname="Output">
+   </LINK>
+   <LINK srcnodeid="292" srcpinname="Color Output" dstnodeid="293" dstpinname="Background Color">
+   </LINK>
    </PATCH>

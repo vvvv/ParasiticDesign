@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_1_1_1 Color Spectrum in a Grid\P_1_1_1_01.v4p" scrollx="15" scrolly="0">
-   <BOUNDS height="10275" left="360" top="720" type="Window" width="14895">
+   <BOUNDS height="10275" left="360" top="720" type="Window" width="12840">
    </BOUNDS>
    <NODE componentmode="Hidden" id="85" nodename="Quad (DX9)" systemname="Quad (DX9)">
    <BOUNDS height="100" left="6285" top="8310" type="Node" width="100">
@@ -105,9 +105,9 @@
    <LINK dstnodeid="84" dstpinname="TranslateY" linkstyle="PolyLine" srcnodeid="93" srcpinname="Y Out">
    </LINK>
    <NODE componentmode="Hidden" id="96" nodename="HSV (Color Join)" systemname="HSV (Color Join)">
-   <BOUNDS height="270" left="11070" top="7395" type="Node" width="600">
+   <BOUNDS height="270" left="10320" top="7395" type="Node" width="600">
    </BOUNDS>
-   <BOUNDS height="0" left="11070" top="7335" type="Box" width="0">
+   <BOUNDS height="0" left="10320" top="7335" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="13140" top="5400" type="Window" width="0">
    </BOUNDS>
@@ -121,9 +121,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" hiddenwhenlocked="0" id="99" managers="" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="11070" top="6780" type="Node" width="100">
+   <BOUNDS height="100" left="10320" top="6780" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="11070" top="6780" type="Box" width="0">
+   <BOUNDS height="0" left="10320" top="6780" type="Box" width="0">
    </BOUNDS>
    <PIN pinname="Input" pintype="Input" visible="1">
    </PIN>
@@ -149,9 +149,9 @@
    <LINK dstnodeid="96" dstpinname="Hue" srcnodeid="99" srcpinname="Output">
    </LINK>
    <NODE componentmode="Hidden" id="106" nodename="Map (Value)" systemname="Map (Value)">
-   <BOUNDS height="100" left="12090" top="6780" type="Node" width="100">
+   <BOUNDS height="100" left="11340" top="6780" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="0" left="12090" top="6780" type="Box" width="0">
+   <BOUNDS height="0" left="11340" top="6780" type="Box" width="0">
    </BOUNDS>
    <BOUNDS height="0" left="10965" top="7560" type="Window" width="0">
    </BOUNDS>
@@ -371,7 +371,7 @@
    </BOUNDS>
    <BOUNDS height="5325" left="660" top="2040" type="Box" width="4455">
    </BOUNDS>
-   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross node corresponds to 2 for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;Dividing 2 by the number of quads (horizontally and vertically) returns the scaling on X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).|">
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|The position of the mouse in the render window is taken to specify resolution of the color-grid. This is done separately for X and Y so that with the mouse at the top-left the resolution is at its highest and at the bottom-right at its lowest. &cr;&lf;&cr;&lf;The two LinearSpreads create horizontal and vertical coordinates respectively. The number of which is given by the map operation above. Their output range is specified (by a width of 2) to be from -1 to 1 to fill the whole render window.&cr;&lf;&cr;&lf;The Cross (2d) corresponds to two for loops in textual programming. It computes all the combinations of the 2 incoming spreads and therefore creates coordinates for all the quads used to draw the color-grid.&cr;&lf;&cr;&lf;Dividing 2 by the number of quads (horizontally and vertically) returns the scaling on X and Y that has to be applied to the quads in order for them to fill the renderwindow seamlessly.&cr;&lf;&cr;&lf;The color of each quad is determined by its position in the grid. So the quads position X/Y (in the range of -1 to 1) is mapped to hue/saturation values (in the range of 0 to 1).|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -575,9 +575,9 @@
    <LINK dstnodeid="111" dstpinname="Source Minimum" srcnodeid="199" srcpinname="Y Output Value">
    </LINK>
    <NODE componentmode="InABox" id="200" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="10500" top="7095" type="Node" width="315">
+   <BOUNDS height="270" left="9750" top="7095" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="405" left="10500" top="7095" type="Box" width="450">
+   <BOUNDS height="405" left="9750" top="7095" type="Box" width="450">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
    </PIN>
@@ -658,24 +658,18 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE id="211" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE id="212" componentmode="InAWindow" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS type="Node" height="270" left="6270" top="8910" width="1530">
    </BOUNDS>
    <BOUNDS type="Box" height="1800" left="6270" top="8910" width="2400">
    </BOUNDS>
-   <BOUNDS type="Window" height="5265" left="15240" top="720" width="7800">
+   <BOUNDS type="Window" height="7170" left="13005" top="720" width="6825">
    </BOUNDS>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
-   </PIN>
    </NODE>
-   <LINK srcnodeid="85" srcpinname="Layer" dstnodeid="211" dstpinname="Layers">
+   <LINK srcnodeid="85" srcpinname="Layer" dstnodeid="212" dstpinname="Layers">
    </LINK>
-   <PACK Name="dx11" Version="1.2">
-   </PACK>
    </PATCH>

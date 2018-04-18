@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush_TABLET\P_2_3_1_02_TABLET.v4p" filename="C:\Work\ParasiticDesign\01_P\P_2_3_1_02 Drawing with animated Brush\P_2_3_1_02_2.v4p" systemname="P_2_3_1_02_2" scrollx="0" scrolly="-360">
-   <BOUNDS height="15555" left="330" top="270" type="Window" width="17310">
+   <BOUNDS height="12930" left="330" top="270" type="Window" width="17310">
    </BOUNDS>
    <NODE componentmode="InABox" id="3" nodename="IOBox (String)" systemname="IOBox (String)">
    <BOUNDS height="270" left="45" top="450" type="Node" width="840">
@@ -768,24 +768,34 @@
    </PACK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
-   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="311" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="312">
+   <BOUNDS type="Box" left="7275" top="11430" width="285" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7275" top="11430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InAWindow" hiddenwhenlocked="0" id="313" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
    <BOUNDS height="270" left="6840" top="11850" type="Node" width="2205">
    </BOUNDS>
    <BOUNDS height="1800" left="6840" top="11850" type="Box" width="2400">
    </BOUNDS>
-   <BOUNDS height="7050" left="17460" top="285" type="Window" width="8265">
+   <BOUNDS height="8085" left="17460" top="285" type="Window" width="7740">
    </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Show Cursor" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
    </NODE>
-   <LINK dstnodeid="311" dstpinname="Layers" srcnodeid="236" srcpinname="Layer">
+   <LINK dstnodeid="313" dstpinname="Layers" srcnodeid="236" srcpinname="Layer">
    </LINK>
-   <LINK dstnodeid="311" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="215" srcpinname="Out">
+   <LINK dstnodeid="313" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="215" srcpinname="Out">
    </LINK>
-   <LINK dstnodeid="311" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="215" srcpinname="Clear">
+   <LINK dstnodeid="313" dstpinname="Clear" hiddenwhenlocked="1" srcnodeid="215" srcpinname="Clear">
    </LINK>
+   <LINK srcnodeid="312" srcpinname="Color Output" dstnodeid="313" dstpinname="Background Color">
+   </LINK>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
    </PATCH>

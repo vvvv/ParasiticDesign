@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
    <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_1_2_01 Feedback of Image Samples\P_4_1_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\ridike\simulations\P.4.1.2.v4p" systemname="P.4.1.2" scrollx="0" scrolly="0">
-   <BOUNDS height="12645" left="660" top="1230" type="Window" width="16185">
+   <BOUNDS height="12225" left="450" top="300" type="Window" width="16185">
    </BOUNDS>
    <NODE componentmode="Hidden" id="2" nodename="FileTexture (EX9.Texture)" systemname="FileTexture (EX9.Texture)">
    <BOUNDS height="270" left="8685" top="3690" type="Node" width="900">
@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="26" nodename="DX9Texture (EX9.Texture)" systemname="DX9Texture (EX9.Texture)">
-   <BOUNDS height="100" left="8190" top="10635" type="Node" width="100">
+   <BOUNDS height="100" left="9375" top="10380" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Source" visible="1" slicecount="1" values="||">
    </PIN>
@@ -549,7 +549,7 @@
    <LINK dstnodeid="184" dstpinname="Magnification Filter" srcnodeid="186" srcpinname="Output Enum">
    </LINK>
    <NODE componentmode="Hidden" id="83" nodename="FrameDelay (EX9.Texture)" systemname="FrameDelay (EX9.Texture)">
-   <BOUNDS height="100" left="8190" top="11190" type="Node" width="100">
+   <BOUNDS height="100" left="9375" top="10935" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -561,9 +561,9 @@
    <LINK dstnodeid="83" dstpinname="Texture In" srcnodeid="26" srcpinname="Texture Out">
    </LINK>
    <LINK dstnodeid="27" dstpinname="Texture" linkstyle="Bezier" srcnodeid="83" srcpinname="Texture Out">
-   <LINKPOINT x="14250" y="13830">
+   <LINKPOINT x="12780" y="12690">
    </LINKPOINT>
-   <LINKPOINT x="8205" y="3615">
+   <LINKPOINT x="7995" y="4485">
    </LINKPOINT>
    </LINK>
    <NODE componentmode="InABox" id="194" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -697,9 +697,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="197" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="270" left="7575" top="10665" type="Node" width="315">
+   <BOUNDS height="270" left="8760" top="10410" type="Node" width="315">
    </BOUNDS>
-   <BOUNDS height="390" left="7575" top="10665" type="Box" width="405">
+   <BOUNDS height="390" left="8760" top="10410" type="Box" width="405">
    </BOUNDS>
    <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
    </PIN>
@@ -818,32 +818,6 @@
    </LINK>
    <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="84" dstpinname="Input 1">
    </LINK>
-   <NODE componentmode="InAWindow" id="203" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="270" left="7800" top="9855" type="Node" width="1500">
-   </BOUNDS>
-   <BOUNDS height="2940" left="7800" top="9855" type="Box" width="3555">
-   </BOUNDS>
-   <BOUNDS height="5940" left="16845" top="1230" type="Window" width="5295">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Width" visible="1">
-   </PIN>
-   <PIN pinname="Actual Backbuffer Height" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="203" dstpinname="Clear" hiddenwhenlocked="1">
-   </LINK>
-   <LINK srcnodeid="203" srcpinname="EX9 Out" dstnodeid="26" dstpinname="Source">
-   </LINK>
-   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="203" dstpinname="Layers">
-   </LINK>
    <PACK Name="VVVV.Packs" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
@@ -862,44 +836,24 @@
    </LINK>
    <LINK srcnodeid="150" srcpinname="Device" dstnodeid="154" dstpinname="Keyboard">
    </LINK>
-   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="204">
-   <BOUNDS type="Node" left="9270" top="10620" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Aspect Width" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Height" visible="1">
-   </PIN>
-   <PIN pinname="Alignment" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Width" dstnodeid="204" dstpinname="Aspect Width">
-   </LINK>
-   <LINK srcnodeid="203" srcpinname="Actual Backbuffer Height" dstnodeid="204" dstpinname="Aspect Height">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="205">
-   <BOUNDS type="Box" left="10155" top="10200" width="615" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10155" top="10200" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="FitIn">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="FitOut">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="205" srcpinname="Output Enum" dstnodeid="204" dstpinname="Alignment">
-   </LINK>
-   <LINK srcnodeid="204" srcpinname="Transform Out" dstnodeid="203" dstpinname="Aspect Ratio" linkstyle="Bezier">
-   <LINKPOINT x="10390" y="12235">
-   </LINKPOINT>
-   <LINKPOINT x="12275" y="9275">
-   </LINKPOINT>
-   </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE componentmode="InAWindow" id="206" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="270" left="7800" top="9855" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="2940" left="7800" top="9855" type="Box" width="3555">
+   </BOUNDS>
+   <BOUNDS height="6585" left="16560" top="1260" type="Window" width="6240">
+   </BOUNDS>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="162" srcpinname="Bang" dstnodeid="206" dstpinname="Clear" hiddenwhenlocked="1">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="EX9 Out" dstnodeid="26" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="206" dstpinname="Layers">
+   </LINK>
    </PATCH>

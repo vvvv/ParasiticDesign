@@ -367,7 +367,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="11385" top="3930" type="Box" width="450">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="-10">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -774,14 +774,40 @@
    </LINK>
    <LINK dstnodeid="91" dstpinname="Default" srcnodeid="83" srcpinname="Y Output Value">
    </LINK>
-   <LINK dstnodeid="53" dstpinname="Y Input Value" srcnodeid="91" srcpinname="Output">
-   </LINK>
    <LINK dstnodeid="91" dstpinname="Mode" srcnodeid="93" srcpinname="Output Enum">
-   </LINK>
-   <LINK srcnodeid="99" srcpinname="Right" dstnodeid="91" dstpinname="Up">
-   </LINK>
-   <LINK srcnodeid="99" srcpinname="Left" dstnodeid="91" dstpinname="Down">
    </LINK>
    <PACK Name="dx11" Version="1.2">
    </PACK>
+   <NODE systemname="Max (Value)" nodename="Max (Value)" componentmode="Hidden" id="108">
+   <BOUNDS type="Node" left="11250" top="5265" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="91" srcpinname="Output" dstnodeid="108" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="109">
+   <BOUNDS type="Box" left="11625" top="4905" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11625" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="109" srcpinname="Y Output Value" dstnodeid="108" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="108" srcpinname="Output" dstnodeid="53" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Right" dstnodeid="91" dstpinname="Down">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Left" dstnodeid="91" dstpinname="Up">
+   </LINK>
    </PATCH>

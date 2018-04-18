@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_2_01 Typo out of pixel values\P_4_3_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.2.v4p" systemname="P.4.3.2">
+   <PATCH nodename="C:\Work\ParasiticDesign\01_P\P_4_3_2_01 Typo out of pixel values\P_4_3_2_01.v4p" bgcolor="15527148" filename="C:\Documents and Settings\Roman\Desktop\P.4.3.2.v4p" systemname="P.4.3.2" scrollx="0" scrolly="-1080">
    <BOUNDS height="12345" left="240" top="1140" type="Window" width="14790">
    </BOUNDS>
    <NODE componentmode="InABox" id="47" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -30,6 +30,10 @@
    <PIN pinname="Filename" visible="1">
    </PIN>
    <PIN pinname="Up And Running" visible="1">
+   </PIN>
+   <PIN pinname="Original Width" visible="1">
+   </PIN>
+   <PIN pinname="Original Height" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="119" nodename="IOBox (String)" systemname="IOBox (String)">
@@ -375,11 +379,11 @@
    <LINK srcnodeid="535" srcpinname="Y Output Value" dstnodeid="461" dstpinname="Source Maximum" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="536">
-   <BOUNDS type="Node" left="10020" top="10605" width="100" height="100">
+   <BOUNDS type="Node" left="10035" top="11010" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="525">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="754">
+   <PIN pinname="Y" visible="1" slicecount="1" values="866">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -459,9 +463,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="554" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Node" left="10965" top="9255" width="0" height="0">
+   <BOUNDS type="Node" left="10905" top="9255" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="10965" top="9255" width="840" height="240">
+   <BOUNDS type="Box" left="10905" top="9255" width="840" height="240">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" values="Bottom">
    </PIN>
@@ -555,7 +559,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <BOUNDS type="Node" height="270" left="9075" top="7665" width="315">
+   <BOUNDS type="Node" height="270" left="9135" top="7695" width="315">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -573,9 +577,9 @@
    </PIN>
    </NODE>
    <NODE id="523" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Node" left="8895" top="7185" width="0" height="0">
+   <BOUNDS type="Node" left="8805" top="7245" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="8895" top="7185" width="450" height="240">
+   <BOUNDS type="Box" left="8805" top="7245" width="450" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
@@ -689,8 +693,6 @@
    <LINK srcnodeid="523" srcpinname="Y Output Value" dstnodeid="243" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="457" srcpinname="Transform Out" dstnodeid="50" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="187" srcpinname="Transform Out" dstnodeid="457" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="178" srcpinname="FontSize Max" dstnodeid="440" dstpinname="Input" hiddenwhenlocked="1">
    </LINK>
@@ -842,40 +844,44 @@
    </PACK>
    <PACK Name="addonpack" Version="36.0.0">
    </PACK>
-   <NODE componentmode="InAWindow" id="569" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
-   <BOUNDS height="100" left="8940" top="10155" type="Node" width="100">
+   <LINK srcnodeid="536" srcpinname="XY" dstnodeid="538" dstpinname="XY" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="5100" y="13245">
+   </LINKPOINT>
+   <LINKPOINT x="7020" y="2400">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="571">
+   <BOUNDS type="Box" left="9285" top="10170" width="285" height="240">
    </BOUNDS>
-   <BOUNDS height="5550" left="8940" top="10155" type="Box" width="3855">
+   <BOUNDS type="Node" left="9285" top="10170" width="0" height="0">
    </BOUNDS>
-   <BOUNDS height="11895" left="15015" top="1125" type="Window" width="8115">
-   </BOUNDS>
-   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
+   </NODE>
+   <PACK Name="dx11" Version="1.2">
+   </PACK>
+   <NODE componentmode="InAWindow" id="573" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="8955" top="10560" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="5550" left="8955" top="10560" type="Box" width="3855">
+   </BOUNDS>
+   <BOUNDS height="12345" left="14865" top="1125" type="Window" width="8115">
+   </BOUNDS>
    <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="0">
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Auto Aspect Ratio" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="569" dstpinname="Layers" srcnodeid="50" srcpinname="Layer">
+   <LINK dstnodeid="573" dstpinname="Layers" srcnodeid="50" srcpinname="Layer">
    </LINK>
-   <LINK srcnodeid="569" srcpinname="Actual Backbuffer Width" dstnodeid="536" dstpinname="X">
+   <LINK srcnodeid="573" srcpinname="Actual Backbuffer Width" dstnodeid="536" dstpinname="X">
    </LINK>
-   <LINK srcnodeid="569" srcpinname="Actual Backbuffer Height" dstnodeid="536" dstpinname="Y">
+   <LINK srcnodeid="573" srcpinname="Actual Backbuffer Height" dstnodeid="536" dstpinname="Y">
    </LINK>
-   <NODE componentmode="Hidden" id="537" nodename="FrameDelay (Value)" systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll">
-   <BOUNDS height="100" left="10005" top="11040" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output 1" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="536" srcpinname="XY" dstnodeid="537" dstpinname="Input 1">
+   <LINK srcnodeid="571" srcpinname="Color Output" dstnodeid="573" dstpinname="Background Color">
    </LINK>
-   <LINK srcnodeid="537" srcpinname="Output 1" dstnodeid="538" dstpinname="XY" hiddenwhenlocked="1" linkstyle="Bezier">
-   <LINKPOINT x="5795" y="13485">
-   </LINKPOINT>
-   <LINKPOINT x="5995" y="2580">
-   </LINKPOINT>
+   <LINK srcnodeid="187" srcpinname="Transform Out" dstnodeid="457" dstpinname="Transform In">
    </LINK>
    </PATCH>
